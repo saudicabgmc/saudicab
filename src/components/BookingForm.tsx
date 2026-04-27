@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
-import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check } from 'lucide-react'
+import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check, Phone, User, Loader2 } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 
 const CITIES = {
@@ -129,15 +129,27 @@ interface BookingFormProps { defaultFrom?: string }
 export default function BookingForm({ defaultFrom }: BookingFormProps) {
   const { isAr } = useLang()
   const [vehicle, setVehicle] = useState('')
-  const [form, setForm] = useState({ from: defaultFrom || '', to: '', date: '', time: '', passengers: '1' })
+  const [loading, setLoading] = useState(false)
+  const [form, setForm] = useState({ from: defaultFrom || '', to: '', date: '', time: '', passengers: '1', name: '', phone: '' })
   const set = (k: string, v: string) => setForm(p => ({ ...p, [k]: v }))
 
-  const handleBook = () => {
+  const handleBook = async () => {
     const v = VEHICLES.find(v => v.key === vehicle)
     const vLabel = v ? (isAr ? v.nameAr : v.nameEn) : (isAr ? 'غير محدد' : 'Not specified')
+
+    setLoading(true)
+    try {
+      await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vehicle: vLabel, from: form.from, to: form.to, date: form.date, time: form.time, passengers: form.passengers, name: form.name, phone: form.phone }),
+      })
+    } catch (_) {}
+    setLoading(false)
+
     const msg = isAr
-      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${vLabel}%0Aمن: ${form.from || 'غير محدد'}%0Aإلى: ${form.to || 'غير محدد'}%0Aالتاريخ: ${form.date || 'غير محدد'}%0Aالوقت: ${form.time || 'غير محدد'}%0Aالركاب: ${form.passengers}`
-      : `Hello, I'd like to book a trip:%0AVehicle: ${vLabel}%0AFrom: ${form.from || 'Not specified'}%0ATo: ${form.to || 'Not specified'}%0ADate: ${form.date || 'Not specified'}%0ATime: ${form.time || 'Not specified'}%0APassengers: ${form.passengers}`
+      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${vLabel}%0Aمن: ${form.from || 'غير محدد'}%0Aإلى: ${form.to || 'غير محدد'}%0Aالتاريخ: ${form.date || 'غير محدد'}%0Aالوقت: ${form.time || 'غير محدد'}%0Aالركاب: ${form.passengers}${form.name ? `%0Aالاسم: ${form.name}` : ''}${form.phone ? `%0Aالهاتف: ${form.phone}` : ''}`
+      : `Hello, I'd like to book a trip:%0AVehicle: ${vLabel}%0AFrom: ${form.from || 'Not specified'}%0ATo: ${form.to || 'Not specified'}%0ADate: ${form.date || 'Not specified'}%0ATime: ${form.time || 'Not specified'}%0APassengers: ${form.passengers}${form.name ? `%0AName: ${form.name}` : ''}${form.phone ? `%0APhone: ${form.phone}` : ''}`
     window.open(`https://wa.me/966549317712?text=${msg}`, '_blank')
   }
 
@@ -275,10 +287,31 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
         </div>
       </div>
 
+      {/* Name + Phone */}
+      <div className="form-grid-2">
+        <div className="form-group">
+          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <User size={13} color="var(--primary)" strokeWidth={2.5} />
+            {isAr ? 'الاسم' : 'Name'}
+          </label>
+          <input type="text" className="form-input" placeholder={isAr ? 'اسمك (اختياري)' : 'Your name (optional)'} value={form.name} onChange={e => set('name', e.target.value)} />
+        </div>
+        <div className="form-group">
+          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Phone size={13} color="var(--primary)" strokeWidth={2.5} />
+            {isAr ? 'رقم الهاتف' : 'Phone'}
+          </label>
+          <input type="tel" className="form-input" placeholder={isAr ? 'رقم هاتفك' : 'Your phone'} value={form.phone} onChange={e => set('phone', e.target.value)} dir="ltr" />
+        </div>
+      </div>
+
       {/* WhatsApp Button */}
-      <button type="button" className="btn-whatsapp" onClick={handleBook} style={{ marginTop: '8px' }}>
-        <MessageCircle size={18} strokeWidth={2.5} />
-        {isAr ? 'احجز عبر واتساب' : 'Book via WhatsApp'}
+      <button type="button" className="btn-whatsapp" onClick={handleBook} style={{ marginTop: '8px' }} disabled={loading}>
+        {loading
+          ? <Loader2 size={18} strokeWidth={2.5} style={{ animation: 'spin 1s linear infinite' }} />
+          : <MessageCircle size={18} strokeWidth={2.5} />
+        }
+        {loading ? (isAr ? 'جاري الإرسال...' : 'Sending...') : (isAr ? 'احجز عبر واتساب' : 'Book via WhatsApp')}
       </button>
 
       {/* Trust badges */}
