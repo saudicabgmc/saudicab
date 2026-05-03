@@ -2,7 +2,6 @@
 import { Resend } from 'resend'
 import { supabase } from '@/lib/supabase'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
 const OWNER_EMAIL = process.env.OWNER_EMAIL || 'muhammadismailkpt@gmail.com'
 
 export async function POST(req: NextRequest) {
@@ -25,6 +24,7 @@ export async function POST(req: NextRequest) {
     if (dbError) console.error('Supabase error:', dbError.message)
 
     // ── 2. Send email via Resend ──
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const { error: emailError } = await resend.emails.send({
       from: 'Saudi Cabs GMC <onboarding@resend.dev>',
       to: [OWNER_EMAIL],
