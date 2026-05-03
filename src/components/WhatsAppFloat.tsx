@@ -9,7 +9,7 @@ export default function WhatsAppFloat() {
     <a
       href="https://wa.me/966569487569?text=السلام عليكم، أرغب في حجز رحلة"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{

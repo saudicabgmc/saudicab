@@ -107,7 +107,7 @@ export default function Navbar() {
             {isAr ? 'EN' : 'AR'}
           </button>
 
-          <a href="https://wa.me/966569487569" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <a href="https://wa.me/966569487569" rel="nofollow noopener noreferrer" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Phone size={14} strokeWidth={2.5} />
             ‎+966 56 948 7569
           </a>
@@ -192,6 +192,7 @@ export default function Navbar() {
             </div>
             <a
               href="https://wa.me/966569487569"
+              rel="nofollow noopener noreferrer"
               style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 0', fontWeight: '700', color: 'var(--foreground)', fontSize: '0.95rem' }}
             >
               <Phone size={16} strokeWidth={2.5} />

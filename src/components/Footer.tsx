@@ -49,7 +49,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   title={s.label}
                   aria-label={s.label}
                   style={{
@@ -91,11 +91,11 @@ export default function Footer() {
             <h4 className="footer-heading">{tr.footer.contact}</h4>
             <div className="footer-contact-item">
               <Phone size={15} color="var(--primary)" strokeWidth={2} />
-              <a href="https://wa.me/966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
+              <a href="https://wa.me/966569487569" rel="nofollow noopener noreferrer" style={{ color: 'inherit' }}>+966 56 948 7569</a>
             </div>
             <div className="footer-contact-item">
               <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />
-              <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+              <a href="https://wa.me/966569487569" target="_blank" rel="nofollow noopener noreferrer" style={{ color: 'inherit' }}>
                 {tr.footer.whatsapp}
               </a>
             </div>
@@ -137,7 +137,7 @@ export default function Footer() {
           <a
             href="https://www.dmca.com/Protection/Status.aspx?ID=saudicabsgmc"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             title="DMCA.com Protection Status"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}
           >
