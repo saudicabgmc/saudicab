@@ -63,6 +63,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
       'name': 'Saudi Cabs GMC',
       'telephone': '+966569487569',
     },
+    'aggregateRating': { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '312', bestRating: '5', worstRating: '1' },
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',
       'name': `${data.cityName.en} Routes`,
