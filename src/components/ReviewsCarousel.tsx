@@ -79,7 +79,7 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingTop: '16px', borderTop: '1px solid var(--border)' }}>
               <div style={{ width: '46px', height: '46px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--primary)', flexShrink: 0 }}>
-                <img src={r.img} alt={r.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={r.img} alt={r.name} width={46} height={46} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div style={{ fontWeight: '800', fontSize: '0.95rem' }}>{r.name}</div>

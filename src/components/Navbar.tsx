@@ -48,6 +48,7 @@ export default function Navbar() {
           <img
             src="/logo-saudi-cabs-gmc.webp"
             alt="Saudi Cabs GMC Logo"
+            width={48} height={48}
             style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
           />
           <span style={{ fontWeight: '900', fontSize: '1.2rem', color: 'white', lineHeight: 1 }}>

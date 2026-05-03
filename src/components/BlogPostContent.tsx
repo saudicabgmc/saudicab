@@ -142,7 +142,7 @@ export default function BlogPostContent({ post, related }: Props) {
                     borderRadius: '14px', overflow: 'hidden',
                     border: '1px solid var(--border)', backgroundColor: 'var(--card)', transition: 'all 0.2s',
                   }}>
-                    <img src={r.image} alt={r.title.en} style={{ width: '100%', height: '140px', objectFit: 'cover' }} />
+                    <img src={r.image} alt={r.title.en} width={600} height={140} style={{ width: '100%', height: '140px', objectFit: 'cover' }} />
                     <div style={{ padding: '16px' }}>
                       <div style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: '700', marginBottom: '6px' }}>{r.date}</div>
                       <h3 style={{ fontSize: '0.88rem', fontWeight: '800', lineHeight: 1.4, margin: 0 }}>{r.title[lang]}</h3>

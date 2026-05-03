@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <img src="/logo-saudi-cabs-gmc.webp" alt="Saudi Cabs GMC" style={{ height: '44px', width: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+              <img src="/logo-saudi-cabs-gmc.webp" alt="Saudi Cabs GMC" width={44} height={44} style={{ height: '44px', width: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
               {tr.footer.brand}
             </div>
             <p className="footer-desc">{tr.footer.desc}</p>

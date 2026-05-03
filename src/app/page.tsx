@@ -173,6 +173,7 @@ export default function Home() {
                   src={locationImages[i]}
                   alt={`Taxi Service in ${locationNames['en'][i]} – Saudi Cabs GMC`}
                   loading="lazy"
+                  width={600} height={400}
                 />
                 {/* Button overlay */}
                 <div style={{
@@ -269,6 +270,7 @@ export default function Home() {
                       src={imgData.img}
                       alt={imgData.alt}
                       loading="lazy"
+                      width={400} height={220}
                       style={{
                         position: 'absolute', top: 0, left: 0,
                         width: '100%', height: '100%',
@@ -418,6 +420,7 @@ export default function Home() {
           ].map(img => (
             <div key={img.src} style={{ position: 'relative', background: '#111' }}>
               <img src={img.src} alt={img.alt} loading="lazy"
+                width={1200} height={460}
                 style={{ width: '100%', height: '460px', objectFit: 'contain', display: 'block' }} />
               <div style={{ position: 'absolute', bottom: '16px', left: '20px' }}>
                 <span style={{ color: 'white', fontWeight: '700', fontSize: '0.9rem', background: 'rgba(0,0,0,0.55)', padding: '4px 14px', borderRadius: '20px' }}>{img.label}</span>
@@ -437,6 +440,7 @@ export default function Home() {
           ].map(img => (
             <div key={img.src} style={{ position: 'relative' }}>
               <img src={img.src} alt={img.alt} loading="lazy"
+                width={400} height={190}
                 style={{ width: '100%', height: '190px', objectFit: 'cover', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%)' }} />
               <div style={{ position: 'absolute', bottom: '10px', left: '10px' }}>
@@ -470,6 +474,7 @@ export default function Home() {
           ].map(img => (
             <div key={img.src} style={{ position: 'relative', overflow: 'hidden' }}>
               <img src={img.src} alt={img.alt} loading="lazy"
+                width={1200} height={460}
                 style={{ width: '100%', height: '460px', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%)' }} />
               <div style={{ position: 'absolute', bottom: '16px', left: '20px' }}>
@@ -490,6 +495,7 @@ export default function Home() {
           ].map(img => (
             <div key={img.src} style={{ position: 'relative', overflow: 'hidden' }}>
               <img src={img.src} alt={img.alt} loading="lazy"
+                width={400} height={190}
                 style={{ width: '100%', height: '190px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%)' }} />
               <div style={{ position: 'absolute', bottom: '10px', left: '10px' }}>
@@ -549,9 +555,11 @@ export default function Home() {
             <img
               src="/rate-list-saudi-cabs-gmc.webp"
               alt="Saudi Cabs GMC Route Price List – Sedan, Staria Van & GMC Yukon Taxi Rates in Makkah, Madinah, Jeddah"
+              width={560} height={420}
               style={{
                 maxWidth: '560px',
                 width: '100%',
+                height: 'auto',
                 borderRadius: '16px',
                 boxShadow: 'var(--shadow-lg)',
                 display: 'block',
