@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import { Phone, MessageCircle, Globe, Mail } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
@@ -91,7 +91,7 @@ export default function Footer() {
             <h4 className="footer-heading">{tr.footer.contact}</h4>
             <div className="footer-contact-item">
               <Phone size={15} color="var(--primary)" strokeWidth={2} />
-              <a href="tel:+966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
+              <a href="https://wa.me/966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
             </div>
             <div className="footer-contact-item">
               <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />

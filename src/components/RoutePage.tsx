@@ -96,7 +96,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز الآن عبر واتساب' : 'Book Now via WhatsApp'}
                 </a>
-                <a href="tel:+966569487569" className="btn-outline">
+                <a href="https://wa.me/966569487569" className="btn-outline">
                   <Phone size={16} strokeWidth={2.5} />
                   {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
@@ -305,7 +305,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
       </section>
 
       {/* ── FAQ ── */}
-      <FAQSection faqs={data.faqs} heading={{ ar: `أسئلة شائعة — ${tx(data.from)} إلى ${tx(data.to)}`, en: `FAQ — ${tx(data.from)} to ${tx(data.to)}` }} />
+      <FAQSection faqs={data.faqs} heading={{ ar: `أسئلة شائعة — ${tx(data.from)} إلى ${tx(data.to)}`, en: `FAQ — ${tx(data.from)} to ${tx(data.to)}` }} noSchema />
 
       {/* ── Footer CTA ── */}
       <section style={{ padding: '70px 0', background: 'linear-gradient(135deg,#0B3D2E,#0F5132)', color: 'white', textAlign: 'center' }}>
@@ -326,7 +326,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
               <MessageCircle size={18} strokeWidth={2.5} />
               {isAr ? 'واتساب' : 'WhatsApp'}
             </a>
-            <a href="tel:+966569487569"
+            <a href="https://wa.me/966569487569"
               style={{
                 background: 'rgba(255,255,255,0.15)', color: 'white',
                 border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px',

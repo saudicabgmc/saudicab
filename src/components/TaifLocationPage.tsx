@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import FAQSection from './FAQSection'
 import PricingSection from './PricingSection'
@@ -72,7 +72,7 @@ export default function TaifLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+966569487569" style={{
+                <a href="https://wa.me/966569487569" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   background: '#2d6a4f', color: 'white', padding: '13px 28px',
                   borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
@@ -315,7 +315,7 @@ export default function TaifLocationPage({
               >
                 <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="tel:+966569487569" style={{
+              <a href="https://wa.me/966569487569" style={{
                 display: 'flex', alignItems: 'center', gap: '8px',
                 background: 'rgba(233,196,106,0.15)', color: '#e9c46a', padding: '13px 28px',
                 borderRadius: '12px', fontWeight: '700', fontSize: '0.9rem', textDecoration: 'none',

@@ -11,9 +11,10 @@ export interface FAQItem {
 interface Props {
   faqs: FAQItem[]
   heading?: { ar: string; en: string }
+  noSchema?: boolean
 }
 
-export default function FAQSection({ faqs, heading }: Props) {
+export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
   const { lang, isAr } = useLang()
   const [open, setOpen] = useState<number | null>(null)
   const tx = (b: { ar: string; en: string }) => b[lang]
@@ -39,10 +40,12 @@ export default function FAQSection({ faqs, heading }: Props) {
 
   return (
     <section style={{ padding: '80px 0', backgroundColor: 'var(--muted)' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      {!noSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      )}
       <div className="container">
         <div className="section-header">
           <span className="section-tag">{isAr ? 'أسئلة شائعة' : 'FAQ'}</span>

@@ -66,7 +66,7 @@ export default function MadinahLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+966569487569" className="btn-primary">
+                <a href="https://wa.me/966569487569" className="btn-primary">
                   <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
                 </a>
                 <a
@@ -294,7 +294,7 @@ export default function MadinahLocationPage({
               >
                 <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="tel:+966569487569" style={{
+              <a href="https://wa.me/966569487569" style={{
                 display: 'flex', alignItems: 'center', gap: '8px',
                 background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 24px',
                 borderRadius: '10px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',

@@ -50,6 +50,9 @@ export default function BlogIndex() {
             }}>
               <img
                 src={featured.image} alt={featured.title.en}
+                width={600} height={340}
+                loading="eager"
+                fetchPriority="high"
                 style={{ width: '100%', height: '340px', objectFit: 'cover' }}
               />
               <div style={{
@@ -103,6 +106,9 @@ export default function BlogIndex() {
               }}>
                 <img
                   src={post.image} alt={post.title.en}
+                  width={400} height={200}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: '100%', height: '200px', objectFit: 'cover' }}
                 />
                 <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>

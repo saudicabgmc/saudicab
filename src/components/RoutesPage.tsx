@@ -419,7 +419,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
               <h4 className="footer-heading">{isAr ? 'تواصل معنا' : 'Contact Us'}</h4>
               <div className="footer-contact-item">
                 <Phone size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="tel:+966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
+                <a href="https://wa.me/966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
               </div>
               <div className="footer-contact-item">
                 <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import type { BlogPost } from '@/lib/blogData'
 import { useLang } from '@/contexts/LanguageContext'
@@ -117,7 +117,7 @@ export default function BlogPostContent({ post, related }: Props) {
             >
               WhatsApp +966 56 948 7569
             </a>
-            <a href="tel:+966569487569" style={{
+            <a href="https://wa.me/966569487569" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(212,175,55,0.15)', color: 'var(--primary)', padding: '13px 28px',
               borderRadius: '10px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',

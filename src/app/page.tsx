@@ -67,7 +67,7 @@ export default function Home() {
           className="hero-img-bg"
           style={{
             position: 'absolute', inset: 0, zIndex: 0,
-            backgroundImage: 'url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=50&w=800&fm=webp")',
             backgroundSize: 'cover', backgroundPosition: 'center',
           }}
         />
@@ -106,7 +106,7 @@ export default function Home() {
                   <MapPin size={16} strokeWidth={2.5} />
                   {tr.hero.exploreCities}
                 </a>
-                <a href="tel:+966569487569" className="btn-outline">
+                <a href="https://wa.me/966569487569" className="btn-outline">
                   <Phone size={16} strokeWidth={2.5} />
                   {tr.hero.callUs}
                 </a>
@@ -376,7 +376,7 @@ export default function Home() {
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز شوفيرك الآن' : 'Book a Chauffeur Now'}
                 </a>
-                <a href="tel:+966569487569" className="btn-outline" style={{ color: 'var(--foreground)', borderColor: 'var(--border)' }}>
+                <a href="https://wa.me/966569487569" className="btn-outline" style={{ color: 'var(--foreground)', borderColor: 'var(--border)' }}>
                   <Phone size={16} strokeWidth={2.5} />
                   {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
@@ -653,7 +653,7 @@ export default function Home() {
               {tr.cta.bookWhatsapp}
             </a>
             <a
-              href="tel:+966569487569"
+              href="https://wa.me/966569487569"
               style={{ backgroundColor: 'rgba(255,255,255,0.18)', color: 'white', border: '2px solid rgba(255,255,255,0.6)', padding: '14px 36px', borderRadius: 'var(--radius)', fontWeight: '800', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}
             >
               <Phone size={18} strokeWidth={2.5} />

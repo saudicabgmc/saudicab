@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
+import { Cairo } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import BackToTop from '@/components/BackToTop'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+
+const cairo = Cairo({
+  subsets: ['latin', 'arabic'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+  variable: '--font-cairo',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saudicabsgmc.com'),
@@ -338,94 +346,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   }
 
-  // ── 5. FAQPage — AI Overview & Answer Engine targets ─────────────
-  const globalFaqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How do I book a taxi in Makkah?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'To book a taxi in Makkah, contact Saudi Cabs GMC via WhatsApp at +966 56 948 7569. Send your pickup location, destination, and preferred time. You will receive a fixed price confirmation within minutes. The service operates 24/7 and supports both English and Arabic.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does a taxi from Jeddah Airport to Makkah cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Saudi Cabs GMC offers a fixed-price taxi from King Abdulaziz International Airport (KAIA) in Jeddah to Makkah with no meter and no surge pricing. The journey is approximately 90 km and takes 50–60 minutes. Contact us via WhatsApp for the current rate. Vehicles available: Sedan, Hyundai Staria, or GMC Yukon.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is private taxi better than the Haramain Train from Makkah to Madinah?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'For pilgrims with luggage or families, a private taxi from Makkah to Madinah is more convenient — door-to-door with no station transfers. The Haramain High Speed Railway is faster (about 2.5 hours vs 4–5 hours by car) but requires travelling to a station. Saudi Cabs GMC private taxis depart from your hotel directly, carry all your luggage, and make prayer stops en route.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does Saudi Cabs GMC operate during Hajj season?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Saudi Cabs GMC operates 24/7 throughout the year including peak Hajj and Umrah seasons. We provide dedicated Hajj transport between Makkah, Madinah, Mina, Arafat, and Muzdalifah. Vehicles: Toyota Camry Sedan, Hyundai Staria (7 seats), and GMC Yukon (VIP 7 seats). Early booking is strongly recommended during Hajj.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What vehicles are available for group travel in Saudi Arabia?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Saudi Cabs GMC offers three vehicle types: (1) Toyota Camry Sedan for up to 4 passengers; (2) Hyundai Staria van for up to 7 passengers with generous luggage space — ideal for families and pilgrims; (3) GMC Yukon 2024 luxury SUV for VIP travel with up to 7 passengers, featuring a built-in cooler, giant touchscreen, and premium leather seats.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it take to drive from Riyadh to Makkah?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A private cab from Riyadh to Makkah takes approximately 8 to 9 hours (around 900 km). Night travel is recommended to avoid peak traffic. Saudi Cabs GMC provides direct door-to-door service on this long-distance route with planned rest stops for prayers and meals.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far is Jeddah Airport from Makkah?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'King Abdulaziz International Airport (KAIA) in Jeddah is approximately 90 km from Masjid al-Haram in Makkah. A private taxi takes about 50 to 60 minutes. Saudi Cabs GMC offers personalised name-board meet-and-greet pickup at the airport arrivals hall.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far is it from Makkah to Madinah by taxi?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Makkah to Madinah is approximately 430 km by road and takes 4 to 5 hours by private taxi with Saudi Cabs GMC. The trip includes a rest stop. Door-to-door service from your hotel in Makkah directly to your hotel in Madinah — no station transfers required.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the taxi fare from Jeddah to Makkah?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'The taxi fare from Jeddah city to Makkah with Saudi Cabs GMC is a fixed price in SAR agreed before departure — no meters, no surprises. The distance is approximately 80–100 km depending on your exact pick-up point in Jeddah. Contact via WhatsApp at +966 56 948 7569 for the latest rate.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do Saudi Cabs GMC drivers speak English?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. Saudi Cabs GMC drivers are bilingual and communicate in both English and Arabic. Bookings are handled in English or Arabic via WhatsApp. All written communications, pricing, and booking confirmations are available in both languages.',
-        },
-      },
-    ],
-  }
-
   // ── 6. ItemList — Route Index for GEO/LLM ───────────────────────
   const routeListSchema = {
     '@context': 'https://schema.org',
@@ -482,20 +402,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     organizationSchema,
     websiteSchema,
     howToSchema,
-    globalFaqSchema,
     routeListSchema,
     siteNavigationSchema,
   ]
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={cairo.variable}>
       <head>
         <meta name="geo.region" content="SA" />
         <meta name="geo.placename" content="Makkah, Saudi Arabia" />
         <meta name="geo.position" content="21.3891;39.8579" />
         <meta name="ICBM" content="21.3891, 39.8579" />
         <meta name="theme-color" content="#0B3D2E" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
       </head>
       <body>
         {schemas.map((schema, i) => (

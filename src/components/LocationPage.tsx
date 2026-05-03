@@ -110,7 +110,7 @@ export default function LocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+966569487569" className="btn-primary">
+                <a href="https://wa.me/966569487569" className="btn-primary">
                   <Phone size={16} strokeWidth={2.5} />
                   {tr.callNow}
                 </a>
@@ -295,7 +295,7 @@ export default function LocationPage({
                 {tr.whatsapp}
               </a>
               <a
-                href="tel:+966569487569"
+                href="https://wa.me/966569487569"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 28px',

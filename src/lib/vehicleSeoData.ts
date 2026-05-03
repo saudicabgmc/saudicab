@@ -115,19 +115,17 @@ export interface VehicleSeoPageData {
 function taxiSchema(name: string, desc: string, url: string, city: string, vehicle?: string) {
   return {
     '@context': 'https://schema.org',
-    '@type': ['TaxiService', 'LocalBusiness'],
+    '@type': 'Service',
+    '@id': `${url}#service`,
     name,
     description: desc,
     url,
-    provider: { '@id': `${BASE}/#business` },
+    serviceType: 'TaxiService',
+    provider: { '@type': 'LocalBusiness', '@id': `${BASE}/#business`, name: 'Saudi Cabs GMC', telephone: `+${WA}` },
     areaServed: { '@type': 'City', name: city },
     ...(vehicle ? { vehicle: { '@type': 'Car', name: vehicle } } : {}),
-    telephone: `+${WA}`,
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      opens: '00:00', closes: '23:59',
-    },
+    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `https://wa.me/${WA}`, name: 'WhatsApp Booking' },
+    hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
   }
 }
 
