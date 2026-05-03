@@ -49,20 +49,12 @@ export function generateRouteSchemas(data: RoutePageData) {
       { '@type': 'City', name: fromEn },
       { '@type': 'City', name: toEn },
     ],
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '312', bestRating: '5', worstRating: '1' },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SAR',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        description: 'Fixed price agreed before travel — no meter, no surge pricing',
-        eligibleTransactionVolume: {
-          '@type': 'PriceSpecification',
-          description: 'Per vehicle (not per person)',
-        },
-      },
       availability: 'https://schema.org/InStock',
       availableAtOrFrom: { '@type': 'Place', name: fromEn },
-      availableDelivery: { '@type': 'ServiceChannel', name: 'WhatsApp Booking' },
     },
     termsOfService: 'Fixed price confirmed before departure. 24/7 availability.',
     hasOfferCatalog: {

@@ -172,7 +172,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'TaxiService',
+            '@type': 'Service',
             name: 'Sedan Taxi – Toyota Camry',
             description: 'Comfortable sedan taxi for up to 4 passengers. Suitable for airport transfers, city rides, and intercity routes across Saudi Arabia.',
             vehicle: {
@@ -189,7 +189,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'TaxiService',
+            '@type': 'Service',
             name: 'Hyundai Staria Van – 7 Seats',
             description: 'Spacious 7-seat Hyundai Staria van for families, groups, and pilgrims. Generous luggage space — ideal for Hajj and Umrah transport.',
             vehicle: {
@@ -204,7 +204,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'TaxiService',
+            '@type': 'Service',
             name: 'GMC Yukon VIP – Luxury SUV',
             description: 'VIP GMC Yukon luxury SUV for up to 7 passengers. Features built-in cooler, giant touchscreen, and premium leather seats. The top choice for executive and business travel in Saudi Arabia.',
             vehicle: {
