@@ -61,13 +61,6 @@ export const metadata: Metadata = {
     description: 'Book your taxi in Makkah, Madinah, Jeddah & Taif. Fixed prices, 24/7.',
     images: ['/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp'],
   },
-  alternates: {
-    canonical: 'https://saudicabsgmc.com',
-    languages: {
-      'en': 'https://saudicabsgmc.com',
-      'ar': 'https://saudicabsgmc.com',
-    },
-  },
   verification: {
     google: 'saudicabsgmc-google-verify',
   },

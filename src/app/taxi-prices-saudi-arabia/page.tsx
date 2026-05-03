@@ -4,6 +4,7 @@ import GuidePageTemplate from '@/components/GuidePageTemplate'
 export const metadata: Metadata = {
   title: 'Taxi Prices Saudi Arabia 2026 | Route Distance & Cost Guide | Saudi Cabs GMC',
   description: 'Complete Saudi Arabia taxi price and distance guide. Fixed fares for Makkah, Madinah, Jeddah, Taif, Riyadh routes. Private cab prices confirmed before travel.',
+  alternates: { canonical: 'https://saudicabsgmc.com/taxi-prices-saudi-arabia' },
 }
 
 const faqSchema = {

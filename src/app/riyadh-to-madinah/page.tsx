@@ -10,6 +10,7 @@ export function generateMetadata(): Metadata {
   return {
     title: `Taxi from ${data.from.en} to ${data.to.en} | Fixed Price | Saudi Cabs GMC`,
     description: data.description.en,
+    alternates: { canonical: `https://saudicabsgmc.com/${slug}` },
   }
 }
 

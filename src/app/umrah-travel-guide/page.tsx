@@ -4,6 +4,7 @@ import GuidePageTemplate from '@/components/GuidePageTemplate'
 export const metadata: Metadata = {
   title: 'Umrah Travel Guide 2026 | Transport, Routes & Tips | Saudi Cabs GMC',
   description: 'Complete Umrah travel guide — how to travel between Makkah, Madinah and Jeddah during Umrah. Private cab booking, airport transfers, Ziyarat tours.',
+  alternates: { canonical: 'https://saudicabsgmc.com/umrah-travel-guide' },
 }
 
 const faqSchema = {

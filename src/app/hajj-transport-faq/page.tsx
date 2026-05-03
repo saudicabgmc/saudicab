@@ -4,6 +4,7 @@ import GuidePageTemplate from '@/components/GuidePageTemplate'
 export const metadata: Metadata = {
   title: 'Hajj Transport FAQ 2026 | Private Cab for Hajj Saudi Arabia | Saudi Cabs GMC',
   description: 'Complete Hajj 2026 transport FAQ — how to book private cab for Hajj, routes, vehicles, prices, and tips for pilgrims traveling to Makkah.',
+  alternates: { canonical: 'https://saudicabsgmc.com/hajj-transport-faq' },
 }
 
 const faqSchema = {
