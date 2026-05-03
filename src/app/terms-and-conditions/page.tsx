@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Saudi Cabs GMC',
+  title: 'Terms & Conditions',
   description: 'Terms and Conditions for Saudi Cabs GMC — rules, booking policy, cancellations, liability, and user responsibilities for taxi and transport services in Saudi Arabia.',
   alternates: { canonical: 'https://saudicabsgmc.com/terms-and-conditions' },
   robots: { index: true, follow: true },

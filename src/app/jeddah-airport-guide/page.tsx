@@ -2,7 +2,7 @@
 import GuidePageTemplate from '@/components/GuidePageTemplate'
 
 export const metadata: Metadata = {
-  title: 'Jeddah Airport Transfer Guide 2026 | KAIA to Makkah & Madinah | Saudi Cabs GMC',
+  title: 'Jeddah Airport Transfer Guide 2026 | KAIA to Makkah & Madinah',
   description: 'Complete guide to transfers from King Abdulaziz International Airport Jeddah to Makkah, Madinah, Taif. Fixed price private cabs, name-board pickup, 24/7.',
   alternates: { canonical: 'https://saudicabsgmc.com/jeddah-airport-guide' },
 }

@@ -2,7 +2,7 @@
 import GuidePageTemplate from '@/components/GuidePageTemplate'
 
 export const metadata: Metadata = {
-  title: 'Makkah Transport Guide 2026 | How to Get Around Makkah | Saudi Cabs GMC',
+  title: 'Makkah Transport Guide 2026 | How to Get Around Makkah',
   description: 'Complete guide to transport in Makkah — airport transfers, Ziyarat tours, intercity routes to Madinah & Jeddah. Fixed price private cabs available 24/7.',
   alternates: { canonical: 'https://saudicabsgmc.com/makkah-transport-guide' },
 }

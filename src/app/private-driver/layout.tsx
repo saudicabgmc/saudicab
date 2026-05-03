@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Private Driver Saudi Arabia | Chauffeur in Makkah, Madinah, Jeddah & Taif – Saudi Cabs GMC',
+  title: 'Private Driver Saudi Arabia | Chauffeur in Makkah, Madinah, Jeddah & Taif',
   description:
     'Book a private driver or chauffeur in Saudi Arabia. Half-day, full-day and multi-day hire. Makkah, Madinah, Jeddah and Taif. Professional, bilingual, formally dressed. Fixed price.',
   keywords: [

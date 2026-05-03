@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Taxi Service in Jeddah | King Abdulaziz Airport Transfer & Cab – Saudi Cabs GMC',
+  title: 'Taxi Service in Jeddah | King Abdulaziz Airport Transfer & Cab',
   description:
     'Best taxi service in Jeddah. Book cab from King Abdulaziz International Airport, Corniche, malls & business districts. Fixed prices, 24/7. Book via WhatsApp now.',
   keywords: [

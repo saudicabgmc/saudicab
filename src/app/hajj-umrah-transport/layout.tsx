@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hajj & Umrah Transport Saudi Arabia | Makkah, Madinah & Holy Sites – Saudi Cabs GMC',
+  title: 'Hajj & Umrah Transport Saudi Arabia | Makkah, Madinah & Holy Sites',
   description:
     'Dedicated Hajj and Umrah taxi service in Saudi Arabia. Transfers between Makkah, Madinah, Mina, Arafat & Muzdalifah. Licensed vehicles, 24/7 pilgrimage transport. Book via WhatsApp.',
   keywords: [

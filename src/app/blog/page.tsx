@@ -3,7 +3,7 @@ import { blogPosts } from '@/lib/blogData'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Travel Guides & Tips | Saudi Cabs GMC Blog',
+  title: 'Travel Guides & Saudi Arabia Taxi Tips | Blog',
   description: 'Expert guides on Hajj transport, Umrah travel, Makkah Ziyarat, Jeddah Airport transfers, and intercity taxi routes across Saudi Arabia.',
   alternates: { canonical: 'https://saudicabsgmc.com/blog' },
 }

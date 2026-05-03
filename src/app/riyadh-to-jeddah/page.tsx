@@ -8,7 +8,7 @@ const slug = 'riyadh-to-jeddah'
 export function generateMetadata(): Metadata {
   const data = allRoutePages[slug]
   return {
-    title: `Taxi from ${data.from.en} to ${data.to.en} | Fixed Price | Saudi Cabs GMC`,
+    title: `Taxi from ${data.from.en} to ${data.to.en} | Fixed Price`,
     description: data.description.en,
     alternates: { canonical: `https://saudicabsgmc.com/${slug}` },
   }

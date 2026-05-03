@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Saudi Cabs GMC',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Saudi Cabs GMC — how we collect, use, and protect your personal data when you book taxi and transport services in Saudi Arabia.',
   alternates: { canonical: 'https://saudicabsgmc.com/privacy-policy' },
   robots: { index: true, follow: true },

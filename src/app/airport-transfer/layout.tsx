@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Airport Transfer Saudi Arabia | Jeddah, Madinah & Taif Airports – Saudi Cabs GMC',
+  title: 'Airport Transfer Saudi Arabia | Jeddah, Madinah & Taif Airports',
   description:
     'Professional airport transfer service from all Saudi airports. Name-board pickup, flight tracking, fixed price. Jeddah (KAIA), Madinah (MED) & Taif airports. Book via WhatsApp.',
   keywords: [
