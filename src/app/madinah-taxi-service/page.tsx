@@ -1,11 +1,11 @@
 'use client'
-import LocationPage from '@/components/LocationPage'
+import MadinahLocationPage from '@/components/MadinahLocationPage'
 import { madinahFaqs } from '@/lib/faqData'
 import { getPricing } from '@/lib/pricingData'
 
 export default function MadinahPage() {
   return (
-    <LocationPage
+    <MadinahLocationPage
       cityName={{ ar: 'المدينة المنورة', en: 'Madinah' }}
       citySlug="madinah-taxi-service"
       citySlogan={{ ar: 'مدينة النور • المسجد النبوي الشريف', en: 'City of Light • Al-Masjid An-Nabawi' }}
@@ -33,6 +33,14 @@ export default function MadinahPage() {
         { label: { ar: 'المسجد النبوي ← جبل أحد', en: "Prophet's Mosque → Mount Uhud" }, duration: '~15 min' },
         { label: { ar: 'المدينة ← ينبع', en: 'Madinah → Yanbu' }, duration: '~2.5 hrs' },
         { label: { ar: 'البقيع ← قباء ← المسجد', en: 'Al-Baqi → Quba → Mosque' }, duration: '~20 min' },
+      ]}
+      linkedRoutes={[
+        { slug: 'madinah-to-makkah', label: { ar: 'المدينة المنورة ← مكة المكرمة', en: 'Madinah → Makkah' }, duration: '~4.5 hrs' },
+        { slug: 'madinah-to-jeddah', label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: '~4 hrs' },
+        { slug: 'madinah-airport-taxi', label: { ar: 'مطار المدينة ← المسجد النبوي', en: 'Madinah Airport → Prophet\'s Mosque' }, duration: '~30 min' },
+        { slug: 'jeddah-airport-to-madinah', label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: '~4 hrs' },
+        { slug: 'makkah-to-madinah', label: { ar: 'مكة المكرمة ← المدينة المنورة', en: 'Makkah → Madinah' }, duration: '~4.5 hrs' },
+        { slug: 'taif-to-madinah', label: { ar: 'الطائف ← المدينة المنورة', en: 'Taif → Madinah' }, duration: '~5 hrs' },
       ]}
       highlights={[
         { iconName: 'Star', title: { ar: "متخصصون في خدمة زوار المسجد النبوي", en: "Specialists in Prophet's Mosque Visitors" }, desc: { ar: 'نفخر بخدمة ضيوف نبي الرحمة ﷺ بكل أدب واحترام.', en: 'We are proud to serve the guests of the Prophet of Mercy ﷺ with the utmost respect and care.' } },

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { MessageCircle, Car, Users } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import {
@@ -150,7 +150,7 @@ export default function PricingSection({ routes, heading }: Props) {
                         </span>
                       </div>
                       <a
-                        href={`https://wa.me/966549317712?text=${encodeURIComponent(waBookMsg(route.from, route.to))}`}
+                        href={`https://wa.me/966569487569?text=${encodeURIComponent(waBookMsg(route.from, route.to))}`}
                         target="_blank" rel="noopener noreferrer"
                         style={{
                           display: 'inline-flex', alignItems: 'center', gap: '6px',

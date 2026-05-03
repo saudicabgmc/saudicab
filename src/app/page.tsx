@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import {
   Car, Plane, Briefcase, Navigation,
@@ -7,6 +7,7 @@ import {
   MessageCircle, Globe, Users,
 } from 'lucide-react'
 import BookingForm from '@/components/BookingForm'
+import TrustBadges from '@/components/TrustBadges'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import FAQSection from '@/components/FAQSection'
 import PricingSection from '@/components/PricingSection'
@@ -105,7 +106,7 @@ export default function Home() {
                   <MapPin size={16} strokeWidth={2.5} />
                   {tr.hero.exploreCities}
                 </a>
-                <a href="tel:+966549317712" className="btn-outline">
+                <a href="tel:+966569487569" className="btn-outline">
                   <Phone size={16} strokeWidth={2.5} />
                   {tr.hero.callUs}
                 </a>
@@ -190,6 +191,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service Hubs */}
+      <section style={{ padding: '80px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">{isAr ? 'خدماتنا المتخصصة' : 'Specialized Services'}</span>
+            <h2 className="section-title">
+              {isAr
+                ? <>خدمات <span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> المتخصصة</>
+                : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> Specialized Services</>
+              }
+            </h2>
+            <div className="gold-divider" />
+          </div>
+          <div className="grid-3">
+            {[
+              {
+                href: '/airport-transfer',
+                icon: <Plane size={32} strokeWidth={1.6} color="var(--primary)" />,
+                title: { en: 'Airport Transfer', ar: 'توصيل المطار' },
+                desc: { en: 'Name-board pickup, flight tracking & fixed prices across all Saudi airports.', ar: 'استقبال بلوحة الاسم، متابعة الرحلة، وسعر ثابت من جميع مطارات المملكة.' },
+                bg: 'linear-gradient(135deg,rgba(30,58,138,0.07),rgba(30,58,138,0.03))',
+                border: 'rgba(30,58,138,0.15)',
+              },
+              {
+                href: '/hajj-umrah-transport',
+                icon: <Navigation size={32} strokeWidth={1.6} color="var(--primary)" />,
+                title: { en: 'Hajj & Umrah Transport', ar: 'نقل الحج والعمرة' },
+                desc: { en: 'Dedicated pilgrimage transfers between Makkah, Madinah & the holy sites.', ar: 'نقل متخصص للحجاج والمعتمرين بين مكة والمدينة والمشاعر المقدسة.' },
+                bg: 'linear-gradient(135deg,rgba(11,61,46,0.07),rgba(11,61,46,0.03))',
+                border: 'rgba(11,61,46,0.15)',
+              },
+              {
+                href: '/private-driver',
+                icon: <Briefcase size={32} strokeWidth={1.6} color="var(--primary)" />,
+                title: { en: 'Private Driver', ar: 'سائق خاص' },
+                desc: { en: 'Chauffeur for half-day, full-day or multi-day hire across Saudi Arabia.', ar: 'شوفير لنصف يوم أو يوم كامل أو رحلة متعددة الأيام في المملكة.' },
+                bg: 'linear-gradient(135deg,rgba(212,175,55,0.07),rgba(212,175,55,0.03))',
+                border: 'rgba(212,175,55,0.2)',
+              },
+            ].map(s => (
+              <Link key={s.href} href={s.href} style={{ display: 'flex', flexDirection: 'column', gap: '14px', background: s.bg, border: `1.5px solid ${s.border}`, borderRadius: '16px', padding: '28px 24px', textDecoration: 'none', transition: 'all 0.25s' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow-md)' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
+              >
+                <div style={{ width: '56px', height: '56px', background: 'rgba(212,175,55,0.12)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{s.icon}</div>
+                <h3 style={{ fontSize: '1rem', fontWeight: '800', color: 'var(--foreground)', margin: 0 }}>{isAr ? s.title.ar : s.title.en}</h3>
+                <p style={{ fontSize: '0.86rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{isAr ? s.desc.ar : s.desc.en}</p>
+                <span style={{ fontSize: '0.82rem', fontWeight: '700', color: 'var(--primary)', marginTop: 'auto' }}>{isAr ? 'اعرف المزيد ←' : 'Learn more →'}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
       <section style={{ padding: '100px 0', backgroundColor: 'var(--background)' }}>
         <div className="container">
@@ -247,7 +302,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: '50px' }}>
             <a
-              href={`https://wa.me/966549317712?text=${encodeURIComponent(waText)}`}
+              href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
               target="_blank" rel="noopener noreferrer"
               className="btn-primary"
               style={{ fontSize: '1.05rem', padding: '15px 40px' }}
@@ -284,7 +339,7 @@ export default function Home() {
               <h2 className="section-title" style={{ marginTop: '14px', textAlign: isAr ? 'right' : 'left' }}>
                 {isAr
                   ? <> سائقو <span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — معيار الاحترافية في خدمة الشوفير</>
-                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> Drivers — Certified Chauffeurs in Makkah, Jeddah & Riyadh</>
+                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> Drivers — Certified Chauffeurs in Makkah, Jeddah & Madinah</>
                 }
               </h2>
               <div className="gold-divider" style={{ margin: '16px 0', marginRight: isAr ? 'auto' : 0, marginLeft: 0 }} />
@@ -312,14 +367,14 @@ export default function Home() {
               {/* CTA buttons */}
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
-                  href={`https://wa.me/966549317712?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a professional chauffeur")}`}
+                  href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a professional chauffeur")}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary"
                 >
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز شوفيرك الآن' : 'Book a Chauffeur Now'}
                 </a>
-                <a href="tel:+966549317712" className="btn-outline" style={{ color: 'var(--foreground)', borderColor: 'var(--border)' }}>
+                <a href="tel:+966569487569" className="btn-outline" style={{ color: 'var(--foreground)', borderColor: 'var(--border)' }}>
                   <Phone size={16} strokeWidth={2.5} />
                   {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
@@ -505,7 +560,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: '28px' }}>
             <a
-              href={`https://wa.me/966549317712?text=${encodeURIComponent(isAr ? 'السلام عليكم، أريد الاستفسار عن الأسعار' : "Hello, I'd like to inquire about pricing")}`}
+              href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أريد الاستفسار عن الأسعار' : "Hello, I'd like to inquire about pricing")}`}
               target="_blank" rel="noopener noreferrer"
               className="btn-primary"
             >
@@ -544,7 +599,7 @@ export default function Home() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', height: '480px', boxShadow: 'var(--shadow-lg)' }}>
                 <img
                   src="/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp"
-                  alt="Toyota Camry Premium Taxi – Saudi Cabs GMC Best Cab Service in Saudi Arabia"
+                  alt="Saudi Cabs GMC Premium Sedan Taxi – Best Cab Service in Saudi Arabia"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
@@ -556,6 +611,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trust Badges */}
+      <TrustBadges />
 
       {/* Testimonials */}
       <section style={{ padding: '90px 0', backgroundColor: 'var(--muted)' }}>
@@ -569,14 +627,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visual break between dark sections */}
+      <div style={{ height: '6px', background: 'linear-gradient(90deg, var(--primary) 0%, #E6C65C 50%, var(--primary) 100%)' }} />
+
       {/* CTA Banner */}
-      <section style={{ padding: '90px 0', backgroundImage: 'linear-gradient(135deg, #0B3D2E 0%, #0F5132 100%)', color: 'white', textAlign: 'center' }}>
+      <section style={{ padding: '90px 0', backgroundImage: 'linear-gradient(135deg, #071f17 0%, #0B3D2E 100%)', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <h2 className="cta-title-lg">{tr.cta.title}</h2>
           <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', opacity: 0.9, maxWidth: '520px', margin: '0 auto 36px' }}>{tr.cta.subtitle}</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
-              href={`https://wa.me/966549317712?text=${encodeURIComponent(waText)}`}
+              href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
               target="_blank" rel="noopener noreferrer"
               style={{ background: 'linear-gradient(135deg, #D4AF37, #E6C65C)', color: '#1D1D1B', padding: '14px 36px', borderRadius: 'var(--radius)', fontWeight: '800', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '8px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)', textDecoration: 'none' }}
             >
@@ -584,7 +645,7 @@ export default function Home() {
               {tr.cta.bookWhatsapp}
             </a>
             <a
-              href="tel:+966549317712"
+              href="tel:+966569487569"
               style={{ backgroundColor: 'rgba(255,255,255,0.18)', color: 'white', border: '2px solid rgba(255,255,255,0.6)', padding: '14px 36px', borderRadius: 'var(--radius)', fontWeight: '800', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}
             >
               <Phone size={18} strokeWidth={2.5} />
@@ -599,57 +660,6 @@ export default function Home() {
 
       {/* FAQ */}
       <FAQSection faqs={homeFaqs} />
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div>
-              <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <img src="/logo-saudi-cabs-gmc.webp" alt="Saudi Cabs GMC" style={{ height: '44px', width: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
-                {tr.footer.brand}
-              </div>
-              <p className="footer-desc">{tr.footer.desc}</p>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footer.cities}</h4>
-              <ul className="footer-links">
-                {locationSlugs.map((slug, i) => (
-                  <li key={slug}><Link href={`/${slug}`}>{locationNames[lang][i]}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footer.services}</h4>
-              <ul className="footer-links">
-                {tr.footer.serviceList.map(s => (
-                  <li key={s}><a href="#">{s}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footer.contact}</h4>
-              <div className="footer-contact-item">
-                <Phone size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="tel:+966549317712" style={{ color: 'inherit' }}>+966 54 931 7712</a>
-              </div>
-              <div className="footer-contact-item">
-                <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="https://wa.me/966549317712" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                  {tr.footer.whatsapp}
-                </a>
-              </div>
-              <div className="footer-contact-item">
-                <Globe size={15} color="var(--primary)" strokeWidth={2} />
-                <span>{tr.footer.country}</span>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            © {new Date().getFullYear()} {tr.footer.brand}. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }

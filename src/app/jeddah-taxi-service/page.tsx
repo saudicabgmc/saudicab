@@ -1,11 +1,11 @@
 'use client'
-import LocationPage from '@/components/LocationPage'
+import JeddahLocationPage from '@/components/JeddahLocationPage'
 import { jeddahFaqs } from '@/lib/faqData'
 import { getPricing } from '@/lib/pricingData'
 
 export default function JeddahPage() {
   return (
-    <LocationPage
+    <JeddahLocationPage
       cityName={{ ar: 'جدة', en: 'Jeddah' }}
       citySlug="jeddah-taxi-service"
       citySlogan={{ ar: 'عروس البحر الأحمر • البوابة الغربية', en: 'Bride of the Red Sea • Western Gateway' }}
@@ -33,6 +33,14 @@ export default function JeddahPage() {
         { label: { ar: 'المطار ← وسط جدة', en: 'Airport → Downtown Jeddah' }, duration: '~30 min' },
         { label: { ar: 'جدة ← الرياض', en: 'Jeddah → Riyadh' }, duration: '~10 hrs' },
         { label: { ar: 'جدة ← ينبع', en: 'Jeddah → Yanbu' }, duration: '~3.5 hrs' },
+      ]}
+      linkedRoutes={[
+        { slug: 'jeddah-airport-to-makkah', label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: '~55 min' },
+        { slug: 'jeddah-airport-to-madinah', label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: '~4 hrs' },
+        { slug: 'jeddah-to-makkah', label: { ar: 'جدة ← مكة المكرمة', en: 'Jeddah → Makkah' }, duration: '~50 min' },
+        { slug: 'jeddah-to-taif', label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: '~1.5 hrs' },
+        { slug: 'madinah-to-jeddah', label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: '~4 hrs' },
+        { slug: 'makkah-to-jeddah', label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: '~50 min' },
       ]}
       highlights={[
         { iconName: 'Plane', title: { ar: 'تغطية شاملة لمطار الملك عبدالعزيز', en: 'Full Coverage of King Abdulaziz Airport' }, desc: { ar: 'نغطي جميع صالات الوصول في المطار مع خدمة استقبال باللوحات.', en: 'We cover all arrival halls at the airport with professional meet-and-greet service.' } },

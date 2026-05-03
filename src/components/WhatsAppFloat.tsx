@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 
@@ -7,7 +7,7 @@ export default function WhatsAppFloat() {
 
   return (
     <a
-      href="https://wa.me/966549317712?text=السلام عليكم، أرغب في حجز رحلة"
+      href="https://wa.me/966569487569?text=السلام عليكم، أرغب في حجز رحلة"
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setHovered(true)}

@@ -1,11 +1,11 @@
 'use client'
-import LocationPage from '@/components/LocationPage'
+import MakkahLocationPage from '@/components/MakkahLocationPage'
 import { makkahFaqs } from '@/lib/faqData'
 import { getPricing } from '@/lib/pricingData'
 
 export default function MakkahPage() {
   return (
-    <LocationPage
+    <MakkahLocationPage
       cityName={{ ar: 'مكة المكرمة', en: 'Makkah' }}
       citySlug="makkah-taxi-service"
       citySlogan={{ ar: 'أم القرى • الحرم المكي الشريف', en: 'Umm Al-Qura • The Holy Mosque' }}
@@ -33,6 +33,14 @@ export default function MakkahPage() {
         { label: { ar: 'مكة ← عرفات', en: 'Makkah → Arafat' }, duration: '~30 min' },
         { label: { ar: 'مكة ← جدة (المطار)', en: 'Makkah → Jeddah (Airport)' }, duration: '~55 min' },
         { label: { ar: 'العزيزية ← الحرم', en: 'Al-Aziziyah → Holy Mosque' }, duration: '~15 min' },
+      ]}
+      linkedRoutes={[
+        { slug: 'jeddah-airport-to-makkah', label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: '~55 min' },
+        { slug: 'makkah-to-jeddah-airport', label: { ar: 'مكة المكرمة ← مطار جدة', en: 'Makkah → Jeddah Airport' }, duration: '~55 min' },
+        { slug: 'makkah-to-madinah', label: { ar: 'مكة المكرمة ← المدينة المنورة', en: 'Makkah → Madinah' }, duration: '~4.5 hrs' },
+        { slug: 'madinah-to-makkah', label: { ar: 'المدينة المنورة ← مكة المكرمة', en: 'Madinah → Makkah' }, duration: '~4.5 hrs' },
+        { slug: 'makkah-to-jeddah', label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: '~50 min' },
+        { slug: 'makkah-to-taif', label: { ar: 'مكة المكرمة ← الطائف', en: 'Makkah → Taif' }, duration: '~1.5 hrs' },
       ]}
       highlights={[
         { iconName: 'Star', title: { ar: 'متخصصون في خدمة الحجاج والمعتمرين', en: 'Specialists in Hajj & Umrah Services' }, desc: { ar: 'أسطولنا مخصص لخدمة ضيوف الرحمن بكل تبجيل واحترام.', en: 'Our fleet is dedicated to serving the guests of the Merciful with full reverence and respect.' } },

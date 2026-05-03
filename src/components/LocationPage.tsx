@@ -1,10 +1,10 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import FAQSection, { type FAQItem } from './FAQSection'
 import PricingSection from './PricingSection'
 import { type PricingRoute } from '@/lib/pricingData'
 import {
-  Phone, MessageCircle, Globe,
+  Phone, MessageCircle,
   Building2, Plane, Bus, Car, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 } from 'lucide-react'
@@ -37,6 +37,12 @@ interface RouteItem {
   duration: string
 }
 
+interface LinkedRoute {
+  slug: string
+  label: BText
+  duration: string
+}
+
 export interface LocationPageProps {
   cityName: BText
   citySlug: string
@@ -45,6 +51,7 @@ export interface LocationPageProps {
   heroImage: string
   services: ServiceItem[]
   routes: RouteItem[]
+  linkedRoutes?: LinkedRoute[]
   highlights: HighlightItem[]
   faqs: FAQItem[]
   pricing?: PricingRoute[]
@@ -57,6 +64,7 @@ export default function LocationPage({
   heroImage,
   services,
   routes,
+  linkedRoutes,
   citySlug,
   highlights,
   faqs,
@@ -67,12 +75,6 @@ export default function LocationPage({
   const tx = (b: BText) => b[lang]
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة' : "Hello, I'd like to book a trip"
 
-  const footerCities = [
-    { href: '/makkah-taxi-service', label: isAr ? 'مكة المكرمة' : 'Makkah' },
-    { href: '/madinah-taxi-service', label: isAr ? 'المدينة المنورة' : 'Madinah' },
-    { href: '/jeddah-taxi-service', label: isAr ? 'جدة' : 'Jeddah' },
-    { href: '/taif-taxi-service', label: isAr ? 'الطائف' : 'Taif' },
-  ]
 
   return (
     <main>
@@ -108,12 +110,12 @@ export default function LocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+966549317712" className="btn-primary">
+                <a href="tel:+966569487569" className="btn-primary">
                   <Phone size={16} strokeWidth={2.5} />
                   {tr.callNow}
                 </a>
                 <a
-                  href={`https://wa.me/966549317712?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-outline"
                 >
@@ -180,7 +182,7 @@ export default function LocationPage({
             {routes.map(r => (
               <a
                 key={r.label.ar}
-                href={`https://wa.me/966549317712?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 className="route-badge"
               >
@@ -204,6 +206,34 @@ export default function LocationPage({
           </div>
         </div>
       </section>
+
+      {/* Linked Route Pages */}
+      {linkedRoutes && linkedRoutes.length > 0 && (
+        <section style={{ padding: '60px 0', backgroundColor: 'var(--background)' }}>
+          <div className="container">
+            <div className="section-header" style={{ marginBottom: '32px' }}>
+              <span className="section-tag">{isAr ? 'رحلات مباشرة' : 'Direct Routes'}</span>
+              <h2 className="section-title">{isAr ? <>خطوط <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span> المباشرة</> : <><span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span> Direct Routes</>}</h2>
+              <div className="gold-divider" />
+            </div>
+            <div className="grid-2" style={{ gap: '14px' }}>
+              {linkedRoutes.map(r => (
+                <Link key={r.slug} href={`/${r.slug}`}
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--card)', borderRadius: '14px', padding: '18px 22px', border: '1.5px solid var(--border)', textDecoration: 'none', boxShadow: 'var(--shadow-sm)', transition: 'all 0.25s' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--primary)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.transform = 'none' }}
+                >
+                  <div>
+                    <div style={{ fontWeight: '800', fontSize: '0.9rem', marginBottom: '4px', color: 'var(--foreground)' }}>{tx(r.label)}</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر ثابت' : 'Fixed Price'}</div>
+                  </div>
+                  <Car size={18} color="var(--primary)" strokeWidth={2} />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Fleet Section — 3 cars with prices */}
       {pricing && pricing.length > 0 && (
@@ -253,7 +283,7 @@ export default function LocationPage({
                 {tr.ctaDesc} {tx(cityName)} {tr.ctaDescEnd}
               </p>
               <a
-                href={`https://wa.me/966549317712?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -265,7 +295,7 @@ export default function LocationPage({
                 {tr.whatsapp}
               </a>
               <a
-                href="tel:+966549317712"
+                href="tel:+966569487569"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 28px',
@@ -273,7 +303,7 @@ export default function LocationPage({
                 }}
               >
                 <Phone size={17} strokeWidth={2.5} />
-                +966 54 931 7712
+                +966 56 948 7569
               </a>
             </div>
           </div>
@@ -299,56 +329,6 @@ export default function LocationPage({
         }}
       />
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div>
-              <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <img src="/logo-saudi-cabs-gmc.webp" alt="Saudi Cabs GMC" style={{ height: '44px', width: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
-                {tr.footerBrand}
-              </div>
-              <p className="footer-desc">{tr.footerDesc}</p>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footerCities}</h4>
-              <ul className="footer-links">
-                {footerCities.map(l => (
-                  <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footerServices}</h4>
-              <ul className="footer-links">
-                {tr.footerServiceList.map(s => (
-                  <li key={s}><a href="#">{s}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{tr.footerContact}</h4>
-              <div className="footer-contact-item">
-                <Phone size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="tel:+966549317712" style={{ color: 'inherit' }}>+966 54 931 7712</a>
-              </div>
-              <div className="footer-contact-item">
-                <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="https://wa.me/966549317712" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                  {tr.footerWhatsapp}
-                </a>
-              </div>
-              <div className="footer-contact-item">
-                <Globe size={15} color="var(--primary)" strokeWidth={2} />
-                <span>{tr.footerCountry}</span>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            © {new Date().getFullYear()} {tr.footerBrand}. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }

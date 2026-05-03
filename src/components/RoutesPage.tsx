@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState } from 'react'
 import Link from 'next/link'
 import { Clock, MapPin, ArrowRight, Phone, MessageCircle, Globe, CheckCircle } from 'lucide-react'
@@ -61,7 +61,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
     'provider': {
       '@type': 'Organization',
       'name': 'Saudi Cabs GMC',
-      'telephone': '+966549317712',
+      'telephone': '+966569487569',
     },
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',
@@ -282,7 +282,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
 
                   {/* CTA */}
                   <a
-                    href={`https://wa.me/966549317712?text=${encodeURIComponent(
+                    href={`https://wa.me/966569487569?text=${encodeURIComponent(
                       isAr
                         ? `السلام عليكم، أريد حجز رحلة من ${tx(route.from)} إلى ${tx(route.to)}`
                         : `Hello, I'd like to book a trip from ${tx(route.from)} to ${tx(route.to)}`
@@ -419,11 +419,11 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
               <h4 className="footer-heading">{isAr ? 'تواصل معنا' : 'Contact Us'}</h4>
               <div className="footer-contact-item">
                 <Phone size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="tel:+966549317712" style={{ color: 'inherit' }}>+966 54 931 7712</a>
+                <a href="tel:+966569487569" style={{ color: 'inherit' }}>+966 56 948 7569</a>
               </div>
               <div className="footer-contact-item">
                 <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="https://wa.me/966549317712" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
                   WhatsApp
                 </a>
               </div>

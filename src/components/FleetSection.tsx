@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { MessageCircle } from 'lucide-react'
 import { type PricingRoute, vehicleImages } from '@/lib/pricingData'
 import { useLang } from '@/contexts/LanguageContext'
@@ -161,7 +161,7 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
 
                   {/* WhatsApp button */}
                   <a
-                    href={`https://wa.me/966549317712?text=${encodeURIComponent(waMsg)}`}
+                    href={`https://wa.me/966569487569?text=${encodeURIComponent(waMsg)}`}
                     target="_blank" rel="noopener noreferrer"
                     style={{
                       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',

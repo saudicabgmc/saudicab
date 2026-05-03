@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+﻿import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { supabase } from '@/lib/supabase'
 
@@ -94,7 +94,7 @@ function buildEmail(d: {
          style="display:inline-block;background:#25D366;color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;margin-bottom:12px">
         💬 Reply on WhatsApp
       </a><br>` : ''}
-      <a href="tel:+966549317712"
+      <a href="tel:+966569487569"
          style="display:inline-block;background:#0B3D2E;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px">
         📞 Call Driver Line
       </a>
@@ -103,7 +103,7 @@ function buildEmail(d: {
     <!-- Footer -->
     <div style="background:#071f17;padding:18px;text-align:center">
       <p style="color:rgba(255,255,255,0.45);margin:0;font-size:12px">
-        Saudi Cabs GMC • saudicabsgmc.com • +966 54 931 7712
+        Saudi Cabs GMC • saudicabsgmc.com • +966 56 948 7569
       </p>
     </div>
   </div>

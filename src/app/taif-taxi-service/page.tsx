@@ -1,10 +1,10 @@
 'use client'
-import LocationPage from '@/components/LocationPage'
+import TaifLocationPage from '@/components/TaifLocationPage'
 import { taifFaqs } from '@/lib/faqData'
 
 export default function TaifPage() {
   return (
-    <LocationPage
+    <TaifLocationPage
       cityName={{ ar: 'الطائف', en: 'Taif' }}
       citySlug="taif-taxi-service"
       citySlogan={{ ar: 'عاصمة الورد • منتجع الجبال الخلابة', en: 'Rose Capital • Scenic Mountain Resort' }}
@@ -32,6 +32,12 @@ export default function TaifPage() {
         { label: { ar: 'المطار ← وسط الطائف', en: 'Airport → Downtown Taif' }, duration: '~25 min' },
         { label: { ar: 'الطائف ← الهدا ← شفا', en: 'Taif → Hada → Shafa' }, duration: '~45 min' },
         { label: { ar: 'الطائف ← المدينة المنورة', en: 'Taif → Madinah' }, duration: '~5 hrs' },
+      ]}
+      linkedRoutes={[
+        { slug: 'taif-to-jeddah', label: { ar: 'الطائف ← جدة', en: 'Taif → Jeddah' }, duration: '~1.5 hrs' },
+        { slug: 'taif-to-madinah', label: { ar: 'الطائف ← المدينة المنورة', en: 'Taif → Madinah' }, duration: '~5 hrs' },
+        { slug: 'makkah-to-taif', label: { ar: 'مكة المكرمة ← الطائف', en: 'Makkah → Taif' }, duration: '~1.5 hrs' },
+        { slug: 'jeddah-to-taif', label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: '~1.5 hrs' },
       ]}
       highlights={[
         { iconName: 'Mountain', title: { ar: 'خبراء طرق الجبال', en: 'Mountain Road Experts' }, desc: { ar: 'سائقونا متمرسون على طرق الجبال الجميلة حول شفا وهدا والطائف.', en: 'Our drivers are experienced on the scenic mountain roads around Shafa, Hada, and Taif.' } },

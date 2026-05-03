@@ -27,7 +27,6 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   line-height: 1.6;
-  direction: rtl;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -196,7 +195,6 @@ input, select, textarea { font-family: 'Cairo', sans-serif; }
   transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
   background: #fff;
   color: var(--foreground);
-  direction: rtl;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -214,14 +212,22 @@ input, select, textarea { font-family: 'Cairo', sans-serif; }
   font-weight: 400;
 }
 
-/* ── Select — custom gold chevron arrow ── */
+/* ── Select — custom gold chevron arrow (direction-aware) ── */
 select.form-input {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23D4AF37' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: left 11px center;
   background-size: 18px;
-  padding-left: 34px;
   cursor: pointer;
+}
+[dir="rtl"] select.form-input {
+  background-position: left 11px center;
+  padding-left: 34px;
+  padding-right: 13px;
+}
+[dir="ltr"] select.form-input {
+  background-position: right 11px center;
+  padding-right: 34px;
+  padding-left: 13px;
 }
 
 /* ── Date & Time wrapper — custom icon, hidden native indicator ── */
@@ -237,10 +243,16 @@ select.form-input {
   color: var(--primary);
   z-index: 1;
 }
+[dir="rtl"] .input-icon-wrap .input-icon { right: auto; left: 12px; }
 .input-icon-wrap input[type="date"],
 .input-icon-wrap input[type="time"] {
   padding-right: 36px;
   cursor: pointer;
+}
+[dir="rtl"] .input-icon-wrap input[type="date"],
+[dir="rtl"] .input-icon-wrap input[type="time"] {
+  padding-right: 13px;
+  padding-left: 36px;
 }
 .input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator,
 .input-icon-wrap input[type="time"]::-webkit-calendar-picker-indicator {
@@ -251,6 +263,11 @@ select.form-input {
   opacity: 0;
   cursor: pointer;
   z-index: 2;
+}
+[dir="rtl"] .input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator,
+[dir="rtl"] .input-icon-wrap input[type="time"]::-webkit-calendar-picker-indicator {
+  right: auto;
+  left: 0;
 }
 .form-grid-2 {
   display: grid;
@@ -454,30 +471,30 @@ select.form-input {
 /* ── Footer ── */
 .footer {
   background: #071f17;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   padding: 70px 0 28px;
 }
 .footer-logo { font-size: 1.45rem; font-weight: 900; color: white; margin-bottom: 12px; }
-.footer-desc { font-size: 0.9rem; color: rgba(255, 255, 255, 0.5); line-height: 1.7; max-width: 280px; }
+.footer-desc { font-size: 0.9rem; color: rgba(255, 255, 255, 0.65); line-height: 1.7; max-width: 280px; }
 .footer-heading { font-size: 1rem; font-weight: 800; color: white; margin-bottom: 18px; }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 10px; }
-.footer-links a { color: rgba(255, 255, 255, 0.55); font-size: 0.9rem; transition: color 0.2s; }
+.footer-links a { color: rgba(255, 255, 255, 0.72); font-size: 0.9rem; transition: color 0.2s; }
 .footer-links a:hover { color: var(--primary); }
 .footer-contact-item {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
 }
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 50px;
   padding-top: 24px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 0.84rem;
 }
 
@@ -592,7 +609,7 @@ select.form-input {
 
 .hero-h1 {
   font-size: 3.4rem;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -617,6 +634,7 @@ select.form-input {
 
 @media (max-width: 900px) {
   .two-col-grid { gap: 40px; }
+  .why-us-badge { bottom: 16px; right: 16px; }
 }
 
 @media (max-width: 768px) {
