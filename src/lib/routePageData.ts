@@ -838,6 +838,170 @@ export const makkahToRiyadh: RoutePageData = {
   ],
 }
 
+/* ─── DAMMAM → MAKKAH ───────────────────────────────────────────── */
+export const dammamToMakkah: RoutePageData = {
+  from:      { ar: 'الدمام', en: 'Dammam' },
+  to:        { ar: 'مكة المكرمة', en: 'Makkah' },
+  slug:      'dammam-to-makkah',
+  duration:  '~8–9 hrs',
+  distance:  '~870 km',
+  type:      'intercity',
+  heroImage: '/location/makkah.webp',
+  fromCitySlug: 'makkah-taxi-service',
+  toCitySlug:   'makkah-taxi-service',
+  description: {
+    en: 'Private taxi from Dammam to Makkah — door-to-door intercity cab from the Eastern Province to the Holy City. Fixed price, comfortable vehicles, 24/7 service. Ideal for Umrah and Hajj pilgrims.',
+    ar: 'تاكسي خاص من الدمام إلى مكة المكرمة — كاب بين المدن من المنطقة الشرقية إلى المدينة المقدسة. سعر ثابت، سيارات مريحة، خدمة ٢٤/٧. مثالي للمعتمرين والحجاج.',
+  },
+  highlights: [
+    { icon: '🕋', en: 'Drop-off at Haram hotels or any Makkah address', ar: 'توصيل لفنادق الحرم أو أي عنوان في مكة' },
+    { icon: '🛣️', en: 'Direct ~870 km journey via Riyadh bypass', ar: 'رحلة مباشرة ~870 كم عبر الطريق السريع' },
+    { icon: '🌙', en: 'Night travel recommended — depart after Isha', ar: 'السفر الليلي موصى به — انطلق بعد العشاء' },
+    { icon: '💰', en: 'Fixed long-distance fare — no surprises', ar: 'أجرة ثابتة للمسافات الطويلة — بلا مفاجآت' },
+    { icon: '🧳', en: 'Spacious vehicles for Hajj & Umrah luggage', ar: 'سيارات واسعة لأمتعة الحج والعمرة' },
+    { icon: '⏰', en: '24/7 — book any departure time', ar: '٢٤/٧ — احجز في أي وقت' },
+  ],
+  vehicles: VEHICLES_STANDARD,
+  whyPrivate: {
+    en: [
+      'Door-to-door — no bus terminals or layovers',
+      'Fixed price from Dammam to Makkah, no hidden fees',
+      'Rest and prayer stops along the highway',
+      'Ideal for families and elderly with heavy luggage',
+      'Depart at your time — not a fixed bus schedule',
+      'Driver experienced on the Dammam–Makkah highway',
+    ],
+    ar: [
+      'من الباب للباب — بلا محطات أو توقفات',
+      'سعر ثابت من الدمام إلى مكة، بلا رسوم خفية',
+      'توقفات للراحة والصلاة على طول الطريق السريع',
+      'مثالي للعائلات وكبار السن مع الأمتعة الثقيلة',
+      'انطلق في وقتك — وليس وفق جدول الحافلات',
+      'سائق ذو خبرة على طريق الدمام–مكة السريع',
+    ],
+  },
+  relatedRoutes: [
+    { slug: 'makkah-to-madinah', from: { ar: 'مكة', en: 'Makkah' },   to: { ar: 'المدينة', en: 'Madinah' }, duration: '~4.5 hrs' },
+    { slug: 'dammam-to-madinah', from: { ar: 'الدمام', en: 'Dammam' }, to: { ar: 'المدينة', en: 'Madinah' }, duration: '~9–10 hrs' },
+    { slug: 'riyadh-to-makkah',  from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8.5 hrs' },
+  ],
+  faqs: [
+    { q: { en: 'How long is the taxi from Dammam to Makkah?', ar: 'كم يستغرق التاكسي من الدمام إلى مكة؟' }, a: { en: 'The private taxi from Dammam to Makkah takes approximately 8 to 9 hours (about 870 km). The route passes via Riyadh. Night travel is recommended to avoid peak traffic.', ar: 'يستغرق التاكسي الخاص من الدمام إلى مكة حوالي 8 إلى 9 ساعات (حوالي 870 كم). يمر الطريق عبر الرياض. يُوصى بالسفر الليلي لتجنب ذروة المرور.' } },
+    { q: { en: 'How far is Dammam from Makkah?', ar: 'كم المسافة من الدمام إلى مكة؟' }, a: { en: 'Dammam to Makkah is approximately 870 km by road. The journey takes 8–9 hours by private taxi. Saudi Cabs GMC offers this route with a fixed price confirmed before departure.', ar: 'المسافة من الدمام إلى مكة حوالي 870 كم بالطريق. تستغرق الرحلة 8-9 ساعات بالتاكسي الخاص. Saudi Cabs GMC تقدم هذا الطريق بسعر ثابت مؤكد قبل الانطلاق.' } },
+    { q: { en: 'Can I book a Dammam to Makkah taxi for Umrah?', ar: 'هل يمكنني حجز تاكسي من الدمام إلى مكة للعمرة؟' }, a: { en: 'Yes. Saudi Cabs GMC provides direct Dammam to Makkah private taxis for Umrah pilgrims year-round. Book in advance via WhatsApp at +966 56 948 7569, especially during Ramadan and Hajj season.', ar: 'نعم. Saudi Cabs GMC توفر تاكسي خاص مباشر من الدمام إلى مكة للمعتمرين طوال العام. احجز مسبقاً عبر واتساب على +966 56 948 7569، خاصةً خلال رمضان وموسم الحج.' } },
+    { q: { en: 'What is the taxi fare from Dammam to Makkah?', ar: 'ما هي أجرة التاكسي من الدمام إلى مكة؟' }, a: { en: 'Saudi Cabs GMC offers a fixed price for the Dammam to Makkah route, confirmed via WhatsApp before departure. The fare depends on vehicle type (4-seater, 7-seater, or VIP GMC Yukon). Contact us for the current rate.', ar: 'Saudi Cabs GMC تقدم سعراً ثابتاً لمسار الدمام إلى مكة، يُؤكد عبر واتساب قبل الانطلاق. تعتمد الأجرة على نوع السيارة (4 مقاعد، 7 مقاعد، أو GMC يوكون VIP). تواصل معنا للحصول على السعر الحالي.' } },
+  ],
+}
+
+/* ─── MAKKAH → DAMMAM ───────────────────────────────────────────── */
+export const makkahToDammam: RoutePageData = {
+  from:      { ar: 'مكة المكرمة', en: 'Makkah' },
+  to:        { ar: 'الدمام', en: 'Dammam' },
+  slug:      'makkah-to-dammam',
+  duration:  '~8–9 hrs',
+  distance:  '~870 km',
+  type:      'intercity',
+  heroImage: '/location/makkah.webp',
+  fromCitySlug: 'makkah-taxi-service',
+  toCitySlug:   'makkah-taxi-service',
+  description: {
+    en: 'Private taxi from Makkah to Dammam — the return journey from the Holy City to the Eastern Province. Pickup from your Haram hotel, comfortable ride home. Fixed price, door-to-door, 24/7.',
+    ar: 'تاكسي خاص من مكة المكرمة إلى الدمام — رحلة العودة من المدينة المقدسة إلى المنطقة الشرقية. استلام من فندقك بجوار الحرم، رحلة مريحة للبيت. سعر ثابت، من الباب للباب، ٢٤/٧.',
+  },
+  highlights: [
+    { icon: '🕋', en: 'Pickup directly from your Makkah hotel or Haram area', ar: 'استلام مباشرةً من فندقك في مكة أو منطقة الحرم' },
+    { icon: '🛣️', en: 'Direct ~870 km return journey to Dammam', ar: 'رحلة عودة مباشرة ~870 كم إلى الدمام' },
+    { icon: '🌙', en: 'Night travel available — depart after Isha or Fajr', ar: 'السفر الليلي متاح — انطلق بعد العشاء أو الفجر' },
+    { icon: '💰', en: 'Fixed fare — transparent pricing, no meter', ar: 'أجرة ثابتة — تسعير شفاف بدون عداد' },
+    { icon: '🧳', en: 'Large vehicles for heavy Hajj & Umrah luggage', ar: 'سيارات كبيرة لأمتعة الحج والعمرة الثقيلة' },
+    { icon: '⏰', en: '24/7 — book your return trip anytime', ar: '٢٤/٧ — احجز رحلة عودتك في أي وقت' },
+  ],
+  vehicles: VEHICLES_STANDARD,
+  whyPrivate: {
+    en: [
+      'Door-to-door — from Haram hotel straight to your Dammam home',
+      'No crowded bus terminals after a tiring pilgrimage',
+      'Rest and prayer stops on the Makkah–Dammam highway',
+      'Comfortable return journey for exhausted pilgrims',
+      'Fixed price — book a round trip for the best rate',
+      'Trusted by thousands of Eastern Province pilgrims',
+    ],
+    ar: [
+      'من الباب للباب — من فندق الحرم مباشرةً لمنزلك بالدمام',
+      'بلا محطات حافلات مزدحمة بعد رحلة حج أو عمرة مضنية',
+      'توقفات للراحة والصلاة على طريق مكة–الدمام السريع',
+      'رحلة عودة مريحة للحجاج المتعبين',
+      'سعر ثابت — احجز ذهاباً وإياباً للحصول على أفضل سعر',
+      'موثوق به من قِبل آلاف الحجاج من المنطقة الشرقية',
+    ],
+  },
+  relatedRoutes: [
+    { slug: 'dammam-to-makkah',  from: { ar: 'الدمام', en: 'Dammam' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8.5 hrs' },
+    { slug: 'makkah-to-madinah', from: { ar: 'مكة', en: 'Makkah' },   to: { ar: 'المدينة', en: 'Madinah' }, duration: '~4.5 hrs' },
+    { slug: 'riyadh-to-makkah',  from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8.5 hrs' },
+  ],
+  faqs: [
+    { q: { en: 'How long is the cab from Makkah to Dammam?', ar: 'كم يستغرق الكاب من مكة إلى الدمام؟' }, a: { en: 'The private cab from Makkah to Dammam takes 8 to 9 hours (approximately 870 km). We recommend departing at night after Isha prayer to avoid daytime traffic.', ar: 'يستغرق الكاب الخاص من مكة إلى الدمام 8 إلى 9 ساعات (حوالي 870 كم). نوصي بالانطلاق ليلاً بعد صلاة العشاء لتجنب ازدحام النهار.' } },
+    { q: { en: 'How far is Makkah from Dammam?', ar: 'كم المسافة من مكة إلى الدمام؟' }, a: { en: 'Makkah to Dammam is approximately 870 km by road. The journey takes 8–9 hours by private taxi via the highway.', ar: 'المسافة من مكة إلى الدمام حوالي 870 كم بالطريق. تستغرق الرحلة 8-9 ساعات بالتاكسي الخاص عبر الطريق السريع.' } },
+    { q: { en: 'Can I book a round trip Makkah to Dammam?', ar: 'هل يمكنني حجز رحلة ذهاباً وإياباً بين مكة والدمام؟' }, a: { en: 'Yes. Saudi Cabs GMC offers round-trip packages between Makkah and Dammam. Book both legs together via WhatsApp at +966 56 948 7569 for the best combined rate.', ar: 'نعم. Saudi Cabs GMC تقدم باقات ذهاباً وإياباً بين مكة والدمام. احجز الرحلتين معاً عبر واتساب على +966 56 948 7569 للحصول على أفضل سعر مجمع.' } },
+  ],
+}
+
+/* ─── DAMMAM → MADINAH ──────────────────────────────────────────── */
+export const dammamToMadinah: RoutePageData = {
+  from:      { ar: 'الدمام', en: 'Dammam' },
+  to:        { ar: 'المدينة المنورة', en: 'Madinah' },
+  slug:      'dammam-to-madinah',
+  duration:  '~9–10 hrs',
+  distance:  '~1,000 km',
+  type:      'intercity',
+  heroImage: '/location/madinah.webp',
+  fromCitySlug: 'madinah-taxi-service',
+  toCitySlug:   'madinah-taxi-service',
+  description: {
+    en: "Private taxi from Dammam to Madinah — direct door-to-door intercity cab from the Eastern Province to the Prophet's City. Fixed price, comfortable vehicles, 24/7. Popular Umrah route.",
+    ar: 'تاكسي خاص من الدمام إلى المدينة المنورة — كاب مباشر من باب لباب من المنطقة الشرقية إلى مدينة النبي. سعر ثابت، سيارات مريحة، ٢٤/٧. مسار عمرة شهير.',
+  },
+  highlights: [
+    { icon: '🕌', en: "Drop-off at the Prophet's Mosque or your hotel", ar: 'توصيل للمسجد النبوي أو فندقك' },
+    { icon: '🛣️', en: 'Direct ~1,000 km highway journey', ar: 'رحلة مباشرة ~1,000 كم عبر الطريق السريع' },
+    { icon: '🌙', en: 'Night travel recommended — depart after Isha', ar: 'السفر الليلي موصى به — انطلق بعد العشاء' },
+    { icon: '💰', en: 'Fixed long-distance rate — agreed before departure', ar: 'سعر ثابت للمسافات الطويلة — مُتفق عليه قبل الانطلاق' },
+    { icon: '🧳', en: 'Spacious vehicles for pilgrims with luggage', ar: 'سيارات واسعة للحجاج مع الأمتعة' },
+    { icon: '⏰', en: '24/7 availability — book anytime', ar: 'توفر ٢٤/٧ — احجز في أي وقت' },
+  ],
+  vehicles: VEHICLES_STANDARD,
+  whyPrivate: {
+    en: [
+      'Door-to-door from Dammam directly to your Madinah hotel',
+      'No bus terminals, no layovers — single continuous journey',
+      'Rest and prayer stops scheduled on the highway',
+      'Ideal for families and elderly Umrah pilgrims',
+      'Fixed price — much more economical than multiple legs',
+      'Driver experienced on the Eastern Province–Madinah route',
+    ],
+    ar: [
+      'من الباب للباب من الدمام مباشرةً لفندقك بالمدينة',
+      'بلا محطات حافلات أو توقفات — رحلة واحدة متواصلة',
+      'توقفات للراحة والصلاة مجدولة على الطريق السريع',
+      'مثالي للعائلات وكبار السن من معتمري المنطقة الشرقية',
+      'سعر ثابت — أوفر بكثير من رحلات متعددة',
+      'سائق ذو خبرة على مسار المنطقة الشرقية–المدينة المنورة',
+    ],
+  },
+  relatedRoutes: [
+    { slug: 'dammam-to-makkah',  from: { ar: 'الدمام', en: 'Dammam' },   to: { ar: 'مكة', en: 'Makkah' },    duration: '~8.5 hrs' },
+    { slug: 'madinah-to-makkah', from: { ar: 'المدينة', en: 'Madinah' }, to: { ar: 'مكة', en: 'Makkah' },    duration: '~4.5 hrs' },
+    { slug: 'riyadh-to-madinah', from: { ar: 'الرياض', en: 'Riyadh' },   to: { ar: 'المدينة', en: 'Madinah' }, duration: '~9–10 hrs' },
+  ],
+  faqs: [
+    { q: { en: 'How long is the taxi from Dammam to Madinah?', ar: 'كم يستغرق التاكسي من الدمام إلى المدينة؟' }, a: { en: 'The private taxi from Dammam to Madinah takes approximately 9 to 10 hours (about 1,000 km). The route passes through Riyadh. Night travel is highly recommended.', ar: 'يستغرق التاكسي الخاص من الدمام إلى المدينة حوالي 9 إلى 10 ساعات (حوالي 1,000 كم). يمر الطريق عبر الرياض. السفر الليلي موصى به بشدة.' } },
+    { q: { en: 'How far is Dammam from Madinah?', ar: 'كم المسافة من الدمام إلى المدينة؟' }, a: { en: 'Dammam to Madinah is approximately 1,000 km by road. This makes it one of the longest intercity taxi routes Saudi Cabs GMC operates. A fixed price is confirmed before departure.', ar: 'المسافة من الدمام إلى المدينة حوالي 1,000 كم بالطريق. هذا يجعلها من أطول مسارات التاكسي بين المدن التي تشغلها Saudi Cabs GMC. يُؤكد سعر ثابت قبل الانطلاق.' } },
+    { q: { en: 'Can I book a Dammam to Madinah taxi for Umrah?', ar: 'هل يمكنني حجز تاكسي من الدمام إلى المدينة للعمرة؟' }, a: { en: 'Yes. Saudi Cabs GMC operates direct Dammam to Madinah transfers for Umrah pilgrims. Many pilgrims from the Eastern Province start their Umrah journey in Madinah first. Book via WhatsApp: +966 56 948 7569.', ar: 'نعم. Saudi Cabs GMC تشغل توصيلات مباشرة من الدمام إلى المدينة للمعتمرين. كثير من حجاج المنطقة الشرقية يبدأون عمرتهم من المدينة المنورة أولاً. احجز عبر واتساب: +966 56 948 7569.' } },
+    { q: { en: 'What is the taxi fare from Dammam to Madinah?', ar: 'ما أجرة التاكسي من الدمام إلى المدينة؟' }, a: { en: 'The fare for Dammam to Madinah taxi is fixed and confirmed before departure. Contact Saudi Cabs GMC via WhatsApp at +966 56 948 7569 for the current rate. Prices vary by vehicle type (Sedan, Staria, or GMC Yukon).', ar: 'أجرة التاكسي من الدمام إلى المدينة ثابتة ومؤكدة قبل الانطلاق. تواصل مع Saudi Cabs GMC عبر واتساب على +966 56 948 7569 للحصول على السعر الحالي. تختلف الأسعار حسب نوع السيارة.' } },
+  ],
+}
+
 /* ─── MASTER EXPORT MAP ─────────────────────────────────────────── */
 export const allRoutePages: Record<string, RoutePageData> = {
   'jeddah-airport-to-makkah':  jedAirportToMakkah,
@@ -860,4 +1024,7 @@ export const allRoutePages: Record<string, RoutePageData> = {
   'riyadh-to-jeddah':          riyadhToJeddah,
   'taif-airport-taxi':         taifAirportTaxi,
   'makkah-to-riyadh':          makkahToRiyadh,
+  'dammam-to-makkah':          dammamToMakkah,
+  'makkah-to-dammam':          makkahToDammam,
+  'dammam-to-madinah':         dammamToMadinah,
 }
