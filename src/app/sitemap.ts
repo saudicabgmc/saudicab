@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/hajj-umrah-transport`,  lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/private-driver`,        lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
 
+    // EEAT pages
+    { url: `${BASE}/contact`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/team`,           lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/html-sitemap`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+
     // Route pages — airport
     { url: `${BASE}/jeddah-airport-to-makkah`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/makkah-to-jeddah-airport`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },

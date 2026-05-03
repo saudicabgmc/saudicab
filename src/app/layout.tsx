@@ -1,8 +1,9 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
+import BackToTop from '@/components/BackToTop'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
@@ -124,6 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       bestRating: '5',
       worstRating: '1',
     },
+    email: 'info@saudicabsgmc.com',
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -138,9 +140,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         contactType: 'customer service',
         availableLanguage: ['English', 'Arabic'],
       },
+      {
+        '@type': 'ContactPoint',
+        email: 'info@saudicabsgmc.com',
+        contactType: 'customer service',
+        availableLanguage: ['English', 'Arabic'],
+      },
     ],
     sameAs: [
       'https://wa.me/966569487569',
+      'https://www.youtube.com/@saudicabsgmc',
+      'https://www.facebook.com/saudicabsgmc',
+      'https://www.instagram.com/saudicabsgmc',
+      'https://x.com/saudicabsgmc',
+      'https://www.linkedin.com/company/saudicabsgmc',
+      'https://www.tiktok.com/@saudicabsgmc',
     ],
     // GEO: vehicle fleet as offers for AI entity recognition
     hasOfferCatalog: {
@@ -249,8 +263,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       contactType: 'customer service',
       availableLanguage: ['English', 'Arabic'],
     },
+    email: 'info@saudicabsgmc.com',
     sameAs: [
       'https://wa.me/966569487569',
+      'https://www.youtube.com/@saudicabsgmc',
+      'https://www.facebook.com/saudicabsgmc',
+      'https://www.instagram.com/saudicabsgmc',
+      'https://x.com/saudicabsgmc',
+      'https://www.linkedin.com/company/saudicabsgmc',
+      'https://www.tiktok.com/@saudicabsgmc',
     ],
     hasCredential: [
       {
@@ -437,6 +458,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   }
 
+  // ── 7. SiteNavigationElement — Navigation Schema ─────────────────
+  const siteNavigationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SiteNavigationElement',
+    name: 'Main Navigation',
+    url: 'https://saudicabsgmc.com',
+    hasPart: [
+      { '@type': 'SiteNavigationElement', name: 'Home', url: 'https://saudicabsgmc.com/' },
+      { '@type': 'SiteNavigationElement', name: 'Makkah Taxi', url: 'https://saudicabsgmc.com/makkah-taxi-service' },
+      { '@type': 'SiteNavigationElement', name: 'Madinah Taxi', url: 'https://saudicabsgmc.com/madinah-taxi-service' },
+      { '@type': 'SiteNavigationElement', name: 'Jeddah Taxi', url: 'https://saudicabsgmc.com/jeddah-taxi-service' },
+      { '@type': 'SiteNavigationElement', name: 'Taif Taxi', url: 'https://saudicabsgmc.com/taif-taxi-service' },
+      { '@type': 'SiteNavigationElement', name: 'Routes Map', url: 'https://saudicabsgmc.com/routes-map' },
+      { '@type': 'SiteNavigationElement', name: 'Blog', url: 'https://saudicabsgmc.com/blog' },
+      { '@type': 'SiteNavigationElement', name: 'Contact', url: 'https://saudicabsgmc.com/contact' },
+      { '@type': 'SiteNavigationElement', name: 'Team', url: 'https://saudicabsgmc.com/team' },
+    ],
+  }
+
   const schemas = [
     localBusinessSchema,
     organizationSchema,
@@ -444,6 +484,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     howToSchema,
     globalFaqSchema,
     routeListSchema,
+    siteNavigationSchema,
   ]
 
   return (
@@ -469,6 +510,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Footer />
           <WhatsAppFloat />
+          <BackToTop />
         </LanguageProvider>
       </body>
     </html>
