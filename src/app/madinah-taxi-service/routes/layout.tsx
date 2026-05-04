@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Madinah Taxi Routes & Prices | All Routes',
+  title: 'All Madinah Taxi Routes & Prices',
   description: 'All taxi routes from Madinah — to Makkah, Jeddah, Taif, Riyadh, and more. Fixed prices, 24/7 private cab service.',
   alternates: { canonical: 'https://saudicabsgmc.com/madinah-taxi-service/routes' },
 }
