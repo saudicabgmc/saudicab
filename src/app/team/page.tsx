@@ -12,6 +12,61 @@ export const metadata: Metadata = {
   },
 }
 
+const teamPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://saudicabsgmc.com/team#webpage',
+  name: 'Our Team — Saudi Cabs GMC Professional Chauffeurs & Support',
+  description: 'Meet the Saudi Cabs GMC team: Professional certified chauffeurs, 24/7 dispatch coordinators, and customer support experts serving pilgrims and travelers across Saudi Arabia.',
+  url: 'https://saudicabsgmc.com/team',
+  isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
+  about: { '@id': 'https://saudicabsgmc.com/#organization' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://saudicabsgmc.com' },
+      { '@type': 'ListItem', position: 2, name: 'Our Team', item: 'https://saudicabsgmc.com/team' },
+    ],
+  },
+}
+
+const teamOrganizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://saudicabsgmc.com/#organization',
+  name: 'Saudi Cabs GMC',
+  url: 'https://saudicabsgmc.com',
+  foundingDate: '2020',
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40, maxValue: 60 },
+  description: 'Saudi Cabs GMC is a premium taxi and private transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers.',
+  member: [
+    {
+      '@type': 'OrganizationRole',
+      member: { '@type': 'Person', jobTitle: 'Professional Chauffeur', description: 'Licensed, background-checked, and trained in premium hospitality. Bilingual Arabic & English. Certified for Hajj & Umrah transport.' },
+      roleName: 'Professional Chauffeurs',
+      numberOfMembers: 30,
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: { '@type': 'Person', jobTitle: 'Dispatch Coordinator', description: '24/7 dispatch team managing real-time bookings, live GPS tracking, and route optimization.' },
+      roleName: 'Dispatch & Coordination',
+      numberOfMembers: 10,
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: { '@type': 'Person', jobTitle: 'Customer Support Agent', description: 'Dedicated bilingual support agents handling WhatsApp bookings, email queries, and post-trip feedback.' },
+      roleName: 'Customer Support',
+      numberOfMembers: 5,
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: { '@type': 'Person', jobTitle: 'Fleet Maintenance Engineer', description: 'Maintenance engineers ensuring Toyota Camry, Hyundai Staria, and GMC Yukon vehicles meet premium standards.' },
+      roleName: 'Fleet Maintenance',
+      numberOfMembers: 5,
+    },
+  ],
+}
+
 export default function TeamPage() {
   const teamDepartments = [
     {
@@ -48,6 +103,9 @@ export default function TeamPage() {
   ]
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamOrganizationSchema) }} />
     <main style={{ minHeight: '100vh', backgroundColor: 'var(--background)', paddingTop: '80px' }}>
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #071f17, #0B3D2E)', color: 'white', padding: '64px 0 48px', textAlign: 'center' }}>
@@ -125,5 +183,6 @@ export default function TeamPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

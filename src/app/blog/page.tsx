@@ -8,10 +8,41 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://saudicabsgmc.com/blog' },
 }
 
+const blogIndexSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': 'https://saudicabsgmc.com/blog#blog',
+  name: 'Saudi Cabs GMC — Travel Guides & Saudi Arabia Taxi Tips',
+  description: 'Expert guides on Hajj transport, Umrah travel, Makkah Ziyarat, Jeddah Airport transfers, and intercity taxi routes across Saudi Arabia.',
+  url: 'https://saudicabsgmc.com/blog',
+  publisher: { '@id': 'https://saudicabsgmc.com/#organization' },
+  inLanguage: ['en', 'ar'],
+  blogPost: blogPosts.map(p => ({
+    '@type': 'BlogPosting',
+    headline: p.title.en,
+    url: `https://saudicabsgmc.com/blog/${p.slug}`,
+    datePublished: p.date,
+    image: `https://saudicabsgmc.com${p.image}`,
+    description: p.excerpt.en,
+  })),
+}
+
+const blogBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://saudicabsgmc.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://saudicabsgmc.com/blog' },
+  ],
+}
+
 export default function BlogIndex() {
   const [featured, ...rest] = blogPosts
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogIndexSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema) }} />
     <main style={{ backgroundColor: 'var(--background)', minHeight: '80vh' }}>
 
       {/* Hero */}
@@ -129,5 +160,6 @@ export default function BlogIndex() {
         </div>
       </div>
     </main>
+    </>
   )
 }

@@ -20,6 +20,66 @@ export const metadata: Metadata = {
   },
 }
 
+const makkahLocalBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'TaxiService'],
+  '@id': 'https://saudicabsgmc.com/makkah-taxi-service#business',
+  name: 'Saudi Cabs GMC — Makkah Taxi Service',
+  url: 'https://saudicabsgmc.com/makkah-taxi-service',
+  telephone: '+966569487569',
+  image: 'https://saudicabsgmc.com/location/makkah.webp',
+  description: 'Premium taxi service in Makkah. Airport transfers from Jeddah Airport (KAIA), Umrah & Hajj transport, intercity routes to Madinah, Jeddah & Taif. Fixed prices 24/7.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Makkah',
+    addressRegion: 'Makkah Province',
+    addressCountry: 'SA',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 21.3891, longitude: 39.8579 },
+  areaServed: { '@type': 'City', name: 'Makkah', sameAs: 'https://www.wikidata.org/wiki/Q42788' },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '850',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
+}
+
+const makkahBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://saudicabsgmc.com' },
+    { '@type': 'ListItem', position: 2, name: 'Makkah Taxi Service', item: 'https://saudicabsgmc.com/makkah-taxi-service' },
+  ],
+}
+
+const makkahWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://saudicabsgmc.com/makkah-taxi-service#webpage',
+  name: 'Taxi Service in Makkah | Airport Transfer, Umrah & Intercity Cab',
+  url: 'https://saudicabsgmc.com/makkah-taxi-service',
+  isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
+  about: { '@id': 'https://saudicabsgmc.com/makkah-taxi-service#business' },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2'] },
+}
+
 export default function MakkahLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makkahLocalBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makkahBreadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makkahWebPageSchema) }} />
+      {children}
+    </>
+  )
 }

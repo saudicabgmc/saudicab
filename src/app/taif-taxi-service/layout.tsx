@@ -20,6 +20,59 @@ export const metadata: Metadata = {
   },
 }
 
+const taifLocalBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'TaxiService'],
+  '@id': 'https://saudicabsgmc.com/taif-taxi-service#business',
+  name: 'Saudi Cabs GMC — Taif Taxi Service',
+  url: 'https://saudicabsgmc.com/taif-taxi-service',
+  telephone: '+966569487569',
+  image: 'https://saudicabsgmc.com/location/taif.webp',
+  description: 'Premium taxi service in Taif. Mountain tours to Shafa & Hada, rose farm visits, Taif Airport transfers, intercity routes to Makkah & Jeddah. Fixed prices 24/7.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Taif',
+    addressRegion: 'Makkah Province',
+    addressCountry: 'SA',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 21.2703, longitude: 40.4158 },
+  areaServed: { '@type': 'City', name: 'Taif', sameAs: 'https://www.wikidata.org/wiki/Q200047' },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00', closes: '23:59',
+  },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '280', bestRating: '5', worstRating: '1' },
+  parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
+}
+
+const taifBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://saudicabsgmc.com' },
+    { '@type': 'ListItem', position: 2, name: 'Taif Taxi Service', item: 'https://saudicabsgmc.com/taif-taxi-service' },
+  ],
+}
+
+const taifWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://saudicabsgmc.com/taif-taxi-service#webpage',
+  name: 'Taxi Service in Taif | Mountain Tours, Shafa & Airport Transfer',
+  url: 'https://saudicabsgmc.com/taif-taxi-service',
+  isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
+  about: { '@id': 'https://saudicabsgmc.com/taif-taxi-service#business' },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2'] },
+}
+
 export default function TaifLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(taifLocalBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(taifBreadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(taifWebPageSchema) }} />
+      {children}
+    </>
+  )
 }
