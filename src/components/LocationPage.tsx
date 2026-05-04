@@ -327,6 +327,7 @@ export default function LocationPage({
           ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`,
           en: `Frequently Asked Questions — ${tx(cityName)}`,
         }}
+        noSchema
       />
 
     </main>
