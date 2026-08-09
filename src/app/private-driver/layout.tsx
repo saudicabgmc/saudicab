@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       'Professional chauffeur hire — half-day, full-day, multi-day across Saudi Arabia.',
     url: 'https://saudicabsgmc.com/private-driver',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Private Driver Saudi Arabia – Saudi Cabs GMC' }],
   },
 }
 
@@ -37,7 +38,6 @@ const privateDriverServiceSchema = {
     { '@type': 'City', name: 'Jeddah' },
     { '@type': 'City', name: 'Taif' },
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '210', bestRating: '5', worstRating: '1' },
   offers: [
     { '@type': 'Offer', name: 'Half-Day Private Driver (4 hours)', priceCurrency: 'SAR', availability: 'https://schema.org/InStock' },
     { '@type': 'Offer', name: 'Full-Day Private Driver (8 hours)', priceCurrency: 'SAR', availability: 'https://schema.org/InStock' },

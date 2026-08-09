@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Professional taxi from Madinah Airport (MED) to the Prophet's Mosque and all Madinah hotels. ~30 min, fixed price. Name-board meet & greet. Book via WhatsApp.",
     url: 'https://saudicabsgmc.com/madinah-airport-taxi',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Saudi Cabs GMC – Premium Taxi Service' }],
   },
 }
 

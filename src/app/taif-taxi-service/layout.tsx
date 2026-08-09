@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Taxi Service in Taif – Saudi Cabs GMC',
     description: 'Book taxi in Taif. Shafa, Hada, rose farms, airport transfers. Fixed prices 24/7.',
     url: 'https://saudicabsgmc.com/taif-taxi-service',
+    images: [{ url: 'https://saudicabsgmc.com/location/taif.webp', width: 1200, height: 630, alt: 'Taxi Service in Taif – Saudi Cabs GMC' }],
   },
 }
 
@@ -42,7 +43,6 @@ const taifLocalBusinessSchema = {
     dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
     opens: '00:00', closes: '23:59',
   },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '280', bestRating: '5', worstRating: '1' },
   parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
 }
 

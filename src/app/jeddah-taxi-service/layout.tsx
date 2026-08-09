@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Taxi Service in Jeddah – Saudi Cabs GMC',
     description: 'Book taxi in Jeddah. Airport transfers, Corniche, Makkah. Fixed prices 24/7.',
     url: 'https://saudicabsgmc.com/jeddah-taxi-service',
+    images: [{ url: 'https://saudicabsgmc.com/location/jeddah.webp', width: 1200, height: 630, alt: 'Taxi Service in Jeddah – Saudi Cabs GMC' }],
   },
 }
 
@@ -42,7 +43,6 @@ const jeddahLocalBusinessSchema = {
     dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
     opens: '00:00', closes: '23:59',
   },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '480', bestRating: '5', worstRating: '1' },
   parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
 }
 

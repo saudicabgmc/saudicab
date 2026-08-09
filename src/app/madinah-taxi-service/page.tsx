@@ -13,7 +13,7 @@ export default function MadinahPage() {
         ar: 'نصحبكم في رحاب مدينة المصطفى ﷺ بأرقى خدمات النقل. توصيل من وإلى المسجد النبوي الشريف، المزارات الإسلامية، ومطار الأمير محمد بن عبدالعزيز بأسعار مناسبة وسائقين محترفين.',
         en: 'We accompany you in the city of the Prophet ﷺ with premium transportation services. Transfers to and from the Prophet\'s Mosque, Islamic landmarks, and Prince Mohammad bin Abdulaziz Airport at reasonable prices with professional drivers.',
       }}
-      heroImage="https://images.unsplash.com/photo-1519817914152-22d216bb9170?auto=format&fit=crop&q=80&w=2000"
+      heroImage="/hero/madinah-hero-saudi-cabs-gmc.webp"
       services={[
         { iconName: 'Building2', title: { ar: 'توصيل المسجد النبوي', en: "Prophet's Mosque Transfer" }, desc: { ar: 'رحلات من الفنادق والشقق إلى المسجد النبوي الشريف على مدار اليوم.', en: "Trips from hotels and apartments to the Prophet's Mosque throughout the day." } },
         { iconName: 'Plane', title: { ar: 'مطار المدينة المنورة', en: 'Madinah Airport' }, desc: { ar: 'استقبال وتوديع من مطار الأمير محمد بن عبدالعزيز إلى جميع أحياء المدينة.', en: 'Pickup and drop-off from Prince Mohammad bin Abdulaziz Airport to all Madinah neighborhoods.' } },

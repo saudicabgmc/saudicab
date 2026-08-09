@@ -252,7 +252,8 @@ export default function RoutesMap() {
                 {/* Close */}
                 <button
                   onClick={() => setSelectedCity(null)}
-                  style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--muted)', border: 'none', borderRadius: '8px', padding: '6px', cursor: 'pointer' }}
+                  aria-label="Close"
+                  style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--muted)', border: 'none', borderRadius: '8px', padding: '6px', cursor: 'pointer', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                   <X size={16} />
                 </button>

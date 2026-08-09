@@ -28,7 +28,7 @@ const CARS = [
     seats: '7',
     descEn: 'Premium 7-seater van — ideal for families & groups',
     descAr: 'حافلة فاخرة 7 مقاعد — مثالية للعائلات والمجموعات',
-    image: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
+    image: vehicleImages.staria,
     alt: 'Hyundai Staria 7-Seat Taxi Saudi Arabia – Saudi Cabs GMC Premium Van',
     badge: { en: '7 Seats', ar: '٧ مقاعد' },
     accent: '#0F5132',
@@ -97,6 +97,7 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
                   <img
                     src={car.image}
                     alt={car.alt}
+                    width={400} height={220}
                     loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: car.key === 'staria' ? 'contain' : 'cover', objectPosition: 'center', display: 'block' }}
                   />

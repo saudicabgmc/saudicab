@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title: 'Hajj & Umrah Transport – Saudi Cabs GMC',
     description: 'Dedicated pilgrimage transfers between Makkah, Madinah & the holy sites.',
     url: 'https://saudicabsgmc.com/hajj-umrah-transport',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Hajj & Umrah Transport – Saudi Cabs GMC' }],
   },
 }
 
@@ -37,7 +38,6 @@ const hajjServiceSchema = {
     { '@type': 'Place', name: 'Arafat' },
     { '@type': 'Place', name: 'Muzdalifah' },
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '380', bestRating: '5', worstRating: '1' },
   offers: { '@type': 'Offer', priceCurrency: 'SAR', availability: 'https://schema.org/InStock' },
   audience: { '@type': 'Audience', audienceType: 'Hajj and Umrah pilgrims' },
 }

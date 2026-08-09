@@ -126,7 +126,6 @@ function taxiSchema(name: string, desc: string, url: string, city: string, vehic
     ...(vehicle ? { vehicle: { '@type': 'Car', name: vehicle } } : {}),
     availableChannel: { '@type': 'ServiceChannel', serviceUrl: `https://wa.me/${WA}`, name: 'WhatsApp Booking' },
     hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '312', bestRating: '5', worstRating: '1' },
   }
 }
 

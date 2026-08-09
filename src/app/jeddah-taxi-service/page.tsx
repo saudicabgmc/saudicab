@@ -13,7 +13,7 @@ export default function JeddahPage() {
         ar: 'نوفر لك أفضل خدمات النقل في عروس البحر الأحمر. من مطار الملك عبدالعزيز الدولي إلى كورنيش جدة، مراكز التسوق، والمناطق الأعمال — رحلات فاخرة بأسعار منافسة.',
         en: 'We provide the best transportation services in the Bride of the Red Sea. From King Abdulaziz International Airport to the Jeddah Corniche, shopping malls, and business districts — luxury trips at competitive prices.',
       }}
-      heroImage="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=2000"
+      heroImage="/hero/jeddah-hero-saudi-cabs-gmc.webp"
       services={[
         { iconName: 'Plane', title: { ar: 'مطار الملك عبدالعزيز', en: 'King Abdulaziz Airport' }, desc: { ar: 'استقبال وتوديع احترافي من Terminal 1 وTerminal 2 على مدار الساعة.', en: 'Professional pickup and drop-off from Terminal 1 and Terminal 2 around the clock.' } },
         { iconName: 'Waves', title: { ar: 'جولة كورنيش جدة', en: 'Jeddah Corniche Tour' }, desc: { ar: 'استمتع بجمال كورنيش جدة مع سائق خاص يأخذك أفضل المواقع.', en: 'Enjoy the beauty of Jeddah Corniche with a private driver taking you to the best spots.' } },

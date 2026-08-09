@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Taxi Service in Madinah – Saudi Cabs GMC',
     description: "Book taxi in Madinah. Prophet's Mosque, airport, Ziyarat tours. Fixed prices 24/7.",
     url: 'https://saudicabsgmc.com/madinah-taxi-service',
+    images: [{ url: 'https://saudicabsgmc.com/location/madinah.webp', width: 1200, height: 630, alt: 'Taxi Service in Madinah – Saudi Cabs GMC' }],
   },
 }
 
@@ -42,7 +43,6 @@ const madinahLocalBusinessSchema = {
     dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
     opens: '00:00', closes: '23:59',
   },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '620', bestRating: '5', worstRating: '1' },
   parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
 }
 

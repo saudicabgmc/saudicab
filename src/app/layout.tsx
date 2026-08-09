@@ -16,6 +16,9 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saudicabsgmc.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'Saudi Cabs GMC | Best Taxi Service in Makkah, Madinah, Jeddah & Taif',
     template: '%s | Saudi Cabs GMC',
@@ -126,13 +129,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     currenciesAccepted: 'SAR',
     paymentAccepted: 'Cash, Bank Transfer, WhatsApp Pay',
     hasMap: 'https://saudicabsgmc.com/routes-map',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1200',
-      bestRating: '5',
-      worstRating: '1',
-    },
     email: 'info@saudicabsgmc.com',
     contactPoint: [
       {
@@ -180,7 +176,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'Service',
             name: 'Sedan Taxi – Toyota Camry',
             description: 'Comfortable sedan taxi for up to 4 passengers. Suitable for airport transfers, city rides, and intercity routes across Saudi Arabia.',
-            aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '850', bestRating: '5', worstRating: '1' },
           },
         },
         {
@@ -194,7 +189,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'Service',
             name: 'Hyundai Staria Van – 7 Seats',
             description: 'Spacious 7-seat Hyundai Staria van for families, groups, and pilgrims. Generous luggage space — ideal for Hajj and Umrah transport.',
-            aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '620', bestRating: '5', worstRating: '1' },
           },
         },
         {
@@ -208,7 +202,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'Service',
             name: 'GMC Yukon VIP – Luxury SUV',
             description: 'VIP GMC Yukon luxury SUV for up to 7 passengers. Features built-in cooler, giant touchscreen, and premium leather seats.',
-            aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '430', bestRating: '5', worstRating: '1' },
           },
         },
       ],

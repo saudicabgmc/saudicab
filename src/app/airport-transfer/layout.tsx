@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title: 'Airport Transfer Saudi Arabia – Saudi Cabs GMC',
     description: 'Name-board pickup, flight tracking & fixed prices across all Saudi airports.',
     url: 'https://saudicabsgmc.com/airport-transfer',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Airport Transfer Saudi Arabia – Saudi Cabs GMC' }],
   },
 }
 
@@ -36,7 +37,6 @@ const airportServiceSchema = {
     { '@type': 'City', name: 'Jeddah' },
     { '@type': 'City', name: 'Taif' },
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '430', bestRating: '5', worstRating: '1' },
   offers: { '@type': 'Offer', priceCurrency: 'SAR', availability: 'https://schema.org/InStock' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

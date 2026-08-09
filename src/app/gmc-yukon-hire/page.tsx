@@ -82,7 +82,7 @@ export default function GMCYukonPage() {
             <div key={img.src} style={{ position: 'relative' }}>
               <img src={img.src} alt={img.alt} loading="lazy" width={600} height={340} style={{ width: '100%', height: '260px', objectFit: 'cover', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%)' }} />
-              <div style={{ position: 'absolute', bottom: '12px', left: '14px' }}>
+              <div style={{ position: 'absolute', bottom: '12px', left: isAr ? 'auto' : '14px', right: isAr ? '14px' : 'auto' }}>
                 <span style={{ color: 'white', fontWeight: '700', fontSize: '0.8rem', background: 'rgba(0,0,0,0.5)', padding: '3px 12px', borderRadius: '20px' }}>{tx(img.label)}</span>
               </div>
             </div>

@@ -14,6 +14,7 @@ export async function generateMetadata(
   const { vehicleSeo } = await params
   const data = getVehicleSeoPageData(vehicleSeo)
   if (!data) return {}
+  const ogImage = 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp'
   return {
     title:       data.metaTitle,
     description: data.metaDesc,
@@ -25,6 +26,13 @@ export async function generateMetadata(
       url:         `https://saudicabsgmc.com/${vehicleSeo}`,
       siteName:    'Saudi Cabs GMC',
       type:        'website',
+      images:      [{ url: ogImage, width: 1200, height: 630, alt: data.h1 }],
+    },
+    twitter: {
+      card:        'summary_large_image',
+      title:       data.metaTitle,
+      description: data.metaDesc,
+      images:      [ogImage],
     },
   }
 }

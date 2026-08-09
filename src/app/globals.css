@@ -18,7 +18,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; /* Adjust this percentage to scale ALL text across the site globally (100% = 16px default) */ }
+html { scroll-behavior: smooth; font-size: 16px; /* Adjust this percentage to scale ALL text across the site globally (100% = 16px default) */ overflow-x: hidden; }
 
 body {
   font-family: var(--font-cairo), 'Cairo', sans-serif;
@@ -27,6 +27,7 @@ body {
   line-height: 1.6;
   /* Reserve space for sticky booking bar */
   padding-bottom: 68px;
+  overflow-x: hidden;
 }
 
 a { text-decoration: none; color: inherit; }

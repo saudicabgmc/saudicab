@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Fast taxi from Jeddah to Makkah. ~50 min, fixed price, no hidden fees. Airport and city pickups. Available 24/7. Book via WhatsApp.',
     url: 'https://saudicabsgmc.com/jeddah-to-makkah',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Jeddah to Makkah Taxi | Cab from Jeddah to Mecca – Saudi Cabs GMC' }],
   },
 }
 

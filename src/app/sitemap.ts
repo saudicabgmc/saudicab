@@ -65,6 +65,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/riyadh-to-jeddah`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/makkah-to-riyadh`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/taif-airport-taxi`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/taif-to-makkah`,     lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/jeddah-to-madinah`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/dammam-to-makkah`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/makkah-to-dammam`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/dammam-to-madinah`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+
+    // Fleet pages
+    { url: `${BASE}/toyota-camry-taxi`,    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/hyundai-staria-taxi`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/gmc-yukon-hire`,       lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+
+    // Ziyarat tours
+    { url: `${BASE}/makkah-ziyarat-tour`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/madinah-ziyarat-tour`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
 
     // Interactive Map
     { url: `${BASE}/routes-map`,         lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },

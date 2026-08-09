@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Private taxi from Taif to Jeddah. ~1.5 hr journey, fixed price. Hotel and airport drop-offs. Experienced mountain-road drivers. Book via WhatsApp.',
     url: 'https://saudicabsgmc.com/taif-to-jeddah',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Taif to Jeddah Taxi | Mountain to City Transfer – Saudi Cabs GMC' }],
   },
 }
 

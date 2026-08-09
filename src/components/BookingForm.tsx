@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check, Phone, User, Loader2, CheckCircle } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
+import { vehicleImages } from '@/lib/pricingData'
 
 const CITIES = {
   ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'مطار جدة الدولي', 'مطار المدينة', 'موقع آخر'],
@@ -10,7 +11,7 @@ const CITIES = {
 
 const VEHICLES = [
   { key: 'sedan', img: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', fit: 'cover' as const, bg: '#f5f5f5', nameEn: 'Sedan', nameAr: 'سيدان', seatEn: '4 Seats', seatAr: '٤ مقاعد' },
-  { key: 'staria', img: '/fleet/toyota-camry-exterior-side-saudi-cabs-gmc.webp', fit: 'contain' as const, bg: '#111', nameEn: 'Staria', nameAr: 'ستاريا', seatEn: '7 Seats', seatAr: '٧ مقاعد' },
+  { key: 'staria', img: vehicleImages.staria, fit: 'contain' as const, bg: '#111', nameEn: 'Staria', nameAr: 'ستاريا', seatEn: '7 Seats', seatAr: '٧ مقاعد' },
   { key: 'gmc', img: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp', fit: 'cover' as const, bg: '#1a1a1a', nameEn: 'GMC Yukon', nameAr: 'GMC يوكون', seatEn: 'VIP 7', seatAr: '٧ VIP' },
 ]
 
@@ -18,13 +19,14 @@ const PASSENGERS = ['1', '2', '3', '4', '5', '6', '7+']
 
 /* ── Custom Dropdown ── */
 function CustomSelect({
-  value, onChange, options, placeholder, hasError,
+  value, onChange, options, placeholder, hasError, ariaLabel,
 }: {
   value: string
   onChange: (v: string) => void
   options: string[]
   placeholder: string
   hasError?: boolean
+  ariaLabel?: string
 }) {
   const [open, setOpen] = useState(false)
   const [focusedIdx, setFocusedIdx] = useState(-1)
@@ -72,6 +74,7 @@ function CustomSelect({
         role="combobox"
         aria-expanded={open}
         aria-haspopup="listbox"
+        aria-label={ariaLabel || placeholder}
         onClick={() => { setOpen(o => !o); setFocusedIdx(options.indexOf(value) >= 0 ? options.indexOf(value) : 0) }}
         style={{
           width: '100%',
@@ -124,6 +127,7 @@ function CustomSelect({
               key={opt}
               type="button"
               role="option"
+              tabIndex={-1}
               aria-selected={value === opt}
               onClick={() => { onChange(opt); setOpen(false) }}
               style={{
@@ -282,6 +286,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           options={cities}
           placeholder={isAr ? 'اختر المدينة' : 'Choose City'}
           hasError={!!errors.from}
+          ariaLabel={isAr ? 'من — المغادرة' : 'From — Departure'}
         />
         {errors.from && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.from}</p>}
       </div>
@@ -299,6 +304,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           options={cities}
           placeholder={isAr ? 'اختر الوجهة' : 'Choose Destination'}
           hasError={!!errors.to}
+          ariaLabel={isAr ? 'إلى — الوجهة' : 'To — Destination'}
         />
         {errors.to && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.to}</p>}
       </div>

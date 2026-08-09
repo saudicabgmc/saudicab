@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Our Team — Saudi Cabs GMC',
     description: 'Professional certified chauffeurs and 24/7 support serving pilgrims across Saudi Arabia.',
     url: 'https://saudicabsgmc.com/team',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Our Team — Saudi Cabs GMC' }],
   },
 }
 

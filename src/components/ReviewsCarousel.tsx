@@ -39,6 +39,9 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
             key={r.img}
             src={r.img}
             alt={`${r.name} — Saudi Cabs GMC Review`}
+            width={450}
+            height={420}
+            loading="lazy"
             style={{
               width: '100%',
               height: '100%',

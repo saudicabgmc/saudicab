@@ -24,14 +24,22 @@ export async function POST(req: NextRequest) {
     if (dbError) console.error('Supabase error:', dbError.message)
 
     // ── 2. Send email via Resend ──
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    const { error: emailError } = await resend.emails.send({
-      from: 'Saudi Cabs GMC <onboarding@resend.dev>',
-      to: [OWNER_EMAIL],
-      subject: `🚗 New Booking — ${vehicle} | ${from} → ${to}`,
-      html: buildEmail({ vehicle, from, to, date, time, passengers, name, phone }),
-    })
-    if (emailError) console.error('Resend error:', emailError.message)
+    if (process.env.RESEND_API_KEY) {
+      try {
+        const resend = new Resend(process.env.RESEND_API_KEY)
+        const { error: emailError } = await resend.emails.send({
+          from: 'Saudi Cabs GMC <onboarding@resend.dev>',
+          to: [OWNER_EMAIL],
+          subject: `🚗 New Booking — ${vehicle} | ${from} → ${to}`,
+          html: buildEmail({ vehicle, from, to, date, time, passengers, name, phone }),
+        })
+        if (emailError) console.error('Resend error:', emailError.message)
+      } catch (emailErr: any) {
+        console.error('Resend error:', emailErr.message)
+      }
+    } else {
+      console.error('Resend error: RESEND_API_KEY is not set — booking email notification skipped')
+    }
 
     return NextResponse.json({ success: true })
   } catch (err: any) {

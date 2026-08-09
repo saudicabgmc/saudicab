@@ -50,6 +50,9 @@ const sections = [
       { href: '/riyadh-to-madinah', label: 'Riyadh to Madinah' },
       { href: '/riyadh-to-jeddah', label: 'Riyadh to Jeddah' },
       { href: '/taif-to-madinah', label: 'Taif to Madinah' },
+      { href: '/dammam-to-makkah', label: 'Dammam to Makkah' },
+      { href: '/makkah-to-dammam', label: 'Makkah to Dammam' },
+      { href: '/dammam-to-madinah', label: 'Dammam to Madinah' },
     ],
   },
   {
@@ -75,6 +78,18 @@ const sections = [
       { href: '/toyota-camry-taxi', label: 'Toyota Camry Sedan' },
       { href: '/hyundai-staria-taxi', label: 'Hyundai Staria Van' },
       { href: '/gmc-yukon-hire', label: 'GMC Yukon VIP SUV' },
+    ],
+  },
+  {
+    title: 'Vehicle & Service Directory',
+    links: [
+      { href: '/taxi-vehicles', label: 'All Vehicle Sizes' },
+      { href: '/taxi-services', label: 'Taxi Services Directory' },
+      { href: '/cab-services', label: 'Cab Services Directory' },
+      { href: '/car-rent-with-driver', label: 'Car Rental with Driver' },
+      { href: '/airport-taxi', label: 'Airport Taxi Directory' },
+      { href: '/airport-cab', label: 'Airport Cab Directory' },
+      { href: '/airport-car-rent-with-driver', label: 'Airport Car Rental with Driver' },
     ],
   },
   {

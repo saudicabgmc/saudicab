@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Private taxi from Madinah to Jeddah. ~4 hr journey, fixed price. Comfortable vehicles for families and pilgrims. 24/7 service. Book via WhatsApp.',
     url: 'https://saudicabsgmc.com/madinah-to-jeddah',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Madinah to Jeddah Taxi | Medina to Jeddah Intercity Transfer – Saudi Cabs GMC' }],
   },
 }
 

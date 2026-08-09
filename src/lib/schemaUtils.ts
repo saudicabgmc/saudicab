@@ -49,7 +49,6 @@ export function generateRouteSchemas(data: RoutePageData) {
       { '@type': 'City', name: fromEn },
       { '@type': 'City', name: toEn },
     ],
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '312', bestRating: '5', worstRating: '1' },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SAR',

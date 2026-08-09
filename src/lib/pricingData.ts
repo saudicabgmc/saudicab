@@ -30,9 +30,9 @@ export const categoryColor: Record<PricingCategory, string> = {
 }
 
 export const vehicleImages: Record<string, string> = {
-  sedan:  'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=600&q=80',
-  staria: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=600&q=80',
-  gmc:    'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80',
+  sedan:  '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
+  staria: '/fleet/hyundai-staria-placeholder-saudi-cabs-gmc.webp',
+  gmc:    '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
 }
 
 const mkRates = (sedan: number, staria: number, gmc: number): VehicleRate[] => [

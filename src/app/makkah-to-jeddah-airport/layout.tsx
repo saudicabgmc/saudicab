@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Reliable taxi from Makkah to Jeddah Airport (KAIA). Fixed price, ~55 min. On-time guarantee for all departures. Book via WhatsApp 24/7.',
     url: 'https://saudicabsgmc.com/makkah-to-jeddah-airport',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Makkah to Jeddah Airport Taxi | Mecca to KAIA Transfer – Saudi Cabs GMC' }],
   },
 }
 

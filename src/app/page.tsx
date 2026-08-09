@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
   Car, Plane, Briefcase, Navigation,
@@ -47,6 +48,8 @@ export default function Home() {
   const tr = t[lang]
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة' : "Hello, I'd like to book a trip"
   const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(waText)}`
+  const [videoReady, setVideoReady] = useState(false)
+  useEffect(() => { setVideoReady(true) }, [])
 
   return (
     <main>
@@ -115,25 +118,28 @@ export default function Home() {
         alignItems: 'center',
         padding: '100px 0 80px',
       }}>
-        {/* Desktop: YouTube background video */}
-        <iframe
-          className="hero-video-bg"
-          src="https://www.youtube.com/embed/ICQZ4zxqIVg?autoplay=1&mute=1&loop=1&playlist=ICQZ4zxqIVg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&cc_load_policy=0&fs=0"
-          style={{
-            position: 'absolute', top: '50%', left: '50%',
-            width: 'calc(177.78vh + 200px)', minWidth: 'calc(100% + 200px)',
-            height: 'calc(56.25vw + 120px)', minHeight: 'calc(100% + 120px)',
-            transform: 'translate(-50%, -50%)',
-            border: 'none', pointerEvents: 'none', zIndex: 0,
-          }}
-          allow="autoplay; encrypted-media"
-        />
+        {/* Desktop: YouTube background video — mounted after first paint so the
+            heavy third-party embed doesn't compete with initial page load */}
+        {videoReady && (
+          <iframe
+            className="hero-video-bg"
+            src="https://www.youtube.com/embed/ICQZ4zxqIVg?autoplay=1&mute=1&loop=1&playlist=ICQZ4zxqIVg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&cc_load_policy=0&fs=0"
+            style={{
+              position: 'absolute', top: '50%', left: '50%',
+              width: 'calc(177.78vh + 200px)', minWidth: 'calc(100% + 200px)',
+              height: 'calc(56.25vw + 120px)', minHeight: 'calc(100% + 120px)',
+              transform: 'translate(-50%, -50%)',
+              border: 'none', pointerEvents: 'none', zIndex: 0,
+            }}
+            allow="autoplay; encrypted-media"
+          />
+        )}
         {/* Mobile: fallback image */}
         <div
           className="hero-img-bg"
           style={{
             position: 'absolute', inset: 0, zIndex: 0,
-            backgroundImage: 'url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=50&w=800&fm=webp")',
+            backgroundImage: 'url("/hero/hero-fallback-saudi-cabs-gmc.webp")',
             backgroundSize: 'cover', backgroundPosition: 'center',
           }}
         />
@@ -535,6 +541,8 @@ export default function Home() {
                 <img
                   src="/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp"
                   alt="Saudi Cabs GMC Premium Fleet – Best Cab Service in Saudi Arabia"
+                  width={700} height={460}
+                  loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
@@ -594,6 +602,7 @@ export default function Home() {
             <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', aspectRatio: '16/9' }}>
               <iframe
                 src="https://www.youtube.com/embed/qKSQuxLLQV0?rel=0&modestbranding=1"
+                loading="lazy"
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

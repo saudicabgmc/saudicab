@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Contact Saudi Cabs GMC — 24/7 Taxi Booking',
     description: 'Reach us via WhatsApp, phone, or email for instant taxi bookings across Saudi Arabia.',
     url: 'https://saudicabsgmc.com/contact',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Contact Saudi Cabs GMC — 24/7 Taxi Booking' }],
   },
 }
 

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Comfortable taxi from Jeddah to Taif. ~1.5 hr mountain drive, fixed price. Experienced drivers on the scenic Al-Hada road. 24/7 available. Book via WhatsApp.',
     url: 'https://saudicabsgmc.com/jeddah-to-taif',
+    images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Jeddah to Taif Taxi | Mountain Road Transfer – Saudi Cabs GMC' }],
   },
 }
 

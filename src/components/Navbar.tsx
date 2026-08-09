@@ -141,7 +141,7 @@ export default function Navbar() {
           className="mobile-only"
           aria-label="menu"
           aria-expanded={menuOpen}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'white' }}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'white', padding: '10px', margin: '-10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

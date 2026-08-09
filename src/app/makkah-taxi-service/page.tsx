@@ -13,7 +13,7 @@ export default function MakkahPage() {
         ar: 'نوفر لك أفضل خدمات النقل في أطهر بقاع الأرض. رحلات آمنة ومريحة من وإلى الحرم المكي الشريف، توصيل الحجاج والمعتمرين، ورحلات بين المشاعر المقدسة بأسعار مناسبة.',
         en: 'We provide the best transportation services in the holiest place on earth. Safe and comfortable trips to and from the Holy Mosque, transfers for Hajj and Umrah pilgrims, and intercity routes between the sacred sites at affordable prices.',
       }}
-      heroImage="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=2000"
+      heroImage="/hero/makkah-hero-saudi-cabs-gmc.webp"
       services={[
         { iconName: 'Building2', title: { ar: 'توصيل الحرم المكي', en: 'Holy Mosque Transfer' }, desc: { ar: 'رحلات من الفنادق والشقق إلى الحرم المكي الشريف على مدار الساعة.', en: 'Trips from hotels and apartments to the Holy Mosque around the clock.' } },
         { iconName: 'Plane', title: { ar: 'مطار جدة ↔ مكة', en: 'Jeddah Airport ↔ Makkah' }, desc: { ar: 'استقبال وتوديع من مطار الملك عبدالعزيز الدولي إلى جميع أحياء مكة.', en: 'Professional pickup and drop-off from King Abdulaziz International Airport to all Makkah neighborhoods.' } },

@@ -12,7 +12,7 @@ export default function TaifPage() {
         ar: 'استمتع بجمال مدينة الورد والأجواء المعتدلة مع خدمات النقل المتميزة. رحلات إلى شفا وهدا ومزارع الورد، وتوصيل من مطار الطائف بسائقين يعرفون طرق الجبال بكل دراية وأمان.',
         en: 'Enjoy the beauty of the Rose City and its pleasant weather with premium transportation services. Trips to Shafa, Hada, and the rose farms, plus transfers from Taif Airport with drivers who know every mountain road safely and expertly.',
       }}
-      heroImage="https://images.unsplash.com/photo-1621501103258-3e13e28c1fea?auto=format&fit=crop&q=80&w=2000"
+      heroImage="/location/taif.webp"
       services={[
         { iconName: 'Mountain', title: { ar: 'جولات شفا وهدا', en: 'Shafa & Hada Tours' }, desc: { ar: 'استكشف أجمل المناطق الجبلية في الطائف مع سائق يعرف كل طريق.', en: 'Explore the most beautiful mountain areas around Taif with a driver who knows every road.' } },
         { iconName: 'Leaf', title: { ar: 'مزارع الورد الطائفي', en: 'Taif Rose Farms' }, desc: { ar: 'زيارة مزارع الورد الشهيرة ومصانع عطر الورد الطائفي الأصيل.', en: 'Visit the famous rose farms and authentic Taif rose perfume factories.' } },
