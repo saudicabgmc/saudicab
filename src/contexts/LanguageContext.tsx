@@ -19,12 +19,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>('en')
 
   useEffect(() => {
+    const saved = localStorage.getItem('user-lang') as Lang
+    if (saved === 'en' || saved === 'ar') {
+      setLang(saved)
+    }
+  }, [])
+
+  useEffect(() => {
     document.documentElement.lang = lang
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
   }, [lang])
 
+  const toggle = () => {
+    setLang(l => {
+      const next = l === 'en' ? 'ar' : 'en'
+      localStorage.setItem('user-lang', next)
+      return next
+    })
+  }
+
   return (
-    <LanguageContext.Provider value={{ lang, toggle: () => setLang(l => l === 'en' ? 'ar' : 'en'), isAr: lang === 'ar' }}>
+    <LanguageContext.Provider value={{ lang, toggle, isAr: lang === 'ar' }}>
       <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
         {children}
       </div>
