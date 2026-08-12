@@ -106,19 +106,19 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
         </div>
       </div>
 
-      {/* Arrows */}
+      {/* Arrows — inline-start/end so they mirror correctly in RTL (Arabic) */}
       {['prev','next'].map(dir => (
         <button key={dir} onClick={dir === 'prev' ? prev : next} aria-label={dir}
           style={{
             position: 'absolute', top: '50%',
-            [dir === 'prev' ? 'left' : 'right']: '0',
+            [dir === 'prev' ? 'insetInlineStart' : 'insetInlineEnd']: 0,
             transform: 'translateY(-50%)',
             background: 'white', border: '1.5px solid var(--border)',
             borderRadius: '50%', width: '40px', height: '40px',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             cursor: 'pointer', boxShadow: '0 4px 14px rgba(0,0,0,0.1)', zIndex: 2,
           }}>
-          {dir === 'prev' ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          {(dir === 'prev') !== isAr ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
         </button>
       ))}
 

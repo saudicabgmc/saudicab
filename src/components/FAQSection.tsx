@@ -68,6 +68,8 @@ export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
+                aria-expanded={open === i}
+                aria-controls={`faq-panel-${i}`}
                 style={{
                   width: '100%',
                   display: 'flex',
@@ -99,6 +101,8 @@ export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
 
               {open === i && (
                 <div
+                  id={`faq-panel-${i}`}
+                  role="region"
                   style={{
                     padding: '0 22px 18px',
                     paddingTop: '14px',
