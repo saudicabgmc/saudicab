@@ -200,9 +200,10 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
     } catch (_) {}
     setLoading(false)
 
+    const enc = encodeURIComponent
     const msg = isAr
-      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${vLabel}%0Aمن: ${form.from}%0Aإلى: ${form.to}%0Aالتاريخ: ${form.date}%0Aالوقت: ${form.time || 'غير محدد'}%0Aالركاب: ${form.passengers}${form.name ? `%0Aالاسم: ${form.name}` : ''}${form.phone ? `%0Aالهاتف: ${form.phone}` : ''}`
-      : `Hello, I'd like to book a trip:%0AVehicle: ${vLabel}%0AFrom: ${form.from}%0ATo: ${form.to}%0ADate: ${form.date}%0ATime: ${form.time || 'Not specified'}%0APassengers: ${form.passengers}${form.name ? `%0AName: ${form.name}` : ''}${form.phone ? `%0APhone: ${form.phone}` : ''}`
+      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${enc(vLabel)}%0Aمن: ${enc(form.from)}%0Aإلى: ${enc(form.to)}%0Aالتاريخ: ${enc(form.date)}%0Aالوقت: ${enc(form.time || 'غير محدد')}%0Aالركاب: ${enc(form.passengers)}${form.name ? `%0Aالاسم: ${enc(form.name)}` : ''}${form.phone ? `%0Aالهاتف: ${enc(form.phone)}` : ''}`
+      : `Hello, I'd like to book a trip:%0AVehicle: ${enc(vLabel)}%0AFrom: ${enc(form.from)}%0ATo: ${enc(form.to)}%0ADate: ${enc(form.date)}%0ATime: ${enc(form.time || 'Not specified')}%0APassengers: ${enc(form.passengers)}${form.name ? `%0AName: ${enc(form.name)}` : ''}${form.phone ? `%0APhone: ${enc(form.phone)}` : ''}`
     window.open(`https://wa.me/966569487569?text=${msg}`, '_blank')
 
     setSubmitted(true)
