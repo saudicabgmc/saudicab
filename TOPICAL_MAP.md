@@ -268,22 +268,27 @@ Blog Articles
 
 ## Missing Pages / Content Gaps
 
-### High Priority (create next)
-| Page | Keyword | Monthly Searches Est. |
-|------|---------|----------------------|
-| `/jeddah-to-madinah` | jeddah to madinah taxi | High |
-| `/madinah-to-jeddah` | madinah to jeddah cab | High |
-| `/makkah-transport-guide` | makkah transport guide | Medium |
-| Makkah Ziyarat complete list | makkah ziyarat sites | High |
+*Verified against actual `src/app/` on 2026-08-14 — see `PLAN_30_DAY.md`.*
 
-### Medium Priority
+### High Priority (create next)
+| Page | Keyword | Status |
+|------|---------|--------|
+| `/booking` | book taxi saudi arabia | Missing |
+| `/reviews` | saudi cabs gmc reviews | Missing — needs real testimonials |
+
+### Done
 | Page | Keyword |
 |------|---------|
-| `/booking` | book taxi saudi arabia |
-| `/about` | saudi cabs gmc company |
-| `/contact` | contact saudi cabs gmc |
-| `/faq` | saudi arabia taxi faq |
-| `/reviews` | saudi cabs gmc reviews |
+| ~~`/jeddah-to-madinah`~~ | jeddah to madinah taxi (already existed) |
+| ~~`/madinah-to-jeddah`~~ | madinah to jeddah cab (already existed) |
+| ~~`/about`~~ | saudi cabs gmc company (built Day 1) |
+| ~~`/faq`~~ | saudi arabia taxi faq (built Day 1) |
+| ~~`/contact`~~ | contact saudi cabs gmc (already existed) |
+
+### Medium Priority (content gaps, not new pages)
+| Item | Notes |
+|------|-------|
+| Makkah Ziyarat complete list | Content addition to `/makkah-ziyarat-tour`, not a new page |
 
 ### Schema Improvements Per Page Type
 

@@ -114,11 +114,17 @@ export default function Footer() {
         <div className="footer-bottom" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>
           <span>© {new Date().getFullYear()} {tr.footer.brand}. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</span>
           <div style={{ display: 'flex', gap: '16px', fontSize: '0.85rem', flexWrap: 'wrap' }}>
+            <Link href="/about" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
+              {isAr ? 'من نحن' : 'About'}
+            </Link>
             <Link href="/contact" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'اتصل بنا' : 'Contact'}
             </Link>
             <Link href="/team" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'فريقنا' : 'Team'}
+            </Link>
+            <Link href="/faq" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
+              {isAr ? 'الأسئلة الشائعة' : 'FAQ'}
             </Link>
             <Link href="/privacy-policy" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}

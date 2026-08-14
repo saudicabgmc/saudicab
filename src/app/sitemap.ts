@@ -40,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // EEAT pages
     { url: `${BASE}/contact`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/team`,           lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/about`,          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/faq`,            lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/html-sitemap`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
 
     // Route pages — airport
