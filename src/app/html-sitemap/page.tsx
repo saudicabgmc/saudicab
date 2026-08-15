@@ -12,6 +12,7 @@ const sections = [
     title: 'Main Pages',
     links: [
       { href: '/', label: 'Home' },
+      { href: '/booking', label: 'Book a Taxi' },
       { href: '/about', label: 'About Us' },
       { href: '/contact', label: 'Contact Us' },
       { href: '/team', label: 'Our Team' },
