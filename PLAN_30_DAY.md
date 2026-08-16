@@ -10,7 +10,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 ## Week 1 — Trust & Conversion Pages (EEAT)
 - [x] **Day 1**: `/faq` hub page (aggregate all existing FAQ data into one canonical page) + `/about` page
 - [x] **Day 2**: `/booking` dedicated page — booking form (name, route, date, WhatsApp handoff), fixed-price expectations, trust signals
-- [ ] **Day 3**: `/reviews` page — needs real testimonials/ratings from the business owner before publishing (flag: do not fabricate reviews or ratings)
+- [x] **Day 3**: `/reviews` page — built using the 5 testimonials already live on the homepage (`translations.ts` → `testimonials.items`), no new/fabricated reviews added. Deliberately shipped **without** `AggregateRating`/`Review` schema — Google's guidelines disallow self-serving review rich-snippet markup, and 5 unverified testimonials aren't a legitimate rating source. Revisit once a real Google Business Profile exists (Day 22) with genuine third-party reviews to cite.
 - [ ] **Day 4**: Makkah hub — add neighbourhood-level content (Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah)
 - [ ] **Day 5**: Madinah hub — add hotel-district content (Quba, Central Area near Nabawi)
 - [ ] **Day 6**: Jeddah hub — add Al-Balad, King Road, Obhur area content

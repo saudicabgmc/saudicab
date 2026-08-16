@@ -129,6 +129,9 @@ export default function Footer() {
             <Link href="/faq" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'الأسئلة الشائعة' : 'FAQ'}
             </Link>
+            <Link href="/reviews" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
+              {isAr ? 'التقييمات' : 'Reviews'}
+            </Link>
             <Link href="/privacy-policy" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}
             </Link>

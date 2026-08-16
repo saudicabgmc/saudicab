@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/about`,          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/faq`,            lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/booking`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/reviews`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/html-sitemap`,   lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
 
     // Route pages — airport

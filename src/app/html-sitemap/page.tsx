@@ -17,6 +17,7 @@ const sections = [
       { href: '/contact', label: 'Contact Us' },
       { href: '/team', label: 'Our Team' },
       { href: '/faq', label: 'FAQ' },
+      { href: '/reviews', label: 'Reviews' },
       { href: '/routes-map', label: 'Routes Map' },
       { href: '/blog', label: 'Blog' },
       { href: '/privacy-policy', label: 'Privacy Policy' },
