@@ -11,7 +11,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 1**: `/faq` hub page (aggregate all existing FAQ data into one canonical page) + `/about` page
 - [x] **Day 2**: `/booking` dedicated page — booking form (name, route, date, WhatsApp handoff), fixed-price expectations, trust signals
 - [x] **Day 3**: `/reviews` page — built using the 5 testimonials already live on the homepage (`translations.ts` → `testimonials.items`), no new/fabricated reviews added. Deliberately shipped **without** `AggregateRating`/`Review` schema — Google's guidelines disallow self-serving review rich-snippet markup, and 5 unverified testimonials aren't a legitimate rating source. Revisit once a real Google Business Profile exists (Day 22) with genuine third-party reviews to cite.
-- [ ] **Day 4**: Makkah hub — add neighbourhood-level content (Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah)
+- [x] **Day 4**: Makkah hub — added neighbourhood-level content section (Al-Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah) to `/makkah-taxi-service` via `MakkahLocationPage.tsx`
 - [ ] **Day 5**: Madinah hub — add hotel-district content (Quba, Central Area near Nabawi)
 - [ ] **Day 6**: Jeddah hub — add Al-Balad, King Road, Obhur area content
 - [ ] **Day 7**: Taif hub — add Al-Hada, Al-Shafa mountain route content

@@ -6,6 +6,7 @@ import {
   Phone, MessageCircle, Car,
   Building2, Plane, Bus, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
+  Tent,
 } from 'lucide-react'
 import BookingForm from './BookingForm'
 import FleetSection from './FleetSection'
@@ -17,6 +18,57 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Bus, Car, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 }
+
+const NEIGHBOURHOODS = [
+  {
+    icon: Building2,
+    name: { ar: 'العزيزية', en: 'Al-Aziziyah' },
+    desc: {
+      ar: 'أكبر أحياء الفنادق في مكة، يقع على بعد حوالي 3-4 كم من الحرم المكي وقريب من منى. خيار شائع للحجاج والمعتمرين بأسعار متوسطة، ونوفر رحلات منتظمة بين العزيزية والحرم.',
+      en: 'Makkah\'s largest hotel district, roughly 3-4 km from the Holy Mosque and close to Mina. A popular mid-range base for pilgrims — we run regular transfers between Al-Aziziyah and the Haram.',
+    },
+  },
+  {
+    icon: MapPin,
+    name: { ar: 'المسفلة', en: 'Misfalah' },
+    desc: {
+      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نغطي جميع فنادق وشقق المسفلة بتوصيل سريع للحرم.',
+      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We cover every hotel and apartment in Misfalah with quick transfers to the Haram.',
+    },
+  },
+  {
+    icon: Building,
+    name: { ar: 'أجياد', en: 'Ajyad' },
+    desc: {
+      ar: 'من أقرب الأحياء إلى المسجد الحرام، يطل مباشرة على برج الساعة ومنطقة الحرم. مثالي لمن يريد إقامة قريبة جداً، ونقدم توصيلاً فورياً من وإلى فنادق أجياد.',
+      en: 'One of the closest neighborhoods to the Holy Mosque, overlooking the Clock Tower area. Ideal for travelers who want to stay within very close reach — we offer instant pickup from Ajyad hotels.',
+    },
+  },
+  {
+    icon: Tent,
+    name: { ar: 'منى', en: 'Mina' },
+    desc: {
+      ar: 'مدينة الخيام على بعد حوالي 7 كم من مكة، محطة أساسية خلال أيام الحج. نوفر رحلات منظمة من وإلى منى بسيارات مرخصة خلال كامل الموسم.',
+      en: 'The tent city roughly 7 km from central Makkah, a core stop during the days of Hajj. We run organized transfers to and from Mina in licensed vehicles throughout the season.',
+    },
+  },
+  {
+    icon: Mountain,
+    name: { ar: 'عرفات', en: 'Arafat' },
+    desc: {
+      ar: 'موقع الوقوف الأهم في مناسك الحج، يبعد حوالي 20 كم عن مكة المكرمة. نساعد الحجاج والمجموعات على التنقل إلى عرفات ومنها في الوقت المحدد.',
+      en: 'The site of the central Hajj ritual of standing (Wuquf), about 20 km from Makkah. We help pilgrims and groups move to and from Arafat exactly on schedule.',
+    },
+  },
+  {
+    icon: Moon,
+    name: { ar: 'مزدلفة', en: 'Muzdalifah' },
+    desc: {
+      ar: 'محطة المبيت بين عرفات ومنى، على بعد حوالي 9 كم من مكة. جزء من خطة النقل خلال ليالي الحج، نوفره ضمن باقات نقل الحج والعمرة.',
+      en: 'The overnight stop between Arafat and Mina, about 9 km from Makkah. Part of the transport plan for Hajj nights, included in our Hajj & Umrah transport packages.',
+    },
+  },
+]
 
 export default function MakkahLocationPage({
   cityName, citySlogan, description, heroImage,
@@ -182,6 +234,43 @@ export default function MakkahLocationPage({
             }}>
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Neighbourhoods & Holy Sites We Cover ── */}
+      <section style={{ padding: '80px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">{isAr ? 'الأحياء والمشاعر' : 'Neighbourhoods & Holy Sites'}</span>
+            <h2 className="section-title">
+              {isAr ? <>نغطي كل حي في <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></>}
+            </h2>
+            <div className="gold-divider" />
+            <p className="section-subtitle">
+              {isAr
+                ? 'من أحياء الفنادق القريبة من الحرم إلى المشاعر المقدسة — سائقونا يعرفون كل موقع'
+                : 'From hotel districts near the Haram to the sacred sites — our drivers know every location'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+            {NEIGHBOURHOODS.map(n => {
+              const NIcon = n.icon
+              return (
+                <div key={n.name.en} style={{
+                  padding: '24px 22px', borderRadius: '16px',
+                  border: '1.5px solid var(--border)', background: 'var(--card)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                    <div style={{ background: 'var(--primary-light)', borderRadius: '10px', padding: '9px', flexShrink: 0 }}>
+                      <NIcon size={20} strokeWidth={1.8} color="var(--primary)" />
+                    </div>
+                    <h3 style={{ fontSize: '1rem', fontWeight: '800', color: 'var(--foreground)', margin: 0 }}>{tx(n.name)}</h3>
+                  </div>
+                  <p style={{ fontSize: '0.86rem', color: 'var(--muted-foreground)', lineHeight: '1.7', margin: 0 }}>{tx(n.desc)}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
