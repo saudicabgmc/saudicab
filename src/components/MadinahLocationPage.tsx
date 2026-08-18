@@ -18,6 +18,49 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 }
 
+const NEIGHBOURHOODS = [
+  {
+    icon: Building2,
+    name: { ar: 'المنطقة المركزية', en: 'Central Area (Al-Markaziyah)' },
+    desc: {
+      ar: 'الحي المحيط مباشرة بالمسجد النبوي الشريف، حيث تقع أغلب الفنادق الكبرى على مسافة يمكن قطعها مشياً. نغطي جميع فنادق المنطقة المركزية بتوصيل سريع من وإلى المطار والمحطة.',
+      en: 'The district immediately surrounding Masjid an-Nabawi, home to most major hotels within walking distance of the mosque. We cover every hotel in the Central Area with fast transfers to and from the airport and train station.',
+    },
+  },
+  {
+    icon: Moon,
+    name: { ar: 'قباء', en: 'Quba' },
+    desc: {
+      ar: 'موقع مسجد قباء، أول مسجد بُني في الإسلام، على بعد حوالي 5 كم جنوب المسجد النبوي. من أكثر الوجهات طلباً لدى الزوار، ونوفر رحلات مباشرة من الفنادق إلى قباء.',
+      en: 'Home to Masjid Quba, the first mosque built in Islam, roughly 5 km south of Masjid an-Nabawi. One of the most requested destinations for visitors — we run direct trips from hotels to Quba.',
+    },
+  },
+  {
+    icon: Mountain,
+    name: { ar: 'جبل أحد', en: 'Mount Uhud' },
+    desc: {
+      ar: 'الموقع التاريخي لغزوة أحد، على بعد حوالي 5 كم شمال المسجد النبوي. نظّم رحلات لزيارة الجبل ومقبرة الشهداء ضمن جولات الزيارة الإسلامية في المدينة المنورة.',
+      en: 'The historic site of the Battle of Uhud, about 5 km north of Masjid an-Nabawi. We arrange visits to the mountain and the martyrs\' cemetery as part of Madinah Islamic-sites tours.',
+    },
+  },
+  {
+    icon: MapPin,
+    name: { ar: 'البقيع', en: 'Al-Baqi' },
+    desc: {
+      ar: 'مقبرة البقيع المجاورة مباشرة للمسجد النبوي من الجهة الشرقية. يزورها معظم القادمين للمدينة المنورة، ونوفر توصيلاً سريعاً لمن يقيم بعيداً عن المنطقة المركزية.',
+      en: 'The Al-Baqi cemetery sits directly beside Masjid an-Nabawi on its eastern side. Visited by most travelers to Madinah — we offer quick transfers for guests staying outside the Central Area.',
+    },
+  },
+  {
+    icon: TreePine,
+    name: { ar: 'العقيق', en: 'Al-Aqiq' },
+    desc: {
+      ar: 'منطقة سكنية وفندقية أوسع تقع غرب المدينة المنورة، وتشمل مسجد ذي الحليفة (ميقات أهل المدينة). نوفر توصيلاً منتظماً بين العقيق والمسجد النبوي.',
+      en: 'A wider residential and hotel area west of central Madinah, home to Masjid Dhul-Hulayfah (the miqat for Madinah residents). We run regular transfers between Al-Aqiq and Masjid an-Nabawi.',
+    },
+  },
+]
+
 export default function MadinahLocationPage({
   cityName, citySlogan, description, heroImage,
   services, routes, linkedRoutes, citySlug, highlights, faqs, pricing,
@@ -196,6 +239,48 @@ export default function MadinahLocationPage({
             }}>
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Neighbourhoods & Islamic Sites We Cover ── */}
+      <section style={{ padding: '80px 0', backgroundColor: '#f0faf5' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag" style={{ background: 'rgba(26,74,58,0.1)', border: '1px solid rgba(26,74,58,0.3)', color: '#1a4a3a' }}>
+              {isAr ? 'الأحياء والمواقع الإسلامية' : 'Neighbourhoods & Islamic Sites'}
+            </span>
+            <h2 className="section-title" style={{ marginTop: '12px' }}>
+              {isAr ? <>نغطي كل حي في <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></>}
+            </h2>
+            <div className="gold-divider" />
+            <p className="section-subtitle">
+              {isAr
+                ? 'من الأحياء القريبة من المسجد النبوي إلى المواقع الإسلامية التاريخية — سائقونا يعرفون كل موقع'
+                : 'From hotel districts near the Prophet\'s Mosque to historic Islamic sites — our drivers know every location'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+            {NEIGHBOURHOODS.map(n => {
+              const NIcon = n.icon
+              return (
+                <div key={n.name.en} style={{
+                  background: 'white', borderRadius: '16px', padding: '24px 22px',
+                  border: '1px solid rgba(26,74,58,0.15)', boxShadow: '0 2px 8px rgba(26,74,58,0.06)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                    <div style={{
+                      background: 'linear-gradient(135deg, rgba(26,74,58,0.12), rgba(168,230,207,0.15))',
+                      borderRadius: '10px', padding: '9px', flexShrink: 0,
+                    }}>
+                      <NIcon size={20} strokeWidth={1.8} color="#1a4a3a" />
+                    </div>
+                    <h3 style={{ fontSize: '1rem', fontWeight: '800', color: '#1a4a3a', margin: 0 }}>{tx(n.name)}</h3>
+                  </div>
+                  <p style={{ fontSize: '0.86rem', color: 'var(--muted-foreground)', lineHeight: '1.7', margin: 0 }}>{tx(n.desc)}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
