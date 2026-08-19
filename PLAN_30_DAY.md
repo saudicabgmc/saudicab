@@ -13,7 +13,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 3**: `/reviews` page — built using the 5 testimonials already live on the homepage (`translations.ts` → `testimonials.items`), no new/fabricated reviews added. Deliberately shipped **without** `AggregateRating`/`Review` schema — Google's guidelines disallow self-serving review rich-snippet markup, and 5 unverified testimonials aren't a legitimate rating source. Revisit once a real Google Business Profile exists (Day 22) with genuine third-party reviews to cite.
 - [x] **Day 4**: Makkah hub — added neighbourhood-level content section (Al-Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah) to `/makkah-taxi-service` via `MakkahLocationPage.tsx`
 - [x] **Day 5**: Madinah hub — added neighbourhood-level content section (Central Area/Al-Markaziyah, Quba, Mount Uhud, Al-Baqi, Al-Aqiq) to `/madinah-taxi-service` via `MadinahLocationPage.tsx`
-- [ ] **Day 6**: Jeddah hub — add Al-Balad, King Road, Obhur area content
+- [x] **Day 6**: Jeddah hub — added neighbourhood-level content section (Al-Balad, King Road business district, Obhur, Al-Hamra, Al-Rawdah) to `/jeddah-taxi-service` via `JeddahLocationPage.tsx`
 - [ ] **Day 7**: Taif hub — add Al-Hada, Al-Shafa mountain route content
 
 ## Week 2 — Blog Content Gaps (7 articles from TOPICAL_MAP.md, verified still missing)

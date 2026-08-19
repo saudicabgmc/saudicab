@@ -18,6 +18,49 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 }
 
+const NEIGHBOURHOODS = [
+  {
+    icon: ShoppingBag,
+    name: { ar: 'البلد', en: 'Al-Balad' },
+    desc: {
+      ar: 'قلب جدة التاريخي، مسجل ضمن مواقع التراث العالمي لليونسكو منذ 2014. أزقة ضيقة ومباني مرجانية عريقة وسوق العلوي. نوفر رحلات من وإلى البلد لجولات التسوق والتصوير.',
+      en: 'Jeddah\'s historic old town, a UNESCO World Heritage Site since 2014. Narrow alleys, traditional coral-stone buildings, and Souq Al-Alawi. We offer trips to and from Al-Balad for shopping and sightseeing tours.',
+    },
+  },
+  {
+    icon: Building2,
+    name: { ar: 'طريق الملك (الحي التجاري)', en: 'King Road (Business District)' },
+    desc: {
+      ar: 'الممر التجاري الرئيسي في جدة، يضم أبراج الأعمال والمولات الكبرى والفنادق. مثالي لرجال الأعمال، ونوفر توصيلاً موثوقاً للاجتماعات والمناسبات.',
+      en: 'Jeddah\'s main commercial corridor, lined with business towers, major malls, and hotels. Ideal for corporate travelers — we offer reliable transfers for meetings and events.',
+    },
+  },
+  {
+    icon: Waves,
+    name: { ar: 'أبحر', en: 'Obhur' },
+    desc: {
+      ar: 'المنطقة الساحلية الشمالية، على بعد حوالي 30 كم من وسط جدة، تشهر بالشاليهات والمنتجعات على البحر الأحمر. وجهة شهيرة لعطلات نهاية الأسبوع، ونصل إليها بانتظام.',
+      en: 'The northern coastal district, about 30 km from central Jeddah, known for its Red Sea beach chalets and resorts. A popular weekend destination — we serve it regularly.',
+    },
+  },
+  {
+    icon: Building,
+    name: { ar: 'الحمراء', en: 'Al-Hamra' },
+    desc: {
+      ar: 'حي راقٍ قريب من الكورنيش، يضم فنادق ومطاعم ومناطق سكنية مميزة. من أكثر الأحياء طلباً للإقامة في جدة، ونغطيه بتوصيل سريع لكل وجهاتك.',
+      en: 'An upscale district near the Corniche with hotels, restaurants, and premium residential areas. One of the most requested places to stay in Jeddah — we cover it with fast transfers to any destination.',
+    },
+  },
+  {
+    icon: Map,
+    name: { ar: 'الروضة', en: 'Al-Rawdah' },
+    desc: {
+      ar: 'حي مركزي حيوي يجمع بين المكاتب والمولات والمطاعم، ويقع بالقرب من طريق الملك. نغطي جميع فنادق ومكاتب الروضة بتوصيل منتظم.',
+      en: 'A vibrant central district mixing offices, malls, and restaurants, close to King Road. We cover every hotel and office in Al-Rawdah with regular transfers.',
+    },
+  },
+]
+
 export default function JeddahLocationPage({
   cityName, citySlogan, description, heroImage,
   services, routes, linkedRoutes, citySlug, highlights, faqs, pricing,
@@ -221,6 +264,50 @@ export default function JeddahLocationPage({
             }}>
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Neighbourhoods We Cover ── */}
+      <section style={{ padding: '80px 0', backgroundColor: '#f0f8ff' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag" style={{ background: 'rgba(8,145,178,0.1)', border: '1px solid rgba(8,145,178,0.3)', color: '#0891b2' }}>
+              {isAr ? 'الأحياء التي نغطيها' : 'Neighbourhoods We Cover'}
+            </span>
+            <h2 className="section-title" style={{ marginTop: '12px' }}>
+              {isAr ? <>نغطي كل حي في <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></>}
+            </h2>
+            <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, #0891b2, #D4AF37)', margin: '14px auto', borderRadius: '2px' }} />
+            <p className="section-subtitle">
+              {isAr
+                ? 'من البلد التاريخية إلى أبحر الساحلية — سائقونا يعرفون كل حي في جدة'
+                : 'From historic Al-Balad to coastal Obhur — our drivers know every district in Jeddah'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
+            {NEIGHBOURHOODS.map(n => {
+              const NIcon = n.icon
+              return (
+                <div key={n.name.en} style={{
+                  background: 'white', border: '1px solid rgba(8,145,178,0.18)',
+                  borderRadius: '12px', padding: '22px 20px',
+                  boxShadow: '0 4px 20px rgba(10,31,61,0.06)',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                    <div style={{
+                      width: '36px', height: '36px', borderRadius: '8px',
+                      background: 'linear-gradient(135deg, #0a1f3d, #0891b2)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                    }}>
+                      <NIcon size={18} strokeWidth={1.8} color="white" />
+                    </div>
+                    <h3 style={{ fontSize: '0.95rem', fontWeight: '800', color: '#0a1f3d', margin: 0 }}>{tx(n.name)}</h3>
+                  </div>
+                  <p style={{ fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{tx(n.desc)}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
