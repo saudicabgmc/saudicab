@@ -14,7 +14,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 4**: Makkah hub — added neighbourhood-level content section (Al-Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah) to `/makkah-taxi-service` via `MakkahLocationPage.tsx`
 - [x] **Day 5**: Madinah hub — added neighbourhood-level content section (Central Area/Al-Markaziyah, Quba, Mount Uhud, Al-Baqi, Al-Aqiq) to `/madinah-taxi-service` via `MadinahLocationPage.tsx`
 - [x] **Day 6**: Jeddah hub — added neighbourhood-level content section (Al-Balad, King Road business district, Obhur, Al-Hamra, Al-Rawdah) to `/jeddah-taxi-service` via `JeddahLocationPage.tsx`
-- [ ] **Day 7**: Taif hub — add Al-Hada, Al-Shafa mountain route content
+- [x] **Day 7**: Taif hub — added neighbourhood-level content section (Al-Hada, Al-Shafa, Rose Farms, Wadi Qarn, Downtown/Al-Faisaliyah) to `/taif-taxi-service` via `TaifLocationPage.tsx` — **Week 1 complete**
 
 ## Week 2 — Blog Content Gaps (7 articles from TOPICAL_MAP.md, verified still missing)
 - [ ] **Day 8**: "Taxi from Madinah to Makkah — What to Expect"

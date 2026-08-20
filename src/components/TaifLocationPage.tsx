@@ -18,6 +18,49 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 }
 
+const NEIGHBOURHOODS = [
+  {
+    icon: Mountain,
+    name: { ar: 'الهدا', en: 'Al-Hada' },
+    desc: {
+      ar: 'الطريق الجبلي الشهير الرابط بين مكة والطائف، على بعد حوالي 20 دقيقة من وسط الطائف. يضم التلفريك ومطلات جبلية خلابة، ونوفر رحلات منتظمة إليه.',
+      en: 'The famous mountain road linking Makkah and Taif, about 20 minutes from downtown Taif. Home to the cable car and stunning mountain viewpoints — we run regular trips there.',
+    },
+  },
+  {
+    icon: Mountain,
+    name: { ar: 'شفا', en: 'Al-Shafa' },
+    desc: {
+      ar: 'منتجع جبلي أعلى ارتفاعاً بمناخ أكثر برودة، على بعد حوالي 30 دقيقة من وسط الطائف. وجهة صيفية مفضلة للعائلات، ونصل إليها بسيارات مريحة للطرق الجبلية.',
+      en: 'A higher-elevation mountain retreat with a cooler climate, about 30 minutes from downtown Taif. A favorite summer destination for families — we reach it with vehicles suited to mountain roads.',
+    },
+  },
+  {
+    icon: Leaf,
+    name: { ar: 'مزارع الورد الطائفي', en: 'Taif Rose Farms' },
+    desc: {
+      ar: 'تقع في منطقة الهدا والقرى الجبلية المحيطة، وتفتح أساساً في موسم الورد من فبراير إلى أبريل. من أشهر تجارب الطائف، ونرتب رحلات مخصصة لزيارتها.',
+      en: 'Located around Al-Hada and the surrounding mountain villages, open mainly during rose season from February to April. One of Taif\'s signature experiences — we arrange dedicated trips to visit them.',
+    },
+  },
+  {
+    icon: TreePine,
+    name: { ar: 'وادي قرن', en: 'Wadi Qarn' },
+    desc: {
+      ar: 'وادٍ جبلي خلاب ضمن مسار الجولات الطبيعية في الطائف. جزء من جولة المرتفعات النموذجية التي ننظمها ليوم كامل مع سائق يعرف كل نقطة توقف.',
+      en: 'A scenic mountain valley on Taif\'s natural sightseeing route. Part of the typical full-day highlands tour we organize, with a driver who knows every scenic stop.',
+    },
+  },
+  {
+    icon: Building2,
+    name: { ar: 'وسط الطائف (الفيصلية)', en: 'Downtown Taif (Al-Faisaliyah)' },
+    desc: {
+      ar: 'المركز التجاري والفندقي في الطائف، حيث تتوفر أغلب أماكن الإقامة. نوفر توصيلاً منتظماً من وسط المدينة إلى الهدا وشفا ومطار الطائف وجميع الوجهات.',
+      en: 'Taif\'s commercial and hotel center, where most accommodation is located. We offer regular transfers from downtown to Al-Hada, Al-Shafa, Taif Airport, and every destination.',
+    },
+  },
+]
+
 export default function TaifLocationPage({
   cityName, citySlogan, description, heroImage,
   services, routes, linkedRoutes, citySlug, highlights, faqs, pricing,
@@ -211,6 +254,48 @@ export default function TaifLocationPage({
             }}>
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Neighbourhoods & Mountain Routes ── */}
+      <section style={{ padding: '80px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag" style={{ background: 'rgba(45,106,79,0.1)', border: '1px solid rgba(45,106,79,0.3)', color: '#2d6a4f' }}>
+              {isAr ? 'الأحياء والمرتفعات' : 'Neighbourhoods & Highlands'}
+            </span>
+            <h2 className="section-title" style={{ marginTop: '12px' }}>
+              {isAr ? <>نغطي كل منطقة في <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></>}
+            </h2>
+            <div style={{ width: '44px', height: '3px', background: 'linear-gradient(90deg, #2d6a4f, #e9c46a)', borderRadius: '2px', margin: '14px auto' }} />
+            <p className="section-subtitle">
+              {isAr
+                ? 'من وسط المدينة إلى طرق الهدا وشفا الجبلية — سائقونا يعرفون كل منعطف'
+                : 'From downtown to the mountain roads of Al-Hada and Al-Shafa — our drivers know every turn'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
+            {NEIGHBOURHOODS.map(n => {
+              const NIcon = n.icon
+              return (
+                <div key={n.name.en} style={{
+                  background: 'var(--card)', borderRadius: '20px', padding: '24px 20px',
+                  border: '1px solid var(--border)', borderTop: '3px solid #2d6a4f',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <div style={{
+                      background: 'linear-gradient(135deg, rgba(45,106,79,0.15), rgba(233,196,106,0.12))',
+                      borderRadius: '12px', padding: '10px',
+                    }}>
+                      <NIcon size={20} strokeWidth={1.8} color="#2d6a4f" />
+                    </div>
+                    <h3 style={{ fontSize: '0.9rem', fontWeight: '800', margin: 0 }}>{tx(n.name)}</h3>
+                  </div>
+                  <p style={{ fontSize: '0.83rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{tx(n.desc)}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
