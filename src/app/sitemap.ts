@@ -107,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/riyadh-to-makkah-complete-guide`,       lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/gmc-yukon-vs-staria-family-umrah`,      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/hajj-2026-transport-makkah-traffic-tips`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/blog/taxi-madinah-to-makkah-what-to-expect`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
 
     // Vehicle SEO programmatic pages (~190)
     ...vehicleSeoEntries,

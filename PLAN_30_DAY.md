@@ -17,7 +17,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 7**: Taif hub — added neighbourhood-level content section (Al-Hada, Al-Shafa, Rose Farms, Wadi Qarn, Downtown/Al-Faisaliyah) to `/taif-taxi-service` via `TaifLocationPage.tsx` — **Week 1 complete**
 
 ## Week 2 — Blog Content Gaps (7 articles from TOPICAL_MAP.md, verified still missing)
-- [ ] **Day 8**: "Taxi from Madinah to Makkah — What to Expect"
+- [x] **Day 8**: "Taxi from Madinah to Makkah — What to Expect" — published at `/blog/taxi-madinah-to-makkah-what-to-expect`, covers distance/duration, the Dhul-Hulayfah (Abyar Ali) Miqat stop, vehicle choice, and private-vs-shared transport
 - [ ] **Day 9**: "How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide"
 - [ ] **Day 10**: "Best Time to Travel Makkah to Madinah by Private Car"
 - [ ] **Day 11**: "Umrah Checklist: Transport, Hotels & What to Pack"

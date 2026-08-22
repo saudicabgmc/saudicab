@@ -411,4 +411,87 @@ export const blogPosts: BlogPost[] = [
     date: '2026-05-03',
     image: '/location/makkah.webp',
   },
+  {
+    slug: 'taxi-madinah-to-makkah-what-to-expect',
+    title: {
+      en: 'Taxi from Madinah to Makkah: What to Expect on the Journey',
+      ar: 'التاكسي من المدينة المنورة إلى مكة المكرمة: ماذا تتوقع في الرحلة',
+    },
+    excerpt: {
+      en: 'A practical guide to the 430 km road journey between the two holy cities — the Miqat stop, timing, and what to look for in a private taxi.',
+      ar: 'دليل عملي لرحلة 430 كم البرية بين الحرمين الشريفين — نقطة الميقات، التوقيت، وما يجب البحث عنه في تاكسي خاص.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Traveling from Madinah to Makkah is one of the most common journeys for pilgrims and travelers in Saudi Arabia. Whether you are heading to perform Umrah after visiting the Prophet's Mosque, or simply moving between the two holy cities, here is exactly what to expect from a private taxi journey.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">The Route at a Glance</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Distance:</strong> Approximately 430 km via the main highway</li>
+  <li style="margin-bottom:0.5rem;"><strong>Duration:</strong> Around 4 to 4.5 hours by private car, traffic and prayer-time stops included</li>
+  <li style="margin-bottom:0.5rem;"><strong>Road type:</strong> Modern, well-maintained highway connecting the two Harams</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Don't Forget the Miqat</h2>
+<p style="margin-bottom:1rem;">If you are entering Ihram for Umrah, you must do so before passing the Miqat. For travelers departing from Madinah, that point is Masjid Dhul-Hulayfah (commonly known as Abyar Ali), located a few kilometers outside the city on the road to Makkah. A good driver will know exactly where this is and can stop so you have time to change into Ihram and pray two rakats before continuing.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What the Journey Looks Like</h2>
+<p style="margin-bottom:1rem;">Most of the drive is desert highway, with a handful of rest stops along the way for prayer, food, and fuel. A private driver will usually plan the trip around Salah times, so you are not stuck in the car during Dhuhr or Asr. Night departures are popular — cooler temperatures and lighter traffic make for a smoother ride, and you can arrive in Makkah in time for Fajr at the Haram.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing Your Vehicle</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>1–3 passengers:</strong> A standard sedan is the most economical choice for the long highway drive</li>
+  <li style="margin-bottom:0.5rem;"><strong>4–7 passengers:</strong> Hyundai Staria — more legroom for a multi-hour trip, easier for elderly pilgrims to get in and out</li>
+  <li style="margin-bottom:0.5rem;"><strong>Groups wanting comfort:</strong> GMC Yukon — extra luggage space for Ihram bags, Zamzam bottles, and suitcases</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Private Taxi vs Shared Transport</h2>
+<p style="margin-bottom:1rem;">Shared buses and vans wait to fill every seat before departing, and make multiple stops along the way. A private taxi leaves on your schedule, drives directly with only your group's stops, and drops you at your exact Makkah hotel rather than a shared terminal — a meaningful difference on a 4+ hour trip with luggage and, often, elderly family members.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Tips for a Comfortable Trip</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Book at least a day in advance during Ramadan, Hajj season, or public holidays</li>
+  <li style="margin-bottom:0.5rem;">Agree on the fixed price and vehicle type before the trip starts — no meter, no surprises</li>
+  <li style="margin-bottom:0.5rem;">Pack a small bag with your Ihram, water, and snacks within easy reach for the Miqat stop</li>
+  <li style="margin-bottom:0.5rem;">Consider a night departure if you want to arrive in Makkah for Fajr</li>
+</ul>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Madinah to Makkah route daily with fixed prices, a Miqat stop built into the journey, and a full range of vehicles from sedan to VIP SUV. Message us on WhatsApp to book your transfer.</p>`,
+      ar: `<p style="margin-bottom:1rem;">السفر من المدينة المنورة إلى مكة المكرمة من أكثر الرحلات شيوعاً للحجاج والمعتمرين والمسافرين في المملكة العربية السعودية. سواء كنت متجهاً لأداء العمرة بعد زيارة المسجد النبوي، أو تنتقل ببساطة بين الحرمين، إليك بالضبط ما يجب توقعه من رحلة تاكسي خاص.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">نظرة عامة على الطريق</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>المسافة:</strong> حوالي 430 كم عبر الطريق السريع الرئيسي</li>
+  <li style="margin-bottom:0.5rem;"><strong>المدة:</strong> من 4 إلى 4.5 ساعة بالسيارة الخاصة، مع احتساب الزحام وتوقفات الصلاة</li>
+  <li style="margin-bottom:0.5rem;"><strong>نوع الطريق:</strong> طريق سريع حديث ومُعتنى به يربط بين الحرمين الشريفين</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لا تنسَ الميقات</h2>
+<p style="margin-bottom:1rem;">إذا كنت تنوي الإحرام للعمرة، يجب عليك ذلك قبل تجاوز الميقات. لأهل المدينة والمنطلقين منها، الميقات هو مسجد ذي الحليفة (المعروف بأبيار علي)، ويقع على بعد كيلومترات قليلة خارج المدينة على طريق مكة. السائق الجيد يعرف بالضبط مكانه ويمكنه التوقف لمنحك وقتاً لارتداء الإحرام وصلاة ركعتين قبل المتابعة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تبدو الرحلة</h2>
+<p style="margin-bottom:1rem;">معظم الطريق صحراوي سريع، مع عدد من محطات الاستراحة للصلاة والطعام والوقود. عادةً ما يخطط السائق الخاص للرحلة حول أوقات الصلاة، حتى لا تبقى في السيارة وقت الظهر أو العصر. الانطلاق ليلاً شائع — درجات حرارة أبرد وحركة مرور أخف، مما يجعل الرحلة أكثر سلاسة، ويمكنك الوصول إلى مكة في وقت صلاة الفجر في الحرم.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار السيارة المناسبة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>1–3 ركاب:</strong> السيدان العادية هي الخيار الأكثر اقتصادية للرحلة الطويلة</li>
+  <li style="margin-bottom:0.5rem;"><strong>4–7 ركاب:</strong> هيونداي ستاريا — مساحة أرجل أكبر لرحلة تمتد لساعات، وأسهل لكبار السن</li>
+  <li style="margin-bottom:0.5rem;"><strong>للمجموعات الباحثة عن الراحة:</strong> GMC يوكن — مساحة إضافية لحقائب الإحرام وعبوات زمزم والأمتعة</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التاكسي الخاص مقابل النقل المشترك</h2>
+<p style="margin-bottom:1rem;">الحافلات والفانات المشتركة تنتظر امتلاء جميع المقاعد قبل الانطلاق، وتتوقف عدة مرات في الطريق. أما التاكسي الخاص فينطلق في الوقت الذي تحدده، ويسير مباشرة بتوقفات مجموعتك فقط، ويوصلك إلى فندقك في مكة مباشرة بدلاً من محطة مشتركة — فرق مهم في رحلة تتجاوز 4 ساعات مع الأمتعة، وغالباً مع أفراد كبار في السن.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">نصائح لرحلة مريحة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">احجز قبل يوم على الأقل خلال رمضان وموسم الحج والعطلات الرسمية</li>
+  <li style="margin-bottom:0.5rem;">اتفق على السعر الثابت ونوع السيارة قبل بدء الرحلة — بدون عداد ولا مفاجآت</li>
+  <li style="margin-bottom:0.5rem;">جهّز حقيبة صغيرة بالإحرام والماء والوجبات الخفيفة في متناول يدك لتوقف الميقات</li>
+  <li style="margin-bottom:0.5rem;">فكر في الانطلاق ليلاً إذا أردت الوصول إلى مكة في وقت صلاة الفجر</li>
+</ul>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط المدينة المنورة - مكة المكرمة يومياً بأسعار ثابتة، مع توقف عند الميقات ضمن الرحلة، ومجموعة كاملة من السيارات من السيدان إلى الـ SUV الفاخرة. راسلنا عبر واتساب لحجز رحلتك.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/madinah.webp',
+  },
 ];
