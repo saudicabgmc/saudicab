@@ -208,14 +208,14 @@ const HUB_DEFS = [
   {
     slug: 'airport-taxi',
     title: 'Airport Taxi Saudi Arabia | Jeddah, Madinah, Taif Airports | Saudi Cabs GMC',
-    desc:  'Book an airport taxi in Saudi Arabia — Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports. Fixed price, name-board pickup, flight tracking. 24/7. Book via WhatsApp.',
+    desc:  'Book an airport taxi in Saudi Arabia — Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports. Fixed price, name-board pickup, flight number confirmation. 24/7. Book via WhatsApp.',
     h1:    'Airport Taxi in Saudi Arabia — All 3 Airports',
-    subtitle: 'Saudi Cabs GMC provides fixed-price airport taxi service from Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports — to all cities. Name-board meet & greet. Flight tracking included.',
-    qa:    'Saudi Cabs GMC offers 24/7 airport taxi service from all three Saudi airports: Jeddah KAIA, Madinah MED, and Taif TIF. Fixed prices, flight tracking, name-board pickup. Book via WhatsApp: +92 309 7811785.',
+    subtitle: 'Saudi Cabs GMC provides fixed-price airport taxi service from Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports — to all cities. Name-board meet & greet, with your flight number confirmed in advance.',
+    qa:    'Saudi Cabs GMC offers 24/7 airport taxi service from all three Saudi airports: Jeddah KAIA, Madinah MED, and Taif TIF. Fixed prices, flight number confirmation, name-board pickup. Book via WhatsApp: +92 309 7811785.',
     badge: 'Airport Taxi',
     faqs: [
       { q: 'Which Saudi airports does Saudi Cabs GMC serve?', a: 'Saudi Cabs GMC provides airport taxi service from three airports: King Abdulaziz International Airport (KAIA/JED) in Jeddah, Prince Mohammad bin Abdulaziz Airport (MED) in Madinah, and Taif Regional Airport (TIF).' },
-      { q: 'Does Saudi Cabs GMC track flights for airport pickups?', a: 'Yes. Saudi Cabs GMC monitors flight arrivals in real time. If your flight is delayed, the driver adjusts pickup time automatically — at no extra charge.' },
+      { q: 'What happens if my flight is delayed?', a: 'Share your flight number when you book. If your flight is delayed, let your driver know via WhatsApp and pickup time will be adjusted — at no extra charge for reasonable delays.' },
       { q: 'How does airport pickup work with Saudi Cabs GMC?', a: 'Your driver will be waiting at the arrivals hall with a personalised name-board. Free waiting time is 60 minutes after the actual landing time. For late arrivals beyond 60 minutes, additional waiting charges may apply.' },
     ],
   },
@@ -485,7 +485,7 @@ for (const spec of AIRPORT_SPECS) {
       { name: `${ap.shortName}`, href: `/${svc.label.toLowerCase()}-${spec.airport}-airport-to-makkah` },
     ],
     waMessage: `Hello, I'd like to book a ${seats}${svc.label.toLowerCase()} ${dir}`,
-    schema: { '@context': 'https://schema.org', '@graph': [ taxiSchema(`${svc.label} ${dir}`, `Fixed-price ${svc.label.toLowerCase()} ${dir}${km ? ` (${km}, ${time})` : ''}. Name-board pickup, flight tracking.`, `${BASE}/${spec.slug}`, dest, vName || undefined) ] },
+    schema: { '@context': 'https://schema.org', '@graph': [ taxiSchema(`${svc.label} ${dir}`, `Fixed-price ${svc.label.toLowerCase()} ${dir}${km ? ` (${km}, ${time})` : ''}. Name-board pickup, flight number confirmed in advance.`, `${BASE}/${spec.slug}`, dest, vName || undefined) ] },
   })
 }
 

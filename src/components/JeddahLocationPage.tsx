@@ -110,7 +110,7 @@ export default function JeddahLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/923097811785" style={{
+                <a href="tel:+923097811785" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   background: '#0891b2', color: 'white', padding: '13px 28px',
                   borderRadius: '8px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
@@ -406,7 +406,7 @@ export default function JeddahLocationPage({
               >
                 <MessageCircle size={17} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="https://wa.me/923097811785" style={{
+              <a href="tel:+923097811785" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 background: 'rgba(8,145,178,0.2)', color: 'white', padding: '12px 28px',
                 borderRadius: '8px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',

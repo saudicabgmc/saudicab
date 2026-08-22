@@ -116,7 +116,7 @@ export default function MakkahLocationPage({
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="https://wa.me/923097811785" className="btn-primary" style={{ padding: '14px 32px' }}>
+            <a href="tel:+923097811785" className="btn-primary" style={{ padding: '14px 32px' }}>
               <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
             </a>
             <a
@@ -349,7 +349,7 @@ export default function MakkahLocationPage({
             >
               <MessageCircle size={17} strokeWidth={2.5} /> {tr.whatsapp}
             </a>
-            <a href="https://wa.me/923097811785" style={{
+            <a href="tel:+923097811785" style={{
               display: 'flex', alignItems: 'center', gap: '8px',
               background: 'rgba(255,255,255,0.08)', color: 'white',
               padding: '14px 32px', borderRadius: '10px', fontWeight: '700', fontSize: '0.9rem',

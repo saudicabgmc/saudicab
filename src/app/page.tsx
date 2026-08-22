@@ -91,7 +91,7 @@ export default function Home() {
           {isAr ? 'واتساب' : 'WhatsApp'}
         </a>
         <a
-          href="https://wa.me/923097811785"
+          href="tel:+923097811785"
           style={{
             background: 'rgba(255,255,255,0.14)', color: 'white',
             border: '1.5px solid rgba(255,255,255,0.4)',
@@ -270,8 +270,8 @@ export default function Home() {
             justifyContent: 'center',
           }}>
             {(isAr
-              ? ['⭐ تقييم 5 نجوم على جوجل', '✅ +١٢٠٠٠ رحلة ناجحة', '🔒 سعر ثابت مضمون', '🚗 أسطول GMC وستاريا', '⏰ متاح ٢٤ ساعة / ٧ أيام']
-              : ['⭐ Google 5-Star Rated', '✅ 12,000+ Trips Completed', '🔒 Guaranteed Fixed Price', '🚗 GMC Yukon & Staria Fleet', '⏰ Available 24/7']
+              ? ['🔒 سعر ثابت مضمون', '🚗 أسطول GMC وستاريا', '💬 حجز فوري عبر واتساب', '⏰ متاح ٢٤ ساعة / ٧ أيام']
+              : ['🔒 Guaranteed Fixed Price', '🚗 GMC Yukon & Staria Fleet', '💬 Instant WhatsApp Booking', '⏰ Available 24/7']
             ).map((item, i, arr) => (
               <div key={item} style={{
                 padding: '4px 20px',
@@ -547,7 +547,7 @@ export default function Home() {
                 />
               </div>
               <div className="why-us-badge">
-                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? '+١٢٠٠٠' : '+12K'}</div>
+                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? '100%' : '100%'}</div>
                 <div style={{ fontSize: '0.82rem', marginTop: '4px' }}>{tr.whyUs.successBadge}</div>
               </div>
             </div>
@@ -566,7 +566,7 @@ export default function Home() {
               <h2 className="section-title" style={{ marginTop: '14px', textAlign: isAr ? 'right' : 'left' }}>
                 {isAr
                   ? <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — معيار الاحترافية في الشوفير</>
-                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — Certified Chauffeurs</>
+                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — Professional Chauffeurs</>
                 }
               </h2>
               <div className="gold-divider" style={{ margin: '16px 0', marginRight: isAr ? 'auto' : 0, marginLeft: 0 }} />
@@ -577,10 +577,10 @@ export default function Home() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
                 {[
-                  { icon: '🎓', en: 'Certified & professionally trained', ar: 'مدرّبون ومعتمدون احترافياً' },
+                  { icon: '🎓', en: 'Professionally trained & experienced', ar: 'مدرّبون وذوو خبرة احترافية' },
                   { icon: '👔', en: 'Formal uniform & impeccable appearance', ar: 'زي رسمي ومظهر لائق' },
                   { icon: '🗣️', en: 'Bilingual — Arabic & English', ar: 'ثنائيو اللغة — عربي وإنجليزي' },
-                  { icon: '⭐', en: '5-star rated across Saudi Arabia', ar: 'تقييم 5 نجوم في المملكة' },
+                  { icon: '💰', en: 'Fixed price agreed before every trip', ar: 'سعر ثابت متفق عليه قبل كل رحلة' },
                 ].map(item => (
                   <div key={item.en} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <span style={{ fontSize: '1rem', width: '22px', textAlign: 'center' }}>{item.icon}</span>
@@ -633,7 +633,7 @@ export default function Home() {
                 href: '/airport-transfer',
                 icon: <Plane size={30} strokeWidth={1.6} color="var(--primary)" />,
                 title: { en: 'Airport Transfer', ar: 'توصيل المطار' },
-                desc: { en: 'Name-board pickup, flight tracking & fixed prices across all Saudi airports.', ar: 'استقبال بلوحة الاسم، متابعة الرحلة، وسعر ثابت من جميع مطارات المملكة.' },
+                desc: { en: 'Name-board pickup, flight number confirmation & fixed prices across all Saudi airports.', ar: 'استقبال بلوحة الاسم، تأكيد رقم الرحلة، وسعر ثابت من جميع مطارات المملكة.' },
                 bg: 'linear-gradient(135deg,rgba(30,58,138,0.06),rgba(30,58,138,0.02))',
                 border: 'rgba(30,58,138,0.15)',
               },
@@ -726,7 +726,7 @@ export default function Home() {
               {tr.cta.bookWhatsapp}
             </a>
             <a
-              href="https://wa.me/923097811785"
+              href="tel:+923097811785"
               style={{
                 backgroundColor: 'rgba(255,255,255,0.16)', color: 'white',
                 border: '2px solid rgba(255,255,255,0.55)',

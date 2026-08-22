@@ -3,11 +3,11 @@ import { Shield, Award, Users, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Team | Saudi Cabs GMC — Professional Chauffeurs & Support',
-  description: 'Meet the Saudi Cabs GMC team: Professional certified chauffeurs, 24/7 dispatch coordinators, and customer support experts serving pilgrims and travelers across Saudi Arabia.',
+  description: 'Meet the Saudi Cabs GMC team: professional chauffeurs, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
   alternates: { canonical: 'https://saudicabsgmc.com/team' },
   openGraph: {
     title: 'Our Team — Saudi Cabs GMC',
-    description: 'Professional certified chauffeurs and 24/7 support serving pilgrims across Saudi Arabia.',
+    description: 'Professional chauffeurs and 24/7 support serving pilgrims across Saudi Arabia.',
     url: 'https://saudicabsgmc.com/team',
     images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Our Team — Saudi Cabs GMC' }],
   },
@@ -18,7 +18,7 @@ const teamPageSchema = {
   '@type': 'AboutPage',
   '@id': 'https://saudicabsgmc.com/team#webpage',
   name: 'Our Team — Saudi Cabs GMC Professional Chauffeurs & Support',
-  description: 'Meet the Saudi Cabs GMC team: Professional certified chauffeurs, 24/7 dispatch coordinators, and customer support experts serving pilgrims and travelers across Saudi Arabia.',
+  description: 'Meet the Saudi Cabs GMC team: professional chauffeurs, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
   url: 'https://saudicabsgmc.com/team',
   isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
   about: { '@id': 'https://saudicabsgmc.com/#organization' },
@@ -31,82 +31,40 @@ const teamPageSchema = {
   },
 }
 
-const teamOrganizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://saudicabsgmc.com/#organization',
-  name: 'Saudi Cabs GMC',
-  url: 'https://saudicabsgmc.com',
-  foundingDate: '2020',
-  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 40, maxValue: 60 },
-  description: 'Saudi Cabs GMC is a premium taxi and private transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers.',
-  member: [
-    {
-      '@type': 'OrganizationRole',
-      member: { '@type': 'Person', jobTitle: 'Professional Chauffeur', description: 'Licensed, background-checked, and trained in premium hospitality. Bilingual Arabic & English. Certified for Hajj & Umrah transport.' },
-      roleName: 'Professional Chauffeurs',
-      numberOfMembers: 30,
-    },
-    {
-      '@type': 'OrganizationRole',
-      member: { '@type': 'Person', jobTitle: 'Dispatch Coordinator', description: '24/7 dispatch team managing real-time bookings, live GPS tracking, and route optimization.' },
-      roleName: 'Dispatch & Coordination',
-      numberOfMembers: 10,
-    },
-    {
-      '@type': 'OrganizationRole',
-      member: { '@type': 'Person', jobTitle: 'Customer Support Agent', description: 'Dedicated bilingual support agents handling WhatsApp bookings, email queries, and post-trip feedback.' },
-      roleName: 'Customer Support',
-      numberOfMembers: 5,
-    },
-    {
-      '@type': 'OrganizationRole',
-      member: { '@type': 'Person', jobTitle: 'Fleet Maintenance Engineer', description: 'Maintenance engineers ensuring Toyota Camry, Hyundai Staria, and GMC Yukon vehicles meet premium standards.' },
-      roleName: 'Fleet Maintenance',
-      numberOfMembers: 5,
-    },
-  ],
-}
-
 export default function TeamPage() {
   const teamDepartments = [
     {
       icon: <Users size={32} />,
       title: 'Professional Chauffeurs',
-      count: '30+',
-      desc: 'All our drivers are licensed, background-checked, and trained in premium hospitality. They speak both English and Arabic, and are certified for Hajj & Umrah pilgrimage transport. Every chauffeur undergoes regular vehicle safety inspections and customer service training.',
+      desc: 'Our drivers are trained in hospitality and pilgrim logistics, and speak both English and Arabic. They know the routes, holy sites, and prayer-time traffic across Makkah, Madinah, Jeddah, and Taif.',
     },
     {
       icon: <Clock size={32} />,
       title: 'Dispatch & Coordination',
-      count: '10+',
-      desc: 'Our 24/7 dispatch team manages real-time bookings, live GPS tracking, and instant route optimization. Whether it\'s a midnight airport pickup or a Hajj season transfer, our coordinators ensure seamless operations around the clock.',
+      desc: 'Our dispatch team manages bookings and coordinates pickups around the clock. Whether it\'s a midnight airport pickup or a Hajj season transfer, they keep operations running smoothly.',
     },
     {
       icon: <Shield size={32} />,
       title: 'Customer Support',
-      count: '5+',
-      desc: 'Dedicated bilingual support agents handle WhatsApp bookings, email queries, and post-trip feedback. Available in English and Arabic, our support team ensures every passenger receives a response within minutes.',
+      desc: 'Bilingual support handles WhatsApp bookings, questions, and post-trip feedback in English and Arabic, aiming to respond as quickly as possible.',
     },
     {
       icon: <Award size={32} />,
       title: 'Fleet Maintenance',
-      count: '5+',
-      desc: 'Our maintenance engineers keep the entire fleet (Toyota Camry, Hyundai Staria, GMC Yukon) in showroom condition. Regular servicing, deep cleaning, and safety checks ensure every vehicle meets our premium standards.',
+      desc: 'Our team keeps the fleet (Toyota Camry, Hyundai Staria, GMC Yukon) clean and regularly serviced so every vehicle is ready for the road.',
     },
   ]
 
   const values = [
-    { title: 'Safety First', desc: 'GPS-tracked vehicles, background-checked drivers, and 24/7 monitoring.' },
+    { title: 'Safety First', desc: 'Experienced drivers and regularly maintained vehicles on every trip.' },
     { title: 'Fixed Pricing', desc: 'No meters, no surge pricing. The price you see is the price you pay.' },
-    { title: 'Pilgrim-Focused', desc: 'Deep understanding of Hajj & Umrah logistics, prayer stops, and holy site navigation.' },
+    { title: 'Pilgrim-Focused', desc: 'Familiarity with Hajj & Umrah logistics, prayer stops, and holy site navigation.' },
     { title: 'Premium Fleet', desc: 'Regularly maintained Toyota Camry, Hyundai Staria, and GMC Yukon vehicles.' },
   ]
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamOrganizationSchema) }} />
     <main style={{ minHeight: '100vh', backgroundColor: 'var(--background)', paddingTop: '80px' }}>
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #071f17, #0B3D2E)', color: 'white', padding: '64px 0 48px', textAlign: 'center' }}>
@@ -119,7 +77,7 @@ export default function TeamPage() {
           </h1>
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
           <p style={{ opacity: 0.85, lineHeight: 1.8, fontSize: '1.05rem' }}>
-            A team of 50+ professionals dedicated to making every journey across Saudi Arabia safe, comfortable, and memorable.
+            A dedicated team working to make every journey across Saudi Arabia safe, comfortable, and memorable.
           </p>
         </div>
       </section>
@@ -135,10 +93,7 @@ export default function TeamPage() {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                   <div style={{ color: 'var(--primary)' }}>{dept.icon}</div>
-                  <div>
-                    <div style={{ fontWeight: '800', fontSize: '1.1rem' }}>{dept.title}</div>
-                    <div style={{ fontWeight: '700', fontSize: '0.85rem', color: 'var(--primary)' }}>{dept.count} Members</div>
-                  </div>
+                  <div style={{ fontWeight: '800', fontSize: '1.1rem' }}>{dept.title}</div>
                 </div>
                 <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.7 }}>{dept.desc}</p>
               </div>

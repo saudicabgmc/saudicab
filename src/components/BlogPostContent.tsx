@@ -117,7 +117,7 @@ export default function BlogPostContent({ post, related }: Props) {
             >
               WhatsApp +92 309 7811785
             </a>
-            <a href="https://wa.me/923097811785" style={{
+            <a href="tel:+923097811785" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(212,175,55,0.15)', color: 'var(--primary)', padding: '13px 28px',
               borderRadius: '10px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',

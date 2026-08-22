@@ -7,8 +7,8 @@ export const homeFaqs: FAQItem[] = [
       ar: 'ما هي Saudi Cabs GMC؟',
     },
     a: {
-      en: 'Saudi Cabs GMC is a professional cab and private driver service operating across Saudi Arabia, including Makkah, Madinah, Jeddah, and Taif. We provide airport transfers, intercity trips, private chauffeur services, and Hajj & Umrah transportation with licensed, experienced drivers.',
-      ar: 'Saudi Cabs GMC هي خدمة كاب وسائق خاص احترافية تعمل في جميع أنحاء المملكة العربية السعودية، بما في ذلك مكة المكرمة والمدينة المنورة وجدة والطائف. نقدم خدمات التوصيل من وإلى المطار، والرحلات بين المدن، وخدمات السائق الخاص، ونقل الحجاج والمعتمرين بسائقين مرخصين ذوي خبرة.',
+      en: 'Saudi Cabs GMC is a professional cab and private driver service operating across Saudi Arabia, including Makkah, Madinah, Jeddah, and Taif. We provide airport transfers, intercity trips, private chauffeur services, and Hajj & Umrah transportation with experienced drivers.',
+      ar: 'Saudi Cabs GMC هي خدمة كاب وسائق خاص احترافية تعمل في جميع أنحاء المملكة العربية السعودية، بما في ذلك مكة المكرمة والمدينة المنورة وجدة والطائف. نقدم خدمات التوصيل من وإلى المطار، والرحلات بين المدن، وخدمات السائق الخاص، ونقل الحجاج والمعتمرين بسائقين ذوي خبرة.',
     },
   },
   {
@@ -97,8 +97,8 @@ export const homeFaqs: FAQItem[] = [
       ar: 'هل Saudi Cabs GMC آمنة للعائلات والمسافرات؟',
     },
     a: {
-      en: 'Absolutely. All Saudi Cabs GMC drivers are licensed, background-checked, and professional. We offer spacious family vehicles and our service is fully compliant with Saudi regulations, making it a safe and reliable choice for families, women, and solo travelers alike.',
-      ar: 'بالتأكيد. جميع سائقي Saudi Cabs GMC مرخصون ومحترفون. نقدم سيارات عائلية واسعة وخدمتنا متوافقة تماماً مع لوائح المملكة العربية السعودية، مما يجعلها خياراً آمناً وموثوقاً للعائلات والنساء والمسافرين المنفردين على حد سواء.',
+      en: 'Absolutely. Saudi Cabs GMC drivers are experienced professionals, and our service operates in compliance with Saudi transport regulations. We offer spacious family vehicles, making it a safe and reliable choice for families, women, and solo travelers alike.',
+      ar: 'بالتأكيد. سائقو Saudi Cabs GMC محترفون وذوو خبرة، وخدمتنا متوافقة مع أنظمة النقل في المملكة العربية السعودية. نقدم سيارات عائلية واسعة، مما يجعلها خياراً آمناً وموثوقاً للعائلات والنساء والمسافرين المنفردين على حد سواء.',
     },
   },
 ]

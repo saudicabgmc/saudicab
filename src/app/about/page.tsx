@@ -3,11 +3,11 @@ import { Shield, DollarSign, MapPin, Car } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us | Saudi Cabs GMC — Premium Taxi & Private Driver Service',
-  description: 'Saudi Cabs GMC is a premium private taxi and chauffeur company serving Makkah, Madinah, Jeddah, and Taif since 2020. Fixed prices, licensed drivers, 24/7 availability.',
+  description: 'Saudi Cabs GMC is a premium private taxi and chauffeur company serving Makkah, Madinah, Jeddah, and Taif. Fixed prices, experienced drivers, 24/7 availability.',
   alternates: { canonical: 'https://saudicabsgmc.com/about' },
   openGraph: {
     title: 'About Saudi Cabs GMC',
-    description: 'Premium private taxi and chauffeur service across Saudi Arabia since 2020. Fixed prices, licensed drivers, 24/7.',
+    description: 'Premium private taxi and chauffeur service across Saudi Arabia. Fixed prices, experienced drivers, 24/7.',
     url: 'https://saudicabsgmc.com/about',
     images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'About Saudi Cabs GMC' }],
   },
@@ -18,7 +18,7 @@ const aboutPageSchema = {
   '@type': 'AboutPage',
   '@id': 'https://saudicabsgmc.com/about#webpage',
   name: 'About Saudi Cabs GMC',
-  description: 'Saudi Cabs GMC is a premium private taxi and chauffeur company serving Makkah, Madinah, Jeddah, and Taif since 2020.',
+  description: 'Saudi Cabs GMC is a premium private taxi and chauffeur company serving Makkah, Madinah, Jeddah, and Taif.',
   url: 'https://saudicabsgmc.com/about',
   isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
   about: { '@id': 'https://saudicabsgmc.com/#organization' },
@@ -33,7 +33,7 @@ const aboutPageSchema = {
 
 const values = [
   { icon: <DollarSign size={28} />, title: 'Fixed Pricing', desc: 'No meters, no surge pricing. The price you agree on WhatsApp is the price you pay — every time.' },
-  { icon: <Shield size={28} />, title: 'Licensed & Vetted Drivers', desc: 'Every driver is licensed, background-checked, and trained in premium hospitality. Bilingual in Arabic and English.' },
+  { icon: <Shield size={28} />, title: 'Experienced Drivers', desc: 'Every driver is experienced and trained in premium hospitality. Bilingual in Arabic and English.' },
   { icon: <MapPin size={28} />, title: 'Deep Local Knowledge', desc: 'Our drivers know Makkah, Madinah, Jeddah, and Taif intimately — prayer-time traffic, hotel districts, and the fastest routes during Hajj and Umrah season.' },
   { icon: <Car size={28} />, title: 'Well-Maintained Fleet', desc: 'Toyota Camry sedans, Hyundai Staria vans, and GMC Yukon SUVs — regularly serviced, cleaned, and air-conditioned.' },
 ]
@@ -54,7 +54,7 @@ export default function AboutPage() {
             </h1>
             <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
             <p style={{ opacity: 0.85, lineHeight: 1.8, fontSize: '1.05rem' }}>
-              Saudi Cabs GMC has been moving pilgrims, families, and business travelers across Saudi Arabia since 2020 — with fixed prices and no surprises.
+              Saudi Cabs GMC moves pilgrims, families, and business travelers across Saudi Arabia — with fixed prices and no surprises.
             </p>
           </div>
         </section>

@@ -96,7 +96,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز الآن عبر واتساب' : 'Book Now via WhatsApp'}
                 </a>
-                <a href="https://wa.me/923097811785" className="btn-outline">
+                <a href="tel:+923097811785" className="btn-outline">
                   <Phone size={16} strokeWidth={2.5} />
                   {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
@@ -326,7 +326,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
               <MessageCircle size={18} strokeWidth={2.5} />
               {isAr ? 'واتساب' : 'WhatsApp'}
             </a>
-            <a href="https://wa.me/923097811785"
+            <a href="tel:+923097811785"
               style={{
                 background: 'rgba(255,255,255,0.15)', color: 'white',
                 border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px',

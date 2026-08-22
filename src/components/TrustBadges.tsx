@@ -10,17 +10,6 @@ interface Badge {
 
 const BADGES: Badge[] = [
   {
-    src: '/trust-badges/trust-badge-google-5star-reviews.webp',
-    alt: {
-      en: 'Google 5-Star Reviews – Saudi Cabs GMC trusted by thousands of passengers',
-      ar: 'تقييم 5 نجوم على جوجل – Saudi Cabs GMC موثوق من آلاف المسافرين',
-    },
-    title: {
-      en: 'Google 5-Star Rating',
-      ar: 'تقييم 5 نجوم على جوجل',
-    },
-  },
-  {
     src: '/trust-badges/trust-badge-sar-no-hidden-costs.webp',
     alt: {
       en: 'No hidden costs – fixed SAR price guaranteed before every trip',
@@ -65,17 +54,6 @@ const BADGES: Badge[] = [
     },
   },
   {
-    src: '/trust-badges/trust-badge-live-tracking-safety.webp',
-    alt: {
-      en: 'Live GPS tracking for every ride – your safety is our priority',
-      ar: 'تتبع GPS مباشر لكل رحلة – سلامتك هي أولويتنا',
-    },
-    title: {
-      en: 'Live Tracking & Safety',
-      ar: 'التتبع المباشر والسلامة',
-    },
-  },
-  {
     src: '/trust-badges/trust-badge-instant-whatsapp-booking.webp',
     alt: {
       en: 'Instant WhatsApp booking – book your taxi in Saudi Arabia in seconds',
@@ -84,17 +62,6 @@ const BADGES: Badge[] = [
     title: {
       en: 'Instant WhatsApp Booking',
       ar: 'حجز فوري عبر واتساب',
-    },
-  },
-  {
-    src: '/trust-badges/trust-badge-certified-chauffeurs.webp',
-    alt: {
-      en: 'Certified professional chauffeurs – trained, vetted drivers across Saudi Arabia',
-      ar: 'سائقون محترفون معتمدون – مدربون ومؤهلون في جميع أنحاء المملكة',
-    },
-    title: {
-      en: 'Certified Professional Chauffeurs',
-      ar: 'سائقون محترفون معتمدون',
     },
   },
 ]

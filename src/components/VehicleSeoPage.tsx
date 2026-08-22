@@ -130,7 +130,7 @@ export default function VehicleSeoPage({ data }: Props) {
             WhatsApp +92 309 7811785
           </a>
           <div style={{ marginTop: '14px', opacity: 0.65, fontSize: '0.82rem' }}>
-            Or call: <a href="https://wa.me/923097811785" style={{ color: 'inherit', fontWeight: '700' }}>+92 309 7811785</a>
+            Or call: <a href="tel:+923097811785" style={{ color: 'inherit', fontWeight: '700' }}>+92 309 7811785</a>
           </div>
         </div>
       </section>

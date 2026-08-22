@@ -103,8 +103,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     },
     description: 'Saudi Cabs GMC is a premium private taxi and chauffeur service operating 24/7 across Saudi Arabia — Makkah, Madinah, Jeddah, Taif, and Riyadh. We specialise in Hajj & Umrah pilgrimage transport, airport transfers from King Abdulaziz International Airport (KAIA), and intercity routes. Fixed prices, no meters, professional English- and Arabic-speaking drivers. Vehicles: Toyota Camry Sedan, Hyundai Staria 7-seat van, and GMC Yukon VIP luxury SUV.',
     slogan: 'Fixed Price. Professional Drivers. 24/7 Across Saudi Arabia.',
-    foundingDate: '2020',
-    numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 10, maxValue: 50 },
     areaServed: [
       { '@type': 'City', name: 'Makkah', sameAs: 'https://www.wikidata.org/wiki/Q42788' },
       { '@type': 'City', name: 'Madinah', sameAs: 'https://www.wikidata.org/wiki/Q40083' },
@@ -234,8 +232,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       width: 200,
       height: 200,
     },
-    description: 'Saudi Cabs GMC is a premium taxi and private transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers. Founded in 2020, we provide fixed-price transportation between Makkah, Madinah, Jeddah, Taif, and Riyadh.',
-    foundingDate: '2020',
+    description: 'Saudi Cabs GMC is a premium taxi and private transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers. We provide fixed-price transportation between Makkah, Madinah, Jeddah, Taif, and Riyadh.',
     knowsAbout: [
       'Private taxi service in Makkah',
       'Airport transfers from King Abdulaziz International Airport Jeddah',
@@ -266,13 +263,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       'https://x.com/saudicabsgmc',
       'https://www.linkedin.com/company/saudicabsgmc',
       'https://www.tiktok.com/@saudicabsgmc',
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'Professional Certified Chauffeurs',
-        description: 'All Saudi Cabs GMC drivers are trained, background-checked, and certified professional chauffeurs.',
-      },
     ],
   }
 
