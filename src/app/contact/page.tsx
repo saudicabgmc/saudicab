@@ -38,7 +38,7 @@ const localBusinessContactSchema = {
   '@id': 'https://saudicabsgmc.com/#business',
   name: 'Saudi Cabs GMC',
   url: 'https://saudicabsgmc.com',
-  telephone: '+966569487569',
+  telephone: '+923097811785',
   email: 'info@saudicabsgmc.com',
   address: {
     '@type': 'PostalAddress',
@@ -56,13 +56,13 @@ const localBusinessContactSchema = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+966569487569',
+      telephone: '+923097811785',
       contactType: 'reservations',
       availableLanguage: ['English', 'Arabic'],
     },
     {
       '@type': 'ContactPoint',
-      url: 'https://wa.me/966569487569',
+      url: 'https://wa.me/923097811785',
       contactType: 'customer service',
       availableLanguage: ['English', 'Arabic'],
     },
@@ -79,16 +79,16 @@ export default function ContactPage() {
     {
       icon: <MessageCircle size={28} strokeWidth={2} />,
       title: 'WhatsApp (Fastest)',
-      value: '+966 56 948 7569',
-      href: 'https://wa.me/966569487569?text=Hello%2C%20I%27d%20like%20to%20book%20a%20taxi',
+      value: '+92 309 7811785',
+      href: 'https://wa.me/923097811785?text=Hello%2C%20I%27d%20like%20to%20book%20a%20taxi',
       desc: 'Instant response, 24/7. Send your pickup, destination & date.',
       color: '#25D366',
     },
     {
       icon: <Phone size={28} strokeWidth={2} />,
       title: 'Phone Call',
-      value: '+966 56 948 7569',
-      href: 'tel:+966569487569',
+      value: '+92 309 7811785',
+      href: 'tel:+923097811785',
       desc: 'Call us directly for urgent bookings or queries.',
       color: 'var(--primary)',
     },
@@ -194,7 +194,7 @@ export default function ContactPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: '900', marginBottom: '12px' }}>Ready to Book?</h2>
           <p style={{ opacity: 0.85, marginBottom: '28px', lineHeight: 1.7 }}>Fixed price confirmed instantly. Professional driver. Door-to-door, 24/7.</p>
           <a
-            href="https://wa.me/966569487569?text=Hello%2C%20I'd%20like%20to%20book%20a%20taxi%20in%20Saudi%20Arabia"
+            href="https://wa.me/923097811785?text=Hello%2C%20I'd%20like%20to%20book%20a%20taxi%20in%20Saudi%20Arabia"
             target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '10px',

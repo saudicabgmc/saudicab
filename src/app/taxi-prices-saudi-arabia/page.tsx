@@ -11,8 +11,8 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'How much does a taxi from Makkah to Madinah cost?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC offers a fixed price for Makkah to Madinah (approximately 430 km, 4.5 hours). Contact via WhatsApp at +966 56 948 7569 for the exact current rate. Price is confirmed before departure.' } },
-    { '@type': 'Question', name: 'How much is a taxi from Jeddah Airport to Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC provides a fixed fare from Jeddah Airport to Makkah (90 km, ~55 minutes). WhatsApp +966 56 948 7569 for the current rate. No meter, no surge pricing.' } },
+    { '@type': 'Question', name: 'How much does a taxi from Makkah to Madinah cost?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC offers a fixed price for Makkah to Madinah (approximately 430 km, 4.5 hours). Contact via WhatsApp at +92 309 7811785 for the exact current rate. Price is confirmed before departure.' } },
+    { '@type': 'Question', name: 'How much is a taxi from Jeddah Airport to Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC provides a fixed fare from Jeddah Airport to Makkah (90 km, ~55 minutes). WhatsApp +92 309 7811785 for the current rate. No meter, no surge pricing.' } },
     { '@type': 'Question', name: 'How much does a taxi from Riyadh to Makkah cost?', acceptedAnswer: { '@type': 'Answer', text: 'The Riyadh to Makkah private cab covers approximately 900 km (8-9 hours). Saudi Cabs GMC offers a fixed long-distance rate — contact via WhatsApp for pricing.' } },
     { '@type': 'Question', name: 'Are taxi prices fixed in Saudi Arabia?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC uses fixed pricing agreed before departure — no meter and no surge pricing regardless of traffic or time of day. Pricing is transparent and confirmed via WhatsApp booking.' } },
   ],
@@ -26,7 +26,7 @@ export default function TaxiPricesGuide() {
         tag="Price & Distance Guide"
         title="Saudi Arabia Taxi Prices & Distances — Complete 2026 Route Guide"
         subtitle="All major Saudi Arabia taxi routes with distances, drive times, and how pricing works with Saudi Cabs GMC."
-        quickAnswer="Saudi Cabs GMC uses fixed pricing on all routes — confirmed via WhatsApp before departure, no meter, no surge. Prices vary by route distance and vehicle type. Contact +966 56 948 7569 for an instant quote on any route."
+        quickAnswer="Saudi Cabs GMC uses fixed pricing on all routes — confirmed via WhatsApp before departure, no meter, no surge. Prices vary by route distance and vehicle type. Contact +92 309 7811785 for an instant quote on any route."
         keyFacts={[
           { icon: '💰', label: 'Pricing Model', value: 'Fixed — No Meter' },
           { icon: '🚗', label: 'Sedan', value: 'Up to 4 passengers' },
@@ -36,7 +36,7 @@ export default function TaxiPricesGuide() {
           { icon: '📱', label: 'Book Via', value: 'WhatsApp Instant' },
         ]}
         faqs={[
-          { q: 'How much does a taxi from Makkah to Madinah cost?', a: 'Saudi Cabs GMC offers a fixed price for Makkah to Madinah (approximately 430 km, 4.5 hours). WhatsApp +966 56 948 7569 for the exact current rate.' },
+          { q: 'How much does a taxi from Makkah to Madinah cost?', a: 'Saudi Cabs GMC offers a fixed price for Makkah to Madinah (approximately 430 km, 4.5 hours). WhatsApp +92 309 7811785 for the exact current rate.' },
           { q: 'How much is a taxi from Jeddah Airport to Makkah?', a: 'Fixed fare from Jeddah Airport to Makkah (90 km, ~55 min). Contact via WhatsApp for rate. No meter, no surge pricing at any time.' },
           { q: 'How much does Riyadh to Makkah taxi cost?', a: 'Riyadh to Makkah is approximately 900 km (8–9 hours). Saudi Cabs GMC offers a fixed long-distance rate — WhatsApp for pricing.' },
           { q: 'Are taxi prices fixed in Saudi Arabia with Saudi Cabs GMC?', a: 'Yes — all prices are fixed and agreed before departure. No meter, no hidden fees, no surge pricing.' },

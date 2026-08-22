@@ -47,7 +47,7 @@ export default function Home() {
   const { lang, isAr } = useLang()
   const tr = t[lang]
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة' : "Hello, I'd like to book a trip"
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(waText)}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(waText)}`
   const [videoReady, setVideoReady] = useState(false)
   useEffect(() => { setVideoReady(true) }, [])
 
@@ -91,7 +91,7 @@ export default function Home() {
           {isAr ? 'واتساب' : 'WhatsApp'}
         </a>
         <a
-          href="https://wa.me/966569487569"
+          href="https://wa.me/923097811785"
           style={{
             background: 'rgba(255,255,255,0.14)', color: 'white',
             border: '1.5px solid rgba(255,255,255,0.4)',
@@ -495,7 +495,7 @@ export default function Home() {
 
           <div style={{ textAlign: 'center', marginTop: '28px' }}>
             <a
-              href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أريد الاستفسار عن الأسعار' : "Hello, I'd like to inquire about pricing")}`}
+              href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أريد الاستفسار عن الأسعار' : "Hello, I'd like to inquire about pricing")}`}
               target="_blank" rel="noopener noreferrer"
               className="btn-primary"
               style={{ fontSize: '1rem', padding: '14px 36px' }}
@@ -590,7 +590,7 @@ export default function Home() {
               </div>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a professional chauffeur")}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a professional chauffeur")}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary"
                 >
@@ -726,7 +726,7 @@ export default function Home() {
               {tr.cta.bookWhatsapp}
             </a>
             <a
-              href="https://wa.me/966569487569"
+              href="https://wa.me/923097811785"
               style={{
                 backgroundColor: 'rgba(255,255,255,0.16)', color: 'white',
                 border: '2px solid rgba(255,255,255,0.55)',

@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: 'Saudi Cabs GMC',
     alternateName: ['Saudi Cabs', 'GMC Taxi Saudi Arabia', 'كاب سعودي GMC', 'سعودي كابس'],
     url: 'https://saudicabsgmc.com',
-    telephone: '+966569487569',
+    telephone: '+923097811785',
     image: [
       'https://saudicabsgmc.com/logo-saudi-cabs-gmc.webp',
       'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
@@ -133,14 +133,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+966569487569',
+        telephone: '+923097811785',
         contactType: 'reservations',
         availableLanguage: ['English', 'Arabic'],
         contactOption: 'TollFree',
       },
       {
         '@type': 'ContactPoint',
-        url: 'https://wa.me/966569487569',
+        url: 'https://wa.me/923097811785',
         contactType: 'customer service',
         availableLanguage: ['English', 'Arabic'],
       },
@@ -152,7 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
     ],
     sameAs: [
-      'https://wa.me/966569487569',
+      'https://wa.me/923097811785',
       'https://www.youtube.com/@saudicabsgmc',
       'https://www.facebook.com/saudicabsgmc',
       'https://www.instagram.com/saudicabsgmc',
@@ -253,13 +253,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     knowsLanguage: ['en', 'ar'],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+966569487569',
+      telephone: '+923097811785',
       contactType: 'customer service',
       availableLanguage: ['English', 'Arabic'],
     },
     email: 'info@saudicabsgmc.com',
     sameAs: [
-      'https://wa.me/966569487569',
+      'https://wa.me/923097811785',
       'https://www.youtube.com/@saudicabsgmc',
       'https://www.facebook.com/saudicabsgmc',
       'https://www.instagram.com/saudicabsgmc',
@@ -309,8 +309,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'HowToStep',
         position: 1,
         name: 'Contact via WhatsApp',
-        text: 'Send a WhatsApp message to +966 56 948 7569 with your pickup location, destination, date, and preferred time. Available 24/7 in English and Arabic.',
-        url: 'https://wa.me/966569487569',
+        text: 'Send a WhatsApp message to +92 309 7811785 with your pickup location, destination, date, and preferred time. Available 24/7 in English and Arabic.',
+        url: 'https://wa.me/923097811785',
         image: 'https://saudicabsgmc.com/booking/step-1-book-whatsapp.webp',
       },
       {

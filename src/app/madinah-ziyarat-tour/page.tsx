@@ -45,7 +45,7 @@ const FAQS = [
 export default function MadinahZiyaratPage() {
   const { isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[isAr ? 'ar' : 'en']
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز جولة زيارات المدينة المنورة' : "Hello, I'd like to book a Madinah Ziyarat tour")}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز جولة زيارات المدينة المنورة' : "Hello, I'd like to book a Madinah Ziyarat tour")}`
 
   return (
     <main>
@@ -71,7 +71,7 @@ export default function MadinahZiyaratPage() {
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><MessageCircle size={16} strokeWidth={2.5} />{isAr ? 'احجز جولة الزيارات' : 'Book Ziyarat Tour'}</a>
-                <a href="https://wa.me/966569487569" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
+                <a href="https://wa.me/923097811785" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
               </div>
             </div>
             <div className="animate-fadeInUp animate-delay-1"><BookingForm /></div>
@@ -156,7 +156,7 @@ export default function MadinahZiyaratPage() {
           <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'سائق خاص — جميع المواقع — سعر ثابت' : 'Private Driver — All Sites — Fixed Price'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
-            <a href="https://wa.me/966569487569" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+966 56 948 7569</a>
+            <a href="https://wa.me/923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>
           </div>
         </div>
       </section>

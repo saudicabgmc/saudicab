@@ -93,7 +93,7 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
             </div>
           </div>
           <a
-            href="https://wa.me/966569487569"
+            href="https://wa.me/923097811785"
             target="_blank" rel="noopener noreferrer"
             style={{
               marginTop: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -101,7 +101,7 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
               borderRadius: '10px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',
             }}>
             <MessageCircle size={16} strokeWidth={2.5} />
-            {isAr ? 'احجز الآن — واتساب' : 'Book Now on WhatsApp: +966 56 948 7569'}
+            {isAr ? 'احجز الآن — واتساب' : 'Book Now on WhatsApp: +92 309 7811785'}
           </a>
         </div>
       </div>

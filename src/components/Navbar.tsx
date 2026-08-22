@@ -107,12 +107,12 @@ export default function Navbar() {
             {isAr ? 'EN' : 'AR'}
           </button>
 
-          <a href="https://wa.me/966569487569" rel="nofollow noopener noreferrer" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <a href="https://wa.me/923097811785" rel="nofollow noopener noreferrer" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Phone size={14} strokeWidth={2.5} />
-            ‎+966 56 948 7569
+            ‎+92 309 7811785
           </a>
           <a
-            href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+            href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -191,7 +191,7 @@ export default function Navbar() {
               </button>
             </div>
             <a
-              href="https://wa.me/966569487569"
+              href="https://wa.me/923097811785"
               rel="nofollow noopener noreferrer"
               style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 0', fontWeight: '700', color: 'var(--foreground)', fontSize: '0.95rem' }}
             >
@@ -199,7 +199,7 @@ export default function Navbar() {
               {isAr ? 'اتصل بنا الآن' : 'Call Us Now'}
             </a>
             <a
-              href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+              href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', padding: '12px 16px', background: '#25D366', color: 'white', fontWeight: '700', borderRadius: '8px', textAlign: 'center', marginTop: '8px', fontSize: '0.95rem', textDecoration: 'none' }}

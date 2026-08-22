@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
 
               <Section title="3. WhatsApp Communication">
                 <p>
-                  Our primary booking channel is WhatsApp (+966 56 948 7569). When you message us, WhatsApp processes your data according to its own <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Privacy Policy</a>. We retain booking messages to fulfil your trip and for service records. We do not add you to group chats or broadcast lists without your consent.
+                  Our primary booking channel is WhatsApp (+92 309 7811785). When you message us, WhatsApp processes your data according to its own <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Privacy Policy</a>. We retain booking messages to fulfil your trip and for service records. We do not add you to group chats or broadcast lists without your consent.
                 </p>
               </Section>
 
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
                   'Withdraw consent for communications at any time.',
                 ]} />
                 <p style={{ marginTop: '12px' }}>
-                  To exercise any of these rights, contact us via WhatsApp at <strong>+966 56 948 7569</strong> or email at <strong>info@saudicabsgmc.com</strong>.
+                  To exercise any of these rights, contact us via WhatsApp at <strong>+92 309 7811785</strong> or email at <strong>info@saudicabsgmc.com</strong>.
                 </p>
               </Section>
 
@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
               <Section title="10. Contact Us">
                 <p>For any privacy-related questions or concerns:</p>
                 <List items={[
-                  'WhatsApp: +966 56 948 7569',
+                  'WhatsApp: +92 309 7811785',
                   'Email: info@saudicabsgmc.com',
                   'Website: saudicabsgmc.com',
                   'Location: Makkah Province, Saudi Arabia',

@@ -94,7 +94,7 @@ export default function FAQPage() {
               Message us on WhatsApp and get a fixed price in minutes.
             </p>
             <a
-              href="https://wa.me/966569487569?text=Hello%2C%20I%20have%20a%20question%20about%20booking%20a%20taxi"
+              href="https://wa.me/923097811785?text=Hello%2C%20I%20have%20a%20question%20about%20booking%20a%20taxi"
               target="_blank" rel="noopener noreferrer"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '10px',

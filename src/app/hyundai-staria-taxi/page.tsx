@@ -33,7 +33,7 @@ const USE_CASES = [
 const FAQS = [
   { q: { en: 'How many people fit in the Hyundai Staria?', ar: 'كم شخصاً يتسع له هيونداي ستاريا؟' }, a: { en: 'The Hyundai Staria seats up to 7 passengers across three rows. Middle captain seats provide extra comfort on long journeys. The large boot fits 6+ suitcases and Zamzam containers.', ar: 'يتسع هيونداي ستاريا لما يصل إلى ٧ ركاب عبر ثلاثة صفوف. توفر مقاعد الكابتن الوسطى راحة إضافية في الرحلات الطويلة. يتسع الصندوق الكبير لأكثر من ٦ حقائب وعبوات زمزم.' } },
   { q: { en: 'Is the Hyundai Staria good for Hajj transport?', ar: 'هل هيونداي ستاريا جيدة لنقل الحج؟' }, a: { en: 'The Staria is one of our most popular vehicles for Hajj and Umrah transport. The electric sliding doors are ideal for elderly pilgrims, the boot easily fits all Zamzam water and luggage, and tri-zone AC keeps all 7 passengers comfortable.', ar: 'ستاريا هي إحدى أكثر سياراتنا طلباً لنقل الحج والعمرة. الأبواب المنزلقة الكهربائية مثالية للحجاج المسنين، والصندوق يتسع بسهولة لجميع مياه زمزم والأمتعة، والتكييف ثلاثي المناطق يبقي جميع الركاب السبعة بارداً.' } },
-  { q: { en: 'What is the price of a Hyundai Staria from Jeddah Airport to Makkah?', ar: 'ما سعر هيونداي ستاريا من مطار جدة إلى مكة؟' }, a: { en: 'Pricing is fixed before your trip — no meter, no surge pricing. The Staria rate is higher than the Camry sedan due to its larger capacity. Contact us on WhatsApp at +966 56 948 7569 for an instant quote.', ar: 'التسعير ثابت قبل رحلتك — بدون عداد، بدون زيادة أسعار. سعر ستاريا أعلى من سيدان كامري بسبب سعتها الأكبر. تواصل معنا عبر واتساب على +966 56 948 7569 للحصول على سعر فوري.' } },
+  { q: { en: 'What is the price of a Hyundai Staria from Jeddah Airport to Makkah?', ar: 'ما سعر هيونداي ستاريا من مطار جدة إلى مكة؟' }, a: { en: 'Pricing is fixed before your trip — no meter, no surge pricing. The Staria rate is higher than the Camry sedan due to its larger capacity. Contact us on WhatsApp at +92 309 7811785 for an instant quote.', ar: 'التسعير ثابت قبل رحلتك — بدون عداد، بدون زيادة أسعار. سعر ستاريا أعلى من سيدان كامري بسبب سعتها الأكبر. تواصل معنا عبر واتساب على +92 309 7811785 للحصول على سعر فوري.' } },
   { q: { en: 'Can the Staria carry Zamzam water and large luggage?', ar: 'هل يمكن للستاريا حمل ماء زمزم والأمتعة الكبيرة؟' }, a: { en: 'Yes. The Staria has a very generous boot that easily accommodates Zamzam water cans, multiple large suitcases, and all the extra bags typical of Hajj and Umrah trips. This is one of the main reasons pilgrims choose the Staria.', ar: 'نعم. تمتلك ستاريا صندوقاً واسعاً جداً يتسع بسهولة لعبوات ماء زمزم وحقائب سفر كبيرة متعددة وجميع الحقائب الإضافية المعتادة في رحلات الحج والعمرة. هذا أحد الأسباب الرئيسية التي تجعل الحجاج يختارون ستاريا.' } },
   { q: { en: 'Is the Hyundai Staria available during Ramadan?', ar: 'هل هيونداي ستاريا متاحة خلال رمضان؟' }, a: { en: 'Yes. Saudi Cabs GMC operates 24/7 throughout the year including Ramadan, Hajj, and all Umrah seasons. We recommend booking early during peak seasons.', ar: 'نعم. تعمل Saudi Cabs GMC على مدار الساعة طوال العام بما في ذلك رمضان والحج وجميع مواسم العمرة. ننصح بالحجز المبكر خلال مواسم الذروة.' } },
 ]
@@ -41,7 +41,7 @@ const FAQS = [
 export default function HyundaiStariaPage() {
   const { isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[isAr ? 'ar' : 'en']
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز هيونداي ستاريا' : "Hello, I'd like to book a Hyundai Staria taxi")}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز هيونداي ستاريا' : "Hello, I'd like to book a Hyundai Staria taxi")}`
 
   return (
     <main>
@@ -66,7 +66,7 @@ export default function HyundaiStariaPage() {
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><MessageCircle size={16} strokeWidth={2.5} />{isAr ? 'احجز ستاريا الآن' : 'Book Staria Now'}</a>
-                <a href="https://wa.me/966569487569" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
+                <a href="https://wa.me/923097811785" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
               </div>
               {/* Key stats */}
               <div style={{ display: 'flex', gap: '28px', marginTop: '40px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.15)', flexWrap: 'wrap' }}>
@@ -174,7 +174,7 @@ export default function HyundaiStariaPage() {
           <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? '٧ ركاب — سعر ثابت — ٢٤/٧' : '7 Passengers — Fixed Price — 24/7'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
-            <a href="https://wa.me/966569487569" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+966 56 948 7569</a>
+            <a href="https://wa.me/923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>
           </div>
         </div>
       </section>

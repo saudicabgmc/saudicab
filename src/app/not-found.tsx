@@ -55,7 +55,7 @@ export default function NotFound() {
           }}>
             🏠 Go Home
           </Link>
-          <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://wa.me/923097811785" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             background: '#25D366', color: 'white',
             padding: '13px 28px', borderRadius: '10px', fontWeight: '800',

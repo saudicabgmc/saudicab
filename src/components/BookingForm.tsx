@@ -1,21 +1,26 @@
-﻿'use client'
+'use client'
 import { useState, useRef, useEffect } from 'react'
-import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check, Phone, User, Loader2, CheckCircle } from 'lucide-react'
+import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check, Phone, User, Loader2, CheckCircle, Briefcase, HelpCircle } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
-import { vehicleImages } from '@/lib/pricingData'
+import { vehicleImages, findRoutePrice } from '@/lib/pricingData'
 
 const CITIES = {
-  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'مطار جدة الدولي', 'مطار المدينة', 'موقع آخر'],
+  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'مطار جدة الدولي', 'مطار المدينة المنورة', 'موقع آخر'],
   en: ['Makkah', 'Madinah', 'Jeddah', 'Taif', 'Jeddah Airport', 'Madinah Airport', 'Other Location'],
 }
 
 const VEHICLES = [
   { key: 'sedan', img: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', fit: 'cover' as const, bg: '#f5f5f5', nameEn: 'Sedan', nameAr: 'سيدان', seatEn: '4 Seats', seatAr: '٤ مقاعد' },
-  { key: 'staria', img: vehicleImages.staria, fit: 'contain' as const, bg: '#111', nameEn: 'Staria', nameAr: 'ستاريا', seatEn: '7 Seats', seatAr: '٧ مقاعد' },
+  { key: 'staria', img: vehicleImages.staria, fit: 'contain' as const, bg: '#111', nameEn: 'Staria', nameAr: 'هيونداي ستاريا', seatEn: '7 Seats', seatAr: '٧ مقاعد' },
   { key: 'gmc', img: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp', fit: 'cover' as const, bg: '#1a1a1a', nameEn: 'GMC Yukon', nameAr: 'GMC يوكون', seatEn: 'VIP 7', seatAr: '٧ VIP' },
 ]
 
 const PASSENGERS = ['1', '2', '3', '4', '5', '6', '7+']
+
+const LUGGAGE_OPTIONS = {
+  en: ['No luggage', '1 Bag', '2 Bags', '3 Bags', '4 Bags', '5+ Bags'],
+  ar: ['لا يوجد حقائب', 'حقيبة واحدة', 'حقيبتان', '٣ حقائب', '٤ حقائب', '٥ حقائب أو أكثر']
+}
 
 /* ── Custom Dropdown ── */
 function CustomSelect({
@@ -169,18 +174,70 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
-  const [form, setForm] = useState({ from: defaultFrom || '', to: '', date: '', time: '', passengers: '1', name: '', phone: '' })
+  const [todayStr, setTodayStr] = useState('')
+
+  const [form, setForm] = useState({
+    from: defaultFrom || '',
+    to: '',
+    date: '',
+    time: '',
+    passengers: '1',
+    name: '',
+    phone: '',
+    flightNumber: '',
+    luggage: '',
+    specialRequests: ''
+  })
+
+  useEffect(() => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    setTodayStr(`${year}-${month}-${day}`);
+  }, [])
+
   const set = (k: string, v: string) => {
     setForm(p => ({ ...p, [k]: v }))
     if (errors[k]) setErrors(p => { const next = { ...p }; delete next[k]; return next })
   }
+
+  const isAirportTransfer =
+    form.from.toLowerCase().includes('airport') ||
+    form.from.includes('مطار') ||
+    form.to.toLowerCase().includes('airport') ||
+    form.to.includes('مطار')
+
+  const routePrice = findRoutePrice(form.from, form.to, vehicle)
 
   const validate = () => {
     const e: Record<string, string> = {}
     if (!vehicle)   e.vehicle  = isAr ? 'اختر السيارة أولاً'    : 'Please select a vehicle'
     if (!form.from) e.from     = isAr ? 'اختر مدينة المغادرة'   : 'Please select departure city'
     if (!form.to)   e.to       = isAr ? 'اختر الوجهة'            : 'Please select destination'
-    if (!form.date) e.date     = isAr ? 'اختر التاريخ'           : 'Please select a date'
+    if (form.from && form.to && form.from === form.to) {
+      e.to = isAr ? 'لا يمكن أن تكون نقطة الانطلاق والوجهة متطابقتين' : 'Departure and destination cannot be identical'
+    }
+    if (!form.date) {
+      e.date = isAr ? 'اختر التاريخ' : 'Please select a date'
+    } else {
+      const today = new Date()
+      today.setHours(0, 0, 0, 0)
+      const selDate = new Date(form.date)
+      selDate.setHours(0, 0, 0, 0)
+      if (selDate < today) {
+        e.date = isAr ? 'التاريخ لا يمكن أن يكون في الماضي' : 'Date cannot be in the past'
+      }
+    }
+    if (!form.time) e.time = isAr ? 'اختر الوقت' : 'Please select a time'
+    if (!form.phone) {
+      e.phone = isAr ? 'رقم الهاتف مطلوب لتأكيد الحجز' : 'Phone number is required'
+    } else if (!/^\+?[0-9\s\-]{8,20}$/.test(form.phone.trim())) {
+      e.phone = isAr ? 'يرجى إدخال رقم هاتف صحيح' : 'Please enter a valid phone number'
+    }
+    if (isAirportTransfer && !form.flightNumber) {
+      e.flightNumber = isAr ? 'رقم الرحلة الجوية مطلوب لقاء المطار' : 'Flight number is required for airport transfers'
+    }
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -195,22 +252,41 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
       await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vehicle: vLabel, from: form.from, to: form.to, date: form.date, time: form.time, passengers: form.passengers, name: form.name, phone: form.phone }),
+        body: JSON.stringify({
+          vehicle: vLabel,
+          from: form.from,
+          to: form.to,
+          date: form.date,
+          time: form.time,
+          passengers: form.passengers,
+          name: form.name,
+          phone: form.phone,
+          flightNumber: isAirportTransfer ? form.flightNumber : '',
+          luggage: form.luggage,
+          specialRequests: form.specialRequests,
+        }),
       })
     } catch (_) {}
     setLoading(false)
 
     const enc = encodeURIComponent
+    const luggageStr = form.luggage ? (isAr ? `الحقائب: ${form.luggage}` : `Luggage: ${form.luggage}`) : ''
+    const flightStr = isAirportTransfer ? (isAr ? `رقم الرحلة: ${form.flightNumber}` : `Flight: ${form.flightNumber}`) : ''
+    const requestsStr = form.specialRequests ? (isAr ? `طلبات خاصة: ${form.specialRequests}` : `Requests: ${form.specialRequests}`) : ''
+    const priceStr = routePrice ? (isAr ? `السعر المتوقع: ${routePrice} ريال` : `Estimated Price: ${routePrice} SAR`) : ''
+
     const msg = isAr
-      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${enc(vLabel)}%0Aمن: ${enc(form.from)}%0Aإلى: ${enc(form.to)}%0Aالتاريخ: ${enc(form.date)}%0Aالوقت: ${enc(form.time || 'غير محدد')}%0Aالركاب: ${enc(form.passengers)}${form.name ? `%0Aالاسم: ${enc(form.name)}` : ''}${form.phone ? `%0Aالهاتف: ${enc(form.phone)}` : ''}`
-      : `Hello, I'd like to book a trip:%0AVehicle: ${enc(vLabel)}%0AFrom: ${enc(form.from)}%0ATo: ${enc(form.to)}%0ADate: ${enc(form.date)}%0ATime: ${enc(form.time || 'Not specified')}%0APassengers: ${enc(form.passengers)}${form.name ? `%0AName: ${enc(form.name)}` : ''}${form.phone ? `%0APhone: ${enc(form.phone)}` : ''}`
-    window.open(`https://wa.me/966569487569?text=${msg}`, '_blank')
+      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${enc(vLabel)}%0Aمن: ${enc(form.from)}%0Aإلى: ${enc(form.to)}%0Aالتاريخ: ${enc(form.date)}%0Aالوقت: ${enc(form.time)}%0Aالركاب: ${enc(form.passengers)}${form.name ? `%0Aالاسم: ${enc(form.name)}` : ''}${form.phone ? `%0Aالهاتف: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}${priceStr ? `%0A${enc(priceStr)}` : ''}`
+      : `Hello, I'd like to book a trip:%0AVehicle: ${enc(vLabel)}%0AFrom: ${enc(form.from)}%0ATo: ${enc(form.to)}%0ADate: ${enc(form.date)}%0ATime: ${enc(form.time)}%0APassengers: ${enc(form.passengers)}${form.name ? `%0AName: ${enc(form.name)}` : ''}${form.phone ? `%0APhone: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}${priceStr ? `%0A${enc(priceStr)}` : ''}`
+
+    window.open(`https://wa.me/923097811785?text=${msg}`, '_blank')
 
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 6000)
   }
 
   const cities = isAr ? CITIES.ar : CITIES.en
+  const luggageList = isAr ? LUGGAGE_OPTIONS.ar : LUGGAGE_OPTIONS.en
 
   return (
     <div className="booking-form-card">
@@ -310,6 +386,26 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
         {errors.to && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.to}</p>}
       </div>
 
+      {/* Flight Number (Only for airport transfers) */}
+      {isAirportTransfer && (
+        <div className="form-group animate-fadeInUp">
+          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Navigation size={13} color="var(--primary)" strokeWidth={2.5} />
+            {isAr ? 'رقم الرحلة الجوية' : 'Flight Number'}
+            <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+          </label>
+          <input
+            type="text"
+            className="form-input"
+            placeholder={isAr ? 'مثال: SV123 (مهم للاستقبال في المطار)' : 'e.g. SV123 (required for airport pickup)'}
+            value={form.flightNumber}
+            onChange={e => set('flightNumber', e.target.value)}
+            style={errors.flightNumber ? { borderColor: '#e53e3e' } : {}}
+          />
+          {errors.flightNumber && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.flightNumber}</p>}
+        </div>
+      )}
+
       {/* Date + Time */}
       <div className="form-grid-2">
         <div className="form-group">
@@ -324,6 +420,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
               type="date"
               className="form-input"
               value={form.date}
+              min={todayStr}
               onChange={e => set('date', e.target.value)}
               style={errors.date ? { borderColor: '#e53e3e' } : {}}
             />
@@ -334,43 +431,47 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Clock size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'الوقت' : 'Time'}
+            <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
           </label>
           <div className="input-icon-wrap">
             <Clock size={14} className="input-icon" strokeWidth={2} />
-            <input type="time" className="form-input" value={form.time} onChange={e => set('time', e.target.value)} />
+            <input
+              type="time"
+              className="form-input"
+              value={form.time}
+              onChange={e => set('time', e.target.value)}
+              style={errors.time ? { borderColor: '#e53e3e' } : {}}
+            />
           </div>
+          {errors.time && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.time}</p>}
         </div>
       </div>
 
-      {/* Passengers */}
-      <div className="form-group">
-        <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <Users size={13} color="var(--primary)" strokeWidth={2.5} />
-          {isAr ? 'عدد الركاب' : 'Passengers'}
-        </label>
-        <div style={{ display: 'flex', gap: '5px' }}>
-          {PASSENGERS.map(p => (
-            <button
-              key={p}
-              type="button"
-              onClick={() => set('passengers', p)}
-              style={{
-                flex: 1,
-                padding: '9px 2px',
-                border: form.passengers === p ? '1.5px solid var(--secondary)' : '1.5px solid #ddd',
-                borderRadius: '8px',
-                background: form.passengers === p ? 'rgba(11,61,46,0.07)' : 'white',
-                color: form.passengers === p ? 'var(--secondary)' : 'var(--muted-foreground)',
-                fontWeight: form.passengers === p ? '800' : '500',
-                fontSize: '0.8rem',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                fontFamily: 'inherit',
-              }}
-            >
-              {p}
-            </button>
-          ))}
+      {/* Passengers + Luggage */}
+      <div className="form-grid-2">
+        <div className="form-group">
+          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Users size={13} color="var(--primary)" strokeWidth={2.5} />
+            {isAr ? 'الركاب' : 'Passengers'}
+          </label>
+          <CustomSelect
+            value={form.passengers}
+            onChange={v => set('passengers', v)}
+            options={PASSENGERS}
+            placeholder="1"
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Briefcase size={13} color="var(--primary)" strokeWidth={2.5} />
+            {isAr ? 'الأمتعة / الحقائب' : 'Luggage / Bags'}
+          </label>
+          <CustomSelect
+            value={form.luggage}
+            onChange={v => set('luggage', v)}
+            options={luggageList}
+            placeholder={isAr ? 'اختر عدد الحقائب' : 'Bags count'}
+          />
         </div>
       </div>
 
@@ -387,10 +488,58 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Phone size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'رقم الهاتف' : 'Phone'}
+            <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
           </label>
-          <input type="tel" className="form-input" placeholder={isAr ? 'رقم هاتفك' : 'Your phone'} value={form.phone} onChange={e => set('phone', e.target.value)} dir="ltr" />
+          <input
+            type="tel"
+            className="form-input"
+            placeholder={isAr ? 'رقم هاتفك' : 'Your phone'}
+            value={form.phone}
+            onChange={e => set('phone', e.target.value)}
+            style={errors.phone ? { borderColor: '#e53e3e' } : {}}
+            dir="ltr"
+          />
+          {errors.phone && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.phone}</p>}
         </div>
       </div>
+
+      {/* Special Requests */}
+      <div className="form-group">
+        <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <HelpCircle size={13} color="var(--primary)" strokeWidth={2.5} />
+          {isAr ? 'طلبات خاصة' : 'Special Requests'}
+        </label>
+        <textarea
+          className="form-input"
+          placeholder={isAr ? 'أي متطلبات إضافية (مثال: مقعد أطفال، التوقف عند السوبر ماركت، إلخ)...' : 'Any special requirements (e.g. baby seat, brief stop, etc)...'}
+          value={form.specialRequests}
+          onChange={e => set('specialRequests', e.target.value)}
+          style={{ minHeight: '68px', resize: 'vertical', padding: '10px 12px' }}
+        />
+      </div>
+
+      {/* Live Price Preview */}
+      {routePrice !== null && (
+        <div className="animate-fadeInUp" style={{
+          background: 'rgba(11,61,46,0.04)',
+          border: '1.5px solid var(--primary)',
+          borderRadius: '12px',
+          padding: '12px 16px',
+          marginBottom: '16px',
+          textAlign: 'center',
+          boxShadow: '0 4px 12px rgba(11,61,46,0.06)'
+        }}>
+          <div style={{ fontSize: '0.76rem', color: 'var(--muted-foreground)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            {isAr ? 'السعر الثابت المؤكد' : 'Confirmed Fixed Price'}
+          </div>
+          <div style={{ fontSize: '1.65rem', fontWeight: '950', color: 'var(--primary)', marginTop: '3px', lineHeight: 1.1 }}>
+            {routePrice} <span style={{ fontSize: '0.9rem', fontWeight: '700' }}>SAR</span>
+          </div>
+          <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', marginTop: '4px', fontWeight: '600' }}>
+            {isAr ? 'شامل الضرائب والرسوم • بدون دفع مسبق' : 'Includes all taxes & fees • No prepayment'}
+          </div>
+        </div>
+      )}
 
       {/* WhatsApp Button */}
       <button type="button" className="btn-whatsapp" onClick={handleBook} style={{ marginTop: '8px' }} disabled={loading}>

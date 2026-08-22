@@ -115,7 +115,7 @@ export default function TaifLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/966569487569" style={{
+                <a href="https://wa.me/923097811785" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   background: '#2d6a4f', color: 'white', padding: '13px 28px',
                   borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
@@ -124,7 +124,7 @@ export default function TaifLocationPage({
                   <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
                 </a>
                 <a
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
@@ -230,7 +230,7 @@ export default function TaifLocationPage({
               {routes.map(r => (
                 <a
                   key={r.label.ar}
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -390,7 +390,7 @@ export default function TaifLocationPage({
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
@@ -400,13 +400,13 @@ export default function TaifLocationPage({
               >
                 <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="https://wa.me/966569487569" style={{
+              <a href="https://wa.me/923097811785" style={{
                 display: 'flex', alignItems: 'center', gap: '8px',
                 background: 'rgba(233,196,106,0.15)', color: '#e9c46a', padding: '13px 28px',
                 borderRadius: '12px', fontWeight: '700', fontSize: '0.9rem', textDecoration: 'none',
                 border: '1px solid rgba(233,196,106,0.4)',
               }}>
-                <Phone size={16} strokeWidth={2.5} /> +966 56 948 7569
+                <Phone size={16} strokeWidth={2.5} /> +92 309 7811785
               </a>
             </div>
           </div>

@@ -15,14 +15,14 @@ const AIRPORT_ROUTES = [
 const FAQS = [
   { q: { en: 'Which airports does Saudi Cabs GMC serve?', ar: 'ما المطارات التي تخدمها Saudi Cabs GMC؟' }, a: { en: 'Saudi Cabs GMC covers King Abdulaziz International Airport in Jeddah (KAIA), Prince Mohammad bin Abdulaziz Airport in Madinah (MED), and Taif Airport. We also connect all major airports to nearby cities.', ar: 'Saudi Cabs GMC تغطي مطار الملك عبدالعزيز الدولي بجدة ومطار الأمير محمد بن عبدالعزيز بالمدينة ومطار الطائف. كما نربط جميع المطارات الرئيسية بالمدن المجاورة.' } },
   { q: { en: 'What is included in an airport transfer?', ar: 'ما الذي يشمله توصيل المطار؟' }, a: { en: 'Our airport transfers include: name-board meet-and-greet at arrivals, flight tracking (no extra charge for delays), luggage assistance, direct transfer to your destination, and a fixed price with no hidden fees.', ar: 'تشمل تحويلات المطار لدينا: استقبال بلوحة الاسم في الوصول، ومتابعة الرحلة (بلا رسوم إضافية للتأخير)، ومساعدة في الأمتعة، وتوصيل مباشر لوجهتك، وسعر ثابت بدون رسوم خفية.' } },
-  { q: { en: 'How do I book an airport transfer?', ar: 'كيف أحجز توصيل مطار؟' }, a: { en: 'Send a WhatsApp message to +966 56 948 7569 with your: flight number, arrival/departure time, number of passengers, destination, and vehicle preference. We confirm within minutes.', ar: 'أرسل رسالة واتساب إلى +966 56 948 7569 مع: رقم رحلتك، وقت الوصول/المغادرة، عدد الركاب، الوجهة، وتفضيل السيارة. نؤكد خلال دقائق.' } },
+  { q: { en: 'How do I book an airport transfer?', ar: 'كيف أحجز توصيل مطار؟' }, a: { en: 'Send a WhatsApp message to +92 309 7811785 with your: flight number, arrival/departure time, number of passengers, destination, and vehicle preference. We confirm within minutes.', ar: 'أرسل رسالة واتساب إلى +92 309 7811785 مع: رقم رحلتك، وقت الوصول/المغادرة، عدد الركاب، الوجهة، وتفضيل السيارة. نؤكد خلال دقائق.' } },
   { q: { en: 'What if my flight is delayed or cancelled?', ar: 'ماذا لو تأخرت رحلتي أو أُلغيت؟' }, a: { en: 'Saudi Cabs GMC monitors all flights in real time. If your flight is delayed, your driver adjusts automatically — no extra charge. For cancellations, contact us immediately to reschedule.', ar: 'Saudi Cabs GMC تتابع جميع الرحلات في الوقت الفعلي. إذا تأخرت رحلتك، يتكيف السائق تلقائياً — بلا رسوم إضافية. للإلغاءات، تواصل معنا فوراً لإعادة الجدولة.' } },
 ]
 
 export default function AirportTransferPage() {
   const { lang, isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[lang]
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز توصيل مطار' : "Hello, I'd like to book an airport transfer")}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز توصيل مطار' : "Hello, I'd like to book an airport transfer")}`
 
   return (
     <main>
@@ -47,7 +47,7 @@ export default function AirportTransferPage() {
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><MessageCircle size={16} strokeWidth={2.5} />{isAr ? 'احجز توصيل المطار' : 'Book Airport Transfer'}</a>
-                <a href="https://wa.me/966569487569" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
+                <a href="https://wa.me/923097811785" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
               </div>
             </div>
             <div className="animate-fadeInUp animate-delay-1"><BookingForm /></div>
@@ -124,7 +124,7 @@ export default function AirportTransferPage() {
           <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'متابعة الرحلة — استقبال بلوحة الاسم — سعر ثابت' : 'Flight Tracking — Name-Board Pickup — Fixed Price'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
-            <a href="https://wa.me/966569487569" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+966 56 948 7569</a>
+            <a href="https://wa.me/923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>
           </div>
         </div>
       </section>

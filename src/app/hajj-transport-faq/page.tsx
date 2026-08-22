@@ -11,7 +11,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'How do I book transport for Hajj 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Book a private cab for Hajj 2026 via WhatsApp at +966 56 948 7569 (Saudi Cabs GMC). Send your arrival details, group size, and required routes. Book at least 4 weeks before Hajj season to guarantee availability.' } },
+    { '@type': 'Question', name: 'How do I book transport for Hajj 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Book a private cab for Hajj 2026 via WhatsApp at +92 309 7811785 (Saudi Cabs GMC). Send your arrival details, group size, and required routes. Book at least 4 weeks before Hajj season to guarantee availability.' } },
     { '@type': 'Question', name: 'What transport is available for Hajj pilgrims in Saudi Arabia?', acceptedAnswer: { '@type': 'Answer', text: 'Hajj pilgrims can use private cabs (Saudi Cabs GMC), official Hajj buses, the Mashair Railway (between Makkah, Arafat, Mina, Muzdalifah), and metered taxis. For intercity routes like Makkah to Madinah, private cabs offer the most convenient door-to-door service.' } },
     { '@type': 'Question', name: 'When is Hajj 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Hajj 2026 is expected to take place in late May to early June 2026 (Dhul Hijjah 1447 AH). The exact dates depend on moon sighting. Book transport well in advance.' } },
     { '@type': 'Question', name: 'Is private taxi allowed during Hajj in Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, private taxis and pre-booked cabs operate in Makkah during Hajj season. Saudi Cabs GMC provides 24/7 private cab service throughout Hajj, including airport transfers and intercity routes.' } },
@@ -26,7 +26,7 @@ export default function HajjTransportFaq() {
         tag="Hajj 2026 Guide"
         title="Hajj Transport FAQ 2026 — Complete Private Cab Guide for Hajj Pilgrims"
         subtitle="Everything Hajj pilgrims need to know about booking private transport in Saudi Arabia for Hajj 2026."
-        quickAnswer="Saudi Cabs GMC provides private cab service for Hajj 2026 — 24/7, fixed price, door-to-door across Makkah, Madinah, and Jeddah. Book at least 4 weeks before Hajj. WhatsApp: +966 56 948 7569."
+        quickAnswer="Saudi Cabs GMC provides private cab service for Hajj 2026 — 24/7, fixed price, door-to-door across Makkah, Madinah, and Jeddah. Book at least 4 weeks before Hajj. WhatsApp: +92 309 7811785."
         keyFacts={[
           { icon: '📅', label: 'Hajj 2026', value: 'Late May/June 2026' },
           { icon: '🕋', label: 'Main City', value: 'Makkah al-Mukarramah' },
@@ -36,7 +36,7 @@ export default function HajjTransportFaq() {
           { icon: '⏰', label: 'Service', value: '24/7 During Hajj' },
         ]}
         faqs={[
-          { q: 'How do I book transport for Hajj 2026?', a: 'WhatsApp +966 56 948 7569. Send your arrival date, flight details, group size, and required routes. Saudi Cabs GMC confirms a fixed price within minutes. Book at least 4 weeks before Hajj.' },
+          { q: 'How do I book transport for Hajj 2026?', a: 'WhatsApp +92 309 7811785. Send your arrival date, flight details, group size, and required routes. Saudi Cabs GMC confirms a fixed price within minutes. Book at least 4 weeks before Hajj.' },
           { q: 'What transport is available for Hajj pilgrims in Saudi Arabia?', a: 'Options include: private cabs (Saudi Cabs GMC — most convenient), official Hajj buses (crowded), Mashair Railway (Makkah–Arafat–Mina–Muzdalifah, Hajj only), and metered taxis (limited availability). For intercity routes, private cabs are best.' },
           { q: 'When is Hajj 2026?', a: 'Hajj 2026 is expected in late May to early June 2026 (Dhul Hijjah 1447 AH). Exact dates depend on moon sighting. Book transport as early as possible.' },
           { q: 'Is private taxi allowed during Hajj in Makkah?', a: 'Yes. Saudi Cabs GMC provides 24/7 private cab service throughout Hajj including airport transfers and all intercity routes.' },

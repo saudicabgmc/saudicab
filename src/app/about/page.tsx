@@ -110,7 +110,7 @@ export default function AboutPage() {
             <h2 style={{ fontSize: '1.8rem', fontWeight: '900', marginBottom: '12px' }}>Ready to Book?</h2>
             <p style={{ opacity: 0.85, marginBottom: '28px', lineHeight: 1.7 }}>Fixed price confirmed instantly. Professional driver. Door-to-door, 24/7.</p>
             <a
-              href="https://wa.me/966569487569?text=Hello%2C%20I%27d%20like%20to%20book%20a%20taxi"
+              href="https://wa.me/923097811785?text=Hello%2C%20I%27d%20like%20to%20book%20a%20taxi"
               target="_blank" rel="noopener noreferrer"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '10px',

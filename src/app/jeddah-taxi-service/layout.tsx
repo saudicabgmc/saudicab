@@ -27,7 +27,7 @@ const jeddahLocalBusinessSchema = {
   '@id': 'https://saudicabsgmc.com/jeddah-taxi-service#business',
   name: 'Saudi Cabs GMC — Jeddah Taxi Service',
   url: 'https://saudicabsgmc.com/jeddah-taxi-service',
-  telephone: '+966569487569',
+  telephone: '+923097811785',
   image: 'https://saudicabsgmc.com/location/jeddah.webp',
   description: 'Premium taxi service in Jeddah. King Abdulaziz Airport (KAIA) transfers, Corniche, business districts, intercity routes to Makkah, Madinah & Taif. Fixed prices 24/7.',
   address: {

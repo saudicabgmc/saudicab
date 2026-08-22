@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Visit All 5 Sites in One Day</h2>
-<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers know every site, the best entry points, and the ideal visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. WhatsApp us at +966 56 948 7569 to arrange a private guide driver for your group.</p>`,
+<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers know every site, the best entry points, and the ideal visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. WhatsApp us at +92 309 7811785 to arrange a private guide driver for your group.</p>`,
       ar: `<p style="margin-bottom:1rem;">زيارة مكة المكرمة للعمرة أو الحج هي تجربة روحية لا تُنسى. فضلاً عن المسجد الحرام، تضم المدينة عشرات المواقع الإسلامية التاريخية التي تحمل دلالات عميقة. إليك أبرز 5 مواقع زيارة يجب على كل حاج ومعتمر الذهاب إليها.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. جبل النور — غار حراء</h2>
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">من أعرق مقابر مكة، تضم رفات السيدة خديجة رضي الله عنها زوج النبي ﷺ الأولى، وعبد المطلب جده. تقع على مقربة من المسجد الحرام وتفتح بعد صلاتي الفجر والعصر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تزور المواقع الخمسة في يوم واحد</h2>
-<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا يعرفون كل موقع وأفضل الأوقات والمسارات لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. تواصل معنا عبر واتساب: 966569487569+</p>`,
+<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا يعرفون كل موقع وأفضل الأوقات والمسارات لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. تواصل معنا عبر واتساب: 923097811785+</p>`,
     },
     date: '2026-04-15',
     image: '/location/makkah.webp',
@@ -259,7 +259,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book — 3 Steps</h2>
 <ol style="padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;">WhatsApp Saudi Cabs GMC at +966 56 948 7569</li>
+  <li style="margin-bottom:0.5rem;">WhatsApp Saudi Cabs GMC at +92 309 7811785</li>
   <li style="margin-bottom:0.5rem;">Share your pickup location, destination, date, time, and group size</li>
   <li style="margin-bottom:0.5rem;">Receive your fixed price confirmation and driver details</li>
 </ol>
@@ -277,7 +277,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيفية الحجز — 3 خطوات</h2>
 <ol style="padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;">تواصل مع Saudi Cabs GMC عبر واتساب: 966569487569+</li>
+  <li style="margin-bottom:0.5rem;">تواصل مع Saudi Cabs GMC عبر واتساب: 923097811785+</li>
   <li style="margin-bottom:0.5rem;">أرسل موقع الاستلام والوجهة والتاريخ وعدد الركاب</li>
   <li style="margin-bottom:0.5rem;">استلم تأكيد السعر الثابت وبيانات السائق</li>
 </ol>`,

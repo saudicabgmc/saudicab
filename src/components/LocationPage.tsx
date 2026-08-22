@@ -110,12 +110,12 @@ export default function LocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/966569487569" className="btn-primary">
+                <a href="https://wa.me/923097811785" className="btn-primary">
                   <Phone size={16} strokeWidth={2.5} />
                   {tr.callNow}
                 </a>
                 <a
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-outline"
                 >
@@ -182,7 +182,7 @@ export default function LocationPage({
             {routes.map(r => (
               <a
                 key={r.label.ar}
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 className="route-badge"
               >
@@ -283,7 +283,7 @@ export default function LocationPage({
                 {tr.ctaDesc} {tx(cityName)} {tr.ctaDescEnd}
               </p>
               <a
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -295,7 +295,7 @@ export default function LocationPage({
                 {tr.whatsapp}
               </a>
               <a
-                href="https://wa.me/966569487569"
+                href="https://wa.me/923097811785"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 28px',
@@ -303,7 +303,7 @@ export default function LocationPage({
                 }}
               >
                 <Phone size={17} strokeWidth={2.5} />
-                +966 56 948 7569
+                +92 309 7811785
               </a>
             </div>
           </div>

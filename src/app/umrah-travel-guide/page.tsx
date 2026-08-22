@@ -11,7 +11,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'How do you travel between Makkah and Madinah for Umrah?', acceptedAnswer: { '@type': 'Answer', text: 'The two main options are the Haramain High-Speed Train (2.5 hours, requires station travel) or a private taxi (4.5 hours, door-to-door). Saudi Cabs GMC provides direct private cab from your Makkah hotel to your Madinah hotel. Book via WhatsApp: +966 56 948 7569.' } },
+    { '@type': 'Question', name: 'How do you travel between Makkah and Madinah for Umrah?', acceptedAnswer: { '@type': 'Answer', text: 'The two main options are the Haramain High-Speed Train (2.5 hours, requires station travel) or a private taxi (4.5 hours, door-to-door). Saudi Cabs GMC provides direct private cab from your Makkah hotel to your Madinah hotel. Book via WhatsApp: +92 309 7811785.' } },
     { '@type': 'Question', name: 'What is the best transport for Umrah pilgrims in Saudi Arabia?', acceptedAnswer: { '@type': 'Answer', text: 'For Umrah pilgrims, especially families and those with luggage, a private cab from Saudi Cabs GMC is the most convenient option. It offers door-to-door service, fixed pricing, and 24/7 availability including during Ramadan and peak seasons.' } },
     { '@type': 'Question', name: 'Do I start Umrah in Makkah or Madinah?', acceptedAnswer: { '@type': 'Answer', text: 'You can start Umrah from either city. Many pilgrims begin in Madinah to visit the Prophet\'s Mosque first, then travel to Makkah for the Umrah rituals. Saudi Cabs GMC offers direct transfers between both cities.' } },
     { '@type': 'Question', name: 'How far is Makkah from Jeddah Airport for Umrah?', acceptedAnswer: { '@type': 'Answer', text: 'Jeddah Airport (KAIA) is approximately 90 km from Makkah. Most Umrah pilgrims arrive via Jeddah Airport. A private taxi with Saudi Cabs GMC takes about 55 minutes with a name-board pickup at arrivals.' } },
@@ -26,7 +26,7 @@ export default function UmrahTravelGuide() {
         tag="Umrah Travel Guide 2026"
         title="Umrah Travel Guide — Transport Between Makkah, Madinah & Jeddah"
         subtitle="A complete transport guide for Umrah pilgrims — from airport arrival to intercity transfers and Ziyarat tours in the Holy Cities."
-        quickAnswer="For Umrah pilgrims, Saudi Cabs GMC provides private cab transfers 24/7: Jeddah Airport to Makkah (~55 min), Makkah to Madinah (~4.5 hrs), and all intercity routes. Fixed price, door-to-door, name-board airport pickup. Book via WhatsApp: +966 56 948 7569."
+        quickAnswer="For Umrah pilgrims, Saudi Cabs GMC provides private cab transfers 24/7: Jeddah Airport to Makkah (~55 min), Makkah to Madinah (~4.5 hrs), and all intercity routes. Fixed price, door-to-door, name-board airport pickup. Book via WhatsApp: +92 309 7811785."
         keyFacts={[
           { icon: '🕋', label: 'Makkah → Madinah', value: '~430 km / ~4.5 hrs' },
           { icon: '✈️', label: 'Jeddah KAIA → Makkah', value: '~90 km / ~55 min' },
@@ -36,7 +36,7 @@ export default function UmrahTravelGuide() {
           { icon: '⏰', label: 'Available', value: '24/7 incl. Ramadan' },
         ]}
         faqs={[
-          { q: 'How do you travel between Makkah and Madinah for Umrah?', a: 'Two main options: Haramain Train (2.5 hrs, requires station travel) or private taxi (4.5 hrs, door-to-door). Saudi Cabs GMC provides direct hotel-to-hotel service. Book via WhatsApp: +966 56 948 7569.' },
+          { q: 'How do you travel between Makkah and Madinah for Umrah?', a: 'Two main options: Haramain Train (2.5 hrs, requires station travel) or private taxi (4.5 hrs, door-to-door). Saudi Cabs GMC provides direct hotel-to-hotel service. Book via WhatsApp: +92 309 7811785.' },
           { q: 'What is the best transport for Umrah pilgrims in Saudi Arabia?', a: 'For families and those with luggage, a private cab from Saudi Cabs GMC is most convenient — door-to-door, fixed pricing, 24/7 including Ramadan and peak Umrah seasons.' },
           { q: 'Do I start Umrah in Makkah or Madinah?', a: 'You can start from either city. Many pilgrims visit Madinah first (Prophet\'s Mosque), then travel to Makkah for the Umrah rituals. Saudi Cabs GMC offers direct transfers between both cities.' },
           { q: 'How far is Makkah from Jeddah Airport?', a: 'Jeddah Airport (KAIA) is approximately 90 km from Makkah. A private taxi takes about 55 minutes with name-board pickup at arrivals.' },

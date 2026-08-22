@@ -35,7 +35,7 @@ const ROUTES = [
 const FAQS = [
   { q: { en: 'How many passengers fit in the Toyota Camry taxi?', ar: 'كم عدد الركاب الذين يتسع لهم تاكسي تويوتا كامري؟' }, a: { en: 'The Toyota Camry comfortably seats 4 passengers with luggage. It is ideal for solo travellers, couples, and small families. For groups of 5–7, we recommend the Hyundai Staria or GMC Yukon.', ar: 'تتسع تويوتا كامري بشكل مريح لـ٤ ركاب مع الأمتعة. إنها مثالية للمسافرين المنفردين والأزواج والعائلات الصغيرة. للمجموعات من ٥–٧، نوصي بهيونداي ستاريا أو GMC يوكون.' } },
   { q: { en: 'Is the Toyota Camry available for airport transfers?', ar: 'هل تويوتا كامري متاحة لتوصيل المطار؟' }, a: { en: 'Yes. The Toyota Camry is our most popular vehicle for Jeddah Airport (KAIA) to Makkah and Madinah transfers. The driver meets you at arrivals with a name board. Fixed price, flight tracking included.', ar: 'نعم. تويوتا كامري هي سيارتنا الأكثر طلباً لتوصيل مطار جدة (كايا) إلى مكة والمدينة. يستقبلك السائق في صالة الوصول بلافتة باسمك. سعر ثابت، مع متابعة الرحلة.' } },
-  { q: { en: 'What is the fare for a Toyota Camry from Jeddah Airport to Makkah?', ar: 'ما أجرة تويوتا كامري من مطار جدة إلى مكة؟' }, a: { en: 'Pricing is fixed and agreed before your trip — no meter, no surge pricing. Contact us on WhatsApp at +966 56 948 7569 for an instant quote for your specific route and date.', ar: 'التسعير ثابت ومتفق عليه قبل رحلتك — بدون عداد، بدون زيادة أسعار. تواصل معنا عبر واتساب على +966 56 948 7569 للحصول على سعر فوري لطريقك وتاريخك المحدد.' } },
+  { q: { en: 'What is the fare for a Toyota Camry from Jeddah Airport to Makkah?', ar: 'ما أجرة تويوتا كامري من مطار جدة إلى مكة؟' }, a: { en: 'Pricing is fixed and agreed before your trip — no meter, no surge pricing. Contact us on WhatsApp at +92 309 7811785 for an instant quote for your specific route and date.', ar: 'التسعير ثابت ومتفق عليه قبل رحلتك — بدون عداد، بدون زيادة أسعار. تواصل معنا عبر واتساب على +92 309 7811785 للحصول على سعر فوري لطريقك وتاريخك المحدد.' } },
   { q: { en: 'How much luggage can fit in a Toyota Camry?', ar: 'كم من الأمتعة يمكن أن تتسع له تويوتا كامري؟' }, a: { en: 'The Toyota Camry boot fits 3–4 large suitcases. For Hajj or Umrah trips with extra bags or Zamzam water, we recommend upgrading to the Hyundai Staria (7 seats, much larger boot).', ar: 'يتسع صندوق تويوتا كامري لـ٣–٤ حقائب كبيرة. لرحلات الحج والعمرة مع حقائب إضافية أو ماء زمزم، ننصح بالترقية إلى هيونداي ستاريا (٧ مقاعد، صندوق أكبر بكثير).' } },
   { q: { en: 'Is the Toyota Camry available 24/7?', ar: 'هل تويوتا كامري متاحة ٢٤/٧؟' }, a: { en: 'Yes. Saudi Cabs GMC operates 24 hours a day, 7 days a week, including Hajj and Umrah seasons. Book via WhatsApp at least a few hours in advance for best availability.', ar: 'نعم. تعمل Saudi Cabs GMC على مدار الساعة طوال أيام الأسبوع، بما في ذلك مواسم الحج والعمرة. احجز عبر واتساب قبل بضع ساعات على الأقل لأفضل توفر.' } },
 ]
@@ -43,7 +43,7 @@ const FAQS = [
 export default function ToyotaCamryPage() {
   const { isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[isAr ? 'ar' : 'en']
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز تاكسي تويوتا كامري' : "Hello, I'd like to book a Toyota Camry taxi")}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز تاكسي تويوتا كامري' : "Hello, I'd like to book a Toyota Camry taxi")}`
 
   return (
     <main>
@@ -68,7 +68,7 @@ export default function ToyotaCamryPage() {
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><MessageCircle size={16} strokeWidth={2.5} />{isAr ? 'احجز كامري الآن' : 'Book Camry Now'}</a>
-                <a href="https://wa.me/966569487569" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
+                <a href="https://wa.me/923097811785" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
               </div>
             </div>
             <div className="animate-fadeInUp animate-delay-1"><BookingForm /></div>
@@ -164,7 +164,7 @@ export default function ToyotaCamryPage() {
           <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'سعر ثابت — سائق محترف — ٢٤/٧' : 'Fixed Price — Professional Driver — 24/7'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
-            <a href="https://wa.me/966569487569" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+966 56 948 7569</a>
+            <a href="https://wa.me/923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>
           </div>
         </div>
       </section>

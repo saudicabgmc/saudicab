@@ -116,11 +116,11 @@ export default function MakkahLocationPage({
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="https://wa.me/966569487569" className="btn-primary" style={{ padding: '14px 32px' }}>
+            <a href="https://wa.me/923097811785" className="btn-primary" style={{ padding: '14px 32px' }}>
               <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
             </a>
             <a
-              href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+              href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank" rel="noopener noreferrer"
               className="btn-outline" style={{ padding: '14px 32px' }}
             >
@@ -212,7 +212,7 @@ export default function MakkahLocationPage({
             {routes.map(r => (
               <a
                 key={r.label.ar}
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', gap: '10px', padding: '11px 22px',
@@ -343,19 +343,19 @@ export default function MakkahLocationPage({
           </div>
           <div style={{ textAlign: 'center', display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
-              href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+              href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank" rel="noopener noreferrer"
               className="btn-primary" style={{ padding: '14px 32px' }}
             >
               <MessageCircle size={17} strokeWidth={2.5} /> {tr.whatsapp}
             </a>
-            <a href="https://wa.me/966569487569" style={{
+            <a href="https://wa.me/923097811785" style={{
               display: 'flex', alignItems: 'center', gap: '8px',
               background: 'rgba(255,255,255,0.08)', color: 'white',
               padding: '14px 32px', borderRadius: '10px', fontWeight: '700', fontSize: '0.9rem',
               textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)',
             }}>
-              <Phone size={17} strokeWidth={2.5} /> +966 56 948 7569
+              <Phone size={17} strokeWidth={2.5} /> +92 309 7811785
             </a>
           </div>
         </div>

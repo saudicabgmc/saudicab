@@ -109,11 +109,11 @@ export default function MadinahLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/966569487569" className="btn-primary">
+                <a href="https://wa.me/923097811785" className="btn-primary">
                   <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
                 </a>
                 <a
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-outline"
                 >
@@ -206,7 +206,7 @@ export default function MadinahLocationPage({
             {routes.map((r, i) => (
               <a
                 key={r.label.ar}
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -369,7 +369,7 @@ export default function MadinahLocationPage({
             </div>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <a
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
@@ -379,12 +379,12 @@ export default function MadinahLocationPage({
               >
                 <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="https://wa.me/966569487569" style={{
+              <a href="https://wa.me/923097811785" style={{
                 display: 'flex', alignItems: 'center', gap: '8px',
                 background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 24px',
                 borderRadius: '10px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',
               }}>
-                <Phone size={16} strokeWidth={2.5} /> +966 56 948 7569
+                <Phone size={16} strokeWidth={2.5} /> +92 309 7811785
               </a>
             </div>
           </div>

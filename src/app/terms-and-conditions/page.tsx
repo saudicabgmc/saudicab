@@ -67,7 +67,7 @@ export default function TermsAndConditions() {
 
               <Section title="2. Booking & Confirmation">
                 <List items={[
-                  'All bookings are made via WhatsApp (+966 56 948 7569) or through the website booking form.',
+                  'All bookings are made via WhatsApp (+92 309 7811785) or through the website booking form.',
                   'A booking is only confirmed once you receive a written confirmation message from us with a fixed price.',
                   'You must provide accurate pickup location, destination, date, time, number of passengers, and luggage details.',
                   'Providing incorrect information may result in a change of price or cancellation.',
@@ -169,7 +169,7 @@ export default function TermsAndConditions() {
               <Section title="13. Contact">
                 <p>For questions about these Terms:</p>
                 <List items={[
-                  'WhatsApp: +966 56 948 7569',
+                  'WhatsApp: +92 309 7811785',
                   'Email: info@saudicabsgmc.com',
                   'Website: saudicabsgmc.com',
                   'Location: Makkah Province, Saudi Arabia',

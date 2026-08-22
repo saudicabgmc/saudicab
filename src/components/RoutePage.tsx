@@ -40,7 +40,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
   const waMsg = isAr
     ? `السلام عليكم، أرغب في حجز رحلة من ${tx(data.from)} إلى ${tx(data.to)}`
     : `Hello, I'd like to book a trip from ${tx(data.from)} to ${tx(data.to)}`
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(waMsg)}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(waMsg)}`
 
   return (
     <main>
@@ -96,7 +96,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز الآن عبر واتساب' : 'Book Now via WhatsApp'}
                 </a>
-                <a href="https://wa.me/966569487569" className="btn-outline">
+                <a href="https://wa.me/923097811785" className="btn-outline">
                   <Phone size={16} strokeWidth={2.5} />
                   {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
@@ -326,7 +326,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
               <MessageCircle size={18} strokeWidth={2.5} />
               {isAr ? 'واتساب' : 'WhatsApp'}
             </a>
-            <a href="https://wa.me/966569487569"
+            <a href="https://wa.me/923097811785"
               style={{
                 background: 'rgba(255,255,255,0.15)', color: 'white',
                 border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px',
@@ -334,7 +334,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                 display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none',
               }}>
               <Phone size={18} strokeWidth={2.5} />
-              +966 56 948 7569
+              +92 309 7811785
             </a>
           </div>
         </div>

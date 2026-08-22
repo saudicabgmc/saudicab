@@ -43,7 +43,7 @@ export function generateRouteSchemas(data: RoutePageData) {
       '@type': 'LocalBusiness',
       '@id': `${base}/#business`,
       name: 'Saudi Cabs GMC',
-      telephone: '+966569487569',
+      telephone: '+923097811785',
     },
     areaServed: [
       { '@type': 'City', name: fromEn },
@@ -84,7 +84,7 @@ export function generateRouteSchemas(data: RoutePageData) {
       name: `How much does a taxi from ${fromEn} to ${toEn} cost?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Saudi Cabs GMC offers a fixed price for the ${fromEn} to ${toEn} route — agreed before departure with no hidden fees. Contact via WhatsApp at +966 56 948 7569 for the current rate.`,
+        text: `Saudi Cabs GMC offers a fixed price for the ${fromEn} to ${toEn} route — agreed before departure with no hidden fees. Contact via WhatsApp at +92 309 7811785 for the current rate.`,
       },
     },
     {

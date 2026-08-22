@@ -150,7 +150,7 @@ export default function PricingSection({ routes, heading }: Props) {
                         </span>
                       </div>
                       <a
-                        href={`https://wa.me/966569487569?text=${encodeURIComponent(waBookMsg(route.from, route.to))}`}
+                        href={`https://wa.me/923097811785?text=${encodeURIComponent(waBookMsg(route.from, route.to))}`}
                         target="_blank" rel="noopener noreferrer"
                         style={{
                           display: 'inline-flex', alignItems: 'center', gap: '6px',

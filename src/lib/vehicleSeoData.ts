@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const BASE = 'https://saudicabsgmc.com'
-const WA   = '966569487569'
+const WA   = '923097811785'
 
 // ── Building blocks ──────────────────────────────────────────────────────────
 
@@ -167,21 +167,21 @@ const HUB_DEFS = [
   {
     slug: 'taxi-services',
     title: 'Taxi Services Saudi Arabia | Makkah, Madinah, Jeddah, Taif | Saudi Cabs GMC',
-    desc:  'Book private taxi services across Saudi Arabia — Makkah, Madinah, Jeddah, Taif. Fixed prices, 24/7, professional drivers. 4 to 17 seat vehicles. WhatsApp: +966 56 948 7569.',
+    desc:  'Book private taxi services across Saudi Arabia — Makkah, Madinah, Jeddah, Taif. Fixed prices, 24/7, professional drivers. 4 to 17 seat vehicles. WhatsApp: +92 309 7811785.',
     h1:    'Taxi Services in Saudi Arabia — Fixed Price, 24/7',
     subtitle: 'Saudi Cabs GMC provides professional private taxi services in Makkah, Madinah, Jeddah, and Taif — and all intercity routes. No meters. Confirmed price before departure.',
-    qa:    'Saudi Cabs GMC offers private taxi services 24/7 across Saudi Arabia in Makkah, Madinah, Jeddah, Taif, and Riyadh. Fixed prices, professional drivers. Book via WhatsApp: +966 56 948 7569.',
+    qa:    'Saudi Cabs GMC offers private taxi services 24/7 across Saudi Arabia in Makkah, Madinah, Jeddah, Taif, and Riyadh. Fixed prices, professional drivers. Book via WhatsApp: +92 309 7811785.',
     badge: 'Taxi Services',
     faqs: [
       { q: 'What taxi services does Saudi Cabs GMC provide?', a: 'Saudi Cabs GMC provides private city taxis, airport transfers, intercity routes (Makkah–Madinah, Jeddah–Makkah, etc.), Hajj & Umrah transport, and private driver hire across Saudi Arabia.' },
       { q: 'Are Saudi Cabs GMC taxis available 24/7?', a: 'Yes. Saudi Cabs GMC taxis operate 24 hours a day, 7 days a week — including during Hajj and Umrah seasons, Eid, and Ramadan.' },
-      { q: 'How do I book a taxi in Saudi Arabia?', a: 'Send a WhatsApp message to +966 56 948 7569 with your pickup location, destination, date, and time. Receive a fixed price confirmation within minutes.' },
+      { q: 'How do I book a taxi in Saudi Arabia?', a: 'Send a WhatsApp message to +92 309 7811785 with your pickup location, destination, date, and time. Receive a fixed price confirmation within minutes.' },
     ],
   },
   {
     slug: 'cab-services',
     title: 'Cab Services Saudi Arabia | Makkah, Madinah, Jeddah, Taif | Saudi Cabs GMC',
-    desc:  'Book private cab services across Saudi Arabia. Fixed-price cabs in Makkah, Madinah, Jeddah, and Taif — 4 to 17-seat vehicles, 24/7. WhatsApp: +966 56 948 7569.',
+    desc:  'Book private cab services across Saudi Arabia. Fixed-price cabs in Makkah, Madinah, Jeddah, and Taif — 4 to 17-seat vehicles, 24/7. WhatsApp: +92 309 7811785.',
     h1:    'Cab Services in Saudi Arabia — Fixed Price, No Meter',
     subtitle: 'Private cab service across Saudi Arabia with Saudi Cabs GMC. No meter, no hidden charges. Confirmed SAR price before every trip.',
     qa:    'Saudi Cabs GMC provides private cab services 24/7 in Makkah, Madinah, Jeddah, and Taif. Fixed prices in SAR. 4-seater, 7-seater, 11-seater, and 17-seater cabs available. Book via WhatsApp.',
@@ -197,7 +197,7 @@ const HUB_DEFS = [
     desc:  'Hire a car with a professional driver in Saudi Arabia. Fixed-price car rental with driver service in Makkah, Madinah, Jeddah, and Taif. Half-day, full-day, multi-day. Book via WhatsApp.',
     h1:    'Car Rental with Driver in Saudi Arabia',
     subtitle: 'Hire a private car with a professional chauffeur in Saudi Arabia. Fixed prices, bilingual drivers, airport pickups, Ziyarat tours, and intercity routes.',
-    qa:    'Saudi Cabs GMC offers car rental with driver service across Saudi Arabia — Makkah, Madinah, Jeddah, Taif. Half-day, full-day, or multi-day hire. Toyota Camry, Hyundai Staria, or GMC Yukon. Book via WhatsApp: +966 56 948 7569.',
+    qa:    'Saudi Cabs GMC offers car rental with driver service across Saudi Arabia — Makkah, Madinah, Jeddah, Taif. Half-day, full-day, or multi-day hire. Toyota Camry, Hyundai Staria, or GMC Yukon. Book via WhatsApp: +92 309 7811785.',
     badge: 'Car with Driver',
     faqs: [
       { q: 'What is car rental with driver in Saudi Arabia?', a: 'Car rental with driver means you hire a vehicle together with a professional driver — no need to drive yourself. Saudi Cabs GMC provides this service in Makkah, Madinah, Jeddah, and Taif for half-day, full-day, or multi-day hire.' },
@@ -211,7 +211,7 @@ const HUB_DEFS = [
     desc:  'Book an airport taxi in Saudi Arabia — Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports. Fixed price, name-board pickup, flight tracking. 24/7. Book via WhatsApp.',
     h1:    'Airport Taxi in Saudi Arabia — All 3 Airports',
     subtitle: 'Saudi Cabs GMC provides fixed-price airport taxi service from Jeddah (KAIA), Madinah (MED), and Taif (TIF) airports — to all cities. Name-board meet & greet. Flight tracking included.',
-    qa:    'Saudi Cabs GMC offers 24/7 airport taxi service from all three Saudi airports: Jeddah KAIA, Madinah MED, and Taif TIF. Fixed prices, flight tracking, name-board pickup. Book via WhatsApp: +966 56 948 7569.',
+    qa:    'Saudi Cabs GMC offers 24/7 airport taxi service from all three Saudi airports: Jeddah KAIA, Madinah MED, and Taif TIF. Fixed prices, flight tracking, name-board pickup. Book via WhatsApp: +92 309 7811785.',
     badge: 'Airport Taxi',
     faqs: [
       { q: 'Which Saudi airports does Saudi Cabs GMC serve?', a: 'Saudi Cabs GMC provides airport taxi service from three airports: King Abdulaziz International Airport (KAIA/JED) in Jeddah, Prince Mohammad bin Abdulaziz Airport (MED) in Madinah, and Taif Regional Airport (TIF).' },
@@ -222,7 +222,7 @@ const HUB_DEFS = [
   {
     slug: 'airport-cab',
     title: 'Airport Cab Saudi Arabia | Jeddah, Madinah, Taif | Saudi Cabs GMC',
-    desc:  'Book an airport cab in Saudi Arabia from Jeddah (KAIA), Madinah (MED), or Taif (TIF) airports. Fixed-price private cab, name-board pickup, 24/7. WhatsApp: +966 56 948 7569.',
+    desc:  'Book an airport cab in Saudi Arabia from Jeddah (KAIA), Madinah (MED), or Taif (TIF) airports. Fixed-price private cab, name-board pickup, 24/7. WhatsApp: +92 309 7811785.',
     h1:    'Airport Cab in Saudi Arabia — Fixed Price, 24/7',
     subtitle: 'Private airport cab service from all major Saudi airports. No meters, no surprises. Confirmed SAR fare before every pickup.',
     qa:    'Saudi Cabs GMC airport cab service covers Jeddah Airport (KAIA), Madinah Airport (MED), and Taif Airport (TIF). Fixed price, 24/7, name-board meet and greet. Book via WhatsApp.',
@@ -237,7 +237,7 @@ const HUB_DEFS = [
     desc:  'Hire a car with driver from Saudi Arabia airports — Jeddah KAIA, Madinah MED, Taif TIF. Fixed price, name-board pickup, bilingual drivers. Book via WhatsApp.',
     h1:    'Airport Car Rental with Driver — Saudi Arabia',
     subtitle: 'Hire a car with a professional driver directly from Jeddah, Madinah, or Taif airports. Fixed price, all vehicles available.',
-    qa:    'Saudi Cabs GMC provides car rental with driver from all three Saudi airports. Fixed price, 24/7, name-board pickup. Vehicles: Toyota Camry (4), Hyundai Staria (7), and larger group vehicles. Book via WhatsApp: +966 56 948 7569.',
+    qa:    'Saudi Cabs GMC provides car rental with driver from all three Saudi airports. Fixed price, 24/7, name-board pickup. Vehicles: Toyota Camry (4), Hyundai Staria (7), and larger group vehicles. Book via WhatsApp: +92 309 7811785.',
     badge: 'Airport Car + Driver',
     faqs: [
       { q: 'Can I hire a car with driver from Jeddah Airport?', a: 'Yes. Saudi Cabs GMC provides car rental with driver from King Abdulaziz International Airport (KAIA) in Jeddah to Makkah, Madinah, and Taif. Your driver meets you at arrivals with a name-board.' },
@@ -289,10 +289,10 @@ for (const vk of V_KEYS) {
       reg({
         slug, pageType: 'vehicle-city',
         metaTitle:   `${v.label} ${s.label} in ${c.name} | ${v.name} | Saudi Cabs GMC`,
-        metaDesc:    `Book a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} — ${v.name}, fixed price, 24/7. Saudi Cabs GMC. WhatsApp: +966 56 948 7569.`,
+        metaDesc:    `Book a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} — ${v.name}, fixed price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
         h1:          `${v.label} ${s.label} in ${c.name} — ${v.name}`,
         subtitle:    `${v.seats}-passenger ${s.label.toLowerCase()} service in ${c.name}. ${v.name} — ${v.luggage}. Fixed SAR price, no meter, 24/7${avail}.`,
-        quickAnswer: `Saudi Cabs GMC provides a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} using a ${v.name}. Carries up to ${v.seats} passengers with ${v.luggage}. Fixed price in SAR. Book via WhatsApp: +966 56 948 7569.`,
+        quickAnswer: `Saudi Cabs GMC provides a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} using a ${v.name}. Carries up to ${v.seats} passengers with ${v.luggage}. Fixed price in SAR. Book via WhatsApp: +92 309 7811785.`,
         badge:       `${v.label} · ${c.name}`,
         vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
         serviceLabel: s.label, location: c.name,
@@ -305,10 +305,10 @@ for (const vk of V_KEYS) {
           { icon: '📍', label: 'City',       value: c.name             },
         ],
         faqs: [
-          { q: `How much does a ${v.seats}-seater ${s.label.toLowerCase()} cost in ${c.name}?`,    a: `Saudi Cabs GMC provides a fixed SAR price for a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name}. No meter, no hidden fees. WhatsApp +966 56 948 7569 for the current rate.` },
+          { q: `How much does a ${v.seats}-seater ${s.label.toLowerCase()} cost in ${c.name}?`,    a: `Saudi Cabs GMC provides a fixed SAR price for a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name}. No meter, no hidden fees. WhatsApp +92 309 7811785 for the current rate.` },
           { q: `What vehicle is used for the ${v.seats}-seater ${s.label.toLowerCase()} in ${c.name}?`, a: `Saudi Cabs GMC uses a ${v.name} for ${v.seats}-seat ${s.label.toLowerCase()} service in ${c.name}. It seats ${v.seats} passengers and can carry ${v.luggage}.` },
           { q: `Is the ${v.seats}-seater ${s.label.toLowerCase()} available during Hajj in ${c.name}?`, a: `Yes. Saudi Cabs GMC operates 24/7 throughout the year including Hajj and Umrah peak seasons. Early booking is strongly recommended during Hajj.` },
-          { q: `How do I book a ${v.seats}-seater ${s.label.toLowerCase()} in ${c.name}?`,          a: `WhatsApp Saudi Cabs GMC at +966 56 948 7569. Share your pickup address in ${c.name}, destination, date, and time. Receive a fixed SAR price within minutes.` },
+          { q: `How do I book a ${v.seats}-seater ${s.label.toLowerCase()} in ${c.name}?`,          a: `WhatsApp Saudi Cabs GMC at +92 309 7811785. Share your pickup address in ${c.name}, destination, date, and time. Receive a fixed SAR price within minutes.` },
         ],
         relatedLinks: [
           { href: c.hub,              label: `All Taxis in ${c.name}`,        tag: 'City' },
@@ -323,7 +323,7 @@ for (const vk of V_KEYS) {
           { name: c.name, href: c.hub },
         ],
         waMessage: `Hello, I'd like to book a ${v.seats}-seater ${s.label.toLowerCase()} in ${c.name}`,
-        schema: { '@context': 'https://schema.org', '@graph': [ taxiSchema(`${v.label} ${s.label} in ${c.name}`, `${v.name} ${s.label.toLowerCase()} service in ${c.name} — ${v.seats} seats, ${v.luggage}, fixed price, 24/7.`, `${BASE}/${slug}`, c.name, v.name), faqSchema([ { q: `How much does a ${v.seats}-seater ${s.label.toLowerCase()} cost in ${c.name}?`, a: `Saudi Cabs GMC provides fixed SAR price. WhatsApp +966 56 948 7569.` }, { q: `Is the ${v.seats}-seater available during Hajj in ${c.name}?`, a: 'Yes, Saudi Cabs GMC operates 24/7 year-round including Hajj season.' } ]) ] },
+        schema: { '@context': 'https://schema.org', '@graph': [ taxiSchema(`${v.label} ${s.label} in ${c.name}`, `${v.name} ${s.label.toLowerCase()} service in ${c.name} — ${v.seats} seats, ${v.luggage}, fixed price, 24/7.`, `${BASE}/${slug}`, c.name, v.name), faqSchema([ { q: `How much does a ${v.seats}-seater ${s.label.toLowerCase()} cost in ${c.name}?`, a: `Saudi Cabs GMC provides fixed SAR price. WhatsApp +92 309 7811785.` }, { q: `Is the ${v.seats}-seater available during Hajj in ${c.name}?`, a: 'Yes, Saudi Cabs GMC operates 24/7 year-round including Hajj season.' } ]) ] },
       })
     }
   }
@@ -341,10 +341,10 @@ for (const vk of V_KEYS) {
     reg({
       slug, pageType: 'vehicle-route',
       metaTitle:   `${v.label} Taxi ${oc.name} to ${dc.name} | ${v.name} | Saudi Cabs GMC`,
-      metaDesc:    `Book a ${v.seats}-seat taxi from ${oc.name} to ${dc.name} — ${v.name}, ${r.km}, ${r.time}. Fixed price, direct, 24/7. Saudi Cabs GMC. WhatsApp: +966 56 948 7569.`,
+      metaDesc:    `Book a ${v.seats}-seat taxi from ${oc.name} to ${dc.name} — ${v.name}, ${r.km}, ${r.time}. Fixed price, direct, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
       h1:          `${v.label} Taxi — ${oc.name} to ${dc.name}`,
       subtitle:    `${v.name} taxi from ${oc.name} to ${dc.name}. ${r.km} · ${r.time} · Fixed SAR · Door-to-door · 24/7.`,
-      quickAnswer: `Saudi Cabs GMC runs a ${v.seats}-seat ${v.name} taxi from ${oc.name} to ${dc.name} — ${r.km}, approximately ${r.time}. Fixed price in SAR, no meter. Book via WhatsApp: +966 56 948 7569.`,
+      quickAnswer: `Saudi Cabs GMC runs a ${v.seats}-seat ${v.name} taxi from ${oc.name} to ${dc.name} — ${r.km}, approximately ${r.time}. Fixed price in SAR, no meter. Book via WhatsApp: +92 309 7811785.`,
       badge:       `${v.label} · ${oc.name} → ${dc.name}`,
       vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
       serviceLabel: 'Taxi', location: `${oc.name} to ${dc.name}`,
@@ -359,7 +359,7 @@ for (const vk of V_KEYS) {
       ],
       faqs: [
         { q: `How long does a ${v.seats}-seater taxi take from ${oc.name} to ${dc.name}?`,     a: `The ${v.name} taxi from ${oc.name} to ${dc.name} takes approximately ${r.time} (${r.km}). Saudi Cabs GMC provides door-to-door service with rest stops for prayers and meals.` },
-        { q: `How much does a ${v.seats}-seater taxi from ${oc.name} to ${dc.name} cost?`,     a: `Saudi Cabs GMC quotes a fixed SAR price before departure — no meters, no surprises. WhatsApp +966 56 948 7569 for the current rate.` },
+        { q: `How much does a ${v.seats}-seater taxi from ${oc.name} to ${dc.name} cost?`,     a: `Saudi Cabs GMC quotes a fixed SAR price before departure — no meters, no surprises. WhatsApp +92 309 7811785 for the current rate.` },
         { q: `Can a ${v.name} fit all my luggage for the ${oc.name}–${dc.name} route?`,        a: `Yes. The ${v.name} carries up to ${v.seats} passengers and ${v.luggage} — suitable for families with typical Hajj or Umrah luggage.` },
         { q: `Is there a direct taxi from ${oc.name} to ${dc.name} with no transfers?`,        a: `Yes. Saudi Cabs GMC provides a direct, non-stop door-to-door taxi from ${oc.name} to ${dc.name}. The driver takes you straight from your hotel to your destination hotel.` },
       ],
@@ -452,10 +452,10 @@ for (const spec of AIRPORT_SPECS) {
   reg({
     slug: spec.slug, pageType: 'airport',
     metaTitle:   `${seats ? seats.trim() + ' ' : ''}${svc.label} ${dir} | Saudi Cabs GMC`,
-    metaDesc:    `Book a ${seats}${svc.label.toLowerCase()} ${dir}${km ? ` (${km}, ${time})` : ''}. Fixed price, name-board pickup, 24/7. Saudi Cabs GMC. WhatsApp: +966 56 948 7569.`,
+    metaDesc:    `Book a ${seats}${svc.label.toLowerCase()} ${dir}${km ? ` (${km}, ${time})` : ''}. Fixed price, name-board pickup, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${seats ? seats.trim() + ' ' : ''}${svc.label} — ${dir.charAt(0).toUpperCase() + dir.slice(1)}`,
     subtitle:    `Fixed-price ${svc.label.toLowerCase()} ${dir}${km ? `. ${km} · ${time}` : ''}. Name-board meet & greet. Flight tracking. 24/7.`,
-    quickAnswer: `Saudi Cabs GMC provides a${seats ? ' ' + seats.trim() : ''} ${svc.label.toLowerCase()} ${dir}${km ? ` — ${km}, approximately ${time}` : ''}. Fixed price in SAR. Name-board pickup at arrivals. Book via WhatsApp: +966 56 948 7569.`,
+    quickAnswer: `Saudi Cabs GMC provides a${seats ? ' ' + seats.trim() : ''} ${svc.label.toLowerCase()} ${dir}${km ? ` — ${km}, approximately ${time}` : ''}. Fixed price in SAR. Name-board pickup at arrivals. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${ap.code} · ${svc.label}`,
     ...(veh ? { vehicleName: veh.name, vehicleSeats: veh.seats, vehicleLuggage: veh.luggage, vehicleAvailable: veh.available } : {}),
     serviceLabel: svc.label, location: ap.shortName,
@@ -469,7 +469,7 @@ for (const spec of AIRPORT_SPECS) {
       { icon: '🪧', label: 'Pickup',     value: 'Name-board at arrivals'     },
     ],
     faqs: [
-      { q: `How do I book a${seats ? ' ' + seats.trim() : ''} ${svc.label.toLowerCase()} ${dir}?`,    a: `WhatsApp Saudi Cabs GMC at +966 56 948 7569 with your flight details, number of passengers, and luggage. Receive a fixed SAR price within minutes. Your driver will meet you at arrivals with a name-board.` },
+      { q: `How do I book a${seats ? ' ' + seats.trim() : ''} ${svc.label.toLowerCase()} ${dir}?`,    a: `WhatsApp Saudi Cabs GMC at +92 309 7811785 with your flight details, number of passengers, and luggage. Receive a fixed SAR price within minutes. Your driver will meet you at arrivals with a name-board.` },
       { q: `How long does it take ${dir}?`,                                                            a: time ? `The journey ${dir} takes approximately ${time} (${km}). Travel time may vary depending on traffic.` : `Contact Saudi Cabs GMC via WhatsApp for the estimated travel time for this route.` },
       { q: `Does Saudi Cabs GMC track flights at ${ap.shortName}?`,                                   a: `Yes. Saudi Cabs GMC monitors all incoming flights at ${ap.name} (${ap.code}). If your flight is delayed, the driver automatically adjusts — at no extra charge.` },
       { q: `What ${svc.label.toLowerCase()} vehicles are available ${dir}?`,                          a: veh ? `For this route, Saudi Cabs GMC uses a ${veh.name} — ${veh.seats} seats, ${veh.luggage}.` : `Saudi Cabs GMC offers 4-seater (Toyota Camry), 7-seater (Hyundai Staria), 11-seater, and 17-seater vehicles. Choose your vehicle when booking via WhatsApp.` },
@@ -502,10 +502,10 @@ for (const ik of I_KEYS) {
       reg({
         slug, pageType: 'intent-city',
         metaTitle:   `${intent.label} ${s.label} in ${c.name} | ${v.name} | Saudi Cabs GMC`,
-        metaDesc:    `Book a ${intent.desc} ${s.label.toLowerCase()} in ${c.name}. Saudi Cabs GMC — ${v.name}, fixed SAR price, 24/7. WhatsApp: +966 56 948 7569.`,
+        metaDesc:    `Book a ${intent.desc} ${s.label.toLowerCase()} in ${c.name}. Saudi Cabs GMC — ${v.name}, fixed SAR price, 24/7. WhatsApp: +92 309 7811785.`,
         h1:          `${intent.label} ${s.label} in ${c.name}`,
         subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} in ${c.name} with Saudi Cabs GMC. ${v.name} — up to ${v.seats} passengers, ${v.luggage}. Fixed price, 24/7.`,
-        quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} ${s.label.toLowerCase()} in ${c.name} — typically using a ${v.name} (${v.seats} seats). Fixed SAR price, no hidden fees. Book via WhatsApp: +966 56 948 7569.`,
+        quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} ${s.label.toLowerCase()} in ${c.name} — typically using a ${v.name} (${v.seats} seats). Fixed SAR price, no hidden fees. Book via WhatsApp: +92 309 7811785.`,
         badge:       `${intent.label} · ${c.name}`,
         vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
         serviceLabel: s.label, location: c.name,
@@ -519,9 +519,9 @@ for (const ik of I_KEYS) {
         ],
         faqs: [
           { q: `What is a ${intent.label} ${s.label.toLowerCase()} in ${c.name}?`,               a: `A ${intent.label} ${s.label.toLowerCase()} from Saudi Cabs GMC in ${c.name} means ${intent.desc}. The recommended vehicle is the ${v.name} (${v.seats} seats, ${v.luggage}).` },
-          { q: `How much does a ${intent.label} ${s.label.toLowerCase()} cost in ${c.name}?`,   a: `Saudi Cabs GMC provides a ${intent.priceWord} fixed SAR price for ${intent.label.toLowerCase()} ${s.label.toLowerCase()} in ${c.name}. WhatsApp +966 56 948 7569 for the latest rate.` },
+          { q: `How much does a ${intent.label} ${s.label.toLowerCase()} cost in ${c.name}?`,   a: `Saudi Cabs GMC provides a ${intent.priceWord} fixed SAR price for ${intent.label.toLowerCase()} ${s.label.toLowerCase()} in ${c.name}. WhatsApp +92 309 7811785 for the latest rate.` },
           { q: `Is the ${intent.label} ${s.label.toLowerCase()} available during Hajj in ${c.name}?`, a: `Yes. Saudi Cabs GMC operates 24/7 year-round including Hajj and Umrah seasons. Early booking is essential during peak periods.` },
-          { q: `How do I book a ${intent.label} ${s.label.toLowerCase()} in ${c.name}?`,         a: `WhatsApp Saudi Cabs GMC at +966 56 948 7569. Mention you need a ${intent.label.toLowerCase()} ${s.label.toLowerCase()} in ${c.name}. Receive a fixed price within minutes.` },
+          { q: `How do I book a ${intent.label} ${s.label.toLowerCase()} in ${c.name}?`,         a: `WhatsApp Saudi Cabs GMC at +92 309 7811785. Mention you need a ${intent.label.toLowerCase()} ${s.label.toLowerCase()} in ${c.name}. Receive a fixed price within minutes.` },
         ],
         relatedLinks: [
           { href: c.hub,            label: `All ${s.label}s in ${c.name}`, tag: 'City' },
@@ -561,10 +561,10 @@ for (const spec of INTENT_AIRPORT_SPECS) {
   reg({
     slug: spec.slug, pageType: 'intent-airport',
     metaTitle:   `${intent.label} Airport Taxi — ${ap.shortName} | Saudi Cabs GMC`,
-    metaDesc:    `Book a ${intent.desc} airport taxi at ${ap.shortName}. Saudi Cabs GMC — ${v.name}, fixed SAR price, name-board pickup, 24/7. WhatsApp: +966 56 948 7569.`,
+    metaDesc:    `Book a ${intent.desc} airport taxi at ${ap.shortName}. Saudi Cabs GMC — ${v.name}, fixed SAR price, name-board pickup, 24/7. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} Airport Taxi — ${ap.shortName}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} taxi service at ${ap.name} (${ap.code}). Name-board pickup · Flight tracking · Fixed SAR · 24/7.`,
-    quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} airport taxi at ${ap.shortName} — typically in a ${v.name}. Name-board pickup at arrivals. Fixed SAR price. Book via WhatsApp: +966 56 948 7569.`,
+    quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} airport taxi at ${ap.shortName} — typically in a ${v.name}. Name-board pickup at arrivals. Fixed SAR price. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${intent.label} · ${ap.code}`,
     vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
     serviceLabel: 'Taxi', location: ap.shortName,
@@ -578,7 +578,7 @@ for (const spec of INTENT_AIRPORT_SPECS) {
     ],
     faqs: [
       { q: `What is a ${intent.label} airport taxi at ${ap.shortName}?`,          a: `A ${intent.label} airport taxi from Saudi Cabs GMC at ${ap.shortName} means ${intent.desc}. Your driver meets you at arrivals with a name-board in a ${v.name}.` },
-      { q: `How much does a ${intent.label} airport taxi cost at ${ap.shortName}?`, a: `Saudi Cabs GMC provides a fixed SAR price for ${intent.label.toLowerCase()} airport taxi service at ${ap.shortName}. WhatsApp +966 56 948 7569 for the current rate.` },
+      { q: `How much does a ${intent.label} airport taxi cost at ${ap.shortName}?`, a: `Saudi Cabs GMC provides a fixed SAR price for ${intent.label.toLowerCase()} airport taxi service at ${ap.shortName}. WhatsApp +92 309 7811785 for the current rate.` },
       { q: `Does Saudi Cabs GMC track flights at ${ap.shortName}?`,               a: `Yes. Saudi Cabs GMC tracks all arrivals at ${ap.name} (${ap.code}). If your flight is delayed, your driver waits — no extra charge.` },
     ],
     relatedLinks: [
@@ -616,10 +616,10 @@ for (const spec of INTENT_VEHICLE_SPECS) {
   reg({
     slug: spec.slug, pageType: 'intent-vehicle',
     metaTitle:   `${intent.label} ${v.label} Taxi in ${c.name} | ${v.name} | Saudi Cabs GMC`,
-    metaDesc:    `Book a ${intent.desc} ${v.seats}-seat taxi in ${c.name} — ${v.name}, fixed SAR price, 24/7. Saudi Cabs GMC. WhatsApp: +966 56 948 7569.`,
+    metaDesc:    `Book a ${intent.desc} ${v.seats}-seat taxi in ${c.name} — ${v.name}, fixed SAR price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} ${v.label} Taxi in ${c.name}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} with a ${v.name} in ${c.name}. ${v.seats} passengers · ${v.luggage} · Fixed SAR · 24/7.`,
-    quickAnswer: `Saudi Cabs GMC provides a ${intent.desc} ${v.seats}-seat taxi in ${c.name} using a ${v.name}. Fixed SAR price, no meter. Book via WhatsApp: +966 56 948 7569.`,
+    quickAnswer: `Saudi Cabs GMC provides a ${intent.desc} ${v.seats}-seat taxi in ${c.name} using a ${v.name}. Fixed SAR price, no meter. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${intent.label} · ${v.label} · ${c.name}`,
     vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
     serviceLabel: 'Taxi', location: c.name,
@@ -633,7 +633,7 @@ for (const spec of INTENT_VEHICLE_SPECS) {
     ],
     faqs: [
       { q: `What does a ${intent.label} ${v.label} taxi in ${c.name} include?`,   a: `A ${intent.label} ${v.label} taxi from Saudi Cabs GMC in ${c.name} means ${intent.desc} in a ${v.name} — ${v.seats} seats, ${v.luggage}.` },
-      { q: `How much does a ${intent.label} ${v.label} taxi cost in ${c.name}?`, a: `Saudi Cabs GMC provides a fixed SAR price. WhatsApp +966 56 948 7569 for the current rate for a ${intent.label.toLowerCase()} ${v.seats}-seat taxi in ${c.name}.` },
+      { q: `How much does a ${intent.label} ${v.label} taxi cost in ${c.name}?`, a: `Saudi Cabs GMC provides a fixed SAR price. WhatsApp +92 309 7811785 for the current rate for a ${intent.label.toLowerCase()} ${v.seats}-seat taxi in ${c.name}.` },
     ],
     relatedLinks: [
       { href: c.hub,                    label: `All Taxis in ${c.name}`, tag: 'City' },
@@ -669,10 +669,10 @@ for (const spec of MONEY_ROUTE_SPECS) {
   reg({
     slug: spec.slug, pageType: 'money-route',
     metaTitle:   `${intent.label} Taxi ${oc.name} to ${dc.name} | ${v.name} | Saudi Cabs GMC`,
-    metaDesc:    `Book a ${intent.desc} taxi from ${oc.name} to ${dc.name} — ${r.km}, ${r.time}. ${v.name}, fixed SAR, 24/7. Saudi Cabs GMC. WhatsApp: +966 56 948 7569.`,
+    metaDesc:    `Book a ${intent.desc} taxi from ${oc.name} to ${dc.name} — ${r.km}, ${r.time}. ${v.name}, fixed SAR, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} Taxi — ${oc.name} to ${dc.name}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} from ${oc.name} to ${dc.name}. ${r.km} · ${r.time} · ${v.name} · Fixed SAR.`,
-    quickAnswer: `Saudi Cabs GMC provides a ${intent.desc} taxi from ${oc.name} to ${dc.name} — ${r.km}, ${r.time}, in a ${v.name}. Fixed SAR price. Book via WhatsApp: +966 56 948 7569.`,
+    quickAnswer: `Saudi Cabs GMC provides a ${intent.desc} taxi from ${oc.name} to ${dc.name} — ${r.km}, ${r.time}, in a ${v.name}. Fixed SAR price. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${intent.label} · ${oc.name} → ${dc.name}`,
     vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
     serviceLabel: 'Taxi', location: `${oc.name} to ${dc.name}`,
@@ -686,7 +686,7 @@ for (const spec of MONEY_ROUTE_SPECS) {
       { icon: '🚪', label: 'Service',    value: 'Door-to-door'        },
     ],
     faqs: [
-      { q: `How much does a ${intent.label} taxi from ${oc.name} to ${dc.name} cost?`, a: `Saudi Cabs GMC provides a ${intent.priceWord} fixed SAR price for the ${oc.name}–${dc.name} route. WhatsApp +966 56 948 7569 for the current rate.` },
+      { q: `How much does a ${intent.label} taxi from ${oc.name} to ${dc.name} cost?`, a: `Saudi Cabs GMC provides a ${intent.priceWord} fixed SAR price for the ${oc.name}–${dc.name} route. WhatsApp +92 309 7811785 for the current rate.` },
       { q: `How long does a ${intent.label} taxi take from ${oc.name} to ${dc.name}?`, a: `The ${oc.name}–${dc.name} trip takes approximately ${r.time} (${r.km}). Saudi Cabs GMC provides door-to-door service with rest stops.` },
       { q: `What vehicle is used for the ${intent.label} taxi from ${oc.name} to ${dc.name}?`, a: `For the ${intent.label} ${oc.name}–${dc.name} taxi, Saudi Cabs GMC typically uses a ${v.name} — ${v.seats} seats, ${v.luggage}.` },
     ],

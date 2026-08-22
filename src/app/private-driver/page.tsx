@@ -15,7 +15,7 @@ const FAQS = [
 export default function PrivateDriverPage() {
   const { lang, isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[lang]
-  const waUrl = `https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a private driver")}`
+  const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a private driver")}`
 
   return (
     <main>
@@ -40,7 +40,7 @@ export default function PrivateDriverPage() {
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary"><MessageCircle size={16} strokeWidth={2.5} />{isAr ? 'احجز سائقك الخاص' : 'Book Your Private Driver'}</a>
-                <a href="https://wa.me/966569487569" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
+                <a href="https://wa.me/923097811785" className="btn-outline"><Phone size={16} strokeWidth={2.5} />{isAr ? 'اتصل بنا' : 'Call Us'}</a>
               </div>
             </div>
             <div className="animate-fadeInUp animate-delay-1"><BookingForm /></div>
@@ -94,7 +94,7 @@ export default function PrivateDriverPage() {
                 <h3 style={{ fontSize: '1.1rem', fontWeight: '900', marginBottom: '6px' }}>{tx(p.t)}</h3>
                 <div style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '14px' }}>{tx(p.h)}</div>
                 <p style={{ fontSize: '0.86rem', color: 'var(--muted-foreground)', lineHeight: 1.65, marginBottom: '20px' }}>{tx(p.d)}</p>
-                <a href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? `أرغب في حجز سائق خاص - ${p.t.ar}` : `I'd like a private driver - ${p.t.en} package`)}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#25D366', color: 'white', padding: '9px 20px', borderRadius: '8px', fontWeight: '700', fontSize: '0.84rem', textDecoration: 'none' }}>
+                <a href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? `أرغب في حجز سائق خاص - ${p.t.ar}` : `I'd like a private driver - ${p.t.en} package`)}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#25D366', color: 'white', padding: '9px 20px', borderRadius: '8px', fontWeight: '700', fontSize: '0.84rem', textDecoration: 'none' }}>
                   <MessageCircle size={14} strokeWidth={2.5} />{isAr ? 'احجز الآن' : 'Book Now'}
                 </a>
               </div>
@@ -122,8 +122,8 @@ export default function PrivateDriverPage() {
           <h2 style={{ fontSize: 'clamp(1.3rem,3vw,2rem)', fontWeight: '900', marginBottom: '12px' }}>{isAr ? 'احجز سائقك الخاص الآن' : 'Book Your Private Driver Now'}</h2>
           <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'متاح في مكة والمدينة وجدة والطائف — يومياً وأسبوعياً' : 'Available in Makkah, Madinah, Jeddah & Taif — daily & weekly'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/966569487569?text=${encodeURIComponent(isAr ? 'أرغب في حجز سائق خاص' : "I'd like a private driver")}`} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
-            <a href="https://wa.me/966569487569" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+966 56 948 7569</a>
+            <a href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'أرغب في حجز سائق خاص' : "I'd like a private driver")}`} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
+            <a href="https://wa.me/923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>
           </div>
         </div>
       </section>

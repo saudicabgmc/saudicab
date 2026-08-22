@@ -27,7 +27,7 @@ const madinahLocalBusinessSchema = {
   '@id': 'https://saudicabsgmc.com/madinah-taxi-service#business',
   name: 'Saudi Cabs GMC — Madinah Taxi Service',
   url: 'https://saudicabsgmc.com/madinah-taxi-service',
-  telephone: '+966569487569',
+  telephone: '+923097811785',
   image: 'https://saudicabsgmc.com/location/madinah.webp',
   description: "Premium taxi service in Madinah. Airport transfers, Prophet's Mosque visits, Ziyarat tours, intercity routes to Makkah, Jeddah & Taif. Fixed prices 24/7.",
   address: {

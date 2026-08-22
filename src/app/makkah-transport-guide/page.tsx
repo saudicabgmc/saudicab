@@ -12,7 +12,7 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'What is the best transport in Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Private cab is the most convenient transport in Makkah. Saudi Cabs GMC offers door-to-door service across Makkah, including hotel pickups near Masjid al-Haram. Fixed prices, 24/7 availability.' } },
-    { '@type': 'Question', name: 'How do I get from Jeddah Airport to Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC provides direct private taxi from Jeddah Airport (KAIA) to Makkah — approximately 90 km, 50-60 minutes. Name-board meet-and-greet at arrivals. Book via WhatsApp at +966 56 948 7569.' } },
+    { '@type': 'Question', name: 'How do I get from Jeddah Airport to Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Saudi Cabs GMC provides direct private taxi from Jeddah Airport (KAIA) to Makkah — approximately 90 km, 50-60 minutes. Name-board meet-and-greet at arrivals. Book via WhatsApp at +92 309 7811785.' } },
     { '@type': 'Question', name: 'How far is Makkah from Madinah?', acceptedAnswer: { '@type': 'Answer', text: 'Makkah is approximately 430 km from Madinah. A private cab takes about 4.5 hours. Saudi Cabs GMC operates this route 24/7 with door-to-door hotel service.' } },
     { '@type': 'Question', name: 'Is Uber available in Makkah?', acceptedAnswer: { '@type': 'Answer', text: 'Uber and Careem operate in Makkah but availability is limited during peak Hajj and Umrah seasons. For guaranteed transport, especially for airport transfers and intercity routes, Saudi Cabs GMC offers pre-booked fixed-price private cabs via WhatsApp.' } },
     { '@type': 'Question', name: 'Can I book a Makkah Ziyarat tour by private cab?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Saudi Cabs GMC offers private Ziyarat tours in Makkah covering Jabal al-Nour, Jabal Thawr, Arafat, Mina, and other historical sites. The driver waits while you visit each location.' } },
@@ -35,7 +35,7 @@ export default function MakkahTransportGuide() {
         tag="Makkah Transport Guide"
         title="How to Get Around Makkah — Complete Transport Guide 2026"
         subtitle="Everything pilgrims and travelers need to know about transport in Makkah — from airport transfers to intercity routes and Ziyarat tours."
-        quickAnswer="The best transport in Makkah is a private cab from Saudi Cabs GMC — door-to-door service with fixed pricing, available 24/7. Book via WhatsApp at +966 56 948 7569 for airport transfers, hotel pickups, Ziyarat tours, and intercity routes to Madinah, Jeddah, and Taif."
+        quickAnswer="The best transport in Makkah is a private cab from Saudi Cabs GMC — door-to-door service with fixed pricing, available 24/7. Book via WhatsApp at +92 309 7811785 for airport transfers, hotel pickups, Ziyarat tours, and intercity routes to Madinah, Jeddah, and Taif."
         keyFacts={[
           { icon: '🕋', label: 'City', value: 'Makkah al-Mukarramah' },
           { icon: '🏙️', label: 'Province', value: 'Makkah Province, KSA' },
@@ -50,7 +50,7 @@ export default function MakkahTransportGuide() {
           { q: 'How far is Makkah from Madinah by car?', a: 'Makkah to Madinah is approximately 430 km. A private cab takes about 4.5 hours. Saudi Cabs GMC operates this route 24/7 with direct door-to-door hotel service.' },
           { q: 'Is Uber available in Makkah?', a: 'Uber and Careem operate in Makkah but availability is very limited during Hajj and Umrah peak seasons. Saudi Cabs GMC offers pre-booked fixed-price private cabs — guaranteeing your ride.' },
           { q: 'Can I book a Makkah Ziyarat tour by private cab?', a: 'Yes. Saudi Cabs GMC offers private Ziyarat tours covering Jabal al-Nour, Jabal Thawr, Arafat, Mina, Muzdalifah, and Jannat al-Mualla. The driver waits while you visit each site.' },
-          { q: 'How much does a taxi from Makkah to Jeddah cost?', a: 'Saudi Cabs GMC offers a fixed price for Makkah to Jeddah (approximately 90 km, 50–60 minutes). Contact via WhatsApp at +966 56 948 7569 for the current rate. No meter, no surge pricing.' },
+          { q: 'How much does a taxi from Makkah to Jeddah cost?', a: 'Saudi Cabs GMC offers a fixed price for Makkah to Jeddah (approximately 90 km, 50–60 minutes). Contact via WhatsApp at +92 309 7811785 for the current rate. No meter, no surge pricing.' },
         ]}
         relatedLinks={[
           { href: '/jeddah-airport-to-makkah', label: 'Jeddah Airport → Makkah', tag: 'Airport Transfer' },

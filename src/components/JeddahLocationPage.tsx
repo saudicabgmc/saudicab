@@ -110,7 +110,7 @@ export default function JeddahLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/966569487569" style={{
+                <a href="https://wa.me/923097811785" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   background: '#0891b2', color: 'white', padding: '13px 28px',
                   borderRadius: '8px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
@@ -118,7 +118,7 @@ export default function JeddahLocationPage({
                   <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
                 </a>
                 <a
-                  href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
@@ -232,7 +232,7 @@ export default function JeddahLocationPage({
             {routes.map((r, i) => (
               <a
                 key={r.label.ar}
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -396,7 +396,7 @@ export default function JeddahLocationPage({
                 {tr.ctaDesc} {tx(cityName)} {tr.ctaDescEnd}
               </p>
               <a
-                href={`https://wa.me/966569487569?text=${encodeURIComponent(waText)}`}
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -406,13 +406,13 @@ export default function JeddahLocationPage({
               >
                 <MessageCircle size={17} strokeWidth={2.5} /> {tr.whatsapp}
               </a>
-              <a href="https://wa.me/966569487569" style={{
+              <a href="https://wa.me/923097811785" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 background: 'rgba(8,145,178,0.2)', color: 'white', padding: '12px 28px',
                 borderRadius: '8px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',
                 border: '1px solid rgba(8,145,178,0.4)',
               }}>
-                <Phone size={17} strokeWidth={2.5} /> +966 56 948 7569
+                <Phone size={17} strokeWidth={2.5} /> +92 309 7811785
               </a>
             </div>
           </div>

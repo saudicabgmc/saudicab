@@ -27,7 +27,7 @@ const makkahLocalBusinessSchema = {
   '@id': 'https://saudicabsgmc.com/makkah-taxi-service#business',
   name: 'Saudi Cabs GMC — Makkah Taxi Service',
   url: 'https://saudicabsgmc.com/makkah-taxi-service',
-  telephone: '+966569487569',
+  telephone: '+923097811785',
   image: 'https://saudicabsgmc.com/location/makkah.webp',
   description: 'Premium taxi service in Makkah. Airport transfers from Jeddah Airport (KAIA), Umrah & Hajj transport, intercity routes to Madinah, Jeddah & Taif. Fixed prices 24/7.',
   address: {

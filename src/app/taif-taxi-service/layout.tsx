@@ -27,7 +27,7 @@ const taifLocalBusinessSchema = {
   '@id': 'https://saudicabsgmc.com/taif-taxi-service#business',
   name: 'Saudi Cabs GMC — Taif Taxi Service',
   url: 'https://saudicabsgmc.com/taif-taxi-service',
-  telephone: '+966569487569',
+  telephone: '+923097811785',
   image: 'https://saudicabsgmc.com/location/taif.webp',
   description: 'Premium taxi service in Taif. Mountain tours to Shafa & Hada, rose farm visits, Taif Airport transfers, intercity routes to Makkah & Jeddah. Fixed prices 24/7.',
   address: {
