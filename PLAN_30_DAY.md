@@ -18,7 +18,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 
 ## Week 2 — Blog Content Gaps (7 articles from TOPICAL_MAP.md, verified still missing)
 - [x] **Day 8**: "Taxi from Madinah to Makkah — What to Expect" — published at `/blog/taxi-madinah-to-makkah-what-to-expect`, covers distance/duration, the Dhul-Hulayfah (Abyar Ali) Miqat stop, vehicle choice, and private-vs-shared transport
-- [ ] **Day 9**: "How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide"
+- [x] **Day 9**: "How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide" — published at `/blog/how-much-does-a-taxi-cost-in-saudi-arabia`, cites the real centralized `pricingData.ts` fares (e.g. Jeddah Airport → Makkah: 330/380/530 SAR) rather than "contact us for pricing", explains what actually moves the price (vehicle, distance) — no overlap with the existing `/taxi-prices-saudi-arabia` distance/time table guide
 - [ ] **Day 10**: "Best Time to Travel Makkah to Madinah by Private Car"
 - [ ] **Day 11**: "Umrah Checklist: Transport, Hotels & What to Pack"
 - [ ] **Day 12**: "10 Things to Know Before Your First Umrah Trip"

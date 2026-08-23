@@ -494,4 +494,83 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/location/madinah.webp',
   },
+  {
+    slug: 'how-much-does-a-taxi-cost-in-saudi-arabia',
+    title: {
+      en: 'How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide',
+      ar: 'كم تكلفة التاكسي في السعودية؟ دليل الأسعار 2026',
+    },
+    excerpt: {
+      en: 'A plain-language breakdown of what actually affects a taxi fare in Saudi Arabia — vehicle type, distance, and why fixed pricing beats a meter.',
+      ar: 'شرح مبسّط لما يحدد سعر التاكسي فعلياً في السعودية — نوع السيارة والمسافة، ولماذا السعر الثابت أفضل من العداد.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">"How much will it cost?" is the first question almost every traveler asks before booking a taxi in Saudi Arabia. With Saudi Cabs GMC there's no meter and no surprise — the price is agreed before the trip starts. Here's exactly what determines that price.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. Vehicle Type is the Biggest Factor</h2>
+<p style="margin-bottom:1rem;">The same route costs different amounts depending on which vehicle you choose:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Sedan (4 seats):</strong> The most economical option, ideal for solo travelers and couples</li>
+  <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria (7 seats):</strong> Mid-range pricing, more space for families and luggage</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC Yukon (7 seats, VIP):</strong> The premium option — leather seats, extra comfort for long drives</li>
+</ul>
+<p style="margin-bottom:1rem;">For example, Jeddah Airport to Makkah runs 330 SAR in the sedan, 380 SAR in the Staria, and 530 SAR in the GMC Yukon — the route is identical, only the vehicle changes the price.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. Distance Matters More Than Traffic</h2>
+<p style="margin-bottom:1rem;">Because the price is fixed before departure, traffic, waiting time, and time of day don't change what you pay. What does change the price is the actual distance of the route:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Short city routes</strong> (e.g. Jeddah to Makkah, ~90 km): typically the lowest fares</li>
+  <li style="margin-bottom:0.5rem;"><strong>Airport transfers to a further city</strong> (e.g. Jeddah Airport to Madinah, ~420 km): priced higher for the longer highway drive</li>
+  <li style="margin-bottom:0.5rem;"><strong>Intercity routes</strong> (e.g. Makkah to Madinah, ~430 km): a mid-to-long fare reflecting the full highway trip</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. Ziyarat & Tour Packages Are Priced Differently</h2>
+<p style="margin-bottom:1rem;">A Ziyarat tour (visiting several historical Islamic sites in one trip) isn't priced like a point-to-point transfer — it covers multiple stops and waiting time at each site, so it's quoted as its own package rather than a simple distance fare. Ask for the current Ziyarat package rate when you book.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. Why Fixed Pricing Beats a Meter</h2>
+<p style="margin-bottom:1rem;">A metered taxi can run up the fare in slow traffic, at red lights, or by taking a longer route. With a fixed price agreed in advance:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">You know the exact cost before you get in the car</li>
+  <li style="margin-bottom:0.5rem;">Traffic jams and route changes don't cost you extra</li>
+  <li style="margin-bottom:0.5rem;">The price is per vehicle, not per passenger — a family of 5 pays the same as a solo traveler</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Get an Exact Price</h2>
+<p style="margin-bottom:1rem;">Prices are updated from time to time, so the most reliable way to get today's exact rate for your route is to message Saudi Cabs GMC on WhatsApp with your pickup, destination, and preferred vehicle. You'll get a confirmed price back in minutes — no obligation, no meter, no hidden fees.</p>`,
+      ar: `<p style="margin-bottom:1rem;">"كم ستكون التكلفة؟" هو أول سؤال يطرحه تقريباً كل مسافر قبل حجز تاكسي في السعودية. مع Saudi Cabs GMC لا يوجد عداد ولا مفاجآت — يتم الاتفاق على السعر قبل بدء الرحلة. إليك بالضبط ما يحدد ذلك السعر.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. نوع السيارة هو العامل الأكبر</h2>
+<p style="margin-bottom:1rem;">نفس الطريق يكلف مبالغ مختلفة حسب السيارة التي تختارها:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>سيدان (٤ مقاعد):</strong> الخيار الأكثر اقتصادية، مثالي للأفراد والأزواج</li>
+  <li style="margin-bottom:0.5rem;"><strong>هيونداي ستاريا (٧ مقاعد):</strong> سعر متوسط، مساحة أكبر للعائلات والأمتعة</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC يوكن (٧ مقاعد، VIP):</strong> الخيار الفاخر — مقاعد جلدية وراحة إضافية للرحلات الطويلة</li>
+</ul>
+<p style="margin-bottom:1rem;">على سبيل المثال، مطار جدة إلى مكة يكلف 330 ريال بالسيدان، و380 ريال بالستاريا، و530 ريال بالـ GMC يوكن — نفس الطريق تماماً، السيارة فقط هي ما يغيّر السعر.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. المسافة أهم من الزحام</h2>
+<p style="margin-bottom:1rem;">بما أن السعر ثابت ومتفق عليه قبل الانطلاق، فإن الزحام ووقت الانتظار ووقت اليوم لا تغيّر ما تدفعه. ما يغيّر السعر فعلياً هو المسافة الفعلية للطريق:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>الطرق القصيرة داخل المدن</strong> (مثل جدة - مكة، ~90 كم): عادةً أقل الأسعار</li>
+  <li style="margin-bottom:0.5rem;"><strong>توصيل المطار لمدينة أبعد</strong> (مثل مطار جدة - المدينة المنورة، ~420 كم): سعر أعلى لطول الطريق السريع</li>
+  <li style="margin-bottom:0.5rem;"><strong>الطرق بين المدن</strong> (مثل مكة - المدينة، ~430 كم): سعر متوسط إلى طويل يعكس الرحلة الكاملة</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. باقات الزيارات لها تسعير مختلف</h2>
+<p style="margin-bottom:1rem;">جولة الزيارات (زيارة عدة مواقع إسلامية تاريخية في رحلة واحدة) لا تُسعَّر مثل التوصيل من نقطة لنقطة — فهي تشمل عدة توقفات ووقت انتظار عند كل موقع، لذا تُحدَّد كباقة خاصة بها بدلاً من سعر مسافة بسيط. اسأل عن سعر باقة الزيارات الحالي عند الحجز.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. لماذا السعر الثابت أفضل من العداد</h2>
+<p style="margin-bottom:1rem;">التاكسي بالعداد قد يرفع السعر في الزحام أو عند الإشارات أو بسلوك طريق أطول. مع سعر ثابت متفق عليه مسبقاً:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">تعرف التكلفة الدقيقة قبل ركوب السيارة</li>
+  <li style="margin-bottom:0.5rem;">الزحام وتغيير المسار لا يكلفانك أي رسوم إضافية</li>
+  <li style="margin-bottom:0.5rem;">السعر لكل سيارة وليس لكل راكب — عائلة من 5 أفراد تدفع نفس سعر المسافر الفردي</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحصل على السعر الدقيق</h2>
+<p style="margin-bottom:1rem;">الأسعار تُحدَّث من وقت لآخر، لذا أفضل طريقة للحصول على السعر الدقيق الحالي لرحلتك هي مراسلة Saudi Cabs GMC عبر واتساب مع تحديد نقطة الانطلاق والوجهة والسيارة المفضلة. ستحصل على سعر مؤكد خلال دقائق — بدون التزام، بدون عداد، وبدون رسوم خفية.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
+  },
 ];
