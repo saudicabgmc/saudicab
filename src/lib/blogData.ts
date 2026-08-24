@@ -573,4 +573,73 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
   },
+  {
+    slug: 'best-time-travel-makkah-madinah-private-car',
+    title: {
+      en: 'Best Time to Travel Makkah to Madinah by Private Car',
+      ar: 'أفضل وقت للسفر من مكة إلى المدينة بسيارة خاصة',
+    },
+    excerpt: {
+      en: 'Timing your Makkah–Madinah drive well makes a real difference — here\'s how time of day, season, and the Islamic calendar affect the trip.',
+      ar: 'اختيار الوقت المناسب لرحلة مكة - المدينة يُحدث فرقاً حقيقياً — إليك كيف يؤثر وقت اليوم والموسم والتقويم الهجري على الرحلة.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">The 430 km drive between Makkah and Madinah takes roughly the same 4 to 4.5 hours regardless of when you leave — but when you leave still makes a real difference to how comfortable the trip is. Here's how to time it well.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Time of Day: Night vs Day</h2>
+<p style="margin-bottom:1rem;">Both options work, but each has a different feel:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Night departure:</strong> Cooler temperatures, lighter highway traffic, and — if you leave from Madinah after Isha — you can arrive in Makkah in time to rest before Fajr at the Haram. Popular with pilgrims who want to sleep through most of the drive.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Daytime departure:</strong> Easier for families with young children on a normal schedule, and you can see the desert landscape along the way. Plan for a stop or two around Dhuhr or Asr for prayer.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Season: Cooler Months Are Easier on the Road</h2>
+<p style="margin-bottom:1rem;">Saudi Arabia's summer (roughly June to August) brings very high daytime temperatures on the highway between the two cities. A private car with working air conditioning handles this fine, but a daytime summer drive is noticeably more tiring than the same trip in winter (November to February), when temperatures are far more comfortable for rest stops and prayer breaks along the way.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">The Islamic Calendar Changes Everything</h2>
+<p style="margin-bottom:1rem;">The single biggest factor isn't the clock — it's the Hijri calendar:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Last 10 days of Ramadan:</strong> Extremely high pilgrim traffic in both cities. Book your car well in advance and expect busier highways.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Hajj season:</strong> The heaviest travel period of the year around Makkah. If your trip isn't Hajj-related, avoid traveling in and out of Makkah during the peak days if you can.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Regular Umrah season (outside Ramadan/Hajj):</strong> The most relaxed time to travel — shorter waits, more flexible scheduling, and easier hotel availability at both ends.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Build Prayer Times Into Your Schedule</h2>
+<p style="margin-bottom:1rem;">A private driver will typically plan stops around Dhuhr, Asr, Maghrib, or Isha depending on when you depart, rather than rushing straight through. If you have a specific prayer-time preference, mention it when you book so your driver can plan the stops accordingly.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Our Recommendation</h2>
+<p style="margin-bottom:1rem;">If your schedule is flexible, a night departure outside Ramadan and Hajj season is the most comfortable combination — cooler weather, quieter highway, and a rested arrival. If you're traveling during a peak period, simply book a few days ahead and build in extra time for busier roads near the cities.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Makkah–Madinah route at any hour, any day, with a fixed price agreed before you travel. Message us on WhatsApp to lock in your preferred departure time.</p>`,
+      ar: `<p style="margin-bottom:1rem;">رحلة الـ430 كم بين مكة المكرمة والمدينة المنورة تستغرق تقريباً نفس الـ4 إلى 4.5 ساعة بغض النظر عن وقت الانطلاق — لكن وقت الانطلاق لا يزال يُحدث فرقاً حقيقياً في راحة الرحلة. إليك كيف تختار التوقيت المناسب.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">وقت اليوم: ليلاً أم نهاراً</h2>
+<p style="margin-bottom:1rem;">كلا الخيارين جيد، لكن لكل منهما طابعه الخاص:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>الانطلاق ليلاً:</strong> درجات حرارة أبرد وحركة مرور أخف على الطريق السريع — وإذا انطلقت من المدينة بعد صلاة العشاء، يمكنك الوصول إلى مكة في وقت يتيح لك الراحة قبل صلاة الفجر في الحرم. خيار شائع لمن يريد النوم خلال معظم الرحلة.</li>
+  <li style="margin-bottom:0.5rem;"><strong>الانطلاق نهاراً:</strong> أسهل للعائلات ذات الأطفال الصغار وفق جدول طبيعي، ويمكنك رؤية المناظر الصحراوية على الطريق. خطط لتوقف أو اثنين حول الظهر أو العصر للصلاة.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الموسم: الأشهر الباردة أسهل على الطريق</h2>
+<p style="margin-bottom:1rem;">صيف السعودية (تقريباً من يونيو إلى أغسطس) يجلب درجات حرارة نهارية مرتفعة جداً على الطريق السريع بين المدينتين. السيارة الخاصة بتكييف جيد تتعامل مع هذا بسهولة، لكن رحلة نهارية صيفية أكثر إرهاقاً بشكل ملحوظ من نفس الرحلة في الشتاء (نوفمبر إلى فبراير)، حين تكون درجات الحرارة أكثر ملاءمة لتوقفات الراحة والصلاة على الطريق.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التقويم الهجري يغيّر كل شيء</h2>
+<p style="margin-bottom:1rem;">العامل الأكبر ليس الساعة — بل التقويم الهجري:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>العشر الأواخر من رمضان:</strong> حركة حجاج ومعتمرين عالية جداً في كلا المدينتين. احجز سيارتك مسبقاً وتوقع طرقاً أكثر ازدحاماً.</li>
+  <li style="margin-bottom:0.5rem;"><strong>موسم الحج:</strong> أكثر فترات السفر ازدحاماً في العام حول مكة المكرمة. إذا لم تكن رحلتك متعلقة بالحج، تجنب السفر من وإلى مكة خلال الأيام الذروة إن أمكن.</li>
+  <li style="margin-bottom:0.5rem;"><strong>موسم العمرة العادي (خارج رمضان والحج):</strong> أهدأ وقت للسفر — انتظار أقل ومرونة أكبر في الجدولة وتوفر أسهل للفنادق في كلا الطرفين.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">خطط لأوقات الصلاة ضمن جدولك</h2>
+<p style="margin-bottom:1rem;">عادةً ما يخطط السائق الخاص للتوقفات حول الظهر أو العصر أو المغرب أو العشاء حسب وقت انطلاقك، بدلاً من السير المباشر دون توقف. إذا كان لديك تفضيل معين بخصوص وقت الصلاة، اذكره عند الحجز حتى يخطط سائقك للتوقفات وفقاً لذلك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">توصيتنا</h2>
+<p style="margin-bottom:1rem;">إذا كان جدولك مرناً، فالانطلاق ليلاً خارج رمضان وموسم الحج هو الخيار الأكثر راحة — طقس أبرد وطريق أهدأ ووصول بعد راحة كافية. إذا كنت تسافر خلال فترة ذروة، فقط احجز قبل أيام وخصص وقتاً إضافياً للطرق الأكثر ازدحاماً قرب المدينتين.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط مكة - المدينة في أي ساعة وأي يوم، بسعر ثابت متفق عليه قبل السفر. راسلنا عبر واتساب لتحديد وقت انطلاقك المفضل.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/makkah.webp',
+  },
 ];
