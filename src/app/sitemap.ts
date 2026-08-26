@@ -111,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/how-much-does-a-taxi-cost-in-saudi-arabia`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/best-time-travel-makkah-madinah-private-car`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/umrah-checklist-transport-hotels-packing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/blog/10-things-to-know-first-umrah-trip`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
 
     // Vehicle SEO programmatic pages (~190)
     ...vehicleSeoEntries,

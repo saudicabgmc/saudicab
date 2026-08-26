@@ -21,7 +21,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 9**: "How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide" — published at `/blog/how-much-does-a-taxi-cost-in-saudi-arabia`, cites the real centralized `pricingData.ts` fares (e.g. Jeddah Airport → Makkah: 330/380/530 SAR) rather than "contact us for pricing", explains what actually moves the price (vehicle, distance) — no overlap with the existing `/taxi-prices-saudi-arabia` distance/time table guide
 - [x] **Day 10**: "Best Time to Travel Makkah to Madinah by Private Car" — published at `/blog/best-time-travel-makkah-madinah-private-car`, covers time-of-day, seasonal heat, and Hijri-calendar timing (Ramadan/Hajj vs regular Umrah season) — distinct angle from Day 8's post
 - [x] **Day 11**: "Umrah Checklist: Transport, Hotels & What to Pack" — published at `/blog/umrah-checklist-transport-hotels-packing`, practical checklist format across 3 sections (transport, hotels, packing)
-- [ ] **Day 12**: "10 Things to Know Before Your First Umrah Trip"
+- [x] **Day 12**: "10 Things to Know Before Your First Umrah Trip" — published at `/blog/10-things-to-know-first-umrah-trip`, first-timer orientation tips (Miqat timing, crowds, footwear, cash, SIM, heat, distances, Ziyarat is optional, prayer-time slowdowns, booking ahead) distinct from Day 11's checklist
 - [ ] **Day 13**: "Saudi Arabia for Non-Muslims — Travel Transport Guide"
 - [ ] **Day 14**: "How to Book Hajj Transport in Advance"
 

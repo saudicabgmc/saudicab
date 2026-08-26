@@ -729,4 +729,85 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/location/makkah.webp',
   },
+  {
+    slug: '10-things-to-know-first-umrah-trip',
+    title: {
+      en: '10 Things to Know Before Your First Umrah Trip',
+      ar: '10 أشياء يجب معرفتها قبل أول رحلة عمرة',
+    },
+    excerpt: {
+      en: 'Practical, non-obvious things first-time Umrah travelers usually only learn after arriving — footwear, crowds, cash, and more.',
+      ar: 'أمور عملية غير بديهية يكتشفها معتمرو أول مرة عادةً بعد الوصول فقط — الأحذية والزحام والنقد وغيرها.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Your first Umrah trip is unlike any other journey — part spiritual, part logistical. Here are 10 practical things that catch most first-timers off guard.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. Your Ihram Starts Before You Land</h2>
+<p style="margin-bottom:1rem;">If you're flying into Jeddah for Umrah, you typically enter the state of Ihram on the plane or shortly before landing, since the flight path crosses the Miqat boundary. Know this in advance so you're not caught off guard mid-flight.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. The Haram Is Busier Than Photos Suggest</h2>
+<p style="margin-bottom:1rem;">Photos and videos rarely capture how many people are actually moving through the Haram at any given time, especially around prayer times. Stay close to your group, agree on a meeting point in advance, and keep a phone number written down in case your phone battery dies.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. Footwear Choice Matters More Than You'd Think</h2>
+<p style="margin-bottom:1rem;">You'll remove your shoes constantly. Slip-on sandals save time and hassle compared to laced shoes, and a small shoe bag keeps them with you instead of lost in the shelves outside the mosque.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. Keep Small Cash on Hand</h2>
+<p style="margin-bottom:1rem;">While cards work in most hotels and malls, small SAR notes are useful for local shops, small purchases, and tipping. Exchange or withdraw some cash early in your trip rather than searching for an ATM later.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">5. A Local SIM or eSIM Makes Everything Easier</h2>
+<p style="margin-bottom:1rem;">A working local data connection makes it much easier to use maps, stay in your WhatsApp group, and message your driver for pickups. Consider getting a Saudi SIM or eSIM as soon as you land.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">6. The Heat Can Be Intense — Hydrate Proactively</h2>
+<p style="margin-bottom:1rem;">Depending on the season, temperatures around Makkah and Madinah can be extreme. Carry water, don't wait until you're thirsty, and pace your walking between the Haram and your hotel during the hottest parts of the day.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">7. Makkah and Madinah Are Walkable — The Distance Between Them Isn't</h2>
+<p style="margin-bottom:1rem;">Once you're near the Haram in either city, most things are within walking distance. But Makkah and Madinah themselves are about 430 km apart — a 4 to 4.5 hour drive, not a short taxi ride. Plan and book that leg of your trip separately and in advance.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">8. Ziyarat Sites Are Optional Extras, Not Part of Umrah Itself</h2>
+<p style="margin-bottom:1rem;">Visiting historical sites like Jabal al-Nour, Jabal Thawr, Quba Mosque, or Mount Uhud is a common and meaningful addition to a trip, but they're separate from the core rituals of Umrah. Budget extra time and a separate vehicle booking if you want to include them.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">9. Everything Slows Down Around Prayer Times</h2>
+<p style="margin-bottom:1rem;">Traffic, shops, and pedestrian movement all shift around each Salah. If you're traveling by road near a prayer time, expect a stop — most private drivers plan for this rather than fight through it.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">10. Book Transport Before You Need It, Not When You Need It</h2>
+<p style="margin-bottom:1rem;">Airport pickups, intercity transfers, and Ziyarat tours all get harder to book last-minute during Ramadan and Hajj season. Arranging your rides in advance — even just a WhatsApp message with your flight number and dates — saves stress once you've landed.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. Message us on WhatsApp to arrange your first Umrah trip in advance.</p>`,
+      ar: `<p style="margin-bottom:1rem;">أول رحلة عمرة تختلف عن أي رحلة أخرى — جزء منها روحاني وجزء لوجستي. إليك 10 أمور عملية تفاجئ معظم معتمري أول مرة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. إحرامك يبدأ قبل الهبوط</h2>
+<p style="margin-bottom:1rem;">إذا كنت قادماً إلى جدة للعمرة، فغالباً ستدخل في الإحرام على متن الطائرة أو قبل الهبوط بقليل، لأن مسار الطيران يعبر حدود الميقات. اعرف هذا مسبقاً حتى لا يفاجئك الأمر أثناء الرحلة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. الحرم أكثر ازدحاماً مما تظهره الصور</h2>
+<p style="margin-bottom:1rem;">نادراً ما تُظهر الصور والفيديوهات العدد الحقيقي للناس المتحركين في الحرم في أي وقت، خاصة حول أوقات الصلاة. ابقَ قريباً من مجموعتك، واتفق على نقطة لقاء مسبقاً، واحتفظ برقم هاتف مكتوب احتياطاً في حال نفدت بطارية هاتفك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. اختيار الحذاء أهم مما تتوقع</h2>
+<p style="margin-bottom:1rem;">ستخلع حذاءك باستمرار. النعال سهلة الخلع توفر وقتاً وجهداً مقارنة بالأحذية المربوطة، وحقيبة صغيرة للحذاء تُبقيه معك بدلاً من ضياعه بين الرفوف خارج المسجد.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. احتفظ بنقد صغير في متناول يدك</h2>
+<p style="margin-bottom:1rem;">بينما تعمل البطاقات في معظم الفنادق والمولات، النقد الصغير مفيد للمحلات المحلية والمشتريات الصغيرة والإكراميات. اصرف أو اسحب بعض النقد مبكراً في رحلتك بدلاً من البحث عن صراف لاحقاً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">5. شريحة اتصال محلية أو eSIM تسهّل كل شيء</h2>
+<p style="margin-bottom:1rem;">اتصال بيانات محلي يعمل يسهّل كثيراً استخدام الخرائط والبقاء في مجموعة الواتساب ومراسلة سائقك للاستلام. فكّر بالحصول على شريحة سعودية أو eSIM فور وصولك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">6. الحرارة قد تكون شديدة — اشرب الماء استباقياً</h2>
+<p style="margin-bottom:1rem;">حسب الموسم، قد تكون درجات الحرارة حول مكة والمدينة شديدة. احمل الماء، ولا تنتظر حتى تشعر بالعطش، ونظّم مشيك بين الحرم وفندقك خلال أشد ساعات النهار حرارة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">7. مكة والمدينة قابلتان للمشي — لكن المسافة بينهما ليست كذلك</h2>
+<p style="margin-bottom:1rem;">بمجرد أن تكون قريباً من الحرم في أي من المدينتين، تكون معظم الأماكن على مسافة مشي. لكن مكة والمدينة تبعدان عن بعضهما حوالي 430 كم — رحلة 4 إلى 4.5 ساعة، وليست ركوبة تاكسي قصيرة. خطط واحجز هذه المرحلة من رحلتك بشكل منفصل ومسبق.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">8. مواقع الزيارة إضافات اختيارية، وليست جزءاً من العمرة نفسها</h2>
+<p style="margin-bottom:1rem;">زيارة مواقع تاريخية مثل جبل النور وجبل ثور ومسجد قباء وجبل أحد إضافة شائعة وذات معنى للرحلة، لكنها منفصلة عن مناسك العمرة الأساسية. خصص وقتاً إضافياً وحجز سيارة منفصل إذا أردت تضمينها.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">9. كل شيء يهدأ حول أوقات الصلاة</h2>
+<p style="margin-bottom:1rem;">حركة المرور والمحلات وحركة المشاة كلها تتغير حول كل صلاة. إذا كنت تسافر براً قرب وقت صلاة، توقع توقفاً — معظم السائقين الخاصين يخططون لذلك بدلاً من محاولة تجاوزه.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">10. احجز النقل قبل أن تحتاجه، لا عندما تحتاجه</h2>
+<p style="margin-bottom:1rem;">استقبال المطار وتوصيلات ما بين المدن وجولات الزيارات كلها يصعب حجزها في اللحظة الأخيرة خلال رمضان وموسم الحج. ترتيب مواصلاتك مسبقاً — ولو برسالة واتساب برقم رحلتك وتواريخك — يوفر عليك التوتر بعد الوصول.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راسلنا عبر واتساب لترتيب أول رحلة عمرة لك مسبقاً.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/makkah.webp',
+  },
 ];
