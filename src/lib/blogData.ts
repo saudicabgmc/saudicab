@@ -642,4 +642,91 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/location/makkah.webp',
   },
+  {
+    slug: 'umrah-checklist-transport-hotels-packing',
+    title: {
+      en: 'Umrah Checklist: Transport, Hotels & What to Pack',
+      ar: 'قائمة تحقق العمرة: النقل والفنادق وماذا تحزم',
+    },
+    excerpt: {
+      en: 'A practical, no-fluff checklist covering the three things that make or break a smooth Umrah trip — how you\'ll move around, where you\'ll stay, and what\'s in your bag.',
+      ar: 'قائمة تحقق عملية تغطي الأمور الثلاثة التي تحدد سلاسة رحلة العمرة — كيف تتنقل، وأين تقيم، وماذا في حقيبتك.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Umrah planning has a lot of moving parts, but most of them fall into three buckets: getting around, where you sleep, and what you bring. Here's a practical checklist for each.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Transport Checklist</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ Decide your Miqat point before you fly — if you're flying into Jeddah, you'll usually enter Ihram on the plane or shortly before landing; if you're coming from Madinah, it's Masjid Dhul-Hulayfah (Abyar Ali)</li>
+  <li style="margin-bottom:0.5rem;">☐ Book your airport pickup in advance, especially during Ramadan and Hajj season when demand is high</li>
+  <li style="margin-bottom:0.5rem;">☐ Have your flight number ready when you book — it lets your driver track your landing and adjust for delays</li>
+  <li style="margin-bottom:0.5rem;">☐ Pick the right vehicle for your group size: sedan for 1–3, Hyundai Staria for families of 4–7, GMC Yukon for extra comfort or VIP groups</li>
+  <li style="margin-bottom:0.5rem;">☐ Confirm the fixed price for each leg of your trip before you travel (airport transfer, Makkah–Madinah, any Ziyarat tours) so there are no surprises</li>
+  <li style="margin-bottom:0.5rem;">☐ Save your driver's WhatsApp number so you can reach them directly for pickup times or changes</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Hotel Checklist</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ In Makkah, decide how close to the Haram you want to be — Ajyad and Misfalah are walking distance, while Al-Aziziyah is more affordable but a short ride away</li>
+  <li style="margin-bottom:0.5rem;">☐ In Madinah, the Central Area around Masjid an-Nabawi puts you within walking distance of the mosque</li>
+  <li style="margin-bottom:0.5rem;">☐ Share your hotel name and room number with your driver in advance for smooth pickup and drop-off</li>
+  <li style="margin-bottom:0.5rem;">☐ Book hotels early if traveling during Ramadan or Hajj season — availability drops fast and prices rise</li>
+  <li style="margin-bottom:0.5rem;">☐ Confirm your check-in time against your arrival time so your ride doesn't drop you off hours before your room is ready</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What to Pack</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ Ihram clothing (2 sets recommended for men), plus a small bag to carry it separately for the Miqat stop</li>
+  <li style="margin-bottom:0.5rem;">☐ Comfortable, easy-to-remove sandals for the many times you'll enter and exit the mosque</li>
+  <li style="margin-bottom:0.5rem;">☐ A small daypack for your phone, wallet, and prayer mat that you can carry on foot around the Haram</li>
+  <li style="margin-bottom:0.5rem;">☐ Unscented toiletries (required in the state of Ihram)</li>
+  <li style="margin-bottom:0.5rem;">☐ A printed or downloaded copy of your flight and hotel confirmations, in case you lose signal</li>
+  <li style="margin-bottom:0.5rem;">☐ Empty space or a foldable bag for Zamzam water and gifts on the way back — this affects which vehicle you should book (the GMC Yukon and Staria have more luggage room than a sedan)</li>
+  <li style="margin-bottom:0.5rem;">☐ A portable charger — you'll use your phone heavily for prayer times, maps, and staying in touch with your driver</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Putting It Together</h2>
+<p style="margin-bottom:1rem;">Sort your transport and hotel bookings first, since your Ihram timing and packing depend on your route (flying into Jeddah vs Madinah changes your Miqat point). Once those are set, packing is straightforward — pack light, keep Ihram accessible, and leave room in your bag for the trip home.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. Message us on WhatsApp with your flight details to arrange your Umrah transport in advance.</p>`,
+      ar: `<p style="margin-bottom:1rem;">التخطيط للعمرة يتضمن الكثير من التفاصيل، لكن معظمها يقع تحت ثلاثة محاور: التنقل، والإقامة، وما تحزمه. إليك قائمة تحقق عملية لكل محور.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قائمة التنقل</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ حدد نقطة الميقات قبل السفر — إذا كنت قادماً عبر جدة، ستحرم غالباً في الطائرة أو قبل الهبوط بقليل؛ وإذا كنت قادماً من المدينة المنورة، فالميقات هو مسجد ذي الحليفة (أبيار علي)</li>
+  <li style="margin-bottom:0.5rem;">☐ احجز استقبالك من المطار مسبقاً، خاصة خلال رمضان وموسم الحج حين يكون الطلب مرتفعاً</li>
+  <li style="margin-bottom:0.5rem;">☐ جهّز رقم رحلتك الجوية عند الحجز — يتيح لسائقك متابعة وقت هبوطك والتكيف مع أي تأخير</li>
+  <li style="margin-bottom:0.5rem;">☐ اختر السيارة المناسبة لحجم مجموعتك: سيدان لـ1-3 أشخاص، هيونداي ستاريا للعائلات من 4-7، GMC يوكن لراحة إضافية أو مجموعات VIP</li>
+  <li style="margin-bottom:0.5rem;">☐ أكّد السعر الثابت لكل مرحلة من رحلتك (توصيل المطار، مكة - المدينة، أي جولات زيارات) قبل السفر حتى لا تكون هناك مفاجآت</li>
+  <li style="margin-bottom:0.5rem;">☐ احفظ رقم واتساب سائقك للتواصل المباشر بخصوص أوقات الاستلام أو أي تغييرات</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قائمة الفنادق</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ في مكة المكرمة، حدد مدى قربك المرغوب من الحرم — أجياد والمسفلة على مسافة مشي، بينما العزيزية أوفر لكن تتطلب مواصلات قصيرة</li>
+  <li style="margin-bottom:0.5rem;">☐ في المدينة المنورة، المنطقة المركزية حول المسجد النبوي تضعك على مسافة مشي من المسجد</li>
+  <li style="margin-bottom:0.5rem;">☐ شارك اسم فندقك ورقم غرفتك مع سائقك مسبقاً لاستلام وإيصال سلس</li>
+  <li style="margin-bottom:0.5rem;">☐ احجز الفنادق مبكراً إذا كنت مسافراً في رمضان أو موسم الحج — التوفر ينخفض بسرعة والأسعار ترتفع</li>
+  <li style="margin-bottom:0.5rem;">☐ تأكد من وقت تسجيل الدخول مقابل وقت وصولك حتى لا تصل قبل جاهزية غرفتك بساعات</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ماذا تحزم</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">☐ ملابس الإحرام (يُنصح بطقمين للرجال)، مع حقيبة صغيرة لحملها بشكل منفصل لتوقف الميقات</li>
+  <li style="margin-bottom:0.5rem;">☐ نعال مريحة سهلة الخلع للمرات الكثيرة التي ستدخل وتخرج فيها من المسجد</li>
+  <li style="margin-bottom:0.5rem;">☐ حقيبة صغيرة لهاتفك ومحفظتك وسجادة الصلاة يمكنك حملها سيراً حول الحرم</li>
+  <li style="margin-bottom:0.5rem;">☐ مستحضرات نظافة خالية من العطور (مطلوبة أثناء الإحرام)</li>
+  <li style="margin-bottom:0.5rem;">☐ نسخة مطبوعة أو محفوظة من تأكيدات رحلتك وفندقك، تحسباً لفقدان الإشارة</li>
+  <li style="margin-bottom:0.5rem;">☐ مساحة فارغة أو حقيبة قابلة للطي لماء زمزم والهدايا في طريق العودة — هذا يؤثر على السيارة التي يجب حجزها (GMC يوكن وستاريا لديهما مساحة أمتعة أكبر من السيدان)</li>
+  <li style="margin-bottom:0.5rem;">☐ شاحن محمول — ستستخدم هاتفك كثيراً لمواقيت الصلاة والخرائط والتواصل مع سائقك</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">تجميع كل شيء معاً</h2>
+<p style="margin-bottom:1rem;">رتّب حجوزات النقل والفنادق أولاً، لأن توقيت إحرامك وحزمك يعتمدان على مسارك (السفر عبر جدة مقابل المدينة يغيّر نقطة ميقاتك). بعد ترتيب ذلك، يصبح الحزم بسيطاً — احزم بخفة، أبقِ الإحرام في متناول يدك، واترك مساحة في حقيبتك لرحلة العودة.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راسلنا عبر واتساب مع تفاصيل رحلتك لترتيب نقل عمرتك مسبقاً.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/makkah.webp',
+  },
 ];
