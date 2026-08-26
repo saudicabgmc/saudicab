@@ -810,4 +810,73 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/location/makkah.webp',
   },
+  {
+    slug: 'saudi-arabia-non-muslims-travel-transport-guide',
+    title: {
+      en: 'Saudi Arabia for Non-Muslims: A Travel Transport Guide',
+      ar: 'السعودية لغير المسلمين: دليل النقل والسفر',
+    },
+    excerpt: {
+      en: 'A practical, honest guide to getting around Saudi Arabia as a non-Muslim traveler — what\'s open to visit, what isn\'t, and how private transport fits in.',
+      ar: 'دليل عملي وصريح للتنقل في السعودية كمسافر غير مسلم — ما هو مفتوح للزيارة وما ليس كذلك، وكيف يناسب النقل الخاص رحلتك.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Saudi Arabia has opened up significantly to international visitors in recent years, with an eVisa available to travelers from many countries for tourism, business, and family visits. If you're planning a trip as a non-Muslim traveler, here's a straightforward guide to what to expect getting around.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">The One Rule Every Visitor Should Know</h2>
+<p style="margin-bottom:1rem;">The central areas of Makkah and Madinah — the zones around Masjid al-Haram and Masjid an-Nabawi — are restricted to Muslims only. This is enforced with checkpoints on the roads leading into Makkah, and it applies regardless of your transport arrangements. If your trip doesn't include these two cities, this won't affect your plans at all.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What's Open to Everyone</h2>
+<p style="margin-bottom:1rem;">Most of Saudi Arabia is open to all visitors, including places we serve directly:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Jeddah:</strong> The Red Sea coastal city welcomes all travelers — historic Al-Balad (a UNESCO World Heritage old town), the Corniche waterfront, and King Abdulaziz International Airport, a major gateway for the whole region.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Taif:</strong> The mountain city with cooler weather, rose farms (in season), and scenic roads like Al-Hada — open to all visitors and popular for its climate.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Riyadh, AlUla, the Red Sea coast, and Eastern Province:</strong> All open to international tourism, with growing infrastructure for visitors.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Why Private Transport Makes Sense for First-Time Visitors</h2>
+<p style="margin-bottom:1rem;">Saudi Arabia is a large country with long distances between major cities, and public transport options between cities are limited outside the Haramain train corridor. For a first-time visitor unfamiliar with the roads, a private driver who speaks English and Arabic, knows the route, and gives you a fixed price before you travel removes a lot of guesswork — especially for airport transfers and multi-stop day trips.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">A Few Practical Cultural Notes</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Modest dress is expected in public for all visitors, though requirements have relaxed considerably in recent years — loose, non-revealing clothing is a safe default.</li>
+  <li style="margin-bottom:0.5rem;">Saudi Arabia is a dry country — alcohol isn't sold or served anywhere.</li>
+  <li style="margin-bottom:0.5rem;">Many shops and restaurants pause briefly around prayer times, five times a day — plan your schedule with a short buffer around these windows.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Getting Around With Saudi Cabs GMC</h2>
+<p style="margin-bottom:1rem;">We provide airport transfers, private driver hire, and intercity routes across Jeddah, Taif, and beyond, with fixed prices agreed before you travel. If your itinerary includes Makkah or Madinah, we can take you to Jeddah or the outer boundary, but entry to the restricted zones themselves isn't possible for non-Muslim travelers, per Saudi regulations.</p>
+
+<p style="margin-bottom:1rem;">Message us on WhatsApp with your itinerary and we'll help you plan transport for the parts of Saudi Arabia that are open to you.</p>`,
+      ar: `<p style="margin-bottom:1rem;">انفتحت السعودية بشكل كبير على الزوار الدوليين في السنوات الأخيرة، مع توفر تأشيرة إلكترونية للمسافرين من دول عديدة لأغراض السياحة والأعمال وزيارة العائلة. إذا كنت تخطط لرحلة كمسافر غير مسلم، إليك دليلاً واضحاً لما يجب توقعه في التنقل.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">القاعدة الوحيدة التي يجب أن يعرفها كل زائر</h2>
+<p style="margin-bottom:1rem;">المناطق المركزية في مكة المكرمة والمدينة المنورة — المناطق المحيطة بالمسجد الحرام والمسجد النبوي — مقصورة على المسلمين فقط. يُطبَّق هذا عبر نقاط تفتيش على الطرق المؤدية إلى مكة، وينطبق بغض النظر عن ترتيبات نقلك. إذا لم تتضمن رحلتك هاتين المدينتين، فهذا لن يؤثر على خططك إطلاقاً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ما هو مفتوح للجميع</h2>
+<p style="margin-bottom:1rem;">معظم السعودية مفتوحة لجميع الزوار، بما فيها الأماكن التي نخدمها مباشرة:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>جدة:</strong> المدينة الساحلية على البحر الأحمر ترحب بجميع المسافرين — البلد التاريخية (موقع تراث عالمي لليونسكو)، وكورنيش الواجهة البحرية، ومطار الملك عبدالعزيز الدولي، بوابة رئيسية للمنطقة كلها.</li>
+  <li style="margin-bottom:0.5rem;"><strong>الطائف:</strong> المدينة الجبلية بمناخ أبرد ومزارع ورد (في موسمها) وطرق خلابة مثل الهدا — مفتوحة لجميع الزوار ومشهورة بمناخها.</li>
+  <li style="margin-bottom:0.5rem;"><strong>الرياض، العلا، ساحل البحر الأحمر، والمنطقة الشرقية:</strong> جميعها مفتوحة للسياحة الدولية، مع بنية تحتية متنامية للزوار.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لماذا النقل الخاص منطقي للزوار لأول مرة</h2>
+<p style="margin-bottom:1rem;">السعودية بلد واسع بمسافات طويلة بين المدن الرئيسية، وخيارات النقل العام بين المدن محدودة خارج ممر قطار الحرمين. بالنسبة لزائر لأول مرة غير معتاد على الطرق، سائق خاص يتحدث الإنجليزية والعربية ويعرف الطريق ويعطيك سعراً ثابتاً قبل السفر يزيل الكثير من الغموض — خاصة لتوصيل المطار والرحلات النهارية متعددة التوقفات.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ملاحظات ثقافية عملية</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">اللباس المحتشم متوقع في الأماكن العامة لجميع الزوار، رغم أن المتطلبات تخففت كثيراً في السنوات الأخيرة — ملابس فضفاضة وغير كاشفة خيار آمن افتراضياً.</li>
+  <li style="margin-bottom:0.5rem;">السعودية بلد جاف — لا يُباع أو يُقدَّم الكحول في أي مكان.</li>
+  <li style="margin-bottom:0.5rem;">تتوقف العديد من المحلات والمطاعم لفترة وجيزة حول أوقات الصلاة الخمس يومياً — خطط لجدولك مع هامش وقت حول هذه الفترات.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التنقل مع Saudi Cabs GMC</h2>
+<p style="margin-bottom:1rem;">نوفر توصيل المطار وتأجير سائق خاص ورحلات بين المدن عبر جدة والطائف وما وراءهما، بأسعار ثابتة متفق عليها قبل السفر. إذا تضمّن برنامجك مكة أو المدينة، يمكننا إيصالك إلى جدة أو الحدود الخارجية، لكن الدخول إلى المناطق المقصورة نفسها غير ممكن للمسافرين غير المسلمين، وفقاً للأنظمة السعودية.</p>
+
+<p style="margin-bottom:1rem;">راسلنا عبر واتساب ببرنامج رحلتك وسنساعدك على التخطيط للنقل في الأجزاء المفتوحة لك من السعودية.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/jeddah.webp',
+  },
 ];
