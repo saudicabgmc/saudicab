@@ -23,7 +23,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 11**: "Umrah Checklist: Transport, Hotels & What to Pack" — published at `/blog/umrah-checklist-transport-hotels-packing`, practical checklist format across 3 sections (transport, hotels, packing)
 - [x] **Day 12**: "10 Things to Know Before Your First Umrah Trip" — published at `/blog/10-things-to-know-first-umrah-trip`, first-timer orientation tips (Miqat timing, crowds, footwear, cash, SIM, heat, distances, Ziyarat is optional, prayer-time slowdowns, booking ahead) distinct from Day 11's checklist
 - [x] **Day 13**: "Saudi Arabia for Non-Muslims — Travel Transport Guide" — published at `/blog/saudi-arabia-non-muslims-travel-transport-guide`, honestly states the Makkah/Madinah restricted-zone rule upfront, then covers what's open (Jeddah, Taif, Riyadh, AlUla, Red Sea coast) and how private transport fits
-- [ ] **Day 14**: "How to Book Hajj Transport in Advance"
+- [x] **Day 14**: "How to Book Hajj Transport in Advance" — published at `/blog/how-to-book-hajj-transport-in-advance`, focuses on the planning timeline (months ahead, 2-4 weeks, days before) and info to prepare — deliberately distinct from the existing `hajj-transport-guide-2026` (basic 3-step booking) and `hajj-2026-transport-makkah-traffic-tips` (traffic-avoidance) posts
 
 ## Week 3 — GEO / LLM / Schema Hardening
 - [ ] **Day 15**: `llms.txt` at root + `/.well-known/ai-metadata.json`

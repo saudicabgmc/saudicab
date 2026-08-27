@@ -113,6 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/umrah-checklist-transport-hotels-packing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/10-things-to-know-first-umrah-trip`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE}/blog/saudi-arabia-non-muslims-travel-transport-guide`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE}/blog/how-to-book-hajj-transport-in-advance`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.75 },
 
     // Vehicle SEO programmatic pages (~190)
     ...vehicleSeoEntries,

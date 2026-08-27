@@ -879,4 +879,77 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-22',
     image: '/location/jeddah.webp',
   },
+  {
+    slug: 'how-to-book-hajj-transport-in-advance',
+    title: {
+      en: 'How to Book Hajj Transport in Advance',
+      ar: 'كيف تحجز نقل الحج مسبقاً',
+    },
+    excerpt: {
+      en: 'A planning timeline for Hajj transport — when to start booking, what information to prepare, and why last-minute arrangements often fall through.',
+      ar: 'جدول تخطيطي لنقل الحج — متى تبدأ الحجز، وما المعلومات التي يجب تجهيزها، ولماذا تفشل الترتيبات في اللحظة الأخيرة غالباً.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Hajj transport isn't something to leave until the last minute. Vehicles, drivers, and schedules fill up fast during the season, and the Hajj ritual calendar itself is fixed — Mina, Arafat, and Muzdalifah movements all happen on set days. Here's a realistic timeline for planning your transport well ahead.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Months Ahead: Lock In Your Dates</h2>
+<p style="margin-bottom:1rem;">As soon as your Hajj permit and travel dates are confirmed, reach out to arrange transport — even just to put your name down and get a sense of vehicle availability for your dates. This is especially important if you're traveling as a family or larger group and need a specific vehicle type like the GMC Yukon or Hyundai Staria.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Information to Have Ready Before You Message</h2>
+<p style="margin-bottom:1rem;">Booking goes much faster when you can share all of this in your first message:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Arrival airport and flight details (Jeddah KAIA or Madinah)</li>
+  <li style="margin-bottom:0.5rem;">Hotel names in Makkah and/or Madinah</li>
+  <li style="margin-bottom:0.5rem;">Total number of travelers and luggage volume</li>
+  <li style="margin-bottom:0.5rem;">Whether you need Mina, Arafat, and Muzdalifah transfers, or only airport and intercity legs</li>
+  <li style="margin-bottom:0.5rem;">Your preferred vehicle type</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Why Last-Minute Booking Often Falls Through</h2>
+<p style="margin-bottom:1rem;">During peak Hajj days, the same limited pool of vehicles and drivers is serving an enormous number of pilgrims. Waiting until you land to arrange transport means you're competing for whatever is left, often at short notice and with less certainty around fixed pricing. Booking ahead means your vehicle and driver are already assigned to you before you arrive.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">A Simple Planning Timeline</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>As soon as dates are confirmed:</strong> Message us to reserve your vehicle type and share your rough itinerary</li>
+  <li style="margin-bottom:0.5rem;"><strong>2–4 weeks before travel:</strong> Confirm final headcount, hotel addresses, and which Hajj-site transfers you need</li>
+  <li style="margin-bottom:0.5rem;"><strong>A few days before arrival:</strong> Share your exact flight number and expected landing time for pickup</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Booking for a Group</h2>
+<p style="margin-bottom:1rem;">If you're coordinating transport for a family or group, it helps to have one point of contact manage the WhatsApp conversation rather than multiple people booking separately — it keeps vehicle assignments, pickup times, and headcounts consistent and avoids duplicate or conflicting bookings.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles Hajj transport across Jeddah Airport, Makkah, Madinah, and the holy sites with fixed prices agreed in advance. Message us on WhatsApp as soon as your dates are confirmed to start planning.</p>`,
+      ar: `<p style="margin-bottom:1rem;">نقل الحج ليس أمراً يُترك للحظة الأخيرة. السيارات والسائقون والمواعيد تمتلئ بسرعة خلال الموسم، وتقويم مناسك الحج نفسه ثابت — تنقلات منى وعرفات ومزدلفة تحدث جميعها في أيام محددة. إليك جدولاً واقعياً للتخطيط لنقلك مسبقاً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قبل أشهر: ثبّت تواريخك</h2>
+<p style="margin-bottom:1rem;">بمجرد تأكيد تصريح الحج وتواريخ سفرك، تواصل معنا لترتيب النقل — ولو فقط لتسجيل اسمك ومعرفة مدى توفر السيارات لتواريخك. هذا مهم خاصة إذا كنت تسافر مع عائلة أو مجموعة كبيرة وتحتاج سيارة معينة مثل GMC يوكن أو هيونداي ستاريا.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">معلومات يجب تجهيزها قبل المراسلة</h2>
+<p style="margin-bottom:1rem;">الحجز يكون أسرع بكثير عندما تشارك كل هذا في رسالتك الأولى:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">مطار الوصول وتفاصيل الرحلة (مطار جدة أو المدينة)</li>
+  <li style="margin-bottom:0.5rem;">أسماء الفنادق في مكة و/أو المدينة</li>
+  <li style="margin-bottom:0.5rem;">العدد الإجمالي للمسافرين وحجم الأمتعة</li>
+  <li style="margin-bottom:0.5rem;">هل تحتاج تنقلات منى وعرفات ومزدلفة، أم فقط مراحل المطار وما بين المدن</li>
+  <li style="margin-bottom:0.5rem;">نوع السيارة المفضل لديك</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لماذا يفشل الحجز في اللحظة الأخيرة غالباً</h2>
+<p style="margin-bottom:1rem;">خلال أيام ذروة الحج، نفس المجموعة المحدودة من السيارات والسائقين تخدم عدداً هائلاً من الحجاج. الانتظار حتى الوصول لترتيب النقل يعني منافستك على ما تبقى، غالباً بمهلة قصيرة ويقين أقل حول السعر الثابت. الحجز المسبق يعني أن سيارتك وسائقك مخصصان لك بالفعل قبل وصولك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">جدول تخطيطي بسيط</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>فور تأكيد التواريخ:</strong> راسلنا لحجز نوع سيارتك ومشاركة برنامجك التقريبي</li>
+  <li style="margin-bottom:0.5rem;"><strong>قبل 2-4 أسابيع من السفر:</strong> أكّد العدد النهائي وعناوين الفنادق وأي تنقلات لمشاعر الحج تحتاجها</li>
+  <li style="margin-bottom:0.5rem;"><strong>قبل الوصول ببضعة أيام:</strong> شارك رقم رحلتك الدقيق ووقت الهبوط المتوقع للاستلام</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الحجز لمجموعة</h2>
+<p style="margin-bottom:1rem;">إذا كنت تنسّق النقل لعائلة أو مجموعة، من الأفضل أن يتولى شخص واحد إدارة محادثة الواتساب بدلاً من حجز عدة أشخاص بشكل منفصل — هذا يحافظ على اتساق تخصيص السيارات ومواعيد الاستلام والأعداد، ويتجنب الحجوزات المكررة أو المتعارضة.</p>
+
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى نقل الحج عبر مطار جدة ومكة والمدينة والمشاعر المقدسة بأسعار ثابتة متفق عليها مسبقاً. راسلنا عبر واتساب فور تأكيد تواريخك للبدء في التخطيط.</p>`,
+    },
+    date: '2026-08-22',
+    image: '/location/makkah.webp',
+  },
 ];
