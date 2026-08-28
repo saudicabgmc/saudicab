@@ -1,0 +1,53 @@
+# Saudi Cabs GMC
+
+> Saudi Cabs GMC is a private taxi and chauffeur service operating across Saudi Arabia — Makkah, Madinah, Jeddah, Taif, and intercity routes to Riyadh and Dammam. Fixed prices agreed before travel (no meter), airport transfers, Hajj & Umrah transport, private driver hire, and a fleet of Toyota Camry sedans, Hyundai Staria vans, and GMC Yukon SUVs. Booking is via WhatsApp: +92 309 7811785.
+
+## Core Pages
+
+- [Home](https://saudicabsgmc.com/): Overview of services, cities served, and fleet.
+- [About](https://saudicabsgmc.com/about): Who Saudi Cabs GMC is and how the service works.
+- [Book a Taxi](https://saudicabsgmc.com/booking): Booking form — vehicle, route, date, time, passengers, flight number, luggage, special requests.
+- [FAQ](https://saudicabsgmc.com/faq): Common questions grouped by city.
+- [Reviews](https://saudicabsgmc.com/reviews): Passenger feedback.
+- [Contact](https://saudicabsgmc.com/contact): WhatsApp, phone, and email contact details.
+- [Team](https://saudicabsgmc.com/team): Chauffeurs, dispatch, support, and fleet maintenance.
+- [Routes Map](https://saudicabsgmc.com/routes-map): Interactive map of all served cities and routes.
+
+## City Services
+
+- [Makkah Taxi Service](https://saudicabsgmc.com/makkah-taxi-service)
+- [Madinah Taxi Service](https://saudicabsgmc.com/madinah-taxi-service)
+- [Jeddah Taxi Service](https://saudicabsgmc.com/jeddah-taxi-service)
+- [Taif Taxi Service](https://saudicabsgmc.com/taif-taxi-service)
+
+## Specialized Services
+
+- [Airport Transfer](https://saudicabsgmc.com/airport-transfer): Jeddah (KAIA), Madinah, and Taif airport pickups.
+- [Hajj & Umrah Transport](https://saudicabsgmc.com/hajj-umrah-transport): Transfers to Mina, Arafat, Muzdalifah, and between the holy cities.
+- [Private Driver](https://saudicabsgmc.com/private-driver): Full-day chauffeur hire.
+- [Makkah Ziyarat Tour](https://saudicabsgmc.com/makkah-ziyarat-tour)
+- [Madinah Ziyarat Tour](https://saudicabsgmc.com/madinah-ziyarat-tour)
+
+## Fleet
+
+- [Toyota Camry (Sedan, 4 seats)](https://saudicabsgmc.com/toyota-camry-taxi)
+- [Hyundai Staria (7 seats)](https://saudicabsgmc.com/hyundai-staria-taxi)
+- [GMC Yukon (VIP, 7 seats)](https://saudicabsgmc.com/gmc-yukon-hire)
+
+## Guides
+
+- [Makkah Transport Guide](https://saudicabsgmc.com/makkah-transport-guide)
+- [Jeddah Airport Guide](https://saudicabsgmc.com/jeddah-airport-guide)
+- [Taxi Prices in Saudi Arabia](https://saudicabsgmc.com/taxi-prices-saudi-arabia)
+- [Umrah Travel Guide](https://saudicabsgmc.com/umrah-travel-guide)
+- [Hajj Transport FAQ](https://saudicabsgmc.com/hajj-transport-faq)
+
+## Blog
+
+- [Blog Index](https://saudicabsgmc.com/blog)
+
+## Notes
+
+- Prices are fixed and agreed before travel; no meter, no surge pricing.
+- Bookings are confirmed via WhatsApp (+92 309 7811785), not through an online payment checkout.
+- The central areas of Makkah and Madinah (around Masjid al-Haram and Masjid an-Nabawi) are restricted to Muslims only, per Saudi regulations — this applies regardless of transport arrangements.

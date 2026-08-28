@@ -26,7 +26,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 14**: "How to Book Hajj Transport in Advance" — published at `/blog/how-to-book-hajj-transport-in-advance`, focuses on the planning timeline (months ahead, 2-4 weeks, days before) and info to prepare — deliberately distinct from the existing `hajj-transport-guide-2026` (basic 3-step booking) and `hajj-2026-transport-makkah-traffic-tips` (traffic-avoidance) posts
 
 ## Week 3 — GEO / LLM / Schema Hardening
-- [ ] **Day 15**: `llms.txt` at root + `/.well-known/ai-metadata.json`
+- [x] **Day 15**: `llms.txt` at root (`public/llms.txt`) + `/.well-known/ai-metadata.json` — both hand-written from already-verified site facts (fleet, cities, contact, pricing model), no fabricated stats/certifications carried over
 - [ ] **Day 16**: Audit `robots.ts` for AI crawler coverage (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - [ ] **Day 17**: `speakable` schema on all route/guide pages
 - [ ] **Day 18**: `definedTerm` schema for domain terms (Ziyarat, Tawaf, Ihram, Talbiyah, etc.)

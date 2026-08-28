@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.org",
+  "name": "Saudi Cabs GMC",
+  "url": "https://saudicabsgmc.com",
+  "description": "Private taxi and chauffeur service operating across Saudi Arabia — Makkah, Madinah, Jeddah, Taif, and intercity routes to Riyadh and Dammam. Fixed prices agreed before travel, airport transfers, Hajj & Umrah transport, and private driver hire.",
+  "contact": {
+    "whatsapp": "+923097811785",
+    "phone": "+923097811785",
+    "email": "info@saudicabsgmc.com"
+  },
+  "areaServed": ["Makkah", "Madinah", "Jeddah", "Taif", "Riyadh", "Dammam"],
+  "servicesOffered": [
+    "Airport transfers (Jeddah KAIA, Madinah, Taif)",
+    "Intercity taxi routes",
+    "Hajj and Umrah transport",
+    "Private driver / chauffeur hire",
+    "Ziyarat tours (Makkah and Madinah historical sites)"
+  ],
+  "fleet": [
+    { "name": "Toyota Camry", "type": "Sedan", "seats": 4 },
+    { "name": "Hyundai Staria", "type": "Van", "seats": 7 },
+    { "name": "GMC Yukon", "type": "VIP SUV", "seats": 7 }
+  ],
+  "pricingModel": "Fixed price agreed before travel via WhatsApp — no meter, no surge pricing",
+  "bookingMethod": "WhatsApp",
+  "languages": ["en", "ar"],
+  "keyPages": {
+    "home": "https://saudicabsgmc.com/",
+    "booking": "https://saudicabsgmc.com/booking",
+    "about": "https://saudicabsgmc.com/about",
+    "faq": "https://saudicabsgmc.com/faq",
+    "reviews": "https://saudicabsgmc.com/reviews",
+    "contact": "https://saudicabsgmc.com/contact",
+    "sitemap": "https://saudicabsgmc.com/sitemap.xml",
+    "llms": "https://saudicabsgmc.com/llms.txt"
+  },
+  "accessNote": "The central areas of Makkah and Madinah (around Masjid al-Haram and Masjid an-Nabawi) are restricted to Muslims only, per Saudi regulations, regardless of transport arrangements.",
+  "lastUpdated": "2026-08-28"
+}
