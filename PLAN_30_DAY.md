@@ -27,7 +27,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 
 ## Week 3 — GEO / LLM / Schema Hardening
 - [x] **Day 15**: `llms.txt` at root (`public/llms.txt`) + `/.well-known/ai-metadata.json` — both hand-written from already-verified site facts (fleet, cities, contact, pricing model), no fabricated stats/certifications carried over
-- [ ] **Day 16**: Audit `robots.ts` for AI crawler coverage (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+- [x] **Day 16**: Audited `robots.ts` — the wildcard `*` rule already allowed all AI crawlers, but added explicit named `Allow: /` rules for GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, CCBot, Amazonbot, Bytespider, and Applebot-Extended so the policy is unambiguous and won't silently change if the wildcard rule is ever edited
 - [ ] **Day 17**: `speakable` schema on all route/guide pages
 - [ ] **Day 18**: `definedTerm` schema for domain terms (Ziyarat, Tawaf, Ihram, Talbiyah, etc.)
 - [ ] **Day 19**: Freshness pass — update `dateModified` on all guide pages

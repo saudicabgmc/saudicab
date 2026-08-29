@@ -354,10 +354,10 @@ For AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Googlebot-AI):
 
 - [x] Structured schema JSON-LD in `<head>` / `<body>` on every page
 - [x] Semantic HTML (h1 → h2 → h3 hierarchy)
-- [x] `robots.txt` allows all major AI crawlers
+- [x] `robots.txt` allows all major AI crawlers (explicit named rules added Day 16: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, and others — not just the wildcard)
 - [x] Clear entity-relationship definitions in content
-- [ ] Add `llms.txt` file at root (emerging standard for AI crawlers)
-- [ ] Add `/.well-known/ai-metadata.json` (optional but forward-looking)
+- [x] Add `llms.txt` file at root (emerging standard for AI crawlers) — done Day 15
+- [x] Add `/.well-known/ai-metadata.json` (optional but forward-looking) — done Day 15
 - [ ] Ensure all route pages have `speakable` schema
 - [ ] Add `definedTerm` schema for domain-specific terms (Ziyarat, Tawaf, etc.)
 - [ ] Regular content freshness signals (update dates on guides)
