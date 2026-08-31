@@ -315,7 +315,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'HowToStep',
         position: 3,
         name: 'Your Driver Arrives On Time',
-        text: 'Your certified professional driver arrives at your door at the agreed time. For airport pickups, the driver waits at the arrivals hall with a personalised name board.',
+        text: 'Your professional driver arrives at your door at the agreed time. For airport pickups, the driver waits at the arrivals hall with a personalised name board.',
         url: 'https://saudicabsgmc.com',
         image: 'https://saudicabsgmc.com/booking/step-3-driver-arrival.webp',
       },
@@ -373,6 +373,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   }
 
+  // ── 8. DefinedTermSet — Domain Terminology for AI/LLM Understanding ─
+  const definedTermSetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': 'https://saudicabsgmc.com/#glossary',
+    name: 'Hajj & Umrah Transport Glossary',
+    description: 'Key terms related to Hajj, Umrah, and pilgrim transport in Saudi Arabia, used throughout Saudi Cabs GMC content.',
+    hasDefinedTerm: [
+      { '@type': 'DefinedTerm', name: 'Umrah', description: 'A non-obligatory Islamic pilgrimage to Makkah that can be performed at any time of year, distinct from Hajj.' },
+      { '@type': 'DefinedTerm', name: 'Hajj', description: 'The annual Islamic pilgrimage to Makkah, obligatory once in a lifetime for able Muslims, performed during a fixed period of the Islamic calendar.' },
+      { '@type': 'DefinedTerm', name: 'Ihram', description: 'The sacred state a pilgrim enters before performing Umrah or Hajj, marked by specific plain garments for men and an intention to begin the pilgrimage.' },
+      { '@type': 'DefinedTerm', name: 'Miqat', description: 'The designated boundary points around Makkah where pilgrims must enter the state of Ihram before proceeding further.' },
+      { '@type': 'DefinedTerm', name: 'Tawaf', description: 'The ritual of circling the Kaaba seven times, performed during Umrah and Hajj.' },
+      { '@type': 'DefinedTerm', name: "Sa'i", description: 'The ritual of walking seven times between the hills of Safa and Marwah near the Kaaba.' },
+      { '@type': 'DefinedTerm', name: 'Ziyarat', description: 'A visit to historically or religiously significant sites in Makkah or Madinah, separate from the core rituals of Hajj or Umrah.' },
+      { '@type': 'DefinedTerm', name: 'Haram', description: 'The sacred sanctuary area — Masjid al-Haram in Makkah or the sanctuary of Masjid an-Nabawi in Madinah.' },
+      { '@type': 'DefinedTerm', name: 'Mina', description: 'A valley near Makkah where pilgrims stay during the days of Hajj.' },
+      { '@type': 'DefinedTerm', name: 'Arafat', description: "The plain near Makkah where the central Hajj ritual of standing (Wuquf) takes place on the 9th of Dhul Hijjah." },
+      { '@type': 'DefinedTerm', name: 'Muzdalifah', description: 'The site between Mina and Arafat where pilgrims stay overnight during Hajj and collect pebbles for the stoning ritual.' },
+    ],
+  }
+
   const schemas = [
     localBusinessSchema,
     organizationSchema,
@@ -380,6 +402,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     howToSchema,
     routeListSchema,
     siteNavigationSchema,
+    definedTermSetSchema,
   ]
 
   return (
