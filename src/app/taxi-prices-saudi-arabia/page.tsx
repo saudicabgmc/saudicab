@@ -24,6 +24,7 @@ export default function TaxiPricesGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <GuidePageTemplate
         url="https://saudicabsgmc.com/taxi-prices-saudi-arabia"
+        dateModified="2026-08-31"
         tag="Price & Distance Guide"
         title="Saudi Arabia Taxi Prices & Distances — Complete 2026 Route Guide"
         subtitle="All major Saudi Arabia taxi routes with distances, drive times, and how pricing works with Saudi Cabs GMC."

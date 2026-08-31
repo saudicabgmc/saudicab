@@ -204,9 +204,9 @@ These pages target **AI Overview**, **Bing Copilot**, **Perplexity**, and **Chat
 - [ ] HowTo schema where applicable
 - [ ] Tables for distances/prices (parseable by AI)
 - [ ] H2/H3 structured with question-form headings
-- [ ] Speakable schema selector on key answer paragraphs
+- [x] Speakable schema selector on key answer paragraphs (Day 17)
 - [ ] Internal links to all relevant route pages
-- [ ] Last updated date visible (freshness signal)
+- [x] Last updated date visible (freshness signal) (Day 19)
 
 ---
 
@@ -358,9 +358,9 @@ For AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Googlebot-AI):
 - [x] Clear entity-relationship definitions in content
 - [x] Add `llms.txt` file at root (emerging standard for AI crawlers) — done Day 15
 - [x] Add `/.well-known/ai-metadata.json` (optional but forward-looking) — done Day 15
-- [ ] Ensure all route pages have `speakable` schema
-- [ ] Add `definedTerm` schema for domain-specific terms (Ziyarat, Tawaf, etc.)
-- [ ] Regular content freshness signals (update dates on guides)
+- [x] Ensure all route pages have `speakable` schema (Day 17)
+- [x] Add `definedTerm` schema for domain-specific terms (Ziyarat, Tawaf, etc.) (Day 18)
+- [x] Regular content freshness signals (update dates on guides) (Day 19)
 
 ---
 

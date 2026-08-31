@@ -6,6 +6,7 @@ export interface GuideFAQ { q: string; a: string }
 
 export interface GuidePageProps {
   url: string
+  dateModified: string
   tag: string
   title: string
   subtitle: string
@@ -18,7 +19,7 @@ export interface GuidePageProps {
 }
 
 export default function GuidePageTemplate({
-  url, tag, title, subtitle, quickAnswer, keyFacts, children, faqs, relatedLinks,
+  url, dateModified, tag, title, subtitle, quickAnswer, keyFacts, children, faqs, relatedLinks,
   heroGradient = 'linear-gradient(135deg, #071f17, #0B3D2E)',
 }: GuidePageProps) {
   const speakableSchema = {
@@ -27,11 +28,14 @@ export default function GuidePageTemplate({
     '@id': `${url}#webpage`,
     url,
     name: title,
+    dateModified,
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.quick-answer', '.key-facts'],
     },
   }
+
+  const formattedDate = new Date(dateModified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'var(--background)', paddingTop: '80px' }}>
@@ -48,6 +52,7 @@ export default function GuidePageTemplate({
           </h1>
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
           <p style={{ opacity: 0.85, lineHeight: 1.8, fontSize: '1.05rem' }}>{subtitle}</p>
+          <p style={{ opacity: 0.6, fontSize: '0.8rem', marginTop: '16px' }}>Last updated: {formattedDate}</p>
         </div>
       </section>
 

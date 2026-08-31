@@ -25,6 +25,7 @@ export default function MakkahTransportGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <GuidePageTemplate
         url="https://saudicabsgmc.com/makkah-transport-guide"
+        dateModified="2026-08-31"
         tag="Makkah Transport Guide"
         title="How to Get Around Makkah — Complete Transport Guide 2026"
         subtitle="Everything pilgrims and travelers need to know about transport in Makkah — from airport transfers to intercity routes and Ziyarat tours."

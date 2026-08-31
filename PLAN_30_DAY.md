@@ -30,7 +30,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 16**: Audited `robots.ts` — the wildcard `*` rule already allowed all AI crawlers, but added explicit named `Allow: /` rules for GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, CCBot, Amazonbot, Bytespider, and Applebot-Extended so the policy is unambiguous and won't silently change if the wildcard rule is ever edited
 - [x] **Day 17**: `speakable` schema on all route/guide pages — added centrally to `GuidePageTemplate.tsx` (5 guide pages) and `schemaUtils.ts`'s `generateRouteSchemas` (~20 route pages), so one change propagates everywhere. Also fixed a pre-existing incomplete/duplicate speakable schema on `makkah-transport-guide` (was missing `url`/`@id`) by replacing it with the centralized version.
 - [x] **Day 18**: `DefinedTermSet` schema for domain terms (Umrah, Hajj, Ihram, Miqat, Tawaf, Sa'i, Ziyarat, Haram, Mina, Arafat, Muzdalifah) added site-wide in `layout.tsx` — plain factual/encyclopedic definitions, no religious-authority claims. Also fixed a leftover "certified professional driver" claim found in the HowTo schema while in there.
-- [ ] **Day 19**: Freshness pass — update `dateModified` on all guide pages
+- [x] **Day 19**: Freshness pass — `GuidePageTemplate.tsx` now takes a required `dateModified` prop, rendered both as a visible "Last updated" line and in the page's WebPage schema; set on all 5 guide pages. Updated `TOPICAL_MAP.md` checklists for Days 17-19.
 - [ ] **Day 20**: `AggregateRating` rollout — blocked on Day 3 review data; otherwise skip/defer
 - [ ] **Day 21**: Re-verify `TOPICAL_MAP.md` against actual `src/app/` and correct all stale entries
 

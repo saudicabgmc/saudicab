@@ -24,6 +24,7 @@ export default function HajjTransportFaq() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <GuidePageTemplate
         url="https://saudicabsgmc.com/hajj-transport-faq"
+        dateModified="2026-08-31"
         tag="Hajj 2026 Guide"
         title="Hajj Transport FAQ 2026 — Complete Private Cab Guide for Hajj Pilgrims"
         subtitle="Everything Hajj pilgrims need to know about booking private transport in Saudi Arabia for Hajj 2026."
