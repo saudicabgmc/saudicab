@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 export interface GuideFAQ { q: string; a: string }
 
 export interface GuidePageProps {
+  url: string
   tag: string
   title: string
   subtitle: string
@@ -17,11 +18,24 @@ export interface GuidePageProps {
 }
 
 export default function GuidePageTemplate({
-  tag, title, subtitle, quickAnswer, keyFacts, children, faqs, relatedLinks,
+  url, tag, title, subtitle, quickAnswer, keyFacts, children, faqs, relatedLinks,
   heroGradient = 'linear-gradient(135deg, #071f17, #0B3D2E)',
 }: GuidePageProps) {
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: title,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.quick-answer', '.key-facts'],
+    },
+  }
+
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'var(--background)', paddingTop: '80px' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* Hero */}
       <section style={{ background: heroGradient, color: 'white', padding: '64px 0 48px', textAlign: 'center' }}>

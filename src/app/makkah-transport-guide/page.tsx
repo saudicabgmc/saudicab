@@ -19,19 +19,12 @@ const faqSchema = {
   ],
 }
 
-const speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Makkah Transport Guide',
-  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.quick-answer', '.key-facts', 'h2'] },
-}
-
 export default function MakkahTransportGuide() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <GuidePageTemplate
+        url="https://saudicabsgmc.com/makkah-transport-guide"
         tag="Makkah Transport Guide"
         title="How to Get Around Makkah — Complete Transport Guide 2026"
         subtitle="Everything pilgrims and travelers need to know about transport in Makkah — from airport transfers to intercity routes and Ziyarat tours."

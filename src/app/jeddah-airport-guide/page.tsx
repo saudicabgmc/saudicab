@@ -23,6 +23,7 @@ export default function JeddahAirportGuide() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <GuidePageTemplate
+        url="https://saudicabsgmc.com/jeddah-airport-guide"
         tag="Airport Transfer Guide"
         title="Jeddah Airport (KAIA) to Makkah & Madinah — Complete Transfer Guide 2026"
         subtitle="Everything you need to know about getting from King Abdulaziz International Airport to Makkah, Madinah, Taif and beyond."

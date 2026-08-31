@@ -121,5 +121,18 @@ export function generateRouteSchemas(data: RoutePageData) {
     mainEntity: allFaqs,
   }
 
-  return [breadcrumb, service, faqPage]
+  // 4. WebPage + SpeakableSpecification (voice assistant / AEO citation target)
+  const webPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: `${fromEn} to ${toEn} Taxi`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.route-description'],
+    },
+  }
+
+  return [breadcrumb, service, faqPage, webPage]
 }

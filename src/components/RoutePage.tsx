@@ -71,7 +71,7 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                 <span style={{ color: 'var(--primary)' }}>{tx(data.to)}</span>
               </h1>
 
-              <p style={{ fontSize: '0.9rem', opacity: 0.85, marginBottom: '28px', lineHeight: 1.75, maxWidth: '500px' }}>
+              <p className="route-description" style={{ fontSize: '0.9rem', opacity: 0.85, marginBottom: '28px', lineHeight: 1.75, maxWidth: '500px' }}>
                 {tx(data.description)}
               </p>
 

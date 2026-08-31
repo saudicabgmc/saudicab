@@ -23,6 +23,7 @@ export default function UmrahTravelGuide() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <GuidePageTemplate
+        url="https://saudicabsgmc.com/umrah-travel-guide"
         tag="Umrah Travel Guide 2026"
         title="Umrah Travel Guide — Transport Between Makkah, Madinah & Jeddah"
         subtitle="A complete transport guide for Umrah pilgrims — from airport arrival to intercity transfers and Ziyarat tours in the Holy Cities."
