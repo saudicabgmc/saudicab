@@ -1,6 +1,6 @@
 # Saudi Cabs GMC — Complete Topical Authority Map
 **Domain:** saudicabsgmc.com | **Niche:** Private Taxi & Transport — Saudi Arabia
-**Generated:** 2026-05-02 | **Purpose:** AEO · GEO · LLM · On-Page SEO
+**Generated:** 2026-05-02 | **Last re-verified against `src/app/`:** 2026-08-31 (Day 21 of `PLAN_30_DAY.md`) | **Purpose:** AEO · GEO · LLM · On-Page SEO
 
 ---
 
@@ -71,10 +71,10 @@ SAUDI CABS GMC (Root Entity)
 | Taif Taxi Service | `/taif-taxi-service` | taxi taif | cab taif, taif private driver, taif to makkah |
 
 **Content Gaps to Fill:**
-- [ ] Makkah: Add neighbourhood-level content (Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah)
-- [ ] Madinah: Add hotel-district content (Quba, Central Area near Nabawi)
-- [ ] Jeddah: Add Al-Balad, King Road, Obhur area content
-- [ ] Taif: Add Al-Hada, Al-Shafa mountain route content
+- [x] Makkah: Add neighbourhood-level content (Aziziyah, Misfalah, Ajyad, Mina, Arafat, Muzdalifah) — Day 4
+- [x] Madinah: Add hotel-district content (Quba, Central Area near Nabawi) — Day 5
+- [x] Jeddah: Add Al-Balad, King Road, Obhur area content — Day 6
+- [x] Taif: Add Al-Hada, Al-Shafa mountain route content — Day 7
 
 ---
 
@@ -147,7 +147,6 @@ SAUDI CABS GMC (Root Entity)
 | Taif → Jeddah | `/taif-to-jeddah` | ~100 km |
 | Jeddah → Taif | `/jeddah-to-taif` | ~100 km |
 | Taif → Madinah | `/taif-to-madinah` | ~490 km |
-| Madinah → Madinah | `/madinah-to-makkah` | ~430 km |
 | Riyadh → Jeddah | `/riyadh-to-jeddah` | ~950 km |
 | Riyadh → Madinah | `/riyadh-to-madinah` | ~1000 km |
 | Madinah → Makkah | `/madinah-to-makkah` | ~430 km |
@@ -221,15 +220,15 @@ These pages target **AI Overview**, **Bing Copilot**, **Perplexity**, and **Chat
 | Riyadh to Makkah Guide | `/blog/riyadh-to-makkah-complete-guide` | Long distance |
 | GMC Yukon vs Staria for Umrah | `/blog/gmc-yukon-vs-staria-family-umrah` | Vehicle choosers |
 | Hajj 2026 Makkah Traffic Tips | `/blog/hajj-2026-transport-makkah-traffic-tips` | Hajj pilgrims |
+| Taxi Madinah to Makkah — What to Expect | `/blog/taxi-madinah-to-makkah-what-to-expect` | Intercity travellers (Day 8) |
+| How Much Does a Taxi Cost in Saudi Arabia | `/blog/how-much-does-a-taxi-cost-in-saudi-arabia` | Price researchers (Day 9) |
+| Best Time to Travel Makkah–Madinah | `/blog/best-time-travel-makkah-madinah-private-car` | Trip planners (Day 10) |
+| Umrah Checklist: Transport, Hotels & Packing | `/blog/umrah-checklist-transport-hotels-packing` | Umrah pilgrims (Day 11) |
+| 10 Things to Know — First Umrah Trip | `/blog/10-things-to-know-first-umrah-trip` | First-time pilgrims (Day 12) |
+| Saudi Arabia for Non-Muslims | `/blog/saudi-arabia-non-muslims-travel-transport-guide` | Non-Muslim tourists (Day 13) |
+| How to Book Hajj Transport in Advance | `/blog/how-to-book-hajj-transport-in-advance` | Hajj planners (Day 14) |
 
-**Blog Content Gap Analysis — High-Priority Articles to Write:**
-- [ ] "Taxi from Madinah to Makkah — What to Expect" (high volume)
-- [ ] "How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide"
-- [ ] "Best Time to Travel Makkah to Madinah by Private Car"
-- [ ] "Umrah Checklist: Transport, Hotels & What to Pack"
-- [ ] "10 Things to Know Before Your First Umrah Trip"
-- [ ] "Saudi Arabia for Non-Muslims — Travel Transport Guide"
-- [ ] "How to Book Hajj Transport in Advance"
+**Blog Content Gap Analysis — all 7 originally-planned articles published (Days 8–14). See `PLAN_30_DAY.md` for the current roadmap.**
 
 ---
 
@@ -268,47 +267,45 @@ Blog Articles
 
 ## Missing Pages / Content Gaps
 
-*Verified against actual `src/app/` on 2026-08-14 — see `PLAN_30_DAY.md`.*
+*Re-verified against actual `src/app/` on 2026-08-31 (Day 21) — see `PLAN_30_DAY.md` for the day-by-day log.*
 
-### High Priority (create next)
-| Page | Keyword | Status |
-|------|---------|--------|
-| `/booking` | book taxi saudi arabia | Missing |
-| `/reviews` | saudi cabs gmc reviews | Missing — needs real testimonials |
+### Remaining
+| Item | Notes |
+|------|-------|
+| Makkah Ziyarat complete list | Content addition to `/makkah-ziyarat-tour`, not a new page — not yet done |
+| `/reviews` `AggregateRating` schema | Deliberately not added — no real third-party review data to cite (see Day 3, Day 22 plan) |
 
 ### Done
 | Page | Keyword |
 |------|---------|
 | ~~`/jeddah-to-madinah`~~ | jeddah to madinah taxi (already existed) |
 | ~~`/madinah-to-jeddah`~~ | madinah to jeddah cab (already existed) |
-| ~~`/about`~~ | saudi cabs gmc company (built Day 1) |
-| ~~`/faq`~~ | saudi arabia taxi faq (built Day 1) |
+| ~~`/about`~~ | saudi cabs gmc company (Day 1) |
+| ~~`/faq`~~ | saudi arabia taxi faq (Day 1) |
 | ~~`/contact`~~ | contact saudi cabs gmc (already existed) |
-
-### Medium Priority (content gaps, not new pages)
-| Item | Notes |
-|------|-------|
-| Makkah Ziyarat complete list | Content addition to `/makkah-ziyarat-tour`, not a new page |
+| ~~`/booking`~~ | book taxi saudi arabia (Day 2) |
+| ~~`/reviews`~~ | saudi cabs gmc reviews (Day 3, using real homepage testimonials) |
 
 ### Schema Improvements Per Page Type
 
-**Every Route Page needs:**
-- `TripService` or `TaxiService` schema with origin/destination
-- `BreadcrumbList` schema
-- `FAQPage` schema (3–5 route-specific FAQs)
-- `AggregateRating` on individual pages
+**Every Route Page — status:**
+- [x] `Service`/`TaxiService` schema with origin/destination (`schemaUtils.ts`)
+- [x] `BreadcrumbList` schema
+- [x] `FAQPage` schema (page FAQs + auto-generated AEO questions)
+- [x] `Speakable` (Day 17)
+- [ ] ~~`AggregateRating` on individual pages~~ — **removed from scope on purpose.** A prior audit stripped 13 fabricated `AggregateRating` blocks that had no real review data behind them; do not re-add without genuine third-party ratings (see Day 22 Google Business Profile plan).
 
-**Every Guide Page needs:**
-- `Article` schema with datePublished + dateModified
-- `BreadcrumbList`
-- `FAQPage`
-- `Speakable` specification
+**Every Guide Page — status:**
+- [x] `FAQPage` schema (per-page)
+- [x] `Speakable` specification (Day 17)
+- [x] `dateModified` freshness signal (Day 19, on the page's `WebPage` node)
+- [ ] `BreadcrumbList` — not yet added to the 5 guide pages
+- [ ] `Article`/`datePublished` — guides use `WebPage`, not `Article`; not needed unless these become dated editorial pieces
 
-**Blog Posts need:**
-- `BlogPosting` schema
-- `Article` schema with author
-- `BreadcrumbList`
-- Internal linking to 3+ route/service pages
+**Blog Posts — status:**
+- [x] `BlogPosting` schema (every post, via `blog/[slug]/page.tsx`)
+- [x] `BreadcrumbList` (every post)
+- [ ] Internal linking to 3+ route/service pages — posts currently only cross-link via the auto "Related Articles" block, not inline in the content itself
 
 ---
 

@@ -32,7 +32,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 18**: `DefinedTermSet` schema for domain terms (Umrah, Hajj, Ihram, Miqat, Tawaf, Sa'i, Ziyarat, Haram, Mina, Arafat, Muzdalifah) added site-wide in `layout.tsx` — plain factual/encyclopedic definitions, no religious-authority claims. Also fixed a leftover "certified professional driver" claim found in the HowTo schema while in there.
 - [x] **Day 19**: Freshness pass — `GuidePageTemplate.tsx` now takes a required `dateModified` prop, rendered both as a visible "Last updated" line and in the page's WebPage schema; set on all 5 guide pages. Updated `TOPICAL_MAP.md` checklists for Days 17-19.
 - [ ] **Day 20**: `AggregateRating` rollout — blocked on Day 3 review data; otherwise skip/defer
-- [ ] **Day 21**: Re-verify `TOPICAL_MAP.md` against actual `src/app/` and correct all stale entries
+- [x] **Day 21**: Re-verified `TOPICAL_MAP.md` against actual `src/app/` and corrected stale entries — checked off all 4 city content gaps (Days 4-7), added the 8 new blog posts (Days 8-14) to the blog table, updated `/booking`/`/reviews` from "Missing" to "Done", removed the dangerous "add `AggregateRating`" advice (a prior audit deliberately removed 13 fabricated instances of exactly this), updated per-page-type schema checklists to reflect Days 17-19, and removed a duplicate/typo'd route row ("Madinah → Madinah")
 
 ## Week 4 — Off-Site, Audit & Polish
 - [ ] **Day 22**: Google Business Profile submission checklist (external, manual — not code)
