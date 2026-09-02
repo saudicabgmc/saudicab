@@ -429,8 +429,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'ما أفضل طريقة لزيارة شفا وهدا من الطائف؟',
     },
     a: {
-      en: 'The best way to visit Shafa and Hada from Taif is by private cab with Saudi Cabs GMC. Shafa is approximately 30 minutes from downtown Taif and Hada is about 20 minutes. Our drivers know all the scenic mountain roads and can take you to the best viewpoints.',
-      ar: 'أفضل طريقة لزيارة شفا وهدا من الطائف هي الكاب الخاص مع Saudi Cabs GMC. تبعد شفا حوالي 30 دقيقة من وسط الطائف وهدا حوالي 20 دقيقة. سائقونا يعرفون جميع طرق الجبال الخلابة ويأخذونك إلى أجمل المناظر والمواقع.',
+      en: 'The best way to visit Shafa and Hada from Taif is by private cab with Saudi Cabs GMC. Shafa is approximately 30 minutes from downtown Taif and Hada is about 20 minutes. Our drivers are familiar with the scenic mountain roads and can take you to popular viewpoints.',
+      ar: 'أفضل طريقة لزيارة شفا وهدا من الطائف هي الكاب الخاص مع Saudi Cabs GMC. تبعد شفا حوالي 30 دقيقة من وسط الطائف وهدا حوالي 20 دقيقة. سائقونا على دراية بالطرق الجبلية الخلابة ويأخذونك إلى مناظر ومواقع شهيرة.',
     },
   },
   {
@@ -439,8 +439,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب من مطار الطائف إلى وسط المدينة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides airport transfer from Taif Airport to the city center and all Taif neighborhoods. The journey takes approximately 25 minutes. Book in advance and your driver will be waiting in the arrivals area at your confirmed flight time.',
-      ar: 'نعم، Saudi Cabs GMC تقدم خدمة التوصيل من مطار الطائف إلى وسط المدينة وجميع أحياء الطائف. تستغرق الرحلة حوالي 25 دقيقة. احجز مسبقاً وسيكون سائقك في انتظارك في منطقة الوصول في وقت رحلتك المحددة.',
+      en: 'Yes, Saudi Cabs GMC provides airport transfer from Taif Airport to the city center and major Taif neighborhoods. The journey takes approximately 25 minutes. Book in advance and your driver will be waiting in the arrivals area at your confirmed flight time.',
+      ar: 'نعم، Saudi Cabs GMC تقدم خدمة التوصيل من مطار الطائف إلى وسط المدينة وأبرز أحياء الطائف. تستغرق الرحلة حوالي 25 دقيقة. احجز مسبقاً وسيكون سائقك في انتظارك في منطقة الوصول في وقت رحلتك المحددة.',
     },
   },
   {
@@ -449,8 +449,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'هل يمكنني زيارة مزارع الورد الطائفي بكاب خاص؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC can take you to the famous Taif rose farms (open mainly during the rose season from February to April). Our drivers know exactly where the best farms and authentic rose distilleries are in the Al-Hada area and surrounding mountain villages.',
-      ar: 'نعم، Saudi Cabs GMC يمكنها أخذك إلى مزارع الورد الطائفي الشهيرة (مفتوحة أساساً في موسم الورد من فبراير إلى أبريل). سائقونا يعرفون تماماً أماكن أفضل المزارع ومصانع عطر الورد الأصيل في منطقة الهدا والقرى الجبلية المحيطة.',
+      en: 'Yes, Saudi Cabs GMC can take you to the famous Taif rose farms (open mainly during the rose season from February to April). Our drivers are familiar with popular farms and rose distilleries in the Al-Hada area and surrounding mountain villages.',
+      ar: 'نعم، Saudi Cabs GMC يمكنها أخذك إلى مزارع الورد الطائفي الشهيرة (مفتوحة أساساً في موسم الورد من فبراير إلى أبريل). سائقونا على دراية بمزارع ومصانع عطر الورد الشهيرة في منطقة الهدا والقرى الجبلية المحيطة.',
     },
   },
   {
@@ -469,8 +469,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'هل يمكنني حجز سائق خاص ليوم كامل في الطائف؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers full-day private driver packages in Taif. Your dedicated driver will take you to Al-Hada, Shafa, the rose farms, Al-Rudaf Park, Taif Zoo, and the cable car — all of Taif\'s top attractions — at a single fixed daily rate.',
-      ar: 'نعم، Saudi Cabs GMC تقدم باقات سائق خاص ليوم كامل في الطائف. سائقك المخصص سيأخذك إلى الهدا وشفا ومزارع الورد وحديقة الرضف وحديقة حيوانات الطائف والتلفريك — جميع مناطق الجذب الرئيسية — بسعر يومي ثابت.',
+      en: 'Yes, Saudi Cabs GMC offers full-day private driver hire in Taif. Your dedicated driver can take you to Al-Hada, Shafa, the rose farms, Al-Rudaf Park, Taif Zoo, and the cable car — popular attractions in the region. Contact us via WhatsApp to confirm availability, duration, and pricing.',
+      ar: 'نعم، توفر Saudi Cabs GMC خدمة استئجار سائق خاص ليوم كامل في الطائف. سائقك المخصص يمكنه أخذك إلى الهدا وشفا ومزارع الورد وحديقة الرضف وحديقة حيوانات الطائف والتلفريك — من أبرز مناطق الجذب في المنطقة. تواصل معنا عبر واتساب لتأكيد التوفر والمدة والسعر.',
     },
   },
   {
@@ -479,8 +479,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'كيف أسافر من الطائف إلى مكة المكرمة بسيارة خاصة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers the Taif to Makkah route at a fixed price. The journey takes approximately 1.5 hours via the Al-Hada mountain road with beautiful scenery along the way. Book via WhatsApp for the best rate and guaranteed availability.',
-      ar: 'Saudi Cabs GMC تقدم خط الطائف - مكة المكرمة بسعر ثابت. تستغرق الرحلة حوالي 1.5 ساعة عبر طريق الهدا الجبلي مع مناظر رائعة على امتداد الطريق. احجز عبر واتساب للحصول على أفضل سعر وضمان التوفر.',
+      en: 'Saudi Cabs GMC offers the Taif to Makkah route at a fixed price. The journey takes approximately 1.5 hours via the Al-Hada mountain road with beautiful scenery along the way. Book via WhatsApp to confirm the rate and availability.',
+      ar: 'Saudi Cabs GMC تقدم خط الطائف - مكة المكرمة بسعر ثابت. تستغرق الرحلة حوالي 1.5 ساعة عبر طريق الهدا الجبلي مع مناظر رائعة على امتداد الطريق. احجز عبر واتساب لتأكيد السعر والتوفر.',
     },
   },
   {
@@ -499,8 +499,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'ما أفضل مسار لجولة سياحية في جبال الطائف؟',
     },
     a: {
-      en: 'The best Taif mountain tour covers Shafa, Al-Hada, the cable car station, Wadi Qarn, the rose farms, and Al-Rudaf Park. Saudi Cabs GMC offers customized full-day mountain tours starting from your hotel at a fixed rate. Our drivers know every scenic stop.',
-      ar: 'تشمل أفضل جولة جبلية في الطائف شفا والهدا ومحطة التلفريك ووادي قرن ومزارع الورد وحديقة الرضف. Saudi Cabs GMC تقدم جولات جبلية ليوم كامل مخصصة تنطلق من فندقك بسعر ثابت. سائقونا يعرفون كل نقطة توقف خلابة.',
+      en: 'A popular Taif mountain tour covers Shafa, Al-Hada, the cable car station, Wadi Qarn, the rose farms, and Al-Rudaf Park. Saudi Cabs GMC can arrange a customized full-day mountain tour starting from your hotel — contact us via WhatsApp to confirm the itinerary and pricing.',
+      ar: 'تشمل إحدى الجولات الجبلية الشهيرة في الطائف شفا والهدا ومحطة التلفريك ووادي قرن ومزارع الورد وحديقة الرضف. يمكن لـ Saudi Cabs GMC ترتيب جولة جبلية مخصصة ليوم كامل تنطلق من فندقك — تواصل معنا عبر واتساب لتأكيد البرنامج والسعر.',
     },
   },
   {
@@ -515,12 +515,12 @@ export const taifFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'Does Saudi Cabs GMC cover all areas of Taif?',
-      ar: 'هل تغطي Saudi Cabs GMC جميع مناطق الطائف؟',
+      en: 'Does Saudi Cabs GMC cover major areas of Taif?',
+      ar: 'هل تغطي Saudi Cabs GMC مناطق رئيسية في الطائف؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC covers all neighborhoods and areas of Taif including Al-Faisaliyah, Al-Shuhada, Al-Hada, Shafa, Al-Rudaf, Wadi Qarn, Al-Hawiyah, and the Taif city center. Whether at a hotel or private residence, we reach you anywhere.',
-      ar: 'نعم، Saudi Cabs GMC تغطي جميع أحياء ومناطق الطائف بما فيها الفيصلية وحي الشهداء والهدا وشفا والرضف ووادي قرن والحوية ووسط مدينة الطائف. سواء كنت في فندق أو مسكن خاص سنصل إليك في أي مكان.',
+      en: 'Yes, Saudi Cabs GMC covers major neighborhoods and areas of Taif including Al-Faisaliyah, Al-Shuhada, Al-Hada, Shafa, Al-Rudaf, Wadi Qarn, Al-Hawiyah, and the Taif city center. Share your pickup location when booking and we\'ll confirm coverage for your trip.',
+      ar: 'نعم، تغطي Saudi Cabs GMC أبرز أحياء ومناطق الطائف بما فيها الفيصلية وحي الشهداء والهدا وشفا والرضف ووادي قرن والحوية ووسط مدينة الطائف. شارك موقع الاستلام عند الحجز حتى نؤكد لك التغطية لرحلتك.',
     },
   },
 ]

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Taxi Service in Taif | Mountain Tours, Shafa & Airport Transfer',
   description:
-    'Best taxi service in Taif. Book cab to Shafa, Hada, rose farms, Taif Airport & mountain resorts. Fixed prices, 24/7. Book via WhatsApp now.',
+    'Taxi service in Taif. Book cab to Shafa, Hada, rose farms, Taif Airport & mountain resorts. Route-based fares, 24/7. Book via WhatsApp now.',
   keywords: [
     'taxi taif', 'cab taif', 'taif airport transfer', 'shafa taxi',
     'hada mountain taxi', 'taif rose farms tour', 'private driver taif',

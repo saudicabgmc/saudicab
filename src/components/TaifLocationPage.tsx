@@ -47,16 +47,16 @@ const NEIGHBOURHOODS = [
     icon: TreePine,
     name: { ar: 'وادي قرن', en: 'Wadi Qarn' },
     desc: {
-      ar: 'وادٍ جبلي خلاب ضمن مسار الجولات الطبيعية في الطائف. جزء من جولة المرتفعات النموذجية التي ننظمها ليوم كامل مع سائق يعرف كل نقطة توقف.',
-      en: 'A scenic mountain valley on Taif\'s natural sightseeing route. Part of the typical full-day highlands tour we organize, with a driver who knows every scenic stop.',
+      ar: 'وادٍ جبلي خلاب ضمن مسار الجولات الطبيعية في الطائف. جزء من جولة المرتفعات النموذجية التي ننظمها ليوم كامل مع سائق على دراية بنقاط التوقف الرئيسية.',
+      en: 'A scenic mountain valley on Taif\'s natural sightseeing route. Part of the typical full-day highlands tour we organize, with a driver familiar with the main scenic stops.',
     },
   },
   {
     icon: Building2,
     name: { ar: 'وسط الطائف (الفيصلية)', en: 'Downtown Taif (Al-Faisaliyah)' },
     desc: {
-      ar: 'المركز التجاري والفندقي في الطائف، حيث تتوفر أغلب أماكن الإقامة. نوفر توصيلاً منتظماً من وسط المدينة إلى الهدا وشفا ومطار الطائف وجميع الوجهات.',
-      en: 'Taif\'s commercial and hotel center, where most accommodation is located. We offer regular transfers from downtown to Al-Hada, Al-Shafa, Taif Airport, and every destination.',
+      ar: 'المركز التجاري والفندقي في الطائف، حيث تتوفر أغلب أماكن الإقامة. نوفر توصيلاً منتظماً من وسط المدينة إلى الهدا وشفا ومطار الطائف ووجهات أخرى شهيرة في الطائف.',
+      en: 'Taif\'s commercial and hotel center, where most accommodation is located. We offer regular transfers from downtown to Al-Hada, Al-Shafa, Taif Airport, and other popular destinations across Taif.',
     },
   },
 ]
@@ -255,6 +255,11 @@ export default function TaifLocationPage({
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.76rem', color: 'rgba(255,255,255,0.45)' }}>
+            {isAr
+              ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
+              : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
+          </p>
         </div>
       </section>
 
@@ -266,13 +271,13 @@ export default function TaifLocationPage({
               {isAr ? 'الأحياء والمرتفعات' : 'Neighbourhoods & Highlands'}
             </span>
             <h2 className="section-title" style={{ marginTop: '12px' }}>
-              {isAr ? <>نغطي كل منطقة في <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></>}
+              {isAr ? <>نغطي معظم مناطق <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></> : <>We Cover Major Areas of <span style={{ color: '#2d6a4f' }}>{tx(cityName)}</span></>}
             </h2>
             <div style={{ width: '44px', height: '3px', background: 'linear-gradient(90deg, #2d6a4f, #e9c46a)', borderRadius: '2px', margin: '14px auto' }} />
             <p className="section-subtitle">
               {isAr
-                ? 'من وسط المدينة إلى طرق الهدا وشفا الجبلية — سائقونا يعرفون كل منعطف'
-                : 'From downtown to the mountain roads of Al-Hada and Al-Shafa — our drivers know every turn'}
+                ? 'من وسط المدينة إلى طرق الهدا وشفا الجبلية — سائقونا على دراية بالطرق الجبلية الرئيسية والمسارات الشائعة'
+                : 'From downtown to the mountain roads of Al-Hada and Al-Shafa — our drivers are familiar with the main mountain roads and popular routes.'}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
@@ -322,7 +327,7 @@ export default function TaifLocationPage({
                 }}>
                   <div>
                     <div style={{ fontWeight: '800', fontSize: '0.9rem', marginBottom: '4px' }}>{tx(r.label)}</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر ثابت' : 'Fixed Price'}</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر حسب المسار' : 'Route-Based Fare'}</div>
                   </div>
                   <div style={{ background: 'rgba(45,106,79,0.12)', borderRadius: '10px', padding: '8px' }}>
                     <Car size={16} color="#2d6a4f" strokeWidth={2} />
@@ -417,7 +422,14 @@ export default function TaifLocationPage({
         <PricingSection routes={pricing} heading={{ ar: `أسعار النقل في ${tx(cityName)}`, en: `Transport Rates in ${tx(cityName)}` }} />
       )}
 
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} noSchema />
+      <FAQSection
+        faqs={faqs}
+        heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }}
+        subheading={{
+          ar: 'إجابات واضحة حول خدمات تاكسي الطائف وتوصيل المطار والرحلات الجبلية والسفر بين المدن',
+          en: 'Clear answers about Taif taxi services, airport transfers, mountain trips and intercity travel',
+        }}
+      />
     </main>
   )
 }
