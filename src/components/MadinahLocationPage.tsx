@@ -55,8 +55,8 @@ const NEIGHBOURHOODS = [
     icon: TreePine,
     name: { ar: 'العقيق', en: 'Al-Aqiq' },
     desc: {
-      ar: 'منطقة سكنية وفندقية أوسع تقع غرب المدينة المنورة، وتشمل مسجد ذي الحليفة (ميقات أهل المدينة). نوفر توصيلاً منتظماً بين العقيق والمسجد النبوي.',
-      en: 'A wider residential and hotel area west of central Madinah, home to Masjid Dhul-Hulayfah (the miqat for Madinah residents). We run regular transfers between Al-Aqiq and Masjid an-Nabawi.',
+      ar: 'منطقة سكنية وفندقية أوسع تقع غرب المدينة المنورة، بالقرب من مسجد ذي الحليفة، الميقات المرتبط بالمسافرين المغادرين من المدينة المنورة لأداء العمرة. نوفر توصيلاً منتظماً بين العقيق والمسجد النبوي.',
+      en: 'A wider residential and hotel area west of central Madinah, near Masjid Dhul-Hulayfah, the miqat associated with travelers departing Madinah for Umrah. We run regular transfers between Al-Aqiq and Masjid an-Nabawi.',
     },
   },
 ]
@@ -147,8 +147,8 @@ export default function MadinahLocationPage({
         <div className="container" style={{ textAlign: 'center' }}>
           <p style={{ color: 'rgba(168,230,207,0.9)', fontSize: '0.92rem', fontWeight: '600', letterSpacing: '0.06em', margin: 0 }}>
             {isAr
-              ? '✦ خدمة نقل متميزة في مدينة المصطفى ﷺ — سائقون محترفون، أسعار ثابتة، متاحون ٢٤/٧ ✦'
-              : '✦ Premium transfer service in the City of the Prophet ﷺ — professional drivers, fixed prices, available 24/7 ✦'}
+              ? '✦ خدمة نقل متميزة في مدينة المصطفى ﷺ — سائقون محترفون، أسعار شفافة حسب المسار، متاحون ٢٤/٧ ✦'
+              : '✦ Premium transfer service in the City of the Prophet ﷺ — professional drivers, transparent route-based fares, available 24/7 ✦'}
           </p>
         </div>
       </section>

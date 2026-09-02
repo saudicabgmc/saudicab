@@ -313,8 +313,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل سائقو Saudi Cabs GMC على دراية بجميع المواقع الإسلامية في المدينة المنورة؟',
     },
     a: {
-      en: "Yes, Saudi Cabs GMC drivers serving Madinah are familiar with the city's major hotels, neighborhoods, the airport, and popular landmarks — including the Prophet's Mosque, Quba, Uhud, Al-Baqi, and Masjid Al-Qiblatayn.",
-      ar: 'نعم، سائقو Saudi Cabs GMC العاملون في المدينة المنورة على دراية بأبرز فنادق المدينة وأحيائها والمطار والمعالم الشهيرة — بما في ذلك المسجد النبوي ومسجد قباء وجبل أحد والبقيع ومسجد القبلتين.',
+      en: "Yes, Saudi Cabs GMC drivers serving Madinah are familiar with the city's major Islamic sites and landmarks — including the Prophet's Mosque, Quba, Uhud, Al-Baqi, and Masjid Al-Qiblatayn — as well as major hotels, neighborhoods, and the airport.",
+      ar: 'نعم، سائقو Saudi Cabs GMC العاملون في المدينة المنورة على دراية بأبرز المواقع الإسلامية والمعالم في المدينة — بما في ذلك المسجد النبوي ومسجد قباء وجبل أحد والبقيع ومسجد القبلتين — إضافة إلى أبرز الفنادق والأحياء والمطار.',
     },
   },
 ]
