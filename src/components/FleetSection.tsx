@@ -118,7 +118,7 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
                       padding: '4px 12px', borderRadius: '20px',
                       fontSize: '0.78rem', fontWeight: '700',
                     }}>
-                      {isAr ? `من ${minPrice} ريال` : `From ${minPrice} SAR`}
+                      {isAr ? `من ${minPrice} ريال*` : `From ${minPrice} SAR*`}
                     </div>
                   )}
                 </div>
@@ -187,6 +187,11 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
           {isAr
             ? '✅ أسعار ثابتة · رد فوري عبر واتساب · لا دفع مسبق · متاح ٢٤/٧'
             : '✅ Fixed prices · Instant WhatsApp reply · No advance payment · Available 24/7'}
+        </p>
+        <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.76rem', color: 'var(--muted-foreground)', opacity: 0.75 }}>
+          {isAr
+            ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
+            : '*Starting fare shown for the lowest-cost route. Final price depends on the selected route and trip details.'}
         </p>
 
       </div>

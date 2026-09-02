@@ -237,7 +237,7 @@ export default function Home() {
                   { n: isAr ? '٣' : '3', l: isAr ? 'أنواع السيارات' : 'Vehicle Types' },
                   { n: isAr ? '٤' : '4', l: tr.hero.cities },
                   { n: '24/7', l: tr.hero.available },
-                  { n: isAr ? '٠' : '0', l: isAr ? 'رسوم خفية' : 'Hidden Fees' },
+                  { n: isAr ? 'بدون' : 'No', l: isAr ? 'رسوم خفية' : 'Hidden Fees' },
                 ].map(s => (
                   <div key={s.l}>
                     <div style={{ fontSize: '1.55rem', fontWeight: '900', color: 'var(--primary)', lineHeight: 1 }}>{s.n}</div>
@@ -465,7 +465,7 @@ export default function Home() {
                   {[
                     { en: 'Sedan', ar: 'سيدان', sub: isAr ? '٤ مقاعد' : '4 Seats' },
                     { en: 'Staria', ar: 'ستاريا', sub: isAr ? '٧ مقاعد' : '7 Seats' },
-                    { en: 'GMC Yukon', ar: 'GMC يوكون', sub: 'VIP' },
+                    { en: 'GMC Yukon', ar: 'GMC يوكون', sub: isAr ? '٧ مقاعد • VIP' : '7 Seats • VIP' },
                   ].map(v => (
                     <th key={v.en} style={{ padding: '14px 18px', textAlign: 'center', fontWeight: '800', fontSize: '0.84rem', minWidth: '110px' }}>
                       <div>{isAr ? v.ar : v.en}</div>
@@ -546,7 +546,7 @@ export default function Home() {
                 />
               </div>
               <div className="why-us-badge">
-                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? '٠' : '0'}</div>
+                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? 'بدون' : 'No'}</div>
                 <div style={{ fontSize: '0.82rem', marginTop: '4px' }}>{tr.whyUs.successBadge}</div>
               </div>
             </div>
@@ -561,23 +561,23 @@ export default function Home() {
         <div className="container">
           <div className="two-col-grid">
             <div>
-              <span className="section-tag">{isAr ? 'سائقونا المحترفون' : 'Professional Chauffeur Service'}</span>
+              <span className="section-tag">{isAr ? 'سائقونا المحترفون' : 'Professional Driver Service'}</span>
               <h2 className="section-title" style={{ marginTop: '14px', textAlign: isAr ? 'right' : 'left' }}>
                 {isAr
-                  ? <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — معيار الاحترافية في الشوفير</>
-                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — Professional Chauffeurs</>
+                  ? <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — معيار الاحترافية في القيادة</>
+                  : <><span style={{ color: 'var(--primary)' }}>Saudi Cabs GMC</span> — Professional Drivers</>
                 }
               </h2>
               <div className="gold-divider" style={{ margin: '16px 0', marginRight: isAr ? 'auto' : 0, marginLeft: 0 }} />
               <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: '1.8', marginBottom: '20px' }}>
                 {isAr
-                  ? 'سائقو Saudi Cabs GMC مدرّبون على أعلى معايير خدمة الشوفير، يرتدون الزي الرسمي، ويقدمون تجربة نقل فاخرة.'
-                  : 'Saudi Cabs GMC drivers are trained to the highest chauffeur service standards, dressed in formal attire, delivering a premium transport experience.'}
+                  ? 'سائقو Saudi Cabs GMC ذوو خبرة ومحترفون، يقدمون تجربة نقل مريحة وموثوقة.'
+                  : 'Saudi Cabs GMC drivers are experienced professionals, delivering a comfortable and reliable transport experience.'}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
                 {[
                   { icon: '🎓', en: 'Professionally trained & experienced', ar: 'مدرّبون وذوو خبرة احترافية' },
-                  { icon: '👔', en: 'Formal uniform & impeccable appearance', ar: 'زي رسمي ومظهر لائق' },
+                  { icon: '🧭', en: 'Familiar with local routes & holy sites', ar: 'على دراية بالطرق المحلية والمواقع المقدسة' },
                   { icon: '🗣️', en: 'Bilingual — Arabic & English', ar: 'ثنائيو اللغة — عربي وإنجليزي' },
                   { icon: '💰', en: 'Fixed price agreed before every trip', ar: 'سعر ثابت متفق عليه قبل كل رحلة' },
                 ].map(item => (
@@ -589,12 +589,12 @@ export default function Home() {
               </div>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
-                  href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a professional chauffeur")}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(isAr ? 'السلام عليكم، أرغب في حجز سائق خاص' : "Hello, I'd like to book a private driver")}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary"
                 >
                   <MessageCircle size={16} strokeWidth={2.5} />
-                  {isAr ? 'احجز شوفيرك الآن' : 'Book a Chauffeur Now'}
+                  {isAr ? 'احجز سائقك الآن' : 'Book a Driver Now'}
                 </a>
               </div>
             </div>

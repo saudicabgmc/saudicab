@@ -58,14 +58,14 @@ export const t = {
       { num: '4', label: 'Cities Covered' },
       { num: '3', label: 'Vehicle Types' },
       { num: '24/7', label: 'Always Available' },
-      { num: '0', label: 'Hidden Fees' },
+      { num: 'No', label: 'Hidden Fees' },
     ],
     whyUs: {
       tag: 'Why Us',
       title: 'The Best Choice\nfor Saudi Trips',
       items: [
         { title: 'Experienced Drivers', desc: 'Professional, experienced drivers and regularly maintained vehicles.' },
-        { title: 'Always On Time', desc: 'We always arrive on time. No waiting, no delays.' },
+        { title: 'Punctual & Reliable Service', desc: 'We aim to arrive on time, every time.' },
         { title: 'Transparent Prices', desc: 'Fixed prices with no hidden fees. Know the price before the trip.' },
         { title: '24/7 Support', desc: 'Support team ready around the clock for your inquiries.' },
       ],
@@ -211,14 +211,14 @@ export const t = {
       { num: '٤', label: 'مدن مغطاة' },
       { num: '٣', label: 'أنواع سيارات' },
       { num: '٢٤/٧', label: 'خدمة متواصلة' },
-      { num: '٠', label: 'رسوم خفية' },
+      { num: 'بدون', label: 'رسوم خفية' },
     ],
     whyUs: {
       tag: 'لماذا نحن',
       title: 'الاختيار الأمثل\nلرحلات المملكة',
       items: [
         { title: 'سائقون ذوو خبرة', desc: 'سائقون محترفون ذوو خبرة وسيارات تتم صيانتها بانتظام.' },
-        { title: 'التزام بالمواعيد', desc: 'نصل في الوقت المحدد دائماً. لا انتظار ولا تأخير.' },
+        { title: 'التزام بالمواعيد', desc: 'نسعى للوصول في الوقت المحدد في كل مرة.' },
         { title: 'أسعار شفافة', desc: 'أسعار ثابتة بلا رسوم خفية. تعرف على السعر قبل الرحلة.' },
         { title: 'دعم ٢٤/٧', desc: 'فريق دعم جاهز على مدار الساعة للرد على استفساراتك.' },
       ],

@@ -57,7 +57,7 @@ export default function GMCYukonPage() {
               <h1 style={{ fontSize: 'clamp(1.6rem,4vw,2.6rem)', fontWeight: '900', lineHeight: 1.2, marginBottom: '16px' }}>
                 {isAr
                   ? <><span style={{ color: 'var(--primary)' }}>GMC يوكون</span><br />استئجار فاخر مع سائق في السعودية</>
-                  : <><span style={{ color: 'var(--primary)' }}>GMC Yukon</span> VIP Hire<br />With Professional Chauffeur</>
+                  : <><span style={{ color: 'var(--primary)' }}>GMC Yukon</span> VIP Hire<br />With Professional Driver</>
                 }
               </h1>
               <p style={{ fontSize: '0.9rem', opacity: 0.85, marginBottom: '28px', lineHeight: 1.75, maxWidth: '500px' }}>
@@ -132,7 +132,7 @@ export default function GMCYukonPage() {
       <section style={{ padding: '70px 0', background: 'linear-gradient(135deg,#0B3D2E,#0F5132)', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ fontSize: 'clamp(1.3rem,3vw,2rem)', fontWeight: '900', marginBottom: '12px' }}>{isAr ? 'احجز GMC يوكون الآن' : 'Book Your GMC Yukon Now'}</h2>
-          <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'سائق محترف — سعر ثابت — ٢٤/٧' : 'Professional Chauffeur — Fixed Price — 24/7'}</p>
+          <p style={{ opacity: 0.85, marginBottom: '28px' }}>{isAr ? 'سائق محترف — سعر ثابت — ٢٤/٧' : 'Professional Driver — Fixed Price — 24/7'}</p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#D4AF37,#E6C65C)', color: '#1D1D1B', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><MessageCircle size={18} strokeWidth={2.5} />{isAr ? 'واتساب' : 'WhatsApp'}</a>
             <a href="tel:+923097811785" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px', borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}><Phone size={18} strokeWidth={2.5} />+92 309 7811785</a>

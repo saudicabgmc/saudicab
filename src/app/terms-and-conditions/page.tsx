@@ -81,6 +81,7 @@ export default function TermsAndConditions() {
                   'Prices are quoted in Saudi Riyals (SAR).',
                   'Payment is accepted in cash (SAR) or bank transfer. Full payment is due upon trip completion unless otherwise agreed.',
                   'Waiting time beyond 15 minutes (after agreed pickup time) may incur additional charges at our discretion.',
+                  'The confirmed price covers the agreed route only — additional stops, detours, or a change of destination requested during the trip may adjust the final fare.',
                   'Prices may vary during peak seasons (Hajj, Eid, Ramadan) due to demand. Confirmed booking price will not change after confirmation.',
                 ]} />
               </Section>
@@ -110,7 +111,7 @@ export default function TermsAndConditions() {
               <Section title="6. Airport Transfers">
                 <List items={[
                   'For arrivals, our driver will wait at the arrivals hall with a personalised name-board.',
-                  'We track your flight in real time and adjust pickup time for delays at no extra charge.',
+                  'Share your flight number when booking — we monitor arrival status and adjust pickup time for delays at no extra charge.',
                   'Free waiting time for arrivals: 60 minutes after the actual landing time.',
                   'After 60 minutes, additional waiting charges may apply.',
                   'For departures, please allow sufficient time. Saudi Cabs GMC is not responsible for missed flights due to traffic, road closures, or passenger delays.',

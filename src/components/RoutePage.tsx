@@ -232,9 +232,9 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
         <div className="container">
           <div className="grid-4">
             {[
-              { icon: <Shield size={28} strokeWidth={1.8} />, title: isAr ? 'سائقون معتمدون' : 'Certified Drivers', desc: isAr ? 'مرخصون ومدرّبون احترافياً' : 'Licensed & professionally trained' },
+              { icon: <Shield size={28} strokeWidth={1.8} />, title: isAr ? 'سائقون محترفون' : 'Professional Drivers', desc: isAr ? 'ذوو خبرة ومدرّبون احترافياً' : 'Experienced & professionally trained' },
               { icon: <Banknote size={28} strokeWidth={1.8} />, title: isAr ? 'سعر ثابت' : 'Fixed Price', desc: isAr ? 'لا عداد ولا رسوم خفية' : 'No meter, no hidden fees' },
-              { icon: <Clock size={28} strokeWidth={1.8} />, title: isAr ? 'في الوقت المحدد' : 'On Time', desc: isAr ? 'نضمن وصولك في الموعد' : 'We guarantee punctual arrival' },
+              { icon: <Clock size={28} strokeWidth={1.8} />, title: isAr ? 'في الوقت المحدد' : 'Punctual Service', desc: isAr ? 'نسعى للوصول في الموعد' : 'We aim for on-time arrival' },
               { icon: <MessageCircle size={28} strokeWidth={1.8} />, title: isAr ? 'دعم ٢٤/٧' : '24/7 Support', desc: isAr ? 'واتساب وهاتف دائماً' : 'WhatsApp & phone always open' },
             ].map(i => (
               <div key={i.title} className="service-card" style={{ textAlign: 'center' }}>

@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import { Shield, Award, Users, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Our Team | Saudi Cabs GMC — Professional Chauffeurs & Support',
-  description: 'Meet the Saudi Cabs GMC team: professional chauffeurs, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
+  title: 'Our Team | Saudi Cabs GMC — Professional Drivers & Support',
+  description: 'Meet the Saudi Cabs GMC team: professional drivers, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
   alternates: { canonical: 'https://saudicabsgmc.com/team' },
   openGraph: {
     title: 'Our Team — Saudi Cabs GMC',
-    description: 'Professional chauffeurs and 24/7 support serving pilgrims across Saudi Arabia.',
+    description: 'Professional drivers and 24/7 support serving pilgrims across Saudi Arabia.',
     url: 'https://saudicabsgmc.com/team',
     images: [{ url: 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp', width: 1200, height: 630, alt: 'Our Team — Saudi Cabs GMC' }],
   },
@@ -17,8 +17,8 @@ const teamPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   '@id': 'https://saudicabsgmc.com/team#webpage',
-  name: 'Our Team — Saudi Cabs GMC Professional Chauffeurs & Support',
-  description: 'Meet the Saudi Cabs GMC team: professional chauffeurs, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
+  name: 'Our Team — Saudi Cabs GMC Professional Drivers & Support',
+  description: 'Meet the Saudi Cabs GMC team: professional drivers, dispatch coordinators, and customer support serving pilgrims and travelers across Saudi Arabia.',
   url: 'https://saudicabsgmc.com/team',
   isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
   about: { '@id': 'https://saudicabsgmc.com/#organization' },
@@ -35,7 +35,7 @@ export default function TeamPage() {
   const teamDepartments = [
     {
       icon: <Users size={32} />,
-      title: 'Professional Chauffeurs',
+      title: 'Professional Drivers',
       desc: 'Our drivers are trained in hospitality and pilgrim logistics, and speak both English and Arabic. They know the routes, holy sites, and prayer-time traffic across Makkah, Madinah, Jeddah, and Taif.',
     },
     {

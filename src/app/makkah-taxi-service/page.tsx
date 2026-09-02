@@ -44,7 +44,7 @@ export default function MakkahPage() {
       ]}
       highlights={[
         { iconName: 'Star', title: { ar: 'متخصصون في خدمة الحجاج والمعتمرين', en: 'Specialists in Hajj & Umrah Services' }, desc: { ar: 'أسطولنا مخصص لخدمة ضيوف الرحمن بكل تبجيل واحترام.', en: 'Our fleet is dedicated to serving the guests of the Merciful with full reverence and respect.' } },
-        { iconName: 'Shield', title: { ar: 'سائقون معتمدون ومعروفون بالمنطقة', en: 'Certified Drivers Familiar with the Area' }, desc: { ar: 'جميع سائقينا على دراية تامة بشوارع مكة ومواقعها.', en: 'All our drivers are thoroughly familiar with Makkah\'s streets and sacred locations.' } },
+        { iconName: 'Shield', title: { ar: 'سائقون محترفون ومعروفون بالمنطقة', en: 'Professional Drivers Familiar with the Area' }, desc: { ar: 'جميع سائقينا على دراية تامة بشوارع مكة ومواقعها.', en: 'All our drivers are thoroughly familiar with Makkah\'s streets and sacred locations.' } },
         { iconName: 'Clock', title: { ar: 'متاحون ٢٤ ساعة طوال أيام الأسبوع', en: 'Available 24/7' }, desc: { ar: 'لا يتوقف الحرم ولا تتوقف خدمتنا — نحن هنا في أي وقت.', en: 'The Haram never stops and neither does our service — we\'re here anytime you need us.' } },
         { iconName: 'Banknote', title: { ar: 'أسعار خاصة لموسم الحج والعمرة', en: 'Special Prices for Hajj & Umrah Season' }, desc: { ar: 'باقات مميزة للحجاج والمعتمرين مع خصومات على الرحلات المتعددة.', en: 'Special packages for pilgrims with discounts on multiple trips throughout your stay.' } },
       ]}
