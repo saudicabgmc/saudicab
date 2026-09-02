@@ -48,24 +48,24 @@ const NEIGHBOURHOODS = [
     icon: Tent,
     name: { ar: 'منى', en: 'Mina' },
     desc: {
-      ar: 'مدينة الخيام على بعد حوالي 7 كم من مكة، محطة أساسية خلال أيام الحج. نوفر رحلات منظمة من وإلى منى بسيارات مرخصة خلال كامل الموسم.',
-      en: 'The tent city roughly 7 km from central Makkah, a core stop during the days of Hajj. We run organized transfers to and from Mina in licensed vehicles throughout the season.',
+      ar: 'مدينة الخيام على بعد حوالي 7 كم من مكة، محطة أساسية خلال أيام الحج. نوفر رحلات منظمة من وإلى منى خلال موسم الحج.',
+      en: 'The tent city roughly 7 km from central Makkah, a core stop during the days of Hajj. We run organized transfers to and from Mina during the Hajj season.',
     },
   },
   {
     icon: Mountain,
     name: { ar: 'عرفات', en: 'Arafat' },
     desc: {
-      ar: 'موقع الوقوف الأهم في مناسك الحج، يبعد حوالي 20 كم عن مكة المكرمة. نساعد الحجاج والمجموعات على التنقل إلى عرفات ومنها في الوقت المحدد.',
-      en: 'The site of the central Hajj ritual of standing (Wuquf), about 20 km from Makkah. We help pilgrims and groups move to and from Arafat exactly on schedule.',
+      ar: 'موقع الوقوف الأهم في مناسك الحج، يبعد حوالي 20 كم عن مكة المكرمة. نساعد الحجاج والمجموعات على التنقل إلى عرفات ومنها وفق الجدول المخطط له.',
+      en: 'The site of the central Hajj ritual of standing (Wuquf), about 20 km from Makkah. We help pilgrims and groups travel to and from Arafat according to their planned schedule.',
     },
   },
   {
     icon: Moon,
     name: { ar: 'مزدلفة', en: 'Muzdalifah' },
     desc: {
-      ar: 'محطة المبيت بين عرفات ومنى، على بعد حوالي 9 كم من مكة. جزء من خطة النقل خلال ليالي الحج، نوفره ضمن باقات نقل الحج والعمرة.',
-      en: 'The overnight stop between Arafat and Mina, about 9 km from Makkah. Part of the transport plan for Hajj nights, included in our Hajj & Umrah transport packages.',
+      ar: 'محطة المبيت بين عرفات ومنى، على بعد حوالي 9 كم من مكة. نوفر خيارات نقل لرحلات الحج والعمرة التي تشمل مزدلفة.',
+      en: 'The overnight stop between Arafat and Mina, about 9 km from Makkah. We provide transport options for Hajj and Umrah travel involving Muzdalifah.',
     },
   },
 ]
@@ -254,8 +254,8 @@ export default function MakkahLocationPage({
             <div className="gold-divider" />
             <p className="section-subtitle">
               {isAr
-                ? 'من أحياء الفنادق القريبة من الحرم إلى المشاعر المقدسة — سائقونا يعرفون كل موقع'
-                : 'From hotel districts near the Haram to the sacred sites — our drivers know every location'}
+                ? 'من أحياء الفنادق القريبة من الحرم إلى المشاعر المقدسة — سائقونا على دراية بأبرز الفنادق والأحياء والمواقع الرئيسية في مكة'
+                : 'From hotel districts near the Haram to the sacred sites — our drivers are familiar with major hotels, neighborhoods, and key locations across Makkah'}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>

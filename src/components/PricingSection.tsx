@@ -56,8 +56,8 @@ export default function PricingSection({ routes, heading }: Props) {
           <div className="gold-divider" />
           <p className="section-subtitle">
             {isAr
-              ? 'اختر السيارة المناسبة لك — السعر ثابت من لحظة الحجز ولا تفاجآت عند الوصول'
-              : 'Choose the vehicle that suits you — price is locked at booking, no surprises on arrival'}
+              ? 'اختر السيارة المناسبة لك — سعر ثابت للمسار يُؤكد عند الحجز'
+              : 'Choose the vehicle that suits you — fixed route pricing confirmed at booking.'}
           </p>
         </div>
 

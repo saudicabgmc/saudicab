@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Taxi Service in Makkah | Airport Transfer, Umrah & Intercity Cab',
   description:
-    'Best taxi service in Makkah (Mecca). Book cab to Holy Mosque, Jeddah Airport transfers, Umrah trips, Mina & Arafat. Fixed prices, 24/7. Book via WhatsApp now.',
+    'Taxi service in Makkah (Mecca). Book cab to Holy Mosque, Jeddah Airport transfers, Umrah trips, Mina & Arafat. Fixed prices, 24/7. Book via WhatsApp now.',
   keywords: [
     'taxi makkah', 'cab mecca', 'taxi mecca', 'makkah airport transfer',
     'jeddah airport to makkah', 'umrah taxi', 'hajj transport makkah',
