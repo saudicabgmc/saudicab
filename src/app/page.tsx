@@ -269,8 +269,8 @@ export default function Home() {
             justifyContent: 'center',
           }}>
             {(isAr
-              ? ['🔒 سعر ثابت مضمون', '🚗 أسطول GMC وستاريا', '💬 حجز فوري عبر واتساب', '⏰ متاح ٢٤ ساعة / ٧ أيام']
-              : ['🔒 Guaranteed Fixed Price', '🚗 GMC Yukon & Staria Fleet', '💬 Instant WhatsApp Booking', '⏰ Available 24/7']
+              ? ['🔒 سعر ثابت يُؤكد قبل رحلتك', '🚗 أسطول سيدان وستاريا وGMC يوكون', '💬 حجز فوري عبر واتساب', '⏰ متاح ٢٤ ساعة / ٧ أيام']
+              : ['🔒 Fixed Price Confirmed Before Your Trip', '🚗 Sedan, Staria & GMC Yukon Fleet', '💬 Instant WhatsApp Booking', '⏰ Available 24/7']
             ).map((item, i, arr) => (
               <div key={item} style={{
                 padding: '4px 20px',
@@ -463,13 +463,12 @@ export default function Home() {
                     {isAr ? 'المسار' : 'Route'}
                   </th>
                   {[
-                    { en: 'Sedan', ar: 'سيدان', sub: isAr ? '٤ مقاعد' : '4 Seats' },
-                    { en: 'Staria', ar: 'ستاريا', sub: isAr ? '٧ مقاعد' : '7 Seats' },
-                    { en: 'GMC Yukon', ar: 'GMC يوكون', sub: isAr ? '٧ مقاعد • VIP' : '7 Seats • VIP' },
+                    { en: 'Sedan', ar: 'سيدان' },
+                    { en: 'Staria', ar: 'ستاريا' },
+                    { en: 'GMC Yukon', ar: 'GMC يوكون' },
                   ].map(v => (
                     <th key={v.en} style={{ padding: '14px 18px', textAlign: 'center', fontWeight: '800', fontSize: '0.84rem', minWidth: '110px' }}>
-                      <div>{isAr ? v.ar : v.en}</div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: '600', marginTop: '2px' }}>{v.sub}</div>
+                      {isAr ? v.ar : v.en}
                     </th>
                   ))}
                 </tr>
@@ -741,8 +740,8 @@ export default function Home() {
           {/* Micro trust row */}
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '28px', flexWrap: 'wrap', opacity: 0.7 }}>
             {(isAr
-              ? ['✅ لا دفع مسبق', '🔒 سعر ثابت مضمون', '💬 رد فوري عبر واتساب']
-              : ['✅ No advance payment', '🔒 Guaranteed fixed price', '💬 Instant WhatsApp reply']
+              ? ['✅ لا دفع مسبق', '🔒 سعر ثابت يُؤكد مقدماً', '💬 رد فوري عبر واتساب']
+              : ['✅ No advance payment', '🔒 Fixed price confirmed upfront', '💬 Instant WhatsApp reply']
             ).map(s => <span key={s} style={{ fontSize: '0.8rem', fontWeight: '600', color: 'rgba(255,255,255,0.85)' }}>{s}</span>)}
           </div>
         </div>

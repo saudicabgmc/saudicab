@@ -47,8 +47,8 @@ export const homeFaqs: FAQItem[] = [
       ar: 'ما أنواع السيارات التي تقدمها Saudi Cabs GMC؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers standard saloon cars, SUVs, luxury sedans for business travel, and spacious family vehicles (GMC Yukon, Chevrolet Suburban) for larger groups. All vehicles are clean, air-conditioned, and well-maintained.',
-      ar: 'تقدم Saudi Cabs GMC سيارات عادية، وسيارات دفع رباعي، وسيارات فاخرة لرجال الأعمال، وسيارات عائلية واسعة (GMC يوكن، وشيفروليه سوبربان) للمجموعات الكبيرة. جميع السيارات نظيفة ومكيفة وصيانتها منتظمة.',
+      en: 'Saudi Cabs GMC offers a Toyota Camry sedan for individuals and couples, a Hyundai Staria van for families and groups, and a GMC Yukon VIP SUV for premium travel. All vehicles are clean, air-conditioned, and well-maintained.',
+      ar: 'تقدم Saudi Cabs GMC سيارة سيدان تويوتا كامري للأفراد والأزواج، وحافلة هيونداي ستاريا للعائلات والمجموعات، وسيارة GMC يوكن VIP للسفر الفاخر. جميع السيارات نظيفة ومكيفة وصيانتها منتظمة.',
     },
   },
   {
@@ -99,6 +99,16 @@ export const homeFaqs: FAQItem[] = [
     a: {
       en: 'Absolutely. Saudi Cabs GMC drivers are experienced professionals, and our service operates in compliance with Saudi transport regulations. We offer spacious family vehicles, making it a safe and reliable choice for families, women, and solo travelers alike.',
       ar: 'بالتأكيد. سائقو Saudi Cabs GMC محترفون وذوو خبرة، وخدمتنا متوافقة مع أنظمة النقل في المملكة العربية السعودية. نقدم سيارات عائلية واسعة، مما يجعلها خياراً آمناً وموثوقاً للعائلات والنساء والمسافرين المنفردين على حد سواء.',
+    },
+  },
+  {
+    q: {
+      en: 'Do I need to pay in advance?',
+      ar: 'هل يجب الدفع مسبقاً؟',
+    },
+    a: {
+      en: 'No advance payment is required to confirm a booking. Payment is made to your driver in cash (SAR) or by bank transfer, typically at the end of the trip unless otherwise agreed when you book.',
+      ar: 'لا يوجد دفع مسبق مطلوب لتأكيد الحجز. يتم الدفع لسائقك نقداً (بالريال السعودي) أو عن طريق التحويل البنكي، عادةً عند انتهاء الرحلة ما لم يُتفق على غير ذلك عند الحجز.',
     },
   },
 ]
@@ -160,8 +170,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة للنقل في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC has spacious GMC Yukon and Chevrolet Suburban vehicles that comfortably seat 6 to 7 passengers with luggage. These are ideal for Hajj and Umrah groups and families traveling together in Makkah.',
-      ar: 'نعم، لدى Saudi Cabs GMC سيارات GMC يوكن وشيفروليه سوبربان الواسعة التي تستوعب 6 إلى 7 ركاب مع الأمتعة براحة تامة. وهي مثالية لمجموعات الحج والعمرة والعائلات المسافرة معاً في مكة المكرمة.',
+      en: 'Yes, Saudi Cabs GMC has a spacious Hyundai Staria van and a GMC Yukon VIP SUV that comfortably seat up to 7 passengers with luggage. These are ideal for Hajj and Umrah groups and families traveling together in Makkah.',
+      ar: 'نعم، لدى Saudi Cabs GMC حافلة هيونداي ستاريا وسيارة GMC يوكن VIP الواسعتين اللتين تستوعبان حتى 7 ركاب مع الأمتعة براحة تامة. وهما مثاليتان لمجموعات الحج والعمرة والعائلات المسافرة معاً في مكة المكرمة.',
     },
   },
   {
@@ -263,8 +273,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة في المدينة المنورة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC has spacious family vehicles (GMC Yukon, Chevrolet Suburban) in Madinah that comfortably accommodate large families and groups. These are perfect for families visiting the Prophet\'s Mosque and touring surrounding Islamic sites.',
-      ar: 'نعم، لدى Saudi Cabs GMC سيارات عائلية واسعة (GMC يوكن وشيفروليه سوبربان) في المدينة المنورة تستوعب العائلات والمجموعات الكبيرة براحة تامة. وهي مثالية للعائلات الزائرة للمسجد النبوي والمواقع الإسلامية المحيطة.',
+      en: 'Yes, Saudi Cabs GMC has spacious family vehicles (Hyundai Staria, GMC Yukon) in Madinah that comfortably accommodate large families and groups. These are perfect for families visiting the Prophet\'s Mosque and touring surrounding Islamic sites.',
+      ar: 'نعم، لدى Saudi Cabs GMC سيارات عائلية واسعة (هيونداي ستاريا وGMC يوكن) في المدينة المنورة تستوعب العائلات والمجموعات الكبيرة براحة تامة. وهي مثالية للعائلات الزائرة للمسجد النبوي والمواقع الإسلامية المحيطة.',
     },
   },
   {
@@ -479,8 +489,8 @@ export const taifFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة للإيجار في الطائف؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC has spacious family vehicles (GMC Yukon and Chevrolet Suburban) available in Taif that seat 6 to 7 passengers comfortably. These are perfect for family trips to the mountains, Shafa, Hada, and Taif\'s popular summer destinations.',
-      ar: 'نعم، لدى Saudi Cabs GMC سيارات عائلية واسعة (GMC يوكن وشيفروليه سوبربان) في الطائف تستوعب 6 إلى 7 ركاب براحة تامة. وهي مثالية للرحلات العائلية إلى الجبال وشفا وهدا ووجهات الطائف الصيفية الشهيرة.',
+      en: 'Yes, Saudi Cabs GMC has spacious family vehicles (Hyundai Staria and GMC Yukon) available in Taif that seat up to 7 passengers comfortably. These are perfect for family trips to the mountains, Shafa, Hada, and Taif\'s popular summer destinations.',
+      ar: 'نعم، لدى Saudi Cabs GMC سيارات عائلية واسعة (هيونداي ستاريا وGMC يوكن) في الطائف تستوعب حتى 7 ركاب براحة تامة. وهي مثالية للرحلات العائلية إلى الجبال وشفا وهدا ووجهات الطائف الصيفية الشهيرة.',
     },
   },
   {

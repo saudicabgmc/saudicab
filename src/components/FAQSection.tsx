@@ -99,23 +99,23 @@ export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
                 />
               </button>
 
-              {open === i && (
-                <div
-                  id={`faq-panel-${i}`}
-                  role="region"
-                  style={{
-                    padding: '0 22px 18px',
-                    paddingTop: '14px',
-                    fontSize: '0.88rem',
-                    color: 'var(--muted-foreground)',
-                    lineHeight: '1.8',
-                    borderTop: '1px solid var(--border)',
-                    direction: isAr ? 'rtl' : 'ltr',
-                  }}
-                >
-                  {tx(f.a)}
-                </div>
-              )}
+              <div
+                id={`faq-panel-${i}`}
+                role="region"
+                hidden={open !== i}
+                style={{
+                  padding: open === i ? '14px 22px 18px' : '0 22px',
+                  maxHeight: open === i ? 'none' : 0,
+                  overflow: open === i ? 'visible' : 'hidden',
+                  fontSize: '0.88rem',
+                  color: 'var(--muted-foreground)',
+                  lineHeight: '1.8',
+                  borderTop: open === i ? '1px solid var(--border)' : 'none',
+                  direction: isAr ? 'rtl' : 'ltr',
+                }}
+              >
+                {tx(f.a)}
+              </div>
             </div>
           ))}
         </div>

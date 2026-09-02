@@ -11,7 +11,7 @@ export const makkahRouteFaqs: FAQItem[] = [
   },
   {
     q: { en: 'Can I book a cab from Makkah to Madinah for a group of pilgrims?', ar: 'هل يمكنني حجز كاب من مكة إلى المدينة لمجموعة من الحجاج؟' },
-    a: { en: 'Yes, Saudi Cabs GMC offers GMC Yukon and Chevrolet Suburban vehicles that seat 6-7 passengers, ideal for pilgrim groups. The Makkah to Madinah route takes ~4.5 hours. Book in advance via WhatsApp for group rates and guaranteed availability.', ar: 'نعم، Saudi Cabs GMC توفر سيارات GMC يوكن وشيفروليه سوبربان التي تستوعب 6-7 ركاب، مثالية لمجموعات الحجاج. خط مكة - المدينة يستغرق ~4.5 ساعة. احجز مسبقاً عبر واتساب للحصول على أسعار المجموعات وضمان التوفر.' },
+    a: { en: 'Yes, Saudi Cabs GMC offers a Hyundai Staria van and a GMC Yukon SUV that seat up to 7 passengers, ideal for pilgrim groups. The Makkah to Madinah route takes ~4.5 hours. Book in advance via WhatsApp for group rates and availability.', ar: 'نعم، Saudi Cabs GMC توفر حافلة هيونداي ستاريا وسيارة GMC يوكن التي تستوعب حتى 7 ركاب، مثالية لمجموعات الحجاج. خط مكة - المدينة يستغرق ~4.5 ساعة. احجز مسبقاً عبر واتساب للحصول على أسعار المجموعات وتوفر السيارة.' },
   },
   {
     q: { en: 'What is the price for a cab from Makkah to Taif?', ar: 'ما سعر الكاب من مكة المكرمة إلى الطائف؟' },
