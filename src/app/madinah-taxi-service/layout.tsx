@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Taxi Service in Madinah | Prophet's Mosque Transfer & Airport Cab",
   description:
-    "Best taxi service in Madinah (Medina). Book cab to Prophet's Mosque, Madinah Airport, Quba, Uhud & Ziyarat tours. Fixed prices, 24/7. Book via WhatsApp now.",
+    "Taxi service in Madinah (Medina). Book cab to Prophet's Mosque, Madinah Airport, Quba, Uhud & Ziyarat tours. Fixed route-based prices, 24/7. Book via WhatsApp now.",
   keywords: [
     'taxi madinah', 'cab medina', 'taxi medina', 'madinah airport transfer',
     "prophet's mosque taxi", 'ziyarat madinah', 'private driver madinah',

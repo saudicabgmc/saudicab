@@ -130,8 +130,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب على مدار الساعة بالقرب من المسجد الحرام في مكة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers 24/7 transportation for hotel, Holy Mosque, and other major Makkah transfers, including after Fajr, Tarawih, or any prayer time — subject to driver availability at the time of your request.',
-      ar: 'نعم، توفر Saudi Cabs GMC خدمة نقل على مدار الساعة للفنادق والمسجد الحرام وأبرز وجهات مكة، بما في ذلك بعد الفجر أو التراويح أو أي وقت من الصلاة — حسب توفر السائقين وقت طلبك.',
+      en: 'Yes, Saudi Cabs GMC offers 24/7 transportation availability for Holy Mosque, hotel, and other major Makkah transfers, including after Fajr, Tarawih, or any prayer time — subject to driver availability and local access or traffic conditions.',
+      ar: 'نعم، توفر Saudi Cabs GMC خدمة نقل متاحة على مدار الساعة للحرم المكي والفنادق وأبرز وجهات مكة، بما في ذلك بعد الفجر أو التراويح أو أي وقت من الصلاة — حسب توفر السائقين وحالة الطرق أو حركة المرور.',
     },
   },
   {
@@ -150,8 +150,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل يمكنني حجز وسائل نقل خاصة بالحج والعمرة في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides Hajj and Umrah transportation in Makkah, including transfers to Mina, Arafat, and Muzdalifah as well as hotel-to-Haram trips, with the price confirmed before travel.',
-      ar: 'نعم، تقدم Saudi Cabs GMC نقلاً للحج والعمرة في مكة المكرمة، بما في ذلك التوصيل إلى منى وعرفات ومزدلفة، وكذلك الرحلات بين الفندق والحرم، مع تأكيد السعر قبل السفر.',
+      en: 'Yes, Hajj and Umrah transportation is available in Makkah for pilgrims and groups, including transfers to Mina, Arafat, and Muzdalifah as well as hotel-to-Haram trips — subject to availability and applicable local Hajj transportation rules.',
+      ar: 'نعم، يتوفر نقل للحج والعمرة في مكة المكرمة للحجاج والمجموعات، بما في ذلك التوصيل إلى منى وعرفات ومزدلفة، وكذلك الرحلات بين الفندق والحرم — حسب التوفر والأنظمة المحلية المعمول بها لنقل الحج.',
     },
   },
   {
@@ -170,8 +170,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة للنقل في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes. Saudi Cabs GMC offers 7-seat vehicles including the Hyundai Staria and GMC Yukon, suitable for families and groups traveling together in Makkah. Vehicle availability should be confirmed when booking.',
-      ar: 'نعم. توفر Saudi Cabs GMC سيارات بسعة 7 مقاعد تشمل هيونداي ستاريا وGMC يوكن، مناسبة للعائلات والمجموعات المسافرة معاً في مكة المكرمة. يجب تأكيد توفر السيارة عند الحجز.',
+      en: 'Yes. Saudi Cabs GMC offers 7-seat vehicle options — the Hyundai Staria (7 seats) and the GMC Yukon (7 seats, VIP) — suitable for families and groups traveling together in Makkah. Vehicle availability should be confirmed when booking.',
+      ar: 'نعم. توفر Saudi Cabs GMC خيارات سيارات بسعة 7 مقاعد — هيونداي ستاريا (7 مقاعد) وGMC يوكن (7 مقاعد، VIP) — مناسبة للعائلات والمجموعات المسافرة معاً في مكة المكرمة. يجب تأكيد توفر السيارة عند الحجز.',
     },
   },
   {
@@ -180,8 +180,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل يمكنني استئجار سائق خاص ليوم كامل في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers a private driver for visits, shopping, and other occasions in Makkah, including sites such as Jabal Al-Nour, Jabal Thawr, and the Zamzam Tower area. Contact us on WhatsApp to confirm availability, duration, and pricing for your trip.',
-      ar: 'نعم، توفر Saudi Cabs GMC سائقاً خاصاً للزيارات والتسوق والمناسبات في مكة، بما في ذلك مواقع مثل جبل النور وجبل ثور ومنطقة برج زمزم. تواصل معنا عبر واتساب لتأكيد التوفر ومدة الرحلة والسعر.',
+      en: 'Yes, a private driver can be requested for a longer period or full-day use in Makkah, for visits, shopping, and other occasions — subject to availability. Contact us on WhatsApp to confirm duration, availability, and current pricing.',
+      ar: 'نعم، يمكن طلب سائق خاص لفترة أطول أو ليوم كامل في مكة، للزيارات والتسوق والمناسبات — حسب التوفر. تواصل معنا عبر واتساب لتأكيد المدة والتوفر والسعر الحالي.',
     },
   },
   {
@@ -190,8 +190,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كيف أسافر من مكة المكرمة إلى المدينة المنورة بسيارة خاصة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers a comfortable private intercity cab from Makkah to Madinah. The journey takes approximately 4.5 to 5 hours depending on traffic and road conditions. You can book through WhatsApp or the booking form on this page to confirm your fixed rate in advance.',
-      ar: 'تقدم Saudi Cabs GMC كاباً خاصاً مريحاً بين المدن من مكة المكرمة إلى المدينة المنورة. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً حسب حركة المرور وحالة الطريق. يمكنك الحجز عبر واتساب أو نموذج الحجز في هذه الصفحة لتأكيد سعرك الثابت مسبقاً.',
+      en: 'You can book a private Makkah to Madinah trip through the booking form on this page or via WhatsApp. The journey takes approximately 4.5 to 5 hours, subject to traffic and road conditions.',
+      ar: 'يمكنك حجز رحلة خاصة من مكة المكرمة إلى المدينة المنورة عبر نموذج الحجز في هذه الصفحة أو عبر واتساب. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً، حسب حركة المرور وحالة الطريق.',
     },
   },
   {
@@ -200,8 +200,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تستلم Saudi Cabs GMC من جميع فنادق مكة المكرمة؟',
     },
     a: {
-      en: 'We provide pickup from hotels and major areas across Makkah, including those near the Haram, Al-Aziziyah, Al-Shisha, and Al-Utaybiyah. Please share your hotel location when booking so we can confirm pickup details.',
-      ar: 'نوفر الاستقبال من الفنادق والمناطق الرئيسية في جميع أنحاء مكة المكرمة، بما فيها الفنادق المجاورة للحرم والعزيزية والشيشة والعتيبية. يرجى مشاركة موقع فندقك عند الحجز حتى نتمكن من تأكيد تفاصيل الاستقبال.',
+      en: 'We provide pickup from hotels and major areas across Makkah. Please share your hotel name or location when booking so we can confirm the pickup details.',
+      ar: 'نوفر الاستقبال من الفنادق والمناطق الرئيسية في جميع أنحاء مكة المكرمة. يرجى مشاركة اسم فندقك أو موقعك عند الحجز حتى نتمكن من تأكيد تفاصيل الاستقبال.',
     },
   },
   {
@@ -210,8 +210,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كم يكلف الكاب من مكة المكرمة إلى الطائف؟',
     },
     a: {
-      en: 'The Makkah to Taif route isn\'t one of our currently listed fixed fares. The scenic mountain journey takes approximately 1.5 to 2 hours. Message us on WhatsApp with your travel date and vehicle preference and we\'ll confirm the current route price.',
-      ar: 'خط مكة المكرمة - الطائف ليس من ضمن الأسعار الثابتة المعروضة حالياً. رحلة الجبال الخلابة تستغرق من 1.5 إلى 2 ساعة تقريباً. راسلنا عبر واتساب مع تاريخ سفرك والسيارة المفضلة وسنؤكد لك سعر الخط الحالي.',
+      en: 'The price for a Makkah to Taif trip depends on the selected vehicle, pickup location, and trip details. The scenic mountain journey takes approximately 1.5 to 2 hours. Contact us on WhatsApp for the current price and availability.',
+      ar: 'يعتمد سعر رحلة مكة المكرمة - الطائف على السيارة المختارة وموقع الاستلام وتفاصيل الرحلة. رحلة الجبال الخلابة تستغرق من 1.5 إلى 2 ساعة تقريباً. تواصل معنا عبر واتساب لمعرفة السعر الحالي والتوفر.',
     },
   },
 ]
@@ -223,8 +223,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب بالقرب من المسجد النبوي الشريف في المدينة المنورة؟',
     },
     a: {
-      en: "Yes, Saudi Cabs GMC operates throughout Madinah including direct pickups and drop-offs at Al-Masjid An-Nabawi. We are available 24/7 to serve all prayer times including Fajr and Tahajjud night prayers.",
-      ar: 'نعم، Saudi Cabs GMC تعمل في جميع أنحاء المدينة المنورة وتشمل الاستلام والإيصال مباشرةً عند المسجد النبوي الشريف. نحن متاحون 24/7 لخدمة جميع أوقات الصلاة بما في ذلك الفجر وصلاة التهجد.',
+      en: "Yes, Saudi Cabs GMC operates throughout Madinah including direct pickups and drop-offs at Al-Masjid An-Nabawi. We are available 24/7, including for Fajr and Tahajjud night prayers, subject to driver availability.",
+      ar: 'نعم، Saudi Cabs GMC تعمل في جميع أنحاء المدينة المنورة وتشمل الاستلام والإيصال مباشرةً عند المسجد النبوي الشريف. نحن متاحون على مدار الساعة، بما في ذلك أوقات الفجر وصلاة التهجد، حسب توفر السائقين.',
     },
   },
   {
@@ -233,8 +233,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'كيف أصل من مطار المدينة المنورة إلى المسجد النبوي الشريف؟',
     },
     a: {
-      en: "Saudi Cabs GMC offers direct airport transfer from Prince Mohammad bin Abdulaziz Airport to the Prophet's Mosque or your hotel. The journey takes approximately 30 minutes. Book in advance and your driver will be waiting at the arrivals hall with your name.",
-      ar: 'Saudi Cabs GMC توفر توصيلاً مباشراً من مطار الأمير محمد بن عبدالعزيز إلى المسجد النبوي الشريف أو فندقك. تستغرق الرحلة حوالي 30 دقيقة. احجز مسبقاً وسيكون سائقك في انتظارك في صالة الوصول بلوحة باسمك.',
+      en: "Saudi Cabs GMC offers direct transfer from Madinah Airport to the Prophet's Mosque or your hotel. The journey takes approximately 30 minutes, depending on traffic. Book in advance and your driver will be waiting at the arrivals hall with your name.",
+      ar: 'Saudi Cabs GMC توفر توصيلاً مباشراً من مطار المدينة المنورة إلى المسجد النبوي الشريف أو فندقك. تستغرق الرحلة حوالي 30 دقيقة، حسب حركة المرور. احجز مسبقاً وسيكون سائقك في انتظارك في صالة الوصول بلوحة باسمك.',
     },
   },
   {
@@ -243,8 +243,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل يمكنني زيارة مسجد قباء وجبل أحد والبقيع بكاب خاص من المدينة المنورة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers private car tours to all Islamic sites in Madinah including Masjid Quba, Jabal Uhud, Al-Baqi Cemetery, Masjid Al-Qiblatayn, and the Seven Mosques. Book a full-day guided tour package at a fixed rate.',
-      ar: 'نعم، Saudi Cabs GMC تقدم جولات بسيارة خاصة لجميع المواقع الإسلامية في المدينة المنورة بما في ذلك مسجد قباء وجبل أحد ومقبرة البقيع ومسجد القبلتين والمساجد السبعة. احجز جولة يوم كامل بسعر ثابت.',
+      en: 'Yes, Saudi Cabs GMC provides transportation to Quba Mosque, Mount Uhud, and the Al-Baqi area, as well as other historic Islamic sites in Madinah such as Masjid Al-Qiblatayn and the Seven Mosques, subject to local access and visitor regulations. Contact us to arrange your preferred stops.',
+      ar: 'نعم، تقدم Saudi Cabs GMC نقلاً إلى مسجد قباء وجبل أحد ومنطقة البقيع، وكذلك مواقع إسلامية تاريخية أخرى في المدينة المنورة مثل مسجد القبلتين والمساجد السبعة، وذلك وفق أنظمة الدخول والزيارة المحلية. تواصل معنا لترتيب المحطات التي تفضلها.',
     },
   },
   {
@@ -253,8 +253,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'كم تستغرق الرحلة بالسيارة من المدينة المنورة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'The drive from Madinah to Makkah takes approximately 4 to 4.5 hours by private car. Saudi Cabs GMC offers this popular pilgrim route at a comfortable fixed fare with clean, air-conditioned vehicles. Book in advance for guaranteed availability.',
-      ar: 'تستغرق الرحلة من المدينة المنورة إلى مكة المكرمة حوالي 4 إلى 4.5 ساعة بالسيارة الخاصة. Saudi Cabs GMC تقدم هذا الخط الشهير للحجاج بسعر ثابت مريح مع سيارات نظيفة ومكيفة. احجز مسبقاً لضمان التوفر.',
+      en: 'The drive from Madinah to Makkah takes approximately 4 to 4.5 hours by private car, depending on traffic and road conditions. Saudi Cabs GMC offers this popular pilgrim route at a comfortable fixed fare with clean, air-conditioned vehicles. Book in advance to help ensure availability.',
+      ar: 'تستغرق الرحلة من المدينة المنورة إلى مكة المكرمة حوالي 4 إلى 4.5 ساعة بالسيارة الخاصة، حسب حركة المرور وحالة الطريق. Saudi Cabs GMC تقدم هذا الخط الشهير للحجاج بسعر ثابت مريح مع سيارات نظيفة ومكيفة. احجز مسبقاً لزيادة فرص توفر السيارة.',
     },
   },
   {
@@ -273,8 +273,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة في المدينة المنورة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC has spacious family vehicles (Hyundai Staria, GMC Yukon) in Madinah that comfortably accommodate large families and groups. These are perfect for families visiting the Prophet\'s Mosque and touring surrounding Islamic sites.',
-      ar: 'نعم، لدى Saudi Cabs GMC سيارات عائلية واسعة (هيونداي ستاريا وGMC يوكن) في المدينة المنورة تستوعب العائلات والمجموعات الكبيرة براحة تامة. وهي مثالية للعائلات الزائرة للمسجد النبوي والمواقع الإسلامية المحيطة.',
+      en: 'Yes, Saudi Cabs GMC offers 7-seat family vehicle options in Madinah — the Hyundai Staria and GMC Yukon — suitable for families and groups visiting the Prophet\'s Mosque and touring surrounding Islamic sites. Vehicle availability should be confirmed when booking.',
+      ar: 'نعم، توفر Saudi Cabs GMC خيارات سيارات عائلية بسعة 7 مقاعد في المدينة المنورة — هيونداي ستاريا وGMC يوكن — مناسبة للعائلات والمجموعات الزائرة للمسجد النبوي والمواقع الإسلامية المحيطة. يجب تأكيد توفر السيارة عند الحجز.',
     },
   },
   {
@@ -283,8 +283,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'ما أفضل طريقة للسفر من المدينة المنورة إلى جدة؟',
     },
     a: {
-      en: 'The most comfortable way to travel from Madinah to Jeddah is by private cab with Saudi Cabs GMC. The journey takes approximately 4 hours at a fixed price. You travel at your preferred time with no stops — far more convenient than shared transport.',
-      ar: 'أكثر الطرق راحةً للسفر من المدينة المنورة إلى جدة هي الكاب الخاص مع Saudi Cabs GMC. تستغرق الرحلة حوالي 4 ساعات بسعر ثابت. تسافر في الوقت المناسب لك بدون توقفات — أكثر ملاءمةً بكثير من وسائل النقل المشتركة.',
+      en: 'The most comfortable way to travel from Madinah to Jeddah is by private cab with Saudi Cabs GMC. The journey takes approximately 4 hours, depending on traffic and road conditions, at a fixed price. You travel at your preferred time with no shared stops — more convenient than shared transport.',
+      ar: 'أكثر الطرق راحةً للسفر من المدينة المنورة إلى جدة هي الكاب الخاص مع Saudi Cabs GMC. تستغرق الرحلة حوالي 4 ساعات، حسب حركة المرور وحالة الطريق، بسعر ثابت. تسافر في الوقت المناسب لك بدون توقفات مشتركة — أكثر ملاءمةً من وسائل النقل المشتركة.',
     },
   },
   {
@@ -293,8 +293,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل يمكنني حجز كاب لزيارة البقيع في المدينة المنورة؟',
     },
     a: {
-      en: "Yes, Saudi Cabs GMC can take you directly to Al-Baqi Cemetery (Jannat Al-Baqi), located adjacent to the Prophet's Mosque in Madinah. We also offer combined tours covering Al-Baqi, Masjid Quba, Jabal Uhud, and other nearby sites.",
-      ar: 'نعم، Saudi Cabs GMC يمكنها أخذك مباشرةً إلى مقبرة البقيع (جنة البقيع) المجاورة للمسجد النبوي في المدينة المنورة. كما نقدم جولات مدمجة تشمل البقيع ومسجد قباء وجبل أحد والمواقع المجاورة.',
+      en: "Yes, Saudi Cabs GMC provides transportation to the Al-Baqi area (Jannat Al-Baqi), located directly beside the Prophet's Mosque in Madinah, subject to local access and visitor regulations. We also offer combined trips covering Al-Baqi, Masjid Quba, Mount Uhud, and other nearby sites.",
+      ar: 'نعم، توفر Saudi Cabs GMC نقلاً إلى منطقة البقيع (جنة البقيع) المجاورة مباشرة للمسجد النبوي في المدينة المنورة، وفق أنظمة الدخول والزيارة المحلية. كما نقدم رحلات مدمجة تشمل البقيع ومسجد قباء وجبل أحد والمواقع المجاورة.',
     },
   },
   {
@@ -303,8 +303,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'كم تكلف رحلة من المدينة المنورة إلى ينبع؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers the Madinah to Yanbu route at a fixed, transparent fare with no surprises. The journey takes approximately 2.5 hours. Contact us via WhatsApp to get the current rate and book your trip in advance for guaranteed availability.',
-      ar: 'Saudi Cabs GMC تقدم خط المدينة المنورة - ينبع بأجر ثابت وشفاف بدون مفاجآت. تستغرق الرحلة حوالي 2.5 ساعة. تواصل معنا عبر واتساب للحصول على السعر الحالي وحجز رحلتك مسبقاً لضمان التوفر.',
+      en: 'Saudi Cabs GMC offers the Madinah to Yanbu route at a fixed, transparent fare with no surprises. The journey takes approximately 2.5 hours, depending on traffic and road conditions. Contact us via WhatsApp to get the current rate and book your trip in advance.',
+      ar: 'Saudi Cabs GMC تقدم خط المدينة المنورة - ينبع بأجر ثابت وشفاف بدون مفاجآت. تستغرق الرحلة حوالي 2.5 ساعة، حسب حركة المرور وحالة الطريق. تواصل معنا عبر واتساب للحصول على السعر الحالي وحجز رحلتك مسبقاً.',
     },
   },
   {
@@ -313,8 +313,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'هل سائقو Saudi Cabs GMC على دراية بجميع المواقع الإسلامية في المدينة المنورة؟',
     },
     a: {
-      en: 'Yes, all Saudi Cabs GMC drivers serving Madinah are knowledgeable about the Islamic sites and their locations. They can efficiently navigate between the Prophet\'s Mosque, Quba, Uhud, Al-Baqi, Masjid Al-Qiblatayn, and all historical locations in the city.',
-      ar: 'نعم، جميع سائقي Saudi Cabs GMC العاملين في المدينة المنورة على دراية واسعة بالمواقع الإسلامية وأماكنها. يستطيعون التنقل بكفاءة بين المسجد النبوي ومسجد قباء وجبل أحد والبقيع ومسجد القبلتين وجميع المواقع التاريخية.',
+      en: "Yes, Saudi Cabs GMC drivers serving Madinah are familiar with the city's major hotels, neighborhoods, the airport, and popular landmarks — including the Prophet's Mosque, Quba, Uhud, Al-Baqi, and Masjid Al-Qiblatayn.",
+      ar: 'نعم، سائقو Saudi Cabs GMC العاملون في المدينة المنورة على دراية بأبرز فنادق المدينة وأحيائها والمطار والمعالم الشهيرة — بما في ذلك المسجد النبوي ومسجد قباء وجبل أحد والبقيع ومسجد القبلتين.',
     },
   },
 ]

@@ -185,8 +185,8 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
         {/* Bottom note */}
         <p style={{ textAlign: 'center', marginTop: '28px', fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>
           {isAr
-            ? '✅ أسعار ثابتة · رد فوري عبر واتساب · لا دفع مسبق · متاح ٢٤/٧'
-            : '✅ Fixed prices · Instant WhatsApp reply · No advance payment · Available 24/7'}
+            ? '✅ أسعار حسب المسار · رد فوري عبر واتساب · لا دفع مسبق · متاح ٢٤/٧'
+            : '✅ Route-based pricing · Instant WhatsApp reply · No advance payment · Available 24/7'}
         </p>
         <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.76rem', color: 'var(--muted-foreground)', opacity: 0.75 }}>
           {isAr

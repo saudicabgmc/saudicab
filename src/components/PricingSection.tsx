@@ -56,8 +56,8 @@ export default function PricingSection({ routes, heading }: Props) {
           <div className="gold-divider" />
           <p className="section-subtitle">
             {isAr
-              ? 'اختر السيارة المناسبة لك — سعر ثابت للمسار يُؤكد عند الحجز'
-              : 'Choose the vehicle that suits you — fixed route pricing confirmed at booking.'}
+              ? 'اختر السيارة المناسبة لك — أسعار شفافة حسب المسار تُؤكد قبل الحجز'
+              : 'Choose the vehicle that suits you — transparent route-based fares confirmed before booking.'}
           </p>
         </div>
 
@@ -233,8 +233,8 @@ export default function PricingSection({ routes, heading }: Props) {
           fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.75,
         }}>
           {isAr
-            ? '✅ الأسعار المعروضة ثابتة للمسار المحدد. أي خدمات إضافية أو طلبات خاصة سيتم تأكيدها قبل الرحلة.'
-            : '✅ Listed fares are fixed for the specified route. Any additional services or special requests will be confirmed before the trip.'}
+            ? '✅ الأسعار المعروضة تخص المسار والسيارة المحددة. التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير الوجهة قد تؤثر على السعر النهائي — ويتم تأكيد أي تغيير قبل الرحلة.'
+            : '✅ Listed fares apply to the specified route and vehicle. Extra stops, waiting time, special requests, or route changes may affect the final fare — any changes are confirmed before the trip.'}
         </div>
       </div>
     </section>

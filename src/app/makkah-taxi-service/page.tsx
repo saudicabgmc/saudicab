@@ -15,7 +15,7 @@ export default function MakkahPage() {
       }}
       heroImage="/hero/makkah-hero-saudi-cabs-gmc.webp"
       services={[
-        { iconName: 'Building2', title: { ar: 'توصيل الحرم المكي', en: 'Holy Mosque Transfer' }, desc: { ar: 'رحلات من الفنادق والشقق إلى الحرم المكي الشريف على مدار الساعة.', en: 'Trips from hotels and apartments to the Holy Mosque around the clock.' } },
+        { iconName: 'Building2', title: { ar: 'توصيل الحرم المكي', en: 'Holy Mosque Transfer' }, desc: { ar: 'رحلات من الفنادق والشقق إلى الحرم المكي الشريف، مع توفر على مدار اليوم والليل.', en: 'Trips from hotels and apartments to the Holy Mosque, with availability throughout the day and night.' } },
         { iconName: 'Plane', title: { ar: 'مطار جدة ↔ مكة', en: 'Jeddah Airport ↔ Makkah' }, desc: { ar: 'استقبال وتوديع بين مطار الملك عبدالعزيز الدولي والفنادق والمناطق الرئيسية في مكة.', en: 'Professional pickup and drop-off between King Abdulaziz International Airport and hotels and major areas across Makkah.' } },
         { iconName: 'Bus', title: { ar: 'رحلات المشاعر', en: 'Holy Sites Trips' }, desc: { ar: 'نقل جماعي مريح إلى منى وعرفات ومزدلفة خلال موسم الحج.', en: 'Comfortable group transportation to Mina, Arafat and Muzdalifah during Hajj season.' } },
         { iconName: 'Car', title: { ar: 'كاب بين المدن', en: 'Intercity Cab' }, desc: { ar: 'رحلات مريحة من مكة إلى جدة، المدينة المنورة، والطائف.', en: 'Comfortable trips from Makkah to Jeddah, Madinah, and Taif.' } },

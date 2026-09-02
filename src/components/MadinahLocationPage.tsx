@@ -23,8 +23,8 @@ const NEIGHBOURHOODS = [
     icon: Building2,
     name: { ar: 'المنطقة المركزية', en: 'Central Area (Al-Markaziyah)' },
     desc: {
-      ar: 'الحي المحيط مباشرة بالمسجد النبوي الشريف، حيث تقع أغلب الفنادق الكبرى على مسافة يمكن قطعها مشياً. نغطي جميع فنادق المنطقة المركزية بتوصيل سريع من وإلى المطار والمحطة.',
-      en: 'The district immediately surrounding Masjid an-Nabawi, home to most major hotels within walking distance of the mosque. We cover every hotel in the Central Area with fast transfers to and from the airport and train station.',
+      ar: 'الحي المحيط مباشرة بالمسجد النبوي الشريف، حيث تقع أغلب الفنادق الكبرى على مسافة يمكن قطعها مشياً. نوفر توصيلاً سريعاً لفنادق المنطقة المركزية من وإلى المطار.',
+      en: 'The district immediately surrounding Masjid an-Nabawi, home to most major hotels within walking distance of the mosque. We provide fast transfers between hotels in the Central Area and the airport.',
     },
   },
   {
@@ -240,6 +240,11 @@ export default function MadinahLocationPage({
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.76rem', color: '#5a7a6d' }}>
+            {isAr
+              ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
+              : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
+          </p>
         </div>
       </section>
 
@@ -251,13 +256,13 @@ export default function MadinahLocationPage({
               {isAr ? 'الأحياء والمواقع الإسلامية' : 'Neighbourhoods & Islamic Sites'}
             </span>
             <h2 className="section-title" style={{ marginTop: '12px' }}>
-              {isAr ? <>نغطي كل حي في <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></>}
+              {isAr ? <>نغطي معظم أحياء <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <>We Cover Major Areas of <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></>}
             </h2>
             <div className="gold-divider" />
             <p className="section-subtitle">
               {isAr
-                ? 'من الأحياء القريبة من المسجد النبوي إلى المواقع الإسلامية التاريخية — سائقونا يعرفون كل موقع'
-                : 'From hotel districts near the Prophet\'s Mosque to historic Islamic sites — our drivers know every location'}
+                ? 'من الأحياء القريبة من المسجد النبوي إلى المواقع الإسلامية التاريخية — سائقونا على دراية بأبرز الفنادق والأحياء والمطار والمعالم الرئيسية'
+                : "From hotel districts near the Prophet's Mosque to historic Islamic sites — our drivers are familiar with major hotels, neighborhoods, the airport and popular landmarks"}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
@@ -307,7 +312,7 @@ export default function MadinahLocationPage({
                 }}>
                   <div>
                     <div style={{ fontWeight: '800', fontSize: '0.9rem', marginBottom: '4px', color: 'var(--foreground)' }}>{tx(r.label)}</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر ثابت' : 'Fixed Price'}</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر حسب المسار' : 'Route-Based Fare'}</div>
                   </div>
                   <Car size={18} color="var(--primary)" strokeWidth={2} />
                 </Link>
@@ -395,7 +400,7 @@ export default function MadinahLocationPage({
         <PricingSection routes={pricing} heading={{ ar: `أسعار النقل في ${tx(cityName)}`, en: `Transport Rates in ${tx(cityName)}` }} />
       )}
 
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} noSchema />
+      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} />
     </main>
   )
 }

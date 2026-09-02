@@ -40,8 +40,8 @@ const NEIGHBOURHOODS = [
     icon: Building,
     name: { ar: 'أجياد', en: 'Ajyad' },
     desc: {
-      ar: 'من أقرب الأحياء إلى المسجد الحرام، يطل مباشرة على برج الساعة ومنطقة الحرم. مثالي لمن يريد إقامة قريبة جداً، ونقدم توصيلاً فورياً من وإلى فنادق أجياد.',
-      en: 'One of the closest neighborhoods to the Holy Mosque, overlooking the Clock Tower area. Ideal for travelers who want to stay within very close reach — we offer instant pickup from Ajyad hotels.',
+      ar: 'من أقرب الأحياء إلى المسجد الحرام، يطل مباشرة على برج الساعة ومنطقة الحرم. مثالي لمن يريد إقامة قريبة جداً، ونوفر توصيلاً من فنادق أجياد حسب التوفر.',
+      en: 'One of the closest neighborhoods to the Holy Mosque, overlooking the Clock Tower area. Ideal for travelers who want to stay within very close reach — we offer pickup from Ajyad hotels, subject to availability.',
     },
   },
   {
@@ -239,6 +239,11 @@ export default function MakkahLocationPage({
             {isAr
               ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
               : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
+          </p>
+          <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.76rem', color: 'rgba(255,255,255,0.45)' }}>
+            {isAr
+              ? 'خلال موسم الحج، قد تتأثر أوقات الرحلات إلى منى وعرفات بشكل كبير بسبب الازدحام والقيود الرسمية لإدارة الحشود وأنظمة الوصول.'
+              : 'During Hajj season, travel times to Mina and Arafat can be significantly affected by heavy traffic, official crowd-control restrictions, and access regulations.'}
           </p>
         </div>
       </section>
