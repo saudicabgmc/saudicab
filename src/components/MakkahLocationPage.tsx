@@ -32,8 +32,8 @@ const NEIGHBOURHOODS = [
     icon: MapPin,
     name: { ar: 'المسفلة', en: 'Misfalah' },
     desc: {
-      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نخدم فنادق وشقق المسفلة بتوصيل سريع للحرم.',
-      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We serve hotels and apartments in Misfalah with quick transfers to the Haram.',
+      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نوفر توصيلاً للفنادق والشقق في جميع أنحاء المسفلة، مع وصول مريح للحرم.',
+      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We provide transfers to hotels and apartments across Misfalah, with convenient access to the Haram.',
     },
   },
   {
@@ -249,7 +249,7 @@ export default function MakkahLocationPage({
           <div className="section-header">
             <span className="section-tag">{isAr ? 'الأحياء والمشاعر' : 'Neighbourhoods & Holy Sites'}</span>
             <h2 className="section-title">
-              {isAr ? <>نغطي كل حي في <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></>}
+              {isAr ? <>الأحياء التي نخدمها في <span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span></> : <><span style={{ color: 'var(--primary)' }}>{tx(cityName)}</span> Areas We Serve</>}
             </h2>
             <div className="gold-divider" />
             <p className="section-subtitle">
