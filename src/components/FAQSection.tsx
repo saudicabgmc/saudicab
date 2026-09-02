@@ -11,10 +11,11 @@ export interface FAQItem {
 interface Props {
   faqs: FAQItem[]
   heading?: { ar: string; en: string }
+  subheading?: { ar: string; en: string }
   noSchema?: boolean
 }
 
-export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
+export default function FAQSection({ faqs, heading, subheading, noSchema = false }: Props) {
   const { lang, isAr } = useLang()
   const [open, setOpen] = useState<number | null>(null)
   const tx = (b: { ar: string; en: string }) => b[lang]
@@ -51,7 +52,7 @@ export default function FAQSection({ faqs, heading, noSchema = false }: Props) {
           <span className="section-tag">{isAr ? 'أسئلة شائعة' : 'FAQ'}</span>
           <h2 className="section-title">{tx(heading ?? defaultHeading)}</h2>
           <div className="gold-divider" />
-          <p className="section-subtitle">{tx(defaultSub)}</p>
+          <p className="section-subtitle">{tx(subheading ?? defaultSub)}</p>
         </div>
 
         <div style={{ maxWidth: '820px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '10px' }}>

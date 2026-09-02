@@ -47,8 +47,8 @@ const NEIGHBOURHOODS = [
     icon: MapPin,
     name: { ar: 'البقيع', en: 'Al-Baqi' },
     desc: {
-      ar: 'مقبرة البقيع المجاورة مباشرة للمسجد النبوي من الجهة الشرقية. يزورها معظم القادمين للمدينة المنورة، ونوفر توصيلاً سريعاً لمن يقيم بعيداً عن المنطقة المركزية.',
-      en: 'The Al-Baqi cemetery sits directly beside Masjid an-Nabawi on its eastern side. Visited by most travelers to Madinah — we offer quick transfers for guests staying outside the Central Area.',
+      ar: 'مقبرة البقيع تقع مباشرة بجوار المسجد النبوي من الجهة الشرقية. نوفر توصيلاً إلى منطقة البقيع ومناطق الزيارة القريبة منها لمن يقيم بعيداً عن المنطقة المركزية، وفق أنظمة الدخول والزيارة المحلية.',
+      en: 'The Al-Baqi cemetery sits directly beside Masjid an-Nabawi on its eastern side. We provide transportation to the Al-Baqi area and nearby visitor areas for guests staying outside the Central Area, subject to local access and visitor regulations.',
     },
   },
   {
@@ -400,7 +400,14 @@ export default function MadinahLocationPage({
         <PricingSection routes={pricing} heading={{ ar: `أسعار النقل في ${tx(cityName)}`, en: `Transport Rates in ${tx(cityName)}` }} />
       )}
 
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} />
+      <FAQSection
+        faqs={faqs}
+        heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }}
+        subheading={{
+          ar: 'إجابات واضحة حول التوصيل من وإلى المسجد النبوي والمطار والمزارات الإسلامية في المدينة المنورة',
+          en: "Clear answers about transfers to and from the Prophet's Mosque, the airport, and Islamic landmarks in Madinah",
+        }}
+      />
     </main>
   )
 }

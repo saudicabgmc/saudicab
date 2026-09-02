@@ -110,7 +110,7 @@ export const allPricingRoutes: PricingRoute[] = [
   {
     id: 'ziyarat-madinah',
     from: { ar: 'المدينة المنورة', en: 'Madinah' },
-    to:   { ar: 'جولة زيارات المدينة المنورة', en: 'Madinah Ziyarat Tour' },
+    to:   { ar: 'جولة الزيارات', en: 'Ziyarat Tour' },
     category: 'ziyarat',
     rates: mkRates(250, 300, 400),
   },

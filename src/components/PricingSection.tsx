@@ -69,7 +69,7 @@ export default function PricingSection({ routes, heading }: Props) {
           {[
             { icon: '🚗', label: isAr ? 'سيدان — ٤ مقاعد' : 'Sedan — 4 Seats' },
             { icon: '🚐', label: isAr ? 'ستاريا — ٧ مقاعد' : 'Staria — 7 Seats' },
-            { icon: '🚙', label: isAr ? 'GMC — ٧ مقاعد فاخر' : 'GMC — 7 Seats Luxury' },
+            { icon: '🚙', label: isAr ? 'GMC يوكن — ٧ مقاعد فاخر' : 'GMC Yukon — 7 Seats Luxury' },
           ].map(v => (
             <div key={v.icon} style={{
               display: 'flex', alignItems: 'center', gap: '8px',
@@ -233,8 +233,8 @@ export default function PricingSection({ routes, heading }: Props) {
           fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.75,
         }}>
           {isAr
-            ? '✅ الأسعار المعروضة تخص المسار والسيارة المحددة. التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير الوجهة قد تؤثر على السعر النهائي — ويتم تأكيد أي تغيير قبل الرحلة.'
-            : '✅ Listed fares apply to the specified route and vehicle. Extra stops, waiting time, special requests, or route changes may affect the final fare — any changes are confirmed before the trip.'}
+            ? '✅ كل سعر معروض هو سعر ثابت لهذا المسار والسيارة المحددة. التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير الوجهة قد تؤثر على السعر النهائي — ويتم تأكيد أي تغيير قبل الرحلة.'
+            : '✅ Each listed fare is a fixed fare for the specified route and vehicle. Extra stops, waiting time, special requests, or route changes may affect the final fare — any changes are confirmed before the trip.'}
         </div>
       </div>
     </section>
