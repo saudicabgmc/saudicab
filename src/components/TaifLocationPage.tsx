@@ -74,13 +74,30 @@ export default function TaifLocationPage({
     <main>
       {/* ── Hero — Mountain/Nature/Rose Theme ── */}
       <section style={{
+        position: 'relative',
         minHeight: '100vh',
-        background: `linear-gradient(145deg, rgba(60,20,50,0.88) 0%, rgba(30,60,40,0.70) 55%, rgba(50,20,60,0.82) 100%), url("${heroImage}")`,
-        backgroundSize: 'cover', backgroundPosition: 'center',
         display: 'flex', alignItems: 'center',
         padding: '100px 0 70px',
+        overflow: 'hidden',
       }}>
-        <div className="container">
+        {/* Decorative background photo — blurred to remove the baked-in poster text/logo from the source image while keeping its mountain/greenery color story. Kept out of the accessibility tree since it is purely decorative. */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute', inset: '-30px',
+            backgroundImage: `url("${heroImage}")`,
+            backgroundSize: 'cover', backgroundPosition: 'center',
+            filter: 'blur(28px)', transform: 'scale(1.15)',
+          }}
+        />
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(145deg, rgba(50,20,45,0.62) 0%, rgba(27,67,50,0.50) 55%, rgba(45,20,55,0.60) 100%)',
+          }}
+        />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="hero-grid">
             <div className="animate-fadeInUp" style={{ color: 'white' }}>
               {/* Rose/nature accent */}
@@ -99,7 +116,7 @@ export default function TaifLocationPage({
                 {tx(citySlogan)}
               </div>
 
-              <h1 style={{ fontSize: 'clamp(1.9rem, 4.5vw, 3rem)', fontWeight: '900', lineHeight: '1.18', marginBottom: '18px' }}>
+              <h1 style={{ fontSize: 'clamp(1.9rem, 4.5vw, 3rem)', fontWeight: '900', lineHeight: '1.18', marginBottom: '18px', textShadow: '0 2px 16px rgba(0,0,0,0.35)' }}>
                 {tr.transportIn}<br />
                 <span style={{ color: '#e9c46a' }}>{tx(cityName)}</span>
               </h1>
