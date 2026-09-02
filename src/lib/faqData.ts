@@ -336,8 +336,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'ما أفضل خدمة كاب في جدة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC is one of the top cab services in Jeddah, offering fixed-price trips, professional drivers, luxury vehicles, and 24/7 availability. We cover all Jeddah neighborhoods including Al-Hamra, Al-Rawdah, Al-Corniche, Al-Muhammadiyah, Obhur, and North Jeddah.',
-      ar: 'Saudi Cabs GMC هي من أفضل خدمات الكاب في جدة، تقدم رحلات بسعر ثابت وسائقين محترفين وسيارات فاخرة وتوفراً على مدار الساعة. نغطي جميع أحياء جدة بما فيها الحمراء والروضة والكورنيش والمحمدية وأبحر وشمال جدة.',
+      en: 'Saudi Cabs GMC is one of the top cab services in Jeddah, offering route-based fares, professional drivers, luxury vehicles, and 24/7 availability. We cover major Jeddah neighborhoods including Al-Hamra, Al-Rawdah, Al-Corniche, Al-Muhammadiyah, Obhur, and North Jeddah.',
+      ar: 'Saudi Cabs GMC هي من أفضل خدمات الكاب في جدة، تقدم رحلات بأسعار حسب المسار وسائقين محترفين وسيارات فاخرة وتوفراً على مدار الساعة. نغطي أبرز أحياء جدة بما فيها الحمراء والروضة والكورنيش والمحمدية وأبحر وشمال جدة.',
     },
   },
   {
@@ -366,8 +366,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب على طول كورنيش جدة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC covers the entire Jeddah Corniche. We can take you along the Red Sea seafront, to the King Fahd Fountain viewpoint, Floating Mosque, Al-Shallal Theme Park, and arrange full sightseeing tours of Jeddah\'s landmarks.',
-      ar: 'نعم، Saudi Cabs GMC تغطي كامل كورنيش جدة. يمكننا أخذك على امتداد واجهة البحر الأحمر إلى منطقة نافورة الملك فهد ومسجد الرحمة العائم ومنتزه الشلال وتنظيم جولات سياحية كاملة لمعالم جدة.',
+      en: 'Yes, Saudi Cabs GMC provides transportation along the Jeddah Corniche. We can take you along the Red Sea seafront, to the King Fahd Fountain viewpoint, Floating Mosque, Al-Shallal Theme Park, and arrange sightseeing tours of Jeddah\'s landmarks.',
+      ar: 'نعم، توفر Saudi Cabs GMC خدمة نقل على طول كورنيش جدة. يمكننا أخذك على امتداد واجهة البحر الأحمر إلى منطقة نافورة الملك فهد ومسجد الرحمة العائم ومنتزه الشلال وتنظيم جولات سياحية لمعالم جدة.',
     },
   },
   {
@@ -376,8 +376,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'كيف أسافر من جدة إلى الطائف بكاب خاص؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers the Jeddah to Taif route at a fixed price. The journey takes approximately 1.5 hours via the scenic Al-Hada mountain road. This route is especially popular in summer when families travel to Taif for cooler weather. Book via WhatsApp.',
-      ar: 'Saudi Cabs GMC تقدم خط جدة - الطائف بسعر ثابت. تستغرق الرحلة حوالي 1.5 ساعة عبر طريق الهدا الجبلي الخلاب. هذا الخط شهير جداً في الصيف حين تسافر العائلات إلى الطائف للتمتع بالأجواء الباردة. احجز عبر واتساب.',
+      en: 'Saudi Cabs GMC offers the Jeddah to Taif route at a fixed fare. The journey takes approximately 1.5 hours, depending on traffic, via the scenic Al-Hada mountain road. This route is especially popular in summer when families travel to Taif for cooler weather. Book via WhatsApp.',
+      ar: 'Saudi Cabs GMC تقدم خط جدة - الطائف بسعر ثابت. تستغرق الرحلة حوالي 1.5 ساعة، حسب حركة المرور، عبر طريق الهدا الجبلي الخلاب. هذا الخط شهير جداً في الصيف حين تسافر العائلات إلى الطائف للتمتع بالأجواء الباردة. احجز عبر واتساب.',
     },
   },
   {
@@ -386,8 +386,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'هل تغطي Saudi Cabs GMC جميع أحياء جدة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC covers all areas in Jeddah including Al-Hamra, Al-Muhammadiyah, Al-Rawdah, Al-Shatea, Obhur, Al-Salamah, Al-Zahraa, Al-Nuzlah, Al-Faisaliyah, Briman, and every other neighborhood. No matter where you are in Jeddah, we reach you.',
-      ar: 'نعم، Saudi Cabs GMC تغطي جميع مناطق جدة بما فيها الحمراء والمحمدية والروضة والشاطئ وأبحر والسلامة والزهراء والنزلة والفيصلية وبريمان وجميع الأحياء الأخرى. أينما كنت في جدة سنصل إليك.',
+      en: 'Yes, Saudi Cabs GMC covers major areas in Jeddah including Al-Hamra, Al-Muhammadiyah, Al-Rawdah, Al-Shatea, Obhur, Al-Salamah, Al-Zahraa, Al-Nuzlah, Al-Faisaliyah, and Briman. Share your pickup location when booking and we\'ll confirm coverage for your trip.',
+      ar: 'نعم، تغطي Saudi Cabs GMC أبرز مناطق جدة بما فيها الحمراء والمحمدية والروضة والشاطئ وأبحر والسلامة والزهراء والنزلة والفيصلية وبريمان. شارك موقع الاستلام عند الحجز حتى نؤكد لك التغطية لرحلتك.',
     },
   },
   {
@@ -396,8 +396,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'هل يمكنني حجز كاب من جدة إلى المدينة المنورة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC operates the Jeddah to Madinah route regularly. The journey takes approximately 4 hours by private car. This is a popular route for pilgrims and families visiting the Prophet\'s Mosque. Book in advance for the best fixed rate.',
-      ar: 'نعم، Saudi Cabs GMC تعمل على خط جدة - المدينة المنورة بانتظام. تستغرق الرحلة حوالي 4 ساعات بالسيارة الخاصة. هذا خط شهير للحجاج والعائلات الزائرة للمسجد النبوي. احجز مسبقاً للحصول على أفضل سعر ثابت.',
+      en: 'Yes, Saudi Cabs GMC operates the Jeddah to Madinah route regularly. The journey takes approximately 4 hours by private car, depending on traffic. This is a popular route for pilgrims and families visiting the Prophet\'s Mosque. Book in advance to help secure your fare.',
+      ar: 'نعم، Saudi Cabs GMC تعمل على خط جدة - المدينة المنورة بانتظام. تستغرق الرحلة حوالي 4 ساعات بالسيارة الخاصة، حسب حركة المرور. هذا خط شهير للحجاج والعائلات الزائرة للمسجد النبوي. احجز مسبقاً لتأكيد سعرك.',
     },
   },
   {
@@ -406,8 +406,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب إلى ميناء جدة الإسلامي؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides transfer services to and from Jeddah Islamic Port. Whether you are arriving on a cruise ship or need a ride to the port for any purpose, our drivers are familiar with all port terminals and entrances.',
-      ar: 'نعم، Saudi Cabs GMC تقدم خدمات التوصيل من وإلى ميناء جدة الإسلامي. سواء كنت قادماً على متن سفينة سياحية أو تحتاج ركوبة إلى الميناء لأي غرض، سائقونا على دراية بجميع مداخل وصالات الميناء.',
+      en: 'Yes, Saudi Cabs GMC provides transfer services to and from Jeddah Islamic Port. Whether you are arriving on a cruise ship or need a ride to the port for any purpose, our drivers are familiar with the port\'s main terminals and entrances.',
+      ar: 'نعم، Saudi Cabs GMC تقدم خدمات التوصيل من وإلى ميناء جدة الإسلامي. سواء كنت قادماً على متن سفينة سياحية أو تحتاج ركوبة إلى الميناء لأي غرض، سائقونا على دراية بالصالات والمداخل الرئيسية للميناء.',
     },
   },
   {

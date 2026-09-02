@@ -55,8 +55,8 @@ const NEIGHBOURHOODS = [
     icon: Map,
     name: { ar: 'الروضة', en: 'Al-Rawdah' },
     desc: {
-      ar: 'حي مركزي حيوي يجمع بين المكاتب والمولات والمطاعم، ويقع بالقرب من طريق الملك. نغطي جميع فنادق ومكاتب الروضة بتوصيل منتظم.',
-      en: 'A vibrant central district mixing offices, malls, and restaurants, close to King Road. We cover every hotel and office in Al-Rawdah with regular transfers.',
+      ar: 'حي مركزي حيوي يجمع بين المكاتب والمولات والمطاعم، ويقع بالقرب من طريق الملك. نوفر توصيلاً منتظماً إلى الفنادق والمكاتب والوجهات الشهيرة في الروضة.',
+      en: 'A vibrant central district mixing offices, malls, and restaurants, close to King Road. We provide regular transfers to hotels, offices, and popular destinations in Al-Rawdah.',
     },
   },
 ]
@@ -71,8 +71,8 @@ export default function JeddahLocationPage({
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة في جدة' : "Hello, I'd like to book a trip in Jeddah"
 
   const stats = isAr
-    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '4+', l: 'مطارات' }, { n: '1000+', l: 'رحلة ناجحة' }, { n: '100%', l: 'أسعار ثابتة' }]
-    : [{ n: '24/7', l: 'Always Available' }, { n: '4+', l: 'Airports Served' }, { n: '1000+', l: 'Trips Completed' }, { n: '100%', l: 'Fixed Prices' }]
+    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '4+', l: 'مطارات' }, { n: '1000+', l: 'رحلة ناجحة' }, { n: '100%', l: 'أسعار حسب المسار' }]
+    : [{ n: '24/7', l: 'Always Available' }, { n: '4+', l: 'Airports Served' }, { n: '1000+', l: 'Trips Completed' }, { n: '100%', l: 'Route-Based Fares' }]
 
   return (
     <main>
@@ -265,6 +265,11 @@ export default function JeddahLocationPage({
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.76rem', color: 'var(--muted-foreground)' }}>
+            {isAr
+              ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
+              : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
+          </p>
         </div>
       </section>
 
@@ -276,13 +281,13 @@ export default function JeddahLocationPage({
               {isAr ? 'الأحياء التي نغطيها' : 'Neighbourhoods We Cover'}
             </span>
             <h2 className="section-title" style={{ marginTop: '12px' }}>
-              {isAr ? <>نغطي كل حي في <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></> : <>We Cover Every Area of <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></>}
+              {isAr ? <>نغطي معظم أحياء <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></> : <>We Cover Major Areas of <span style={{ color: '#0891b2' }}>{tx(cityName)}</span></>}
             </h2>
             <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, #0891b2, #D4AF37)', margin: '14px auto', borderRadius: '2px' }} />
             <p className="section-subtitle">
               {isAr
-                ? 'من البلد التاريخية إلى أبحر الساحلية — سائقونا يعرفون كل حي في جدة'
-                : 'From historic Al-Balad to coastal Obhur — our drivers know every district in Jeddah'}
+                ? 'من البلد التاريخية إلى أبحر الساحلية — سائقونا على دراية بأبرز أحياء جدة ووجهاتها الشهيرة'
+                : 'From historic Al-Balad to coastal Obhur — our drivers are familiar with major districts and popular destinations across Jeddah.'}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
@@ -334,7 +339,7 @@ export default function JeddahLocationPage({
                 }}>
                   <div>
                     <div style={{ fontWeight: '800', fontSize: '0.9rem', marginBottom: '4px', color: 'var(--foreground)' }}>{tx(r.label)}</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر ثابت' : 'Fixed Price'}</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر حسب المسار' : 'Route-Based Fare'}</div>
                   </div>
                   <div style={{ background: 'rgba(8,145,178,0.1)', borderRadius: '8px', padding: '8px' }}>
                     <Car size={16} color="#0891b2" strokeWidth={2} />
@@ -423,7 +428,14 @@ export default function JeddahLocationPage({
         <PricingSection routes={pricing} heading={{ ar: `أسعار النقل في ${tx(cityName)}`, en: `Transport Rates in ${tx(cityName)}` }} />
       )}
 
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} noSchema />
+      <FAQSection
+        faqs={faqs}
+        heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }}
+        subheading={{
+          ar: 'إجابات واضحة حول التاكسي وتوصيل المطار والسائق الخاص والرحلات بين المدن في جدة',
+          en: 'Clear answers about taxi, airport transfers, private drivers and intercity travel in Jeddah',
+        }}
+      />
     </main>
   )
 }
