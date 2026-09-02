@@ -32,8 +32,8 @@ const NEIGHBOURHOODS = [
     icon: MapPin,
     name: { ar: 'المسفلة', en: 'Misfalah' },
     desc: {
-      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نغطي جميع فنادق وشقق المسفلة بتوصيل سريع للحرم.',
-      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We cover every hotel and apartment in Misfalah with quick transfers to the Haram.',
+      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نخدم فنادق وشقق المسفلة بتوصيل سريع للحرم.',
+      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We serve hotels and apartments in Misfalah with quick transfers to the Haram.',
     },
   },
   {
@@ -235,6 +235,11 @@ export default function MakkahLocationPage({
               {isAr ? `عرض جميع خطوط ${tx(cityName)} ←` : `View All ${tx(cityName)} Routes →`}
             </Link>
           </div>
+          <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.76rem', color: 'rgba(255,255,255,0.45)' }}>
+            {isAr
+              ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
+              : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
+          </p>
         </div>
       </section>
 
@@ -365,7 +370,7 @@ export default function MakkahLocationPage({
         <PricingSection routes={pricing} heading={{ ar: `أسعار النقل في ${tx(cityName)}`, en: `Transport Rates in ${tx(cityName)}` }} />
       )}
 
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} noSchema />
+      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${tx(cityName)}`, en: `Frequently Asked Questions — ${tx(cityName)}` }} />
     </main>
   )
 }

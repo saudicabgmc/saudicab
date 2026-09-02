@@ -233,8 +233,8 @@ export default function PricingSection({ routes, heading }: Props) {
           fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.75,
         }}>
           {isAr
-            ? '✅ جميع الأسعار ثابتة شاملة الرسوم — لا عداد لا رسوم إضافية. السعر المتفق عليه هو ما تدفعه بالضبط.'
-            : '✅ All prices are fixed and all-inclusive — no meter, no extra charges. The agreed price is exactly what you pay.'}
+            ? '✅ الأسعار المعروضة ثابتة للمسار المحدد. أي خدمات إضافية أو طلبات خاصة سيتم تأكيدها قبل الرحلة.'
+            : '✅ Listed fares are fixed for the specified route. Any additional services or special requests will be confirmed before the trip.'}
         </div>
       </div>
     </section>
