@@ -36,7 +36,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 
 ## Week 4 — Off-Site, Audit & Polish
 - [x] **Day 22**: Google Business Profile — this is a manual task needing the owner's Google account and phone verification, so a step-by-step checklist was written instead (`GOOGLE_BUSINESS_PROFILE_CHECKLIST.md`), using only facts already published on the site (name, phone, hours, service area, description) and flagging the one real decision only the owner can make (service-area vs. storefront listing)
-- [ ] **Day 23**: Wikidata/Wikipedia `sameAs` research for the business entity (external)
+- [x] **Day 23**: Wikidata/Wikipedia `sameAs` research (`WIKIDATA_ENTITY_RESEARCH.md`) — confirmed via web search that no entity exists yet, and explained why one shouldn't be force-created now (notability requirements — a self-made page would likely get flagged/deleted). Found 4 real Saudi business directories that do accept direct self-submission, feeding into Day 24.
 - [ ] **Day 24**: Outreach target list — Islamic travel blogs/forums for backlinks (external)
 - [ ] **Day 25**: Internal link audit — verify every route/guide page links per the Internal Linking Matrix in `TOPICAL_MAP.md`
 - [ ] **Day 26**: Broken link + 404 sweep across all pages
