@@ -144,17 +144,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* DMCA Badge */}
+        {/* Copyright note */}
         <div style={{ textAlign: 'center', marginTop: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-          <a
-            href="https://www.dmca.com/Protection/Status.aspx?ID=saudicabsgmc"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            title="DMCA.com Protection Status"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}
-          >
-            🛡️ DMCA Protected — Content © {new Date().getFullYear()} Saudi Cabs GMC
-          </a>
+          <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)' }}>
+            © {new Date().getFullYear()} Saudi Cabs GMC. All content rights reserved.
+          </span>
         </div>
       </div>
     </footer>

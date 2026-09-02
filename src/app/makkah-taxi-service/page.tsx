@@ -43,7 +43,7 @@ export default function MakkahPage() {
       ]}
       highlights={[
         { iconName: 'Star', title: { ar: 'متخصصون في خدمة الحجاج والمعتمرين', en: 'Specialists in Hajj & Umrah Services' }, desc: { ar: 'أسطولنا مخصص لخدمة ضيوف الرحمن بكل تبجيل واحترام.', en: 'Our fleet is dedicated to serving the guests of the Merciful with full reverence and respect.' } },
-        { iconName: 'Shield', title: { ar: 'سائقون محترفون ومعروفون بالمنطقة', en: 'Professional Drivers Familiar with the Area' }, desc: { ar: 'جميع سائقينا على دراية تامة بشوارع مكة ومواقعها.', en: 'All our drivers are thoroughly familiar with Makkah\'s streets and sacred locations.' } },
+        { iconName: 'Shield', title: { ar: 'سائقون محترفون ومعروفون بالمنطقة', en: 'Professional Drivers Familiar with the Area' }, desc: { ar: 'سائقونا على دراية بشوارع مكة الرئيسية وفنادقها ومواقعها المهمة.', en: 'Our drivers are familiar with Makkah\'s main roads, hotels, and key locations.' } },
         { iconName: 'Clock', title: { ar: 'متاحون ٢٤ ساعة طوال أيام الأسبوع', en: 'Available 24/7' }, desc: { ar: 'متاحون للرحلات في الصباح الباكر والنهار والليل المتأخر.', en: 'Available 24/7 for early-morning, daytime and late-night trips.' } },
         { iconName: 'Banknote', title: { ar: 'خيارات نقل الحج والعمرة', en: 'Hajj & Umrah Transport Options' }, desc: { ar: 'خيارات نقل مرنة لحجاج ومعتمري بيت الله الحرام.', en: 'Flexible transport options for Hajj and Umrah pilgrims.' } },
       ]}
