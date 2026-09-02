@@ -77,8 +77,8 @@ export const homeFaqs: FAQItem[] = [
       ar: 'هل تقدم Saudi Cabs GMC خدمات التوصيل من وإلى المطار؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides professional airport transfers from all major airports including King Abdulaziz International Airport (Jeddah), Prince Mohammad bin Abdulaziz Airport (Madinah), and Taif Airport. We offer meet-and-greet service and track your flight for on-time pickup.',
-      ar: 'نعم، تقدم Saudi Cabs GMC خدمات توصيل احترافية من وإلى جميع المطارات الرئيسية بما في ذلك مطار الملك عبدالعزيز الدولي (جدة) ومطار الأمير محمد بن عبدالعزيز (المدينة) ومطار الطائف. نوفر خدمة الاستقبال بلوحات الأسماء ومتابعة رحلتك.',
+      en: 'Yes, Saudi Cabs GMC provides professional airport transfers from King Abdulaziz International Airport (Jeddah), Prince Mohammad bin Abdulaziz Airport (Madinah), and Taif Airport. We offer name-board meet-and-greet service — just share your flight number when you book and we confirm your pickup time.',
+      ar: 'نعم، تقدم Saudi Cabs GMC خدمات توصيل احترافية من وإلى مطار الملك عبدالعزيز الدولي (جدة) ومطار الأمير محمد بن عبدالعزيز (المدينة) ومطار الطائف. نوفر خدمة الاستقبال بلوحة الاسم — فقط شارك رقم رحلتك عند الحجز وسنؤكد وقت الاستقبال.',
     },
   },
   {

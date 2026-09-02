@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
   Car, Plane, Briefcase, Navigation,
-  Star, MapPin,
+  Star,
   Shield, Zap, Banknote, Phone,
   MessageCircle, Clock, CheckCircle,
 } from 'lucide-react'
@@ -11,7 +11,6 @@ import BookingForm from '@/components/BookingForm'
 import TrustBadges from '@/components/TrustBadges'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import FAQSection from '@/components/FAQSection'
-import PricingSection from '@/components/PricingSection'
 import FleetSection from '@/components/FleetSection'
 import { homeFaqs } from '@/lib/faqData'
 import { allPricingRoutes } from '@/lib/pricingData'
@@ -235,10 +234,10 @@ export default function Home() {
                 flexWrap: 'wrap',
               }}>
                 {[
-                  { n: isAr ? '+١٢٠٠٠' : '+12K', l: tr.hero.trips },
+                  { n: isAr ? '٣' : '3', l: isAr ? 'أنواع السيارات' : 'Vehicle Types' },
                   { n: isAr ? '٤' : '4', l: tr.hero.cities },
                   { n: '24/7', l: tr.hero.available },
-                  { n: isAr ? '٥★' : '5★', l: isAr ? 'تقييم جوجل' : 'Google Rating' },
+                  { n: isAr ? '٠' : '0', l: isAr ? 'رسوم خفية' : 'Hidden Fees' },
                 ].map(s => (
                   <div key={s.l}>
                     <div style={{ fontSize: '1.55rem', fontWeight: '900', color: 'var(--primary)', lineHeight: 1 }}>{s.n}</div>
@@ -547,7 +546,7 @@ export default function Home() {
                 />
               </div>
               <div className="why-us-badge">
-                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? '100%' : '100%'}</div>
+                <div style={{ fontSize: '1.9rem', fontWeight: '900', lineHeight: 1 }}>{isAr ? '٠' : '0'}</div>
                 <div style={{ fontSize: '0.82rem', marginTop: '4px' }}>{tr.whyUs.successBadge}</div>
               </div>
             </div>
@@ -633,7 +632,7 @@ export default function Home() {
                 href: '/airport-transfer',
                 icon: <Plane size={30} strokeWidth={1.6} color="var(--primary)" />,
                 title: { en: 'Airport Transfer', ar: 'توصيل المطار' },
-                desc: { en: 'Name-board pickup, flight number confirmation & fixed prices across all Saudi airports.', ar: 'استقبال بلوحة الاسم، تأكيد رقم الرحلة، وسعر ثابت من جميع مطارات المملكة.' },
+                desc: { en: 'Name-board pickup, flight number confirmation & fixed prices at Jeddah, Madinah & Taif airports.', ar: 'استقبال بلوحة الاسم، تأكيد رقم الرحلة، وسعر ثابت في مطارات جدة والمدينة والطائف.' },
                 bg: 'linear-gradient(135deg,rgba(30,58,138,0.06),rgba(30,58,138,0.02))',
                 border: 'rgba(30,58,138,0.15)',
               },
@@ -742,17 +741,12 @@ export default function Home() {
           {/* Micro trust row */}
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '28px', flexWrap: 'wrap', opacity: 0.7 }}>
             {(isAr
-              ? ['✅ لا دفع مسبق', '🔒 سعر ثابت مضمون', '⭐ تقييم 5 نجوم']
-              : ['✅ No advance payment', '🔒 Guaranteed fixed price', '⭐ 5-star rated']
+              ? ['✅ لا دفع مسبق', '🔒 سعر ثابت مضمون', '💬 رد فوري عبر واتساب']
+              : ['✅ No advance payment', '🔒 Guaranteed fixed price', '💬 Instant WhatsApp reply']
             ).map(s => <span key={s} style={{ fontSize: '0.8rem', fontWeight: '600', color: 'rgba(255,255,255,0.85)' }}>{s}</span>)}
           </div>
         </div>
       </section>
-
-      {/* ──────────────────────────────────────────────────────────
-          PRICING SECTION (detailed)
-      ────────────────────────────────────────────────────────── */}
-      <PricingSection routes={allPricingRoutes} />
 
       {/* ──────────────────────────────────────────────────────────
           FAQ

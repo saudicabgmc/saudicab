@@ -10,7 +10,7 @@ export const t = {
       bookWhatsapp: 'Book via WhatsApp',
     },
     hero: {
-      badge: '#1 Transport Service in Saudi Arabia',
+      badge: 'Fixed-Price Private Transport',
       title1: 'Saudi',
       title2: 'Taxi',
       tagline: 'Your Journey, Our Safety',
@@ -26,10 +26,10 @@ export const t = {
       title: 'Everything You Need in One Place',
       subtitle: 'Multiple transport options for every occasion and budget',
       items: [
-        { title: 'Taxi', desc: 'Fast taxi for all your daily trips within the city. Fixed prices and professional driver.' },
-        { title: 'Cab — Private Ride', desc: 'Comfortable cars for private trips between cities. Transparent prices, no surprises.' },
+        { title: 'City Taxi', desc: 'Fast taxi for all your daily trips within the city. Fixed prices and professional driver.' },
+        { title: 'Intercity Rides', desc: 'Comfortable cars for private trips between cities. Transparent prices, no surprises.' },
         { title: 'Private Driver', desc: 'Elegant professional driver for your events and meetings. Luxury vehicles.' },
-        { title: 'Airport Transfer', desc: 'Pick-up and drop-off from all airports. We track your flight for on-time arrival.' },
+        { title: 'Airport Transfer', desc: 'Pick-up and drop-off from Jeddah, Madinah & Taif airports. Share your flight number and we confirm your pickup time.' },
       ],
     },
     locations: {
@@ -69,7 +69,7 @@ export const t = {
         { title: 'Transparent Prices', desc: 'Fixed prices with no hidden fees. Know the price before the trip.' },
         { title: '24/7 Support', desc: 'Support team ready around the clock for your inquiries.' },
       ],
-      successBadge: 'Fixed Prices',
+      successBadge: 'Hidden Fees',
     },
     testimonials: {
       tag: 'Customer Reviews',
@@ -163,7 +163,7 @@ export const t = {
       bookWhatsapp: 'احجز عبر واتساب',
     },
     hero: {
-      badge: 'الأول في خدمات النقل بالمملكة',
+      badge: 'نقل خاص بسعر ثابت',
       title1: 'تاكسي',
       title2: 'السعودية',
       tagline: 'رحلتك، أماننا',
@@ -179,10 +179,10 @@ export const t = {
       title: 'كل ما تحتاجه في مكان واحد',
       subtitle: 'نوفر لك أنواع متعددة من خدمات النقل لتناسب كل مناسبة وميزانية',
       items: [
-        { title: 'تاكسي', desc: 'تاكسي سريع لجميع رحلاتك اليومية داخل المدينة. أسعار ثابتة وسائق محترف.' },
-        { title: 'كاب — رحلة خاصة', desc: 'سيارات مريحة للرحلات الخاصة بين المدن. أسعار شفافة بلا مفاجآت.' },
+        { title: 'تاكسي داخل المدينة', desc: 'تاكسي سريع لجميع رحلاتك اليومية داخل المدينة. أسعار ثابتة وسائق محترف.' },
+        { title: 'رحلات بين المدن', desc: 'سيارات مريحة للرحلات الخاصة بين المدن. أسعار شفافة بلا مفاجآت.' },
         { title: 'سائق خاص (شوفير)', desc: 'سائق أنيق ومحترف لمناسباتك واجتماعاتك. سيارات فاخرة.' },
-        { title: 'توصيل مطار', desc: 'استقبال وتوديع من جميع المطارات. نتابع رحلتك ونضمن وصولك في الوقت.' },
+        { title: 'توصيل مطار', desc: 'استقبال وتوديع من مطارات جدة والمدينة والطائف. شارك رقم رحلتك وسنؤكد وقت الاستقبال.' },
       ],
     },
     locations: {
@@ -222,7 +222,7 @@ export const t = {
         { title: 'أسعار شفافة', desc: 'أسعار ثابتة بلا رسوم خفية. تعرف على السعر قبل الرحلة.' },
         { title: 'دعم ٢٤/٧', desc: 'فريق دعم جاهز على مدار الساعة للرد على استفساراتك.' },
       ],
-      successBadge: 'أسعار ثابتة',
+      successBadge: 'رسوم خفية',
     },
     testimonials: {
       tag: 'آراء عملائنا',
