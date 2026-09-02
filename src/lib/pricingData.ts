@@ -40,7 +40,7 @@ export const vehicleImages: Record<string, string> = {
 const mkRates = (sedan: number, staria: number, gmc: number): VehicleRate[] => [
   { key: 'sedan',  name: { ar: 'سيدان',           en: 'Sedan'           }, seats: '4',  price: sedan  },
   { key: 'staria', name: { ar: 'ستاريا (7 مقاعد)', en: 'Staria (7 Seats)' }, seats: '7',  price: staria },
-  { key: 'gmc',    name: { ar: 'GMC (7 مقاعد)',    en: 'GMC (7 Seats)'   }, seats: '7',  price: gmc    },
+  { key: 'gmc',    name: { ar: 'GMC يوكن (7 مقاعد)', en: 'GMC Yukon (7 Seats)' }, seats: '7',  price: gmc    },
 ]
 
 export const allPricingRoutes: PricingRoute[] = [
@@ -109,8 +109,8 @@ export const allPricingRoutes: PricingRoute[] = [
   },
   {
     id: 'ziyarat-madinah',
-    from: { ar: 'المدينة المنورة', en: 'Madinah' },
-    to:   { ar: 'جولة الزيارات', en: 'Ziyarat Tour' },
+    from: { ar: '', en: '' },
+    to:   { ar: 'جولة زيارات المدينة المنورة الخاصة', en: 'Private Madinah Ziyarat Tour' },
     category: 'ziyarat',
     rates: mkRates(250, 300, 400),
   },

@@ -25,10 +25,16 @@ export default function PricingSection({ routes, heading }: Props) {
   const { lang, isAr } = useLang()
   const tx = (b: BText) => b[lang]
 
-  const waBookMsg = (from: BText, to: BText) =>
-    isAr
-      ? `السلام عليكم، أرغب في حجز رحلة من ${tx(from)} إلى ${tx(to)}`
-      : `Hello, I'd like to book a trip from ${tx(from)} to ${tx(to)}`
+  const waBookMsg = (from: BText, to: BText) => {
+    const fromText = tx(from)
+    const toText = tx(to)
+    if (!fromText) {
+      return isAr ? `السلام عليكم، أرغب في حجز ${toText}` : `Hello, I'd like to book ${toText}`
+    }
+    return isAr
+      ? `السلام عليكم، أرغب في حجز رحلة من ${fromText} إلى ${toText}`
+      : `Hello, I'd like to book a trip from ${fromText} to ${toText}`
+  }
 
   /* group by category, preserving order */
   const categories: PricingCategory[] = []
@@ -133,15 +139,19 @@ export default function PricingSection({ routes, heading }: Props) {
                       direction: isAr ? 'rtl' : 'ltr',
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{
-                          fontSize: '0.95rem', fontWeight: '900',
-                          color: 'var(--foreground)',
-                        }}>
-                          {tx(route.from)}
-                        </span>
-                        <span style={{ color: categoryColor[cat], fontWeight: '900', fontSize: '1rem' }}>
-                          {isAr ? '←' : '→'}
-                        </span>
+                        {tx(route.from) && (
+                          <>
+                            <span style={{
+                              fontSize: '0.95rem', fontWeight: '900',
+                              color: 'var(--foreground)',
+                            }}>
+                              {tx(route.from)}
+                            </span>
+                            <span style={{ color: categoryColor[cat], fontWeight: '900', fontSize: '1rem' }}>
+                              {isAr ? '←' : '→'}
+                            </span>
+                          </>
+                        )}
                         <span style={{
                           fontSize: '0.95rem', fontWeight: '900',
                           color: 'var(--foreground)',

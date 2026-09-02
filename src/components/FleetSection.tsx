@@ -148,8 +148,12 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
                           fontSize: '0.82rem',
                         }}>
                           <span style={{ color: 'var(--muted-foreground)', maxWidth: '68%', lineHeight: '1.3' }}>
-                            {isAr ? route.from.ar : route.from.en}
-                            <span style={{ color: 'var(--primary)', margin: '0 4px' }}>→</span>
+                            {(isAr ? route.from.ar : route.from.en) && (
+                              <>
+                                {isAr ? route.from.ar : route.from.en}
+                                <span style={{ color: 'var(--primary)', margin: '0 4px' }}>→</span>
+                              </>
+                            )}
                             {isAr ? route.to.ar : route.to.en}
                           </span>
                           <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--primary)', whiteSpace: 'nowrap' }}>

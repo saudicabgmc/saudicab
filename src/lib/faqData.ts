@@ -303,8 +303,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'كم تكلف رحلة من المدينة المنورة إلى ينبع؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers the Madinah to Yanbu route at a fixed, transparent fare with no surprises. The journey takes approximately 2.5 hours, depending on traffic and road conditions. Contact us via WhatsApp to get the current rate and book your trip in advance.',
-      ar: 'Saudi Cabs GMC تقدم خط المدينة المنورة - ينبع بأجر ثابت وشفاف بدون مفاجآت. تستغرق الرحلة حوالي 2.5 ساعة، حسب حركة المرور وحالة الطريق. تواصل معنا عبر واتساب للحصول على السعر الحالي وحجز رحلتك مسبقاً.',
+      en: 'The fare for a Madinah to Yanbu trip depends on the selected vehicle, pickup and drop-off details, and trip requirements. The journey takes approximately 2.5 hours, depending on traffic and road conditions. Contact us via WhatsApp with your travel details and the final fare will be confirmed before booking.',
+      ar: 'يعتمد سعر رحلة المدينة المنورة - ينبع على السيارة المختارة وتفاصيل الاستلام والتوصيل ومتطلبات الرحلة. تستغرق الرحلة حوالي 2.5 ساعة، حسب حركة المرور وحالة الطريق. تواصل معنا عبر واتساب مع تفاصيل رحلتك وسيتم تأكيد السعر النهائي قبل الحجز.',
     },
   },
   {

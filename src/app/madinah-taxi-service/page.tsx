@@ -21,7 +21,7 @@ export default function MadinahPage() {
         { iconName: 'Car', title: { ar: 'كاب بين المدن', en: 'Intercity Cab' }, desc: { ar: 'رحلات مريحة من المدينة إلى مكة المكرمة، جدة، والطائف.', en: 'Comfortable trips from Madinah to Makkah, Jeddah, and Taif.' } },
         { iconName: 'Briefcase', title: { ar: 'سائق خاص', en: 'Private Driver' }, desc: { ar: 'سائق خاص طوال إقامتك في المدينة للزيارات والتسوق والمناسبات.', en: 'A private driver throughout your stay in Madinah for visits, shopping, and occasions.' } },
         { iconName: 'Users', title: { ar: 'سيارات عائلية وجماعية', en: 'Family & Group Transfers' }, desc: { ar: 'مركبات واسعة ومريحة لعائلات الزوار والمجموعات بمختلف الأحجام.', en: 'Spacious and comfortable vehicles for visiting families and groups of various sizes.' } },
-        { iconName: 'Building', title: { ar: 'توصيل الفنادق', en: 'Hotel Transfer' }, desc: { ar: 'خدمة توصيل بين فنادق المدينة وجميع المواقع داخلها.', en: 'Transfer service between Madinah hotels and all locations inside the city.' } },
+        { iconName: 'Building', title: { ar: 'توصيل الفنادق', en: 'Hotel Transfer' }, desc: { ar: 'خدمة توصيل بين فنادق المدينة والوجهات الرئيسية داخلها.', en: 'Transfer service between Madinah hotels and major destinations across the city.' } },
         { iconName: 'Moon', title: { ar: 'خدمة ليلية', en: 'Night Service' }, desc: { ar: 'متاحون لتوصيلات الفجر والرحلات المتأخرة ليلاً إلى المسجد النبوي.', en: "Available for Fajr prayer transfers and late-night trips to the Prophet's Mosque." } },
       ]}
       routes={[
