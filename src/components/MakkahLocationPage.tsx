@@ -24,8 +24,8 @@ const NEIGHBOURHOODS = [
     icon: Building2,
     name: { ar: 'العزيزية', en: 'Al-Aziziyah' },
     desc: {
-      ar: 'أكبر أحياء الفنادق في مكة، يقع على بعد حوالي 3-4 كم من الحرم المكي وقريب من منى. خيار شائع للحجاج والمعتمرين بأسعار متوسطة، ونوفر رحلات منتظمة بين العزيزية والحرم.',
-      en: 'Makkah\'s largest hotel district, roughly 3-4 km from the Holy Mosque and close to Mina. A popular mid-range base for pilgrims — we run regular transfers between Al-Aziziyah and the Haram.',
+      ar: 'حي فنادق شهير في مكة، يقع على بعد حوالي 3-4 كم من الحرم المكي وقريب من منى. نوفر رحلات منتظمة بين العزيزية والحرم.',
+      en: 'A popular hotel district in Makkah, roughly 3–4 km from the Holy Mosque and close to Mina. We run regular transfers between Al-Aziziyah and the Haram.',
     },
   },
   {

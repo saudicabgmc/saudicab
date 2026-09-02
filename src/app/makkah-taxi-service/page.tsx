@@ -20,7 +20,7 @@ export default function MakkahPage() {
         { iconName: 'Bus', title: { ar: 'رحلات المشاعر', en: 'Holy Sites Trips' }, desc: { ar: 'نقل جماعي مريح إلى منى وعرفات ومزدلفة خلال موسم الحج.', en: 'Comfortable group transportation to Mina, Arafat and Muzdalifah during Hajj season.' } },
         { iconName: 'Car', title: { ar: 'كاب بين المدن', en: 'Intercity Cab' }, desc: { ar: 'رحلات مريحة من مكة إلى جدة، المدينة المنورة، والطائف.', en: 'Comfortable trips from Makkah to Jeddah, Madinah, and Taif.' } },
         { iconName: 'Briefcase', title: { ar: 'سائق خاص', en: 'Private Driver' }, desc: { ar: 'سائق خاص طوال إقامتك في مكة للزيارات والتسوق والمناسبات.', en: 'A private driver throughout your stay in Makkah for visits, shopping, and occasions.' } },
-        { iconName: 'Building', title: { ar: 'توصيل الفنادق', en: 'Hotel Transfers' }, desc: { ar: 'خدمة توصيل بين الفنادق وجميع المواقع داخل مكة المكرمة.', en: 'Transfer service between hotels and all locations within Makkah.' } },
+        { iconName: 'Building', title: { ar: 'توصيل الفنادق', en: 'Hotel Transfers' }, desc: { ar: 'خدمة توصيل بين الفنادق والمواقع الرئيسية داخل مكة المكرمة.', en: 'Transfer service between hotels and major locations across Makkah.' } },
         { iconName: 'Map', title: { ar: 'جولة الزيارات الإسلامية', en: 'Islamic Sites Tour' }, desc: { ar: 'زيارة المواقع الإسلامية التاريخية في مكة مع سائق محلي ذي خبرة.', en: 'Visit historical Islamic sites in Makkah with an experienced local driver.' } },
         { iconName: 'Users', title: { ar: 'سيارات عائلية', en: 'Family Vehicles' }, desc: { ar: 'سيارات واسعة لاستيعاب العائلات بكل راحة وأمان.', en: 'Spacious vehicles to accommodate families comfortably and safely.' } },
       ]}
