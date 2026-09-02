@@ -200,8 +200,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تستلم Saudi Cabs GMC من جميع فنادق مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides hotel pickup across hotels and major areas in Makkah, including those near the Haram, Al-Aziziyah, Al-Shisha, and Al-Utaybiyah. Simply share your hotel name and room details when booking.',
-      ar: 'نعم، Saudi Cabs GMC تستلم من الفنادق والمناطق الرئيسية في مكة المكرمة، بما فيها الفنادق المجاورة للحرم والعزيزية والشيشة والعتيبية. فقط شارك اسم الفندق وتفاصيل الغرفة عند الحجز.',
+      en: 'We provide pickup from hotels and major areas across Makkah, including those near the Haram, Al-Aziziyah, Al-Shisha, and Al-Utaybiyah. Please share your hotel location when booking so we can confirm pickup details.',
+      ar: 'نوفر الاستقبال من الفنادق والمناطق الرئيسية في جميع أنحاء مكة المكرمة، بما فيها الفنادق المجاورة للحرم والعزيزية والشيشة والعتيبية. يرجى مشاركة موقع فندقك عند الحجز حتى نتمكن من تأكيد تفاصيل الاستقبال.',
     },
   },
   {
@@ -210,8 +210,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كم يكلف الكاب من مكة المكرمة إلى الطائف؟',
     },
     a: {
-      en: 'The cab fare from Makkah to Taif with Saudi Cabs GMC is fixed with no meter or hidden charges. The scenic mountain journey takes approximately 1.5 hours. Contact us on WhatsApp for the current rate and any available packages.',
-      ar: 'سعر الكاب من مكة المكرمة إلى الطائف مع Saudi Cabs GMC ثابت بدون عداد ولا رسوم خفية. رحلة الجبال الخلابة تستغرق حوالي 1.5 ساعة. تواصل معنا عبر واتساب للاطلاع على السعر الحالي وأي باقات متاحة.',
+      en: 'The Makkah to Taif route isn\'t one of our currently listed fixed fares. The scenic mountain journey takes approximately 1.5 to 2 hours. Message us on WhatsApp with your travel date and vehicle preference and we\'ll confirm the current route price.',
+      ar: 'خط مكة المكرمة - الطائف ليس من ضمن الأسعار الثابتة المعروضة حالياً. رحلة الجبال الخلابة تستغرق من 1.5 إلى 2 ساعة تقريباً. راسلنا عبر واتساب مع تاريخ سفرك والسيارة المفضلة وسنؤكد لك سعر الخط الحالي.',
     },
   },
 ]

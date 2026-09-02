@@ -65,8 +65,8 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
           <div className="gold-divider" />
           <p className="section-subtitle">
             {isAr
-              ? `سيدان • ستاريا • GMC — أسعار ثابتة بدون رسوم خفية${cityName ? ` في ${cityName.ar}` : ''}`
-              : `Sedan • Staria • GMC — Fixed prices, no hidden fees${cityName ? ` in ${cityName.en}` : ''}`
+              ? 'سيدان • ستاريا • GMC — سعر يعتمد على المسار ويُؤكد قبل الحجز'
+              : 'Sedan • Staria • GMC — Route-based pricing confirmed before booking'
             }
           </p>
         </div>
