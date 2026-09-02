@@ -35,7 +35,7 @@ Each day assumes ~1 focused session. Adjust pace as needed — mark items done h
 - [x] **Day 21**: Re-verified `TOPICAL_MAP.md` against actual `src/app/` and corrected stale entries — checked off all 4 city content gaps (Days 4-7), added the 8 new blog posts (Days 8-14) to the blog table, updated `/booking`/`/reviews` from "Missing" to "Done", removed the dangerous "add `AggregateRating`" advice (a prior audit deliberately removed 13 fabricated instances of exactly this), updated per-page-type schema checklists to reflect Days 17-19, and removed a duplicate/typo'd route row ("Madinah → Madinah")
 
 ## Week 4 — Off-Site, Audit & Polish
-- [ ] **Day 22**: Google Business Profile submission checklist (external, manual — not code)
+- [x] **Day 22**: Google Business Profile — this is a manual task needing the owner's Google account and phone verification, so a step-by-step checklist was written instead (`GOOGLE_BUSINESS_PROFILE_CHECKLIST.md`), using only facts already published on the site (name, phone, hours, service area, description) and flagging the one real decision only the owner can make (service-area vs. storefront listing)
 - [ ] **Day 23**: Wikidata/Wikipedia `sameAs` research for the business entity (external)
 - [ ] **Day 24**: Outreach target list — Islamic travel blogs/forums for backlinks (external)
 - [ ] **Day 25**: Internal link audit — verify every route/guide page links per the Internal Linking Matrix in `TOPICAL_MAP.md`
