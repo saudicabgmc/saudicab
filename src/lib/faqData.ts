@@ -120,8 +120,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كيف أحجز كاب من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'To book a cab from King Abdulaziz International Airport to Makkah, contact Saudi Cabs GMC via WhatsApp before your flight. Your driver will meet you at the arrivals hall with a name sign. The journey takes approximately 55 to 90 minutes depending on traffic, at a fixed price with no hidden fees.',
-      ar: 'لحجز كاب من مطار الملك عبدالعزيز الدولي إلى مكة المكرمة، تواصل مع Saudi Cabs GMC عبر واتساب قبل رحلتك. سيستقبلك السائق في صالة الوصول بلوحة باسمك. تستغرق الرحلة من 55 إلى 90 دقيقة تقريباً حسب حركة المرور، بسعر ثابت بدون رسوم إضافية.',
+      en: 'You can book using the booking form on this page or via WhatsApp. Share your pickup location, destination, date and time, number of passengers, and preferred vehicle — Saudi Cabs GMC will confirm your booking with a fixed price and driver details before your flight.',
+      ar: 'يمكنك الحجز عبر نموذج الحجز في هذه الصفحة أو عبر واتساب. شارك موقع الاستلام والوجهة والتاريخ والوقت وعدد الركاب والسيارة المفضلة — ستؤكد Saudi Cabs GMC حجزك بسعر ثابت وتفاصيل السائق قبل رحلتك.',
     },
   },
   {
@@ -130,8 +130,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل توجد خدمة كاب على مدار الساعة بالقرب من المسجد الحرام في مكة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC provides 24/7 cab service in Makkah including direct pickups and drop-offs at Al-Masjid Al-Haram. Whether you need a ride after Fajr, Tarawih, or any prayer time, our drivers are always on standby.',
-      ar: 'نعم، Saudi Cabs GMC توفر خدمة كاب على مدار الساعة في مكة المكرمة تشمل الاستلام والإيصال مباشرةً عند المسجد الحرام. سواء احتجت ركوبة بعد الفجر أو التراويح أو في أي وقت، سائقونا دائماً في الخدمة.',
+      en: 'Yes, Saudi Cabs GMC offers 24/7 transportation for hotel, Holy Mosque, and other major Makkah transfers, including after Fajr, Tarawih, or any prayer time — subject to driver availability at the time of your request.',
+      ar: 'نعم، توفر Saudi Cabs GMC خدمة نقل على مدار الساعة للفنادق والمسجد الحرام وأبرز وجهات مكة، بما في ذلك بعد الفجر أو التراويح أو أي وقت من الصلاة — حسب توفر السائقين وقت طلبك.',
     },
   },
   {
@@ -140,8 +140,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كم تستغرق الرحلة بالسيارة من مكة المكرمة إلى جدة؟',
     },
     a: {
-      en: 'The cab journey from Makkah to Jeddah takes approximately 50 to 90 minutes depending on traffic. Saudi Cabs GMC offers this route at a fixed price — no meter, no surprises — making it ideal for frequent travelers between the two cities.',
-      ar: 'تستغرق رحلة الكاب من مكة المكرمة إلى جدة من 50 إلى 90 دقيقة تقريباً حسب حركة المرور. Saudi Cabs GMC تقدم هذا الخط بسعر ثابت — بدون عداد ولا مفاجآت — مما يجعلها مثالية للمسافرين المتكررين بين المدينتين.',
+      en: 'The journey from Makkah to Jeddah usually takes approximately 50–90 minutes, depending on traffic, pickup location and road conditions. Saudi Cabs GMC offers this route at a fixed price — no meter, no surprises.',
+      ar: 'تستغرق الرحلة من مكة المكرمة إلى جدة عادةً من 50 إلى 90 دقيقة تقريباً، حسب حركة المرور وموقع الاستلام وحالة الطريق. Saudi Cabs GMC تقدم هذا الخط بسعر ثابت — بدون عداد ولا مفاجآت.',
     },
   },
   {
@@ -150,8 +150,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل يمكنني حجز وسائل نقل خاصة بالحج والعمرة في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers dedicated Hajj and Umrah transportation packages in Makkah. Services include transfers to Mina, Arafat, and Muzdalifah, as well as hotel-to-Haram trips, with fixed prices confirmed before travel.',
-      ar: 'نعم، Saudi Cabs GMC تقدم باقات نقل مخصصة للحج والعمرة في مكة المكرمة. تشمل الخدمات التوصيل إلى منى وعرفات ومزدلفة، فضلاً عن الرحلات بين الفندق والحرم، بأسعار ثابتة تُؤكد قبل السفر.',
+      en: 'Yes, Saudi Cabs GMC provides Hajj and Umrah transportation in Makkah, including transfers to Mina, Arafat, and Muzdalifah as well as hotel-to-Haram trips, with the price confirmed before travel.',
+      ar: 'نعم، تقدم Saudi Cabs GMC نقلاً للحج والعمرة في مكة المكرمة، بما في ذلك التوصيل إلى منى وعرفات ومزدلفة، وكذلك الرحلات بين الفندق والحرم، مع تأكيد السعر قبل السفر.',
     },
   },
   {
@@ -160,8 +160,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'ما أسرع طريقة للتنقل من مكة المكرمة إلى منى خلال الحج؟',
     },
     a: {
-      en: 'The fastest and most comfortable way from Makkah to Mina is by private cab. Saudi Cabs GMC drivers know the optimal routes to avoid peak traffic during Hajj. The journey typically takes around 20 minutes with an experienced local driver.',
-      ar: 'أسرع وأفضل طريقة من مكة المكرمة إلى منى هي الكاب الخاص. سائقو Saudi Cabs GMC يعرفون أفضل المسارات لتجنب الازدحام في موسم الحج. تستغرق الرحلة عادةً حوالي 20 دقيقة مع سائق محلي متمرس.',
+      en: 'A private vehicle offers the most direct way from Makkah to Mina when road access and Hajj traffic regulations permit. Travel times can vary significantly during Hajj due to heavy traffic and official crowd-control restrictions, so we cannot promise a specific duration — your driver will take the best available route at the time.',
+      ar: 'السيارة الخاصة توفر أقرب طريقة من مكة إلى منى عندما تسمح حركة المرور وأنظمة الحج بذلك. قد تختلف أوقات الرحلة بشكل كبير خلال الحج بسبب الازدحام الشديد والقيود الرسمية لإدارة الحشود، لذا لا يمكننا تحديد مدة زمنية دقيقة — سيسلك سائقك أفضل طريق متاح في حينه.',
     },
   },
   {
@@ -170,8 +170,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تتوفر سيارات عائلية كبيرة للنقل في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC has a spacious Hyundai Staria van and a GMC Yukon VIP SUV that comfortably seat up to 7 passengers with luggage. These are ideal for Hajj and Umrah groups and families traveling together in Makkah.',
-      ar: 'نعم، لدى Saudi Cabs GMC حافلة هيونداي ستاريا وسيارة GMC يوكن VIP الواسعتين اللتين تستوعبان حتى 7 ركاب مع الأمتعة براحة تامة. وهما مثاليتان لمجموعات الحج والعمرة والعائلات المسافرة معاً في مكة المكرمة.',
+      en: 'Yes. Saudi Cabs GMC offers 7-seat vehicles including the Hyundai Staria and GMC Yukon, suitable for families and groups traveling together in Makkah. Vehicle availability should be confirmed when booking.',
+      ar: 'نعم. توفر Saudi Cabs GMC سيارات بسعة 7 مقاعد تشمل هيونداي ستاريا وGMC يوكن، مناسبة للعائلات والمجموعات المسافرة معاً في مكة المكرمة. يجب تأكيد توفر السيارة عند الحجز.',
     },
   },
   {
@@ -180,8 +180,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل يمكنني استئجار سائق خاص ليوم كامل في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes, Saudi Cabs GMC offers full-day private driver hire in Makkah. Your dedicated driver will take you to the Haram, Jabal Al-Nour, Jabal Thawr, Zamzam Tower, and any other sites — all at a single fixed daily rate.',
-      ar: 'نعم، Saudi Cabs GMC توفر خدمة استئجار سائق خاص ليوم كامل في مكة. سائقك المخصص سيأخذك إلى الحرم وجبل النور وجبل ثور وبرج زمزم وأي مواقع تريدها — كل ذلك بسعر يومي ثابت.',
+      en: 'Yes, Saudi Cabs GMC offers a private driver for visits, shopping, and other occasions in Makkah, including sites such as Jabal Al-Nour, Jabal Thawr, and the Zamzam Tower area. Contact us on WhatsApp to confirm availability, duration, and pricing for your trip.',
+      ar: 'نعم، توفر Saudi Cabs GMC سائقاً خاصاً للزيارات والتسوق والمناسبات في مكة، بما في ذلك مواقع مثل جبل النور وجبل ثور ومنطقة برج زمزم. تواصل معنا عبر واتساب لتأكيد التوفر ومدة الرحلة والسعر.',
     },
   },
   {
@@ -190,8 +190,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كيف أسافر من مكة المكرمة إلى المدينة المنورة بسيارة خاصة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers a comfortable intercity cab from Makkah to Madinah. The journey takes approximately 4.5 to 5 hours depending on traffic. Book in advance via WhatsApp for a fixed rate. This private car option is preferred by pilgrims for its comfort and flexibility over buses.',
-      ar: 'تقدم Saudi Cabs GMC كاباً مريحاً بين المدن من مكة المكرمة إلى المدينة المنورة. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً حسب حركة المرور. احجز مسبقاً عبر واتساب للحصول على سعر ثابت. يُفضّل كثير من الحجاج هذا الخيار على الحافلة لراحته ومرونته.',
+      en: 'Saudi Cabs GMC offers a comfortable private intercity cab from Makkah to Madinah. The journey takes approximately 4.5 to 5 hours depending on traffic and road conditions. You can book through WhatsApp or the booking form on this page to confirm your fixed rate in advance.',
+      ar: 'تقدم Saudi Cabs GMC كاباً خاصاً مريحاً بين المدن من مكة المكرمة إلى المدينة المنورة. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً حسب حركة المرور وحالة الطريق. يمكنك الحجز عبر واتساب أو نموذج الحجز في هذه الصفحة لتأكيد سعرك الثابت مسبقاً.',
     },
   },
   {
