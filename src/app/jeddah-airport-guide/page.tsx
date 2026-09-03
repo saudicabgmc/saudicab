@@ -52,6 +52,8 @@ export default function JeddahAirportGuide() {
           { href: '/jeddah-to-makkah', label: 'Jeddah City → Makkah', tag: 'Intercity' },
           { href: '/jeddah-taxi-service', label: 'Jeddah Taxi Hub', tag: 'City Page' },
           { href: '/makkah-transport-guide', label: 'Makkah Transport Guide', tag: 'Guide' },
+          { href: '/gmc-yukon-hire', label: 'GMC Yukon VIP Hire', tag: 'Fleet' },
+          { href: '/blog/how-to-travel-jeddah-airport-to-makkah', label: 'Jeddah Airport to Makkah — Full Guide', tag: 'Blog' },
         ]}
       >
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '0 0 16px' }}>About Jeddah Airport (KAIA)</h2>

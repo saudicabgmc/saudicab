@@ -38,6 +38,8 @@ export default function TaifPage() {
         { slug: 'taif-to-madinah', label: { ar: 'الطائف ← المدينة المنورة', en: 'Taif → Madinah' }, duration: '~5 hrs' },
         { slug: 'makkah-to-taif', label: { ar: 'مكة المكرمة ← الطائف', en: 'Makkah → Taif' }, duration: '~1.5 hrs' },
         { slug: 'jeddah-to-taif', label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: '~1.5 hrs' },
+        { slug: 'taif-to-makkah', label: { ar: 'الطائف ← مكة المكرمة', en: 'Taif → Makkah' }, duration: '~1.5 hrs' },
+        { slug: 'taif-airport-taxi', label: { ar: 'مطار الطائف ← وسط المدينة', en: 'Taif Airport → City Center' }, duration: '~20–30 min' },
       ]}
       highlights={[
         { iconName: 'Mountain', title: { ar: 'خبراء طرق الجبال', en: 'Mountain Road Experts' }, desc: { ar: 'سائقونا متمرسون على طرق الجبال الجميلة حول شفا وهدا والطائف.', en: 'Our drivers are experienced on the scenic mountain roads around Shafa, Hada, and Taif.' } },

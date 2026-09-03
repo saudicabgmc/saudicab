@@ -39,6 +39,7 @@ export default function JeddahPage() {
         { slug: 'jeddah-airport-to-madinah', label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: 'Approx. 4 hrs' },
         { slug: 'jeddah-to-makkah', label: { ar: 'جدة ← مكة المكرمة', en: 'Jeddah → Makkah' }, duration: 'Approx. 50 min' },
         { slug: 'jeddah-to-taif', label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: 'Approx. 1.5 hrs' },
+        { slug: 'jeddah-to-madinah', label: { ar: 'جدة ← المدينة المنورة', en: 'Jeddah → Madinah' }, duration: 'Approx. 4 hrs' },
         { slug: 'madinah-to-jeddah', label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: 'Approx. 4 hrs' },
         { slug: 'makkah-to-jeddah', label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: 'Approx. 50 min' },
       ]}

@@ -52,6 +52,8 @@ export default function TaxiPricesGuide() {
           { href: '/jeddah-airport-to-makkah', label: 'Airport → Makkah', tag: 'Airport Transfer' },
           { href: '/routes-map', label: 'Interactive Route Map', tag: 'All Routes' },
           { href: '/umrah-travel-guide', label: 'Umrah Travel Guide', tag: 'Guide' },
+          { href: '/toyota-camry-taxi', label: 'Toyota Camry Sedan Taxi', tag: 'Fleet' },
+          { href: '/blog/how-much-does-a-taxi-cost-in-saudi-arabia', label: '2026 Price Guide Article', tag: 'Blog' },
         ]}
       >
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '0 0 16px' }}>Complete Route Distance & Time Table</h2>

@@ -52,6 +52,8 @@ export default function UmrahTravelGuide() {
           { href: '/madinah-airport-taxi', label: 'Madinah Airport Taxi', tag: 'Airport' },
           { href: '/makkah-transport-guide', label: 'Makkah Transport Guide', tag: 'Guide' },
           { href: '/hajj-transport-faq', label: 'Hajj Transport FAQ', tag: 'Guide' },
+          { href: '/hyundai-staria-taxi', label: 'Hyundai Staria Family Van', tag: 'Fleet' },
+          { href: '/blog/umrah-checklist-transport-hotels-packing', label: 'Umrah Checklist Article', tag: 'Blog' },
         ]}
       >
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '0 0 16px' }}>Typical Umrah Journey Route</h2>

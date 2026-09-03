@@ -40,6 +40,8 @@ export default function MakkahPage() {
         { slug: 'madinah-to-makkah', label: { ar: 'المدينة المنورة ← مكة المكرمة', en: 'Madinah → Makkah' }, duration: 'Approx. 4.5–5 hrs' },
         { slug: 'makkah-to-jeddah', label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: 'Approx. 50–90 min' },
         { slug: 'makkah-to-taif', label: { ar: 'مكة المكرمة ← الطائف', en: 'Makkah → Taif' }, duration: 'Approx. 1.5–2 hrs' },
+        { slug: 'makkah-to-riyadh', label: { ar: 'مكة المكرمة ← الرياض', en: 'Makkah → Riyadh' }, duration: 'Approx. 8–9 hrs' },
+        { slug: 'makkah-to-dammam', label: { ar: 'مكة المكرمة ← الدمام', en: 'Makkah → Dammam' }, duration: 'Approx. 8–9 hrs' },
       ]}
       highlights={[
         { iconName: 'Star', title: { ar: 'متخصصون في خدمة الحجاج والمعتمرين', en: 'Specialists in Hajj & Umrah Services' }, desc: { ar: 'أسطولنا مخصص لخدمة ضيوف الرحمن بكل تبجيل واحترام.', en: 'Our fleet is dedicated to serving the guests of the Merciful with full reverence and respect.' } },

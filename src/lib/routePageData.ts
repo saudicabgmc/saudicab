@@ -366,8 +366,8 @@ export const makkahToTaif: RoutePageData = {
   vehicles: VEHICLES_STANDARD,
   whyPrivate: { en: WHY_PRIVATE_EN, ar: WHY_PRIVATE_AR },
   relatedRoutes: [
+    { slug: 'taif-to-makkah', from: { ar: 'الطائف', en: 'Taif' }, to: { ar: 'مكة', en: 'Makkah' }, duration: '~1.5 hrs' },
     { slug: 'taif-to-jeddah', from: { ar: 'الطائف', en: 'Taif' }, to: { ar: 'جدة', en: 'Jeddah' }, duration: '~1.5 hrs' },
-    { slug: 'jeddah-to-taif', from: { ar: 'جدة', en: 'Jeddah' }, to: { ar: 'الطائف', en: 'Taif' }, duration: '~1.5 hrs' },
     { slug: 'makkah-to-jeddah', from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'جدة', en: 'Jeddah' }, duration: '~50 min' },
   ],
   faqs: [
@@ -401,9 +401,9 @@ export const madinahToJeddah: RoutePageData = {
   vehicles: VEHICLES_STANDARD,
   whyPrivate: { en: WHY_PRIVATE_EN, ar: WHY_PRIVATE_AR },
   relatedRoutes: [
+    { slug: 'jeddah-to-madinah', from: { ar: 'جدة', en: 'Jeddah' }, to: { ar: 'المدينة', en: 'Madinah' }, duration: '~4 hrs' },
     { slug: 'madinah-to-makkah', from: { ar: 'المدينة', en: 'Madinah' }, to: { ar: 'مكة', en: 'Makkah' }, duration: '~4.5 hrs' },
     { slug: 'madinah-airport-taxi', from: { ar: 'مطار المدينة', en: 'Madinah Airport' }, to: { ar: 'المسجد النبوي', en: "Prophet's Mosque" }, duration: '~30 min' },
-    { slug: 'jeddah-to-makkah', from: { ar: 'جدة', en: 'Jeddah' }, to: { ar: 'مكة', en: 'Makkah' }, duration: '~50 min' },
   ],
   faqs: [
     { q: { en: 'How long is the Madinah to Jeddah cab journey?', ar: 'كم تستغرق رحلة الكاب من المدينة إلى جدة؟' }, a: { en: 'The private cab trip from Madinah to Jeddah takes approximately 4 hours on the highway (about 390 km). Traffic at city exits can add 20–30 minutes.', ar: 'تستغرق رحلة الكاب الخاص من المدينة إلى جدة حوالي 4 ساعات عبر الطريق السريع (حوالي 390 كم). قد يضيف الازدحام عند مخارج المدن 20-30 دقيقة.' } },
@@ -632,9 +632,9 @@ export const riyadhToMakkah: RoutePageData = {
     ],
   },
   relatedRoutes: [
+    { slug: 'makkah-to-riyadh',         from: { ar: 'مكة', en: 'Makkah' },        to: { ar: 'الرياض', en: 'Riyadh' }, duration: '~8.5 hrs' },
     { slug: 'jeddah-to-makkah',         from: { ar: 'جدة', en: 'Jeddah' },        to: { ar: 'مكة', en: 'Makkah' },   duration: '~50 min' },
     { slug: 'makkah-to-madinah',        from: { ar: 'مكة', en: 'Makkah' },        to: { ar: 'المدينة', en: 'Madinah' }, duration: '~4.5 hrs' },
-    { slug: 'jeddah-airport-to-makkah', from: { ar: 'مطار جدة', en: 'Jeddah Airport' }, to: { ar: 'مكة', en: 'Makkah' }, duration: '~55 min' },
   ],
   faqs: [
     { q: { en: 'How long is the drive from Riyadh to Makkah?', ar: 'كم تستغرق الرحلة من الرياض إلى مكة؟' }, a: { en: 'The private cab journey from Riyadh to Makkah takes approximately 8 to 9 hours (around 900 km). This includes rest stops for prayers and meals. Night travel is recommended to avoid traffic.', ar: 'تستغرق رحلة الكاب الخاص من الرياض إلى مكة حوالي 8 إلى 9 ساعات (حوالي 900 كم). يشمل ذلك توقفات للراحة والصلاة والوجبات. يُنصح بالسفر الليلي لتجنب الازدحام.' } },
@@ -881,8 +881,8 @@ export const dammamToMakkah: RoutePageData = {
     ],
   },
   relatedRoutes: [
+    { slug: 'makkah-to-dammam',  from: { ar: 'مكة', en: 'Makkah' },   to: { ar: 'الدمام', en: 'Dammam' }, duration: '~8–9 hrs' },
     { slug: 'makkah-to-madinah', from: { ar: 'مكة', en: 'Makkah' },   to: { ar: 'المدينة', en: 'Madinah' }, duration: '~4.5 hrs' },
-    { slug: 'dammam-to-madinah', from: { ar: 'الدمام', en: 'Dammam' }, to: { ar: 'المدينة', en: 'Madinah' }, duration: '~9–10 hrs' },
     { slug: 'riyadh-to-makkah',  from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8.5 hrs' },
   ],
   faqs: [

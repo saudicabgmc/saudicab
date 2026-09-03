@@ -33,6 +33,23 @@ const TYPE_BADGE: Record<RoutePageData['type'], { ar: string; en: string; color:
   tour:       { ar: 'جولة سياحية', en: 'Sightseeing Tour', color: '#065f46' },
 }
 
+const ALL_GUIDES = [
+  { href: '/makkah-transport-guide', en: 'Makkah Transport Guide', ar: 'دليل النقل في مكة' },
+  { href: '/jeddah-airport-guide', en: 'Jeddah Airport Guide', ar: 'دليل مطار جدة' },
+  { href: '/taxi-prices-saudi-arabia', en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' },
+  { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
+  { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
+] as const
+
+function getRelevantGuides(data: RoutePageData) {
+  const hrefs = new Set<string>()
+  if (data.slug.includes('jeddah-airport')) hrefs.add('/jeddah-airport-guide')
+  if (data.fromCitySlug === 'makkah-taxi-service' || data.toCitySlug === 'makkah-taxi-service') hrefs.add('/makkah-transport-guide')
+  if (data.type === 'pilgrimage') { hrefs.add('/hajj-transport-faq'); hrefs.add('/umrah-travel-guide') }
+  hrefs.add('/taxi-prices-saudi-arabia')
+  return ALL_GUIDES.filter(g => hrefs.has(g.href)).slice(0, 3)
+}
+
 export default function RoutePage({ data }: { data: RoutePageData }) {
   const { lang, isAr } = useLang()
   const tx = (b: { ar: string; en: string }) => b[lang]
@@ -303,6 +320,24 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
           </div>
         </div>
       </section>
+
+      {/* ── Related Guides ── */}
+      {getRelevantGuides(data).length > 0 && (
+        <section style={{ padding: '0 0 50px', backgroundColor: 'var(--background)' }}>
+          <div className="container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', marginBottom: '20px', fontWeight: '600' }}>
+              {isAr ? 'أدلة مفيدة' : 'Helpful Guides'}
+            </p>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              {getRelevantGuides(data).map(g => (
+                <Link key={g.href} href={g.href} className="route-badge">
+                  {isAr ? g.ar : g.en}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── FAQ ── */}
       <FAQSection faqs={data.faqs} heading={{ ar: `أسئلة شائعة — ${tx(data.from)} إلى ${tx(data.to)}`, en: `FAQ — ${tx(data.from)} to ${tx(data.to)}` }} noSchema />

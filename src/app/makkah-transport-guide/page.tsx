@@ -53,6 +53,8 @@ export default function MakkahTransportGuide() {
           { href: '/makkah-to-taif', label: 'Makkah → Taif', tag: 'Intercity Route' },
           { href: '/makkah-to-riyadh', label: 'Makkah → Riyadh', tag: 'Long Distance' },
           { href: '/makkah-taxi-service', label: 'Makkah Taxi Service Hub', tag: 'City Page' },
+          { href: '/gmc-yukon-hire', label: 'GMC Yukon VIP Hire', tag: 'Fleet' },
+          { href: '/blog/best-places-makkah-ziyarat', label: 'Best Places for Makkah Ziyarat', tag: 'Blog' },
         ]}
       >
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '0 0 16px' }}>Transport Options in Makkah</h2>

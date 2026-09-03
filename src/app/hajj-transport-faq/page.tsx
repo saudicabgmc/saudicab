@@ -52,6 +52,7 @@ export default function HajjTransportFaq() {
           { href: '/umrah-travel-guide', label: 'Umrah Travel Guide', tag: 'Guide' },
           { href: '/makkah-transport-guide', label: 'Makkah Transport Guide', tag: 'Guide' },
           { href: '/blog/hajj-transport-guide-2026', label: 'Hajj Transport Article', tag: 'Blog' },
+          { href: '/gmc-yukon-hire', label: 'GMC Yukon VIP Hire', tag: 'Fleet' },
         ]}
       >
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '0 0 16px' }}>Key Hajj Routes — Saudi Cabs GMC</h2>
