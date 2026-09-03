@@ -12,7 +12,6 @@ const CITIES = [
     x: 62, y: 52,
     color: '#D4AF37',
     slug: null,
-    routes: ['riyadh-to-makkah', 'makkah-to-riyadh', 'riyadh-to-madinah', 'riyadh-to-jeddah'],
   },
   {
     id: 'jeddah',
@@ -20,7 +19,6 @@ const CITIES = [
     x: 22, y: 55,
     color: '#1e6fa8',
     slug: 'jeddah-taxi-service',
-    routes: ['jeddah-to-makkah', 'makkah-to-jeddah', 'jeddah-to-madinah', 'madinah-to-jeddah', 'jeddah-to-taif', 'taif-to-jeddah', 'jeddah-airport-to-makkah', 'makkah-to-jeddah-airport', 'jeddah-airport-to-madinah', 'riyadh-to-jeddah'],
   },
   {
     id: 'makkah',
@@ -28,7 +26,6 @@ const CITIES = [
     x: 26, y: 60,
     color: '#0B3D2E',
     slug: 'makkah-taxi-service',
-    routes: ['makkah-to-madinah', 'madinah-to-makkah', 'makkah-to-jeddah', 'jeddah-to-makkah', 'makkah-to-taif', 'taif-to-makkah', 'makkah-to-riyadh', 'riyadh-to-makkah', 'makkah-to-jeddah-airport', 'jeddah-airport-to-makkah'],
   },
   {
     id: 'madinah',
@@ -36,7 +33,6 @@ const CITIES = [
     x: 30, y: 32,
     color: '#2d7a4f',
     slug: 'madinah-taxi-service',
-    routes: ['madinah-to-makkah', 'makkah-to-madinah', 'madinah-to-jeddah', 'jeddah-to-madinah', 'madinah-airport-taxi', 'jeddah-airport-to-madinah', 'taif-to-madinah', 'riyadh-to-madinah'],
   },
   {
     id: 'taif',
@@ -44,7 +40,6 @@ const CITIES = [
     x: 32, y: 63,
     color: '#7c3aed',
     slug: 'taif-taxi-service',
-    routes: ['taif-to-makkah', 'makkah-to-taif', 'taif-to-jeddah', 'jeddah-to-taif', 'taif-to-madinah', 'taif-airport-taxi'],
   },
 ]
 
@@ -99,12 +94,18 @@ const ROUTE_COLORS: Record<string, string> = {
   long:   '#ef4444',
 }
 
+const TYPE_LABEL: Record<string, string> = {
+  short:  'Short',
+  medium: 'Medium',
+  long:   'Long',
+}
+
 const routesMapFaqs = [
   {
     q: { en: 'How many routes does Saudi Cabs GMC cover?', ar: 'كم عدد الخطوط التي تغطيها Saudi Cabs GMC؟' },
     a: {
-      en: 'Saudi Cabs GMC operates a network of intercity and airport transfer routes connecting Makkah, Madinah, Jeddah and Taif, plus intercity transfers to and from Riyadh. The full current list is shown on this page — new routes are added as they become available.',
-      ar: 'تشغّل Saudi Cabs GMC شبكة من خطوط النقل بين المدن وتوصيل المطارات تربط مكة المكرمة والمدينة المنورة وجدة والطائف، بالإضافة إلى رحلات بين المدن من وإلى الرياض. القائمة الكاملة الحالية موضحة في هذه الصفحة، ويتم إضافة خطوط جديدة عند توفرها.',
+      en: 'Saudi Cabs GMC operates a network of intercity and airport transfer routes connecting Makkah, Madinah, Jeddah and Taif, plus intercity transfers to and from Riyadh and Dammam. The full current list is shown on this page — new routes are added as they become available.',
+      ar: 'تشغّل Saudi Cabs GMC شبكة من خطوط النقل بين المدن وتوصيل المطارات تربط مكة المكرمة والمدينة المنورة وجدة والطائف، بالإضافة إلى رحلات بين المدن من وإلى الرياض والدمام. القائمة الكاملة الحالية موضحة في هذه الصفحة، ويتم إضافة خطوط جديدة عند توفرها.',
     },
   },
   {
@@ -168,7 +169,7 @@ export default function RoutesMap() {
           </h1>
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
           <p style={{ opacity: 0.85, maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
-            {ROUTE_PAGES.length}+ routes across Makkah, Madinah, Jeddah, Taif &amp; Riyadh. Click any city or route to book.
+            {ROUTE_PAGES.length} routes across Makkah, Madinah, Jeddah, Taif, Riyadh &amp; Dammam. Explore any city or route to view details and book.
           </p>
         </div>
       </section>
@@ -214,7 +215,7 @@ export default function RoutesMap() {
                 viewBox="0 0 100 100"
                 style={{ width: '100%', aspectRatio: '4/3', display: 'block' }}
                 role="img"
-                aria-label="Interactive map of Saudi Cabs GMC's route network across Makkah, Madinah, Jeddah, Taif and Riyadh"
+                aria-label="Interactive map of Saudi Cabs GMC's route network across Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam"
               >
                 {/* Background regions */}
                 <rect x="0" y="0" width="100" height="100" fill="#e8f4f0" />
@@ -428,8 +429,15 @@ export default function RoutesMap() {
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
                   >
                     <div>
-                      <div style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)', marginBottom: '4px' }}>
-                        {r.from} → {r.to}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                        <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)' }}>
+                          {r.from} → {r.to}
+                        </span>
+                        <span style={{
+                          fontSize: '0.62rem', fontWeight: '800', padding: '2px 8px', borderRadius: '20px',
+                          background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],
+                          textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0,
+                        }}>{TYPE_LABEL[r.type!]}</span>
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
                         {r.duration} · Fixed Fare, Confirmed Before Booking
@@ -485,8 +493,8 @@ export default function RoutesMap() {
             </h2>
             <p style={{ fontSize: '0.92rem', lineHeight: 1.9, color: 'var(--muted-foreground)', marginBottom: '16px' }}>
               {isAr
-                ? 'توفر Saudi Cabs GMC خدمة كاب خاص بين المدن تربط مكة المكرمة والمدينة المنورة وجدة والطائف، بالإضافة إلى رحلات بين المدن من وإلى الرياض. سواء كنت تسافر من جدة إلى مكة المكرمة بعد الوصول، أو تخطط لرحلة من مكة المكرمة إلى المدينة المنورة، فإن كل خط يعتمد على سيارة مخصصة بسعر ثابت حسب المسار — بدون مشاركة الرحلة مع ركاب آخرين وبدون التقيد بجداول النقل العام.'
-                : 'Saudi Cabs GMC offers a private intercity taxi network connecting Makkah, Madinah, Jeddah and Taif, along with intercity transfers to and from Riyadh. Whether you\'re travelling from Jeddah to Makkah right after arrival, or planning a trip from Makkah to Madinah, each route uses a dedicated vehicle at a fixed, route-based fare — no shared rides, no public transport timetables to work around.'}
+                ? 'توفر Saudi Cabs GMC خدمة كاب خاص بين المدن تربط مكة المكرمة والمدينة المنورة وجدة والطائف، بالإضافة إلى رحلات بين المدن من وإلى الرياض والدمام. سواء كنت تسافر من جدة إلى مكة المكرمة بعد الوصول، أو تخطط لرحلة من مكة المكرمة إلى المدينة المنورة، فإن كل خط يعتمد على سيارة مخصصة بسعر ثابت حسب المسار — بدون مشاركة الرحلة مع ركاب آخرين وبدون التقيد بجداول النقل العام.'
+                : 'Saudi Cabs GMC offers a private intercity taxi network connecting Makkah, Madinah, Jeddah and Taif, along with intercity transfers to and from Riyadh and Dammam. Whether you\'re travelling from Jeddah to Makkah right after arrival, or planning a trip from Makkah to Madinah, each route uses a dedicated vehicle at a fixed, route-based fare — no shared rides, no public transport timetables to work around.'}
             </p>
             <p style={{ fontSize: '0.92rem', lineHeight: 1.9, color: 'var(--muted-foreground)', marginBottom: '28px' }}>
               {isAr
@@ -498,7 +506,7 @@ export default function RoutesMap() {
               {isAr ? 'أشهر الخطوط' : 'Popular Routes'}
             </h3>
             <p style={{ fontSize: '0.92rem', lineHeight: 2, color: 'var(--muted-foreground)' }}>
-              {isAr ? 'من أكثر الخطوط طلباً: ' : 'Among the most requested routes: '}
+              {isAr ? 'من الخطوط الرئيسية في شبكتنا: ' : 'Among the primary routes in our network: '}
               <Link href="/jeddah-to-makkah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'جدة إلى مكة المكرمة' : 'Jeddah to Makkah'}</Link>
               {', '}
               <Link href="/makkah-to-madinah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'مكة المكرمة إلى المدينة المنورة' : 'Makkah to Madinah'}</Link>
