@@ -428,15 +428,15 @@ export default function RoutesMap() {
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)' }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
                   >
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <div style={{ minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', marginBottom: '4px' }}>
                         <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)' }}>
                           {r.from} → {r.to}
                         </span>
                         <span style={{
                           fontSize: '0.62rem', fontWeight: '800', padding: '2px 8px', borderRadius: '20px',
                           background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],
-                          textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0,
+                          textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0, whiteSpace: 'nowrap',
                         }}>{TYPE_LABEL[r.type!]}</span>
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
