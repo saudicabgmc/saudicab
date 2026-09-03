@@ -378,6 +378,7 @@ export default function RoutesMap() {
                         transition: 'all 0.2s',
                       }}>
                         <span style={{ fontWeight: '700', fontSize: '0.88rem', color: 'var(--foreground)' }}>{r.from} → {r.to}</span>
+                        {' '}
                         <span style={{
                           fontSize: '0.75rem', fontWeight: '700', padding: '3px 8px',
                           borderRadius: '20px', background: ROUTE_COLORS[r.type ?? 'long'] + '22',
@@ -433,6 +434,7 @@ export default function RoutesMap() {
                         <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)' }}>
                           {r.from} → {r.to}
                         </span>
+                        {' '}
                         <span style={{
                           fontSize: '0.62rem', fontWeight: '800', padding: '2px 8px', borderRadius: '20px',
                           background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],

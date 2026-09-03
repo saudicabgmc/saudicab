@@ -117,6 +117,9 @@ export default function Footer() {
             <Link href="/booking" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'احجز الآن' : 'Book a Taxi'}
             </Link>
+            <Link href="/routes-map" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
+              {isAr ? 'خطوط الرياض والدمام' : 'Riyadh & Dammam Routes'}
+            </Link>
             <Link href="/about" style={{ color: 'var(--muted-foreground)', textDecoration: 'none' }}>
               {isAr ? 'من نحن' : 'About'}
             </Link>
