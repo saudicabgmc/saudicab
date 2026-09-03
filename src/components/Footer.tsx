@@ -146,13 +146,6 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-
-        {/* Copyright note */}
-        <div style={{ textAlign: 'center', marginTop: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-          <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)' }}>
-            © {new Date().getFullYear()} Saudi Cabs GMC. All content rights reserved.
-          </span>
-        </div>
       </div>
     </footer>
   )
