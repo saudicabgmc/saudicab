@@ -72,6 +72,7 @@ export default function BlogIndexClient({ posts }: { posts: BlogPost[] }) {
                 }}>
                   {isAr ? 'مميز' : 'Featured'}
                 </span>
+                {' '}
                 <span style={{
                   background: 'var(--muted)', color: 'var(--foreground)',
                   padding: '3px 12px', borderRadius: '50px', fontSize: '0.72rem', fontWeight: '700',
@@ -183,9 +184,19 @@ export default function BlogIndexClient({ posts }: { posts: BlogPost[] }) {
                 />
                 <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
-                    <span style={{ fontSize: '0.68rem', color: 'var(--primary)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                    <button
+                      type="button"
+                      onClick={e => { e.preventDefault(); e.stopPropagation(); setActiveCategory(post.category) }}
+                      aria-label={isAr ? `تصفية حسب ${blogCategoryLabels[post.category][lang]}` : `Filter by ${blogCategoryLabels[post.category][lang]}`}
+                      style={{
+                        fontSize: '0.68rem', color: 'var(--primary)', fontWeight: '800', textTransform: 'uppercase',
+                        letterSpacing: '0.02em', background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+                        textDecoration: 'underline', textUnderlineOffset: '2px',
+                      }}
+                    >
                       {blogCategoryLabels[post.category][lang]}
-                    </span>
+                    </button>
+                    {' '}
                     <span style={{ fontSize: '0.75rem', color: 'var(--muted-foreground)' }}>· {post.date}</span>
                   </div>
                   <h3 style={{ fontSize: '1rem', fontWeight: '800', marginBottom: '10px', lineHeight: 1.4, flex: 1 }}>

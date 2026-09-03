@@ -61,14 +61,20 @@ export default function BlogPostContent({ post, related }: Props) {
             }}>
               {categoryLabel}
             </div>
+            {' '}
             <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.82rem' }}>
               {isAr ? 'بقلم فريق' : 'By'} Saudi Cabs GMC {isAr ? '' : 'Team'}
             </span>
+            {' '}
             <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>{post.date}</span>
+            {' '}
             {hasRealUpdate && (
-              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>
-                {isAr ? 'آخر تحديث:' : 'Last updated:'} {post.dateModified}
-              </span>
+              <>
+                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>
+                  {isAr ? 'آخر تحديث:' : 'Last updated:'} {post.dateModified}
+                </span>
+                {' '}
+              </>
             )}
             <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>
               {mins} {isAr ? 'دقائق قراءة' : 'min read'}
@@ -177,6 +183,7 @@ export default function BlogPostContent({ post, related }: Props) {
                         <span style={{ fontSize: '0.66rem', fontWeight: '800', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                           {blogCategoryLabels[r.category][lang]}
                         </span>
+                        {' '}
                         <span style={{ fontSize: '0.66rem', color: 'var(--muted-foreground)' }}>· {r.date}</span>
                       </div>
                       <h3 style={{ fontSize: '0.88rem', fontWeight: '800', lineHeight: 1.4, margin: 0 }}>{r.title[lang]}</h3>
