@@ -580,6 +580,7 @@ select.form-input {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .routes-map-grid { grid-template-columns: 1fr !important; }
+  .blog-featured-grid { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 768px) {

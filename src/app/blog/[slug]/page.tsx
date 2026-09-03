@@ -42,7 +42,9 @@ export default async function BlogPostPage({ params }: Props) {
   const post = blogPosts.find(p => p.slug === slug)
   if (!post) notFound()
 
-  const related = blogPosts.filter(p => p.slug !== slug).slice(0, 3)
+  const sameCategory = blogPosts.filter(p => p.slug !== slug && p.category === post.category)
+  const others = blogPosts.filter(p => p.slug !== slug && p.category !== post.category)
+  const related = [...sameCategory, ...others].slice(0, 3)
 
   const postUrl = `https://saudicabsgmc.com/blog/${post.slug}`
 
@@ -59,12 +61,13 @@ export default async function BlogPostPage({ params }: Props) {
       height: 630,
     },
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified ?? post.date,
     author: {
-      '@type': 'Person',
-      name: 'Saudi Cabs GMC Editorial Team',
+      '@type': 'Organization',
+      name: 'Saudi Cabs GMC Team',
       url: 'https://saudicabsgmc.com/team',
     },
+    articleSection: post.category,
     publisher: {
       '@type': 'Organization',
       '@id': 'https://saudicabsgmc.com/#organization',

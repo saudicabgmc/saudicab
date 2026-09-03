@@ -1,6 +1,7 @@
 ﻿'use client'
 import Link from 'next/link'
 import type { BlogPost } from '@/lib/blogData'
+import { blogCategoryLabels } from '@/lib/blogData'
 import { useLang } from '@/contexts/LanguageContext'
 
 interface Props {
@@ -20,6 +21,8 @@ export default function BlogPostContent({ post, related }: Props) {
   const content = post.content[lang]
   const excerpt = post.excerpt[lang]
   const mins = readingTime(content)
+  const categoryLabel = blogCategoryLabels[post.category][lang]
+  const hasRealUpdate = post.dateModified && post.dateModified !== post.date
 
   return (
     <main style={{ backgroundColor: 'var(--background)', minHeight: '80vh' }}>
@@ -56,9 +59,17 @@ export default function BlogPostContent({ post, related }: Props) {
               color: 'var(--primary)', padding: '4px 14px', borderRadius: '50px',
               fontSize: '0.78rem', fontWeight: '700',
             }}>
-              Saudi Cabs GMC
+              {categoryLabel}
             </div>
+            <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.82rem' }}>
+              {isAr ? 'بقلم فريق' : 'By'} Saudi Cabs GMC {isAr ? '' : 'Team'}
+            </span>
             <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>{post.date}</span>
+            {hasRealUpdate && (
+              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>
+                {isAr ? 'آخر تحديث:' : 'Last updated:'} {post.dateModified}
+              </span>
+            )}
             <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem' }}>
               {mins} {isAr ? 'دقائق قراءة' : 'min read'}
             </span>
@@ -98,14 +109,32 @@ export default function BlogPostContent({ post, related }: Props) {
         }}>
           <div style={{ fontSize: '1.6rem', marginBottom: '12px' }}>📲</div>
           <h3 style={{ color: 'white', fontSize: '1.2rem', fontWeight: '900', marginBottom: '10px' }}>
-            {isAr ? 'احجز رحلتك الآن' : 'Ready to Book Your Ride?'}
+            {post.relatedRoute
+              ? (isAr ? `تحتاج كاب خاص لخط ${post.relatedRoute.label.ar}؟` : `Need a Private Taxi for This Route?`)
+              : (isAr ? 'احجز رحلتك الآن' : 'Ready to Book Your Ride?')}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '24px', fontSize: '0.9rem', lineHeight: 1.7 }}>
-            {isAr
-              ? 'أسعار ثابتة · متاحون 24/7 · من الباب للباب · سائقون ثنائيو اللغة'
-              : 'Fixed prices · 24/7 · Door-to-door · Bilingual drivers'}
+            {post.relatedRoute
+              ? (isAr
+                  ? `احصل على سعر ثابت مؤكد عبر واتساب لخط ${post.relatedRoute.label.ar}.`
+                  : `Get a fixed fare on WhatsApp for the ${post.relatedRoute.label.en} route.`)
+              : (isAr
+                  ? 'أسعار ثابتة · متاحون 24/7 · من الباب للباب · سائقون ثنائيو اللغة'
+                  : 'Fixed prices · 24/7 · Door-to-door · Bilingual drivers')}
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {post.relatedRoute && (
+              <Link
+                href={`/${post.relatedRoute.slug}`}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: 'var(--primary)', color: '#071f17', padding: '13px 28px',
+                  borderRadius: '10px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
+                }}
+              >
+                {isAr ? `عرض ${post.relatedRoute.label.ar} →` : `View ${post.relatedRoute.label.en} →`}
+              </Link>
+            )}
             <a
               href="https://wa.me/923097811785"
               target="_blank" rel="noopener noreferrer"
@@ -142,9 +171,14 @@ export default function BlogPostContent({ post, related }: Props) {
                     borderRadius: '14px', overflow: 'hidden',
                     border: '1px solid var(--border)', backgroundColor: 'var(--card)', transition: 'all 0.2s',
                   }}>
-                    <img src={r.image} alt={r.title.en} width={600} height={140} style={{ width: '100%', height: '140px', objectFit: 'cover' }} />
+                    <img src={r.image} alt={r.title[lang]} width={600} height={140} loading="lazy" decoding="async" style={{ width: '100%', height: '140px', objectFit: 'cover' }} />
                     <div style={{ padding: '16px' }}>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: '700', marginBottom: '6px' }}>{r.date}</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: '0.66rem', fontWeight: '800', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                          {blogCategoryLabels[r.category][lang]}
+                        </span>
+                        <span style={{ fontSize: '0.66rem', color: 'var(--muted-foreground)' }}>· {r.date}</span>
+                      </div>
                       <h3 style={{ fontSize: '0.88rem', fontWeight: '800', lineHeight: 1.4, margin: 0 }}>{r.title[lang]}</h3>
                     </div>
                   </div>

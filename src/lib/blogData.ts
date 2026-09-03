@@ -1,15 +1,37 @@
-﻿export interface BlogPost {
+﻿export type BlogCategory =
+  | 'Hajj & Umrah'
+  | 'Airport Transfers'
+  | 'Intercity Travel'
+  | 'Taxi Prices'
+  | 'Travel Tips'
+  | 'Vehicles & Fleet';
+
+export const blogCategoryLabels: Record<BlogCategory, { en: string; ar: string }> = {
+  'Hajj & Umrah':       { en: 'Hajj & Umrah',       ar: 'الحج والعمرة' },
+  'Airport Transfers':  { en: 'Airport Transfers',  ar: 'توصيل المطار' },
+  'Intercity Travel':   { en: 'Intercity Travel',   ar: 'رحلات بين المدن' },
+  'Taxi Prices':        { en: 'Taxi Prices',        ar: 'أسعار التاكسي' },
+  'Travel Tips':        { en: 'Travel Tips',        ar: 'نصائح السفر' },
+  'Vehicles & Fleet':   { en: 'Vehicles & Fleet',   ar: 'السيارات والأسطول' },
+};
+
+export interface BlogPost {
   slug: string;
   title: { en: string; ar: string };
   excerpt: { en: string; ar: string };
   content: { en: string; ar: string };
   date: string;
+  dateModified?: string;
   image: string;
+  category: BlogCategory;
+  relatedRoute?: { slug: string; label: { en: string; ar: string } };
 }
 
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-travel-jeddah-airport-to-makkah',
+    category: 'Airport Transfers',
+    relatedRoute: { slug: 'jeddah-airport-to-makkah', label: { en: 'Jeddah Airport to Makkah', ar: 'مطار جدة إلى مكة المكرمة' } },
     title: {
       en: 'How to Travel from Jeddah Airport to Makkah: Train vs Taxi',
       ar: 'كيفية السفر من مطار جدة إلى مكة: القطار مقابل التاكسي',
@@ -38,7 +60,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>Journey time:</strong> ~50–70 minutes depending on traffic</li>
   <li style="margin-bottom:0.5rem;"><strong>Cost:</strong> Fixed SAR price agreed in advance — no meter, no surprises</li>
   <li style="margin-bottom:0.5rem;"><strong>Door-to-door:</strong> Arrivals hall at KAIA directly to your hotel in Makkah</li>
-  <li style="margin-bottom:0.5rem;"><strong>Flight tracking:</strong> Your driver monitors your flight — if delayed, he waits at no extra charge</li>
+  <li style="margin-bottom:0.5rem;"><strong>Flexible for delays:</strong> Share your flight number when booking — if your flight is delayed, let your driver know via WhatsApp and pickup is adjusted accordingly</li>
   <li style="margin-bottom:0.5rem;"><strong>Available 24/7:</strong> Land at 3 AM after a long journey — your driver is already there</li>
   <li style="margin-bottom:0.5rem;"><strong>Luggage included:</strong> Zamzam bottles, strollers, large bags — all handled</li>
 </ul>
@@ -53,7 +75,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Verdict: Train vs Taxi</h2>
 <p style="margin-bottom:1rem;">For solo travelers with minimal luggage, the train is a fine option if you book tickets well in advance. For families, elderly pilgrims, groups with luggage, or anyone arriving outside peak train hours — a private taxi from Jeddah Airport to Makkah is the clear winner. It is simpler, door-to-door, and often works out cheaper once you factor in the taxi to/from the station.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> operates 24/7 with fixed prices, flight tracking, and professional bilingual drivers. Book via WhatsApp at least 24 hours before your arrival.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> operates 24/7 with fixed prices and professional bilingual drivers. Book via WhatsApp at least 24 hours before your arrival, and share your flight number so pickup can be adjusted if your flight is delayed. See our <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah route page</a> for current fares and booking.</p>`,
       ar: `<p style="margin-bottom:1rem;">وصلت للتو إلى مطار الملك عبدالعزيز الدولي في جدة ومكة المكرمة تناديك. لديك خياران رئيسيان: قطار الحرمين السريع أو التاكسي الخاص. إليك كل ما تحتاج معرفته لاتخاذ القرار الصحيح.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الخيار الأول — قطار الحرمين السريع</h2>
@@ -70,20 +92,22 @@ export const blogPosts: BlogPost[] = [
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>وقت الرحلة:</strong> 50–70 دقيقة حسب الحركة المرورية</li>
   <li style="margin-bottom:0.5rem;"><strong>سعر ثابت:</strong> متفق عليه مسبقاً — بدون عداد أو مفاجآت</li>
-  <li style="margin-bottom:0.5rem;"><strong>تتبع الرحلة:</strong> سائقك يتابع رحلتك — في حال التأخير ينتظر بدون رسوم إضافية</li>
+  <li style="margin-bottom:0.5rem;"><strong>مرونة مع التأخير:</strong> شارك رقم رحلتك عند الحجز — وفي حال التأخير أخبر سائقك عبر واتساب ليتم تعديل موعد الاستلام</li>
   <li style="margin-bottom:0.5rem;"><strong>متاح 24/7:</strong> هبطت الساعة 3 صباحاً؟ سائقك موجود</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الحكم النهائي</h2>
 <p style="margin-bottom:1rem;">للعائلات والحجاج وكبار السن وأصحاب الأمتعة الثقيلة — التاكسي الخاص من مطار جدة إلى مكة هو الخيار الأوضح. أبسط، من الباب للباب، وغالباً أرخص حين تحسب تكاليف التنقل من وإلى محطة القطار.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تعمل 24/7 بأسعار ثابتة وتتبع للرحلات وسائقين محترفين ثنائيي اللغة. احجز عبر واتساب قبل وصولك بـ 24 ساعة على الأقل.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تعمل 24/7 بأسعار ثابتة وسائقين محترفين ثنائيي اللغة. احجز عبر واتساب قبل وصولك بـ 24 ساعة على الأقل، وشارك رقم رحلتك حتى يتم تعديل موعد الاستلام في حال التأخير. راجع صفحة <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">خط مطار جدة - مكة المكرمة</a> للاطلاع على الأسعار الحالية والحجز.</p>`,
     },
     date: '2026-05-01',
-    image: '/location/makkah.webp',
+    image: '/location/jeddah.webp',
   },
   {
     slug: 'best-places-makkah-ziyarat',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'makkah-ziyarat-tour', label: { en: 'Makkah Ziyarat Tour', ar: 'جولة زيارات مكة المكرمة' } },
     title: {
       en: 'Top 5 Historical Places to Visit During Makkah Ziyarat',
       ar: 'أفضل 5 أماكن تاريخية لزيارتها خلال جولة مكة',
@@ -132,7 +156,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Visit All 5 Sites in One Day</h2>
-<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers know every site, the best entry points, and the ideal visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. WhatsApp us at +92 309 7811785 to arrange a private guide driver for your group.</p>`,
+<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers are familiar with these sites and can help plan a visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. See our <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Makkah Ziyarat Tour page</a> for details, or WhatsApp us at +92 309 7811785 to arrange transport for your group.</p>`,
       ar: `<p style="margin-bottom:1rem;">زيارة مكة المكرمة للعمرة أو الحج هي تجربة روحية لا تُنسى. فضلاً عن المسجد الحرام، تضم المدينة عشرات المواقع الإسلامية التاريخية التي تحمل دلالات عميقة. إليك أبرز 5 مواقع زيارة يجب على كل حاج ومعتمر الذهاب إليها.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. جبل النور — غار حراء</h2>
@@ -158,7 +182,7 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">من أعرق مقابر مكة، تضم رفات السيدة خديجة رضي الله عنها زوج النبي ﷺ الأولى، وعبد المطلب جده. تقع على مقربة من المسجد الحرام وتفتح بعد صلاتي الفجر والعصر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تزور المواقع الخمسة في يوم واحد</h2>
-<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا يعرفون كل موقع وأفضل الأوقات والمسارات لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. تواصل معنا عبر واتساب: 923097811785+</p>`,
+<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا على دراية بهذه المواقع ويمكنهم مساعدتك في تخطيط ترتيب الزيارة لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. راجع صفحة <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جولة زيارات مكة المكرمة</a> للتفاصيل، أو تواصل معنا عبر واتساب: 923097811785+</p>`,
     },
     date: '2026-04-15',
     image: '/location/makkah.webp',
@@ -166,6 +190,8 @@ export const blogPosts: BlogPost[] = [
   // ── Article 3 ────────────────────────────────────────────────────
   {
     slug: 'haramain-train-vs-private-taxi-makkah-madinah',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'makkah-to-madinah', label: { en: 'Makkah to Madinah', ar: 'مكة المكرمة إلى المدينة المنورة' } },
     title: {
       en: 'Haramain Train vs Private Taxi: Which is Better for Makkah to Madinah?',
       ar: 'قطار الحرمين مقابل التاكسي الخاص: أيهما أفضل من مكة إلى المدينة؟',
@@ -200,7 +226,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Verdict</h2>
-<p style="margin-bottom:1rem;">For most pilgrims — especially families and those with luggage — a private cab from Makkah to Madinah offers more convenience, comfort, and true door-to-door service. The extra 2 hours is worth the peace of mind.</p>`,
+<p style="margin-bottom:1rem;">For most pilgrims — especially families and those with luggage — a private cab from Makkah to Madinah offers more convenience, comfort, and true door-to-door service. The extra 2 hours is worth the peace of mind. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares and booking.</p>`,
       ar: `<p style="margin-bottom:1rem;">من أكثر الأسئلة شيوعاً بين المعتمرين: <strong>هل أركب قطار الحرمين أم أخذ تاكسي خاص من مكة إلى المدينة؟</strong> تعتمد الإجابة على حجم مجموعتك وأمتعتك وطريقة سفرك المفضلة.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الإجابة السريعة</h2>
@@ -221,7 +247,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>المواعيد:</strong> انطلق وقتما تشاء</li>
   <li style="margin-bottom:0.5rem;"><strong>توقفات الصلاة:</strong> نتوقف للصلاة والوجبات على الطريق</li>
   <li style="margin-bottom:0.5rem;"><strong>سعر ثابت:</strong> متفق عليه مسبقاً</li>
-</ul>`,
+</ul>
+<p style="margin-bottom:1rem;">راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية والحجز.</p>`,
     },
     date: '2026-05-02',
     image: '/location/madinah.webp',
@@ -229,6 +256,8 @@ export const blogPosts: BlogPost[] = [
   // ── Article 4 ────────────────────────────────────────────────────
   {
     slug: 'hajj-transport-guide-2026',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'hajj-transport-faq', label: { en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' } },
     title: {
       en: 'Hajj Transport Guide 2026: How to Book Private Cab for Hajj in Saudi Arabia',
       ar: 'دليل نقل الحج 2026: كيفية حجز كاب خاص للحج في المملكة',
@@ -264,7 +293,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Receive your fixed price confirmation and driver details</li>
 </ol>
 
-<p style="margin-bottom:1rem;"><strong>Book at least 2–4 weeks in advance</strong> during Hajj season to guarantee availability.</p>`,
+<p style="margin-bottom:1rem;"><strong>Book at least 2–4 weeks in advance</strong> during Hajj season, since demand is high and early booking helps secure your preferred vehicle and timing. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail.</p>`,
       ar: `<p style="margin-bottom:1rem;">يُقبل ملايين الحجاج على المملكة في موسم الحج، مما يجعل وسيلة النقل من أهم الأمور التي يجب التخطيط لها مسبقاً. إليك الدليل الكامل لحجز نقل خاص لحج 2026.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لماذا تحجز كاباً خاصاً للحج؟</h2>
@@ -280,7 +309,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">تواصل مع Saudi Cabs GMC عبر واتساب: 923097811785+</li>
   <li style="margin-bottom:0.5rem;">أرسل موقع الاستلام والوجهة والتاريخ وعدد الركاب</li>
   <li style="margin-bottom:0.5rem;">استلم تأكيد السعر الثابت وبيانات السائق</li>
-</ol>`,
+</ol>
+<p style="margin-bottom:1rem;"><strong>احجز قبل 2–4 أسابيع على الأقل</strong> في موسم الحج، فالطلب مرتفع والحجز المبكر يساعد على تأمين السيارة والموعد المفضلين. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل.</p>`,
     },
     date: '2026-05-02',
     image: '/location/makkah.webp',
@@ -288,6 +318,8 @@ export const blogPosts: BlogPost[] = [
   // ── Article 5 ────────────────────────────────────────────────────
   {
     slug: 'riyadh-to-makkah-complete-guide',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'riyadh-to-makkah', label: { en: 'Riyadh to Makkah', ar: 'الرياض إلى مكة المكرمة' } },
     title: {
       en: 'Riyadh to Makkah by Taxi: Complete 2026 Travel Guide',
       ar: 'من الرياض إلى مكة بالتاكسي: الدليل الشامل 2026',
@@ -323,7 +355,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Travel at night — cooler and less traffic</li>
   <li style="margin-bottom:0.5rem;">Plan prayer stops at highway rest areas</li>
   <li style="margin-bottom:0.5rem;">Carry water and light snacks for the 8-hour journey</li>
-</ul>`,
+</ul>
+<p style="margin-bottom:1rem;">See our <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">Riyadh to Makkah route page</a> for current fares, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to book your trip.</p>`,
       ar: `<p style="margin-bottom:1rem;">يُعدّ السفر من الرياض إلى مكة بالكاب الخاص أشهر خطوط الحجاج لمسافات طويلة في المملكة. إليك كل ما تحتاج معرفته.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">أبرز المعلومات</h2>
@@ -338,7 +371,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>سيدان:</strong> لـ 1–3 ركاب بأمتعة خفيفة</li>
   <li style="margin-bottom:0.5rem;"><strong>ستاريا:</strong> للعائلات حتى 7 أشخاص مع أمتعة</li>
   <li style="margin-bottom:0.5rem;"><strong>GMC يوكون:</strong> راحة VIP للرحلات الطويلة</li>
-</ul>`,
+</ul>
+<p style="margin-bottom:1rem;">راجع صفحة <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">خط الرياض - مكة المكرمة</a> للأسعار الحالية، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب لحجز رحلتك.</p>`,
     },
     date: '2026-05-02',
     image: '/location/makkah.webp',
@@ -346,6 +380,8 @@ export const blogPosts: BlogPost[] = [
   // ── Article 6 ────────────────────────────────────────────────────
   {
     slug: 'gmc-yukon-vs-staria-family-umrah',
+    category: 'Vehicles & Fleet',
+    relatedRoute: { slug: 'gmc-yukon-hire', label: { en: 'GMC Yukon Hire', ar: 'استئجار GMC يوكون' } },
     title: {
       en: 'GMC Yukon vs Hyundai Staria: Best Vehicle for Family Umrah in Saudi Arabia',
       ar: 'GMC يوكون مقابل هيونداي ستاريا: أفضل سيارة للعمرة العائلية',
@@ -374,7 +410,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Which Should You Choose?</h2>
-<p style="margin-bottom:1rem;">Choose the <strong>GMC Yukon</strong> if you want maximum luxury and premium comfort. Choose the <strong>Hyundai Staria</strong> if you have elderly family members (easier to enter/exit), small children, or very heavy luggage. Both are fixed price with Saudi Cabs GMC — contact via WhatsApp to confirm availability.</p>`,
+<p style="margin-bottom:1rem;">Choose the <strong>GMC Yukon</strong> if you want maximum luxury and premium comfort. Choose the <strong>Hyundai Staria</strong> if you have elderly family members (easier to enter/exit), small children, or very heavy luggage. See our <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> and <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> pages for details, and contact us via WhatsApp to confirm availability.</p>`,
       ar: `<p style="margin-bottom:1rem;">تخطط لرحلة عمرة عائلية في المملكة؟ اختيار السيارة المناسبة هو مفتاح حج مريح. تقدم Saudi Cabs GMC خيارين بـ 7 مقاعد: GMC يوكون وهيونداي ستاريا.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">GMC يوكون — SUV فاخرة</h2>
@@ -389,13 +425,16 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>المقاعد:</strong> 7 ركاب</li>
   <li style="margin-bottom:0.5rem;"><strong>المميزات:</strong> سقف مرتفع، نوافذ بانورامية، أبواب منزلقة (سهلة لكبار السن)</li>
   <li style="margin-bottom:0.5rem;"><strong>الأنسب لـ:</strong> العائلات مع أطفال أو كبار سن، المجموعات بأمتعة ثقيلة</li>
-</ul>`,
+</ul>
+<p style="margin-bottom:1rem;">راجع صفحتي <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a> و<a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> للتفاصيل، وتواصل معنا عبر واتساب لتأكيد التوفر.</p>`,
     },
     date: '2026-05-02',
     image: '/fleet/gmc-yukon-interior-rear-seats-saudi-cabs-gmc.webp',
   },
   {
     slug: 'hajj-2026-transport-makkah-traffic-tips',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'makkah-transport-guide', label: { en: 'Makkah Transport Guide', ar: 'دليل النقل في مكة' } },
     title: {
       en: 'Hajj 2026 Transport: 3 Things No One Tells You About Makkah Traffic',
       ar: 'نقل الحج 2026: 3 أشياء لا يخبرك بها أحد عن زحمة مكة',
@@ -405,14 +444,16 @@ export const blogPosts: BlogPost[] = [
       ar: 'هل تخطط لرحلة الحج 2026؟ تجنب هذه الأخطاء الثلاثة الشائعة في النقل التي قد تكلفك ساعات في الزحام.',
     },
     content: {
-      en: '<p style="margin-bottom: 1rem;">Hajj is the journey of a lifetime, but the logistics can be overwhelming. As we look toward Hajj 2026, traffic management in Makkah is becoming more complex. Here are 3 things no one tells you about navigating the Holy City during peak season.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. The "Hidden" Road Closures</h2><p style="margin-bottom: 1rem;">During the peak days of Hajj, many roads around the Haram area are restricted to authorized vehicles only. A normal taxi might get blocked, but professional services like Saudi Cabs GMC have specialized knowledge of back-routes and authorized drop-off points.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. Timing is Everything</h2><p style="margin-bottom: 1rem;">Traveling between 10:00 AM and 4:00 PM is often a recipe for gridlock. The most successful pilgrims schedule their intercity transfers (Makkah to Madinah or Riyadh to Makkah) during late-night or very early morning hours.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. Luggage Logistics</h2><p style="margin-bottom: 1rem;">Standard sedans often struggle with the amount of luggage Hajj pilgrims carry. Booking a GMC Yukon or Hyundai Staria is not just about luxury—it is about ensuring all your belongings (including Zamzam bottles) fit comfortably without extra stress.</p>',
-      ar: '<p style="margin-bottom: 1rem;">الحج هو رحلة العمر، لكن الخدمات اللوجستية قد تكون مرهقة. بينما نتطلع إلى حج 2026، تصبح إدارة المرور في مكة أكثر تعقيداً. إليك 3 أشياء لا يخبرك بها أحد عن التنقل في المدينة المقدسة خلال موسم الذروة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. إغلاق الطرق "المخفية"</h2><p style="margin-bottom: 1rem;">خلال أيام الذروة في الحج، تقتصر العديد من الطرق حول منطقة الحرم على المركبات المصرح لها فقط. قد يتم حظر التاكسي العادي، لكن الخدمات الاحترافية مثل Saudi Cabs GMC لديها معرفة متخصصة بالطرق الخلفية ونقاط الإنزال المصرح بها.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. التوقيت هو كل شيء</h2><p style="margin-bottom: 1rem;">غالباً ما يكون السفر بين الساعة 10:00 صباحاً و4:00 مساءً سبباً في الازدحام المروري. يحدد الحجاج الأكثر نجاحاً انتقالاتهم بين المدن (من مكة إلى المدينة أو من الرياض إلى مكة) خلال ساعات الليل المتأخرة أو الصباح الباكر جداً.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. لوجستيات الأمتعة</h2><p style="margin-bottom: 1rem;">غالباً ما تواجه سيارات السيدان العادية صعوبة في كمية الأمتعة التي يحملها الحجاج. إن حجز GMC Yukon أو Hyundai Staria ليس مجرد رفاهية - بل يتعلق بضمان ملاءمة جميع متعلقاتك (بما في ذلك عبوات زمزم) بشكل مريح دون ضغوط إضافية.</p>',
+      en: '<p style="margin-bottom: 1rem;">Hajj is the journey of a lifetime, but the logistics can be overwhelming. As we look toward Hajj 2026, traffic management in Makkah is becoming more complex. Here are 3 things no one tells you about navigating the Holy City during peak season.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. The "Hidden" Road Closures</h2><p style="margin-bottom: 1rem;">During the peak days of Hajj, many roads around the Haram area are restricted to authorized vehicles only. A normal taxi might get blocked, but experienced local drivers, like those at Saudi Cabs GMC, are familiar with alternative routes and common drop-off points near the restricted zones.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. Timing is Everything</h2><p style="margin-bottom: 1rem;">Traveling between 10:00 AM and 4:00 PM is often a recipe for gridlock. The most successful pilgrims schedule their intercity transfers (Makkah to Madinah or Riyadh to Makkah) during late-night or very early morning hours.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. Luggage Logistics</h2><p style="margin-bottom: 1rem;">Standard sedans often struggle with the amount of luggage Hajj pilgrims carry. Booking a GMC Yukon or Hyundai Staria is not just about luxury—it is about ensuring all your belongings (including Zamzam bottles) fit comfortably without extra stress.</p><p style="margin-bottom: 1rem;">See our <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">Makkah Transport Guide</a> for more on getting around during Hajj, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to plan your transfers.</p>',
+      ar: '<p style="margin-bottom: 1rem;">الحج هو رحلة العمر، لكن الخدمات اللوجستية قد تكون مرهقة. بينما نتطلع إلى حج 2026، تصبح إدارة المرور في مكة أكثر تعقيداً. إليك 3 أشياء لا يخبرك بها أحد عن التنقل في المدينة المقدسة خلال موسم الذروة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. إغلاق الطرق "المخفية"</h2><p style="margin-bottom: 1rem;">خلال أيام الذروة في الحج، تقتصر العديد من الطرق حول منطقة الحرم على المركبات المصرح لها فقط. قد يتم حظر التاكسي العادي، لكن السائقين المحليين ذوي الخبرة، مثل سائقي Saudi Cabs GMC، على دراية بالطرق البديلة ونقاط الإنزال الشائعة القريبة من المناطق المقيّدة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. التوقيت هو كل شيء</h2><p style="margin-bottom: 1rem;">غالباً ما يكون السفر بين الساعة 10:00 صباحاً و4:00 مساءً سبباً في الازدحام المروري. يحدد الحجاج الأكثر نجاحاً انتقالاتهم بين المدن (من مكة إلى المدينة أو من الرياض إلى مكة) خلال ساعات الليل المتأخرة أو الصباح الباكر جداً.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. لوجستيات الأمتعة</h2><p style="margin-bottom: 1rem;">غالباً ما تواجه سيارات السيدان العادية صعوبة في كمية الأمتعة التي يحملها الحجاج. إن حجز GMC Yukon أو Hyundai Staria ليس مجرد رفاهية - بل يتعلق بضمان ملاءمة جميع متعلقاتك (بما في ذلك عبوات زمزم) بشكل مريح دون ضغوط إضافية.</p><p style="margin-bottom: 1rem;">راجع <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">دليل النقل في مكة</a> لمزيد حول التنقل خلال الحج، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب للتخطيط لرحلاتك.</p>',
     },
     date: '2026-05-03',
     image: '/location/makkah.webp',
   },
   {
     slug: 'taxi-madinah-to-makkah-what-to-expect',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'madinah-to-makkah', label: { en: 'Madinah to Makkah', ar: 'المدينة المنورة إلى مكة المكرمة' } },
     title: {
       en: 'Taxi from Madinah to Makkah: What to Expect on the Journey',
       ar: 'التاكسي من المدينة المنورة إلى مكة المكرمة: ماذا تتوقع في الرحلة',
@@ -455,7 +496,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Consider a night departure if you want to arrive in Makkah for Fajr</li>
 </ul>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Madinah to Makkah route daily with fixed prices, a Miqat stop built into the journey, and a full range of vehicles from sedan to VIP SUV. Message us on WhatsApp to book your transfer.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Madinah to Makkah route daily with fixed prices, a Miqat stop built into the journey, and a full range of vehicles from sedan to VIP SUV. See our <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah to Makkah route page</a> for current fares, or message us on WhatsApp to book your transfer.</p>`,
       ar: `<p style="margin-bottom:1rem;">السفر من المدينة المنورة إلى مكة المكرمة من أكثر الرحلات شيوعاً للحجاج والمعتمرين والمسافرين في المملكة العربية السعودية. سواء كنت متجهاً لأداء العمرة بعد زيارة المسجد النبوي، أو تنتقل ببساطة بين الحرمين، إليك بالضبط ما يجب توقعه من رحلة تاكسي خاص.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">نظرة عامة على الطريق</h2>
@@ -489,13 +530,15 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">فكر في الانطلاق ليلاً إذا أردت الوصول إلى مكة في وقت صلاة الفجر</li>
 </ul>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط المدينة المنورة - مكة المكرمة يومياً بأسعار ثابتة، مع توقف عند الميقات ضمن الرحلة، ومجموعة كاملة من السيارات من السيدان إلى الـ SUV الفاخرة. راسلنا عبر واتساب لحجز رحلتك.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط المدينة المنورة - مكة المكرمة يومياً بأسعار ثابتة، مع توقف عند الميقات ضمن الرحلة، ومجموعة كاملة من السيارات من السيدان إلى الـ SUV الفاخرة. راجع صفحة <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">خط المدينة المنورة - مكة المكرمة</a> للأسعار الحالية، أو راسلنا عبر واتساب لحجز رحلتك.</p>`,
     },
     date: '2026-08-22',
     image: '/location/madinah.webp',
   },
   {
     slug: 'how-much-does-a-taxi-cost-in-saudi-arabia',
+    category: 'Taxi Prices',
+    relatedRoute: { slug: 'taxi-prices-saudi-arabia', label: { en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' } },
     title: {
       en: 'How Much Does a Taxi Cost in Saudi Arabia? 2026 Price Guide',
       ar: 'كم تكلفة التاكسي في السعودية؟ دليل الأسعار 2026',
@@ -536,7 +579,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Get an Exact Price</h2>
-<p style="margin-bottom:1rem;">Prices are updated from time to time, so the most reliable way to get today's exact rate for your route is to message Saudi Cabs GMC on WhatsApp with your pickup, destination, and preferred vehicle. You'll get a confirmed price back in minutes — no obligation, no meter, no hidden fees.</p>`,
+<p style="margin-bottom:1rem;">Prices are updated from time to time, so the most reliable way to get today's exact rate for your route is to message Saudi Cabs GMC on WhatsApp with your pickup, destination, and preferred vehicle. You'll get a confirmed price back in minutes — no obligation, no meter, no hidden fees. See our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices Guide</a> for a full route-by-route breakdown.</p>`,
       ar: `<p style="margin-bottom:1rem;">"كم ستكون التكلفة؟" هو أول سؤال يطرحه تقريباً كل مسافر قبل حجز تاكسي في السعودية. مع Saudi Cabs GMC لا يوجد عداد ولا مفاجآت — يتم الاتفاق على السعر قبل بدء الرحلة. إليك بالضبط ما يحدد ذلك السعر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. نوع السيارة هو العامل الأكبر</h2>
@@ -568,13 +611,15 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحصل على السعر الدقيق</h2>
-<p style="margin-bottom:1rem;">الأسعار تُحدَّث من وقت لآخر، لذا أفضل طريقة للحصول على السعر الدقيق الحالي لرحلتك هي مراسلة Saudi Cabs GMC عبر واتساب مع تحديد نقطة الانطلاق والوجهة والسيارة المفضلة. ستحصل على سعر مؤكد خلال دقائق — بدون التزام، بدون عداد، وبدون رسوم خفية.</p>`,
+<p style="margin-bottom:1rem;">الأسعار تُحدَّث من وقت لآخر، لذا أفضل طريقة للحصول على السعر الدقيق الحالي لرحلتك هي مراسلة Saudi Cabs GMC عبر واتساب مع تحديد نقطة الانطلاق والوجهة والسيارة المفضلة. ستحصل على سعر مؤكد خلال دقائق — بدون التزام، بدون عداد، وبدون رسوم خفية. راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي</a> لتفاصيل الأسعار حسب كل خط.</p>`,
     },
     date: '2026-08-22',
     image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
   },
   {
     slug: 'best-time-travel-makkah-madinah-private-car',
+    category: 'Travel Tips',
+    relatedRoute: { slug: 'makkah-to-madinah', label: { en: 'Makkah to Madinah', ar: 'مكة المكرمة إلى المدينة المنورة' } },
     title: {
       en: 'Best Time to Travel Makkah to Madinah by Private Car',
       ar: 'أفضل وقت للسفر من مكة إلى المدينة بسيارة خاصة',
@@ -610,7 +655,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Our Recommendation</h2>
 <p style="margin-bottom:1rem;">If your schedule is flexible, a night departure outside Ramadan and Hajj season is the most comfortable combination — cooler weather, quieter highway, and a rested arrival. If you're traveling during a peak period, simply book a few days ahead and build in extra time for busier roads near the cities.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Makkah–Madinah route at any hour, any day, with a fixed price agreed before you travel. Message us on WhatsApp to lock in your preferred departure time.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Makkah–Madinah route at any hour, any day, with a fixed price agreed before you travel. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares, or message us on WhatsApp to lock in your preferred departure time.</p>`,
       ar: `<p style="margin-bottom:1rem;">رحلة الـ430 كم بين مكة المكرمة والمدينة المنورة تستغرق تقريباً نفس الـ4 إلى 4.5 ساعة بغض النظر عن وقت الانطلاق — لكن وقت الانطلاق لا يزال يُحدث فرقاً حقيقياً في راحة الرحلة. إليك كيف تختار التوقيت المناسب.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">وقت اليوم: ليلاً أم نهاراً</h2>
@@ -637,13 +682,15 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">توصيتنا</h2>
 <p style="margin-bottom:1rem;">إذا كان جدولك مرناً، فالانطلاق ليلاً خارج رمضان وموسم الحج هو الخيار الأكثر راحة — طقس أبرد وطريق أهدأ ووصول بعد راحة كافية. إذا كنت تسافر خلال فترة ذروة، فقط احجز قبل أيام وخصص وقتاً إضافياً للطرق الأكثر ازدحاماً قرب المدينتين.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط مكة - المدينة في أي ساعة وأي يوم، بسعر ثابت متفق عليه قبل السفر. راسلنا عبر واتساب لتحديد وقت انطلاقك المفضل.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط مكة - المدينة في أي ساعة وأي يوم، بسعر ثابت متفق عليه قبل السفر. راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية، أو راسلنا عبر واتساب لتحديد وقت انطلاقك المفضل.</p>`,
     },
     date: '2026-08-22',
-    image: '/location/makkah.webp',
+    image: '/location/madinah.webp',
   },
   {
     slug: 'umrah-checklist-transport-hotels-packing',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'umrah-travel-guide', label: { en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' } },
     title: {
       en: 'Umrah Checklist: Transport, Hotels & What to Pack',
       ar: 'قائمة تحقق العمرة: النقل والفنادق وماذا تحزم',
@@ -688,7 +735,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Putting It Together</h2>
 <p style="margin-bottom:1rem;">Sort your transport and hotel bookings first, since your Ihram timing and packing depend on your route (flying into Jeddah vs Madinah changes your Miqat point). Once those are set, packing is straightforward — pack light, keep Ihram accessible, and leave room in your bag for the trip home.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. Message us on WhatsApp with your flight details to arrange your Umrah transport in advance.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for route and transport details, or message us on WhatsApp with your flight details to arrange your Umrah transport in advance.</p>`,
       ar: `<p style="margin-bottom:1rem;">التخطيط للعمرة يتضمن الكثير من التفاصيل، لكن معظمها يقع تحت ثلاثة محاور: التنقل، والإقامة، وما تحزمه. إليك قائمة تحقق عملية لكل محور.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قائمة التنقل</h2>
@@ -724,13 +771,15 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">تجميع كل شيء معاً</h2>
 <p style="margin-bottom:1rem;">رتّب حجوزات النقل والفنادق أولاً، لأن توقيت إحرامك وحزمك يعتمدان على مسارك (السفر عبر جدة مقابل المدينة يغيّر نقطة ميقاتك). بعد ترتيب ذلك، يصبح الحزم بسيطاً — احزم بخفة، أبقِ الإحرام في متناول يدك، واترك مساحة في حقيبتك لرحلة العودة.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راسلنا عبر واتساب مع تفاصيل رحلتك لترتيب نقل عمرتك مسبقاً.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> لتفاصيل الخطوط والنقل، أو راسلنا عبر واتساب مع تفاصيل رحلتك لترتيب نقل عمرتك مسبقاً.</p>`,
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',
   },
   {
     slug: '10-things-to-know-first-umrah-trip',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'umrah-travel-guide', label: { en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' } },
     title: {
       en: '10 Things to Know Before Your First Umrah Trip',
       ar: '10 أشياء يجب معرفتها قبل أول رحلة عمرة',
@@ -772,7 +821,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">10. Book Transport Before You Need It, Not When You Need It</h2>
 <p style="margin-bottom:1rem;">Airport pickups, intercity transfers, and Ziyarat tours all get harder to book last-minute during Ramadan and Hajj season. Arranging your rides in advance — even just a WhatsApp message with your flight number and dates — saves stress once you've landed.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. Message us on WhatsApp to arrange your first Umrah trip in advance.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for route and transport details, or message us on WhatsApp to arrange your first Umrah trip in advance.</p>`,
       ar: `<p style="margin-bottom:1rem;">أول رحلة عمرة تختلف عن أي رحلة أخرى — جزء منها روحاني وجزء لوجستي. إليك 10 أمور عملية تفاجئ معظم معتمري أول مرة.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. إحرامك يبدأ قبل الهبوط</h2>
@@ -805,13 +854,15 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">10. احجز النقل قبل أن تحتاجه، لا عندما تحتاجه</h2>
 <p style="margin-bottom:1rem;">استقبال المطار وتوصيلات ما بين المدن وجولات الزيارات كلها يصعب حجزها في اللحظة الأخيرة خلال رمضان وموسم الحج. ترتيب مواصلاتك مسبقاً — ولو برسالة واتساب برقم رحلتك وتواريخك — يوفر عليك التوتر بعد الوصول.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راسلنا عبر واتساب لترتيب أول رحلة عمرة لك مسبقاً.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> لتفاصيل الخطوط والنقل، أو راسلنا عبر واتساب لترتيب أول رحلة عمرة لك مسبقاً.</p>`,
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',
   },
   {
     slug: 'saudi-arabia-non-muslims-travel-transport-guide',
+    category: 'Travel Tips',
+    relatedRoute: { slug: 'jeddah-taxi-service', label: { en: 'Jeddah Taxi Service', ar: 'خدمة تاكسي جدة' } },
     title: {
       en: 'Saudi Arabia for Non-Muslims: A Travel Transport Guide',
       ar: 'السعودية لغير المسلمين: دليل النقل والسفر',
@@ -847,7 +898,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Getting Around With Saudi Cabs GMC</h2>
 <p style="margin-bottom:1rem;">We provide airport transfers, private driver hire, and intercity routes across Jeddah, Taif, and beyond, with fixed prices agreed before you travel. If your itinerary includes Makkah or Madinah, we can take you to Jeddah or the outer boundary, but entry to the restricted zones themselves isn't possible for non-Muslim travelers, per Saudi regulations.</p>
 
-<p style="margin-bottom:1rem;">Message us on WhatsApp with your itinerary and we'll help you plan transport for the parts of Saudi Arabia that are open to you.</p>`,
+<p style="margin-bottom:1rem;">See our <a href="/jeddah-taxi-service" style="color:#0B3D2E;font-weight:700;">Jeddah Taxi Service page</a> for routes and fares, or message us on WhatsApp with your itinerary and we'll help you plan transport for the parts of Saudi Arabia that are open to you.</p>`,
       ar: `<p style="margin-bottom:1rem;">انفتحت السعودية بشكل كبير على الزوار الدوليين في السنوات الأخيرة، مع توفر تأشيرة إلكترونية للمسافرين من دول عديدة لأغراض السياحة والأعمال وزيارة العائلة. إذا كنت تخطط لرحلة كمسافر غير مسلم، إليك دليلاً واضحاً لما يجب توقعه في التنقل.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">القاعدة الوحيدة التي يجب أن يعرفها كل زائر</h2>
@@ -872,7 +923,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التنقل مع Saudi Cabs GMC</h2>
-<p style="margin-bottom:1rem;">نوفر توصيل المطار وتأجير سائق خاص ورحلات بين المدن عبر جدة والطائف وما وراءهما، بأسعار ثابتة متفق عليها قبل السفر. إذا تضمّن برنامجك مكة أو المدينة، يمكننا إيصالك إلى جدة أو الحدود الخارجية، لكن الدخول إلى المناطق المقصورة نفسها غير ممكن للمسافرين غير المسلمين، وفقاً للأنظمة السعودية.</p>
+<p style="margin-bottom:1rem;">نوفر توصيل المطار وتأجير سائق خاص ورحلات بين المدن عبر جدة والطائف وما وراءهما، بأسعار ثابتة متفق عليها قبل السفر. إذا تضمّن برنامجك مكة أو المدينة، يمكننا إيصالك إلى جدة أو الحدود الخارجية، لكن الدخول إلى المناطق المقصورة نفسها غير ممكن للمسافرين غير المسلمين، وفقاً للأنظمة السعودية. راجع صفحة <a href="/jeddah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي جدة</a> للخطوط والأسعار.</p>
 
 <p style="margin-bottom:1rem;">راسلنا عبر واتساب ببرنامج رحلتك وسنساعدك على التخطيط للنقل في الأجزاء المفتوحة لك من السعودية.</p>`,
     },
@@ -881,6 +932,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-to-book-hajj-transport-in-advance',
+    category: 'Hajj & Umrah',
+    relatedRoute: { slug: 'hajj-transport-faq', label: { en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' } },
     title: {
       en: 'How to Book Hajj Transport in Advance',
       ar: 'كيف تحجز نقل الحج مسبقاً',
@@ -918,7 +971,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Booking for a Group</h2>
 <p style="margin-bottom:1rem;">If you're coordinating transport for a family or group, it helps to have one point of contact manage the WhatsApp conversation rather than multiple people booking separately — it keeps vehicle assignments, pickup times, and headcounts consistent and avoids duplicate or conflicting bookings.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles Hajj transport across Jeddah Airport, Makkah, Madinah, and the holy sites with fixed prices agreed in advance. Message us on WhatsApp as soon as your dates are confirmed to start planning.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles Hajj transport across Jeddah Airport, Makkah, Madinah, and the holy sites with fixed prices agreed in advance. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail, or message us on WhatsApp as soon as your dates are confirmed to start planning.</p>`,
       ar: `<p style="margin-bottom:1rem;">نقل الحج ليس أمراً يُترك للحظة الأخيرة. السيارات والسائقون والمواعيد تمتلئ بسرعة خلال الموسم، وتقويم مناسك الحج نفسه ثابت — تنقلات منى وعرفات ومزدلفة تحدث جميعها في أيام محددة. إليك جدولاً واقعياً للتخطيط لنقلك مسبقاً.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قبل أشهر: ثبّت تواريخك</h2>
@@ -947,7 +1000,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الحجز لمجموعة</h2>
 <p style="margin-bottom:1rem;">إذا كنت تنسّق النقل لعائلة أو مجموعة، من الأفضل أن يتولى شخص واحد إدارة محادثة الواتساب بدلاً من حجز عدة أشخاص بشكل منفصل — هذا يحافظ على اتساق تخصيص السيارات ومواعيد الاستلام والأعداد، ويتجنب الحجوزات المكررة أو المتعارضة.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى نقل الحج عبر مطار جدة ومكة والمدينة والمشاعر المقدسة بأسعار ثابتة متفق عليها مسبقاً. راسلنا عبر واتساب فور تأكيد تواريخك للبدء في التخطيط.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى نقل الحج عبر مطار جدة ومكة والمدينة والمشاعر المقدسة بأسعار ثابتة متفق عليها مسبقاً. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل، أو راسلنا عبر واتساب فور تأكيد تواريخك للبدء في التخطيط.</p>`,
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',
