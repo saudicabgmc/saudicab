@@ -96,7 +96,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: 'center', color: 'white' }}>
             <Link
-              href={`/${cityKey}`}
+              href={`/${cityKey}-taxi-service`}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '6px',
                 color: 'rgba(255,255,255,0.7)', fontSize: '0.82rem',

@@ -28,12 +28,12 @@ export default function UmrahTravelGuide() {
         tag="Umrah Travel Guide 2026"
         title="Umrah Travel Guide — Transport Between Makkah, Madinah & Jeddah"
         subtitle="A complete transport guide for Umrah pilgrims — from airport arrival to intercity transfers and Ziyarat tours in the Holy Cities."
-        quickAnswer="For Umrah pilgrims, Saudi Cabs GMC provides private cab transfers 24/7: Jeddah Airport to Makkah (~55 min), Makkah to Madinah (~4.5 hrs), and all intercity routes. Fixed price, door-to-door, name-board airport pickup. Book via WhatsApp: +92 309 7811785."
+        quickAnswer="For Umrah pilgrims, Saudi Cabs GMC provides private cab transfers 24/7: Jeddah Airport to Makkah (~55 min), Makkah to Madinah (~4.5 hrs), and selected intercity routes. Fixed price, door-to-door, name-board airport pickup. Book via WhatsApp: +92 309 7811785."
         ctaSubtext="Fixed price confirmed before booking. Professional driver. Door-to-door service, 24/7 subject to availability."
         keyFacts={[
           { icon: '🕋', label: 'Makkah → Madinah', value: '~430 km / ~4.5 hrs' },
           { icon: '✈️', label: 'Jeddah KAIA → Makkah', value: '~90 km / ~55 min' },
-          { icon: '🕌', label: 'Madinah Airport', value: '~15–25 km to Mosque' },
+          { icon: '🕌', label: "Madinah Airport → Prophet's Mosque", value: 'approximately 15–25 km' },
           { icon: '👨‍👩‍👧', label: 'Max Passengers', value: '7 (Staria/Yukon)' },
           { icon: '💰', label: 'Pricing', value: 'Fixed — Per Vehicle' },
           { icon: '⏰', label: 'Available', value: '24/7 incl. Ramadan' },
@@ -62,7 +62,7 @@ export default function UmrahTravelGuide() {
           {[
             { step: '1', icon: '✈️', title: 'Arrive at Jeddah Airport (KAIA)', desc: 'Your assigned driver can meet you at the designated arrivals meeting point with a name board, according to your booking arrangements. ~55 min to Makkah.' },
             { step: '2', icon: '🕋', title: 'Stay in Makkah', desc: 'Perform Tawaf, Sa\'i, and other Umrah rituals at Masjid al-Haram.' },
-            { step: '3', icon: '🚗', title: 'Transfer to Madinah', desc: 'Private cab from your Makkah hotel to Madinah hotel. ~4.5 hours, door-to-door.' },
+            { step: '3', icon: '🚗', title: 'Transfer to Madinah', desc: 'Private cab from your Makkah hotel or pickup point to your Madinah hotel or designated drop-off point. ~4.5 hours, door-to-door.' },
             { step: '4', icon: '🕌', title: 'Visit Prophet\'s Mosque', desc: 'Stay in Madinah for Ziyarat of Masjid an-Nabawi and historical sites.' },
             { step: '5', icon: '✈️', title: 'Return via Jeddah Airport', desc: 'Private cab from Madinah or Makkah hotel to Jeddah Airport for departure.' },
           ].map(s => (
