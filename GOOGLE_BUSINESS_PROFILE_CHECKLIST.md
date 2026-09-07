@@ -63,9 +63,9 @@ Use this (already consistent with the site's own copy, no invented claims):
 
 Already on the site, reuse them directly:
 - `public/logo-saudi-cabs-gmc.webp` — profile/logo photo
-- `public/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp`
-- `public/fleet/hyundai-staria-placeholder-saudi-cabs-gmc.webp`
-- `public/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp`
+- `public/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp` — confirmed a real, genuine photo of your actual GMC Yukon (safe to use)
+
+**Hold off on the Camry and Staria fleet photos.** A later audit (Day 27 of the plan) found `toyota-camry-exterior-front-saudi-cabs-gmc.webp` actually shows a different vehicle (a van, not a Camry), and `hyundai-staria-placeholder-saudi-cabs-gmc.webp` is a generic stock photo (its filename literally says "placeholder") — neither is a real photo of your fleet, so don't upload either to a public listing. This is still open and waiting on your input (see the two questions asked earlier about the fleet photos).
 
 Do **not** upload stock photos of people or vehicles you don't actually operate — Google can suspend listings for misleading photos, and it would contradict the "no fabricated claims" standard the rest of the site now follows.
 
