@@ -72,6 +72,7 @@ export default function MadinahLocationPage({
 
   return (
     <main>
+      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       {/* ── Hero — Serene/Luminous with Soft Overlay ── */}
       <section style={{
         minHeight: '100vh',

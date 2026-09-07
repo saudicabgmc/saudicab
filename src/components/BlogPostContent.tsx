@@ -26,6 +26,7 @@ export default function BlogPostContent({ post, related }: Props) {
 
   return (
     <main style={{ backgroundColor: 'var(--background)', minHeight: '80vh' }}>
+      <link rel="preload" as="image" href={post.image} fetchPriority="high" />
 
       {/* ── Hero ── */}
       <section style={{

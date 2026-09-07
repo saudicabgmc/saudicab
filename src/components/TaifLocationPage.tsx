@@ -72,6 +72,7 @@ export default function TaifLocationPage({
 
   return (
     <main>
+      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       {/* ── Hero — Mountain/Nature/Rose Theme ── */}
       <section style={{
         position: 'relative',

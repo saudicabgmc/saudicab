@@ -76,6 +76,7 @@ export default function JeddahLocationPage({
 
   return (
     <main>
+      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       {/* ── Hero — Bold Modern/Coastal ── */}
       <section style={{
         minHeight: '85vh',

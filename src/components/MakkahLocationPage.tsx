@@ -81,6 +81,7 @@ export default function MakkahLocationPage({
 
   return (
     <main>
+      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       {/* ── Hero — Sacred/Imperial Centered ── */}
       <section style={{
         minHeight: '100vh',

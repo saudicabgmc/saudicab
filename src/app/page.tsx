@@ -52,6 +52,7 @@ export default function Home() {
 
   return (
     <main>
+      <link rel="preload" as="image" href="/hero/hero-fallback-saudi-cabs-gmc.webp" fetchPriority="high" />
 
       {/* ──────────────────────────────────────────────────────────
           STICKY BOOKING CTA BAR (mobile & desktop)
