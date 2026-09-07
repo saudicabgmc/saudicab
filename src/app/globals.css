@@ -1,7 +1,7 @@
 :root {
-  --primary: #D4AF37;
-  --primary-hover: #C9A227;
-  --primary-light: rgba(212, 175, 55, 0.12);
+  --primary: #AA8318;
+  --primary-hover: #8F6D14;
+  --primary-light: rgba(170, 131, 24, 0.12);
   --secondary: #0B3D2E;
   --brand-green: #0F5132;
   --brand-accent: #198754;
@@ -9,7 +9,7 @@
   --foreground: #1D1D1B;
   --muted: #F5F5F5;
   --muted-foreground: #6A6A6A;
-  --accent: rgba(212, 175, 55, 0.08);
+  --accent: rgba(170, 131, 24, 0.08);
   --border: #E0E0E0;
   --radius: 12px;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);

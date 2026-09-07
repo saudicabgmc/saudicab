@@ -10,7 +10,7 @@ const CITIES = [
     id: 'riyadh',
     name: { en: 'Riyadh', ar: 'الرياض' },
     x: 62, y: 52,
-    color: '#D4AF37',
+    color: 'var(--primary)',
     slug: null,
   },
   {
