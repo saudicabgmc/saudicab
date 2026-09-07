@@ -152,10 +152,14 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
         <div className="container">
 
           {/* Filter tabs */}
-          <div style={{
-            display: 'flex', gap: '10px', flexWrap: 'wrap',
-            justifyContent: 'center', marginBottom: '44px',
-          }}>
+          <div
+            role="group"
+            aria-label={isAr ? 'تصفية حسب نوع الرحلة' : 'Filter by route type'}
+            style={{
+              display: 'flex', gap: '10px', flexWrap: 'wrap',
+              justifyContent: 'center', marginBottom: '44px',
+            }}
+          >
             {(['all', ...ALL_TYPES] as (RouteType | 'all')[]).map(type => {
               const isActive = activeType === type
               const label = type === 'all'
@@ -165,6 +169,7 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
                 <button
                   key={type}
                   onClick={() => setActiveType(type)}
+                  aria-pressed={isActive}
                   style={{
                     padding: '8px 18px', borderRadius: '50px',
                     border: isActive ? '2px solid var(--primary)' : '2px solid var(--border)',

@@ -317,11 +317,12 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           {isAr ? 'اختر السيارة' : 'Choose Vehicle'}
           <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '7px' }}>
+        <div role="group" aria-label={isAr ? 'اختر السيارة' : 'Choose Vehicle'} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '7px' }}>
           {VEHICLES.map(v => (
             <button
               key={v.key}
               type="button"
+              aria-pressed={vehicle === v.key}
               onClick={() => { setVehicle(v.key); if (errors.vehicle) setErrors(p => { const n = { ...p }; delete n.vehicle; return n }) }}
               style={{
                 padding: '8px 5px 10px',
@@ -389,12 +390,13 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
       {/* Flight Number (Only for airport transfers) */}
       {isAirportTransfer && (
         <div className="form-group animate-fadeInUp">
-          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <label htmlFor="booking-flight-number" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Navigation size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'رقم الرحلة الجوية' : 'Flight Number'}
             <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
           </label>
           <input
+            id="booking-flight-number"
             type="text"
             className="form-input"
             placeholder={isAr ? 'مثال: SV123 (مهم للاستقبال في المطار)' : 'e.g. SV123 (required for airport pickup)'}
@@ -409,7 +411,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
       {/* Date + Time */}
       <div className="form-grid-2">
         <div className="form-group">
-          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <label htmlFor="booking-date" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Calendar size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'التاريخ' : 'Date'}
             <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
@@ -417,6 +419,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           <div className="input-icon-wrap">
             <Calendar size={14} className="input-icon" strokeWidth={2} />
             <input
+              id="booking-date"
               type="date"
               className="form-input"
               value={form.date}
@@ -428,7 +431,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           {errors.date && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.date}</p>}
         </div>
         <div className="form-group">
-          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <label htmlFor="booking-time" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Clock size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'الوقت' : 'Time'}
             <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
@@ -436,6 +439,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           <div className="input-icon-wrap">
             <Clock size={14} className="input-icon" strokeWidth={2} />
             <input
+              id="booking-time"
               type="time"
               className="form-input"
               value={form.time}
@@ -459,6 +463,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
             onChange={v => set('passengers', v)}
             options={PASSENGERS}
             placeholder="1"
+            ariaLabel={isAr ? 'الركاب' : 'Passengers'}
           />
         </div>
         <div className="form-group">
@@ -471,6 +476,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
             onChange={v => set('luggage', v)}
             options={luggageList}
             placeholder={isAr ? 'اختر عدد الحقائب' : 'Bags count'}
+            ariaLabel={isAr ? 'الأمتعة / الحقائب' : 'Luggage / Bags'}
           />
         </div>
       </div>
@@ -478,19 +484,20 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
       {/* Name + Phone */}
       <div className="form-grid-2">
         <div className="form-group">
-          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <label htmlFor="booking-name" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <User size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'الاسم' : 'Name'}
           </label>
-          <input type="text" className="form-input" placeholder={isAr ? 'اسمك (اختياري)' : 'Your name (optional)'} value={form.name} onChange={e => set('name', e.target.value)} />
+          <input id="booking-name" type="text" className="form-input" placeholder={isAr ? 'اسمك (اختياري)' : 'Your name (optional)'} value={form.name} onChange={e => set('name', e.target.value)} />
         </div>
         <div className="form-group">
-          <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <label htmlFor="booking-phone" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Phone size={13} color="var(--primary)" strokeWidth={2.5} />
             {isAr ? 'رقم الهاتف' : 'Phone'}
             <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
           </label>
           <input
+            id="booking-phone"
             type="tel"
             className="form-input"
             placeholder={isAr ? 'رقم هاتفك' : 'Your phone'}
@@ -505,11 +512,12 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
 
       {/* Special Requests */}
       <div className="form-group">
-        <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <label htmlFor="booking-special-requests" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <HelpCircle size={13} color="var(--primary)" strokeWidth={2.5} />
           {isAr ? 'طلبات خاصة' : 'Special Requests'}
         </label>
         <textarea
+          id="booking-special-requests"
           className="form-input"
           placeholder={isAr ? 'أي متطلبات إضافية (مثال: مقعد أطفال، التوقف عند السوبر ماركت، إلخ)...' : 'Any special requirements (e.g. baby seat, brief stop, etc)...'}
           value={form.specialRequests}

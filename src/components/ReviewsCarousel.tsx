@@ -108,7 +108,11 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
 
       {/* Arrows — inline-start/end so they mirror correctly in RTL (Arabic) */}
       {['prev','next'].map(dir => (
-        <button key={dir} onClick={dir === 'prev' ? prev : next} aria-label={dir}
+        <button key={dir} onClick={dir === 'prev' ? prev : next} aria-label={
+          dir === 'prev'
+            ? (isAr ? 'التقييم السابق' : 'Previous review')
+            : (isAr ? 'التقييم التالي' : 'Next review')
+        }
           style={{
             position: 'absolute', top: '50%',
             [dir === 'prev' ? 'insetInlineStart' : 'insetInlineEnd']: 0,
@@ -125,7 +129,7 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
       {/* Dots */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '22px' }}>
         {reviews.map((_, i) => (
-          <button key={i} onClick={() => setCurrent(i)} aria-label={`slide ${i+1}`} style={{
+          <button key={i} onClick={() => setCurrent(i)} aria-label={isAr ? `الانتقال إلى التقييم ${i+1}` : `Go to review ${i+1}`} aria-current={i === current} style={{
             width: i === current ? '28px' : '10px', height: '10px',
             borderRadius: '50px', border: 'none', cursor: 'pointer', padding: 0,
             background: i === current ? 'var(--primary)' : 'var(--border)',

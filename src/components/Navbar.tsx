@@ -70,7 +70,13 @@ export default function Navbar() {
             onMouseEnter={() => setGuidesOpen(true)}
             onMouseLeave={() => setGuidesOpen(false)}
           >
-            <button className={`nav-link ${scrolled ? 'nav-link-dark' : 'nav-link-white'}`} style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+            <button
+              onClick={() => setGuidesOpen(!guidesOpen)}
+              aria-haspopup="true"
+              aria-expanded={guidesOpen}
+              className={`nav-link ${scrolled ? 'nav-link-dark' : 'nav-link-white'}`}
+              style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
               {isAr ? 'الأدلة' : 'Guides'}
               <ChevronDown size={14} style={{ transform: guidesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
             </button>
@@ -164,8 +170,9 @@ export default function Navbar() {
 
             {/* Mobile Guides Expandable */}
             <div style={{ borderBottom: '1px solid var(--border)' }}>
-              <button 
+              <button
                 onClick={() => setGuidesOpen(!guidesOpen)}
+                aria-expanded={guidesOpen}
                 style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', fontWeight: '700', color: 'var(--primary)', background: 'none', border: 'none', fontSize: '0.95rem' }}
               >
                 {isAr ? 'أدلة السفر' : 'Travel Guides'}
