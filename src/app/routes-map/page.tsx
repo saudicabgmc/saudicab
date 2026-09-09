@@ -45,47 +45,45 @@ const CITIES = [
 
 // City-pair connections drawn on the SVG map (undirected — one line per pair)
 const MAP_CONNECTIONS = [
-  { from: 'jeddah', to: 'makkah',  label: 'Approx. 50 min', type: 'short' },
-  { from: 'jeddah', to: 'madinah', label: 'Approx. 4 hrs',  type: 'long'  },
-  { from: 'jeddah', to: 'taif',    label: 'Approx. 1.5 hrs', type: 'medium'},
-  { from: 'makkah', to: 'madinah', label: 'Approx. 4.5 hrs', type: 'long'  },
-  { from: 'makkah', to: 'taif',    label: 'Approx. 1.5 hrs', type: 'medium'},
-  { from: 'makkah', to: 'riyadh',  label: 'Approx. 8–9 hrs', type: 'long'  },
-  { from: 'taif',   to: 'madinah', label: 'Approx. 5 hrs',  type: 'long'  },
-  { from: 'riyadh', to: 'madinah', label: 'Approx. 9–10 hrs', type: 'long' },
-  { from: 'riyadh', to: 'jeddah',  label: 'Approx. 9 hrs',  type: 'long'  },
+  { from: 'jeddah', to: 'makkah',  label: { en: 'Approx. 50 min', ar: '~50 دقيقة' }, type: 'short' },
+  { from: 'jeddah', to: 'madinah', label: { en: 'Approx. 4 hrs',  ar: '~4 ساعات' },  type: 'long'  },
+  { from: 'jeddah', to: 'taif',    label: { en: 'Approx. 1.5 hrs', ar: '~1.5 ساعة' }, type: 'medium'},
+  { from: 'makkah', to: 'madinah', label: { en: 'Approx. 4.5 hrs', ar: '~4.5 ساعات' }, type: 'long'  },
+  { from: 'makkah', to: 'taif',    label: { en: 'Approx. 1.5 hrs', ar: '~1.5 ساعة' }, type: 'medium'},
+  { from: 'makkah', to: 'riyadh',  label: { en: 'Approx. 8–9 hrs', ar: '~8–9 ساعات' }, type: 'long'  },
+  { from: 'taif',   to: 'madinah', label: { en: 'Approx. 5 hrs',  ar: '~5 ساعات' },  type: 'long'  },
+  { from: 'riyadh', to: 'madinah', label: { en: 'Approx. 9–10 hrs', ar: '~9–10 ساعات' }, type: 'long' },
+  { from: 'riyadh', to: 'jeddah',  label: { en: 'Approx. 9 hrs',  ar: '~9 ساعات' },  type: 'long'  },
 ]
 
 // Every real, working route page — the source of truth for the grid and the per-city panel.
-// fromId/toId are only used to filter routes into a selected city's panel (not to draw map lines),
-// so a non-mapped endpoint (e.g. Dammam) is safe here without touching the SVG.
 const ROUTE_PAGES = [
   // ── Intercity — 5-city network ──
-  { slug: 'jeddah-to-makkah',   fromId: 'jeddah', toId: 'makkah',  from: 'Jeddah',  to: 'Makkah',  duration: 'Approx. 50 min',   type: 'short',  category: 'intercity' as const },
-  { slug: 'makkah-to-jeddah',   fromId: 'makkah', toId: 'jeddah',  from: 'Makkah',  to: 'Jeddah',  duration: 'Approx. 50 min',   type: 'short',  category: 'intercity' as const },
-  { slug: 'jeddah-to-madinah',  fromId: 'jeddah', toId: 'madinah', from: 'Jeddah',  to: 'Madinah', duration: 'Approx. 4 hrs',    type: 'long',   category: 'intercity' as const },
-  { slug: 'madinah-to-jeddah',  fromId: 'madinah', toId: 'jeddah', from: 'Madinah', to: 'Jeddah',  duration: 'Approx. 4 hrs',    type: 'long',   category: 'intercity' as const },
-  { slug: 'jeddah-to-taif',     fromId: 'jeddah', toId: 'taif',    from: 'Jeddah',  to: 'Taif',    duration: 'Approx. 1.5 hrs',  type: 'medium', category: 'intercity' as const },
-  { slug: 'taif-to-jeddah',     fromId: 'taif', toId: 'jeddah',    from: 'Taif',    to: 'Jeddah',  duration: 'Approx. 1.5 hrs',  type: 'medium', category: 'intercity' as const },
-  { slug: 'makkah-to-madinah',  fromId: 'makkah', toId: 'madinah', from: 'Makkah',  to: 'Madinah', duration: 'Approx. 4.5 hrs',  type: 'long',   category: 'intercity' as const },
-  { slug: 'madinah-to-makkah',  fromId: 'madinah', toId: 'makkah', from: 'Madinah', to: 'Makkah',  duration: 'Approx. 4–4.5 hrs',type: 'long',   category: 'intercity' as const },
-  { slug: 'makkah-to-taif',     fromId: 'makkah', toId: 'taif',    from: 'Makkah',  to: 'Taif',    duration: 'Approx. 1.5 hrs',  type: 'medium', category: 'intercity' as const },
-  { slug: 'taif-to-makkah',     fromId: 'taif', toId: 'makkah',    from: 'Taif',    to: 'Makkah',  duration: 'Approx. 1.5 hrs',  type: 'medium', category: 'intercity' as const },
-  { slug: 'makkah-to-riyadh',   fromId: 'makkah', toId: 'riyadh',  from: 'Makkah',  to: 'Riyadh',  duration: 'Approx. 8–9 hrs',  type: 'long',   category: 'intercity' as const },
-  { slug: 'riyadh-to-makkah',   fromId: 'riyadh', toId: 'makkah',  from: 'Riyadh',  to: 'Makkah',  duration: 'Approx. 8–9 hrs',  type: 'long',   category: 'intercity' as const },
-  { slug: 'taif-to-madinah',    fromId: 'taif', toId: 'madinah',   from: 'Taif',    to: 'Madinah', duration: 'Approx. 5 hrs',    type: 'long',   category: 'intercity' as const },
-  { slug: 'riyadh-to-madinah',  fromId: 'riyadh', toId: 'madinah', from: 'Riyadh',  to: 'Madinah', duration: 'Approx. 9–10 hrs', type: 'long',   category: 'intercity' as const },
-  { slug: 'riyadh-to-jeddah',   fromId: 'riyadh', toId: 'jeddah',  from: 'Riyadh',  to: 'Jeddah',  duration: 'Approx. 9 hrs',    type: 'long',   category: 'intercity' as const },
-  // ── Intercity — beyond the 5-city network (real pages, not tied to the map markers) ──
-  { slug: 'makkah-to-dammam',   fromId: 'makkah', toId: 'dammam',  from: 'Makkah',  to: 'Dammam',  duration: 'Approx. 8–9 hrs',  type: 'long',   category: 'intercity' as const },
-  { slug: 'dammam-to-makkah',   fromId: 'dammam', toId: 'makkah',  from: 'Dammam',  to: 'Makkah',  duration: 'Approx. 8–9 hrs',  type: 'long',   category: 'intercity' as const },
-  { slug: 'dammam-to-madinah',  fromId: 'dammam', toId: 'madinah', from: 'Dammam',  to: 'Madinah', duration: 'Approx. 9–10 hrs', type: 'long',   category: 'intercity' as const },
+  { slug: 'jeddah-to-makkah',   fromId: 'jeddah', toId: 'makkah',  from: { en: 'Jeddah', ar: 'جدة' },  to: { en: 'Makkah', ar: 'مكة المكرمة' },  duration: { en: 'Approx. 50 min', ar: 'حوالي ٥٠ دقيقة' },   type: 'short',  category: 'intercity' as const },
+  { slug: 'makkah-to-jeddah',   fromId: 'makkah', toId: 'jeddah',  from: { en: 'Makkah', ar: 'مكة المكرمة' },  to: { en: 'Jeddah', ar: 'جدة' },  duration: { en: 'Approx. 50 min', ar: 'حوالي ٥٠ دقيقة' },   type: 'short',  category: 'intercity' as const },
+  { slug: 'jeddah-to-madinah',  fromId: 'jeddah', toId: 'madinah', from: { en: 'Jeddah', ar: 'جدة' },  to: { en: 'Madinah', ar: 'المدينة المنورة' }, duration: { en: 'Approx. 4 hrs', ar: 'حوالي ٤ ساعات' },    type: 'long',   category: 'intercity' as const },
+  { slug: 'madinah-to-jeddah',  fromId: 'madinah', toId: 'jeddah', from: { en: 'Madinah', ar: 'المدينة المنورة' }, to: { en: 'Jeddah', ar: 'جدة' },  duration: { en: 'Approx. 4 hrs', ar: 'حوالي ٤ ساعات' },    type: 'long',   category: 'intercity' as const },
+  { slug: 'jeddah-to-taif',     fromId: 'jeddah', toId: 'taif',    from: { en: 'Jeddah', ar: 'جدة' },  to: { en: 'Taif', ar: 'الطائف' },    duration: { en: 'Approx. 1.5 hrs', ar: 'حوالي ١.٥ ساعة' },  type: 'medium', category: 'intercity' as const },
+  { slug: 'taif-to-jeddah',     fromId: 'taif', toId: 'jeddah',    from: { en: 'Taif', ar: 'الطائف' },    to: { en: 'Jeddah', ar: 'جدة' },  duration: { en: 'Approx. 1.5 hrs', ar: 'حوالي ١.٥ ساعة' },  type: 'medium', category: 'intercity' as const },
+  { slug: 'makkah-to-madinah',  fromId: 'makkah', toId: 'madinah', from: { en: 'Makkah', ar: 'مكة المكرمة' },  to: { en: 'Madinah', ar: 'المدينة المنورة' }, duration: { en: 'Approx. 4.5 hrs', ar: 'حوالي ٤.٥ ساعات' },  type: 'long',   category: 'intercity' as const },
+  { slug: 'madinah-to-makkah',  fromId: 'madinah', toId: 'makkah', from: { en: 'Madinah', ar: 'المدينة المنورة' }, to: { en: 'Makkah', ar: 'مكة المكرمة' },  duration: { en: 'Approx. 4–4.5 hrs', ar: 'حوالي ٤–٤.٥ ساعات' }, type: 'long',   category: 'intercity' as const },
+  { slug: 'makkah-to-taif',     fromId: 'makkah', toId: 'taif',    from: { en: 'Makkah', ar: 'مكة المكرمة' },  to: { en: 'Taif', ar: 'الطائف' },    duration: { en: 'Approx. 1.5 hrs', ar: 'حوالي ١.٥ ساعة' },  type: 'medium', category: 'intercity' as const },
+  { slug: 'taif-to-makkah',     fromId: 'taif', toId: 'makkah',    from: { en: 'Taif', ar: 'الطائف' },    to: { en: 'Makkah', ar: 'مكة المكرمة' },  duration: { en: 'Approx. 1.5 hrs', ar: 'حوالي ١.٥ ساعة' },  type: 'medium', category: 'intercity' as const },
+  { slug: 'makkah-to-riyadh',   fromId: 'makkah', toId: 'riyadh',  from: { en: 'Makkah', ar: 'مكة المكرمة' },  to: { en: 'Riyadh', ar: 'الرياض' },  duration: { en: 'Approx. 8–9 hrs', ar: 'حوالي ٨–٩ ساعات' },  type: 'long',   category: 'intercity' as const },
+  { slug: 'riyadh-to-makkah',   fromId: 'riyadh', toId: 'makkah',  from: { en: 'Riyadh', ar: 'الرياض' },  to: { en: 'Makkah', ar: 'مكة المكرمة' },  duration: { en: 'Approx. 8–9 hrs', ar: 'حوالي ٨–٩ ساعات' },  type: 'long',   category: 'intercity' as const },
+  { slug: 'taif-to-madinah',    fromId: 'taif', toId: 'madinah',   from: { en: 'Taif', ar: 'الطائف' },    to: { en: 'Madinah', ar: 'المدينة المنورة' }, duration: { en: 'Approx. 5 hrs', ar: 'حوالي ٥ ساعات' },    type: 'long',   category: 'intercity' as const },
+  { slug: 'riyadh-to-madinah',  fromId: 'riyadh', toId: 'madinah', from: { en: 'Riyadh', ar: 'الرياض' },  to: { en: 'Madinah', ar: 'المدينة المنورة' }, duration: { en: 'Approx. 9–10 hrs', ar: 'حوالي ٩–١٠ ساعات' }, type: 'long',   category: 'intercity' as const },
+  { slug: 'riyadh-to-jeddah',   fromId: 'riyadh', toId: 'jeddah',  from: { en: 'Riyadh', ar: 'الرياض' },  to: { en: 'Jeddah', ar: 'جدة' },  duration: { en: 'Approx. 9 hrs', ar: 'حوالي ٩ ساعات' },    type: 'long',   category: 'intercity' as const },
+  // ── Intercity — beyond the 5-city network ──
+  { slug: 'makkah-to-dammam',   fromId: 'makkah', toId: 'dammam',  from: { en: 'Makkah', ar: 'مكة المكرمة' },  to: { en: 'Dammam', ar: 'الدمام' },  duration: { en: 'Approx. 8–9 hrs', ar: 'حوالي ٨–٩ ساعات' },  type: 'long',   category: 'intercity' as const },
+  { slug: 'dammam-to-makkah',   fromId: 'dammam', toId: 'makkah',  from: { en: 'Dammam', ar: 'الدمام' },  to: { en: 'Makkah', ar: 'مكة المكرمة' },  duration: { en: 'Approx. 8–9 hrs', ar: 'حوالي ٨–٩ ساعات' },  type: 'long',   category: 'intercity' as const },
+  { slug: 'dammam-to-madinah',  fromId: 'dammam', toId: 'madinah', from: { en: 'Dammam', ar: 'الدمام' },  to: { en: 'Madinah', ar: 'المدينة المنورة' }, duration: { en: 'Approx. 9–10 hrs', ar: 'حوالي ٩–١٠ ساعات' }, type: 'long',   category: 'intercity' as const },
   // ── Airport transfers ──
-  { slug: 'jeddah-airport-to-makkah',  fromId: 'jeddah',  toId: 'makkah',  from: 'Jeddah Airport',  to: 'Makkah',           duration: 'Approx. 50–60 min', category: 'airport' as const },
-  { slug: 'makkah-to-jeddah-airport',  fromId: 'makkah',  toId: 'jeddah',  from: 'Makkah',          to: 'Jeddah Airport',  duration: 'Approx. 55–65 min', category: 'airport' as const },
-  { slug: 'jeddah-airport-to-madinah', fromId: 'jeddah',  toId: 'madinah', from: 'Jeddah Airport',  to: 'Madinah',          duration: 'Approx. 3.5–4 hrs', category: 'airport' as const },
-  { slug: 'madinah-airport-taxi',      fromId: 'madinah', toId: 'madinah', from: 'Madinah Airport', to: "Prophet's Mosque", duration: 'Approx. 25–35 min', category: 'airport' as const },
-  { slug: 'taif-airport-taxi',         fromId: 'taif',    toId: 'taif',    from: 'Taif Airport',    to: 'Taif City',       duration: 'Approx. 20–30 min', category: 'airport' as const },
+  { slug: 'jeddah-airport-to-makkah',  fromId: 'jeddah',  toId: 'makkah',  from: { en: 'Jeddah Airport', ar: 'مطار جدة' },  to: { en: 'Makkah', ar: 'مكة المكرمة' },           duration: { en: 'Approx. 50–60 min', ar: 'حوالي ٥٠–٦٠ دقيقة' }, category: 'airport' as const },
+  { slug: 'makkah-to-jeddah-airport',  fromId: 'makkah',  toId: 'jeddah',  from: { en: 'Makkah', ar: 'مكة المكرمة' },          to: { en: 'Jeddah Airport', ar: 'مطار جدة' },  duration: { en: 'Approx. 55–65 min', ar: 'حوالي ٥٥–٦٥ دقيقة' }, category: 'airport' as const },
+  { slug: 'jeddah-airport-to-madinah', fromId: 'jeddah',  toId: 'madinah', from: { en: 'Jeddah Airport', ar: 'مطار جدة' },  to: { en: 'Madinah', ar: 'المدينة المنورة' },          duration: { en: 'Approx. 3.5–4 hrs', ar: 'حوالي ٣.٥–٤ ساعات' }, category: 'airport' as const },
+  { slug: 'madinah-airport-taxi',      fromId: 'madinah', toId: 'madinah', from: { en: 'Madinah Airport', ar: 'مطار المدينة' }, to: { en: "Prophet's Mosque", ar: 'المسجد النبوي' }, duration: { en: 'Approx. 25–35 min', ar: 'حوالي ٢٥–٣٥ دقيقة' }, category: 'airport' as const },
+  { slug: 'taif-airport-taxi',         fromId: 'taif',    toId: 'taif',    from: { en: 'Taif Airport', ar: 'مطار الطائف' },    to: { en: 'Taif City', ar: 'مدينة الطائف' },       duration: { en: 'Approx. 20–30 min', ar: 'حوالي ٢٠–٣٠ دقيقة' }, category: 'airport' as const },
 ]
 
 const ROUTE_COLORS: Record<string, string> = {
@@ -94,10 +92,10 @@ const ROUTE_COLORS: Record<string, string> = {
   long:   '#ef4444',
 }
 
-const TYPE_LABEL: Record<string, string> = {
-  short:  'Short',
-  medium: 'Medium',
-  long:   'Long',
+const TYPE_LABEL: Record<string, { en: string; ar: string }> = {
+  short:  { en: 'Short', ar: 'قصير' },
+  medium: { en: 'Medium', ar: 'متوسط' },
+  long:   { en: 'Long', ar: 'طويل' },
 }
 
 const routesMapFaqs = [
@@ -146,7 +144,7 @@ const routesMapFaqs = [
 ]
 
 export default function RoutesMap() {
-  const { isAr } = useLang()
+  const { lang, isAr } = useLang()
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
   const [selectedCity, setSelectedCity] = useState<typeof CITIES[0] | null>(null)
 
@@ -162,14 +160,20 @@ export default function RoutesMap() {
       <section style={{ padding: '60px 0 40px', background: 'linear-gradient(135deg, #071f17, #0B3D2E)', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <span className="section-tag" style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', color: 'var(--primary)' }}>
-            Saudi Arabia Coverage
+            {isAr ? 'تغطية المملكة العربية السعودية' : 'Saudi Arabia Coverage'}
           </span>
           <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '900', marginTop: '16px', marginBottom: '16px' }}>
-            Our <span style={{ color: 'var(--primary)' }}>Route Network</span> Map
+            {isAr
+              ? <>خريطة <span style={{ color: 'var(--primary)' }}>شبكة الخطوط</span> والنقل</>
+              : <>Our <span style={{ color: 'var(--primary)' }}>Route Network</span> Map</>
+            }
           </h1>
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
           <p style={{ opacity: 0.85, maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
-            {ROUTE_PAGES.length} routes across Makkah, Madinah, Jeddah, Taif, Riyadh &amp; Dammam. Explore any city or route to view details and book.
+            {isAr
+              ? `${ROUTE_PAGES.length} خط عبر مكة المكرمة والمدينة المنورة وجدة والطائف والرياض والدمام. استكشف أي مدينة أو خط لمعرفة التفاصيل والحجز.`
+              : `${ROUTE_PAGES.length} routes across Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam. Explore any city or route to view details and book.`
+            }
           </p>
         </div>
       </section>
@@ -178,13 +182,15 @@ export default function RoutesMap() {
       <section style={{ padding: '24px 0', borderBottom: '1px solid var(--border)', backgroundColor: 'var(--muted)' }}>
         <div className="container">
           <div style={{ display: 'flex', gap: '28px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-            <span style={{ fontWeight: '700', fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>Route Type:</span>
+            <span style={{ fontWeight: '700', fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>
+              {isAr ? 'نوع الخط:' : 'Route Type:'}
+            </span>
             {[
-              { color: '#D4AF37', label: 'Short (under 1 hr)' },
-              { color: '#0ea5e9', label: 'Medium (1–3 hrs)' },
-              { color: '#ef4444', label: 'Long (4+ hrs)' },
+              { color: '#D4AF37', label: isAr ? 'قصير (أقل من ساعة)' : 'Short (under 1 hr)' },
+              { color: '#0ea5e9', label: isAr ? 'متوسط (١–٣ ساعات)' : 'Medium (1–3 hrs)' },
+              { color: '#ef4444', label: isAr ? 'طويل (٤+ ساعات)' : 'Long (4+ hrs)' },
             ].map(l => (
-              <div key={l.label} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div key={l.color} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <div style={{ width: '32px', height: '4px', background: l.color, borderRadius: '2px' }} />
                 <span style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--foreground)' }}>{l.label}</span>
               </div>
@@ -197,7 +203,7 @@ export default function RoutesMap() {
       <section style={{ padding: '40px 0 80px' }}>
         <div className="container">
           <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginBottom: '20px', textAlign: 'center' }}>
-            🗺️ Interactive Route Map
+            {isAr ? '🗺️ خريطة الخطوط التفاعلية' : '🗺️ Interactive Route Map'}
           </h2>
 
           <div className={`routes-map-grid${selectedCity ? '' : ' single'}`} style={{ display: 'grid', gridTemplateColumns: selectedCity ? '1fr 340px' : '1fr', gap: '24px', alignItems: 'start' }}>
@@ -215,7 +221,10 @@ export default function RoutesMap() {
                 viewBox="0 0 100 100"
                 style={{ width: '100%', aspectRatio: '4/3', display: 'block' }}
                 role="img"
-                aria-label="Interactive map of Saudi Cabs GMC's route network across Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam"
+                aria-label={isAr
+                  ? 'خريطة تفاعلية لشبكة خطوط Saudi Cabs GMC في مكة والمدينة وجدة والطائف والرياض والدمام'
+                  : "Interactive map of Saudi Cabs GMC's route network across Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam"
+                }
               >
                 {/* Background regions */}
                 <rect x="0" y="0" width="100" height="100" fill="#e8f4f0" />
@@ -236,11 +245,15 @@ export default function RoutesMap() {
                   strokeWidth="3"
                   opacity="0.6"
                 />
-                <text x="3" y="57" fontSize="2.5" fill="#3b82f6" opacity="0.7" transform="rotate(-35, 3, 57)">Red Sea</text>
+                <text x="3" y="57" fontSize="2.5" fill="#3b82f6" opacity="0.7" transform="rotate(-35, 3, 57)">
+                  {isAr ? 'البحر الأحمر' : 'Red Sea'}
+                </text>
 
                 {/* Persian Gulf */}
                 <path d="M85,20 L88,28 L90,38 L88,48" fill="none" stroke="#93c5fd" strokeWidth="2" opacity="0.6" />
-                <text x="86" y="30" fontSize="2" fill="#3b82f6" opacity="0.7">Gulf</text>
+                <text x="86" y="30" fontSize="2" fill="#3b82f6" opacity="0.7">
+                  {isAr ? 'الخليج' : 'Gulf'}
+                </text>
 
                 {/* CONNECTIONS — draw lines */}
                 {MAP_CONNECTIONS.map(conn => {
@@ -269,7 +282,7 @@ export default function RoutesMap() {
                         fontWeight="700"
                         opacity={isHovered ? 1 : 0.7}
                       >
-                        {conn.label}
+                        {conn.label[lang]}
                       </text>
                     </g>
                   )
@@ -286,7 +299,7 @@ export default function RoutesMap() {
                       key={city.id}
                       tabIndex={0}
                       role="button"
-                      aria-label={`View routes for ${city.name.en}`}
+                      aria-label={isAr ? `عرض خطوط ${city.name.ar}` : `View routes for ${city.name.en}`}
                       aria-pressed={isSelected}
                       style={{ cursor: 'pointer', outline: 'none' }}
                       onMouseEnter={() => setHoveredCity(city.id)}
@@ -314,7 +327,7 @@ export default function RoutesMap() {
                         fill={city.color}
                         style={{ transition: 'font-size 0.2s' }}
                       >
-                        {city.name.en}
+                        {city.name[lang]}
                       </text>
                     </g>
                   )
@@ -335,8 +348,12 @@ export default function RoutesMap() {
               }}>
                 <button
                   onClick={() => setSelectedCity(null)}
-                  aria-label="Close"
-                  style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--muted)', border: 'none', borderRadius: '8px', padding: '6px', cursor: 'pointer', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  aria-label={isAr ? 'إغلاق' : 'Close'}
+                  style={{
+                    position: 'absolute', top: '16px',
+                    insetInlineEnd: '16px',
+                    background: 'var(--muted)', border: 'none', borderRadius: '8px', padding: '6px', cursor: 'pointer', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}
                 >
                   <X size={16} />
                 </button>
@@ -346,8 +363,8 @@ export default function RoutesMap() {
                     <MapPin size={22} color={selectedCity.color} strokeWidth={2} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: '900', fontSize: '1.3rem', color: selectedCity.color }}>{selectedCity.name.en}</div>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>{selectedCity.name.ar}</div>
+                    <div style={{ fontWeight: '900', fontSize: '1.3rem', color: selectedCity.color }}>{selectedCity.name[lang]}</div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>{selectedCity.name[isAr ? 'en' : 'ar']}</div>
                   </div>
                 </div>
 
@@ -358,12 +375,12 @@ export default function RoutesMap() {
                     padding: '11px', borderRadius: '10px', fontWeight: '700',
                     fontSize: '0.9rem', textDecoration: 'none', marginBottom: '20px',
                   }}>
-                    View {selectedCity.name.en} Taxi Service →
+                    {isAr ? `عرض خدمة تاكسي ${selectedCity.name.ar} ←` : `View ${selectedCity.name.en} Taxi Service →`}
                   </Link>
                 )}
 
                 <div style={{ fontWeight: '800', fontSize: '0.82rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>
-                  Available Routes
+                  {isAr ? 'الخطوط المتاحة' : 'Available Routes'}
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -377,20 +394,26 @@ export default function RoutesMap() {
                         background: ROUTE_COLORS[r.type ?? 'long'] + '0d',
                         transition: 'all 0.2s',
                       }}>
-                        <span style={{ fontWeight: '700', fontSize: '0.88rem', color: 'var(--foreground)' }}>{r.from} → {r.to}</span>
+                        <span style={{ fontWeight: '700', fontSize: '0.88rem', color: 'var(--foreground)' }}>
+                          {r.from[lang]} → {r.to[lang]}
+                        </span>
                         {' '}
                         <span style={{
                           fontSize: '0.75rem', fontWeight: '700', padding: '3px 8px',
                           borderRadius: '20px', background: ROUTE_COLORS[r.type ?? 'long'] + '22',
                           color: ROUTE_COLORS[r.type ?? 'long'],
-                        }}>{r.duration}</span>
+                        }}>{r.duration[lang]}</span>
                       </Link>
                     ))
                   }
                 </div>
 
                 <a
-                  href={`https://wa.me/923097811785?text=${encodeURIComponent(`Hello, I'd like to book a trip from/to ${selectedCity.name.en}`)}`}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(
+                    isAr
+                      ? `السلام عليكم، أرغب في حجز رحلة من/إلى ${selectedCity.name.ar}`
+                      : `Hello, I'd like to book a trip from/to ${selectedCity.name.en}`
+                  )}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -400,7 +423,7 @@ export default function RoutesMap() {
                   }}
                 >
                   <MessageCircle size={16} strokeWidth={2.5} />
-                  Book via WhatsApp
+                  {isAr ? 'احجز عبر واتساب' : 'Book via WhatsApp'}
                 </a>
               </div>
             )}
@@ -409,16 +432,19 @@ export default function RoutesMap() {
           {/* All Routes Grid */}
           <div style={{ marginTop: '60px' }}>
             <h2 style={{ fontSize: '1.8rem', fontWeight: '900', marginBottom: '8px' }}>
-              All <span style={{ color: 'var(--primary)' }}>Available Routes</span>
+              {isAr
+                ? <>جميع <span style={{ color: 'var(--primary)' }}>الخطوط المتاحة</span></>
+                : <>All <span style={{ color: 'var(--primary)' }}>Available Routes</span></>
+              }
             </h2>
             <div className="gold-divider" style={{ margin: '0 0 32px' }} />
 
             <h3 style={{ fontSize: '1.05rem', fontWeight: '800', marginBottom: '16px', color: 'var(--foreground)' }}>
-              Intercity Routes
+              {isAr ? 'رحلات بين المدن' : 'Intercity Routes'}
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '14px', marginBottom: '44px' }}>
               {intercityPages.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={`View ${r.from} to ${r.to} route and book`}>
+                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={isAr ? `عرض خط ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} route and book`}>
                   <div style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '16px 20px', borderRadius: '14px',
@@ -432,21 +458,23 @@ export default function RoutesMap() {
                     <div style={{ minWidth: 0 }}>
                       <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', marginBottom: '4px' }}>
                         <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)' }}>
-                          {r.from} → {r.to}
+                          {r.from[lang]} → {r.to[lang]}
                         </span>
                         {' '}
                         <span style={{
                           fontSize: '0.62rem', fontWeight: '800', padding: '2px 8px', borderRadius: '20px',
                           background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],
                           textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0, whiteSpace: 'nowrap',
-                        }}>{TYPE_LABEL[r.type!]}</span>
+                        }}>{TYPE_LABEL[r.type!][lang]}</span>
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
-                        {r.duration} · Fixed Fare, Confirmed Before Booking
+                        {r.duration[lang]} · {isAr ? 'سعر ثابت، يُؤكد قبل الحجز' : 'Fixed Fare, Confirmed Before Booking'}
                       </div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: ROUTE_COLORS[r.type!] }}>View Route</span>
+                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: ROUTE_COLORS[r.type!] }}>
+                        {isAr ? 'عرض الخط' : 'View Route'}
+                      </span>
                       <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: ROUTE_COLORS[r.type!] }} />
                     </div>
                   </div>
@@ -455,11 +483,11 @@ export default function RoutesMap() {
             </div>
 
             <h3 style={{ fontSize: '1.05rem', fontWeight: '800', marginBottom: '16px', color: 'var(--foreground)' }}>
-              Airport Transfers
+              {isAr ? 'توصيل المطارات' : 'Airport Transfers'}
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '14px' }}>
               {airportPages.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={`View ${r.from} to ${r.to} airport transfer and book`}>
+                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={isAr ? `عرض توصيل مطار ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} airport transfer and book`}>
                   <div style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '16px 20px', borderRadius: '14px',
@@ -472,14 +500,16 @@ export default function RoutesMap() {
                   >
                     <div>
                       <div style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)', marginBottom: '4px' }}>
-                        ✈️ {r.from} → {r.to}
+                        ✈️ {r.from[lang]} → {r.to[lang]}
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
-                        {r.duration} · Airport Transfer
+                        {r.duration[lang]} · {isAr ? 'توصيل مطار' : 'Airport Transfer'}
                       </div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: '#1e3a8a' }}>Book Now</span>
+                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: '#1e3a8a' }}>
+                        {isAr ? 'احجز الآن' : 'Book Now'}
+                      </span>
                       <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#1e3a8a' }} />
                     </div>
                   </div>

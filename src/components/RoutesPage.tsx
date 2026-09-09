@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 import { useState } from 'react'
 import Link from 'next/link'
 import { Clock, MapPin, ArrowRight, Phone, MessageCircle, Globe, CheckCircle } from 'lucide-react'
@@ -378,71 +378,6 @@ export default function RoutesPage({ data, cityKey, faqs, pricing }: Props) {
           en: `FAQ — ${tx(data.cityName)} Routes`,
         }}
       />
-
-      {/* ── Footer ─────────────────────────────────────────────── */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div>
-              <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <MessageCircle size={20} color="var(--primary)" />
-                Saudi Cabs GMC
-              </div>
-              <p className="footer-desc">
-                {isAr
-                  ? 'خدمة كاب وسائق خاص احترافية في مكة المكرمة والمدينة المنورة وجدة والطائف.'
-                  : 'Professional cab and private driver service in Makkah, Madinah, Jeddah & Taif.'}
-              </p>
-            </div>
-            <div>
-              <h4 className="footer-heading">{isAr ? 'خطوط المدن' : 'City Routes'}</h4>
-              <ul className="footer-links">
-                {[
-                  { href: '/makkah-taxi-service/routes', label: isAr ? 'خطوط مكة المكرمة' : 'Makkah Routes' },
-                  { href: '/madinah-taxi-service/routes', label: isAr ? 'خطوط المدينة المنورة' : 'Madinah Routes' },
-                  { href: '/jeddah-taxi-service/routes', label: isAr ? 'خطوط جدة' : 'Jeddah Routes' },
-                  { href: '/taif-taxi-service/routes', label: isAr ? 'خطوط الطائف' : 'Taif Routes' },
-                ].map(l => (
-                  <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{isAr ? 'صفحات المدن' : 'City Pages'}</h4>
-              <ul className="footer-links">
-                {[
-                  { href: '/makkah-taxi-service', label: isAr ? 'مكة المكرمة' : 'Makkah' },
-                  { href: '/madinah-taxi-service', label: isAr ? 'المدينة المنورة' : 'Madinah' },
-                  { href: '/jeddah-taxi-service', label: isAr ? 'جدة' : 'Jeddah' },
-                  { href: '/taif-taxi-service', label: isAr ? 'الطائف' : 'Taif' },
-                ].map(l => (
-                  <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="footer-heading">{isAr ? 'تواصل معنا' : 'Contact Us'}</h4>
-              <div className="footer-contact-item">
-                <Phone size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="tel:+923097811785" style={{ color: 'inherit' }}>+92 309 7811785</a>
-              </div>
-              <div className="footer-contact-item">
-                <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />
-                <a href="https://wa.me/923097811785" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                  WhatsApp
-                </a>
-              </div>
-              <div className="footer-contact-item">
-                <Globe size={15} color="var(--primary)" strokeWidth={2} />
-                <span>{isAr ? 'المملكة العربية السعودية' : 'Saudi Arabia'}</span>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            © {new Date().getFullYear()} Saudi Cabs GMC. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }
