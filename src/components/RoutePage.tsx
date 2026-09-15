@@ -61,6 +61,15 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
 
   return (
     <main>
+      {/* ── Breadcrumb — mirrors the BreadcrumbList schema in schemaUtils.ts ── */}
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: 'var(--muted)', borderBottom: '1px solid var(--border)', padding: '10px 0', fontSize: '0.8rem' }}>
+        <div className="container" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center', direction: isAr ? 'rtl' : 'ltr' }}>
+          <Link href="/" style={{ color: 'var(--primary)', fontWeight: '600' }}>{isAr ? 'الرئيسية' : 'Home'}</Link>
+          <span style={{ color: 'var(--muted-foreground)' }}>›</span>
+          <span style={{ color: 'var(--muted-foreground)' }}>{tx(data.from)} → {tx(data.to)}</span>
+        </div>
+      </nav>
+
       {/* ── Hero ── */}
       <section style={{
         minHeight: '90vh',

@@ -5,8 +5,8 @@ import { useLang } from '@/contexts/LanguageContext'
 import { vehicleImages, findRoutePrice } from '@/lib/pricingData'
 
 const CITIES = {
-  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'مطار جدة الدولي', 'مطار المدينة المنورة', 'موقع آخر'],
-  en: ['Makkah', 'Madinah', 'Jeddah', 'Taif', 'Jeddah Airport', 'Madinah Airport', 'Other Location'],
+  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'الرياض', 'الدمام', 'مطار جدة الدولي', 'مطار المدينة المنورة', 'موقع آخر'],
+  en: ['Makkah', 'Madinah', 'Jeddah', 'Taif', 'Riyadh', 'Dammam', 'Jeddah Airport', 'Madinah Airport', 'Other Location'],
 }
 
 const VEHICLES = [
