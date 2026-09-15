@@ -15,15 +15,18 @@ export async function generateMetadata(
   const data = getVehicleSeoPageData(vehicleSeo)
   if (!data) return {}
   const ogImage = 'https://saudicabsgmc.com/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp'
+  const canonicalPath = data.canonicalSlug ?? vehicleSeo
   return {
     title:       data.metaTitle,
     description: data.metaDesc,
-    alternates:  { canonical: `https://saudicabsgmc.com/${vehicleSeo}` },
-    robots:      { index: true, follow: true },
+    alternates:  { canonical: `https://saudicabsgmc.com/${canonicalPath}` },
+    robots:      data.noindex
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
     openGraph: {
       title:       data.metaTitle,
       description: data.metaDesc,
-      url:         `https://saudicabsgmc.com/${vehicleSeo}`,
+      url:         `https://saudicabsgmc.com/${canonicalPath}`,
       siteName:    'Saudi Cabs GMC',
       type:        'website',
       images:      [{ url: ogImage, width: 1200, height: 630, alt: data.h1 }],

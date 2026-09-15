@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Toyota Camry Taxi Saudi Arabia | 4-Seater Sedan — Saudi Cabs GMC',
+  title: 'Toyota Camry Taxi Saudi Arabia | 4-Seater Sedan',
   description: 'Book a Toyota Camry taxi in Makkah, Madinah, Jeddah & Taif. Comfortable 4-seat sedan for airport transfers, city rides & intercity routes. Fixed price, 24/7. Book via WhatsApp.',
   keywords: ['toyota camry taxi saudi arabia', 'camry cab makkah', 'sedan taxi jeddah airport', 'toyota camry hire madinah', 'تاكسي تويوتا كامري السعودية'],
   alternates: { canonical: 'https://saudicabsgmc.com/toyota-camry-taxi' },

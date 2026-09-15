@@ -108,6 +108,13 @@ export interface VehicleSeoPageData {
   breadcrumbs:   { name: string; href: string }[]
   waMessage:     string
   schema:        object
+  // If set, this page is a near-duplicate of another (e.g. "cab"/"car" is just a
+  // synonym of "taxi" for the same vehicle+city) — canonicalize to that page instead
+  // of indexing both separately.
+  canonicalSlug?: string
+  // If true, this page is excluded from indexing (used for the 11/17-seater pages,
+  // which describe vehicles marked `available: false` below — not yet real fleet).
+  noindex?:       boolean
 }
 
 // ── Schema builder ────────────────────────────────────────────────────────────
@@ -245,11 +252,20 @@ const HUB_DEFS = [
   },
 ]
 
+// "cab" is explicitly documented as a synonym of "taxi" (see each page's own FAQ:
+// "used interchangeably... no price difference") — canonicalize the synonym hub
+// pages to their "taxi" equivalent instead of indexing near-identical content twice.
+const HUB_CANONICAL: Record<string, string> = {
+  'cab-services': 'taxi-services',
+  'airport-cab': 'airport-taxi',
+}
+
 for (const h of HUB_DEFS) {
   reg({
     slug: h.slug, pageType: 'hub',
-    metaTitle: h.title, metaDesc: h.desc,
+    metaTitle: h.title.replace(/ \| Saudi Cabs GMC$/, ''), metaDesc: h.desc,
     h1: h.h1, subtitle: h.subtitle, quickAnswer: h.qa, badge: h.badge,
+    canonicalSlug: HUB_CANONICAL[h.slug],
     serviceLabel: 'Taxi / Cab / Car with Driver', location: 'Saudi Arabia',
     keyFacts: [
       { icon: '🚗', label: 'Vehicles', value: '4 sizes' },
@@ -286,9 +302,16 @@ for (const vk of V_KEYS) {
       const c = CITIES[ck]
       const slug = `${vk}-${sk}-${ck}`
       const avail = v.available ? '' : ' (contact us for availability)'
+      // "cab" is a documented synonym of "taxi" here — canonicalize to the taxi
+      // version of the same vehicle+city instead of indexing both.
+      const canonicalSlug = sk === 'cab' ? `${vk}-taxi-${ck}` : undefined
+      // 11/17-seater vehicles are marked unavailable in the fleet above — don't
+      // index pages implying they're standard bookable inventory.
+      const noindex = !v.available
       reg({
         slug, pageType: 'vehicle-city',
-        metaTitle:   `${v.label} ${s.label} in ${c.name} | ${v.name} | Saudi Cabs GMC`,
+        canonicalSlug, noindex,
+        metaTitle:   `${v.label} ${s.label} in ${c.name} | ${v.name}`,
         metaDesc:    `Book a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} — ${v.name}, fixed price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
         h1:          `${v.label} ${s.label} in ${c.name} — ${v.name}`,
         subtitle:    `${v.seats}-passenger ${s.label.toLowerCase()} service in ${c.name}. ${v.name} — ${v.luggage}. Fixed SAR price, no meter, 24/7${avail}.`,
@@ -338,9 +361,12 @@ for (const vk of V_KEYS) {
     const oc = CITIES[r.origin]
     const dc = CITIES[r.dest]
     const slug = `${vk}-taxi-${rk}`
+    // 11/17-seater vehicles are marked unavailable in the fleet above.
+    const noindex = !v.available
     reg({
       slug, pageType: 'vehicle-route',
-      metaTitle:   `${v.label} Taxi ${oc.name} to ${dc.name} | ${v.name} | Saudi Cabs GMC`,
+      noindex,
+      metaTitle:   `${v.label} Taxi ${oc.name} to ${dc.name} | ${v.name}`,
       metaDesc:    `Book a ${v.seats}-seat taxi from ${oc.name} to ${dc.name} — ${v.name}, ${r.km}, ${r.time}. Fixed price, direct, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
       h1:          `${v.label} Taxi — ${oc.name} to ${dc.name}`,
       subtitle:    `${v.name} taxi from ${oc.name} to ${dc.name}. ${r.km} · ${r.time} · Fixed SAR · Door-to-door · 24/7.`,
@@ -449,9 +475,15 @@ for (const spec of AIRPORT_SPECS) {
   const routeData = ap.distances[spec.destKey as keyof typeof ap.distances]
   const km   = routeData?.km   ?? ''
   const time = routeData?.time ?? ''
+  // "cab" is a documented synonym of "taxi" — canonicalize the generic (non
+  // vehicle-specific) cab pages to their taxi equivalent.
+  const canonicalSlug = spec.serviceKey === 'cab' ? spec.slug.replace(/^cab-/, 'taxi-') : undefined
+  // 11/17-seater vehicle-specific airport pages describe unavailable inventory.
+  const noindex = veh ? !veh.available : false
   reg({
     slug: spec.slug, pageType: 'airport',
-    metaTitle:   `${seats ? seats.trim() + ' ' : ''}${svc.label} ${dir} | Saudi Cabs GMC`,
+    canonicalSlug, noindex,
+    metaTitle:   `${seats ? seats.trim() + ' ' : ''}${svc.label} ${dir}`,
     metaDesc:    `Book a ${seats}${svc.label.toLowerCase()} ${dir}${km ? ` (${km}, ${time})` : ''}. Fixed price, name-board pickup, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${seats ? seats.trim() + ' ' : ''}${svc.label} — ${dir.charAt(0).toUpperCase() + dir.slice(1)}`,
     subtitle:    `Fixed-price ${svc.label.toLowerCase()} ${dir}${km ? `. ${km} · ${time}` : ''}. Name-board meet & greet. Flight tracking. 24/7.`,
@@ -499,9 +531,12 @@ for (const ik of I_KEYS) {
       const c   = CITIES[ck]
       const v   = VEHICLES[intent.prefVehicle]
       const slug = `${ik}-${sk}-${ck}`
+      // "cab" is a documented synonym of "taxi" — canonicalize to the taxi version.
+      const canonicalSlug = sk === 'cab' ? `${ik}-taxi-${ck}` : undefined
       reg({
         slug, pageType: 'intent-city',
-        metaTitle:   `${intent.label} ${s.label} in ${c.name} | ${v.name} | Saudi Cabs GMC`,
+        canonicalSlug,
+        metaTitle:   `${intent.label} ${s.label} in ${c.name} | ${v.name}`,
         metaDesc:    `Book a ${intent.desc} ${s.label.toLowerCase()} in ${c.name}. Saudi Cabs GMC — ${v.name}, fixed SAR price, 24/7. WhatsApp: +92 309 7811785.`,
         h1:          `${intent.label} ${s.label} in ${c.name}`,
         subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} in ${c.name} with Saudi Cabs GMC. ${v.name} — up to ${v.seats} passengers, ${v.luggage}. Fixed price, 24/7.`,
@@ -560,7 +595,7 @@ for (const spec of INTENT_AIRPORT_SPECS) {
   const v      = VEHICLES[intent.prefVehicle]
   reg({
     slug: spec.slug, pageType: 'intent-airport',
-    metaTitle:   `${intent.label} Airport Taxi — ${ap.shortName} | Saudi Cabs GMC`,
+    metaTitle:   `${intent.label} Airport Taxi — ${ap.shortName}`,
     metaDesc:    `Book a ${intent.desc} airport taxi at ${ap.shortName}. Saudi Cabs GMC — ${v.name}, fixed SAR price, name-board pickup, 24/7. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} Airport Taxi — ${ap.shortName}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} taxi service at ${ap.name} (${ap.code}). Name-board pickup · Flight tracking · Fixed SAR · 24/7.`,
@@ -613,9 +648,12 @@ for (const spec of INTENT_VEHICLE_SPECS) {
   const intent = INTENTS[spec.ik]
   const v = VEHICLES[spec.vk]
   const c = CITIES[spec.ck]
+  // 11/17-seater vehicles are marked unavailable in the fleet above.
+  const noindex = !v.available
   reg({
     slug: spec.slug, pageType: 'intent-vehicle',
-    metaTitle:   `${intent.label} ${v.label} Taxi in ${c.name} | ${v.name} | Saudi Cabs GMC`,
+    noindex,
+    metaTitle:   `${intent.label} ${v.label} Taxi in ${c.name} | ${v.name}`,
     metaDesc:    `Book a ${intent.desc} ${v.seats}-seat taxi in ${c.name} — ${v.name}, fixed SAR price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} ${v.label} Taxi in ${c.name}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} with a ${v.name} in ${c.name}. ${v.seats} passengers · ${v.luggage} · Fixed SAR · 24/7.`,
@@ -668,7 +706,7 @@ for (const spec of MONEY_ROUTE_SPECS) {
   const dc = CITIES[r.dest]
   reg({
     slug: spec.slug, pageType: 'money-route',
-    metaTitle:   `${intent.label} Taxi ${oc.name} to ${dc.name} | ${v.name} | Saudi Cabs GMC`,
+    metaTitle:   `${intent.label} Taxi ${oc.name} to ${dc.name} | ${v.name}`,
     metaDesc:    `Book a ${intent.desc} taxi from ${oc.name} to ${dc.name} — ${r.km}, ${r.time}. ${v.name}, fixed SAR, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} Taxi — ${oc.name} to ${dc.name}`,
     subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} from ${oc.name} to ${dc.name}. ${r.km} · ${r.time} · ${v.name} · Fixed SAR.`,
@@ -711,6 +749,15 @@ for (const spec of MONEY_ROUTE_SPECS) {
 
 export function getAllVehicleSeoSlugs(): string[] {
   return Array.from(REGISTRY.keys())
+}
+
+// Only the pages that are actually meant to be indexed on their own — excludes
+// noindexed pages (unavailable vehicles) and canonicalized synonym pages (which
+// point at another page's URL and shouldn't compete with it in the sitemap).
+export function getIndexableVehicleSeoSlugs(): string[] {
+  return Array.from(REGISTRY.values())
+    .filter(d => !d.noindex && !d.canonicalSlug)
+    .map(d => d.slug)
 }
 
 export function getVehicleSeoPageData(slug: string): VehicleSeoPageData | null {

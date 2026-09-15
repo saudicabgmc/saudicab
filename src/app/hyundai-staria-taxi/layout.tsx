@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Hyundai Staria Taxi Saudi Arabia | 7-Seater Family Van — Saudi Cabs GMC',
+  title: 'Hyundai Staria Taxi Saudi Arabia | 7-Seater Family Van',
   description: 'Book a Hyundai Staria 7-seat van in Makkah, Madinah, Jeddah & Taif. Spacious family taxi for Hajj, Umrah, airport transfers & intercity routes. Fixed price, 24/7. Book via WhatsApp.',
   keywords: ['hyundai staria taxi saudi arabia', 'staria 7 seater makkah', 'family van taxi jeddah airport', 'hyundai staria umrah transport', 'هيونداي ستاريا مكة', 'تاكسي ٧ مقاعد السعودية'],
   alternates: { canonical: 'https://saudicabsgmc.com/hyundai-staria-taxi' },

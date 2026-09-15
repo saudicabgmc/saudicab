@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllVehicleSeoSlugs } from '@/lib/vehicleSeoData'
+import { getIndexableVehicleSeoSlugs } from '@/lib/vehicleSeoData'
 import { blogPosts } from '@/lib/blogData'
 
 const BASE = 'https://saudicabsgmc.com'
@@ -11,8 +11,10 @@ const BASE = 'https://saudicabsgmc.com'
 const SITE_LAST_VERIFIED = new Date('2026-09-07')
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Programmatic vehicle SEO pages (~190 pages)
-  const vehicleSeoEntries: MetadataRoute.Sitemap = getAllVehicleSeoSlugs().map(slug => ({
+  // Programmatic vehicle SEO pages — excludes noindexed (unavailable-vehicle) pages
+  // and canonicalized synonym pages ("cab"/"car" duplicates of a "taxi" page), which
+  // stay live at their URL but shouldn't be submitted for indexing separately.
+  const vehicleSeoEntries: MetadataRoute.Sitemap = getIndexableVehicleSeoSlugs().map(slug => ({
     url: `${BASE}/${slug}`,
     lastModified: SITE_LAST_VERIFIED,
     changeFrequency: 'monthly',

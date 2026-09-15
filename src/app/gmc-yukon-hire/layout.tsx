@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'GMC Yukon VIP Hire with Chauffeur | Luxury SUV Saudi Cabs GMC',
+  title: 'GMC Yukon VIP Hire with Chauffeur | Luxury SUV',
   description: 'Hire a GMC Yukon XL luxury SUV with professional chauffeur in Makkah, Madinah, Jeddah & Riyadh. 7 seats, built-in cooler, premium leather. Fixed price, 24/7. Book via WhatsApp.',
   keywords: ['gmc yukon hire saudi arabia', 'yukon vip taxi makkah', 'luxury suv chauffeur jeddah', 'gmc yukon airport transfer', 'استئجار جي إم سي يوكون السعودية'],
   alternates: { canonical: 'https://saudicabsgmc.com/gmc-yukon-hire' },
