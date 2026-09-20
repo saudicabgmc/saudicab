@@ -1,7 +1,7 @@
 ﻿'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Phone, Menu, X, MessageCircle, ChevronDown } from 'lucide-react'
+import { Menu, X, MessageCircle, ChevronDown } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 
@@ -113,10 +113,6 @@ export default function Navbar() {
             {isAr ? 'EN' : 'AR'}
           </button>
 
-          <a href="tel:+923097811785" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <Phone size={14} strokeWidth={2.5} />
-            ‎+92 309 7811785
-          </a>
           <a
             href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
             target="_blank"
