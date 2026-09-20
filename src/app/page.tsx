@@ -158,11 +158,11 @@ export default function Home() {
               <h1 className="hero-h1" style={{ marginBottom: '12px' }}>
                 {isAr ? (
                   <>
-                    <span style={{ color: 'var(--primary)' }}>خدمات تاكسي</span> ونقل خاص في مكة المكرمة
+                    <span style={{ color: 'var(--primary)' }}>تاكسي موثوق</span> ونقل خاص في المملكة العربية السعودية
                   </>
                 ) : (
                   <>
-                    <span style={{ color: 'var(--primary)' }}>Makkah Taxi</span> &amp; Private Transport Services
+                    <span style={{ color: 'var(--primary)' }}>Reliable Taxi</span> &amp; Private Transport in Saudi Arabia
                   </>
                 )}
               </h1>

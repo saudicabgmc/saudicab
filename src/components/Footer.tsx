@@ -91,7 +91,7 @@ export default function Footer() {
             <h4 className="footer-heading">{tr.footer.contact}</h4>
             <div className="footer-contact-item">
               <Phone size={15} color="var(--primary)" strokeWidth={2} />
-              <span dir="ltr">+92 309 7811785</span>
+              <a href="tel:+923097811785" style={{ color: 'inherit' }}>+92 309 7811785</a>
             </div>
             <div className="footer-contact-item">
               <MessageCircle size={15} color="var(--primary)" strokeWidth={2} />

@@ -1,7 +1,7 @@
 ﻿'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, MessageCircle, ChevronDown } from 'lucide-react'
+import { Phone, Menu, X, MessageCircle, ChevronDown } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 
@@ -113,6 +113,10 @@ export default function Navbar() {
             {isAr ? 'EN' : 'AR'}
           </button>
 
+          <a href="tel:+923097811785" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Phone size={14} strokeWidth={2.5} />
+            ‎+92 309 7811785
+          </a>
           <a
             href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
             target="_blank"
@@ -193,6 +197,13 @@ export default function Navbar() {
                 {isAr ? 'Switch to English' : 'التبديل للعربية'}
               </button>
             </div>
+            <a
+              href="tel:+923097811785"
+              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 0', fontWeight: '700', color: 'var(--foreground)', fontSize: '0.95rem' }}
+            >
+              <Phone size={16} strokeWidth={2.5} />
+              {isAr ? 'اتصل بنا الآن' : 'Call Us Now'}
+            </a>
             <a
               href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank"
