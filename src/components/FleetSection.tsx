@@ -1,5 +1,5 @@
 ﻿'use client'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, Car } from 'lucide-react'
 import { type PricingRoute, vehicleImages } from '@/lib/pricingData'
 import { useLang } from '@/contexts/LanguageContext'
 
@@ -94,13 +94,24 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
 
                 {/* Car image */}
                 <div style={{ position: 'relative', height: '220px', background: '#111', overflow: 'hidden' }}>
-                  <img
-                    src={car.image}
-                    alt={car.alt}
-                    width={400} height={220}
-                    loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: car.key === 'staria' ? 'contain' : 'cover', objectPosition: 'center', display: 'block' }}
-                  />
+                  {car.image ? (
+                    <img
+                      src={car.image}
+                      alt={car.alt}
+                      width={400} height={220}
+                      loading="lazy"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: car.key === 'staria' ? '50% 32%' : 'center', display: 'block' }}
+                    />
+                  ) : (
+                    <div role="img" aria-label={car.alt} style={{
+                      width: '100%', height: '100%',
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                      background: 'linear-gradient(135deg, #0B3D2E, #0F5132)', color: 'white',
+                    }}>
+                      <Car size={64} strokeWidth={1.4} />
+                      <span style={{ fontWeight: '800', fontSize: '1rem' }}>{isAr ? car.nameAr : car.nameEn}</span>
+                    </div>
+                  )}
                   {/* Seat badge */}
                   <div style={{
                     position: 'absolute', top: '12px', left: isAr ? 'auto' : '12px', right: isAr ? '12px' : 'auto',
@@ -192,10 +203,10 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
             ? '✅ أسعار حسب المسار · رد فوري عبر واتساب · لا دفع مسبق · متاح ٢٤/٧'
             : '✅ Route-based pricing · Instant WhatsApp reply · No advance payment · Available 24/7'}
         </p>
-        <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.76rem', color: 'var(--muted-foreground)', opacity: 0.75 }}>
+        <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>
           {isAr
-            ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
-            : '*Starting fare shown for the lowest-cost route. Final price depends on the selected route and trip details.'}
+            ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
+            : '*Starting fare shown for the lowest-cost route. Prices are in SAR per vehicle, not per person. Final price depends on the selected route and trip details.'}
         </p>
 
       </div>
