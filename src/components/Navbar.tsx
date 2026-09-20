@@ -198,13 +198,6 @@ export default function Navbar() {
               </button>
             </div>
             <a
-              href="tel:+923097811785"
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 0', fontWeight: '700', color: 'var(--foreground)', fontSize: '0.95rem' }}
-            >
-              <Phone size={16} strokeWidth={2.5} />
-              {isAr ? 'اتصل بنا الآن' : 'Call Us Now'}
-            </a>
-            <a
               href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank"
               rel="noopener noreferrer"

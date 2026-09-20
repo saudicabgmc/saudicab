@@ -117,12 +117,12 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
             position: 'absolute', top: '50%',
             [dir === 'prev' ? 'insetInlineStart' : 'insetInlineEnd']: 0,
             transform: 'translateY(-50%)',
-            background: 'white', border: '1.5px solid var(--border)',
-            borderRadius: '50%', width: '40px', height: '40px',
+            background: '#0B3D2E', color: 'white', border: '2px solid white',
+            borderRadius: '50%', width: '44px', height: '44px', padding: 0,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', boxShadow: '0 4px 14px rgba(0,0,0,0.1)', zIndex: 2,
+            cursor: 'pointer', boxShadow: '0 4px 16px rgba(0,0,0,0.35)', zIndex: 2,
           }}>
-          {(dir === 'prev') !== isAr ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          {(dir === 'prev') !== isAr ? <ChevronLeft size={24} strokeWidth={3} /> : <ChevronRight size={24} strokeWidth={3} />}
         </button>
       ))}
 
@@ -130,9 +130,9 @@ export default function ReviewsCarousel({ reviews, isAr }: Props) {
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '22px' }}>
         {reviews.map((_, i) => (
           <button key={i} onClick={() => setCurrent(i)} aria-label={isAr ? `الانتقال إلى التقييم ${i+1}` : `Go to review ${i+1}`} aria-current={i === current} style={{
-            width: i === current ? '28px' : '10px', height: '10px',
-            borderRadius: '50px', border: 'none', cursor: 'pointer', padding: 0,
-            background: i === current ? 'var(--primary)' : 'var(--border)',
+            width: i === current ? '32px' : '12px', height: '12px',
+            borderRadius: '50px', border: '1px solid rgba(11,61,46,0.55)', cursor: 'pointer', padding: 0,
+            background: i === current ? '#0B3D2E' : 'rgba(11,61,46,0.3)',
             transition: 'all 0.3s',
           }} />
         ))}

@@ -13,7 +13,7 @@ import ReviewsCarousel from '@/components/ReviewsCarousel'
 import FAQSection from '@/components/FAQSection'
 import FleetSection from '@/components/FleetSection'
 import { homeFaqs } from '@/lib/faqData'
-import { allPricingRoutes } from '@/lib/pricingData'
+import { allPricingRoutes, getPricing } from '@/lib/pricingData'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 
@@ -32,15 +32,16 @@ const locationNames = {
 const serviceIcons = [Car, Navigation, Briefcase, Plane]
 const whyIcons = [Shield, Zap, Banknote, Phone]
 
-/* Key routes shown in the HTML price table */
-const PRICE_TABLE_ROUTES = [
-  { en: 'Jeddah Airport → Makkah', ar: 'مطار جدة ← مكة', sedan: 330, staria: 380, gmc: 530 },
-  { en: 'Makkah → Jeddah Airport', ar: 'مكة ← مطار جدة', sedan: 305, staria: 355, gmc: 530 },
-  { en: 'Jeddah Airport → Madinah', ar: 'مطار جدة ← المدينة', sedan: 505, staria: 555, gmc: 1030 },
-  { en: 'Madinah Airport → Hotel', ar: 'مطار المدينة ← الفندق', sedan: 230, staria: 260, gmc: 380 },
-  { en: 'Makkah → Madinah', ar: 'مكة ← المدينة', sedan: 350, staria: 400, gmc: 680 },
-  { en: 'Makkah Ziyarat Tour', ar: 'جولة زيارات مكة', sedan: 250, staria: 320, gmc: 500 },
-]
+/* Key routes shown in the HTML price table — read from pricingData.ts so the
+   homepage can never drift from the fleet cards, booking form and city pages. */
+const PRICE_TABLE_ROUTES = getPricing(
+  'jed-makkah', 'makkah-jed', 'jed-madinah', 'mad-hotel', 'makkah-madinah', 'ziyarat-makkah',
+).map(r => {
+  const label = (lang: 'en' | 'ar') =>
+    r.category === 'ziyarat' || !r.from[lang] ? r.to[lang] : `${r.from[lang]} → ${r.to[lang]}`
+  const price = (key: string) => r.rates.find(x => x.key === key)!.price
+  return { en: label('en'), ar: label('ar'), sedan: price('sedan'), staria: price('staria'), gmc: price('gmc') }
+})
 
 export default function Home() {
   const { lang, isAr } = useLang()
@@ -88,22 +89,7 @@ export default function Home() {
           }}
         >
           <MessageCircle size={16} strokeWidth={2.5} />
-          {isAr ? 'واتساب' : 'WhatsApp'}
-        </a>
-        <a
-          href="tel:+923097811785"
-          style={{
-            background: 'rgba(255,255,255,0.14)', color: 'white',
-            border: '1.5px solid rgba(255,255,255,0.4)',
-            padding: '10px 18px', borderRadius: '10px',
-            fontWeight: '800', fontSize: '0.88rem',
-            display: 'inline-flex', alignItems: 'center', gap: '7px',
-            whiteSpace: 'nowrap', flexShrink: 0,
-            textDecoration: 'none',
-          }}
-        >
-          <Phone size={15} strokeWidth={2.5} />
-          {isAr ? 'اتصل' : 'Call'}
+          {isAr ? 'احجز عبر واتساب' : 'Book via WhatsApp'}
         </a>
       </div>
 
@@ -169,29 +155,37 @@ export default function Home() {
               </div>
 
               {/* PRIMARY H1 — large, scannable, value prop in first 3 words */}
-              <h1 className="hero-h1">
+              <h1 className="hero-h1" style={{ marginBottom: '12px' }}>
                 {isAr ? (
                   <>
-                    <span style={{ color: 'var(--primary)' }}>تاكسي فاخر</span><br />
-                    مكة • مدينة • جدة • طائف
+                    <span style={{ color: 'var(--primary)' }}>خدمات تاكسي</span> ونقل خاص في مكة المكرمة
                   </>
                 ) : (
                   <>
-                    <span style={{ color: 'var(--primary)' }}>Premium Taxi</span><br />
-                    Makkah · Madinah · Jeddah · Taif
+                    <span style={{ color: 'var(--primary)' }}>Makkah Taxi</span> &amp; Private Transport Services
                   </>
                 )}
               </h1>
 
-              {/* Supporting value prop — tight, benefit-focused */}
+              {/* Coverage line — cities served, directly under the H1 */}
               <p style={{
-                fontSize: '1.05rem', opacity: 0.88,
-                marginBottom: '10px', lineHeight: '1.65', maxWidth: '460px',
-                fontWeight: '600',
+                fontSize: '1.15rem', fontWeight: '800', color: 'white',
+                letterSpacing: '0.02em', marginBottom: '14px',
               }}>
                 {isAr
-                  ? 'سيدان • ستاريا • GMC يوكون — سعر ثابت، لا رسوم خفية'
-                  : 'Sedan · Staria · GMC Yukon — Fixed price, no hidden fees'}
+                  ? 'مكة المكرمة • المدينة المنورة • جدة • الطائف'
+                  : 'Makkah • Madinah • Jeddah • Taif'}
+              </p>
+
+              {/* Supporting value prop — what we do, which vehicles, how pricing/booking works */}
+              <p style={{
+                fontSize: '1.02rem', opacity: 0.88,
+                marginBottom: '18px', lineHeight: '1.65', maxWidth: '540px',
+                fontWeight: '500',
+              }}>
+                {isAr
+                  ? 'رحلات خاصة داخل المدن وبين المدن، وتوصيل من وإلى المطارات وخدمة سائق خاص بسيارات سيدان وهيونداي ستاريا وGMC يوكون. أسعار ثابتة تُؤكد قبل رحلتك مع حجز عبر واتساب على مدار الساعة.'
+                  : 'Private city transfers, intercity rides, airport transfers and chauffeur services with Sedan, Hyundai Staria and GMC Yukon. Fixed prices confirmed before your trip with 24/7 WhatsApp booking.'}
               </p>
 
               {/* Quick trust micro-row */}
@@ -224,7 +218,7 @@ export default function Home() {
                 </a>
                 <a href="#booking-form" className="btn-outline">
                   <Car size={16} strokeWidth={2.5} />
-                  {isAr ? 'أدخل تفاصيل رحلتك' : 'Enter Trip Details'}
+                  {isAr ? 'احصل على سعرك الثابت' : 'Get Your Fixed Price'}
                 </a>
               </div>
 
@@ -500,8 +494,25 @@ export default function Home() {
               style={{ fontSize: '1rem', padding: '14px 36px' }}
             >
               <MessageCircle size={17} strokeWidth={2.5} />
-              {isAr ? 'احجز بهذه الأسعار الآن' : 'Book at These Prices Now'}
+              {isAr ? 'احجز هذا المسار عبر واتساب' : 'Book This Route on WhatsApp'}
             </a>
+          </div>
+
+          <div style={{ maxWidth: '720px', margin: '22px auto 0', textAlign: 'center', fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.7 }}>
+            <p style={{ margin: 0, fontWeight: '700', color: 'var(--foreground)' }}>
+              {isAr ? 'الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد.' : 'Prices are in SAR per vehicle, not per person.'}
+            </p>
+            <p style={{ margin: '4px 0 0' }}>
+              {isAr
+                ? 'الدفع نقداً (بالريال) أو تحويل بنكي بعد الرحلة. إلغاء مجاني حتى ٣ ساعات قبل موعد الاستقبال. '
+                : 'Pay by cash (SAR) or bank transfer after the trip. Free cancellation up to 3 hours before pickup. '}
+              <Link href="/terms-and-conditions" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'الشروط' : 'Terms'}</Link>
+            </p>
+            <p style={{ margin: '8px 0 0' }}>
+              <Link href="/taxi-prices-saudi-arabia" style={{ color: 'var(--primary)', fontWeight: '700' }}>
+                {isAr ? 'عرض جميع المسارات والأسعار ←' : 'See all routes and prices →'}
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -532,7 +543,7 @@ export default function Home() {
               })}
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ marginTop: '8px' }}>
                 <MessageCircle size={16} strokeWidth={2.5} />
-                {isAr ? 'احجز الآن' : 'Book Now'}
+                {isAr ? 'تحقق من التوفر عبر واتساب' : 'Check Availability on WhatsApp'}
               </a>
             </div>
             <div style={{ position: 'relative' }}>
@@ -594,7 +605,7 @@ export default function Home() {
                   className="btn-primary"
                 >
                   <MessageCircle size={16} strokeWidth={2.5} />
-                  {isAr ? 'احجز سائقك الآن' : 'Book a Driver Now'}
+                  {isAr ? 'اطلب سائقاً خاصاً' : 'Request a Private Driver'}
                 </a>
               </div>
             </div>
@@ -723,19 +734,6 @@ export default function Home() {
             >
               <MessageCircle size={18} strokeWidth={2.5} />
               {tr.cta.bookWhatsapp}
-            </a>
-            <a
-              href="tel:+923097811785"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.16)', color: 'white',
-                border: '2px solid rgba(255,255,255,0.55)',
-                padding: '14px 36px', borderRadius: 'var(--radius)',
-                fontWeight: '800', fontSize: '0.95rem',
-                display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none',
-              }}
-            >
-              <Phone size={18} strokeWidth={2.5} />
-              {tr.cta.callUs}
             </a>
           </div>
           {/* Micro trust row */}
