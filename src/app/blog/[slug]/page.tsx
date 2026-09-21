@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Post Not Found' }
 
   return {
-    title: post.title.en,
+    title: post.seoTitle ?? post.title.en,
     description: post.excerpt.en,
     alternates: { canonical: `https://saudicabsgmc.com/blog/${post.slug}` },
     openGraph: {

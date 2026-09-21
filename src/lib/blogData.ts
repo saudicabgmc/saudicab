@@ -17,6 +17,8 @@ export const blogCategoryLabels: Record<BlogCategory, { en: string; ar: string }
 
 export interface BlogPost {
   slug: string;
+  /** Optional <title> override. Only affects the HTML title tag; the H1, headline and breadcrumb keep using title.en. */
+  seoTitle?: string;
   title: { en: string; ar: string };
   excerpt: { en: string; ar: string };
   content: { en: string; ar: string };
@@ -1004,5 +1006,151 @@ export const blogPosts: BlogPost[] = [
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',
+  },
+  {
+    slug: 'taif-to-makkah-by-taxi',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'taif-to-makkah', label: { en: 'Taif to Makkah', ar: 'الطائف إلى مكة المكرمة' } },
+    seoTitle: 'Taif to Makkah by Taxi: 2026 Travel Guide',
+    title: {
+      en: 'Taif to Makkah by Taxi: Complete 2026 Travel Guide',
+      ar: 'من الطائف إلى مكة بالتاكسي: دليل السفر الشامل لعام 2026',
+    },
+    excerpt: {
+      en: 'Planning a Taif to Makkah taxi ride? Learn the route via Al-Hada, about 1.5 hours and ~90 km, vehicle options, luggage tips and how to book by WhatsApp.',
+      ar: 'تخطط لرحلة تاكسي من الطائف إلى مكة؟ تعرّف على الطريق عبر الهدا، ومدة الرحلة نحو 1.5 ساعة والمسافة حوالي 90 كم، وخيارات السيارات ونصائح الأمتعة وطريقة الحجز عبر واتساب.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Taif sits in the mountains above Makkah, and the drive between the two cities is one of the most popular short intercity trips in the region. Whether you are finishing a stay in Taif before Umrah or heading down to Makkah for the day, this guide covers what to expect on the road, how to choose a vehicle and what to prepare before you travel.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Taif to Makkah at a Glance</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Distance:</strong> approximately 90 km</li>
+  <li style="margin-bottom:0.5rem;"><strong>Travel time:</strong> approximately 1.5 hours — allow up to around 2 hours depending on traffic, pickup location and road conditions</li>
+  <li style="margin-bottom:0.5rem;"><strong>Route:</strong> via the Al-Hada mountain road</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicles:</strong> Sedan (4 seats), Hyundai Staria (7 seats), GMC Yukon (7 seats, VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>Booking:</strong> available 24/7 on WhatsApp</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">The Drive: What to Expect</h2>
+<p style="margin-bottom:1rem;">The trip runs from Taif down to Makkah via Al-Hada, a scenic mountain road, so you travel from the mountain city to the Holy City. The mountain section is scenic but can take a little longer than a flat highway. Leave a time buffer for traffic and changing road conditions, especially if you have a fixed appointment, a hotel check-in time or a prayer you want to reach.</p>
+<p style="margin-bottom:1rem;">If you plan to leave early in the morning or late at night, a private taxi lets you set your own departure time instead of following a timetable.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing a Vehicle</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Sedan (4 seats):</strong> suits individuals, couples and small families, with space for about 2 large bags.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria (7 seats):</strong> suits families and groups, with a large luggage space (5+ bags).</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC Yukon (7 seats, VIP):</strong> our premium option for travelers who want extra comfort.</li>
+</ul>
+<p style="margin-bottom:1rem;">Count your passengers and bags before you book. If your group is close to the limit, choose the larger vehicle.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Combining Taif With Umrah: Ihram and the Miqat</h2>
+<p style="margin-bottom:1rem;">If you are travelling from Taif to perform Umrah, the recognised miqat for pilgrims coming from the Taif direction is Qarn al-Manazil (also known as As-Sayl Al-Kabir), which lies on the Taif–Makkah road. Pilgrims intending Umrah enter the state of Ihram at or before the miqat, so keep your Ihram clothing within easy reach during the journey.</p>
+<p style="margin-bottom:1rem;">If you need to stop at the miqat, tell us when you book so we can confirm whether it can be arranged. If you are unsure which miqat applies to you — for example, because of where you travelled from before Taif — ask your Umrah group leader or a qualified scholar before you set off. Please note that Makkah is open to Muslims only. For more on preparing for Umrah, see our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Hajj Season and Busy Periods</h2>
+<p style="margin-bottom:1rem;">During Hajj, heavy traffic and official crowd-control and access rules can change routes and journey times, so do not rely on the usual 1.5 hours. Check the current official requirements before you travel and book early — we recommend at least 24 hours in advance during Hajj. Our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> answers the most common questions.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Luggage and Family Travel</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Tell us how many bags you have when you book, including any large or unusual items.</li>
+  <li style="margin-bottom:0.5rem;">Use the special requests field in the booking form for any extra details.</li>
+  <li style="margin-bottom:0.5rem;">Keep essentials — water, documents, Ihram clothing and medication — within reach rather than in the boot.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Pickup and Drop-off</h2>
+<p style="margin-bottom:1rem;">Pickup is possible from hotels and addresses in Taif, and drop-off can be at your Makkah hotel or near the Haram. Access close to the Haram can be limited and busy around prayer times, so share your hotel name and allow extra time for the final stretch. See our <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah taxi service</a> and <a href="/taif-taxi-service" style="color:#0B3D2E;font-weight:700;">Taif taxi service</a> pages for the areas we cover.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Travelling the Other Way, or via Jeddah</h2>
+<p style="margin-bottom:1rem;">Returning to Taif? See <a href="/makkah-to-taif" style="color:#0B3D2E;font-weight:700;">Makkah to Taif taxi</a>. If you are flying into Jeddah, the drive between Jeddah and Taif is about 100 km and roughly 1.5 hours — see <a href="/taif-to-jeddah" style="color:#0B3D2E;font-weight:700;">Taif to Jeddah</a> and <a href="/jeddah-to-taif" style="color:#0B3D2E;font-weight:700;">Jeddah to Taif</a>. For getting around once you are in Makkah, read our <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">Makkah Transport Guide</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Send your pickup, destination, date, time and number of passengers on WhatsApp or through the booking form.</li>
+  <li style="margin-bottom:0.5rem;">Choose your vehicle: Sedan, Hyundai Staria or GMC Yukon.</li>
+  <li style="margin-bottom:0.5rem;">Contact Saudi Cabs GMC on WhatsApp for the current fare and confirm your booking.</li>
+</ol>
+<p style="margin-bottom:1rem;">For route details, see the <a href="/taif-to-makkah" style="color:#0B3D2E;font-weight:700;">Taif to Makkah taxi page</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long is the drive from Taif to Makkah?</h3>
+<p style="margin-bottom:1rem;">About 1.5 hours. Allow up to around 2 hours depending on traffic and road conditions.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far is it?</h3>
+<p style="margin-bottom:1rem;">Approximately 90 km.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which road does the taxi take?</h3>
+<p style="margin-bottom:1rem;">The Al-Hada mountain road.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does it cost?</h3>
+<p style="margin-bottom:1rem;">The fare depends on the vehicle, pickup location and trip details. Contact Saudi Cabs GMC on WhatsApp for the current fare.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book during Hajj?</h3>
+<p style="margin-bottom:1rem;">Yes. We recommend booking at least 24 hours ahead, and journey times can vary significantly during Hajj.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can non-Muslims travel to Makkah?</h3>
+<p style="margin-bottom:1rem;">No. Makkah is open to Muslims only. Taif is open to all visitors.</p>`,
+      ar: `<p style="margin-bottom:1rem;">تقع الطائف في الجبال المطلة على مكة، والطريق بين المدينتين من أشهر الرحلات القصيرة بين المدن في المنطقة. سواء كنت تنهي إقامتك في الطائف قبل العمرة أو تتجه إلى مكة ليوم واحد، يغطي هذا الدليل ما تتوقعه على الطريق وكيف تختار السيارة وما تجهّزه قبل السفر.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من الطائف إلى مكة في لمحة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>المسافة:</strong> حوالي 90 كم</li>
+  <li style="margin-bottom:0.5rem;"><strong>مدة الرحلة:</strong> حوالي 1.5 ساعة، وقد تصل إلى نحو ساعتين حسب حركة المرور وموقع الاستلام وحالة الطريق</li>
+  <li style="margin-bottom:0.5rem;"><strong>الطريق:</strong> عبر طريق الهدا الجبلي</li>
+  <li style="margin-bottom:0.5rem;"><strong>السيارات:</strong> سيدان (4 مقاعد)، هيونداي ستاريا (7 مقاعد)، GMC يوكون (7 مقاعد، VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>الحجز:</strong> متاح 24/7 عبر واتساب</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الرحلة: ماذا تتوقع</h2>
+<p style="margin-bottom:1rem;">تنطلق الرحلة من الطائف نزولاً إلى مكة عبر طريق الهدا، وهو طريق جبلي خلاب، فتنتقل من مدينة الجبال إلى البلد الحرام. الجزء الجبلي خلاب لكنه قد يستغرق وقتاً أطول قليلاً من الطريق المستوي. اترك هامش وقت لحركة المرور وتغيّر حالة الطريق، خاصةً إذا كان لديك موعد محدد أو وقت دخول إلى الفندق أو صلاة تريد إدراكها.</p>
+<p style="margin-bottom:1rem;">وإذا كنت تنوي الانطلاق في الصباح الباكر أو في وقت متأخر من الليل، فالتاكسي الخاص يتيح لك تحديد موعد الانطلاق بدلاً من الالتزام بجدول.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار السيارة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>سيدان (4 مقاعد):</strong> مناسب للأفراد والأزواج والعائلات الصغيرة، ويتسع لحوالي حقيبتين كبيرتين.</li>
+  <li style="margin-bottom:0.5rem;"><strong>هيونداي ستاريا (7 مقاعد):</strong> مناسبة للعائلات والمجموعات، ولها مساحة أمتعة كبيرة (5 حقائب أو أكثر).</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC يوكون (7 مقاعد، VIP):</strong> خيارنا الفاخر للمسافرين الذين يريدون راحة إضافية.</li>
+</ul>
+<p style="margin-bottom:1rem;">احسب عدد الركاب والحقائب قبل الحجز. وإذا كانت مجموعتك قريبة من الحد الأقصى، فاختر السيارة الأكبر.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الجمع بين الطائف والعمرة: الإحرام والميقات</h2>
+<p style="margin-bottom:1rem;">إذا كنت مسافراً من الطائف لأداء العمرة، فإن الميقات المعروف لمن يأتي من اتجاه الطائف هو قرن المنازل (ويُعرف أيضاً بالسيل الكبير)، ويقع على طريق الطائف – مكة. ويُحرم من ينوي العمرة عند الميقات أو قبله، لذا اجعل ملابس الإحرام في متناول يدك أثناء الرحلة.</p>
+<p style="margin-bottom:1rem;">وإذا كنت تحتاج إلى التوقف عند الميقات، فأخبرنا عند الحجز لنؤكد لك إمكانية ترتيب ذلك. وإذا لم تكن متأكداً من الميقات الذي ينطبق عليك — مثلاً بسبب المكان الذي سافرت منه قبل الطائف — فاسأل مسؤول مجموعتك أو أحد أهل العلم قبل الانطلاق. وتنبّه إلى أن مكة المكرمة للمسلمين فقط. ولمزيد من التحضير للعمرة راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">موسم الحج والأوقات المزدحمة</h2>
+<p style="margin-bottom:1rem;">خلال الحج، قد يغيّر الازدحام الشديد وأنظمة إدارة الحشود والوصول الرسمية المسارات وأوقات الرحلات، فلا تعتمد على المدة المعتادة البالغة 1.5 ساعة. تحقق من المتطلبات الرسمية الحالية قبل السفر واحجز مبكراً — ننصح بالحجز قبل 24 ساعة على الأقل خلال الحج. وتجيب <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> عن أكثر الأسئلة تكراراً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأمتعة والسفر مع العائلة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أخبرنا بعدد حقائبك عند الحجز، بما فيها أي أمتعة كبيرة أو غير معتادة.</li>
+  <li style="margin-bottom:0.5rem;">استخدم حقل الطلبات الخاصة في نموذج الحجز لإضافة أي تفاصيل أخرى.</li>
+  <li style="margin-bottom:0.5rem;">أبقِ الأساسيات — الماء والوثائق وملابس الإحرام والأدوية — في متناول يدك بدلاً من وضعها في صندوق السيارة.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الاستلام والتوصيل</h2>
+<p style="margin-bottom:1rem;">يمكن الاستلام من الفنادق والعناوين في الطائف، ويمكن التوصيل إلى فندقك في مكة أو بالقرب من الحرم. قد يكون الوصول القريب من الحرم محدوداً ومزدحماً في أوقات الصلاة، لذا شاركنا اسم فندقك وامنح نفسك وقتاً إضافياً للمسافة الأخيرة. راجع صفحتي <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي مكة</a> و<a href="/taif-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي الطائف</a> لمعرفة المناطق التي نغطيها.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الرحلة في الاتجاه المعاكس أو عبر جدة</h2>
+<p style="margin-bottom:1rem;">هل ستعود إلى الطائف؟ راجع <a href="/makkah-to-taif" style="color:#0B3D2E;font-weight:700;">تاكسي مكة إلى الطائف</a>. وإذا كنت ستصل إلى جدة جواً، فالمسافة بين جدة والطائف نحو 100 كم وحوالي 1.5 ساعة — راجع <a href="/taif-to-jeddah" style="color:#0B3D2E;font-weight:700;">الطائف إلى جدة</a> و<a href="/jeddah-to-taif" style="color:#0B3D2E;font-weight:700;">جدة إلى الطائف</a>. وللتنقل داخل مكة اقرأ <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">دليل النقل في مكة</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أرسل موقع الاستلام والوجهة والتاريخ والوقت وعدد الركاب عبر واتساب أو من خلال نموذج الحجز.</li>
+  <li style="margin-bottom:0.5rem;">اختر سيارتك: سيدان أو هيونداي ستاريا أو GMC يوكون.</li>
+  <li style="margin-bottom:0.5rem;">تواصل مع Saudi Cabs GMC عبر واتساب لمعرفة السعر الحالي وتأكيد حجزك.</li>
+</ol>
+<p style="margin-bottom:1rem;">لتفاصيل الخط راجع <a href="/taif-to-makkah" style="color:#0B3D2E;font-weight:700;">صفحة تاكسي الطائف إلى مكة</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة من الطائف إلى مكة؟</h3>
+<p style="margin-bottom:1rem;">حوالي 1.5 ساعة، وقد تصل إلى نحو ساعتين حسب حركة المرور وحالة الطريق.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم المسافة؟</h3>
+<p style="margin-bottom:1rem;">حوالي 90 كم.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">أي طريق يسلكه التاكسي؟</h3>
+<p style="margin-bottom:1rem;">طريق الهدا الجبلي.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم التكلفة؟</h3>
+<p style="margin-bottom:1rem;">يعتمد السعر على السيارة وموقع الاستلام وتفاصيل الرحلة. تواصل مع Saudi Cabs GMC عبر واتساب لمعرفة السعر الحالي.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني الحجز خلال الحج؟</h3>
+<p style="margin-bottom:1rem;">نعم. ننصح بالحجز قبل 24 ساعة على الأقل، وقد تختلف أوقات الرحلة بشكل كبير خلال الحج.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكن لغير المسلمين السفر إلى مكة؟</h3>
+<p style="margin-bottom:1rem;">لا. مكة المكرمة للمسلمين فقط، أما الطائف فمفتوحة لجميع الزوار.</p>`,
+    },
+    date: '2026-09-21',
+    image: '/location/taif.webp',
   },
 ];
