@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FAQSection from './FAQSection'
 import PricingSection from './PricingSection'
 import {
-  Phone, MessageCircle, Car,
+  MessageCircle, Car,
   Building2, Plane, Bus, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 } from 'lucide-react'
@@ -118,8 +118,9 @@ export default function TaifLocationPage({
               </div>
 
               <h1 style={{ fontSize: 'clamp(1.9rem, 4.5vw, 3rem)', fontWeight: '900', lineHeight: '1.18', marginBottom: '18px', textShadow: '0 2px 16px rgba(0,0,0,0.35)' }}>
-                {tr.transportIn}<br />
-                <span style={{ color: '#e9c46a' }}>{tx(cityName)}</span>
+                {isAr
+                  ? <>خدمة تاكسي ونقل خاص في <span style={{ color: '#e9c46a' }}>{tx(cityName)}</span></>
+                  : <><span style={{ color: '#e9c46a' }}>{tx(cityName)}</span> Taxi &amp; Private Transport Services</>}
               </h1>
 
               <div style={{
@@ -133,25 +134,17 @@ export default function TaifLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+923097811785" style={{
-                  display: 'flex', alignItems: 'center', gap: '8px',
-                  background: '#2d6a4f', color: 'white', padding: '13px 28px',
-                  borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
-                  border: '2px solid rgba(233,196,106,0.4)',
-                }}>
-                  <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
-                </a>
                 <a
                   href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
-                    background: 'rgba(255,255,255,0.10)', color: 'white', padding: '13px 28px',
-                    borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem',
-                    textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)',
+                    background: '#2d6a4f', color: 'white', padding: '13px 28px',
+                    borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
+                    border: '2px solid rgba(233,196,106,0.4)',
                   }}
                 >
-                  <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
+                  <MessageCircle size={16} strokeWidth={2.5} /> {t[lang].nav.bookWhatsapp}
                 </a>
               </div>
 
@@ -422,14 +415,6 @@ export default function TaifLocationPage({
                 }}
               >
                 <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
-              </a>
-              <a href="tel:+923097811785" style={{
-                display: 'flex', alignItems: 'center', gap: '8px',
-                background: 'rgba(233,196,106,0.15)', color: '#e9c46a', padding: '13px 28px',
-                borderRadius: '12px', fontWeight: '700', fontSize: '0.9rem', textDecoration: 'none',
-                border: '1px solid rgba(233,196,106,0.4)',
-              }}>
-                <Phone size={16} strokeWidth={2.5} /> +92 309 7811785
               </a>
             </div>
           </div>
