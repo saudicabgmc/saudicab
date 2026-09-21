@@ -111,6 +111,76 @@ export const homeFaqs: FAQItem[] = [
       ar: 'لا يوجد دفع مسبق مطلوب لتأكيد الحجز. يتم الدفع لسائقك نقداً (بالريال السعودي) أو عن طريق التحويل البنكي، عادةً عند انتهاء الرحلة ما لم يُتفق على غير ذلك عند الحجز.',
     },
   },
+  {
+    q: {
+      en: 'Is the price per person or per vehicle?',
+      ar: 'هل السعر للفرد أم للسيارة؟',
+    },
+    a: {
+      en: 'Prices are per vehicle, not per person. The fare depends on your route and the vehicle you choose (Sedan, Hyundai Staria or GMC Yukon) and is confirmed with you on WhatsApp before your trip.',
+      ar: 'الأسعار للسيارة الواحدة وليس للفرد. يعتمد السعر على مسارك والسيارة التي تختارها (سيدان أو هيونداي ستاريا أو GMC يوكون) ويتم تأكيده معك عبر واتساب قبل رحلتك.',
+    },
+  },
+  {
+    q: {
+      en: 'What happens after I send my booking on WhatsApp?',
+      ar: 'ماذا يحدث بعد إرسال طلب الحجز عبر واتساب؟',
+    },
+    a: {
+      en: 'We reply on WhatsApp to confirm your fixed fare, the vehicle and your pickup details. No advance payment is needed to confirm the booking.',
+      ar: 'نرد عليك عبر واتساب لتأكيد السعر الثابت والسيارة وتفاصيل الاستقبال. لا حاجة لدفع مسبق لتأكيد الحجز.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I cancel or change my booking?',
+      ar: 'هل يمكنني إلغاء الحجز أو تعديله؟',
+    },
+    a: {
+      en: 'Yes. You can cancel free of charge at least 3 hours before your pickup time by messaging us on WhatsApp. Cancellations made less than 3 hours before pickup may incur a 25% fee. For airport pickups, free cancellation is available up to 2 hours after your flight lands. Full details are in our Terms & Conditions.',
+      ar: 'نعم. يمكنك الإلغاء مجاناً قبل موعد الاستقبال بـ٣ ساعات على الأقل عبر رسالة واتساب. قد تُطبق رسوم إلغاء بنسبة ٢٥٪ عند الإلغاء قبل أقل من ٣ ساعات من الموعد. بالنسبة لاستقبال المطار، الإلغاء المجاني متاح حتى ساعتين بعد هبوط رحلتك. التفاصيل الكاملة في الشروط والأحكام.',
+    },
+  },
+  {
+    q: {
+      en: 'What if my flight is delayed?',
+      ar: 'ماذا لو تأخرت رحلتي؟',
+    },
+    a: {
+      en: 'Add your flight number when you book, and message us on WhatsApp if your arrival time changes. Airport pickups can be cancelled free of charge up to 2 hours after your flight lands, to allow for immigration and baggage delays.',
+      ar: 'أضف رقم رحلتك عند الحجز، وراسلنا عبر واتساب إذا تغيّر موعد وصولك. يمكن إلغاء استقبال المطار مجاناً حتى ساعتين بعد هبوط الرحلة، مراعاةً لإجراءات الجوازات والحقائب.',
+    },
+  },
+  {
+    q: {
+      en: 'How will I recognise my driver at the airport?',
+      ar: 'كيف أتعرف على السائق في المطار؟',
+    },
+    a: {
+      en: 'For airport pickups, your driver meets you in the arrivals hall with a name board.',
+      ar: 'في استقبال المطار، يقابلك السائق في صالة الوصول حاملاً لوحة باسمك.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I request a child seat or other special needs?',
+      ar: 'هل يمكنني طلب مقعد أطفال أو احتياجات خاصة؟',
+    },
+    a: {
+      en: 'Add it under "Special Requests" in the booking form or tell us on WhatsApp when you book, and we will confirm whether it can be arranged for your trip.',
+      ar: 'أضفه في خانة "طلبات خاصة" في نموذج الحجز أو أخبرنا عبر واتساب عند الحجز، وسنؤكد لك إمكانية توفيره لرحلتك.',
+    },
+  },
+  {
+    q: {
+      en: 'Which vehicle should I choose?',
+      ar: 'أي سيارة أختار؟',
+    },
+    a: {
+      en: 'The Sedan seats up to 4 passengers and suits individuals, couples and small families. The Hyundai Staria seats 7 with a large luggage space, which suits families and pilgrim groups. The GMC Yukon is our VIP 7-seat SUV.',
+      ar: 'السيدان يتسع لـ٤ ركاب ويناسب الأفراد والأزواج والعائلات الصغيرة. هيونداي ستاريا تتسع لـ٧ ركاب مع مساحة أمتعة كبيرة وتناسب العائلات ومجموعات الحجاج. أما GMC يوكون فهي سيارة VIP بـ٧ مقاعد.',
+    },
+  },
 ]
 
 export const makkahFaqs: FAQItem[] = [
@@ -126,12 +196,42 @@ export const makkahFaqs: FAQItem[] = [
   },
   {
     q: {
+      en: 'How much is a taxi from Jeddah Airport to Makkah?',
+      ar: 'كم تبلغ تكلفة التاكسي من مطار جدة إلى مكة المكرمة؟',
+    },
+    a: {
+      en: 'Fares are per vehicle, not per person. From Jeddah Airport to a Makkah hotel: Sedan 330 SAR, Hyundai Staria 380 SAR and GMC Yukon 530 SAR. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it. The drive usually takes about 55–90 minutes.',
+      ar: 'الأسعار للسيارة الواحدة وليس للفرد. من مطار جدة إلى فندق في مكة: سيدان 330 ريالاً، هيونداي ستاريا 380 ريالاً، وGMC يوكون 530 ريالاً. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه. تستغرق الرحلة عادةً من 55 إلى 90 دقيقة تقريباً.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I book airport pickup 24/7?',
+      ar: 'هل يمكنني حجز الاستقبال من المطار في أي وقت على مدار الساعة؟',
+    },
+    a: {
+      en: 'Yes, bookings are open 24/7, including early-morning and late-night arrivals at Jeddah Airport. Please include your flight number and arrival time when you book so we can confirm the pickup details with you.',
+      ar: 'نعم، الحجز متاح على مدار الساعة، بما في ذلك الوصول في الصباح الباكر أو في وقت متأخر من الليل إلى مطار جدة. يرجى إضافة رقم رحلتك وموعد وصولك عند الحجز حتى نؤكد معك تفاصيل الاستقبال.',
+    },
+  },
+  {
+    q: {
       en: 'Is there a 24-hour cab service near the Holy Mosque in Makkah?',
       ar: 'هل توجد خدمة كاب على مدار الساعة بالقرب من المسجد الحرام في مكة؟',
     },
     a: {
       en: 'Yes, Saudi Cabs GMC offers 24/7 transportation availability for Holy Mosque, hotel, and other major Makkah transfers, including after Fajr, Tarawih, or any prayer time — subject to driver availability and local access or traffic conditions.',
       ar: 'نعم، توفر Saudi Cabs GMC خدمة نقل متاحة على مدار الساعة للحرم المكي والفنادق وأبرز وجهات مكة، بما في ذلك بعد الفجر أو التراويح أو أي وقت من الصلاة — حسب توفر السائقين وحالة الطرق أو حركة المرور.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I book a taxi to a hotel near Masjid al-Haram?',
+      ar: 'هل يمكنني حجز تاكسي إلى فندق قريب من المسجد الحرام؟',
+    },
+    a: {
+      en: 'Yes. Share your hotel name when you book and we will confirm the pickup or drop-off details with you. Access close to the Haram can be limited and busy around prayer times, so allow some extra time for the final stretch.',
+      ar: 'نعم. شارك اسم فندقك عند الحجز وسنؤكد معك تفاصيل الاستلام أو التوصيل. قد يكون الوصول القريب من الحرم محدوداً ومزدحماً في أوقات الصلاة، لذا امنح نفسك وقتاً إضافياً للمسافة الأخيرة.',
     },
   },
   {
@@ -156,6 +256,16 @@ export const makkahFaqs: FAQItem[] = [
   },
   {
     q: {
+      en: 'Do you provide Makkah Ziyarat tours?',
+      ar: 'هل تقدمون جولات زيارات في مكة المكرمة؟',
+    },
+    a: {
+      en: 'Yes. A Makkah Ziyarat trip gives you a private driver and vehicle to visit historical Islamic sites for the duration you choose. Listed fares per vehicle: Sedan 250 SAR, Hyundai Staria 320 SAR and GMC Yukon 500 SAR. Confirm the sites and duration on WhatsApp before the trip.',
+      ar: 'نعم. تمنحك رحلة الزيارات في مكة سائقاً خاصاً وسيارة لزيارة المواقع الإسلامية التاريخية للمدة التي تختارها. الأسعار المعروضة للسيارة الواحدة: سيدان 250 ريالاً، هيونداي ستاريا 320 ريالاً، وGMC يوكون 500 ريال. أكّد المواقع والمدة عبر واتساب قبل الرحلة.',
+    },
+  },
+  {
+    q: {
       en: 'What is the fastest way to travel from Makkah to Mina during Hajj?',
       ar: 'ما أسرع طريقة للتنقل من مكة المكرمة إلى منى خلال الحج؟',
     },
@@ -176,6 +286,16 @@ export const makkahFaqs: FAQItem[] = [
   },
   {
     q: {
+      en: 'Do you provide transportation for families with luggage?',
+      ar: 'هل توفرون نقلاً للعائلات مع الأمتعة؟',
+    },
+    a: {
+      en: 'Yes. The Hyundai Staria seats 7 with a large luggage space, and the GMC Yukon is a 7-seat VIP SUV. The Sedan seats up to 4. Add the number of passengers and bags in the booking form or on WhatsApp so we can confirm the right vehicle for your group.',
+      ar: 'نعم. تتسع هيونداي ستاريا لـ7 ركاب مع مساحة أمتعة كبيرة، أما GMC يوكون فهي سيارة VIP بـ7 مقاعد. ويتسع السيدان لـ4 ركاب كحد أقصى. أضف عدد الركاب والحقائب في نموذج الحجز أو عبر واتساب لنؤكد لك السيارة المناسبة لمجموعتك.',
+    },
+  },
+  {
+    q: {
       en: 'Can I hire a private driver for a full day in Makkah?',
       ar: 'هل يمكنني استئجار سائق خاص ليوم كامل في مكة المكرمة؟',
     },
@@ -192,6 +312,16 @@ export const makkahFaqs: FAQItem[] = [
     a: {
       en: 'You can book a private Makkah to Madinah trip through the booking form on this page or via WhatsApp. The journey takes approximately 4.5 to 5 hours, subject to traffic and road conditions.',
       ar: 'يمكنك حجز رحلة خاصة من مكة المكرمة إلى المدينة المنورة عبر نموذج الحجز في هذه الصفحة أو عبر واتساب. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً، حسب حركة المرور وحالة الطريق.',
+    },
+  },
+  {
+    q: {
+      en: 'How much is a private taxi from Makkah to Madinah?',
+      ar: 'كم تبلغ تكلفة التاكسي الخاص من مكة المكرمة إلى المدينة المنورة؟',
+    },
+    a: {
+      en: 'Fares are per vehicle, not per person: Sedan 350 SAR, Hyundai Staria 400 SAR and GMC Yukon 680 SAR. The journey takes approximately 4.5 to 5 hours. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it.',
+      ar: 'الأسعار للسيارة الواحدة وليس للفرد: سيدان 350 ريالاً، هيونداي ستاريا 400 ريال، وGMC يوكون 680 ريالاً. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه.',
     },
   },
   {

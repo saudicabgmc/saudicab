@@ -186,7 +186,7 @@ export default function PricingSection({ routes, heading }: Props) {
                         <div
                           key={rate.key}
                           style={{
-                            padding: '16px 18px',
+                            padding: '16px clamp(4px, 1.8vw, 18px)',
                             textAlign: 'center',
                             borderRight: !isAr && i < 2 ? '1px solid var(--border)' : undefined,
                             borderLeft: isAr && i < 2 ? '1px solid var(--border)' : undefined,

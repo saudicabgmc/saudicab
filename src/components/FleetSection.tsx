@@ -8,6 +8,10 @@ type BText = { ar: string; en: string }
 interface FleetSectionProps {
   pricing: PricingRoute[]
   cityName?: BText
+  /** Show the "From X SAR*" badge. Turn off where fares are route-dependent and a single "from" price would mislead. */
+  showFromPrice?: boolean
+  /** Optional one-line "who is this vehicle for" text per vehicle. */
+  bestFor?: Partial<Record<'sedan' | 'staria' | 'gmc', BText>>
 }
 
 const CARS = [
@@ -46,7 +50,7 @@ const CARS = [
   },
 ]
 
-export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
+export default function FleetSection({ pricing, cityName, showFromPrice = true, bestFor }: FleetSectionProps) {
   const { lang, isAr } = useLang()
 
   return (
@@ -122,7 +126,7 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
                     {isAr ? car.badge.ar : car.badge.en}
                   </div>
                   {/* Starting from price */}
-                  {routes.length > 0 && (
+                  {showFromPrice && routes.length > 0 && (
                     <div style={{
                       position: 'absolute', bottom: '12px', right: isAr ? 'auto' : '12px', left: isAr ? '12px' : 'auto',
                       background: 'rgba(0,0,0,0.75)', color: 'white',
@@ -145,6 +149,15 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
                     <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.5' }}>
                       {isAr ? car.descAr : car.descEn}
                     </p>
+                    {bestFor?.[car.key] && (
+                      <p style={{
+                        fontSize: '0.8rem', fontWeight: '700', color: 'var(--secondary)', lineHeight: '1.5',
+                        marginTop: '10px', padding: '8px 12px', borderRadius: '10px', background: 'var(--accent)',
+                        border: '1px solid rgba(170,131,24,0.25)',
+                      }}>
+                        {isAr ? 'مناسبة لـ: ' : 'Ideal for: '}{bestFor[car.key]![lang]}
+                      </p>
+                    )}
                   </div>
 
                   {/* Price rows */}
@@ -204,9 +217,13 @@ export default function FleetSection({ pricing, cityName }: FleetSectionProps) {
             : '✅ Route-based pricing · Instant WhatsApp reply · No advance payment · Available 24/7'}
         </p>
         <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>
-          {isAr
-            ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
-            : '*Starting fare shown for the lowest-cost route. Prices are in SAR per vehicle, not per person. Final price depends on the selected route and trip details.'}
+          {showFromPrice
+            ? (isAr
+              ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
+              : '*Starting fare shown for the lowest-cost route. Prices are in SAR per vehicle, not per person. Final price depends on the selected route and trip details.')
+            : (isAr
+              ? 'الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
+              : 'Prices are in SAR per vehicle, not per person. The final price depends on the selected route and trip details.')}
         </p>
 
       </div>

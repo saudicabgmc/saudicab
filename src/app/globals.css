@@ -635,7 +635,7 @@ select.form-input {
 }
 
 .hero-h1 {
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2.1rem, 4.4vw, 3.1rem);
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: 18px;
@@ -688,4 +688,29 @@ select.form-input {
   .hero-h1 { font-size: 1.7rem; }
   .cta-title-lg { font-size: 1.3rem; }
   .gallery-5col { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Makkah city page (/makkah-taxi-service) ── */
+.mk-hero { min-height: min(88vh, 780px); padding: 128px 24px 80px; }
+.mk-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.mk-grid-lg { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.mk-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+a.mk-card:hover, a.mk-card:focus-visible { transform: translateY(-3px); }
+a.mk-card-dark:hover, a.mk-card-dark:focus-visible { background: rgba(255, 255, 255, 0.08) !important; border-color: rgba(212, 175, 55, 0.55) !important; }
+a.mk-card-light:hover, a.mk-card-light:focus-visible { box-shadow: var(--shadow-md); border-color: var(--primary) !important; }
+.mk-btn { min-height: 48px; justify-content: center; text-align: center; }
+.mk-btn-wa { background: #128C4A; color: white; box-shadow: 0 6px 20px rgba(18, 140, 74, 0.4); border: 2px solid transparent; }
+.mk-btn-wa:hover { background: #0F7A40; transform: translateY(-2px); }
+.mk-focus:focus-visible, a.mk-card:focus-visible { outline: 3px solid #D4AF37; outline-offset: 3px; }
+.mk-crumbs a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .mk-hero { min-height: auto; padding: 100px 16px 52px; }
+  .mk-hero-ctas { flex-direction: column; align-items: stretch; }
+  .mk-hero-ctas .mk-btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mk-card, .mk-btn-wa { transition: none; }
+  a.mk-card:hover, a.mk-card:focus-visible, .mk-btn-wa:hover { transform: none; }
 }
