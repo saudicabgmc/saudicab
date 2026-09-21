@@ -1,4 +1,11 @@
-﻿export type BlogCategory =
+﻿import { getPricing } from '@/lib/pricingData';
+
+// Makkah hotel -> Jeddah Airport fares, read from the single pricing source so the blog can't drift.
+const makkahJedFares = Object.fromEntries(
+  getPricing('makkah-jed')[0].rates.map(r => [r.key, r.price])
+) as Record<'sedan' | 'staria' | 'gmc', number>;
+
+export type BlogCategory =
   | 'Hajj & Umrah'
   | 'Airport Transfers'
   | 'Intercity Travel'
@@ -1152,5 +1159,173 @@ export const blogPosts: BlogPost[] = [
     },
     date: '2026-09-21',
     image: '/location/taif.webp',
+  },
+  {
+    slug: 'makkah-to-jeddah-airport-by-taxi',
+    category: 'Airport Transfers',
+    relatedRoute: { slug: 'makkah-to-jeddah-airport', label: { en: 'Makkah to Jeddah Airport', ar: 'مكة المكرمة إلى مطار جدة' } },
+    seoTitle: 'Makkah to Jeddah Airport by Taxi: 2026 Guide',
+    title: {
+      en: 'Makkah to Jeddah Airport by Taxi: Complete 2026 Travel Guide',
+      ar: 'من مكة إلى مطار جدة بالتاكسي: دليل السفر الشامل لعام 2026',
+    },
+    excerpt: {
+      en: 'Planning the trip from Makkah to Jeddah Airport? Learn the ~90 km route, travel time, vehicle options, luggage tips and how to book a private taxi by WhatsApp.',
+      ar: 'تخطط للرحلة من مكة إلى مطار جدة؟ تعرّف على المسافة البالغة حوالي 90 كم، ومدة الرحلة، وخيارات السيارات ونصائح الأمتعة، وكيف تحجز تاكسياً خاصاً عبر واتساب.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Getting from Makkah to King Abdulaziz International Airport (JED) is a straightforward road trip, but a smooth departure day still takes a little planning. This guide covers the distance and travel time, how to choose a vehicle, what to prepare for your luggage and how to book a private taxi from your Makkah hotel.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Makkah to Jeddah Airport at a Glance</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Distance:</strong> approximately 90 km</li>
+  <li style="margin-bottom:0.5rem;"><strong>Travel time:</strong> usually around an hour — allow roughly 55 to 90 minutes depending on traffic, pickup location and road conditions</li>
+  <li style="margin-bottom:0.5rem;"><strong>Destination:</strong> King Abdulaziz International Airport (JED), Jeddah</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicles:</strong> Sedan (4 seats), Hyundai Staria (7 seats), GMC Yukon (7 seats, VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>Booking:</strong> available 24/7 on WhatsApp</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Why Book a Private Taxi?</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Door-to-door:</strong> pickup from your hotel or address in Makkah, without changing vehicles on the way.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Your schedule:</strong> a private booking is for your group only, so you choose the pickup time.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Luggage-friendly:</strong> you can pick a vehicle by the number of passengers and bags you have.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Fare agreed in advance:</strong> the fare for your route and vehicle is confirmed on WhatsApp before you travel.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Simple booking:</strong> send your details on WhatsApp or through the booking form, without an app.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How Long Does Makkah to Jeddah Airport Take?</h2>
+<p style="margin-bottom:1rem;">The distance is approximately 90 km and the drive usually takes around an hour. Traffic, your pickup location and road conditions can make it longer, so plan for a range of roughly 55 to 90 minutes rather than a single figure. During Hajj and other busy periods, official crowd-control and access rules can also change journey times. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> and <a href="/blog/hajj-2026-transport-makkah-traffic-tips" style="color:#0B3D2E;font-weight:700;">Hajj transport traffic tips</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing the Right Vehicle</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Sedan (4 seats):</strong> suits individuals, couples and small families, with space for about 2 large bags.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria (7 seats):</strong> suits families and groups, with a large luggage space (5+ bags).</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC Yukon (7 seats, VIP):</strong> our premium option for travelers who want extra comfort.</li>
+</ul>
+<p style="margin-bottom:1rem;">Listed fares from a Makkah hotel to Jeddah Airport, per vehicle, not per person: <strong>Sedan SAR ${makkahJedFares.sedan}</strong>, <strong>Hyundai Staria SAR ${makkahJedFares.staria}</strong>, <strong>GMC Yukon SAR ${makkahJedFares.gmc}</strong>. Please confirm the current fare with us on WhatsApp before you book. Extra stops, waiting time, special requests or route changes may affect the final fare, and any change is confirmed before the trip. For other fares, see our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices in Saudi Arabia</a> guide.</p>
+<p style="margin-bottom:1rem;">Not sure which to pick for a family? Read <a href="/blog/gmc-yukon-vs-staria-family-umrah" style="color:#0B3D2E;font-weight:700;">GMC Yukon vs Hyundai Staria for Family Umrah</a>, or see the <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria taxi</a> and <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon hire</a> pages.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">From Makkah Hotel to Jeddah Airport</h2>
+<p style="margin-bottom:1rem;">Pickup is possible from hotels and major areas across Makkah. Share your hotel name when you book so we can confirm the pickup details. Access close to the Haram can be limited and busy around prayer times, so allow a little extra time to reach your vehicle.</p>
+<p style="margin-bottom:1rem;">For the route page with details, see <a href="/makkah-to-jeddah-airport" style="color:#0B3D2E;font-weight:700;">Makkah to Jeddah Airport</a>; for the city service, see <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah taxi service</a>. If your destination is Jeddah city rather than the airport, see <a href="/makkah-to-jeddah" style="color:#0B3D2E;font-weight:700;">Makkah to Jeddah taxi</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How Early Should You Leave Makkah for Your Flight?</h2>
+<p style="margin-bottom:1rem;">There is no single time that suits every flight, so work backwards from your departure:</p>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Check your airline's check-in instructions and cut-off time.</li>
+  <li style="margin-bottom:0.5rem;">Add the journey — roughly 55 to 90 minutes.</li>
+  <li style="margin-bottom:0.5rem;">Add a buffer for Makkah traffic, hotel check-out and loading your luggage.</li>
+  <li style="margin-bottom:0.5rem;">Set your pickup time from the result.</li>
+</ol>
+<p style="margin-bottom:1rem;">For booking, we recommend booking at least 3 to 6 hours ahead, and the night before for early-morning or late-night flights. Same-day bookings are accepted when available. Give us your flight number: the booking form asks for it for airport transfers.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Luggage Tips</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Count your passengers and bags before choosing a vehicle. If your group is close to the limit, choose the larger vehicle.</li>
+  <li style="margin-bottom:0.5rem;">Tell us about any large or unusual items when you book, or use the special requests field in the booking form.</li>
+  <li style="margin-bottom:0.5rem;">Keep your passport, tickets and important documents with you rather than in the boot.</li>
+  <li style="margin-bottom:0.5rem;">Coming back to Makkah later? See <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah</a> and our <a href="/blog/how-to-travel-jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">travel tips for the airport to Makkah journey</a>.</li>
+  <li style="margin-bottom:0.5rem;">Packing for Umrah? See the <a href="/blog/umrah-checklist-transport-hotels-packing" style="color:#0B3D2E;font-weight:700;">Umrah checklist</a> and the <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a>.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book Your Taxi</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Send your pickup point, date, time, number of passengers and flight number on WhatsApp or through the booking form.</li>
+  <li style="margin-bottom:0.5rem;">Choose your vehicle: Sedan, Hyundai Staria or GMC Yukon.</li>
+  <li style="margin-bottom:0.5rem;">Confirm the current fare with Saudi Cabs GMC on WhatsApp before you book.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far is Jeddah Airport from Makkah?</h3>
+<p style="margin-bottom:1rem;">Approximately 90 km.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the taxi take?</h3>
+<p style="margin-bottom:1rem;">Usually around an hour. Allow roughly 55 to 90 minutes depending on traffic, pickup location and road conditions.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book at any time of day?</h3>
+<p style="margin-bottom:1rem;">Bookings are available 24/7. For early-morning or late-night flights, we recommend booking the night before.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does it cost?</h3>
+<p style="margin-bottom:1rem;">Listed fares from a Makkah hotel to Jeddah Airport are SAR ${makkahJedFares.sedan} (Sedan), SAR ${makkahJedFares.staria} (Hyundai Staria) and SAR ${makkahJedFares.gmc} (GMC Yukon), per vehicle. Confirm the current fare on WhatsApp before booking.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book a 7-seater?</h3>
+<p style="margin-bottom:1rem;">Yes. The Hyundai Staria and GMC Yukon (VIP) each seat 7.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can you pick me up from my hotel?</h3>
+<p style="margin-bottom:1rem;">We provide pickup from hotels and major areas across Makkah. Share your hotel name when you book.</p>`,
+      ar: `<p style="margin-bottom:1rem;">تخطط للانتقال من مكة إلى مطار الملك عبدالعزيز الدولي (JED)؟ الطريق بسيط، لكن يوم المغادرة يحتاج إلى قليل من التخطيط. يغطي هذا الدليل المسافة ومدة الرحلة وكيف تختار السيارة وما تجهّزه لأمتعتك وكيف تحجز تاكسياً خاصاً من فندقك في مكة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من مكة إلى مطار جدة في لمحة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>المسافة:</strong> حوالي 90 كم</li>
+  <li style="margin-bottom:0.5rem;"><strong>مدة الرحلة:</strong> عادةً حوالي ساعة، ويُفضّل أن تحسب من 55 إلى 90 دقيقة حسب حركة المرور وموقع الاستلام وحالة الطريق</li>
+  <li style="margin-bottom:0.5rem;"><strong>الوجهة:</strong> مطار الملك عبدالعزيز الدولي (JED) في جدة</li>
+  <li style="margin-bottom:0.5rem;"><strong>السيارات:</strong> سيدان (4 مقاعد)، هيونداي ستاريا (7 مقاعد)، GMC يوكون (7 مقاعد، VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>الحجز:</strong> متاح 24/7 عبر واتساب</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لماذا تحجز تاكسياً خاصاً؟</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>من الباب إلى الباب:</strong> استلام من فندقك أو عنوانك في مكة دون تبديل السيارة في الطريق.</li>
+  <li style="margin-bottom:0.5rem;"><strong>حسب موعدك:</strong> الحجز الخاص لمجموعتك وحدها، فأنت تحدد وقت الاستلام.</li>
+  <li style="margin-bottom:0.5rem;"><strong>مناسب للأمتعة:</strong> تختار السيارة بحسب عدد الركاب والحقائب.</li>
+  <li style="margin-bottom:0.5rem;"><strong>سعر متفق عليه مسبقاً:</strong> يُؤكَّد سعر مسارك وسيارتك عبر واتساب قبل الرحلة.</li>
+  <li style="margin-bottom:0.5rem;"><strong>حجز سهل:</strong> أرسل تفاصيلك عبر واتساب أو نموذج الحجز دون الحاجة إلى تطبيق.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كم تستغرق الرحلة من مكة إلى مطار جدة؟</h2>
+<p style="margin-bottom:1rem;">المسافة حوالي 90 كم وتستغرق الرحلة عادةً نحو ساعة. قد تطول بسبب حركة المرور وموقع الاستلام وحالة الطريق، لذا خطّط لمدة تتراوح من 55 إلى 90 دقيقة بدلاً من رقم واحد. وخلال الحج والفترات المزدحمة قد تغيّر أنظمة إدارة الحشود والوصول الرسمية أوقات الرحلات أيضاً. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> و<a href="/blog/hajj-2026-transport-makkah-traffic-tips" style="color:#0B3D2E;font-weight:700;">نصائح ازدحام النقل في الحج</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار السيارة المناسبة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>سيدان (4 مقاعد):</strong> مناسب للأفراد والأزواج والعائلات الصغيرة، ويتسع لحوالي حقيبتين كبيرتين.</li>
+  <li style="margin-bottom:0.5rem;"><strong>هيونداي ستاريا (7 مقاعد):</strong> مناسبة للعائلات والمجموعات، ولها مساحة أمتعة كبيرة (5 حقائب أو أكثر).</li>
+  <li style="margin-bottom:0.5rem;"><strong>GMC يوكون (7 مقاعد، VIP):</strong> خيارنا الفاخر للمسافرين الذين يريدون راحة إضافية.</li>
+</ul>
+<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في مكة إلى مطار جدة، للسيارة الواحدة وليس للفرد: <strong>سيدان ${makkahJedFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${makkahJedFares.staria} ريال</strong>، <strong>GMC يوكون ${makkahJedFares.gmc} ريال</strong>. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز. قد تؤثر التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير المسار على السعر النهائي، ويتم تأكيد أي تغيير قبل الرحلة. ولمعرفة أسعار أخرى راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي في السعودية</a>.</p>
+<p style="margin-bottom:1rem;">إن كنت محتاراً لعائلتك فاقرأ <a href="/blog/gmc-yukon-vs-staria-family-umrah" style="color:#0B3D2E;font-weight:700;">GMC يوكون مقابل هيونداي ستاريا لعمرة العائلة</a>، أو راجع صفحتي <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">تاكسي هيونداي ستاريا</a> و<a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">استئجار GMC يوكون</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من فندق مكة إلى مطار جدة</h2>
+<p style="margin-bottom:1rem;">يمكن الاستلام من الفنادق والمناطق الرئيسية في مكة. شاركنا اسم فندقك عند الحجز لنؤكد تفاصيل الاستلام. وقد يكون الوصول القريب من الحرم محدوداً ومزدحماً في أوقات الصلاة، لذا امنح نفسك وقتاً إضافياً للوصول إلى السيارة.</p>
+<p style="margin-bottom:1rem;">لصفحة الخط وتفاصيله راجع <a href="/makkah-to-jeddah-airport" style="color:#0B3D2E;font-weight:700;">مكة إلى مطار جدة</a>، ولخدمة المدينة راجع <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي مكة</a>. وإذا كانت وجهتك مدينة جدة وليس المطار فراجع <a href="/makkah-to-jeddah" style="color:#0B3D2E;font-weight:700;">تاكسي مكة إلى جدة</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">متى تغادر مكة قبل رحلتك الجوية؟</h2>
+<p style="margin-bottom:1rem;">لا يوجد وقت واحد يناسب كل الرحلات، لذا احسب من موعد إقلاعك إلى الوراء:</p>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">راجع تعليمات تسجيل الوصول لدى شركة الطيران وموعد إغلاق التسجيل.</li>
+  <li style="margin-bottom:0.5rem;">أضف مدة الرحلة — من 55 إلى 90 دقيقة تقريباً.</li>
+  <li style="margin-bottom:0.5rem;">أضف هامشاً لازدحام مكة ومغادرة الفندق وتحميل الأمتعة.</li>
+  <li style="margin-bottom:0.5rem;">حدد موعد الاستلام بناءً على النتيجة.</li>
+</ol>
+<p style="margin-bottom:1rem;">وللحجز، ننصح بالحجز قبل 3 إلى 6 ساعات على الأقل، وفي الليلة السابقة للرحلات الصباحية الباكرة أو المتأخرة ليلاً. ويُقبل الحجز في اليوم نفسه عند التوفر. زوّدنا برقم رحلتك، فنموذج الحجز يطلبه لرحلات المطار.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">نصائح للأمتعة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">احسب عدد الركاب والحقائب قبل اختيار السيارة، وإذا كانت مجموعتك قريبة من الحد الأقصى فاختر السيارة الأكبر.</li>
+  <li style="margin-bottom:0.5rem;">أخبرنا بأي أمتعة كبيرة أو غير معتادة عند الحجز، أو استخدم حقل الطلبات الخاصة في نموذج الحجز.</li>
+  <li style="margin-bottom:0.5rem;">أبقِ جواز سفرك وتذاكرك ووثائقك المهمة معك بدلاً من وضعها في صندوق السيارة.</li>
+  <li style="margin-bottom:0.5rem;">ستعود إلى مكة لاحقاً؟ راجع <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">مطار جدة إلى مكة</a> و<a href="/blog/how-to-travel-jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">نصائح الرحلة من المطار إلى مكة</a>.</li>
+  <li style="margin-bottom:0.5rem;">تتجهّز للعمرة؟ راجع <a href="/blog/umrah-checklist-transport-hotels-packing" style="color:#0B3D2E;font-weight:700;">قائمة تحقق العمرة</a> و<a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a>.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز تاكسيك</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أرسل موقع الاستلام والتاريخ والوقت وعدد الركاب ورقم رحلتك عبر واتساب أو نموذج الحجز.</li>
+  <li style="margin-bottom:0.5rem;">اختر سيارتك: سيدان أو هيونداي ستاريا أو GMC يوكون.</li>
+  <li style="margin-bottom:0.5rem;">أكّد السعر الحالي مع Saudi Cabs GMC عبر واتساب قبل الحجز.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم يبعد مطار جدة عن مكة؟</h3>
+<p style="margin-bottom:1rem;">حوالي 90 كم.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم يستغرق التاكسي؟</h3>
+<p style="margin-bottom:1rem;">عادةً حوالي ساعة، ويُفضّل حساب من 55 إلى 90 دقيقة حسب حركة المرور وموقع الاستلام وحالة الطريق.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني الحجز في أي وقت؟</h3>
+<p style="margin-bottom:1rem;">الحجز متاح 24/7. وللرحلات الصباحية الباكرة أو المتأخرة ليلاً ننصح بالحجز في الليلة السابقة.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم التكلفة؟</h3>
+<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في مكة إلى مطار جدة هي ${makkahJedFares.sedan} ريال (سيدان) و${makkahJedFares.staria} ريال (هيونداي ستاريا) و${makkahJedFares.gmc} ريال (GMC يوكون) للسيارة الواحدة. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني حجز سيارة بـ7 مقاعد؟</h3>
+<p style="margin-bottom:1rem;">نعم. تتسع هيونداي ستاريا وGMC يوكون (VIP) لـ7 ركاب لكل منهما.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل تستلمونني من فندقي؟</h3>
+<p style="margin-bottom:1rem;">نوفر الاستلام من الفنادق والمناطق الرئيسية في مكة. شاركنا اسم فندقك عند الحجز.</p>`,
+    },
+    date: '2026-09-21',
+    image: '/location/jeddah.webp',
   },
 ];
