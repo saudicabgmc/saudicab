@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FAQSection from './FAQSection'
 import PricingSection from './PricingSection'
 import {
-  Phone, MessageCircle, Mail, ArrowRight, ChevronRight, Check,
+  MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Bus, Car, Briefcase, Map, Users, Shield, Clock, Banknote, Star,
   Moon, MapPin, Mountain, Tent, Route,
 } from 'lucide-react'
@@ -487,14 +487,6 @@ export default function MakkahLocationPage({
           <div className="mk-hero-ctas" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ padding: '14px 32px' }}>
               <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {tr.whatsapp}
-            </a>
-            <a href="tel:+923097811785" className="mk-btn mk-focus" style={{
-              display: 'flex', alignItems: 'center', gap: '8px',
-              background: 'rgba(255,255,255,0.08)', color: 'white',
-              padding: '14px 32px', borderRadius: '10px', fontWeight: 700, fontSize: '0.9rem',
-              border: '1px solid rgba(255,255,255,0.25)',
-            }}>
-              <Phone size={17} strokeWidth={2.5} aria-hidden="true" /> <span dir="ltr">+92 309 7811785</span>
             </a>
           </div>
         </div>
