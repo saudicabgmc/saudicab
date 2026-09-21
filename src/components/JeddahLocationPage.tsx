@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FAQSection from './FAQSection'
 import PricingSection from './PricingSection'
 import {
-  Phone, MessageCircle, Car, ArrowRight,
+  MessageCircle, Car, ArrowRight,
   Building2, Plane, Bus, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 } from 'lucide-react'
@@ -71,8 +71,8 @@ export default function JeddahLocationPage({
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة في جدة' : "Hello, I'd like to book a trip in Jeddah"
 
   const stats = isAr
-    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '4+', l: 'مطارات' }, { n: '1000+', l: 'رحلة ناجحة' }, { n: '100%', l: 'أسعار حسب المسار' }]
-    : [{ n: '24/7', l: 'Always Available' }, { n: '4+', l: 'Airports Served' }, { n: '1000+', l: 'Trips Completed' }, { n: '100%', l: 'Route-Based Fares' }]
+    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '٣', l: 'مطارات' }, { n: '٣', l: 'أنواع السيارات' }, { n: '100%', l: 'أسعار حسب المسار' }]
+    : [{ n: '24/7', l: 'Always Available' }, { n: '3', l: 'Airports Served' }, { n: '3', l: 'Vehicle Types' }, { n: '100%', l: 'Route-Based Fares' }]
 
   return (
     <main>
@@ -102,8 +102,9 @@ export default function JeddahLocationPage({
               </div>
 
               <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: '900', lineHeight: '1.1', marginBottom: '20px', letterSpacing: '-0.03em' }}>
-                {tr.transportIn}<br />
-                <span style={{ color: '#7dd3fc' }}>{tx(cityName)}</span>
+                {isAr
+                  ? <>خدمة تاكسي ونقل خاص في <span style={{ color: '#7dd3fc' }}>{tx(cityName)}</span></>
+                  : <><span style={{ color: '#7dd3fc' }}>{tx(cityName)}</span> Taxi &amp; Private Transport Services</>}
               </h1>
 
               <p style={{ fontSize: '0.95rem', opacity: 0.82, marginBottom: '32px', lineHeight: '1.75', maxWidth: '460px' }}>
@@ -111,24 +112,16 @@ export default function JeddahLocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a href="tel:+923097811785" style={{
-                  display: 'flex', alignItems: 'center', gap: '8px',
-                  background: '#0891b2', color: 'white', padding: '13px 28px',
-                  borderRadius: '8px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
-                }}>
-                  <Phone size={16} strokeWidth={2.5} /> {tr.callNow}
-                </a>
                 <a
                   href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
-                    background: 'rgba(255,255,255,0.10)', color: 'white', padding: '13px 28px',
-                    borderRadius: '8px', fontWeight: '800', fontSize: '0.9rem',
-                    textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)',
+                    background: '#0891b2', color: 'white', padding: '13px 28px',
+                    borderRadius: '8px', fontWeight: '800', fontSize: '0.9rem', textDecoration: 'none',
                   }}
                 >
-                  <MessageCircle size={16} strokeWidth={2.5} /> {tr.whatsapp}
+                  <MessageCircle size={16} strokeWidth={2.5} /> {t[lang].nav.bookWhatsapp}
                 </a>
               </div>
 
@@ -407,18 +400,10 @@ export default function JeddahLocationPage({
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: '#25D366', color: 'white', padding: '13px 28px', borderRadius: '8px',
-                  fontWeight: '700', fontSize: '0.88rem', marginBottom: '10px', textDecoration: 'none',
+                  fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',
                 }}
               >
                 <MessageCircle size={17} strokeWidth={2.5} /> {tr.whatsapp}
-              </a>
-              <a href="tel:+923097811785" style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                background: 'rgba(8,145,178,0.2)', color: 'white', padding: '12px 28px',
-                borderRadius: '8px', fontWeight: '700', fontSize: '0.88rem', textDecoration: 'none',
-                border: '1px solid rgba(8,145,178,0.4)',
-              }}>
-                <Phone size={17} strokeWidth={2.5} /> +92 309 7811785
               </a>
             </div>
           </div>
