@@ -549,6 +549,10 @@ for (const ik of I_KEYS) {
       reg({
         slug, pageType: 'intent-city',
         canonicalSlug,
+        // Every page in this set is a same-city/service page with only the intent
+        // adjective (VIP/Cheap/Private/Family) swapped — kept live and linked, but
+        // excluded from indexing so it isn't flagged as scaled/duplicate content.
+        noindex: true,
         metaTitle:   `${intent.label} ${s.label} in ${c.name} | ${v.name}`,
         metaDesc:    `Book a ${intent.desc} ${s.label.toLowerCase()} in ${c.name}. Saudi Cabs GMC — ${v.name}, fixed SAR price, 24/7. WhatsApp: +92 309 7811785.`,
         h1:          `${intent.label} ${s.label} in ${c.name}`,
@@ -661,11 +665,12 @@ for (const spec of INTENT_VEHICLE_SPECS) {
   const intent = INTENTS[spec.ik]
   const v = VEHICLES[spec.vk]
   const c = CITIES[spec.ck]
-  // 11/17-seater vehicles are marked unavailable in the fleet above.
-  const noindex = !v.available
   reg({
     slug: spec.slug, pageType: 'intent-vehicle',
-    noindex,
+    // Every page in this set is a same-city/vehicle page with only the intent
+    // adjective (VIP/Cheap/Private/Family) swapped — kept live and linked, but
+    // excluded from indexing so it isn't flagged as scaled/duplicate content.
+    noindex: true,
     metaTitle:   `${intent.label} ${v.label} Taxi in ${c.name} | ${v.name}`,
     metaDesc:    `Book a ${intent.desc} ${v.seats}-seat taxi in ${c.name} — ${v.name}, fixed SAR price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} ${v.label} Taxi in ${c.name}`,
