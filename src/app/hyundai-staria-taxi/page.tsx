@@ -165,6 +165,37 @@ export default function HyundaiStariaPage() {
         </div>
       </section>
 
+      {/* City services & guides */}
+      <section style={{ padding: '0 0 40px', backgroundColor: 'var(--muted)' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', marginBottom: '16px', fontWeight: '600' }}>
+            {isAr ? 'خدمات المدن' : 'City Services'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '28px' }}>
+            {[
+              { href: '/makkah-taxi-service', en: 'Makkah', ar: 'مكة المكرمة' },
+              { href: '/madinah-taxi-service', en: 'Madinah', ar: 'المدينة المنورة' },
+              { href: '/jeddah-taxi-service', en: 'Jeddah', ar: 'جدة' },
+              { href: '/taif-taxi-service', en: 'Taif', ar: 'الطائف' },
+            ].map(c => (
+              <Link key={c.href} href={c.href} className="route-badge"><MapPin size={14} />{tx(c)}</Link>
+            ))}
+          </div>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', marginBottom: '16px', fontWeight: '600' }}>
+            {isAr ? 'أدلة مفيدة' : 'Helpful Guides'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[
+              { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
+              { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
+              { href: '/taxi-prices-saudi-arabia', en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' },
+            ].map(g => (
+              <Link key={g.href} href={g.href} className="route-badge">{tx(g)}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FAQSection faqs={FAQS} heading={{ ar: 'أسئلة شائعة — هيونداي ستاريا', en: 'FAQ — Hyundai Staria Taxi' }} />
 
       {/* CTA */}

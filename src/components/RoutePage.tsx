@@ -39,15 +39,33 @@ const ALL_GUIDES = [
   { href: '/taxi-prices-saudi-arabia', en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' },
   { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
   { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
+  { href: '/blog/taif-to-makkah-by-taxi', en: 'Taif to Makkah: Travel Guide', ar: 'من الطائف إلى مكة: دليل السفر' },
+  { href: '/blog/makkah-to-jeddah-airport-by-taxi', en: 'Makkah to Jeddah Airport: Travel Guide', ar: 'من مكة إلى مطار جدة: دليل السفر' },
+  { href: '/blog/how-to-travel-jeddah-airport-to-makkah', en: 'Jeddah Airport to Makkah: Train vs Taxi', ar: 'مطار جدة إلى مكة: القطار أم التاكسي' },
+  { href: '/blog/haramain-train-vs-private-taxi-makkah-madinah', en: 'Haramain Train vs Private Taxi', ar: 'قطار الحرمين أم التاكسي الخاص' },
+  { href: '/blog/riyadh-to-makkah-complete-guide', en: 'Riyadh to Makkah: Complete Guide', ar: 'الرياض إلى مكة: دليل شامل' },
 ] as const
+
+// Route-specific blog posts that cover that exact journey — a stronger match than
+// the broad type/city-based guide rules below.
+const BLOG_BY_ROUTE_SLUG: Record<string, string[]> = {
+  'taif-to-makkah':           ['/blog/taif-to-makkah-by-taxi'],
+  'makkah-to-taif':           ['/blog/taif-to-makkah-by-taxi'],
+  'makkah-to-jeddah-airport': ['/blog/makkah-to-jeddah-airport-by-taxi'],
+  'jeddah-airport-to-makkah': ['/blog/how-to-travel-jeddah-airport-to-makkah'],
+  'makkah-to-madinah':        ['/blog/haramain-train-vs-private-taxi-makkah-madinah'],
+  'madinah-to-makkah':        ['/blog/haramain-train-vs-private-taxi-makkah-madinah'],
+  'riyadh-to-makkah':         ['/blog/riyadh-to-makkah-complete-guide'],
+}
 
 function getRelevantGuides(data: RoutePageData) {
   const hrefs = new Set<string>()
+  ;(BLOG_BY_ROUTE_SLUG[data.slug] ?? []).forEach(h => hrefs.add(h))
   if (data.slug.includes('jeddah-airport')) hrefs.add('/jeddah-airport-guide')
   if (data.fromCitySlug === 'makkah-taxi-service' || data.toCitySlug === 'makkah-taxi-service') hrefs.add('/makkah-transport-guide')
   if (data.type === 'pilgrimage') { hrefs.add('/hajj-transport-faq'); hrefs.add('/umrah-travel-guide') }
   hrefs.add('/taxi-prices-saudi-arabia')
-  return ALL_GUIDES.filter(g => hrefs.has(g.href)).slice(0, 3)
+  return ALL_GUIDES.filter(g => hrefs.has(g.href)).slice(0, 4)
 }
 
 export default function RoutePage({ data }: { data: RoutePageData }) {

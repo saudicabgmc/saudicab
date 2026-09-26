@@ -112,6 +112,14 @@ export default function PrivateDriverPage() {
               <Link key={c.href} href={c.href} className="route-badge"><MapPin size={14} />{isAr ? c.ar : c.en}</Link>
             ))}
           </div>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', margin: '28px 0 16px', fontWeight: '600' }}>
+            {isAr ? 'أدلة مفيدة' : 'Helpful Guides'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[{ href: '/umrah-travel-guide', ar: 'دليل سفر العمرة', en: 'Umrah Travel Guide' }, { href: '/hajj-umrah-transport', ar: 'نقل الحج والعمرة', en: 'Hajj & Umrah Transport' }, { href: '/gmc-yukon-hire', ar: 'استئجار GMC يوكون', en: 'GMC Yukon Hire' }, { href: '/hyundai-staria-taxi', ar: 'تاكسي هيونداي ستاريا', en: 'Hyundai Staria Taxi' }].map(g => (
+              <Link key={g.href} href={g.href} className="route-badge">{isAr ? g.ar : g.en}</Link>
+            ))}
+          </div>
         </div>
       </section>
 

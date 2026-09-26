@@ -77,14 +77,14 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Which Vehicle Should You Book?</h2>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>1–3 passengers:</strong> Standard sedan (most affordable)</li>
-  <li style="margin-bottom:0.5rem;"><strong>4–7 passengers:</strong> Hyundai Staria — spacious, high roof, sliding doors (great for elderly)</li>
-  <li style="margin-bottom:0.5rem;"><strong>VIP groups:</strong> GMC Yukon — leather seats, built-in cooler, premium comfort</li>
+  <li style="margin-bottom:0.5rem;"><strong>4–7 passengers:</strong> <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> — spacious, high roof, sliding doors (great for elderly)</li>
+  <li style="margin-bottom:0.5rem;"><strong>VIP groups:</strong> <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> — leather seats, built-in cooler, premium comfort</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Verdict: Train vs Taxi</h2>
 <p style="margin-bottom:1rem;">For solo travelers with minimal luggage, the train is a fine option if you book tickets well in advance. For families, elderly pilgrims, groups with luggage, or anyone arriving outside peak train hours — a private taxi from Jeddah Airport to Makkah is the clear winner. It is simpler, door-to-door, and often works out cheaper once you factor in the taxi to/from the station.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> operates 24/7 with fixed prices and professional bilingual drivers. Book via WhatsApp at least 24 hours before your arrival, and share your flight number so pickup can be adjusted if your flight is delayed. See our <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah route page</a> for current fares and booking.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> operates 24/7 with fixed prices and professional bilingual drivers. Book via WhatsApp at least 24 hours before your arrival, and share your flight number so pickup can be adjusted if your flight is delayed. See our <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah route page</a> for current fares and booking, or the <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah taxi service</a> page for getting around once you arrive.</p>`,
       ar: `<p style="margin-bottom:1rem;">وصلت للتو إلى مطار الملك عبدالعزيز الدولي في جدة ومكة المكرمة تناديك. لديك خياران رئيسيان: قطار الحرمين السريع أو التاكسي الخاص. إليك كل ما تحتاج معرفته لاتخاذ القرار الصحيح.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الخيار الأول — قطار الحرمين السريع</h2>
@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الحكم النهائي</h2>
 <p style="margin-bottom:1rem;">للعائلات والحجاج وكبار السن وأصحاب الأمتعة الثقيلة — التاكسي الخاص من مطار جدة إلى مكة هو الخيار الأوضح. أبسط، من الباب للباب، وغالباً أرخص حين تحسب تكاليف التنقل من وإلى محطة القطار.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تعمل 24/7 بأسعار ثابتة وسائقين محترفين ثنائيي اللغة. احجز عبر واتساب قبل وصولك بـ 24 ساعة على الأقل، وشارك رقم رحلتك حتى يتم تعديل موعد الاستلام في حال التأخير. راجع صفحة <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">خط مطار جدة - مكة المكرمة</a> للاطلاع على الأسعار الحالية والحجز.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تعمل 24/7 بأسعار ثابتة وسائقين محترفين ثنائيي اللغة. احجز عبر واتساب قبل وصولك بـ 24 ساعة على الأقل، وشارك رقم رحلتك حتى يتم تعديل موعد الاستلام في حال التأخير. راجع صفحة <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">خط مطار جدة - مكة المكرمة</a> للاطلاع على الأسعار الحالية والحجز، أو صفحة <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي مكة</a> للتنقل بعد وصولك.</p>`,
     },
     date: '2026-05-01',
     image: '/location/jeddah.webp',
@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Visit All 5 Sites in One Day</h2>
-<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers are familiar with these sites and can help plan a visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. See our <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Makkah Ziyarat Tour page</a> for details, or WhatsApp us at +92 309 7811785 to arrange transport for your group.</p>`,
+<p style="margin-bottom:1rem;">Book a dedicated Ziyarat tour vehicle with Saudi Cabs GMC. Our drivers are familiar with these sites and can help plan a visiting sequence to avoid congestion. A full Makkah Ziyarat tour (all 5 sites) typically takes 6–8 hours. See our <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Makkah Ziyarat Tour page</a> for details, our <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">Makkah Transport Guide</a> for getting around the city, or WhatsApp us at +92 309 7811785 to arrange transport for your group.</p>`,
       ar: `<p style="margin-bottom:1rem;">زيارة مكة المكرمة للعمرة أو الحج هي تجربة روحية لا تُنسى. فضلاً عن المسجد الحرام، تضم المدينة عشرات المواقع الإسلامية التاريخية التي تحمل دلالات عميقة. إليك أبرز 5 مواقع زيارة يجب على كل حاج ومعتمر الذهاب إليها.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. جبل النور — غار حراء</h2>
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">من أعرق مقابر مكة، تضم رفات السيدة خديجة رضي الله عنها زوج النبي ﷺ الأولى، وعبد المطلب جده. تقع على مقربة من المسجد الحرام وتفتح بعد صلاتي الفجر والعصر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تزور المواقع الخمسة في يوم واحد</h2>
-<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا على دراية بهذه المواقع ويمكنهم مساعدتك في تخطيط ترتيب الزيارة لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. راجع صفحة <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جولة زيارات مكة المكرمة</a> للتفاصيل، أو تواصل معنا عبر واتساب: 923097811785+</p>`,
+<p style="margin-bottom:1rem;">احجز سيارة جولة زيارات خاصة مع Saudi Cabs GMC. سائقونا على دراية بهذه المواقع ويمكنهم مساعدتك في تخطيط ترتيب الزيارة لتجنب الازدحام. جولة الزيارات الكاملة تستغرق 6–8 ساعات. راجع صفحة <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جولة زيارات مكة المكرمة</a> للتفاصيل، أو <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">دليل النقل في مكة</a> للتنقل داخل المدينة، أو تواصل معنا عبر واتساب: 923097811785+</p>`,
     },
     date: '2026-04-15',
     image: '/location/makkah.webp',
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Verdict</h2>
-<p style="margin-bottom:1rem;">For most pilgrims — especially families and those with luggage — a private cab from Makkah to Madinah offers more convenience, comfort, and true door-to-door service. The extra 2 hours is worth the peace of mind. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares and booking.</p>`,
+<p style="margin-bottom:1rem;">For most pilgrims — especially families and those with luggage — a private cab from Makkah to Madinah offers more convenience, comfort, and true door-to-door service. The extra 2 hours is worth the peace of mind. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares and booking, and our <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah taxi service</a> page for getting around once you arrive. Planning the rest of your trip? See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a>.</p>`,
       ar: `<p style="margin-bottom:1rem;">من أكثر الأسئلة شيوعاً بين المعتمرين: <strong>هل أركب قطار الحرمين أم أخذ تاكسي خاص من مكة إلى المدينة؟</strong> تعتمد الإجابة على حجم مجموعتك وأمتعتك وطريقة سفرك المفضلة.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الإجابة السريعة</h2>
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>توقفات الصلاة:</strong> نتوقف للصلاة والوجبات على الطريق</li>
   <li style="margin-bottom:0.5rem;"><strong>سعر ثابت:</strong> متفق عليه مسبقاً</li>
 </ul>
-<p style="margin-bottom:1rem;">راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية والحجز.</p>`,
+<p style="margin-bottom:1rem;">راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية والحجز، وصفحة <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي المدينة المنورة</a> للتنقل بعد وصولك. وللتخطيط لبقية رحلتك راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a>.</p>`,
     },
     date: '2026-05-02',
     image: '/location/madinah.webp',
@@ -289,10 +289,10 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Key Routes During Hajj 2026</h2>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>Jeddah Airport → Makkah</strong> — ~90 km, ~1 hour</li>
-  <li style="margin-bottom:0.5rem;"><strong>Makkah → Madinah</strong> — ~430 km, ~4.5 hours</li>
-  <li style="margin-bottom:0.5rem;"><strong>Madinah → Makkah</strong> — ~430 km, ~4.5 hours</li>
-  <li style="margin-bottom:0.5rem;"><strong>Makkah → Jeddah Airport</strong> — ~90 km, ~1 hour</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport → Makkah</a></strong> — ~90 km, ~1 hour</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah → Madinah</a></strong> — ~430 km, ~4.5 hours</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah → Makkah</a></strong> — ~430 km, ~4.5 hours</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/makkah-to-jeddah-airport" style="color:#0B3D2E;font-weight:700;">Makkah → Jeddah Airport</a></strong> — ~90 km, ~1 hour</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book — 3 Steps</h2>
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Receive your fixed price confirmation and driver details</li>
 </ol>
 
-<p style="margin-bottom:1rem;"><strong>Book at least 2–4 weeks in advance</strong> during Hajj season, since demand is high and early booking helps secure your preferred vehicle and timing. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail.</p>`,
+<p style="margin-bottom:1rem;"><strong>Book at least 2–4 weeks in advance</strong> during Hajj season, since demand is high and early booking helps secure your preferred vehicle and timing. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail, or the <a href="/hajj-umrah-transport" style="color:#0B3D2E;font-weight:700;">Hajj &amp; Umrah Transport</a> page for our full range of services.</p>`,
       ar: `<p style="margin-bottom:1rem;">يُقبل ملايين الحجاج على المملكة في موسم الحج، مما يجعل وسيلة النقل من أهم الأمور التي يجب التخطيط لها مسبقاً. إليك الدليل الكامل لحجز نقل خاص لحج 2026.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">لماذا تحجز كاباً خاصاً للحج؟</h2>
@@ -319,7 +319,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">أرسل موقع الاستلام والوجهة والتاريخ وعدد الركاب</li>
   <li style="margin-bottom:0.5rem;">استلم تأكيد السعر الثابت وبيانات السائق</li>
 </ol>
-<p style="margin-bottom:1rem;"><strong>احجز قبل 2–4 أسابيع على الأقل</strong> في موسم الحج، فالطلب مرتفع والحجز المبكر يساعد على تأمين السيارة والموعد المفضلين. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل.</p>`,
+<p style="margin-bottom:1rem;"><strong>احجز قبل 2–4 أسابيع على الأقل</strong> في موسم الحج، فالطلب مرتفع والحجز المبكر يساعد على تأمين السيارة والموعد المفضلين. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل، أو صفحة <a href="/hajj-umrah-transport" style="color:#0B3D2E;font-weight:700;">نقل الحج والعمرة</a> لمعرفة خدماتنا كاملة.</p>`,
     },
     date: '2026-05-02',
     image: '/location/makkah.webp',
@@ -353,9 +353,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Best Vehicle for Riyadh to Makkah</h2>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>Sedan:</strong> For 1–3 passengers traveling light</li>
-  <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria:</strong> For families up to 7 with luggage</li>
-  <li style="margin-bottom:0.5rem;"><strong>GMC Yukon:</strong> VIP comfort for long journeys — built-in cooler, leather seats</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a>:</strong> For 1–3 passengers traveling light</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>:</strong> For families up to 7 with luggage</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a>:</strong> VIP comfort for long journeys — built-in cooler, leather seats</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Tips for a Comfortable Journey</h2>
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Plan prayer stops at highway rest areas</li>
   <li style="margin-bottom:0.5rem;">Carry water and light snacks for the 8-hour journey</li>
 </ul>
-<p style="margin-bottom:1rem;">See our <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">Riyadh to Makkah route page</a> for current fares, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to book your trip.</p>`,
+<p style="margin-bottom:1rem;">See our <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">Riyadh to Makkah route page</a> for current fares, our <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah taxi service</a> page for getting around after you arrive, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to book your trip.</p>`,
       ar: `<p style="margin-bottom:1rem;">يُعدّ السفر من الرياض إلى مكة بالكاب الخاص أشهر خطوط الحجاج لمسافات طويلة في المملكة. إليك كل ما تحتاج معرفته.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">أبرز المعلومات</h2>
@@ -377,11 +377,11 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">أفضل سيارة للرحلة</h2>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>سيدان:</strong> لـ 1–3 ركاب بأمتعة خفيفة</li>
-  <li style="margin-bottom:0.5rem;"><strong>ستاريا:</strong> للعائلات حتى 7 أشخاص مع أمتعة</li>
-  <li style="margin-bottom:0.5rem;"><strong>GMC يوكون:</strong> راحة VIP للرحلات الطويلة</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a>:</strong> لـ 1–3 ركاب بأمتعة خفيفة</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">ستاريا</a>:</strong> للعائلات حتى 7 أشخاص مع أمتعة</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a>:</strong> راحة VIP للرحلات الطويلة</li>
 </ul>
-<p style="margin-bottom:1rem;">راجع صفحة <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">خط الرياض - مكة المكرمة</a> للأسعار الحالية، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب لحجز رحلتك.</p>`,
+<p style="margin-bottom:1rem;">راجع صفحة <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">خط الرياض - مكة المكرمة</a> للأسعار الحالية، وصفحة <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي مكة</a> للتنقل بعد وصولك، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب لحجز رحلتك.</p>`,
     },
     date: '2026-05-02',
     image: '/location/makkah.webp',
@@ -406,7 +406,7 @@ export const blogPosts: BlogPost[] = [
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>Seats:</strong> 7 passengers (VIP)</li>
   <li style="margin-bottom:0.5rem;"><strong>Features:</strong> Built-in cooler, giant touchscreen, premium leather seats</li>
-  <li style="margin-bottom:0.5rem;"><strong>Best for:</strong> VIP families, long-distance routes (Riyadh–Makkah), business travelers</li>
+  <li style="margin-bottom:0.5rem;"><strong>Best for:</strong> VIP families, long-distance routes (<a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">Riyadh–Makkah</a>), business travelers</li>
   <li style="margin-bottom:0.5rem;"><strong>Luggage:</strong> Large boot for Hajj bags</li>
 </ul>
 
@@ -419,14 +419,14 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Which Should You Choose?</h2>
-<p style="margin-bottom:1rem;">Choose the <strong>GMC Yukon</strong> if you want maximum luxury and premium comfort. Choose the <strong>Hyundai Staria</strong> if you have elderly family members (easier to enter/exit), small children, or very heavy luggage. See our <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> and <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> pages for details, and contact us via WhatsApp to confirm availability.</p>`,
+<p style="margin-bottom:1rem;">Choose the <strong>GMC Yukon</strong> if you want maximum luxury and premium comfort. Choose the <strong>Hyundai Staria</strong> if you have elderly family members (easier to enter/exit), small children, or very heavy luggage. See our <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> and <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> pages for details, our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for planning the rest of your trip, and contact us via WhatsApp to confirm availability.</p>`,
       ar: `<p style="margin-bottom:1rem;">تخطط لرحلة عمرة عائلية في المملكة؟ اختيار السيارة المناسبة هو مفتاح حج مريح. تقدم Saudi Cabs GMC خيارين بـ 7 مقاعد: GMC يوكون وهيونداي ستاريا.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">GMC يوكون — SUV فاخرة</h2>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>المقاعد:</strong> 7 ركاب (VIP)</li>
   <li style="margin-bottom:0.5rem;"><strong>المميزات:</strong> مبرد مدمج، شاشة لمس عملاقة، مقاعد جلدية فاخرة</li>
-  <li style="margin-bottom:0.5rem;"><strong>الأنسب لـ:</strong> العائلات VIP، الرحلات الطويلة، رجال الأعمال</li>
+  <li style="margin-bottom:0.5rem;"><strong>الأنسب لـ:</strong> العائلات VIP، الرحلات الطويلة (<a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">الرياض–مكة</a>)، رجال الأعمال</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">هيونداي ستاريا — فان العائلة</h2>
@@ -435,7 +435,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>المميزات:</strong> سقف مرتفع، نوافذ بانورامية، أبواب منزلقة (سهلة لكبار السن)</li>
   <li style="margin-bottom:0.5rem;"><strong>الأنسب لـ:</strong> العائلات مع أطفال أو كبار سن، المجموعات بأمتعة ثقيلة</li>
 </ul>
-<p style="margin-bottom:1rem;">راجع صفحتي <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a> و<a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> للتفاصيل، وتواصل معنا عبر واتساب لتأكيد التوفر.</p>`,
+<p style="margin-bottom:1rem;">راجع صفحتي <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a> و<a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> للتفاصيل، و<a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> للتخطيط لبقية رحلتك، وتواصل معنا عبر واتساب لتأكيد التوفر.</p>`,
     },
     date: '2026-05-02',
     image: '/fleet/gmc-yukon-interior-rear-seats-saudi-cabs-gmc.webp',
@@ -453,8 +453,8 @@ export const blogPosts: BlogPost[] = [
       ar: 'هل تخطط لرحلة الحج 2026؟ تجنب هذه الأخطاء الثلاثة الشائعة في النقل التي قد تكلفك ساعات في الزحام.',
     },
     content: {
-      en: '<p style="margin-bottom: 1rem;">Hajj is the journey of a lifetime, but the logistics can be overwhelming. As we look toward Hajj 2026, traffic management in Makkah is becoming more complex. Here are 3 things no one tells you about navigating the Holy City during peak season.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. The "Hidden" Road Closures</h2><p style="margin-bottom: 1rem;">During the peak days of Hajj, many roads around the Haram area are restricted to authorized vehicles only. A normal taxi might get blocked, but experienced local drivers, like those at Saudi Cabs GMC, are familiar with alternative routes and common drop-off points near the restricted zones.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. Timing is Everything</h2><p style="margin-bottom: 1rem;">Traveling between 10:00 AM and 4:00 PM is often a recipe for gridlock. The most successful pilgrims schedule their intercity transfers (Makkah to Madinah or Riyadh to Makkah) during late-night or very early morning hours.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. Luggage Logistics</h2><p style="margin-bottom: 1rem;">Standard sedans often struggle with the amount of luggage Hajj pilgrims carry. Booking a GMC Yukon or Hyundai Staria is not just about luxury—it is about ensuring all your belongings (including Zamzam bottles) fit comfortably without extra stress.</p><p style="margin-bottom: 1rem;">See our <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">Makkah Transport Guide</a> for more on getting around during Hajj, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to plan your transfers.</p>',
-      ar: '<p style="margin-bottom: 1rem;">الحج هو رحلة العمر، لكن الخدمات اللوجستية قد تكون مرهقة. بينما نتطلع إلى حج 2026، تصبح إدارة المرور في مكة أكثر تعقيداً. إليك 3 أشياء لا يخبرك بها أحد عن التنقل في المدينة المقدسة خلال موسم الذروة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. إغلاق الطرق "المخفية"</h2><p style="margin-bottom: 1rem;">خلال أيام الذروة في الحج، تقتصر العديد من الطرق حول منطقة الحرم على المركبات المصرح لها فقط. قد يتم حظر التاكسي العادي، لكن السائقين المحليين ذوي الخبرة، مثل سائقي Saudi Cabs GMC، على دراية بالطرق البديلة ونقاط الإنزال الشائعة القريبة من المناطق المقيّدة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. التوقيت هو كل شيء</h2><p style="margin-bottom: 1rem;">غالباً ما يكون السفر بين الساعة 10:00 صباحاً و4:00 مساءً سبباً في الازدحام المروري. يحدد الحجاج الأكثر نجاحاً انتقالاتهم بين المدن (من مكة إلى المدينة أو من الرياض إلى مكة) خلال ساعات الليل المتأخرة أو الصباح الباكر جداً.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. لوجستيات الأمتعة</h2><p style="margin-bottom: 1rem;">غالباً ما تواجه سيارات السيدان العادية صعوبة في كمية الأمتعة التي يحملها الحجاج. إن حجز GMC Yukon أو Hyundai Staria ليس مجرد رفاهية - بل يتعلق بضمان ملاءمة جميع متعلقاتك (بما في ذلك عبوات زمزم) بشكل مريح دون ضغوط إضافية.</p><p style="margin-bottom: 1rem;">راجع <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">دليل النقل في مكة</a> لمزيد حول التنقل خلال الحج، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب للتخطيط لرحلاتك.</p>',
+      en: '<p style="margin-bottom: 1rem;">Hajj is the journey of a lifetime, but the logistics can be overwhelming. As we look toward Hajj 2026, traffic management in Makkah is becoming more complex. Here are 3 things no one tells you about navigating the Holy City during peak season.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. The "Hidden" Road Closures</h2><p style="margin-bottom: 1rem;">During the peak days of Hajj, many roads around the Haram area are restricted to authorized vehicles only. A normal taxi might get blocked, but experienced local drivers, like those at Saudi Cabs GMC, are familiar with alternative routes and common drop-off points near the restricted zones.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. Timing is Everything</h2><p style="margin-bottom: 1rem;">Traveling between 10:00 AM and 4:00 PM is often a recipe for gridlock. The most successful pilgrims schedule their intercity transfers (<a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah</a> or <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">Riyadh to Makkah</a>) during late-night or very early morning hours.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. Luggage Logistics</h2><p style="margin-bottom: 1rem;">Standard sedans often struggle with the amount of luggage Hajj pilgrims carry. Booking a <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> or <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> is not just about luxury—it is about ensuring all your belongings (including Zamzam bottles) fit comfortably without extra stress.</p><p style="margin-bottom: 1rem;">See our <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">Makkah Transport Guide</a> for more on getting around during Hajj, or message <strong>Saudi Cabs GMC</strong> on WhatsApp to plan your transfers.</p>',
+      ar: '<p style="margin-bottom: 1rem;">الحج هو رحلة العمر، لكن الخدمات اللوجستية قد تكون مرهقة. بينما نتطلع إلى حج 2026، تصبح إدارة المرور في مكة أكثر تعقيداً. إليك 3 أشياء لا يخبرك بها أحد عن التنقل في المدينة المقدسة خلال موسم الذروة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">1. إغلاق الطرق "المخفية"</h2><p style="margin-bottom: 1rem;">خلال أيام الذروة في الحج، تقتصر العديد من الطرق حول منطقة الحرم على المركبات المصرح لها فقط. قد يتم حظر التاكسي العادي، لكن السائقين المحليين ذوي الخبرة، مثل سائقي Saudi Cabs GMC، على دراية بالطرق البديلة ونقاط الإنزال الشائعة القريبة من المناطق المقيّدة.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">2. التوقيت هو كل شيء</h2><p style="margin-bottom: 1rem;">غالباً ما يكون السفر بين الساعة 10:00 صباحاً و4:00 مساءً سبباً في الازدحام المروري. يحدد الحجاج الأكثر نجاحاً انتقالاتهم بين المدن (من <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">مكة إلى المدينة</a> أو من <a href="/riyadh-to-makkah" style="color:#0B3D2E;font-weight:700;">الرياض إلى مكة</a>) خلال ساعات الليل المتأخرة أو الصباح الباكر جداً.</p><h2 style="font-size: 1.5rem; margin: 1.5rem 0 1rem;">3. لوجستيات الأمتعة</h2><p style="margin-bottom: 1rem;">غالباً ما تواجه سيارات السيدان العادية صعوبة في كمية الأمتعة التي يحملها الحجاج. إن حجز <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> أو <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> ليس مجرد رفاهية - بل يتعلق بضمان ملاءمة جميع متعلقاتك (بما في ذلك عبوات زمزم) بشكل مريح دون ضغوط إضافية.</p><p style="margin-bottom: 1rem;">راجع <a href="/makkah-transport-guide" style="color:#0B3D2E;font-weight:700;">دليل النقل في مكة</a> لمزيد حول التنقل خلال الحج، أو راسل <strong>Saudi Cabs GMC</strong> عبر واتساب للتخطيط لرحلاتك.</p>',
     },
     date: '2026-05-03',
     image: '/location/makkah.webp',
@@ -489,9 +489,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing Your Vehicle</h2>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>1–3 passengers:</strong> A standard sedan is the most economical choice for the long highway drive</li>
-  <li style="margin-bottom:0.5rem;"><strong>4–7 passengers:</strong> Hyundai Staria — more legroom for a multi-hour trip, easier for elderly pilgrims to get in and out</li>
-  <li style="margin-bottom:0.5rem;"><strong>Groups wanting comfort:</strong> GMC Yukon — extra luggage space for Ihram bags, Zamzam bottles, and suitcases</li>
+  <li style="margin-bottom:0.5rem;"><strong>1–3 passengers:</strong> A standard <a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">sedan</a> is the most economical choice for the long highway drive</li>
+  <li style="margin-bottom:0.5rem;"><strong>4–7 passengers:</strong> <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> — more legroom for a multi-hour trip, easier for elderly pilgrims to get in and out</li>
+  <li style="margin-bottom:0.5rem;"><strong>Groups wanting comfort:</strong> <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> — extra luggage space for Ihram bags, Zamzam bottles, and suitcases</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Private Taxi vs Shared Transport</h2>
@@ -505,7 +505,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">Consider a night departure if you want to arrive in Makkah for Fajr</li>
 </ul>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Madinah to Makkah route daily with fixed prices, a Miqat stop built into the journey, and a full range of vehicles from sedan to VIP SUV. See our <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah to Makkah route page</a> for current fares, or message us on WhatsApp to book your transfer.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Madinah to Makkah route daily with fixed prices, a Miqat stop built into the journey, and a full range of vehicles from sedan to VIP SUV. See our <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah to Makkah route page</a> for current fares, our <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah taxi service</a> page, or our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> — or message us on WhatsApp to book your transfer.</p>`,
       ar: `<p style="margin-bottom:1rem;">السفر من المدينة المنورة إلى مكة المكرمة من أكثر الرحلات شيوعاً للحجاج والمعتمرين والمسافرين في المملكة العربية السعودية. سواء كنت متجهاً لأداء العمرة بعد زيارة المسجد النبوي، أو تنتقل ببساطة بين الحرمين، إليك بالضبط ما يجب توقعه من رحلة تاكسي خاص.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">نظرة عامة على الطريق</h2>
@@ -523,9 +523,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار السيارة المناسبة</h2>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>1–3 ركاب:</strong> السيدان العادية هي الخيار الأكثر اقتصادية للرحلة الطويلة</li>
-  <li style="margin-bottom:0.5rem;"><strong>4–7 ركاب:</strong> هيونداي ستاريا — مساحة أرجل أكبر لرحلة تمتد لساعات، وأسهل لكبار السن</li>
-  <li style="margin-bottom:0.5rem;"><strong>للمجموعات الباحثة عن الراحة:</strong> GMC يوكن — مساحة إضافية لحقائب الإحرام وعبوات زمزم والأمتعة</li>
+  <li style="margin-bottom:0.5rem;"><strong>1–3 ركاب:</strong> <a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">السيدان</a> العادية هي الخيار الأكثر اقتصادية للرحلة الطويلة</li>
+  <li style="margin-bottom:0.5rem;"><strong>4–7 ركاب:</strong> <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> — مساحة أرجل أكبر لرحلة تمتد لساعات، وأسهل لكبار السن</li>
+  <li style="margin-bottom:0.5rem;"><strong>للمجموعات الباحثة عن الراحة:</strong> <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكن</a> — مساحة إضافية لحقائب الإحرام وعبوات زمزم والأمتعة</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التاكسي الخاص مقابل النقل المشترك</h2>
@@ -539,7 +539,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">فكر في الانطلاق ليلاً إذا أردت الوصول إلى مكة في وقت صلاة الفجر</li>
 </ul>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط المدينة المنورة - مكة المكرمة يومياً بأسعار ثابتة، مع توقف عند الميقات ضمن الرحلة، ومجموعة كاملة من السيارات من السيدان إلى الـ SUV الفاخرة. راجع صفحة <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">خط المدينة المنورة - مكة المكرمة</a> للأسعار الحالية، أو راسلنا عبر واتساب لحجز رحلتك.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط المدينة المنورة - مكة المكرمة يومياً بأسعار ثابتة، مع توقف عند الميقات ضمن الرحلة، ومجموعة كاملة من السيارات من السيدان إلى الـ SUV الفاخرة. راجع صفحة <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">خط المدينة المنورة - مكة المكرمة</a> للأسعار الحالية، وصفحة <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي المدينة المنورة</a>، أو <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> — أو راسلنا عبر واتساب لحجز رحلتك.</p>`,
     },
     date: '2026-08-22',
     image: '/location/madinah.webp',
@@ -562,22 +562,22 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. Vehicle Type is the Biggest Factor</h2>
 <p style="margin-bottom:1rem;">The same route costs different amounts depending on which vehicle you choose:</p>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>Sedan (4 seats):</strong> The most economical option, ideal for solo travelers and couples</li>
-  <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria (7 seats):</strong> Mid-range pricing, more space for families and luggage</li>
-  <li style="margin-bottom:0.5rem;"><strong>GMC Yukon (7 seats, VIP):</strong> The premium option — leather seats, extra comfort for long drives</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a> (4 seats):</strong> The most economical option, ideal for solo travelers and couples</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> (7 seats):</strong> Mid-range pricing, more space for families and luggage</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> (7 seats, VIP):</strong> The premium option — leather seats, extra comfort for long drives</li>
 </ul>
-<p style="margin-bottom:1rem;">For example, Jeddah Airport to Makkah runs 330 SAR in the sedan, 380 SAR in the Staria, and 530 SAR in the GMC Yukon — the route is identical, only the vehicle changes the price.</p>
+<p style="margin-bottom:1rem;">For example, <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah</a> runs 330 SAR in the sedan, 380 SAR in the Staria, and 530 SAR in the GMC Yukon — the route is identical, only the vehicle changes the price.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. Distance Matters More Than Traffic</h2>
 <p style="margin-bottom:1rem;">Because the price is fixed before departure, traffic, waiting time, and time of day don't change what you pay. What does change the price is the actual distance of the route:</p>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>Short city routes</strong> (e.g. Jeddah to Makkah, ~90 km): typically the lowest fares</li>
-  <li style="margin-bottom:0.5rem;"><strong>Airport transfers to a further city</strong> (e.g. Jeddah Airport to Madinah, ~420 km): priced higher for the longer highway drive</li>
-  <li style="margin-bottom:0.5rem;"><strong>Intercity routes</strong> (e.g. Makkah to Madinah, ~430 km): a mid-to-long fare reflecting the full highway trip</li>
+  <li style="margin-bottom:0.5rem;"><strong>Short city routes</strong> (e.g. <a href="/jeddah-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah to Makkah</a>, ~90 km): typically the lowest fares</li>
+  <li style="margin-bottom:0.5rem;"><strong>Airport transfers to a further city</strong> (e.g. <a href="/jeddah-airport-to-madinah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Madinah</a>, ~420 km): priced higher for the longer highway drive</li>
+  <li style="margin-bottom:0.5rem;"><strong>Intercity routes</strong> (e.g. <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah</a>, ~430 km): a mid-to-long fare reflecting the full highway trip</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. Ziyarat & Tour Packages Are Priced Differently</h2>
-<p style="margin-bottom:1rem;">A Ziyarat tour (visiting several historical Islamic sites in one trip) isn't priced like a point-to-point transfer — it covers multiple stops and waiting time at each site, so it's quoted as its own package rather than a simple distance fare. Ask for the current Ziyarat package rate when you book.</p>
+<p style="margin-bottom:1rem;">A <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Ziyarat tour</a> (visiting several historical Islamic sites in one trip) isn't priced like a point-to-point transfer — it covers multiple stops and waiting time at each site, so it's quoted as its own package rather than a simple distance fare. Ask for the current Ziyarat package rate when you book.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. Why Fixed Pricing Beats a Meter</h2>
 <p style="margin-bottom:1rem;">A metered taxi can run up the fare in slow traffic, at red lights, or by taking a longer route. With a fixed price agreed in advance:</p>
@@ -594,22 +594,22 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. نوع السيارة هو العامل الأكبر</h2>
 <p style="margin-bottom:1rem;">نفس الطريق يكلف مبالغ مختلفة حسب السيارة التي تختارها:</p>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>سيدان (٤ مقاعد):</strong> الخيار الأكثر اقتصادية، مثالي للأفراد والأزواج</li>
-  <li style="margin-bottom:0.5rem;"><strong>هيونداي ستاريا (٧ مقاعد):</strong> سعر متوسط، مساحة أكبر للعائلات والأمتعة</li>
-  <li style="margin-bottom:0.5rem;"><strong>GMC يوكن (٧ مقاعد، VIP):</strong> الخيار الفاخر — مقاعد جلدية وراحة إضافية للرحلات الطويلة</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a> (٤ مقاعد):</strong> الخيار الأكثر اقتصادية، مثالي للأفراد والأزواج</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> (٧ مقاعد):</strong> سعر متوسط، مساحة أكبر للعائلات والأمتعة</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكن</a> (٧ مقاعد، VIP):</strong> الخيار الفاخر — مقاعد جلدية وراحة إضافية للرحلات الطويلة</li>
 </ul>
-<p style="margin-bottom:1rem;">على سبيل المثال، مطار جدة إلى مكة يكلف 330 ريال بالسيدان، و380 ريال بالستاريا، و530 ريال بالـ GMC يوكن — نفس الطريق تماماً، السيارة فقط هي ما يغيّر السعر.</p>
+<p style="margin-bottom:1rem;">على سبيل المثال، <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">مطار جدة إلى مكة</a> يكلف 330 ريال بالسيدان، و380 ريال بالستاريا، و530 ريال بالـ GMC يوكن — نفس الطريق تماماً، السيارة فقط هي ما يغيّر السعر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. المسافة أهم من الزحام</h2>
 <p style="margin-bottom:1rem;">بما أن السعر ثابت ومتفق عليه قبل الانطلاق، فإن الزحام ووقت الانتظار ووقت اليوم لا تغيّر ما تدفعه. ما يغيّر السعر فعلياً هو المسافة الفعلية للطريق:</p>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>الطرق القصيرة داخل المدن</strong> (مثل جدة - مكة، ~90 كم): عادةً أقل الأسعار</li>
-  <li style="margin-bottom:0.5rem;"><strong>توصيل المطار لمدينة أبعد</strong> (مثل مطار جدة - المدينة المنورة، ~420 كم): سعر أعلى لطول الطريق السريع</li>
-  <li style="margin-bottom:0.5rem;"><strong>الطرق بين المدن</strong> (مثل مكة - المدينة، ~430 كم): سعر متوسط إلى طويل يعكس الرحلة الكاملة</li>
+  <li style="margin-bottom:0.5rem;"><strong>الطرق القصيرة داخل المدن</strong> (مثل <a href="/jeddah-to-makkah" style="color:#0B3D2E;font-weight:700;">جدة - مكة</a>، ~90 كم): عادةً أقل الأسعار</li>
+  <li style="margin-bottom:0.5rem;"><strong>توصيل المطار لمدينة أبعد</strong> (مثل <a href="/jeddah-airport-to-madinah" style="color:#0B3D2E;font-weight:700;">مطار جدة - المدينة المنورة</a>، ~420 كم): سعر أعلى لطول الطريق السريع</li>
+  <li style="margin-bottom:0.5rem;"><strong>الطرق بين المدن</strong> (مثل <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">مكة - المدينة</a>، ~430 كم): سعر متوسط إلى طويل يعكس الرحلة الكاملة</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">3. باقات الزيارات لها تسعير مختلف</h2>
-<p style="margin-bottom:1rem;">جولة الزيارات (زيارة عدة مواقع إسلامية تاريخية في رحلة واحدة) لا تُسعَّر مثل التوصيل من نقطة لنقطة — فهي تشمل عدة توقفات ووقت انتظار عند كل موقع، لذا تُحدَّد كباقة خاصة بها بدلاً من سعر مسافة بسيط. اسأل عن سعر باقة الزيارات الحالي عند الحجز.</p>
+<p style="margin-bottom:1rem;"><a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جولة الزيارات</a> (زيارة عدة مواقع إسلامية تاريخية في رحلة واحدة) لا تُسعَّر مثل التوصيل من نقطة لنقطة — فهي تشمل عدة توقفات ووقت انتظار عند كل موقع، لذا تُحدَّد كباقة خاصة بها بدلاً من سعر مسافة بسيط. اسأل عن سعر باقة الزيارات الحالي عند الحجز.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">4. لماذا السعر الثابت أفضل من العداد</h2>
 <p style="margin-bottom:1rem;">التاكسي بالعداد قد يرفع السعر في الزحام أو عند الإشارات أو بسلوك طريق أطول. مع سعر ثابت متفق عليه مسبقاً:</p>
@@ -654,8 +654,8 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">The single biggest factor isn't the clock — it's the Hijri calendar:</p>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>Last 10 days of Ramadan:</strong> Extremely high pilgrim traffic in both cities. Book your car well in advance and expect busier highways.</li>
-  <li style="margin-bottom:0.5rem;"><strong>Hajj season:</strong> The heaviest travel period of the year around Makkah. If your trip isn't Hajj-related, avoid traveling in and out of Makkah during the peak days if you can.</li>
-  <li style="margin-bottom:0.5rem;"><strong>Regular Umrah season (outside Ramadan/Hajj):</strong> The most relaxed time to travel — shorter waits, more flexible scheduling, and easier hotel availability at both ends.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Hajj season:</strong> The heaviest travel period of the year around Makkah. If your trip isn't Hajj-related, avoid traveling in and out of Makkah during the peak days if you can — see our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> if it is.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Regular Umrah season (outside Ramadan/Hajj):</strong> The most relaxed time to travel — shorter waits, more flexible scheduling, and easier hotel availability at both ends. See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for more.</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Build Prayer Times Into Your Schedule</h2>
@@ -664,7 +664,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Our Recommendation</h2>
 <p style="margin-bottom:1rem;">If your schedule is flexible, a night departure outside Ramadan and Hajj season is the most comfortable combination — cooler weather, quieter highway, and a rested arrival. If you're traveling during a peak period, simply book a few days ahead and build in extra time for busier roads near the cities.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Makkah–Madinah route at any hour, any day, with a fixed price agreed before you travel. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares, or message us on WhatsApp to lock in your preferred departure time.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> runs the Makkah–Madinah route at any hour, any day, with a fixed price agreed before you travel. See our <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah to Madinah route page</a> for current fares, our <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah</a> and <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah</a> taxi service pages, or message us on WhatsApp to lock in your preferred departure time.</p>`,
       ar: `<p style="margin-bottom:1rem;">رحلة الـ430 كم بين مكة المكرمة والمدينة المنورة تستغرق تقريباً نفس الـ4 إلى 4.5 ساعة بغض النظر عن وقت الانطلاق — لكن وقت الانطلاق لا يزال يُحدث فرقاً حقيقياً في راحة الرحلة. إليك كيف تختار التوقيت المناسب.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">وقت اليوم: ليلاً أم نهاراً</h2>
@@ -681,8 +681,8 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">العامل الأكبر ليس الساعة — بل التقويم الهجري:</p>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>العشر الأواخر من رمضان:</strong> حركة حجاج ومعتمرين عالية جداً في كلا المدينتين. احجز سيارتك مسبقاً وتوقع طرقاً أكثر ازدحاماً.</li>
-  <li style="margin-bottom:0.5rem;"><strong>موسم الحج:</strong> أكثر فترات السفر ازدحاماً في العام حول مكة المكرمة. إذا لم تكن رحلتك متعلقة بالحج، تجنب السفر من وإلى مكة خلال الأيام الذروة إن أمكن.</li>
-  <li style="margin-bottom:0.5rem;"><strong>موسم العمرة العادي (خارج رمضان والحج):</strong> أهدأ وقت للسفر — انتظار أقل ومرونة أكبر في الجدولة وتوفر أسهل للفنادق في كلا الطرفين.</li>
+  <li style="margin-bottom:0.5rem;"><strong>موسم الحج:</strong> أكثر فترات السفر ازدحاماً في العام حول مكة المكرمة. إذا لم تكن رحلتك متعلقة بالحج، تجنب السفر من وإلى مكة خلال الأيام الذروة إن أمكن — راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> إن كانت كذلك.</li>
+  <li style="margin-bottom:0.5rem;"><strong>موسم العمرة العادي (خارج رمضان والحج):</strong> أهدأ وقت للسفر — انتظار أقل ومرونة أكبر في الجدولة وتوفر أسهل للفنادق في كلا الطرفين. راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> لمزيد من التفاصيل.</li>
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">خطط لأوقات الصلاة ضمن جدولك</h2>
@@ -691,7 +691,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">توصيتنا</h2>
 <p style="margin-bottom:1rem;">إذا كان جدولك مرناً، فالانطلاق ليلاً خارج رمضان وموسم الحج هو الخيار الأكثر راحة — طقس أبرد وطريق أهدأ ووصول بعد راحة كافية. إذا كنت تسافر خلال فترة ذروة، فقط احجز قبل أيام وخصص وقتاً إضافياً للطرق الأكثر ازدحاماً قرب المدينتين.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط مكة - المدينة في أي ساعة وأي يوم، بسعر ثابت متفق عليه قبل السفر. راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية، أو راسلنا عبر واتساب لتحديد وقت انطلاقك المفضل.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تشغّل خط مكة - المدينة في أي ساعة وأي يوم، بسعر ثابت متفق عليه قبل السفر. راجع صفحة <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">خط مكة المكرمة - المدينة المنورة</a> للأسعار الحالية، وصفحتي <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">تاكسي مكة</a> و<a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">تاكسي المدينة</a>، أو راسلنا عبر واتساب لتحديد وقت انطلاقك المفضل.</p>`,
     },
     date: '2026-08-22',
     image: '/location/madinah.webp',
@@ -716,8 +716,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">☐ Decide your Miqat point before you fly — if you're flying into Jeddah, you'll usually enter Ihram on the plane or shortly before landing; if you're coming from Madinah, it's Masjid Dhul-Hulayfah (Abyar Ali)</li>
   <li style="margin-bottom:0.5rem;">☐ Book your airport pickup in advance, especially during Ramadan and Hajj season when demand is high</li>
   <li style="margin-bottom:0.5rem;">☐ Have your flight number ready when you book — it lets your driver track your landing and adjust for delays</li>
-  <li style="margin-bottom:0.5rem;">☐ Pick the right vehicle for your group size: sedan for 1–3, Hyundai Staria for families of 4–7, GMC Yukon for extra comfort or VIP groups</li>
-  <li style="margin-bottom:0.5rem;">☐ Confirm the fixed price for each leg of your trip before you travel (airport transfer, Makkah–Madinah, any Ziyarat tours) so there are no surprises</li>
+  <li style="margin-bottom:0.5rem;">☐ Pick the right vehicle for your group size: <a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">sedan</a> for 1–3, <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> for families of 4–7, <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> for extra comfort or VIP groups</li>
+  <li style="margin-bottom:0.5rem;">☐ Confirm the fixed price for each leg of your trip before you travel (airport transfer, <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">Makkah–Madinah</a>, any <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Ziyarat tours</a>) so there are no surprises</li>
   <li style="margin-bottom:0.5rem;">☐ Save your driver's WhatsApp number so you can reach them directly for pickup times or changes</li>
 </ul>
 
@@ -744,7 +744,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Putting It Together</h2>
 <p style="margin-bottom:1rem;">Sort your transport and hotel bookings first, since your Ihram timing and packing depend on your route (flying into Jeddah vs Madinah changes your Miqat point). Once those are set, packing is straightforward — pack light, keep Ihram accessible, and leave room in your bag for the trip home.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for route and transport details, or message us on WhatsApp with your flight details to arrange your Umrah transport in advance.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles airport pickups, Makkah–Madinah transfers, and Ziyarat tours with fixed prices agreed before you travel. See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a> for route and transport details, our <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah</a> and <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah</a> taxi service pages, or message us on WhatsApp with your flight details to arrange your Umrah transport in advance.</p>`,
       ar: `<p style="margin-bottom:1rem;">التخطيط للعمرة يتضمن الكثير من التفاصيل، لكن معظمها يقع تحت ثلاثة محاور: التنقل، والإقامة، وما تحزمه. إليك قائمة تحقق عملية لكل محور.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قائمة التنقل</h2>
@@ -752,8 +752,8 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;">☐ حدد نقطة الميقات قبل السفر — إذا كنت قادماً عبر جدة، ستحرم غالباً في الطائرة أو قبل الهبوط بقليل؛ وإذا كنت قادماً من المدينة المنورة، فالميقات هو مسجد ذي الحليفة (أبيار علي)</li>
   <li style="margin-bottom:0.5rem;">☐ احجز استقبالك من المطار مسبقاً، خاصة خلال رمضان وموسم الحج حين يكون الطلب مرتفعاً</li>
   <li style="margin-bottom:0.5rem;">☐ جهّز رقم رحلتك الجوية عند الحجز — يتيح لسائقك متابعة وقت هبوطك والتكيف مع أي تأخير</li>
-  <li style="margin-bottom:0.5rem;">☐ اختر السيارة المناسبة لحجم مجموعتك: سيدان لـ1-3 أشخاص، هيونداي ستاريا للعائلات من 4-7، GMC يوكن لراحة إضافية أو مجموعات VIP</li>
-  <li style="margin-bottom:0.5rem;">☐ أكّد السعر الثابت لكل مرحلة من رحلتك (توصيل المطار، مكة - المدينة، أي جولات زيارات) قبل السفر حتى لا تكون هناك مفاجآت</li>
+  <li style="margin-bottom:0.5rem;">☐ اختر السيارة المناسبة لحجم مجموعتك: <a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a> لـ1-3 أشخاص، <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> للعائلات من 4-7، <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكن</a> لراحة إضافية أو مجموعات VIP</li>
+  <li style="margin-bottom:0.5rem;">☐ أكّد السعر الثابت لكل مرحلة من رحلتك (توصيل المطار، <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">مكة - المدينة</a>، أي <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جولات زيارات</a>) قبل السفر حتى لا تكون هناك مفاجآت</li>
   <li style="margin-bottom:0.5rem;">☐ احفظ رقم واتساب سائقك للتواصل المباشر بخصوص أوقات الاستلام أو أي تغييرات</li>
 </ul>
 
@@ -780,7 +780,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">تجميع كل شيء معاً</h2>
 <p style="margin-bottom:1rem;">رتّب حجوزات النقل والفنادق أولاً، لأن توقيت إحرامك وحزمك يعتمدان على مسارك (السفر عبر جدة مقابل المدينة يغيّر نقطة ميقاتك). بعد ترتيب ذلك، يصبح الحزم بسيطاً — احزم بخفة، أبقِ الإحرام في متناول يدك، واترك مساحة في حقيبتك لرحلة العودة.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> لتفاصيل الخطوط والنقل، أو راسلنا عبر واتساب مع تفاصيل رحلتك لترتيب نقل عمرتك مسبقاً.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى استقبال المطار وتوصيلات مكة - المدينة وجولات الزيارات بأسعار ثابتة متفق عليها قبل السفر. راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a> لتفاصيل الخطوط والنقل، وصفحتي <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">تاكسي مكة</a> و<a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">تاكسي المدينة</a>، أو راسلنا عبر واتساب مع تفاصيل رحلتك لترتيب نقل عمرتك مسبقاً.</p>`,
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',
@@ -819,10 +819,10 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">Depending on the season, temperatures around Makkah and Madinah can be extreme. Carry water, don't wait until you're thirsty, and pace your walking between the Haram and your hotel during the hottest parts of the day.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">7. Makkah and Madinah Are Walkable — The Distance Between Them Isn't</h2>
-<p style="margin-bottom:1rem;">Once you're near the Haram in either city, most things are within walking distance. But Makkah and Madinah themselves are about 430 km apart — a 4 to 4.5 hour drive, not a short taxi ride. Plan and book that leg of your trip separately and in advance.</p>
+<p style="margin-bottom:1rem;">Once you're near the Haram in either city, most things are within walking distance. But Makkah and Madinah themselves are about 430 km apart — a 4 to 4.5 hour drive, not a short taxi ride. Plan and <a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">book that leg of your trip</a> separately and in advance.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">8. Ziyarat Sites Are Optional Extras, Not Part of Umrah Itself</h2>
-<p style="margin-bottom:1rem;">Visiting historical sites like Jabal al-Nour, Jabal Thawr, Quba Mosque, or Mount Uhud is a common and meaningful addition to a trip, but they're separate from the core rituals of Umrah. Budget extra time and a separate vehicle booking if you want to include them.</p>
+<p style="margin-bottom:1rem;">Visiting historical sites like <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Jabal al-Nour and Jabal Thawr in Makkah</a>, or <a href="/madinah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">Quba Mosque and Mount Uhud in Madinah</a>, is a common and meaningful addition to a trip, but they're separate from the core rituals of Umrah. Budget extra time and a separate vehicle booking if you want to include them.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">9. Everything Slows Down Around Prayer Times</h2>
 <p style="margin-bottom:1rem;">Traffic, shops, and pedestrian movement all shift around each Salah. If you're traveling by road near a prayer time, expect a stop — most private drivers plan for this rather than fight through it.</p>
@@ -852,10 +852,10 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">حسب الموسم، قد تكون درجات الحرارة حول مكة والمدينة شديدة. احمل الماء، ولا تنتظر حتى تشعر بالعطش، ونظّم مشيك بين الحرم وفندقك خلال أشد ساعات النهار حرارة.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">7. مكة والمدينة قابلتان للمشي — لكن المسافة بينهما ليست كذلك</h2>
-<p style="margin-bottom:1rem;">بمجرد أن تكون قريباً من الحرم في أي من المدينتين، تكون معظم الأماكن على مسافة مشي. لكن مكة والمدينة تبعدان عن بعضهما حوالي 430 كم — رحلة 4 إلى 4.5 ساعة، وليست ركوبة تاكسي قصيرة. خطط واحجز هذه المرحلة من رحلتك بشكل منفصل ومسبق.</p>
+<p style="margin-bottom:1rem;">بمجرد أن تكون قريباً من الحرم في أي من المدينتين، تكون معظم الأماكن على مسافة مشي. لكن مكة والمدينة تبعدان عن بعضهما حوالي 430 كم — رحلة 4 إلى 4.5 ساعة، وليست ركوبة تاكسي قصيرة. خطط و<a href="/makkah-to-madinah" style="color:#0B3D2E;font-weight:700;">احجز هذه المرحلة من رحلتك</a> بشكل منفصل ومسبق.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">8. مواقع الزيارة إضافات اختيارية، وليست جزءاً من العمرة نفسها</h2>
-<p style="margin-bottom:1rem;">زيارة مواقع تاريخية مثل جبل النور وجبل ثور ومسجد قباء وجبل أحد إضافة شائعة وذات معنى للرحلة، لكنها منفصلة عن مناسك العمرة الأساسية. خصص وقتاً إضافياً وحجز سيارة منفصل إذا أردت تضمينها.</p>
+<p style="margin-bottom:1rem;">زيارة مواقع تاريخية مثل <a href="/makkah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">جبل النور وجبل ثور في مكة</a>، أو <a href="/madinah-ziyarat-tour" style="color:#0B3D2E;font-weight:700;">مسجد قباء وجبل أحد في المدينة</a>، إضافة شائعة وذات معنى للرحلة، لكنها منفصلة عن مناسك العمرة الأساسية. خصص وقتاً إضافياً وحجز سيارة منفصل إذا أردت تضمينها.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">9. كل شيء يهدأ حول أوقات الصلاة</h2>
 <p style="margin-bottom:1rem;">حركة المرور والمحلات وحركة المشاة كلها تتغير حول كل صلاة. إذا كنت تسافر براً قرب وقت صلاة، توقع توقفاً — معظم السائقين الخاصين يخططون لذلك بدلاً من محاولة تجاوزه.</p>
@@ -889,8 +889,8 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What's Open to Everyone</h2>
 <p style="margin-bottom:1rem;">Most of Saudi Arabia is open to all visitors, including places we serve directly:</p>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>Jeddah:</strong> The Red Sea coastal city welcomes all travelers — historic Al-Balad (a UNESCO World Heritage old town), the Corniche waterfront, and King Abdulaziz International Airport, a major gateway for the whole region.</li>
-  <li style="margin-bottom:0.5rem;"><strong>Taif:</strong> The mountain city with cooler weather, rose farms (in season), and scenic roads like Al-Hada — open to all visitors and popular for its climate.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Jeddah:</strong> The Red Sea coastal city welcomes all travelers — historic Al-Balad (a UNESCO World Heritage old town), the Corniche waterfront, and <a href="/jeddah-airport-guide" style="color:#0B3D2E;font-weight:700;">King Abdulaziz International Airport</a>, a major gateway for the whole region.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/taif-taxi-service" style="color:#0B3D2E;font-weight:700;">Taif</a>:</strong> The mountain city with cooler weather, rose farms (in season), and scenic roads like Al-Hada — open to all visitors and popular for its climate.</li>
   <li style="margin-bottom:0.5rem;"><strong>Riyadh, AlUla, the Red Sea coast, and Eastern Province:</strong> All open to international tourism, with growing infrastructure for visitors.</li>
 </ul>
 
@@ -905,7 +905,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Getting Around With Saudi Cabs GMC</h2>
-<p style="margin-bottom:1rem;">We provide airport transfers, private driver hire, and intercity routes across Jeddah, Taif, and beyond, with fixed prices agreed before you travel. If your itinerary includes Makkah or Madinah, we can take you to Jeddah or the outer boundary, but entry to the restricted zones themselves isn't possible for non-Muslim travelers, per Saudi regulations.</p>
+<p style="margin-bottom:1rem;">We provide airport transfers, <a href="/private-driver" style="color:#0B3D2E;font-weight:700;">private driver hire</a>, and intercity routes across Jeddah, Taif, and beyond, with fixed prices agreed before you travel. If your itinerary includes Makkah or Madinah, we can take you to Jeddah or the outer boundary, but entry to the restricted zones themselves isn't possible for non-Muslim travelers, per Saudi regulations.</p>
 
 <p style="margin-bottom:1rem;">See our <a href="/jeddah-taxi-service" style="color:#0B3D2E;font-weight:700;">Jeddah Taxi Service page</a> for routes and fares, or message us on WhatsApp with your itinerary and we'll help you plan transport for the parts of Saudi Arabia that are open to you.</p>`,
       ar: `<p style="margin-bottom:1rem;">انفتحت السعودية بشكل كبير على الزوار الدوليين في السنوات الأخيرة، مع توفر تأشيرة إلكترونية للمسافرين من دول عديدة لأغراض السياحة والأعمال وزيارة العائلة. إذا كنت تخطط لرحلة كمسافر غير مسلم، إليك دليلاً واضحاً لما يجب توقعه في التنقل.</p>
@@ -916,8 +916,8 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ما هو مفتوح للجميع</h2>
 <p style="margin-bottom:1rem;">معظم السعودية مفتوحة لجميع الزوار، بما فيها الأماكن التي نخدمها مباشرة:</p>
 <ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong>جدة:</strong> المدينة الساحلية على البحر الأحمر ترحب بجميع المسافرين — البلد التاريخية (موقع تراث عالمي لليونسكو)، وكورنيش الواجهة البحرية، ومطار الملك عبدالعزيز الدولي، بوابة رئيسية للمنطقة كلها.</li>
-  <li style="margin-bottom:0.5rem;"><strong>الطائف:</strong> المدينة الجبلية بمناخ أبرد ومزارع ورد (في موسمها) وطرق خلابة مثل الهدا — مفتوحة لجميع الزوار ومشهورة بمناخها.</li>
+  <li style="margin-bottom:0.5rem;"><strong>جدة:</strong> المدينة الساحلية على البحر الأحمر ترحب بجميع المسافرين — البلد التاريخية (موقع تراث عالمي لليونسكو)، وكورنيش الواجهة البحرية، و<a href="/jeddah-airport-guide" style="color:#0B3D2E;font-weight:700;">مطار الملك عبدالعزيز الدولي</a>، بوابة رئيسية للمنطقة كلها.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/taif-taxi-service" style="color:#0B3D2E;font-weight:700;">الطائف</a>:</strong> المدينة الجبلية بمناخ أبرد ومزارع ورد (في موسمها) وطرق خلابة مثل الهدا — مفتوحة لجميع الزوار ومشهورة بمناخها.</li>
   <li style="margin-bottom:0.5rem;"><strong>الرياض، العلا، ساحل البحر الأحمر، والمنطقة الشرقية:</strong> جميعها مفتوحة للسياحة الدولية، مع بنية تحتية متنامية للزوار.</li>
 </ul>
 
@@ -932,7 +932,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التنقل مع Saudi Cabs GMC</h2>
-<p style="margin-bottom:1rem;">نوفر توصيل المطار وتأجير سائق خاص ورحلات بين المدن عبر جدة والطائف وما وراءهما، بأسعار ثابتة متفق عليها قبل السفر. إذا تضمّن برنامجك مكة أو المدينة، يمكننا إيصالك إلى جدة أو الحدود الخارجية، لكن الدخول إلى المناطق المقصورة نفسها غير ممكن للمسافرين غير المسلمين، وفقاً للأنظمة السعودية. راجع صفحة <a href="/jeddah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي جدة</a> للخطوط والأسعار.</p>
+<p style="margin-bottom:1rem;">نوفر توصيل المطار و<a href="/private-driver" style="color:#0B3D2E;font-weight:700;">تأجير سائق خاص</a> ورحلات بين المدن عبر جدة والطائف وما وراءهما، بأسعار ثابتة متفق عليها قبل السفر. إذا تضمّن برنامجك مكة أو المدينة، يمكننا إيصالك إلى جدة أو الحدود الخارجية، لكن الدخول إلى المناطق المقصورة نفسها غير ممكن للمسافرين غير المسلمين، وفقاً للأنظمة السعودية. راجع صفحة <a href="/jeddah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي جدة</a> للخطوط والأسعار.</p>
 
 <p style="margin-bottom:1rem;">راسلنا عبر واتساب ببرنامج رحلتك وسنساعدك على التخطيط للنقل في الأجزاء المفتوحة لك من السعودية.</p>`,
     },
@@ -955,7 +955,7 @@ export const blogPosts: BlogPost[] = [
       en: `<p style="margin-bottom:1rem;">Hajj transport isn't something to leave until the last minute. Vehicles, drivers, and schedules fill up fast during the season, and the Hajj ritual calendar itself is fixed — Mina, Arafat, and Muzdalifah movements all happen on set days. Here's a realistic timeline for planning your transport well ahead.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Months Ahead: Lock In Your Dates</h2>
-<p style="margin-bottom:1rem;">As soon as your Hajj permit and travel dates are confirmed, reach out to arrange transport — even just to put your name down and get a sense of vehicle availability for your dates. This is especially important if you're traveling as a family or larger group and need a specific vehicle type like the GMC Yukon or Hyundai Staria.</p>
+<p style="margin-bottom:1rem;">As soon as your Hajj permit and travel dates are confirmed, reach out to arrange transport — even just to put your name down and get a sense of vehicle availability for your dates. This is especially important if you're traveling as a family or larger group and need a specific vehicle type like the <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> or <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Information to Have Ready Before You Message</h2>
 <p style="margin-bottom:1rem;">Booking goes much faster when you can share all of this in your first message:</p>
@@ -980,11 +980,11 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Booking for a Group</h2>
 <p style="margin-bottom:1rem;">If you're coordinating transport for a family or group, it helps to have one point of contact manage the WhatsApp conversation rather than multiple people booking separately — it keeps vehicle assignments, pickup times, and headcounts consistent and avoids duplicate or conflicting bookings.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles Hajj transport across Jeddah Airport, Makkah, Madinah, and the holy sites with fixed prices agreed in advance. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail, or message us on WhatsApp as soon as your dates are confirmed to start planning.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> handles Hajj transport across Jeddah Airport, Makkah, Madinah, and the holy sites with fixed prices agreed in advance. See our <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">Hajj Transport FAQ</a> for more detail, our <a href="/hajj-umrah-transport" style="color:#0B3D2E;font-weight:700;">Hajj &amp; Umrah Transport</a> page for our full range of services, or message us on WhatsApp as soon as your dates are confirmed to start planning.</p>`,
       ar: `<p style="margin-bottom:1rem;">نقل الحج ليس أمراً يُترك للحظة الأخيرة. السيارات والسائقون والمواعيد تمتلئ بسرعة خلال الموسم، وتقويم مناسك الحج نفسه ثابت — تنقلات منى وعرفات ومزدلفة تحدث جميعها في أيام محددة. إليك جدولاً واقعياً للتخطيط لنقلك مسبقاً.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">قبل أشهر: ثبّت تواريخك</h2>
-<p style="margin-bottom:1rem;">بمجرد تأكيد تصريح الحج وتواريخ سفرك، تواصل معنا لترتيب النقل — ولو فقط لتسجيل اسمك ومعرفة مدى توفر السيارات لتواريخك. هذا مهم خاصة إذا كنت تسافر مع عائلة أو مجموعة كبيرة وتحتاج سيارة معينة مثل GMC يوكن أو هيونداي ستاريا.</p>
+<p style="margin-bottom:1rem;">بمجرد تأكيد تصريح الحج وتواريخ سفرك، تواصل معنا لترتيب النقل — ولو فقط لتسجيل اسمك ومعرفة مدى توفر السيارات لتواريخك. هذا مهم خاصة إذا كنت تسافر مع عائلة أو مجموعة كبيرة وتحتاج سيارة معينة مثل <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكن</a> أو <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a>.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">معلومات يجب تجهيزها قبل المراسلة</h2>
 <p style="margin-bottom:1rem;">الحجز يكون أسرع بكثير عندما تشارك كل هذا في رسالتك الأولى:</p>
@@ -1009,7 +1009,7 @@ export const blogPosts: BlogPost[] = [
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الحجز لمجموعة</h2>
 <p style="margin-bottom:1rem;">إذا كنت تنسّق النقل لعائلة أو مجموعة، من الأفضل أن يتولى شخص واحد إدارة محادثة الواتساب بدلاً من حجز عدة أشخاص بشكل منفصل — هذا يحافظ على اتساق تخصيص السيارات ومواعيد الاستلام والأعداد، ويتجنب الحجوزات المكررة أو المتعارضة.</p>
 
-<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى نقل الحج عبر مطار جدة ومكة والمدينة والمشاعر المقدسة بأسعار ثابتة متفق عليها مسبقاً. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل، أو راسلنا عبر واتساب فور تأكيد تواريخك للبدء في التخطيط.</p>`,
+<p style="margin-bottom:1rem;"><strong>Saudi Cabs GMC</strong> تتولى نقل الحج عبر مطار جدة ومكة والمدينة والمشاعر المقدسة بأسعار ثابتة متفق عليها مسبقاً. راجع <a href="/hajj-transport-faq" style="color:#0B3D2E;font-weight:700;">الأسئلة الشائعة لنقل الحج</a> لمزيد من التفاصيل، أو صفحة <a href="/hajj-umrah-transport" style="color:#0B3D2E;font-weight:700;">نقل الحج والعمرة</a> لمعرفة خدماتنا كاملة، أو راسلنا عبر واتساب فور تأكيد تواريخك للبدء في التخطيط.</p>`,
     },
     date: '2026-08-22',
     image: '/location/makkah.webp',

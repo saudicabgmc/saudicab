@@ -678,6 +678,35 @@ export default function Home() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────
+          POPULAR ROUTES & GUIDES — quick links to route, vehicle and
+          guide pages for visitors browsing the homepage
+      ────────────────────────────────────────────────────────── */}
+      <section style={{ padding: '50px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', marginBottom: '20px', fontWeight: '600' }}>
+            {isAr ? 'أشهر الخطوط والأدلة' : 'Popular Routes & Guides'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[
+              { href: '/jeddah-airport-to-makkah', ar: 'مطار جدة إلى مكة', en: 'Jeddah Airport to Makkah' },
+              { href: '/makkah-to-madinah', ar: 'مكة إلى المدينة المنورة', en: 'Makkah to Madinah' },
+              { href: '/makkah-to-jeddah', ar: 'مكة إلى جدة', en: 'Makkah to Jeddah' },
+              { href: '/riyadh-to-makkah', ar: 'الرياض إلى مكة', en: 'Riyadh to Makkah' },
+              { href: '/hyundai-staria-taxi', ar: 'تاكسي هيونداي ستاريا', en: 'Hyundai Staria Taxi' },
+              { href: '/gmc-yukon-hire', ar: 'استئجار GMC يوكون', en: 'GMC Yukon Hire' },
+              { href: '/umrah-travel-guide', ar: 'دليل سفر العمرة', en: 'Umrah Travel Guide' },
+              { href: '/hajj-transport-faq', ar: 'الأسئلة الشائعة لنقل الحج', en: 'Hajj Transport FAQ' },
+              { href: '/blog', ar: 'مدونة السفر', en: 'Travel Blog' },
+            ].map(l => (
+              <Link key={l.href} href={l.href} className="route-badge">
+                {isAr ? l.ar : l.en}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────────────────────────────────────
           TRUST BADGES
       ────────────────────────────────────────────────────────── */}
       <TrustBadges />

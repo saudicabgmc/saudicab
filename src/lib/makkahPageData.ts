@@ -197,6 +197,7 @@ export const guideTopics: GuideTopic[] = [
     links: [
       { href: '/jeddah-airport-to-makkah', label: { en: 'Jeddah Airport to Makkah', ar: 'مطار جدة إلى مكة' } },
       { href: '/blog/how-to-travel-jeddah-airport-to-makkah', label: { en: 'Airport to Makkah travel tips', ar: 'نصائح السفر من المطار إلى مكة' } },
+      { href: '/blog/makkah-to-jeddah-airport-by-taxi', label: { en: 'Makkah to Jeddah Airport guide', ar: 'دليل مكة إلى مطار جدة' } },
     ],
   },
   {
