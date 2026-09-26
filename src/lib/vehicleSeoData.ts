@@ -22,6 +22,19 @@ const CITIES = {
   taif:    { name: 'Taif',    hub: '/taif-taxi-service'     },
 } as const
 
+// One verified, city-specific fact per city (already established elsewhere on the
+// site — see the root layout's LandmarkOrHistoricalBuilding schema and the Jeddah/Taif
+// blog content). Appended to templated page subtitles below so that pages for the same
+// vehicle/service across different cities aren't word-for-word identical apart from the
+// city name — a pattern Google treats as near-duplicate content and often leaves
+// "Crawled - currently not indexed".
+const CITY_FACTS: Record<CityKey, string> = {
+  makkah:  'Home to Al-Masjid Al-Haram, the Holy Mosque and the Kaaba.',
+  madinah: "Home to Masjid an-Nabawi, the Prophet's Mosque.",
+  jeddah:  'The Red Sea coastal gateway city — home to King Abdulaziz International Airport and the historic Al-Balad old town.',
+  taif:    'The mountain city above Makkah, known for cooler weather, rose farms in season, and the scenic Al-Hada road.',
+}
+
 const SERVICES = {
   'taxi':                 { label: 'Taxi',               hub: '/taxi-services'                 },
   'cab':                  { label: 'Cab',                hub: '/cab-services'                  },
@@ -314,7 +327,7 @@ for (const vk of V_KEYS) {
         metaTitle:   `${v.label} ${s.label} in ${c.name} | ${v.name}`,
         metaDesc:    `Book a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} — ${v.name}, fixed price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
         h1:          `${v.label} ${s.label} in ${c.name} — ${v.name}`,
-        subtitle:    `${v.seats}-passenger ${s.label.toLowerCase()} service in ${c.name}. ${v.name} — ${v.luggage}. Fixed SAR price, no meter, 24/7${avail}.`,
+        subtitle:    `${v.seats}-passenger ${s.label.toLowerCase()} service in ${c.name}. ${v.name} — ${v.luggage}. Fixed SAR price, no meter, 24/7${avail}. ${CITY_FACTS[ck]}`,
         quickAnswer: `Saudi Cabs GMC provides a ${v.seats}-seat ${s.label.toLowerCase()} in ${c.name} using a ${v.name}. Carries up to ${v.seats} passengers with ${v.luggage}. Fixed price in SAR. Book via WhatsApp: +92 309 7811785.`,
         badge:       `${v.label} · ${c.name}`,
         vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
@@ -539,7 +552,7 @@ for (const ik of I_KEYS) {
         metaTitle:   `${intent.label} ${s.label} in ${c.name} | ${v.name}`,
         metaDesc:    `Book a ${intent.desc} ${s.label.toLowerCase()} in ${c.name}. Saudi Cabs GMC — ${v.name}, fixed SAR price, 24/7. WhatsApp: +92 309 7811785.`,
         h1:          `${intent.label} ${s.label} in ${c.name}`,
-        subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} in ${c.name} with Saudi Cabs GMC. ${v.name} — up to ${v.seats} passengers, ${v.luggage}. Fixed price, 24/7.`,
+        subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} in ${c.name} with Saudi Cabs GMC. ${v.name} — up to ${v.seats} passengers, ${v.luggage}. Fixed price, 24/7. ${CITY_FACTS[ck]}`,
         quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} ${s.label.toLowerCase()} in ${c.name} — typically using a ${v.name} (${v.seats} seats). Fixed SAR price, no hidden fees. Book via WhatsApp: +92 309 7811785.`,
         badge:       `${intent.label} · ${c.name}`,
         vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
@@ -656,7 +669,7 @@ for (const spec of INTENT_VEHICLE_SPECS) {
     metaTitle:   `${intent.label} ${v.label} Taxi in ${c.name} | ${v.name}`,
     metaDesc:    `Book a ${intent.desc} ${v.seats}-seat taxi in ${c.name} — ${v.name}, fixed SAR price, 24/7. Saudi Cabs GMC. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} ${v.label} Taxi in ${c.name}`,
-    subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} with a ${v.name} in ${c.name}. ${v.seats} passengers · ${v.luggage} · Fixed SAR · 24/7.`,
+    subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} with a ${v.name} in ${c.name}. ${v.seats} passengers · ${v.luggage} · Fixed SAR · 24/7. ${CITY_FACTS[spec.ck]}`,
     quickAnswer: `Saudi Cabs GMC provides a ${intent.desc} ${v.seats}-seat taxi in ${c.name} using a ${v.name}. Fixed SAR price, no meter. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${intent.label} · ${v.label} · ${c.name}`,
     vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,
