@@ -1,6 +1,6 @@
 ﻿'use client'
 import Link from 'next/link'
-import { Phone, MessageCircle, Clock, MapPin, ArrowRight, Shield, Banknote, Star, Users, CheckCircle, Navigation } from 'lucide-react'
+import { MessageCircle, Clock, MapPin, ArrowRight, Shield, Banknote, Star, Users, CheckCircle, Navigation } from 'lucide-react'
 import BookingForm from './BookingForm'
 import FAQSection, { type FAQItem } from './FAQSection'
 import { useLang } from '@/contexts/LanguageContext'
@@ -139,10 +139,6 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                 <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {isAr ? 'احجز الآن عبر واتساب' : 'Book Now via WhatsApp'}
-                </a>
-                <a href="tel:+923097811785" className="btn-outline">
-                  <Phone size={16} strokeWidth={2.5} />
-                  {isAr ? 'اتصل بنا' : 'Call Us'}
                 </a>
               </div>
             </div>
@@ -387,16 +383,6 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
               }}>
               <MessageCircle size={18} strokeWidth={2.5} />
               {isAr ? 'واتساب' : 'WhatsApp'}
-            </a>
-            <a href="tel:+923097811785"
-              style={{
-                background: 'rgba(255,255,255,0.15)', color: 'white',
-                border: '2px solid rgba(255,255,255,0.5)', padding: '13px 32px',
-                borderRadius: '12px', fontWeight: '800', fontSize: '0.9rem',
-                display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none',
-              }}>
-              <Phone size={18} strokeWidth={2.5} />
-              +92 309 7811785
             </a>
           </div>
         </div>
