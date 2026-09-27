@@ -66,6 +66,92 @@ const VEHICLE_PAGE: Record<string, string> = {
   'GMC Yukon': '/gmc-yukon-hire',
 }
 
+// Programmatic vehicle/price-tier SEO pages (src/lib/vehicleSeoData.ts) that cover this
+// exact route — linked here so they aren't orphaned with zero contextual inbound links.
+// Every href below was verified live against the current sitemap before being added.
+const SEO_LINKS_BY_ROUTE_SLUG: Record<string, { href: string; en: string; ar: string }[]> = {
+  'makkah-to-madinah': [
+    { href: '/4-seater-taxi-makkah-to-madinah', en: '4-Seater Taxi: Makkah → Madinah', ar: 'تاكسي 4 مقاعد: مكة إلى المدينة' },
+    { href: '/7-seater-taxi-makkah-to-madinah', en: '7-Seater Van: Makkah → Madinah', ar: 'فان 7 مقاعد: مكة إلى المدينة' },
+    { href: '/cheap-makkah-to-madinah-taxi',    en: 'Budget Taxi: Makkah → Madinah',  ar: 'تاكسي اقتصادي: مكة إلى المدينة' },
+    { href: '/vip-makkah-to-madinah-taxi',      en: 'VIP Taxi: Makkah → Madinah',     ar: 'تاكسي VIP: مكة إلى المدينة' },
+  ],
+  'madinah-to-makkah': [
+    { href: '/4-seater-taxi-madinah-to-makkah', en: '4-Seater Taxi: Madinah → Makkah', ar: 'تاكسي 4 مقاعد: المدينة إلى مكة' },
+    { href: '/7-seater-taxi-madinah-to-makkah', en: '7-Seater Van: Madinah → Makkah',  ar: 'فان 7 مقاعد: المدينة إلى مكة' },
+  ],
+  'jeddah-to-makkah': [
+    { href: '/4-seater-taxi-jeddah-to-makkah',  en: '4-Seater Taxi: Jeddah → Makkah', ar: 'تاكسي 4 مقاعد: جدة إلى مكة' },
+    { href: '/7-seater-taxi-jeddah-to-makkah',  en: '7-Seater Van: Jeddah → Makkah',  ar: 'فان 7 مقاعد: جدة إلى مكة' },
+    { href: '/private-jeddah-to-makkah-taxi',   en: 'Private Taxi: Jeddah → Makkah',  ar: 'تاكسي خاص: جدة إلى مكة' },
+  ],
+  'makkah-to-taif': [
+    { href: '/4-seater-taxi-makkah-to-taif',    en: '4-Seater Taxi: Makkah → Taif', ar: 'تاكسي 4 مقاعد: مكة إلى الطائف' },
+    { href: '/7-seater-taxi-makkah-to-taif',    en: '7-Seater Van: Makkah → Taif',  ar: 'فان 7 مقاعد: مكة إلى الطائف' },
+    { href: '/family-makkah-to-taif-taxi',      en: 'Family Taxi: Makkah → Taif',   ar: 'تاكسي عائلي: مكة إلى الطائف' },
+  ],
+  'jeddah-airport-to-makkah': [
+    { href: '/taxi-jeddah-airport-to-makkah',              en: 'Standard Taxi: Jeddah Airport → Makkah',      ar: 'تاكسي عادي: مطار جدة إلى مكة' },
+    { href: '/car-rent-with-driver-jeddah-airport-to-makkah', en: 'Car with Driver: Jeddah Airport → Makkah', ar: 'سيارة مع سائق: مطار جدة إلى مكة' },
+    { href: '/4-seater-taxi-jeddah-airport-to-makkah',     en: '4-Seater: Jeddah Airport → Makkah',           ar: '4 مقاعد: مطار جدة إلى مكة' },
+    { href: '/7-seater-taxi-jeddah-airport-to-makkah',     en: '7-Seater: Jeddah Airport → Makkah',           ar: '7 مقاعد: مطار جدة إلى مكة' },
+    { href: '/vip-taxi-jeddah-airport',                    en: 'VIP Taxi: Jeddah Airport',                    ar: 'تاكسي VIP: مطار جدة' },
+    { href: '/cheap-taxi-jeddah-airport',                  en: 'Budget Taxi: Jeddah Airport',                 ar: 'تاكسي اقتصادي: مطار جدة' },
+    { href: '/private-taxi-jeddah-airport',                en: 'Private Taxi: Jeddah Airport',                ar: 'تاكسي خاص: مطار جدة' },
+  ],
+  'makkah-to-jeddah-airport': [
+    { href: '/taxi-makkah-to-jeddah-airport', en: 'Standard Taxi: Makkah → Jeddah Airport', ar: 'تاكسي عادي: مكة إلى مطار جدة' },
+  ],
+  'jeddah-airport-to-madinah': [
+    { href: '/taxi-jeddah-airport-to-madinah',              en: 'Standard Taxi: Jeddah Airport → Madinah',      ar: 'تاكسي عادي: مطار جدة إلى المدينة' },
+    { href: '/car-rent-with-driver-jeddah-airport-to-madinah', en: 'Car with Driver: Jeddah Airport → Madinah', ar: 'سيارة مع سائق: مطار جدة إلى المدينة' },
+    { href: '/4-seater-taxi-jeddah-airport-to-madinah',     en: '4-Seater: Jeddah Airport → Madinah',           ar: '4 مقاعد: مطار جدة إلى المدينة' },
+    { href: '/7-seater-taxi-jeddah-airport-to-madinah',     en: '7-Seater: Jeddah Airport → Madinah',           ar: '7 مقاعد: مطار جدة إلى المدينة' },
+  ],
+  'madinah-to-jeddah': [
+    { href: '/taxi-madinah-to-jeddah-airport', en: 'Standard Taxi: Madinah → Jeddah Airport', ar: 'تاكسي عادي: المدينة إلى مطار جدة' },
+  ],
+  'jeddah-to-taif': [
+    { href: '/taxi-jeddah-airport-to-taif',              en: 'Standard Taxi: Jeddah Airport → Taif',      ar: 'تاكسي عادي: مطار جدة إلى الطائف' },
+    { href: '/car-rent-with-driver-jeddah-airport-to-taif', en: 'Car with Driver: Jeddah Airport → Taif', ar: 'سيارة مع سائق: مطار جدة إلى الطائف' },
+    { href: '/4-seater-taxi-jeddah-airport-to-taif',     en: '4-Seater: Jeddah Airport → Taif',           ar: '4 مقاعد: مطار جدة إلى الطائف' },
+    { href: '/7-seater-taxi-jeddah-airport-to-taif',     en: '7-Seater: Jeddah Airport → Taif',           ar: '7 مقاعد: مطار جدة إلى الطائف' },
+  ],
+  'madinah-airport-taxi': [
+    { href: '/taxi-madinah-airport-to-makkah',                    en: 'Standard Taxi: Madinah Airport → Makkah',      ar: 'تاكسي عادي: مطار المدينة إلى مكة' },
+    { href: '/taxi-madinah-airport-to-madinah-hotel',             en: 'Standard Taxi: Madinah Airport → Hotel',       ar: 'تاكسي عادي: مطار المدينة إلى الفندق' },
+    { href: '/taxi-madinah-airport-to-jeddah',                    en: 'Standard Taxi: Madinah Airport → Jeddah',      ar: 'تاكسي عادي: مطار المدينة إلى جدة' },
+    { href: '/car-rent-with-driver-madinah-airport-to-makkah',    en: 'Car with Driver: Madinah Airport → Makkah',    ar: 'سيارة مع سائق: مطار المدينة إلى مكة' },
+    { href: '/car-rent-with-driver-madinah-airport-to-madinah-hotel', en: 'Car with Driver: Madinah Airport → Hotel', ar: 'سيارة مع سائق: مطار المدينة إلى الفندق' },
+    { href: '/car-rent-with-driver-madinah-airport-to-jeddah',    en: 'Car with Driver: Madinah Airport → Jeddah',    ar: 'سيارة مع سائق: مطار المدينة إلى جدة' },
+    { href: '/taxi-makkah-to-madinah-airport',                    en: 'Standard Taxi: Makkah → Madinah Airport',      ar: 'تاكسي عادي: مكة إلى مطار المدينة' },
+    { href: '/4-seater-taxi-madinah-airport-to-makkah',           en: '4-Seater: Madinah Airport → Makkah',           ar: '4 مقاعد: مطار المدينة إلى مكة' },
+    { href: '/4-seater-taxi-madinah-airport-to-hotel',            en: '4-Seater: Madinah Airport → Hotel',            ar: '4 مقاعد: مطار المدينة إلى الفندق' },
+    { href: '/7-seater-taxi-madinah-airport-to-makkah',           en: '7-Seater: Madinah Airport → Makkah',           ar: '7 مقاعد: مطار المدينة إلى مكة' },
+    { href: '/7-seater-taxi-madinah-airport-to-hotel',            en: '7-Seater: Madinah Airport → Hotel',            ar: '7 مقاعد: مطار المدينة إلى الفندق' },
+    { href: '/vip-taxi-madinah-airport',                          en: 'VIP Taxi: Madinah Airport',                    ar: 'تاكسي VIP: مطار المدينة' },
+    { href: '/cheap-taxi-madinah-airport',                        en: 'Budget Taxi: Madinah Airport',                 ar: 'تاكسي اقتصادي: مطار المدينة' },
+    { href: '/private-taxi-madinah-airport',                      en: 'Private Taxi: Madinah Airport',                ar: 'تاكسي خاص: مطار المدينة' },
+  ],
+  'taif-airport-taxi': [
+    { href: '/taxi-taif-airport-to-makkah',                    en: 'Standard Taxi: Taif Airport → Makkah',    ar: 'تاكسي عادي: مطار الطائف إلى مكة' },
+    { href: '/taxi-taif-airport-to-taif-city',                 en: 'Standard Taxi: Taif Airport → Taif City', ar: 'تاكسي عادي: مطار الطائف إلى مدينة الطائف' },
+    { href: '/taxi-taif-airport-to-jeddah',                    en: 'Standard Taxi: Taif Airport → Jeddah',    ar: 'تاكسي عادي: مطار الطائف إلى جدة' },
+    { href: '/car-rent-with-driver-taif-airport-to-makkah',    en: 'Car with Driver: Taif Airport → Makkah',  ar: 'سيارة مع سائق: مطار الطائف إلى مكة' },
+    { href: '/car-rent-with-driver-taif-airport-to-taif-city', en: 'Car with Driver: Taif Airport → Taif City', ar: 'سيارة مع سائق: مطار الطائف إلى مدينة الطائف' },
+    { href: '/car-rent-with-driver-taif-airport-to-taif',      en: 'Car with Driver: Taif Airport (Taif)',    ar: 'سيارة مع سائق: مطار الطائف' },
+    { href: '/4-seater-taxi-taif-airport-to-makkah',           en: '4-Seater: Taif Airport → Makkah',         ar: '4 مقاعد: مطار الطائف إلى مكة' },
+    { href: '/7-seater-taxi-taif-airport-to-makkah',           en: '7-Seater: Taif Airport → Makkah',         ar: '7 مقاعد: مطار الطائف إلى مكة' },
+    { href: '/4-seater-taxi-taif-airport-to-city',             en: '4-Seater: Taif Airport → Taif City',      ar: '4 مقاعد: مطار الطائف إلى المدينة' },
+    { href: '/vip-taxi-taif-airport',                          en: 'VIP Taxi: Taif Airport',                  ar: 'تاكسي VIP: مطار الطائف' },
+    { href: '/cheap-taxi-taif-airport',                        en: 'Budget Taxi: Taif Airport',               ar: 'تاكسي اقتصادي: مطار الطائف' },
+  ],
+}
+
+function getRelatedSeoLinks(data: RoutePageData) {
+  return SEO_LINKS_BY_ROUTE_SLUG[data.slug] ?? []
+}
+
 function getRelevantGuides(data: RoutePageData) {
   const hrefs = new Set<string>()
   ;(BLOG_BY_ROUTE_SLUG[data.slug] ?? []).forEach(h => hrefs.add(h))
@@ -357,6 +443,24 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
           </div>
         </div>
       </section>
+
+      {/* ── More Booking Options (vehicle size / price-tier SEO pages for this route) ── */}
+      {getRelatedSeoLinks(data).length > 0 && (
+        <section style={{ padding: '0 0 50px', backgroundColor: 'var(--background)' }}>
+          <div className="container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', marginBottom: '20px', fontWeight: '600' }}>
+              {isAr ? 'خيارات حجز أخرى' : 'More Booking Options'}
+            </p>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              {getRelatedSeoLinks(data).map(g => (
+                <Link key={g.href} href={g.href} className="route-badge">
+                  {isAr ? g.ar : g.en}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Related Guides ── */}
       {getRelevantGuides(data).length > 0 && (

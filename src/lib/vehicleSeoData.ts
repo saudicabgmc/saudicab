@@ -73,6 +73,14 @@ const AIRPORTS = {
   },
 } as const
 
+// Same anti-duplicate-content reasoning as CITY_FACTS above, applied to the intent-airport
+// pages — each fact reuses distance/name data already defined in AIRPORTS, nothing invented.
+const AIRPORT_FACTS: Record<keyof typeof AIRPORTS, string> = {
+  jeddah:  'Jeddah Airport (KAIA) is Saudi Arabia’s main Umrah and Hajj gateway, about 90 km / 50–60 min from Makkah.',
+  madinah: 'Madinah Airport (MED) sits close to the city — about 15 km / 20 min from central Madinah and Masjid an-Nabawi.',
+  taif:    'Taif Airport (TIF) serves the mountain city above Makkah, about 75 km / 60–80 min from central Makkah.',
+}
+
 const INTENTS = {
   vip:     { label: 'VIP',     prefVehicle: '7-seater' as const,  priceWord: 'premium',    desc: 'VIP luxury service with GMC Yukon or Hyundai Staria'     },
   cheap:   { label: 'Budget',  prefVehicle: '4-seater' as const,  priceWord: 'affordable', desc: 'affordable fixed-price rides, no hidden fees'            },
@@ -615,7 +623,7 @@ for (const spec of INTENT_AIRPORT_SPECS) {
     metaTitle:   `${intent.label} Airport Taxi — ${ap.shortName}`,
     metaDesc:    `Book a ${intent.desc} airport taxi at ${ap.shortName}. Saudi Cabs GMC — ${v.name}, fixed SAR price, name-board pickup, 24/7. WhatsApp: +92 309 7811785.`,
     h1:          `${intent.label} Airport Taxi — ${ap.shortName}`,
-    subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} taxi service at ${ap.name} (${ap.code}). Name-board pickup · Flight tracking · Fixed SAR · 24/7.`,
+    subtitle:    `${intent.desc.charAt(0).toUpperCase() + intent.desc.slice(1)} taxi service at ${ap.name} (${ap.code}). Name-board pickup · Flight tracking · Fixed SAR · 24/7. ${AIRPORT_FACTS[spec.airport]}`,
     quickAnswer: `Saudi Cabs GMC offers a ${intent.desc} airport taxi at ${ap.shortName} — typically in a ${v.name}. Name-board pickup at arrivals. Fixed SAR price. Book via WhatsApp: +92 309 7811785.`,
     badge:       `${intent.label} · ${ap.code}`,
     vehicleName: v.name, vehicleSeats: v.seats, vehicleLuggage: v.luggage, vehicleAvailable: v.available,

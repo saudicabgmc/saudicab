@@ -195,6 +195,23 @@ export default function HyundaiStariaPage() {
         </div>
       </section>
 
+      {/* City-specific 7-seater pages not already linked elsewhere on the site */}
+      <section style={{ padding: '0 0 40px', backgroundColor: 'var(--background)' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', marginBottom: '16px', fontWeight: '600' }}>
+            {isAr ? 'تاكسي 7 مقاعد حسب المدينة' : '7-Seater Taxi by City'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[
+              { href: '/7-seater-taxi-jeddah', en: '7-Seater Taxi in Jeddah', ar: 'تاكسي 7 مقاعد في جدة' },
+              { href: '/7-seater-taxi-taif', en: '7-Seater Taxi in Taif', ar: 'تاكسي 7 مقاعد في الطائف' },
+            ].map(g => (
+              <Link key={g.href} href={g.href} className="route-badge">{tx(g)}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FAQSection faqs={FAQS} heading={{ ar: 'أسئلة شائعة — هيونداي ستاريا', en: 'FAQ — Hyundai Staria Taxi' }} />
 
       {/* CTA */}

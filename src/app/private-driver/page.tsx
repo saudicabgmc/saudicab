@@ -119,6 +119,23 @@ export default function PrivateDriverPage() {
               <Link key={g.href} href={g.href} className="route-badge">{isAr ? g.ar : g.en}</Link>
             ))}
           </div>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', margin: '28px 0 16px', fontWeight: '600' }}>
+            {isAr ? 'سيارة مع سائق حسب المدينة' : 'Car With Driver by City'}
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[
+              { href: '/4-seater-car-rent-with-driver-makkah',  ar: 'سيارة 4 مقاعد مع سائق — مكة',    en: '4-Seater Car with Driver — Makkah' },
+              { href: '/4-seater-car-rent-with-driver-madinah', ar: 'سيارة 4 مقاعد مع سائق — المدينة', en: '4-Seater Car with Driver — Madinah' },
+              { href: '/4-seater-car-rent-with-driver-jeddah',  ar: 'سيارة 4 مقاعد مع سائق — جدة',    en: '4-Seater Car with Driver — Jeddah' },
+              { href: '/4-seater-car-rent-with-driver-taif',    ar: 'سيارة 4 مقاعد مع سائق — الطائف',  en: '4-Seater Car with Driver — Taif' },
+              { href: '/7-seater-car-rent-with-driver-makkah',  ar: 'فان 7 مقاعد مع سائق — مكة',       en: '7-Seater Van with Driver — Makkah' },
+              { href: '/7-seater-car-rent-with-driver-madinah', ar: 'فان 7 مقاعد مع سائق — المدينة',    en: '7-Seater Van with Driver — Madinah' },
+              { href: '/7-seater-car-rent-with-driver-jeddah',  ar: 'فان 7 مقاعد مع سائق — جدة',       en: '7-Seater Van with Driver — Jeddah' },
+              { href: '/7-seater-car-rent-with-driver-taif',    ar: 'فان 7 مقاعد مع سائق — الطائف',     en: '7-Seater Van with Driver — Taif' },
+            ].map(g => (
+              <Link key={g.href} href={g.href} className="route-badge">{isAr ? g.ar : g.en}</Link>
+            ))}
+          </div>
         </div>
       </section>
 
