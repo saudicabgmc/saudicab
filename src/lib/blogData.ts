@@ -5,6 +5,14 @@ const makkahJedFares = Object.fromEntries(
   getPricing('makkah-jed')[0].rates.map(r => [r.key, r.price])
 ) as Record<'sedan' | 'staria' | 'gmc', number>;
 
+// Madinah Airport <-> Madinah hotel fares, same reasoning.
+const madHotelFares = Object.fromEntries(
+  getPricing('mad-hotel')[0].rates.map(r => [r.key, r.price])
+) as Record<'sedan' | 'staria' | 'gmc', number>;
+const hotelMadFares = Object.fromEntries(
+  getPricing('hotel-mad')[0].rates.map(r => [r.key, r.price])
+) as Record<'sedan' | 'staria' | 'gmc', number>;
+
 export type BlogCategory =
   | 'Hajj & Umrah'
   | 'Airport Transfers'
@@ -1327,5 +1335,127 @@ export const blogPosts: BlogPost[] = [
     },
     date: '2026-09-21',
     image: '/location/jeddah.webp',
+  },
+  {
+    slug: 'madinah-airport-to-hotel-what-to-expect',
+    category: 'Airport Transfers',
+    relatedRoute: { slug: 'madinah-airport-taxi', label: { en: 'Madinah Airport Taxi', ar: 'تاكسي مطار المدينة المنورة' } },
+    seoTitle: 'Madinah Airport to Hotel: 2026 Arrival Guide',
+    title: {
+      en: 'Madinah Airport to Hotel: What to Expect on Arrival',
+      ar: 'من مطار المدينة المنورة إلى الفندق: ماذا تتوقع عند الوصول',
+    },
+    excerpt: {
+      en: "Landing at Madinah Airport (MED)? Here's what to expect on the ~18 km ride to your hotel or the Prophet's Mosque — timing, fixed fares, and how to book ahead.",
+      ar: 'هل تصل إلى مطار المدينة المنورة؟ إليك ما تتوقعه في رحلة الـ18 كم تقريباً إلى فندقك أو المسجد النبوي — التوقيت والأسعار الثابتة وكيفية الحجز مسبقاً.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Landing at Prince Mohammad bin Abdulaziz Airport (MED) in Madinah is usually the easy part — the real question is what happens next. Here's what to expect on the ride from the airport to your hotel or the Prophet's Mosque.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Madinah Airport to Hotel at a Glance</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Distance:</strong> approximately 18 km</li>
+  <li style="margin-bottom:0.5rem;"><strong>Travel time:</strong> approximately 25–35 minutes, depending on traffic</li>
+  <li style="margin-bottom:0.5rem;"><strong>Destination:</strong> your hotel, Al-Masjid An-Nabawi, or any address in Madinah</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicles:</strong> Sedan (4 seats), Hyundai Staria (7 seats), GMC Yukon (7 seats, VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>Booking:</strong> available 24/7 on WhatsApp</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What Happens When You Land</h2>
+<p style="margin-bottom:1rem;">Your driver waits in the arrivals hall with a name-board, so there's no need to search for transport after a long flight. Share your flight number when you book — if your flight is delayed, the driver adjusts pickup automatically, at no extra charge.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing Your Vehicle</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a>:</strong> suits individuals, couples and small families.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>:</strong> suits families and groups, with a large luggage space.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon (VIP)</a>:</strong> our premium option for extra comfort.</li>
+</ul>
+<p style="margin-bottom:1rem;">Listed fares from Madinah Airport to a Madinah hotel, per vehicle: <strong>Sedan SAR ${madHotelFares.sedan}</strong>, <strong>Hyundai Staria SAR ${madHotelFares.staria}</strong>, <strong>GMC Yukon SAR ${madHotelFares.gmc}</strong>. Please confirm the current fare with us on WhatsApp before you book.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Heading Straight to the Prophet's Mosque?</h2>
+<p style="margin-bottom:1rem;">If your hotel is close to Al-Masjid An-Nabawi, tell us when you book and we can drop you there directly rather than at a hotel address first.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Returning to the Airport</h2>
+<p style="margin-bottom:1rem;">Listed fares from a Madinah hotel back to the airport: <strong>Sedan SAR ${hotelMadFares.sedan}</strong>, <strong>Hyundai Staria SAR ${hotelMadFares.staria}</strong>, <strong>GMC Yukon SAR ${hotelMadFares.gmc}</strong>. Share your flight number and departure time so pickup is timed correctly.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How Early Should You Book?</h2>
+<p style="margin-bottom:1rem;">We recommend booking at least 6 hours before landing so your driver and vehicle are confirmed ahead of time. Same-day bookings are accepted when available.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Continuing Your Trip</h2>
+<p style="margin-bottom:1rem;">Heading on to Makkah or Jeddah after Madinah? See <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah to Makkah</a> or <a href="/madinah-to-jeddah" style="color:#0B3D2E;font-weight:700;">Madinah to Jeddah</a>. For the full route page with details, see <a href="/madinah-airport-taxi" style="color:#0B3D2E;font-weight:700;">Madinah Airport Taxi</a>, or the <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah taxi service</a> page for getting around the city. Planning the rest of your trip? See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Send your flight number, arrival time and hotel name on WhatsApp or through the booking form.</li>
+  <li style="margin-bottom:0.5rem;">Choose your vehicle: Sedan, Hyundai Staria or GMC Yukon.</li>
+  <li style="margin-bottom:0.5rem;">Confirm the current fare with Saudi Cabs GMC on WhatsApp.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far is Madinah Airport from the city?</h3>
+<p style="margin-bottom:1rem;">Approximately 18 km.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the ride take?</h3>
+<p style="margin-bottom:1rem;">Approximately 25–35 minutes, depending on traffic.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does it cost?</h3>
+<p style="margin-bottom:1rem;">Listed fares from the airport to a Madinah hotel are SAR ${madHotelFares.sedan} (Sedan), SAR ${madHotelFares.staria} (Hyundai Staria) and SAR ${madHotelFares.gmc} (GMC Yukon), per vehicle. The return trip is listed slightly lower. Confirm the current fare on WhatsApp before booking.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I go straight to the Prophet's Mosque?</h3>
+<p style="margin-bottom:1rem;">Yes. Tell us when you book and we can drop you at Al-Masjid An-Nabawi directly.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How early should I book?</h3>
+<p style="margin-bottom:1rem;">We recommend at least 6 hours before landing. Same-day bookings are accepted when available.</p>`,
+      ar: `<p style="margin-bottom:1rem;">الوصول إلى مطار الأمير محمد بن عبدالعزيز (MED) في المدينة المنورة عادةً هو الجزء السهل — السؤال الحقيقي هو ماذا يحدث بعد ذلك. إليك ما تتوقعه في رحلة من المطار إلى فندقك أو المسجد النبوي.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من مطار المدينة إلى الفندق في لمحة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>المسافة:</strong> حوالي 18 كم</li>
+  <li style="margin-bottom:0.5rem;"><strong>مدة الرحلة:</strong> حوالي 25 إلى 35 دقيقة، حسب حركة المرور</li>
+  <li style="margin-bottom:0.5rem;"><strong>الوجهة:</strong> فندقك، أو المسجد النبوي الشريف، أو أي عنوان في المدينة المنورة</li>
+  <li style="margin-bottom:0.5rem;"><strong>السيارات:</strong> سيدان (4 مقاعد)، هيونداي ستاريا (7 مقاعد)، GMC يوكون (7 مقاعد، VIP)</li>
+  <li style="margin-bottom:0.5rem;"><strong>الحجز:</strong> متاح 24/7 عبر واتساب</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ماذا يحدث عند وصولك</h2>
+<p style="margin-bottom:1rem;">ينتظرك سائقك في صالة الوصول بلوحة تحمل اسمك، فلا حاجة للبحث عن وسيلة نقل بعد رحلة طويلة. شارك رقم رحلتك عند الحجز — وإذا تأخرت رحلتك، يتكيف السائق مع موعد الاستلام تلقائياً دون أي رسوم إضافية.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار السيارة المناسبة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a>:</strong> مناسب للأفراد والأزواج والعائلات الصغيرة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a>:</strong> مناسبة للعائلات والمجموعات، ولها مساحة أمتعة كبيرة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون (VIP)</a>:</strong> خيارنا الفاخر لراحة إضافية.</li>
+</ul>
+<p style="margin-bottom:1rem;">الأسعار المعروضة من مطار المدينة المنورة إلى فندق في المدينة، للسيارة الواحدة: <strong>سيدان ${madHotelFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${madHotelFares.staria} ريال</strong>، <strong>GMC يوكون ${madHotelFares.gmc} ريال</strong>. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">هل تتجه مباشرةً إلى المسجد النبوي؟</h2>
+<p style="margin-bottom:1rem;">إذا كان فندقك قريباً من المسجد النبوي الشريف، أخبرنا عند الحجز ويمكننا إيصالك إليه مباشرةً بدلاً من عنوان الفندق أولاً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">العودة إلى المطار</h2>
+<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في المدينة المنورة إلى المطار: <strong>سيدان ${hotelMadFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${hotelMadFares.staria} ريال</strong>، <strong>GMC يوكون ${hotelMadFares.gmc} ريال</strong>. شاركنا رقم رحلتك وموعد المغادرة حتى يتم توقيت الاستلام بدقة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">متى يجب أن تحجز؟</h2>
+<p style="margin-bottom:1rem;">ننصح بالحجز قبل الهبوط بـ6 ساعات على الأقل حتى يتم تأكيد سائقك وسيارتك مسبقاً. يُقبل الحجز في اليوم نفسه عند التوفر.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">إكمال رحلتك</h2>
+<p style="margin-bottom:1rem;">متجه إلى مكة أو جدة بعد المدينة؟ راجع <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">المدينة إلى مكة</a> أو <a href="/madinah-to-jeddah" style="color:#0B3D2E;font-weight:700;">المدينة إلى جدة</a>. لصفحة الخط الكاملة راجع <a href="/madinah-airport-taxi" style="color:#0B3D2E;font-weight:700;">تاكسي مطار المدينة المنورة</a>، أو صفحة <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي المدينة المنورة</a> للتنقل داخل المدينة. وللتخطيط لبقية رحلتك راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أرسل رقم رحلتك وموعد الوصول واسم فندقك عبر واتساب أو نموذج الحجز.</li>
+  <li style="margin-bottom:0.5rem;">اختر سيارتك: سيدان أو هيونداي ستاريا أو GMC يوكون.</li>
+  <li style="margin-bottom:0.5rem;">أكّد السعر الحالي مع Saudi Cabs GMC عبر واتساب.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم يبعد مطار المدينة عن المدينة؟</h3>
+<p style="margin-bottom:1rem;">حوالي 18 كم.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة؟</h3>
+<p style="margin-bottom:1rem;">حوالي 25 إلى 35 دقيقة حسب حركة المرور.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم التكلفة؟</h3>
+<p style="margin-bottom:1rem;">الأسعار المعروضة من المطار إلى فندق في المدينة هي ${madHotelFares.sedan} ريال (سيدان) و${madHotelFares.staria} ريال (هيونداي ستاريا) و${madHotelFares.gmc} ريال (GMC يوكون) للسيارة الواحدة. رحلة العودة أقل قليلاً. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني التوجه مباشرة إلى المسجد النبوي؟</h3>
+<p style="margin-bottom:1rem;">نعم. أخبرنا عند الحجز ويمكننا إيصالك إلى المسجد النبوي مباشرةً.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">متى يجب أن أحجز؟</h3>
+<p style="margin-bottom:1rem;">ننصح بالحجز قبل الهبوط بـ6 ساعات على الأقل. يُقبل الحجز في اليوم نفسه عند التوفر.</p>`,
+    },
+    date: '2026-09-27',
+    image: '/location/madinah.webp',
   },
 ];

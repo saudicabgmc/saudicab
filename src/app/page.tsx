@@ -130,10 +130,10 @@ export default function Home() {
           }}
         />
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }} />
-        {/* Stronger dark overlay for readability */}
+        {/* Dark overlay for text readability — kept light enough that the photo stays visible */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(135deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 100%)',
+          background: 'rgba(0,0,0,0.35)',
           zIndex: 2,
         }} />
 
@@ -451,10 +451,10 @@ export default function Home() {
 
           {/* HTML price table */}
           <div style={{ overflowX: 'auto', borderRadius: '16px', boxShadow: 'var(--shadow-md)', border: '1.5px solid var(--border)' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', minWidth: '520px' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 'clamp(0.72rem, 2.2vw, 0.88rem)', tableLayout: 'fixed' }}>
               <thead>
                 <tr style={{ background: 'linear-gradient(135deg, #0B3D2E, #0F5132)', color: 'white' }}>
-                  <th style={{ padding: '14px 18px', textAlign: isAr ? 'right' : 'left', fontWeight: '800', fontSize: '0.84rem' }}>
+                  <th style={{ padding: 'clamp(8px, 3vw, 14px) clamp(6px, 2vw, 18px)', textAlign: isAr ? 'right' : 'left', fontWeight: '800', fontSize: 'clamp(0.68rem, 2.4vw, 0.84rem)', width: '34%' }}>
                     {isAr ? 'المسار' : 'Route'}
                   </th>
                   {[
@@ -462,7 +462,7 @@ export default function Home() {
                     { en: 'Staria', ar: 'ستاريا' },
                     { en: 'GMC Yukon', ar: 'GMC يوكون' },
                   ].map(v => (
-                    <th key={v.en} style={{ padding: '14px 18px', textAlign: 'center', fontWeight: '800', fontSize: '0.84rem', minWidth: '110px' }}>
+                    <th key={v.en} style={{ padding: 'clamp(8px, 3vw, 14px) clamp(2px, 1.5vw, 18px)', textAlign: 'center', fontWeight: '800', fontSize: 'clamp(0.62rem, 2.2vw, 0.84rem)', width: '22%' }}>
                       {isAr ? v.ar : v.en}
                     </th>
                   ))}
@@ -471,13 +471,13 @@ export default function Home() {
               <tbody>
                 {PRICE_TABLE_ROUTES.map((row, i) => (
                   <tr key={row.en} style={{ background: i % 2 === 0 ? 'white' : 'var(--muted)', transition: 'background 0.15s' }}>
-                    <td style={{ padding: '13px 18px', fontWeight: '700', color: 'var(--foreground)' }}>
+                    <td style={{ padding: 'clamp(8px, 3vw, 13px) clamp(6px, 2vw, 18px)', fontWeight: '700', color: 'var(--foreground)' }}>
                       {isAr ? row.ar : row.en}
                     </td>
                     {[row.sedan, row.staria, row.gmc].map((price, pi) => (
-                      <td key={pi} style={{ padding: '13px 18px', textAlign: 'center' }}>
-                        <span style={{ fontWeight: '900', fontSize: '1rem', color: 'var(--primary)' }}>{price}</span>
-                        <span style={{ fontSize: '0.72rem', color: 'var(--muted-foreground)', marginInlineStart: '4px' }}>SAR</span>
+                      <td key={pi} style={{ padding: 'clamp(8px, 3vw, 13px) clamp(2px, 1.5vw, 18px)', textAlign: 'center' }}>
+                        <span style={{ fontWeight: '900', fontSize: 'clamp(0.78rem, 2.8vw, 1rem)', color: 'var(--primary)' }}>{price}</span>
+                        <span style={{ fontSize: 'clamp(0.6rem, 2vw, 0.72rem)', color: 'var(--muted-foreground)', marginInlineStart: '3px' }}>SAR</span>
                       </td>
                     ))}
                   </tr>
