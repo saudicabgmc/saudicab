@@ -58,6 +58,14 @@ const BLOG_BY_ROUTE_SLUG: Record<string, string[]> = {
   'riyadh-to-makkah':         ['/blog/riyadh-to-makkah-complete-guide'],
 }
 
+// Vehicle name -> its dedicated marketing page, so the vehicle options section links
+// to real, existing pages instead of naming the vehicle as plain text.
+const VEHICLE_PAGE: Record<string, string> = {
+  'Sedan': '/toyota-camry-taxi',
+  'Hyundai Staria': '/hyundai-staria-taxi',
+  'GMC Yukon': '/gmc-yukon-hire',
+}
+
 function getRelevantGuides(data: RoutePageData) {
   const hrefs = new Set<string>()
   ;(BLOG_BY_ROUTE_SLUG[data.slug] ?? []).forEach(h => hrefs.add(h))
@@ -190,7 +198,13 @@ export default function RoutePage({ data }: { data: RoutePageData }) {
                     <Users size={24} strokeWidth={1.8} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: '900', fontSize: '1rem' }}>{isAr ? v.nameAr : v.nameEn}</div>
+                    {VEHICLE_PAGE[v.nameEn] ? (
+                      <Link href={VEHICLE_PAGE[v.nameEn]} style={{ fontWeight: '900', fontSize: '1rem', color: 'var(--primary)' }}>
+                        {isAr ? v.nameAr : v.nameEn}
+                      </Link>
+                    ) : (
+                      <div style={{ fontWeight: '900', fontSize: '1rem' }}>{isAr ? v.nameAr : v.nameEn}</div>
+                    )}
                     <div style={{ fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>{v.seats}</div>
                   </div>
                 </div>
