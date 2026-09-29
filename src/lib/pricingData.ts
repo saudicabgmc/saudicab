@@ -32,10 +32,9 @@ export const categoryColor: Record<PricingCategory, string> = {
 }
 
 export const vehicleImages: Record<string, string> = {
-  // Note: the "toyota-camry-*" files in /fleet are actually photos of the Hyundai Staria.
   // An empty string would show a neutral placeholder panel.
   sedan:  '/fleet/sedan-exterior-side-saudi-cabs-gmc.webp',
-  staria: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
+  staria: '/fleet/hyundai-staria-exterior-front-saudi-cabs-gmc.webp',
   gmc:    '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
 }
 

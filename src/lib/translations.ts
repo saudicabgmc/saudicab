@@ -62,7 +62,7 @@ export const t = {
     ],
     whyUs: {
       tag: 'Why Us',
-      title: 'The Best Choice\nfor Saudi Trips',
+      title: 'Why Choose\nSaudi Cabs GMC',
       items: [
         { title: 'Experienced Drivers', desc: 'Professional, experienced drivers and regularly maintained vehicles.' },
         { title: 'Punctual & Reliable Service', desc: 'We aim to arrive on time, every time.' },
@@ -90,7 +90,7 @@ export const t = {
     },
     footer: {
       brand: 'Saudi Cabs GMC',
-      desc: 'Premium transport services across Saudi Arabia. Taxi, cab, private driver & airport transfer — 24/7.',
+      desc: 'Private transport services across Saudi Arabia. Taxi, private driver and airport transfers — available 24/7.',
       cities: 'Cities',
       services: 'Services',
       contact: 'Contact Us',
@@ -215,7 +215,7 @@ export const t = {
     ],
     whyUs: {
       tag: 'لماذا نحن',
-      title: 'الاختيار الأمثل\nلرحلات المملكة',
+      title: 'لماذا تختار\nSaudi Cabs GMC',
       items: [
         { title: 'سائقون ذوو خبرة', desc: 'سائقون محترفون ذوو خبرة وسيارات تتم صيانتها بانتظام.' },
         { title: 'التزام بالمواعيد', desc: 'نسعى للوصول في الوقت المحدد في كل مرة.' },
@@ -243,7 +243,7 @@ export const t = {
     },
     footer: {
       brand: 'Saudi Cabs GMC',
-      desc: 'خدمات نقل راقية في أبرز مدن المملكة. تاكسي، كاب، سائق خاص، وتوصيل مطار على مدار الساعة.',
+      desc: 'خدمات نقل خاصة في جميع أنحاء المملكة العربية السعودية. تاكسي، سائق خاص، وتوصيل مطار — متاح على مدار الساعة.',
       cities: 'المدن',
       services: 'الخدمات',
       contact: 'تواصل معنا',

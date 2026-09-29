@@ -307,26 +307,6 @@ export default function Home() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────
-          STATS BAR
-      ────────────────────────────────────────────────────────── */}
-      <section style={{
-        padding: '56px 0',
-        backgroundImage: 'linear-gradient(135deg, #0B3D2E 0%, #0F5132 100%)',
-        color: 'white',
-      }}>
-        <div className="container">
-          <div className="grid-4">
-            {tr.stats.map(s => (
-              <div key={s.label} className="stat-item">
-                <div className="stat-number">{s.num}</div>
-                <div className="stat-label" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ──────────────────────────────────────────────────────────
           LOCATIONS — 4 cities
       ────────────────────────────────────────────────────────── */}
       <section id="locations" className="page-section" style={{ backgroundColor: 'var(--muted)' }}>
@@ -550,7 +530,7 @@ export default function Home() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', height: '460px', boxShadow: 'var(--shadow-lg)' }}>
                 <img
                   src="/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp"
-                  alt="Saudi Cabs GMC Premium Fleet – Best Cab Service in Saudi Arabia"
+                  alt="Saudi Cabs GMC Fleet – Private Taxi & Driver Service in Saudi Arabia"
                   width={700} height={460}
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}

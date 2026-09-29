@@ -30,10 +30,10 @@ const CARS = [
     key: 'staria' as const,
     nameEn: 'Hyundai Staria', nameAr: 'هيونداي ستاريا',
     seats: '7',
-    descEn: 'Premium 7-seater van — ideal for families & groups',
-    descAr: 'حافلة فاخرة 7 مقاعد — مثالية للعائلات والمجموعات',
+    descEn: 'Private 7-seater van — ideal for families & groups',
+    descAr: 'حافلة خاصة 7 مقاعد — مثالية للعائلات والمجموعات',
     image: vehicleImages.staria,
-    alt: 'Hyundai Staria 7-Seat Taxi Saudi Arabia – Saudi Cabs GMC Premium Van',
+    alt: 'Hyundai Staria 7-Seat Taxi Saudi Arabia – Saudi Cabs GMC 7-Seat Van',
     badge: { en: '7 Seats', ar: '٧ مقاعد' },
     accent: '#0F5132',
   },
@@ -41,8 +41,8 @@ const CARS = [
     key: 'gmc' as const,
     nameEn: 'GMC Yukon', nameAr: 'GMC يوكون',
     seats: '7',
-    descEn: 'Luxury SUV — ideal for VIP and premium travel',
-    descAr: 'سيارة دفع رباعي فاخرة — مثالية للتنقل الفاخر وVIP',
+    descEn: 'Luxury SUV — ideal for VIP travel',
+    descAr: 'سيارة دفع رباعي فاخرة — مثالية لتنقل VIP',
     image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
     alt: 'GMC Yukon Luxury SUV Taxi Saudi Arabia – Saudi Cabs GMC VIP Service',
     badge: { en: '7 Seats • VIP', ar: '٧ مقاعد • VIP' },
@@ -62,8 +62,8 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
           <span className="section-tag">{isAr ? 'أسطولنا' : 'Our Fleet'}</span>
           <h2 className="section-title">
             {isAr
-              ? <><span style={{ color: 'var(--primary)' }}>٣ سيارات فاخرة</span> — اختر ما يناسبك</>
-              : <>3 Premium Vehicles — <span style={{ color: 'var(--primary)' }}>Choose Yours</span></>
+              ? <>اختر <span style={{ color: 'var(--primary)' }}>سيارتك</span></>
+              : <>Choose Your <span style={{ color: 'var(--primary)' }}>Vehicle</span></>
             }
           </h2>
           <div className="gold-divider" />

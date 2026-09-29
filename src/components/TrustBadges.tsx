@@ -32,21 +32,10 @@ const BADGES: Badge[] = [
     },
   },
   {
-    src: '/trust-badges/trust-badge-premium-vip-fleet.webp',
-    alt: {
-      en: 'Premium VIP fleet – GMC Yukon luxury taxi Saudi Arabia',
-      ar: 'أسطول VIP فاخر – تاكسي GMC يوكون الفاخر في المملكة العربية السعودية',
-    },
-    title: {
-      en: 'Premium VIP Fleet',
-      ar: 'أسطول VIP الفاخر',
-    },
-  },
-  {
     src: '/trust-badges/trust-badge-staria-yukon-specifications.webp',
     alt: {
-      en: 'Hyundai Staria and GMC Yukon premium vehicle specifications – Saudi Cabs GMC',
-      ar: 'مواصفات هيونداي ستاريا وGMC يوكون الفاخرة – Saudi Cabs GMC',
+      en: 'Hyundai Staria and GMC Yukon vehicle specifications – Saudi Cabs GMC',
+      ar: 'مواصفات هيونداي ستاريا وGMC يوكون – Saudi Cabs GMC',
     },
     title: {
       en: 'Staria & Yukon Specifications',
