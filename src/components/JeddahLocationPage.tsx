@@ -13,6 +13,10 @@ import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 import type { LocationPageProps } from './LocationPage'
 
+type BText = { ar: string; en: string }
+interface JeddahRouteItem { label: BText; duration: string; href?: string }
+type JeddahLocationPageProps = Omit<LocationPageProps, 'routes' | 'linkedRoutes'> & { routes: JeddahRouteItem[] }
+
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Bus, Car, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
@@ -63,16 +67,16 @@ const NEIGHBOURHOODS = [
 
 export default function JeddahLocationPage({
   cityName, citySlogan, description, heroImage,
-  services, routes, linkedRoutes, citySlug, highlights, faqs, pricing,
-}: LocationPageProps) {
+  services, routes, citySlug, highlights, faqs, pricing,
+}: JeddahLocationPageProps) {
   const { lang, isAr } = useLang()
   const tr = t[lang].locationPage
   const tx = (b: { ar: string; en: string }) => b[lang]
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة في جدة' : "Hello, I'd like to book a trip in Jeddah"
 
   const stats = isAr
-    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '٣', l: 'مطارات' }, { n: '٣', l: 'أنواع السيارات' }, { n: '100%', l: 'أسعار حسب المسار' }]
-    : [{ n: '24/7', l: 'Always Available' }, { n: '3', l: 'Airports Served' }, { n: '3', l: 'Vehicle Types' }, { n: '100%', l: 'Route-Based Fares' }]
+    ? [{ n: '24/7', l: 'متاحون دائماً' }, { n: '١', l: 'مطار دولي' }, { n: '٣', l: 'أنواع السيارات' }, { n: '100%', l: 'أسعار حسب المسار' }]
+    : [{ n: '24/7', l: 'Always Available' }, { n: '1', l: 'International Airport' }, { n: '3', l: 'Vehicle Types' }, { n: '100%', l: 'Route-Based Fares' }]
 
   return (
     <main>
@@ -125,15 +129,15 @@ export default function JeddahLocationPage({
                 </a>
               </div>
 
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '32px' }}>
+              <ul aria-label={isAr ? 'خدماتنا' : 'Our services'} style={{ listStyle: 'none', display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '32px', padding: 0 }}>
                 {tr.tags.map(s => (
-                  <span key={s} style={{
+                  <li key={s} style={{
                     background: 'rgba(8,145,178,0.15)', border: '1px solid rgba(8,145,178,0.35)',
                     color: '#7dd3fc', padding: '4px 12px', borderRadius: '4px',
                     fontSize: '0.8rem', fontWeight: '600',
-                  }}>{s}</span>
+                  }}>{s}</li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             <div className="animate-fadeInUp animate-delay-1" style={{
@@ -149,12 +153,9 @@ export default function JeddahLocationPage({
       {/* ── Stats Bar ── */}
       <section style={{ background: '#0a1f3d', borderBottom: '1px solid rgba(8,145,178,0.3)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0' }}>
-            {stats.map((s, i) => (
-              <div key={s.l} style={{
-                padding: '22px 16px', textAlign: 'center',
-                borderRight: i < 3 ? '1px solid rgba(8,145,178,0.2)' : 'none',
-              }}>
+          <div className="grid-4" style={{ gap: '0' }}>
+            {stats.map(s => (
+              <div key={s.l} style={{ padding: '22px 16px', textAlign: 'center' }}>
                 <div style={{ fontSize: '1.6rem', fontWeight: '900', color: '#7dd3fc', lineHeight: 1 }}>{s.n}</div>
                 <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.55)', marginTop: '4px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{s.l}</div>
               </div>
@@ -223,32 +224,40 @@ export default function JeddahLocationPage({
             <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, #0891b2, #D4AF37)', margin: '14px 0', borderRadius: '2px' }} />
           </div>
           <div style={{ background: 'white', borderRadius: '16px', border: '1px solid rgba(8,145,178,0.18)', overflow: 'hidden', boxShadow: '0 4px 20px rgba(10,31,61,0.06)' }}>
-            {routes.map((r, i) => (
-              <a
-                key={r.label.ar}
-                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
-                target="_blank" rel="noopener noreferrer"
-                style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  padding: '16px 24px', textDecoration: 'none',
-                  borderBottom: i < routes.length - 1 ? '1px solid rgba(8,145,178,0.1)' : 'none',
-                  transition: 'background 0.15s',
-                  background: i % 2 === 0 ? 'white' : '#f8fcff',
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891b2', flexShrink: 0 }} />
-                  <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#0a1f3d' }}>{tx(r.label)}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{
-                    background: 'rgba(8,145,178,0.1)', color: '#0891b2',
-                    padding: '3px 10px', borderRadius: '50px', fontSize: '0.78rem', fontWeight: '700',
-                  }}>{r.duration}</span>
-                  <ArrowRight size={14} color="#0891b2" />
-                </div>
-              </a>
-            ))}
+            {routes.map((r, i) => {
+              const rowStyle: React.CSSProperties = {
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '16px 24px', textDecoration: 'none',
+                borderBottom: i < routes.length - 1 ? '1px solid rgba(8,145,178,0.1)' : 'none',
+                transition: 'background 0.15s',
+                background: i % 2 === 0 ? 'white' : '#f8fcff',
+              }
+              const inner = (
+                <>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891b2', flexShrink: 0 }} />
+                    <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#0a1f3d' }}>{tx(r.label)}</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <span style={{
+                      background: 'rgba(8,145,178,0.1)', color: '#0891b2',
+                      padding: '3px 10px', borderRadius: '50px', fontSize: '0.78rem', fontWeight: '700',
+                    }}>{r.duration}</span>
+                    <ArrowRight size={14} color="#0891b2" />
+                  </div>
+                </>
+              )
+              return r.href ? (
+                <Link key={r.label.ar} href={r.href} style={rowStyle}>{inner}</Link>
+              ) : (
+                <a
+                  key={r.label.ar}
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  style={rowStyle}
+                >{inner}</a>
+              )
+            })}
           </div>
           <div style={{ textAlign: 'center', marginTop: '28px' }}>
             <Link href={`/${citySlug}/routes`} style={{
@@ -310,40 +319,6 @@ export default function JeddahLocationPage({
           </div>
         </div>
       </section>
-
-      {/* ── Linked Route Pages ── */}
-      {linkedRoutes && linkedRoutes.length > 0 && (
-        <section style={{ padding: '60px 0', backgroundColor: 'var(--background)' }}>
-          <div className="container">
-            <div className="section-header" style={{ marginBottom: '32px' }}>
-              <span className="section-tag">{isAr ? 'رحلات مباشرة' : 'Direct Routes'}</span>
-              <h2 className="section-title" style={{ marginTop: '12px' }}>
-                {isAr
-                  ? <><span style={{ color: '#0891b2' }}>{tx(cityName)}</span> — الخطوط المباشرة</>
-                  : <><span style={{ color: '#0891b2' }}>{tx(cityName)}</span> Direct Routes</>}
-              </h2>
-              <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, #0891b2, #D4AF37)', margin: '14px 0', borderRadius: '2px' }} />
-            </div>
-            <div className="grid-2" style={{ gap: '12px' }}>
-              {linkedRoutes.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`} style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  background: 'var(--card)', borderRadius: '12px', padding: '18px 22px',
-                  border: '1px solid rgba(8,145,178,0.2)', textDecoration: 'none', transition: 'all 0.25s',
-                }}>
-                  <div>
-                    <div style={{ fontWeight: '800', fontSize: '0.9rem', marginBottom: '4px', color: 'var(--foreground)' }}>{tx(r.label)}</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>{r.duration} • {isAr ? 'سعر حسب المسار' : 'Route-Based Fare'}</div>
-                  </div>
-                  <div style={{ background: 'rgba(8,145,178,0.1)', borderRadius: '8px', padding: '8px' }}>
-                    <Car size={16} color="#0891b2" strokeWidth={2} />
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {pricing && pricing.length > 0 && <FleetSection pricing={pricing} cityName={cityName} />}
 

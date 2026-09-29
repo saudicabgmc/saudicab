@@ -462,12 +462,12 @@ export const jeddahFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'What is the best cab service in Jeddah?',
-      ar: 'ما أفضل خدمة كاب في جدة؟',
+      en: 'What cab services does Saudi Cabs GMC offer in Jeddah?',
+      ar: 'ما هي خدمات الكاب التي تقدمها Saudi Cabs GMC في جدة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC is one of the top cab services in Jeddah, offering route-based fares, professional drivers, luxury vehicles, and 24/7 availability. We cover major Jeddah neighborhoods including Al-Hamra, Al-Rawdah, Al-Corniche, Al-Muhammadiyah, Obhur, and North Jeddah.',
-      ar: 'Saudi Cabs GMC هي من أفضل خدمات الكاب في جدة، تقدم رحلات بأسعار حسب المسار وسائقين محترفين وسيارات فاخرة وتوفراً على مدار الساعة. نغطي أبرز أحياء جدة بما فيها الحمراء والروضة والكورنيش والمحمدية وأبحر وشمال جدة.',
+      en: 'Saudi Cabs GMC offers route-based fares, professional drivers, a range of vehicle options, and 24/7 availability in Jeddah. We cover major Jeddah neighborhoods including Al-Hamra, Al-Rawdah, Al-Corniche, Al-Muhammadiyah, Obhur, and North Jeddah.',
+      ar: 'تقدم Saudi Cabs GMC رحلات بأسعار حسب المسار وسائقين محترفين ومجموعة متنوعة من السيارات وتوفراً على مدار الساعة في جدة. نغطي أبرز أحياء جدة بما فيها الحمراء والروضة والكورنيش والمحمدية وأبحر وشمال جدة.',
     },
   },
   {

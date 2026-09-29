@@ -25,28 +25,23 @@ export default function JeddahPage() {
         { iconName: 'Building2', title: { ar: 'توصيل الفنادق الفاخرة', en: 'Luxury Hotel Transfer' }, desc: { ar: 'خدمة توصيل لفنادق الخمس نجوم والمنتجعات الفاخرة في جدة.', en: 'Transfer service to five-star hotels and luxury resorts in Jeddah.' } },
       ]}
       routes={[
-        { label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: 'Approx. 55 min' },
-        { label: { ar: 'جدة ← المدينة المنورة', en: 'Jeddah → Madinah' }, duration: 'Approx. 4 hrs' },
-        { label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: 'Approx. 1.5 hrs' },
+        { label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: 'Approx. 55 min', href: '/jeddah-airport-to-makkah' },
+        { label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: 'Approx. 4 hrs', href: '/jeddah-airport-to-madinah' },
+        { label: { ar: 'جدة ← مكة المكرمة', en: 'Jeddah → Makkah' }, duration: 'Approx. 50 min', href: '/jeddah-to-makkah' },
+        { label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: 'Approx. 50 min', href: '/makkah-to-jeddah' },
+        { label: { ar: 'جدة ← المدينة المنورة', en: 'Jeddah → Madinah' }, duration: 'Approx. 4 hrs', href: '/jeddah-to-madinah' },
+        { label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: 'Approx. 4 hrs', href: '/madinah-to-jeddah' },
+        { label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: 'Approx. 1.5 hrs', href: '/jeddah-to-taif' },
         { label: { ar: 'كورنيش جدة ← مول العرب', en: 'Jeddah Corniche → Mall of Arabia' }, duration: 'Approx. 25 min' },
         { label: { ar: 'جدة ← رابغ', en: 'Jeddah → Rabigh' }, duration: 'Approx. 1.5 hrs' },
         { label: { ar: 'المطار ← وسط جدة', en: 'Airport → Downtown Jeddah' }, duration: 'Approx. 30 min' },
         { label: { ar: 'جدة ← الرياض', en: 'Jeddah → Riyadh' }, duration: 'Approx. 10 hrs' },
         { label: { ar: 'جدة ← ينبع', en: 'Jeddah → Yanbu' }, duration: 'Approx. 3.5 hrs' },
       ]}
-      linkedRoutes={[
-        { slug: 'jeddah-airport-to-makkah', label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: 'Approx. 55 min' },
-        { slug: 'jeddah-airport-to-madinah', label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: 'Approx. 4 hrs' },
-        { slug: 'jeddah-to-makkah', label: { ar: 'جدة ← مكة المكرمة', en: 'Jeddah → Makkah' }, duration: 'Approx. 50 min' },
-        { slug: 'jeddah-to-taif', label: { ar: 'جدة ← الطائف', en: 'Jeddah → Taif' }, duration: 'Approx. 1.5 hrs' },
-        { slug: 'jeddah-to-madinah', label: { ar: 'جدة ← المدينة المنورة', en: 'Jeddah → Madinah' }, duration: 'Approx. 4 hrs' },
-        { slug: 'madinah-to-jeddah', label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: 'Approx. 4 hrs' },
-        { slug: 'makkah-to-jeddah', label: { ar: 'مكة المكرمة ← جدة', en: 'Makkah → Jeddah' }, duration: 'Approx. 50 min' },
-      ]}
       highlights={[
         { iconName: 'Plane', title: { ar: 'توصيل مطار الملك عبدالعزيز', en: 'King Abdulaziz Airport Transfers' }, desc: { ar: 'خدمة استقبال وتوديع احترافية بلوحة الاسم في مطار الملك عبدالعزيز الدولي.', en: 'We provide professional pickup and drop-off services at King Abdulaziz International Airport.' } },
         { iconName: 'MapPin', title: { ar: 'سائقون يعرفون جدة جيداً', en: 'Drivers Who Know Jeddah Well' }, desc: { ar: 'إلمام بالطرق الرئيسية والأحياء ومعالم جدة التجارية والسياحية.', en: 'Familiarity with major roads, neighborhoods, commercial areas, and tourist landmarks in Jeddah.' } },
-        { iconName: 'Gem', title: { ar: 'سيارات فاخرة لرجال الأعمال', en: 'Luxury Cars for Business People' }, desc: { ar: 'أسطول من السيارات الفاخرة يليق بمقام ضيوفنا ورجال الأعمال.', en: 'A fleet of luxury vehicles befitting the stature of our guests and business travelers.' } },
+        { iconName: 'Gem', title: { ar: 'سيارات مريحة لرحلات الأعمال', en: 'Comfortable Vehicles for Business Travel' }, desc: { ar: 'أسطول من السيارات المريحة والمناسبة لرجال الأعمال والمسافرين.', en: 'A fleet of comfortable, well-maintained vehicles suited for business travelers and meetings.' } },
         { iconName: 'Shield', title: { ar: 'تغطية واسعة لأحياء جدة', en: 'Wide Coverage of Jeddah Districts' }, desc: { ar: 'من الحمراء إلى المحمدية، ومن الروضة إلى أبحر — نوفر توصيلاً عبر أبرز أحياء جدة.', en: 'From Al-Hamra to Al-Muhammadiyah, from Al-Rawdah to Abhur — we provide transfers across major Jeddah districts.' } },
       ]}
       faqs={jeddahFaqs}
