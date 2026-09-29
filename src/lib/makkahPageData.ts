@@ -55,8 +55,8 @@ export interface MakkahPageProps {
 
 export const heroContent = {
   h1: {
-    en: 'Makkah Taxi & Private Transport Services',
-    ar: 'خدمة تاكسي ونقل خاص في مكة المكرمة',
+    en: 'Transport Services in Makkah',
+    ar: 'خدمات النقل في مكة المكرمة',
   },
   intro: {
     en: 'Private taxi and transport across Makkah — from Jeddah Airport to your hotel, Holy Mosque (Haram) transfers, Hajj and Umrah transportation, Ziyarat trips and intercity travel to Madinah, Jeddah and Taif. Choose a Sedan, Hyundai Staria or GMC Yukon and confirm your fixed price on WhatsApp before you travel.',
