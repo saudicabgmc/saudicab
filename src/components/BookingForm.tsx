@@ -372,7 +372,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
             >
               <div style={{ width: '100%', height: '58px', background: v.bg, borderRadius: '6px', overflow: 'hidden', marginBottom: '7px' }}>
                 {v.img ? (
-                  <img src={v.img} alt={v.nameEn} width={200} height={58} style={{ width: '100%', height: '100%', objectFit: v.fit, objectPosition: v.key === 'staria' ? '50% 32%' : 'center', display: 'block' }} />
+                  <img src={v.img} alt={v.nameEn} width={200} height={58} style={{ width: '100%', height: '100%', objectFit: v.fit, objectPosition: v.key === 'staria' ? '50% 80%' : 'center', display: 'block' }} />
                 ) : (
                   <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
                     <Car size={26} strokeWidth={1.8} />

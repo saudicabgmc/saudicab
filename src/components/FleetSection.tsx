@@ -104,7 +104,7 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
                       alt={car.alt}
                       width={400} height={220}
                       loading="lazy"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: car.key === 'staria' ? '50% 32%' : 'center', display: 'block' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: car.key === 'staria' ? '50% 80%' : 'center', display: 'block' }}
                     />
                   ) : (
                     <div role="img" aria-label={car.alt} style={{
