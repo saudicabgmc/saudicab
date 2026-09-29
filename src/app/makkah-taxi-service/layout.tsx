@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 const PAGE_URL = 'https://saudicabsgmc.com/makkah-taxi-service'
-// Real dimensions of /public/hero/makkah-hero-saudi-cabs-gmc.webp (the old OG image was declared 1200x630 but is actually 600x400).
-const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/makkah-hero-saudi-cabs-gmc.webp', width: 2000, height: 1333, alt: 'Makkah taxi and private transport service – Saudi Cabs GMC', type: 'image/webp' }
+// Real dimensions of /public/hero/makkah-hero-saudi-cabs-gmc.webp (a landscape dusk photo of the Kaaba and Masjid al-Haram).
+const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/makkah-hero-saudi-cabs-gmc.webp', width: 735, height: 603, alt: 'The Kaaba and Masjid al-Haram at dusk, Makkah – Saudi Cabs GMC', type: 'image/webp' }
 
 export const metadata: Metadata = {
   title: 'Makkah Taxi & Private Transport Services',
