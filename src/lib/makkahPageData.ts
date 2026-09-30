@@ -117,8 +117,8 @@ export const audiences: MakkahAudience[] = [
     iconName: 'Briefcase',
     title: { en: 'Business & Private Travel', ar: 'الأعمال والتنقل الخاص' },
     desc: {
-      en: 'Need a comfortable ride to a meeting, an appointment or the airport? Book a private Sedan or a GMC Yukon VIP for a point-to-point trip, or ask about a private driver for the day.',
-      ar: 'تحتاج إلى رحلة مريحة إلى اجتماع أو موعد أو المطار؟ احجز سيدان خاصاً أو GMC يوكون VIP لرحلة من نقطة إلى أخرى، أو اسأل عن سائق خاص ليوم كامل.',
+      en: 'Need a comfortable ride to a meeting, an appointment or the airport? Book a private <a href="/toyota-camry-taxi" style="color:var(--primary);font-weight:700;">Sedan</a> or a <a href="/gmc-yukon-hire" style="color:var(--primary);font-weight:700;">GMC Yukon</a> VIP for a point-to-point trip, or ask about a private driver for the day.',
+      ar: 'تحتاج إلى رحلة مريحة إلى اجتماع أو موعد أو المطار؟ احجز <a href="/toyota-camry-taxi" style="color:var(--primary);font-weight:700;">سيدان</a> خاصاً أو <a href="/gmc-yukon-hire" style="color:var(--primary);font-weight:700;">GMC يوكون</a> VIP لرحلة من نقطة إلى أخرى، أو اسأل عن سائق خاص ليوم كامل.',
     },
     href: '/private-driver',
     linkLabel: { en: 'Private Driver', ar: 'سائق خاص' },

@@ -132,7 +132,7 @@ export default function MakkahZiyaratPage() {
       <section style={{ padding: '40px 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {[{ href: '/makkah-taxi-service', ar: 'مكة', en: 'Makkah' }, { href: '/madinah-ziyarat-tour', ar: 'زيارات المدينة', en: 'Madinah Ziyarat' }, { href: '/hajj-umrah-transport', ar: 'الحج والعمرة', en: 'Hajj & Umrah' }, { href: '/private-driver', ar: 'سائق خاص', en: 'Private Driver' }].map(c => (
+            {[{ href: '/makkah-taxi-service', ar: 'مكة', en: 'Makkah' }, { href: '/madinah-ziyarat-tour', ar: 'زيارات المدينة', en: 'Madinah Ziyarat' }, { href: '/hajj-umrah-transport', ar: 'الحج والعمرة', en: 'Hajj & Umrah' }, { href: '/private-driver', ar: 'سائق خاص', en: 'Private Driver' }, { href: '/blog/best-places-makkah-ziyarat', ar: 'أفضل أماكن الزيارة', en: 'Best Ziyarat Places' }].map(c => (
               <Link key={c.href} href={c.href} className="route-badge"><MapPin size={14} />{isAr ? c.ar : c.en}</Link>
             ))}
           </div>

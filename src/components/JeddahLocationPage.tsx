@@ -111,9 +111,7 @@ export default function JeddahLocationPage({
                   : <><span style={{ color: '#7dd3fc' }}>{tx(cityName)}</span> Taxi &amp; Private Transport Services</>}
               </h1>
 
-              <p style={{ fontSize: '0.95rem', opacity: 0.82, marginBottom: '32px', lineHeight: '1.75', maxWidth: '460px' }}>
-                {tx(description)}
-              </p>
+              <p style={{ fontSize: '0.95rem', opacity: 0.82, marginBottom: '32px', lineHeight: '1.75', maxWidth: '460px' }} dangerouslySetInnerHTML={{ __html: tx(description) }} />
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
@@ -202,7 +200,7 @@ export default function JeddahLocationPage({
                       {SIcon && <SIcon size={16} strokeWidth={2} color="#0891b2" />}
                       <h3 style={{ fontSize: '0.9rem', fontWeight: '800', margin: 0 }}>{tx(s.title)}</h3>
                     </div>
-                    <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.6', margin: 0 }}>{tx(s.desc)}</p>
+                    <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.6', margin: 0 }} dangerouslySetInnerHTML={{ __html: tx(s.desc) }} />
                   </div>
                 </div>
               )
@@ -347,7 +345,7 @@ export default function JeddahLocationPage({
                       </div>
                       <div>
                         <h4 style={{ fontWeight: '700', marginBottom: '4px' }}>{tx(h.title)}</h4>
-                        <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', lineHeight: '1.6' }}>{tx(h.desc)}</p>
+                        <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: tx(h.desc) }} />
                       </div>
                     </div>
                   )

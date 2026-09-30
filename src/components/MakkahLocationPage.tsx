@@ -281,7 +281,7 @@ export default function MakkahLocationPage({
                     {AIcon && <AIcon size={24} strokeWidth={1.8} color="var(--primary)" aria-hidden="true" />}
                   </div>
                   <h3 style={{ fontSize: '1.05rem', fontWeight: 800, margin: 0 }}>{tx(a.title)}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: 1.75, margin: 0, flex: 1 }}>{tx(a.desc)}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: 1.75, margin: 0, flex: 1 }} dangerouslySetInnerHTML={{ __html: tx(a.desc) }} />
                   <Link href={a.href} className="mk-focus" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--primary)', fontWeight: 800, fontSize: '0.86rem', minHeight: '32px' }}>
                     {tx(a.linkLabel)} <Arrow />
                   </Link>

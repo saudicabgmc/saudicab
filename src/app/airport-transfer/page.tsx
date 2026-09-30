@@ -10,6 +10,7 @@ const AIRPORT_ROUTES = [
   { slug: 'jeddah-airport-to-madinah', from: { en: 'Jeddah Airport (KAIA)', ar: 'مطار جدة الدولي' }, to: { en: 'Madinah', ar: 'المدينة المنورة' }, dur: '~4 hrs' },
   { slug: 'madinah-airport-taxi', from: { en: 'Madinah Airport (MED)', ar: 'مطار المدينة' }, to: { en: "Prophet's Mosque", ar: 'المسجد النبوي' }, dur: '~30 min' },
   { slug: 'makkah-to-jeddah-airport', from: { en: 'Makkah', ar: 'مكة المكرمة' }, to: { en: 'Jeddah Airport', ar: 'مطار جدة' }, dur: '~55 min' },
+  { slug: 'taif-airport-taxi', from: { en: 'Taif Airport (TIF)', ar: 'مطار الطائف' }, to: { en: 'Taif City', ar: 'مدينة الطائف' }, dur: '~20–30 min' },
 ]
 
 const FAQS = [

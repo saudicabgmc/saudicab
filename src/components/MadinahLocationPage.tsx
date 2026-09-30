@@ -181,7 +181,7 @@ export default function MadinahLocationPage({
                     {SIcon && <SIcon size={26} strokeWidth={1.6} color="#1a4a3a" />}
                   </div>
                   <h3 style={{ fontSize: '0.85rem', fontWeight: '800', marginBottom: '10px' }}>{tx(s.title)}</h3>
-                  <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{tx(s.desc)}</p>
+                  <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }} dangerouslySetInnerHTML={{ __html: tx(s.desc) }} />
                 </div>
               )
             })}
@@ -352,7 +352,7 @@ export default function MadinahLocationPage({
                   </div>
                   <div>
                     <h4 style={{ fontWeight: '800', marginBottom: '6px', fontSize: '0.9rem' }}>{tx(h.title)}</h4>
-                    <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{tx(h.desc)}</p>
+                    <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }} dangerouslySetInnerHTML={{ __html: tx(h.desc) }} />
                   </div>
                 </div>
               )

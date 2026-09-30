@@ -155,7 +155,7 @@ export default function HajjUmrahPage() {
         <div className="container" style={{ textAlign: 'center' }}>
           <p style={{ fontWeight: '700', marginBottom: '16px', color: 'var(--muted-foreground)', fontSize: '0.9rem' }}>{isAr ? 'الخدمة متاحة في' : 'Service available in'}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {[{ href: '/makkah-taxi-service', ar: 'مكة المكرمة', en: 'Makkah' }, { href: '/madinah-taxi-service', ar: 'المدينة المنورة', en: 'Madinah' }, { href: '/jeddah-taxi-service', ar: 'جدة', en: 'Jeddah' }, { href: '/taif-taxi-service', ar: 'الطائف', en: 'Taif' }].map(c => (
+            {[{ href: '/makkah-taxi-service', ar: 'مكة المكرمة', en: 'Makkah' }, { href: '/madinah-taxi-service', ar: 'المدينة المنورة', en: 'Madinah' }, { href: '/jeddah-taxi-service', ar: 'جدة', en: 'Jeddah' }, { href: '/taif-taxi-service', ar: 'الطائف', en: 'Taif' }, { href: '/makkah-ziyarat-tour', ar: 'جولة زيارات مكة', en: 'Makkah Ziyarat' }, { href: '/madinah-ziyarat-tour', ar: 'جولة زيارات المدينة', en: 'Madinah Ziyarat' }].map(c => (
               <Link key={c.href} href={c.href} className="route-badge"><MapPin size={14} strokeWidth={2} />{isAr ? c.ar : c.en}</Link>
             ))}
           </div>

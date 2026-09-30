@@ -212,7 +212,7 @@ export default function TaifLocationPage({
                     </div>
                     <h3 style={{ fontSize: '0.88rem', fontWeight: '800', margin: 0 }}>{tx(s.title)}</h3>
                   </div>
-                  <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }}>{tx(s.desc)}</p>
+                  <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', lineHeight: '1.65', margin: 0 }} dangerouslySetInnerHTML={{ __html: tx(s.desc) }} />
                 </div>
               )
             })}
@@ -386,7 +386,7 @@ export default function TaifLocationPage({
                   </div>
                   <div style={{ flex: 1 }}>
                     <h4 style={{ fontWeight: '800', fontSize: '1rem', marginBottom: '8px' }}>{tx(h.title)}</h4>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: '1.7', margin: 0 }}>{tx(h.desc)}</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: '1.7', margin: 0 }} dangerouslySetInnerHTML={{ __html: tx(h.desc) }} />
                   </div>
                 </div>
               )
