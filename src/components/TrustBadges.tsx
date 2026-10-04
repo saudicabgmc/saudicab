@@ -66,19 +66,19 @@ export default function TrustBadges() {
       <div className="container">
         <div className="section-header" style={{ marginBottom: '40px' }}>
           <span className="section-tag">
-            {isAr ? 'لماذا تثق بنا' : 'Why Trust Us'}
+            {isAr ? 'لماذا تثق بنا' : 'What You Can Expect'}
           </span>
           <h2 className="section-title">
             {isAr
-              ? <><span style={{ color: 'var(--primary)' }}>ضمانات الجودة</span> في كل رحلة</>
-              : <>Quality <span style={{ color: 'var(--primary)' }}>Guarantees</span> Every Ride</>
+              ? <>ما يمكنك <span style={{ color: 'var(--primary)' }}>توقعه</span> منا</>
+              : <>What You Can <span style={{ color: 'var(--primary)' }}>Expect</span> From Us</>
             }
           </h2>
           <div className="gold-divider" />
           <p className="section-subtitle">
             {isAr
-              ? 'كل رحلة مع Saudi Cabs GMC مدعومة بهذه المعايير التي لا نتنازل عنها'
-              : 'Every trip with Saudi Cabs GMC is backed by these non-negotiable standards'
+              ? 'كل رحلة مع Saudi Cabs GMC مبنية على هذه المعايير الأساسية'
+              : 'Every trip with Saudi Cabs GMC is built on these core standards'
             }
           </p>
         </div>

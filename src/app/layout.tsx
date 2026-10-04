@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: 'Saudi Cabs GMC | Reliable Taxi & Private Transport in Makkah, Madinah, Jeddah & Taif',
+    default: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
     template: '%s | Saudi Cabs GMC',
   },
   description:
-    'Book your taxi, cab, or private driver in Makkah, Madinah, Jeddah, and Taif. Airport transfers, Umrah trips & intercity routes. Fixed prices, 24/7 available. Book via WhatsApp now.',
+    'Private taxi, chauffeur and airport transfer service across Makkah, Madinah, Jeddah and Taif. Fixed, route-based prices confirmed before you travel. Book in minutes on WhatsApp.',
   keywords: [
     'taxi makkah', 'taxi madinah', 'taxi jeddah', 'taxi taif',
     'cab saudi arabia', 'private driver makkah', 'airport transfer jeddah',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     alternateLocale: 'ar_SA',
     url: 'https://saudicabsgmc.com',
     siteName: 'Saudi Cabs GMC',
-    title: 'Saudi Cabs GMC | Reliable Taxi & Private Transport in Makkah, Madinah, Jeddah & Taif',
+    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
     description:
-      'Book your taxi, cab, or private driver in Makkah, Madinah, Jeddah, and Taif. Fixed prices, 24/7 available.',
+      'Private taxi, chauffeur and airport transfer service across Makkah, Madinah, Jeddah and Taif. Fixed prices, 24/7 available.',
     images: [
       {
         url: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
@@ -69,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saudi Cabs GMC | Reliable Taxi Service in Saudi Arabia',
-    description: 'Book your taxi in Makkah, Madinah, Jeddah & Taif. Fixed prices, 24/7.',
+    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
+    description: 'Private taxi and airport transfers in Makkah, Madinah, Jeddah & Taif. Fixed prices, 24/7.',
     images: ['/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp'],
   },
   verification: {

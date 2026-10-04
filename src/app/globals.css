@@ -714,3 +714,117 @@ a.mk-card-light:hover, a.mk-card-light:focus-visible { box-shadow: var(--shadow-
   .mk-card, .mk-btn-wa { transition: none; }
   a.mk-card:hover, a.mk-card:focus-visible, .mk-btn-wa:hover { transform: none; }
 }
+
+/* ── Homepage — Journey Types (editorial asymmetric grid) ── */
+.journey-scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 210px;
+  grid-auto-flow: dense;
+  gap: 14px;
+}
+.journey-scene-large { grid-column: span 2; grid-row: span 2; }
+.journey-scene-wide { grid-column: span 2; grid-row: span 1; }
+.journey-scene-small { grid-column: span 1; grid-row: span 1; }
+.journey-scene:hover .journey-scene-img,
+.journey-scene:focus-within .journey-scene-img { transform: scale(1.06); }
+
+@media (max-width: 1024px) {
+  .journey-scenes-grid { grid-template-columns: repeat(2, 1fr); }
+  .journey-scene-large { grid-column: span 2; grid-row: span 2; }
+  .journey-scene-wide { grid-column: span 2; grid-row: span 1; }
+}
+@media (max-width: 640px) {
+  .journey-scenes-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .journey-scene-large { grid-column: span 1; grid-row: span 1; min-height: 260px; }
+  .journey-scene-wide { grid-column: span 1; }
+}
+
+/* ── Homepage — City Explorer (road + stops, not a literal map) ── */
+.city-road-line {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+}
+.city-stops {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.city-stop-btn {
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  color: var(--muted-foreground);
+  font-family: inherit;
+}
+.city-stop-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: white; border: 3px solid var(--border);
+  transition: all 0.25s ease;
+}
+.city-stop-btn[aria-pressed="true"] .city-stop-dot {
+  background: var(--primary); border-color: var(--primary);
+  box-shadow: 0 0 0 6px rgba(170,131,24,0.18);
+}
+.city-stop-label { font-size: 0.85rem; font-weight: 700; }
+.city-stop-btn[aria-pressed="true"] .city-stop-label { color: var(--foreground); }
+
+@media (max-width: 640px) {
+  .city-stops { flex-wrap: wrap; gap: 18px 10px; justify-content: center; }
+  .city-road-line { display: none; }
+}
+
+/* ── Homepage — Fleet Experience (vehicle selector) ── */
+.fleet-exp-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.fleet-exp-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.fleet-exp-tab {
+  background: var(--card, #fff); border: 1.5px solid var(--border);
+  padding: 10px 18px; border-radius: 10px; cursor: pointer;
+  font-family: inherit; font-weight: 700; font-size: 0.88rem; color: var(--muted-foreground);
+  transition: all 0.2s;
+}
+.fleet-exp-tab[aria-pressed="true"] {
+  background: var(--secondary); border-color: var(--secondary); color: white;
+}
+@media (max-width: 900px) {
+  .fleet-exp-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ── Homepage — Pricing Experience: desktop table / mobile selector ── */
+.pricing-desktop-table { display: block; }
+.pricing-mobile-selector { display: none; }
+@media (max-width: 768px) {
+  .pricing-desktop-table { display: none; }
+  .pricing-mobile-selector { display: block; }
+}
+
+/* ── Homepage — Journey Timeline ── */
+.timeline-wrap { position: relative; }
+.timeline-line-track {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 2px; background: var(--border); transform: translateX(-50%);
+}
+.timeline-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+.timeline-step { padding: 0 18px; text-align: center; }
+.timeline-dot {
+  width: 14px; height: 14px; border-radius: 50%; background: var(--primary);
+  margin: 0 auto 18px; position: relative; z-index: 1;
+  box-shadow: 0 0 0 6px var(--background);
+}
+@media (max-width: 768px) {
+  .timeline-steps { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-scene-img { transition: none !important; }
+  .city-stop-dot { transition: none !important; }
+}

@@ -53,12 +53,12 @@ export const homeFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'How much does a cab from Jeddah to Makkah cost?',
-      ar: 'كم يكلف الكاب من جدة إلى مكة المكرمة؟',
+      en: 'How much does a taxi from Jeddah Airport to Makkah cost?',
+      ar: 'كم يكلف التاكسي من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'The cab fare from Jeddah to Makkah with Saudi Cabs GMC is fixed and transparent — no hidden fees or surge pricing. The journey takes approximately 50 minutes. Contact us via WhatsApp for the current rate and available pilgrimage packages.',
-      ar: 'سعر الكاب من جدة إلى مكة المكرمة مع Saudi Cabs GMC ثابت وشفاف — لا رسوم خفية ولا أسعار متغيرة. تستغرق الرحلة حوالي 50 دقيقة. تواصل معنا عبر واتساب للاطلاع على السعر الحالي وباقات الحج والعمرة.',
+      en: 'The fixed fare from Jeddah Airport to a Makkah hotel is 330 SAR for a Sedan, 380 SAR for a Hyundai Staria, and 530 SAR for a GMC Yukon — per vehicle, not per person. The journey takes approximately 55–90 minutes depending on traffic. Confirm the current rate on WhatsApp before booking.',
+      ar: 'السعر الثابت من مطار جدة إلى فندق في مكة المكرمة هو 330 ريال للسيدان، و380 ريال لهيونداي ستاريا، و530 ريال لـ GMC يوكون — للسيارة الواحدة وليس للفرد. تستغرق الرحلة من 55 إلى 90 دقيقة حسب حركة المرور. أكّد السعر الحالي عبر واتساب قبل الحجز.',
     },
   },
   {
