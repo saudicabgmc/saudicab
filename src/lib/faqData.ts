@@ -565,6 +565,16 @@ export const jeddahFaqs: FAQItem[] = [
 export const taifFaqs: FAQItem[] = [
   {
     q: {
+      en: 'How do I book a Taif taxi?',
+      ar: 'كيف أحجز تاكسي في الطائف؟',
+    },
+    a: {
+      en: 'Send your pickup location, destination, date, time and preferred vehicle on WhatsApp. We reply with the route fare for you to confirm — no advance payment is required.',
+      ar: 'أرسل موقع الاستلام والوجهة والتاريخ والوقت والسيارة المفضلة عبر واتساب. نرد عليك بسعر المسار لتؤكده — دون أي دفع مسبق.',
+    },
+  },
+  {
+    q: {
       en: 'What is the best way to visit Shafa and Hada from Taif?',
       ar: 'ما أفضل طريقة لزيارة شفا وهدا من الطائف؟',
     },
@@ -635,12 +645,12 @@ export const taifFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'What is the best route for a Taif mountain sightseeing tour?',
-      ar: 'ما أفضل مسار لجولة سياحية في جبال الطائف؟',
+      en: 'How is the final fare confirmed?',
+      ar: 'كيف يتم تأكيد السعر النهائي؟',
     },
     a: {
-      en: 'A popular Taif mountain tour covers Shafa, Al-Hada, the cable car station, Wadi Qarn, the rose farms, and Al-Rudaf Park. Saudi Cabs GMC can arrange a customized full-day mountain tour starting from your hotel — contact us via WhatsApp to confirm the itinerary and pricing.',
-      ar: 'تشمل إحدى الجولات الجبلية الشهيرة في الطائف شفا والهدا ومحطة التلفريك ووادي قرن ومزارع الورد وحديقة الرضف. يمكن لـ Saudi Cabs GMC ترتيب جولة جبلية مخصصة ليوم كامل تنطلق من فندقك — تواصل معنا عبر واتساب لتأكيد البرنامج والسعر.',
+      en: 'The fare depends on the route or itinerary — including any mountain stops like Al-Hada or Al-Shafa — and is agreed with you on WhatsApp before the trip starts. Prices are per vehicle, not per person.',
+      ar: 'يعتمد السعر على المسار أو البرنامج — بما في ذلك أي محطات جبلية مثل الهدا أو شفا — ويُتفق عليه معك عبر واتساب قبل بدء الرحلة. الأسعار للسيارة الواحدة وليست للفرد.',
     },
   },
   {
