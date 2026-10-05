@@ -747,3 +747,76 @@ export const riyadhFaqs: FAQItem[] = [
     },
   },
 ]
+
+export const dammamFaqs: FAQItem[] = [
+  {
+    q: {
+      en: 'Do you provide private taxi services in Dammam?',
+      ar: 'هل تقدمون خدمات تاكسي خاص في الدمام؟',
+    },
+    a: {
+      en: 'Yes, Saudi Cabs GMC arranges private transportation in Dammam for city transfers, hotel pickups, airport journeys, and long-distance intercity trips. Send your pickup and destination on WhatsApp to arrange a trip.',
+      ar: 'نعم، تقدم Saudi Cabs GMC نقلاً خاصاً في الدمام للتنقل داخل المدينة والاستلام من الفنادق ورحلات المطار والرحلات الطويلة بين المدن. أرسل موقع الاستلام والوجهة عبر واتساب لترتيب رحلتك.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I book a private taxi from Dammam to Makkah?',
+      ar: 'هل يمكنني حجز تاكسي خاص من الدمام إلى مكة المكرمة؟',
+    },
+    a: {
+      en: 'Yes, Saudi Cabs GMC operates a direct Dammam to Makkah route. The private car journey takes approximately 8 to 9 hours (around 870 km), passing via Riyadh. Contact us on WhatsApp for the current fare.',
+      ar: 'نعم، تشغّل Saudi Cabs GMC خطاً مباشراً من الدمام إلى مكة المكرمة. تستغرق رحلة السيارة الخاصة حوالي 8 إلى 9 ساعات (نحو 870 كم)، وتمر عبر الرياض. تواصل معنا عبر واتساب لمعرفة السعر الحالي.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I travel from Dammam to Madinah by private taxi?',
+      ar: 'هل يمكنني السفر من الدمام إلى المدينة المنورة بتاكسي خاص؟',
+    },
+    a: {
+      en: 'Yes, a direct private trip from Dammam to Madinah takes approximately 9 to 10 hours (about 1,000 km) — one of the longest routes Saudi Cabs GMC operates. Night travel is advised. Contact us on WhatsApp for the current fare.',
+      ar: 'نعم، تستغرق الرحلة الخاصة المباشرة من الدمام إلى المدينة المنورة حوالي 9 إلى 10 ساعات (نحو 1,000 كم) — من أطول المسارات التي تشغّلها Saudi Cabs GMC. يُنصح بالسفر الليلي. تواصل معنا عبر واتساب لمعرفة السعر الحالي.',
+    },
+  },
+  {
+    q: {
+      en: 'Do you provide Dammam airport transfers?',
+      ar: 'هل تقدمون توصيلاً من مطار الدمام؟',
+    },
+    a: {
+      en: 'Yes, airport pickups and drop-offs to and from King Fahd International Airport can be arranged. Share your flight details on WhatsApp and we will confirm availability and timing.',
+      ar: 'نعم، يمكن ترتيب الاستلام والتوصيل من وإلى مطار الملك فهد الدولي. شارك تفاصيل رحلتك عبر واتساب وسنؤكد لك التوفر والتوقيت.',
+    },
+  },
+  {
+    q: {
+      en: 'Which vehicles are available?',
+      ar: 'ما السيارات المتوفرة؟',
+    },
+    a: {
+      en: 'Three vehicle options are available: a Sedan for smaller groups, the Hyundai Staria for families and larger groups, and the GMC Yukon for passengers wanting a more premium, spacious ride.',
+      ar: 'تتوفر ثلاثة خيارات للسيارات: سيدان للمجموعات الصغيرة، وهيونداي ستاريا للعائلات والمجموعات الكبيرة، وGMC يوكون للركاب الراغبين بسيارة فاخرة وأوسع.',
+    },
+  },
+  {
+    q: {
+      en: 'How do I book a Dammam taxi?',
+      ar: 'كيف أحجز تاكسي في الدمام؟',
+    },
+    a: {
+      en: 'Send your pickup location, destination, date and passenger count on WhatsApp. We reply with the available vehicle and the fare for you to confirm — no advance payment is required.',
+      ar: 'أرسل موقع الاستلام والوجهة والتاريخ وعدد الركاب عبر واتساب. نرد عليك بالسيارة المتاحة والسعر لتؤكده — دون أي دفع مسبق.',
+    },
+  },
+  {
+    q: {
+      en: 'Is the fare confirmed before the trip?',
+      ar: 'هل يُؤكَّد السعر قبل الرحلة؟',
+    },
+    a: {
+      en: 'Yes, the fare for your route is agreed with you on WhatsApp before the trip starts. Prices are per vehicle, not per person.',
+      ar: 'نعم، يُتفق على سعر مسارك معك عبر واتساب قبل بدء الرحلة. الأسعار للسيارة الواحدة وليست للفرد.',
+    },
+  },
+]

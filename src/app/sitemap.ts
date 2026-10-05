@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/jeddah-taxi-service`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/taif-taxi-service`,    lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/riyadh-taxi-service`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/dammam-taxi-service`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
 
     // City routes sub-pages
     { url: `${BASE}/makkah-taxi-service/routes`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
