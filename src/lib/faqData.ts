@@ -674,3 +674,76 @@ export const taifFaqs: FAQItem[] = [
     },
   },
 ]
+
+export const riyadhFaqs: FAQItem[] = [
+  {
+    q: {
+      en: 'Do you provide private taxi services in Riyadh?',
+      ar: 'هل تقدمون خدمات تاكسي خاص في الرياض؟',
+    },
+    a: {
+      en: 'Yes, Saudi Cabs GMC arranges private transportation in Riyadh for city transfers, hotel pickups, airport journeys, and long-distance intercity trips. Send your pickup and destination on WhatsApp to arrange a trip.',
+      ar: 'نعم، تقدم Saudi Cabs GMC نقلاً خاصاً في الرياض للتنقل داخل المدينة والاستلام من الفنادق ورحلات المطار والرحلات الطويلة بين المدن. أرسل موقع الاستلام والوجهة عبر واتساب لترتيب رحلتك.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I book a private taxi from Riyadh to Makkah?',
+      ar: 'هل يمكنني حجز تاكسي خاص من الرياض إلى مكة المكرمة؟',
+    },
+    a: {
+      en: 'Yes, Saudi Cabs GMC operates a direct Riyadh to Makkah route. The private car journey takes approximately 8 to 9 hours (around 900 km), with rest stops along the way. Contact us on WhatsApp for the current fare.',
+      ar: 'نعم، تشغّل Saudi Cabs GMC خطاً مباشراً من الرياض إلى مكة المكرمة. تستغرق رحلة السيارة الخاصة حوالي 8 إلى 9 ساعات (نحو 900 كم)، مع توقفات للراحة على الطريق. تواصل معنا عبر واتساب لمعرفة السعر الحالي.',
+    },
+  },
+  {
+    q: {
+      en: 'Can I travel from Riyadh to Madinah by private taxi?',
+      ar: 'هل يمكنني السفر من الرياض إلى المدينة المنورة بتاكسي خاص؟',
+    },
+    a: {
+      en: 'Yes, a direct private trip from Riyadh to Madinah takes approximately 9 to 10 hours (about 970 km). Night driving is advised to avoid peak traffic near both cities. Contact us on WhatsApp for the current fare.',
+      ar: 'نعم، تستغرق الرحلة الخاصة المباشرة من الرياض إلى المدينة المنورة حوالي 9 إلى 10 ساعات (نحو 970 كم). يُنصح بالقيادة الليلية لتجنب ذروة المرور بالقرب من كلتا المدينتين. تواصل معنا عبر واتساب لمعرفة السعر الحالي.',
+    },
+  },
+  {
+    q: {
+      en: 'Do you provide Riyadh to Jeddah private transport?',
+      ar: 'هل تقدمون نقلاً خاصاً من الرياض إلى جدة؟',
+    },
+    a: {
+      en: 'Yes, the direct private trip from Riyadh to Jeddah takes approximately 9 hours (about 950 km) via the highway. Contact us on WhatsApp for the current fare.',
+      ar: 'نعم، تستغرق الرحلة الخاصة المباشرة من الرياض إلى جدة حوالي 9 ساعات (نحو 950 كم) عبر الطريق السريع. تواصل معنا عبر واتساب لمعرفة السعر الحالي.',
+    },
+  },
+  {
+    q: {
+      en: 'Which vehicles are available?',
+      ar: 'ما السيارات المتوفرة؟',
+    },
+    a: {
+      en: 'Three vehicle options are available: a Sedan for smaller groups, the Hyundai Staria for families and larger groups, and the GMC Yukon for passengers wanting a more premium, spacious ride.',
+      ar: 'تتوفر ثلاثة خيارات للسيارات: سيدان للمجموعات الصغيرة، وهيونداي ستاريا للعائلات والمجموعات الكبيرة، وGMC يوكون للركاب الراغبين بسيارة فاخرة وأوسع.',
+    },
+  },
+  {
+    q: {
+      en: 'How do I book a Riyadh taxi?',
+      ar: 'كيف أحجز تاكسي في الرياض؟',
+    },
+    a: {
+      en: 'Send your pickup location, destination, date and passenger count on WhatsApp. We reply with the available vehicle and the fare for you to confirm — no advance payment is required.',
+      ar: 'أرسل موقع الاستلام والوجهة والتاريخ وعدد الركاب عبر واتساب. نرد عليك بالسيارة المتاحة والسعر لتؤكده — دون أي دفع مسبق.',
+    },
+  },
+  {
+    q: {
+      en: 'Is the fare confirmed before the trip?',
+      ar: 'هل يُؤكَّد السعر قبل الرحلة؟',
+    },
+    a: {
+      en: 'Yes, the fare for your route is agreed with you on WhatsApp before the trip starts. Prices are per vehicle, not per person.',
+      ar: 'نعم، يُتفق على سعر مسارك معك عبر واتساب قبل بدء الرحلة. الأسعار للسيارة الواحدة وليست للفرد.',
+    },
+  },
+]
