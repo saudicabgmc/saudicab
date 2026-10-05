@@ -110,17 +110,17 @@ export default function LocationPage({
               </p>
 
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href="tel:+923097811785" className="btn-primary">
-                  <Phone size={16} strokeWidth={2.5} />
-                  {tr.callNow}
-                </a>
                 <a
                   href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
                   target="_blank" rel="noopener noreferrer"
-                  className="btn-outline"
+                  className="btn-primary"
                 >
                   <MessageCircle size={16} strokeWidth={2.5} />
-                  {tr.whatsapp}
+                  {t[lang].nav.bookWhatsapp}
+                </a>
+                <a href="tel:+923097811785" className="btn-outline">
+                  <Phone size={16} strokeWidth={2.5} />
+                  {tr.callNow}
                 </a>
               </div>
 
