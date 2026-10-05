@@ -717,6 +717,28 @@ a.mk-card-light:hover, a.mk-card-light:focus-visible { box-shadow: var(--shadow-
   .animate-fadeIn, .animate-fadeInUp { animation: none; opacity: 1; transform: none; }
 }
 
+/* ── Route Network Map — route cards ── */
+.routes-map-card-arrow { transition: transform 0.2s ease; }
+.routes-map-card:hover, .routes-map-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(10,31,61,0.1);
+  border-color: currentColor;
+}
+.routes-map-card:hover .routes-map-card-arrow,
+.routes-map-card:focus-visible .routes-map-card-arrow {
+  transform: translateX(4px);
+}
+[dir="rtl"] .routes-map-card:hover .routes-map-card-arrow,
+[dir="rtl"] .routes-map-card:focus-visible .routes-map-card-arrow {
+  transform: translateX(-4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .routes-map-card, .routes-map-card-arrow { transition: none; }
+  .routes-map-card:hover, .routes-map-card:focus-visible { transform: none; }
+  .routes-map-card:hover .routes-map-card-arrow,
+  .routes-map-card:focus-visible .routes-map-card-arrow { transform: none; }
+}
+
 /* ── Homepage — Journey Types (editorial asymmetric grid) ── */
 .journey-scenes-grid {
   display: grid;

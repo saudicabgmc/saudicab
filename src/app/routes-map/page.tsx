@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
-import { MessageCircle, MapPin, X } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { MessageCircle, MapPin, X, Plane, ArrowRight } from 'lucide-react'
 import FAQSection from '@/components/FAQSection'
 import { useLang } from '@/contexts/LanguageContext'
 
@@ -41,7 +42,16 @@ const CITIES = [
     color: '#7c3aed',
     slug: 'taif-taxi-service',
   },
+  {
+    id: 'dammam',
+    name: { en: 'Dammam', ar: 'الدمام' },
+    x: 82, y: 42,
+    color: '#b45309',
+    slug: null,
+  },
 ]
+
+const CITY_ORDER = ['makkah', 'jeddah', 'madinah', 'taif', 'riyadh', 'dammam']
 
 // City-pair connections drawn on the SVG map (undirected — one line per pair)
 const MAP_CONNECTIONS = [
@@ -54,6 +64,8 @@ const MAP_CONNECTIONS = [
   { from: 'taif',   to: 'madinah', label: { en: 'Approx. 5 hrs',  ar: '~5 ساعات' },  type: 'long'  },
   { from: 'riyadh', to: 'madinah', label: { en: 'Approx. 9–10 hrs', ar: '~9–10 ساعات' }, type: 'long' },
   { from: 'riyadh', to: 'jeddah',  label: { en: 'Approx. 9 hrs',  ar: '~9 ساعات' },  type: 'long'  },
+  { from: 'makkah', to: 'dammam',  label: { en: 'Approx. 8–9 hrs', ar: '~8–9 ساعات' }, type: 'long'  },
+  { from: 'dammam', to: 'madinah', label: { en: 'Approx. 9–10 hrs', ar: '~9–10 ساعات' }, type: 'long' },
 ]
 
 // Every real, working route page — the source of truth for the grid and the per-city panel.
@@ -86,6 +98,9 @@ const ROUTE_PAGES = [
   { slug: 'taif-airport-taxi',         fromId: 'taif',    toId: 'taif',    from: { en: 'Taif Airport', ar: 'مطار الطائف' },    to: { en: 'Taif City', ar: 'مدينة الطائف' },       duration: { en: 'Approx. 20–30 min', ar: 'حوالي ٢٠–٣٠ دقيقة' }, category: 'airport' as const },
 ]
 
+// Curated quick-access slugs for the Popular Routes strip — looked up from ROUTE_PAGES, not restated.
+const POPULAR_SLUGS = ['jeddah-to-makkah', 'makkah-to-madinah', 'jeddah-to-madinah', 'jeddah-to-taif', 'riyadh-to-makkah', 'riyadh-to-madinah', 'riyadh-to-jeddah']
+
 const ROUTE_COLORS: Record<string, string> = {
   short:  '#D4AF37',
   medium: '#0ea5e9',
@@ -97,6 +112,9 @@ const TYPE_LABEL: Record<string, { en: string; ar: string }> = {
   medium: { en: 'Medium', ar: 'متوسط' },
   long:   { en: 'Long', ar: 'طويل' },
 }
+
+const WA_NUMBER = '923097811785'
+const waUrl = (msg: string) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 
 const routesMapFaqs = [
   {
@@ -143,46 +161,144 @@ const routesMapFaqs = [
   },
 ]
 
+type TypeFilter = 'all' | 'short' | 'medium' | 'long'
+
+function useReveal() {
+  const reduceMotion = useReducedMotion()
+  return (i = 0) => reduceMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 16 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, margin: '-60px' },
+        transition: { duration: 0.4, delay: Math.min(i * 0.05, 0.25) },
+      }
+}
+
 export default function RoutesMap() {
   const { lang, isAr } = useLang()
+  const reduceMotion = useReducedMotion()
+  const reveal = useReveal()
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
   const [selectedCity, setSelectedCity] = useState<typeof CITIES[0] | null>(null)
+  const [typeFilter, setTypeFilter] = useState<TypeFilter>('all')
+  const [cityFilterId, setCityFilterId] = useState<string | null>(null)
 
   const getCityPos = (id: string) => CITIES.find(c => c.id === id)!
   const selectCity = (city: typeof CITIES[0]) => setSelectedCity(selectedCity?.id === city.id ? null : city)
+  const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة' : "Hello, I'd like to book a trip"
 
   const intercityPages = ROUTE_PAGES.filter(r => r.category === 'intercity')
   const airportPages = ROUTE_PAGES.filter(r => r.category === 'airport')
 
+  const filteredIntercity = useMemo(
+    () => intercityPages.filter(r => typeFilter === 'all' || r.type === typeFilter),
+    [typeFilter]
+  )
+
+  const groups = useMemo(() => {
+    if (cityFilterId) {
+      const cityName = CITIES.find(c => c.id === cityFilterId)!.name
+      const routes = filteredIntercity.filter(r => r.fromId === cityFilterId || r.toId === cityFilterId)
+      return routes.length ? [{ cityId: cityFilterId, cityName, routes }] : []
+    }
+    return CITY_ORDER
+      .map(cityId => ({ cityId, cityName: CITIES.find(c => c.id === cityId)!.name, routes: filteredIntercity.filter(r => r.fromId === cityId) }))
+      .filter(g => g.routes.length > 0)
+  }, [cityFilterId, filteredIntercity])
+
+  const popularRoutes = POPULAR_SLUGS.map(slug => ROUTE_PAGES.find(r => r.slug === slug)!).filter(Boolean)
+
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'var(--background)', paddingTop: '80px' }}>
-      {/* Header */}
-      <section style={{ padding: '60px 0 40px', background: 'linear-gradient(135deg, #071f17, #0B3D2E)', color: 'white', textAlign: 'center' }}>
+
+      {/* ── Hero ── */}
+      <section className="animate-fadeInUp" style={{ padding: '72px 0 48px', background: 'linear-gradient(135deg, #071f17, #0B3D2E)', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <span className="section-tag" style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', color: 'var(--primary)' }}>
-            {isAr ? 'تغطية المملكة العربية السعودية' : 'Saudi Arabia Coverage'}
+            {isAr ? 'شبكة النقل الخاص في السعودية' : 'Saudi Arabia Private Transport Network'}
           </span>
-          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '900', marginTop: '16px', marginBottom: '16px' }}>
+          <h1 style={{ fontSize: 'clamp(1.9rem, 4.5vw, 3rem)', fontWeight: 900, marginTop: '16px', marginBottom: '16px', lineHeight: 1.2 }}>
             {isAr
-              ? <>خريطة <span style={{ color: 'var(--primary)' }}>شبكة الخطوط</span> والنقل</>
-              : <>Our <span style={{ color: 'var(--primary)' }}>Route Network</span> Map</>
+              ? <>خطوط التاكسي والنقل الخاص <span style={{ color: 'var(--primary)' }}>عبر السعودية</span></>
+              : <>Taxi &amp; Private Transport <span style={{ color: 'var(--primary)' }}>Routes Across Saudi Arabia</span></>
             }
           </h1>
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
-          <p style={{ opacity: 0.85, maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
+          <p style={{ opacity: 0.85, maxWidth: '620px', margin: '0 auto 32px', lineHeight: 1.8 }}>
             {isAr
-              ? `${ROUTE_PAGES.length} خط عبر مكة المكرمة والمدينة المنورة وجدة والطائف والرياض والدمام. استكشف أي مدينة أو خط لمعرفة التفاصيل والحجز.`
-              : `${ROUTE_PAGES.length} routes across Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam. Explore any city or route to view details and book.`
+              ? 'استكشف خطوط التاكسي الخاص بين مكة المكرمة والمدينة المنورة وجدة والطائف والرياض والدمام. اختر خطك لعرض تفاصيل الرحلة وحجزها عبر واتساب.'
+              : 'Explore private taxi routes between Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam. Choose your route to view travel details and book your private ride via WhatsApp.'
             }
           </p>
+          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ padding: '14px 28px' }}>
+              <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'احجز عبر واتساب' : 'Book via WhatsApp'}
+            </a>
+            <a href="#routes-grid" className="btn-outline mk-btn mk-focus" style={{ padding: '14px 28px', borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+              {isAr ? 'استكشف الخطوط' : 'Explore Routes'}
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Legend */}
-      <section style={{ padding: '24px 0', borderBottom: '1px solid var(--border)', backgroundColor: 'var(--muted)' }}>
+      {/* ── Stats ── */}
+      <section aria-label={isAr ? 'إحصائيات الشبكة' : 'Network stats'} style={{ padding: '28px 0', background: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div style={{ display: 'flex', gap: '28px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-            <span style={{ fontWeight: '700', fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '14px' }}>
+            {[
+              { n: `${ROUTE_PAGES.length}+`, l: isAr ? 'خط' : 'Routes' },
+              { n: String(CITIES.length), l: isAr ? 'مدن رئيسية' : 'Major Cities' },
+              { n: '24/7', l: isAr ? 'حجز عبر واتساب' : 'WhatsApp Booking' },
+              { n: '3', l: isAr ? 'خيارات سيارات' : 'Vehicle Options' },
+            ].map((s, i) => (
+              <motion.div key={s.l} {...reveal(i)} style={{
+                textAlign: 'center', background: 'var(--card, #fff)', borderRadius: '14px', padding: '18px 12px', border: '1px solid var(--border)',
+              }}>
+                <div style={{ fontSize: '1.7rem', fontWeight: 900, color: 'var(--primary)', lineHeight: 1 }}>{s.n}</div>
+                <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)', marginTop: '6px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{s.l}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Popular routes (quick access) ── */}
+      <section aria-labelledby="popular-routes-title" style={{ padding: '44px 0', borderBottom: '1px solid var(--border)' }}>
+        <div className="container">
+          <h2 id="popular-routes-title" style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '14px', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            {isAr ? 'أشهر الخطوط' : 'Most Popular Routes'}
+          </h2>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            {popularRoutes.map(r => (
+              <Link key={r.slug} href={`/${r.slug}`} className="mk-focus" style={{
+                display: 'inline-flex', alignItems: 'center', gap: '7px',
+                padding: '9px 16px', borderRadius: '50px', textDecoration: 'none',
+                border: '1.5px solid var(--border)', background: 'var(--card, #fff)',
+                fontSize: '0.84rem', fontWeight: 700, color: 'var(--foreground)',
+              }}>
+                {r.from[lang]} <ArrowRight size={12} style={{ transform: isAr ? 'scaleX(-1)' : undefined, opacity: 0.5 }} /> {r.to[lang]}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Map ── */}
+      <section id="route-map" style={{ padding: '56px 0 40px' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '8px' }}>
+              {isAr ? 'استكشف شبكة خطوطنا في السعودية' : 'Explore Our Saudi Arabia Route Network'}
+            </h2>
+            <p style={{ color: 'var(--muted-foreground)', fontSize: '0.92rem', maxWidth: '480px', margin: '0 auto' }}>
+              {isAr ? 'اختر مدينة أو خطاً لاستكشاف خدمات النقل الخاص المتاحة.' : 'Select a city or route to explore available private transport services.'}
+            </p>
+          </div>
+
+          {/* Legend */}
+          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
+            <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--muted-foreground)' }}>
               {isAr ? 'نوع الخط:' : 'Route Type:'}
             </span>
             {[
@@ -191,20 +307,11 @@ export default function RoutesMap() {
               { color: '#ef4444', label: isAr ? 'طويل (٤+ ساعات)' : 'Long (4+ hrs)' },
             ].map(l => (
               <div key={l.color} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <div style={{ width: '32px', height: '4px', background: l.color, borderRadius: '2px' }} />
-                <span style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--foreground)' }}>{l.label}</span>
+                <div style={{ width: '28px', height: '4px', background: l.color, borderRadius: '2px' }} />
+                <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--foreground)' }}>{l.label}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Map + Info Panel */}
-      <section style={{ padding: '40px 0 80px' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginBottom: '20px', textAlign: 'center' }}>
-            {isAr ? '🗺️ خريطة الخطوط التفاعلية' : '🗺️ Interactive Route Map'}
-          </h2>
 
           <div className={`routes-map-grid${selectedCity ? '' : ' single'}`} style={{ display: 'grid', gridTemplateColumns: selectedCity ? '1fr 340px' : '1fr', gap: '24px', alignItems: 'start' }}>
 
@@ -272,7 +379,7 @@ export default function RoutesMap() {
                         strokeWidth={isHovered ? '1.2' : '0.7'}
                         strokeDasharray={conn.type === 'long' ? '2,1' : 'none'}
                         opacity={isHovered ? 1 : 0.55}
-                        style={{ transition: 'all 0.2s' }}
+                        style={reduceMotion ? undefined : { transition: 'all 0.2s' }}
                       />
                       <text
                         x={mx} y={my}
@@ -316,7 +423,7 @@ export default function RoutesMap() {
                       <circle
                         cx={city.x} cy={city.y} r={r}
                         fill={city.color}
-                        style={{ transition: 'r 0.2s' }}
+                        style={reduceMotion ? undefined : { transition: 'r 0.2s' }}
                       />
                       <text
                         x={city.x}
@@ -325,7 +432,7 @@ export default function RoutesMap() {
                         fontSize={isHovered || isSelected ? '3.2' : '2.8'}
                         fontWeight="800"
                         fill={city.color}
-                        style={{ transition: 'font-size 0.2s' }}
+                        style={reduceMotion ? undefined : { transition: 'font-size 0.2s' }}
                       >
                         {city.name[lang]}
                       </text>
@@ -349,6 +456,7 @@ export default function RoutesMap() {
                 <button
                   onClick={() => setSelectedCity(null)}
                   aria-label={isAr ? 'إغلاق' : 'Close'}
+                  className="mk-focus"
                   style={{
                     position: 'absolute', top: '16px',
                     insetInlineEnd: '16px',
@@ -363,23 +471,23 @@ export default function RoutesMap() {
                     <MapPin size={22} color={selectedCity.color} strokeWidth={2} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: '900', fontSize: '1.3rem', color: selectedCity.color }}>{selectedCity.name[lang]}</div>
+                    <div style={{ fontWeight: 900, fontSize: '1.3rem', color: selectedCity.color }}>{selectedCity.name[lang]}</div>
                     <div style={{ fontSize: '0.85rem', color: 'var(--muted-foreground)' }}>{selectedCity.name[isAr ? 'en' : 'ar']}</div>
                   </div>
                 </div>
 
                 {selectedCity.slug && (
-                  <Link href={`/${selectedCity.slug}`} style={{
+                  <Link href={`/${selectedCity.slug}`} className="mk-focus" style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     gap: '8px', background: selectedCity.color, color: 'white',
-                    padding: '11px', borderRadius: '10px', fontWeight: '700',
+                    padding: '11px', borderRadius: '10px', fontWeight: 700,
                     fontSize: '0.9rem', textDecoration: 'none', marginBottom: '20px',
                   }}>
                     {isAr ? `عرض خدمة تاكسي ${selectedCity.name.ar} ←` : `View ${selectedCity.name.en} Taxi Service →`}
                   </Link>
                 )}
 
-                <div style={{ fontWeight: '800', fontSize: '0.82rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>
+                <div style={{ fontWeight: 800, fontSize: '0.82rem', color: 'var(--muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>
                   {isAr ? 'الخطوط المتاحة' : 'Available Routes'}
                 </div>
 
@@ -387,19 +495,18 @@ export default function RoutesMap() {
                   {ROUTE_PAGES
                     .filter(r => r.fromId === selectedCity.id || r.toId === selectedCity.id)
                     .map(r => (
-                      <Link key={r.slug} href={`/${r.slug}`} style={{
+                      <Link key={r.slug} href={`/${r.slug}`} className="mk-focus" style={{
                         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                         padding: '10px 14px', borderRadius: '10px', textDecoration: 'none',
                         border: `1.5px solid ${ROUTE_COLORS[r.type ?? 'long']}33`,
                         background: ROUTE_COLORS[r.type ?? 'long'] + '0d',
-                        transition: 'all 0.2s',
                       }}>
-                        <span style={{ fontWeight: '700', fontSize: '0.88rem', color: 'var(--foreground)' }}>
+                        <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--foreground)' }}>
                           {r.from[lang]} → {r.to[lang]}
                         </span>
                         {' '}
                         <span style={{
-                          fontSize: '0.75rem', fontWeight: '700', padding: '3px 8px',
+                          fontSize: '0.75rem', fontWeight: 700, padding: '3px 8px',
                           borderRadius: '20px', background: ROUTE_COLORS[r.type ?? 'long'] + '22',
                           color: ROUTE_COLORS[r.type ?? 'long'],
                         }}>{r.duration[lang]}</span>
@@ -409,16 +516,13 @@ export default function RoutesMap() {
                 </div>
 
                 <a
-                  href={`https://wa.me/923097811785?text=${encodeURIComponent(
-                    isAr
-                      ? `السلام عليكم، أرغب في حجز رحلة من/إلى ${selectedCity.name.ar}`
-                      : `Hello, I'd like to book a trip from/to ${selectedCity.name.en}`
-                  )}`}
+                  href={waUrl(isAr ? `السلام عليكم، أرغب في حجز رحلة من/إلى ${selectedCity.name.ar}` : `Hello, I'd like to book a trip from/to ${selectedCity.name.en}`)}
                   target="_blank" rel="noopener noreferrer"
+                  className="mk-focus"
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                     marginTop: '20px', background: '#25D366', color: 'white',
-                    padding: '12px', borderRadius: '10px', fontWeight: '700', fontSize: '0.9rem',
+                    padding: '12px', borderRadius: '10px', fontWeight: 700, fontSize: '0.9rem',
                     textDecoration: 'none',
                   }}
                 >
@@ -429,98 +533,183 @@ export default function RoutesMap() {
             )}
           </div>
 
-          {/* All Routes Grid */}
-          <div style={{ marginTop: '60px' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '900', marginBottom: '8px' }}>
+          {/* ── Filters ── */}
+          <div id="routes-grid" style={{ marginTop: '56px', scrollMarginTop: '90px' }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '4px' }}>
               {isAr
                 ? <>جميع <span style={{ color: 'var(--primary)' }}>الخطوط المتاحة</span></>
                 : <>All <span style={{ color: 'var(--primary)' }}>Available Routes</span></>
               }
             </h2>
-            <div className="gold-divider" style={{ margin: '0 0 32px' }} />
+            <div className="gold-divider" style={{ margin: '0 0 24px' }} />
 
-            <h3 style={{ fontSize: '1.05rem', fontWeight: '800', marginBottom: '16px', color: 'var(--foreground)' }}>
-              {isAr ? 'رحلات بين المدن' : 'Intercity Routes'}
-            </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '14px', marginBottom: '44px' }}>
-              {intercityPages.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={isAr ? `عرض خط ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} route and book`}>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '16px 20px', borderRadius: '14px',
-                    border: `1.5px solid ${ROUTE_COLORS[r.type!]}40`,
-                    background: ROUTE_COLORS[r.type!] + '0a',
-                    transition: 'all 0.2s', cursor: 'pointer',
+            <div role="group" aria-label={isAr ? 'تصفية حسب نوع الخط' : 'Filter by route type'} style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '12px' }}>
+              {([
+                { key: 'all' as const, label: isAr ? 'جميع الخطوط' : 'All Routes' },
+                { key: 'short' as const, label: TYPE_LABEL.short[lang] },
+                { key: 'medium' as const, label: TYPE_LABEL.medium[lang] },
+                { key: 'long' as const, label: TYPE_LABEL.long[lang] },
+              ]).map(f => (
+                <button
+                  key={f.key}
+                  onClick={() => setTypeFilter(f.key)}
+                  aria-pressed={typeFilter === f.key}
+                  className="mk-focus"
+                  style={{
+                    padding: '9px 18px', borderRadius: '50px', fontWeight: 700, fontSize: '0.84rem', cursor: 'pointer',
+                    border: `1.5px solid ${typeFilter === f.key ? 'var(--primary)' : 'var(--border)'}`,
+                    background: typeFilter === f.key ? 'var(--primary)' : 'var(--card, #fff)',
+                    color: typeFilter === f.key ? 'white' : 'var(--foreground)',
+                    transition: reduceMotion ? undefined : 'all 0.15s',
                   }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)' }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
-                  >
-                    <div style={{ minWidth: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', marginBottom: '4px' }}>
-                        <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)' }}>
-                          {r.from[lang]} → {r.to[lang]}
-                        </span>
-                        {' '}
-                        <span style={{
-                          fontSize: '0.62rem', fontWeight: '800', padding: '2px 8px', borderRadius: '20px',
-                          background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],
-                          textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0, whiteSpace: 'nowrap',
-                        }}>{TYPE_LABEL[r.type!][lang]}</span>
-                      </div>
-                      <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
-                        {r.duration[lang]} · {isAr ? 'سعر ثابت، يُؤكد قبل الحجز' : 'Fixed Fare, Confirmed Before Booking'}
-                      </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: ROUTE_COLORS[r.type!] }}>
-                        {isAr ? 'عرض الخط' : 'View Route'}
-                      </span>
-                      <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: ROUTE_COLORS[r.type!] }} />
-                    </div>
-                  </div>
-                </Link>
+                >
+                  {f.label}
+                </button>
               ))}
+              <a href="#airport-transfers" className="mk-focus" style={{
+                padding: '9px 18px', borderRadius: '50px', fontWeight: 700, fontSize: '0.84rem',
+                border: '1.5px solid var(--border)', background: 'var(--card, #fff)', color: 'var(--foreground)',
+                textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px',
+              }}>
+                <Plane size={13} /> {isAr ? 'توصيل المطارات' : 'Airport Transfers'}
+              </a>
             </div>
 
-            <h3 style={{ fontSize: '1.05rem', fontWeight: '800', marginBottom: '16px', color: 'var(--foreground)' }}>
-              {isAr ? 'توصيل المطارات' : 'Airport Transfers'}
+            <div role="group" aria-label={isAr ? 'تصفية حسب المدينة' : 'Filter by city'} style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '32px' }}>
+              <button
+                onClick={() => setCityFilterId(null)}
+                aria-pressed={cityFilterId === null}
+                className="mk-focus"
+                style={{
+                  padding: '6px 14px', borderRadius: '50px', fontWeight: 600, fontSize: '0.78rem', cursor: 'pointer',
+                  border: `1px solid ${cityFilterId === null ? 'var(--foreground)' : 'var(--border)'}`,
+                  background: cityFilterId === null ? 'var(--foreground)' : 'transparent',
+                  color: cityFilterId === null ? 'var(--background)' : 'var(--muted-foreground)',
+                }}
+              >
+                {isAr ? 'كل المدن' : 'All Cities'}
+              </button>
+              {CITY_ORDER.map(cityId => {
+                const city = CITIES.find(c => c.id === cityId)!
+                const active = cityFilterId === cityId
+                return (
+                  <button
+                    key={cityId}
+                    onClick={() => setCityFilterId(active ? null : cityId)}
+                    aria-pressed={active}
+                    className="mk-focus"
+                    style={{
+                      padding: '6px 14px', borderRadius: '50px', fontWeight: 600, fontSize: '0.78rem', cursor: 'pointer',
+                      border: `1px solid ${active ? city.color : 'var(--border)'}`,
+                      background: active ? city.color : 'transparent',
+                      color: active ? 'white' : 'var(--muted-foreground)',
+                    }}
+                  >
+                    {city.name[lang]}
+                  </button>
+                )
+              })}
+            </div>
+
+            {/* ── Grouped intercity cards ── */}
+            <motion.div
+              key={`${typeFilter}-${cityFilterId}`}
+              initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
+              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              {groups.length === 0 && (
+                <p style={{ color: 'var(--muted-foreground)', fontSize: '0.9rem', padding: '24px 0' }}>
+                  {isAr ? 'لا توجد خطوط مطابقة لهذا التصفية.' : 'No routes match this filter.'}
+                </p>
+              )}
+              {groups.map(group => (
+                <div key={group.cityId} style={{ marginBottom: '40px' }}>
+                  <h3 style={{ fontSize: '1.02rem', fontWeight: 800, marginBottom: '14px', color: 'var(--foreground)' }}>
+                    {isAr ? `خطوط ${group.cityName.ar}` : `${group.cityName.en} Routes`}
+                  </h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '14px' }}>
+                    {group.routes.map((r, i) => (
+                      <motion.div key={r.slug} {...reveal(i)}>
+                        <Link
+                          href={`/${r.slug}`}
+                          className="routes-map-card mk-focus"
+                          aria-label={isAr ? `عرض خط ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} route and book`}
+                          style={{
+                            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                            padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+                            border: `1.5px solid ${ROUTE_COLORS[r.type!]}35`,
+                            background: ROUTE_COLORS[r.type!] + '0a',
+                            transition: reduceMotion ? undefined : 'transform 0.2s, box-shadow 0.2s, border-color 0.2s',
+                          }}
+                        >
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', marginBottom: '4px' }}>
+                              <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--foreground)' }}>
+                                {r.from[lang]} → {r.to[lang]}
+                              </span>
+                              <span style={{
+                                fontSize: '0.62rem', fontWeight: 800, padding: '2px 8px', borderRadius: '20px',
+                                background: ROUTE_COLORS[r.type!] + '22', color: ROUTE_COLORS[r.type!],
+                                textTransform: 'uppercase', letterSpacing: '0.03em', flexShrink: 0, whiteSpace: 'nowrap',
+                              }}>{TYPE_LABEL[r.type!][lang]}</span>
+                            </div>
+                            <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
+                              {r.duration[lang]} · {isAr ? 'نقل خاص' : 'Private transfer'}
+                            </div>
+                          </div>
+                          <ArrowRight size={16} className="routes-map-card-arrow" style={{ color: ROUTE_COLORS[r.type!], flexShrink: 0, transform: isAr ? 'scaleX(-1)' : undefined }} />
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* ── Airport transfers (always its own section) ── */}
+          <div id="airport-transfers" style={{ marginTop: '32px', scrollMarginTop: '90px' }}>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 900, marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Plane size={20} color="#1e3a8a" /> {isAr ? 'توصيل المطارات' : 'Airport Transfer Routes'}
             </h3>
+            <p style={{ color: 'var(--muted-foreground)', fontSize: '0.86rem', marginBottom: '18px' }}>
+              {isAr ? 'رحلات مباشرة من وإلى المطارات في مكة المكرمة والمدينة المنورة وجدة والطائف.' : 'Direct transfers to and from the airports serving Makkah, Madinah, Jeddah and Taif.'}
+            </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '14px' }}>
-              {airportPages.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`} style={{ textDecoration: 'none' }} aria-label={isAr ? `عرض توصيل مطار ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} airport transfer and book`}>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '16px 20px', borderRadius: '14px',
-                    border: '1.5px solid rgba(30,58,138,0.25)',
-                    background: 'rgba(30,58,138,0.05)',
-                    transition: 'all 0.2s', cursor: 'pointer',
-                  }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)' }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
+              {airportPages.map((r, i) => (
+                <motion.div key={r.slug} {...reveal(i)}>
+                  <Link
+                    href={`/${r.slug}`}
+                    className="routes-map-card mk-focus"
+                    aria-label={isAr ? `عرض توصيل مطار ${r.from.ar} إلى ${r.to.ar} والحجز` : `View ${r.from.en} to ${r.to.en} airport transfer and book`}
+                    style={{
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+                      border: '1.5px solid rgba(30,58,138,0.25)',
+                      background: 'rgba(30,58,138,0.05)',
+                      transition: reduceMotion ? undefined : 'transform 0.2s, box-shadow 0.2s, border-color 0.2s',
+                    }}
                   >
                     <div>
-                      <div style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--foreground)', marginBottom: '4px' }}>
-                        ✈️ {r.from[lang]} → {r.to[lang]}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontWeight: 800, fontSize: '0.95rem', color: 'var(--foreground)', marginBottom: '4px' }}>
+                        <Plane size={14} color="#1e3a8a" style={{ flexShrink: 0 }} />
+                        {r.from[lang]} → {r.to[lang]}
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--muted-foreground)' }}>
-                        {r.duration[lang]} · {isAr ? 'توصيل مطار' : 'Airport Transfer'}
+                        {r.duration[lang]} · {isAr ? 'توصيل مطار' : 'Airport transfer'}
                       </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                      <span style={{ fontSize: '0.76rem', fontWeight: '700', color: '#1e3a8a' }}>
-                        {isAr ? 'احجز الآن' : 'Book Now'}
-                      </span>
-                      <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#1e3a8a' }} />
-                    </div>
-                  </div>
-                </Link>
+                    <ArrowRight size={16} className="routes-map-card-arrow" style={{ color: '#1e3a8a', flexShrink: 0, transform: isAr ? 'scaleX(-1)' : undefined }} />
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
 
-          {/* SEO content + Popular Routes internal links */}
+          {/* ── SEO content ── */}
           <div style={{ marginTop: '70px', maxWidth: '820px' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: '900', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '16px' }}>
               {isAr ? 'كاب خاص بين المدن في السعودية' : 'Private Intercity Taxi Across Saudi Arabia'}
             </h2>
             <p style={{ fontSize: '0.92rem', lineHeight: 1.9, color: 'var(--muted-foreground)', marginBottom: '16px' }}>
@@ -528,33 +717,29 @@ export default function RoutesMap() {
                 ? 'توفر Saudi Cabs GMC خدمة كاب خاص بين المدن تربط مكة المكرمة والمدينة المنورة وجدة والطائف، بالإضافة إلى رحلات بين المدن من وإلى الرياض والدمام. سواء كنت تسافر من جدة إلى مكة المكرمة بعد الوصول، أو تخطط لرحلة من مكة المكرمة إلى المدينة المنورة، فإن كل خط يعتمد على سيارة مخصصة بسعر ثابت حسب المسار — بدون مشاركة الرحلة مع ركاب آخرين وبدون التقيد بجداول النقل العام.'
                 : 'Saudi Cabs GMC offers a private intercity taxi network connecting Makkah, Madinah, Jeddah and Taif, along with intercity transfers to and from Riyadh and Dammam. Whether you\'re travelling from Jeddah to Makkah right after arrival, or planning a trip from Makkah to Madinah, each route uses a dedicated vehicle at a fixed, route-based fare — no shared rides, no public transport timetables to work around.'}
             </p>
-            <p style={{ fontSize: '0.92rem', lineHeight: 1.9, color: 'var(--muted-foreground)', marginBottom: '28px' }}>
+            <p style={{ fontSize: '0.92rem', lineHeight: 1.9, color: 'var(--muted-foreground)' }}>
               {isAr
                 ? 'الخطوط الطويلة مثل جدة إلى المدينة المنورة أو الرياض إلى مكة المكرمة والرياض إلى المدينة المنورة والرياض إلى جدة تُحجز عادة مسبقاً، بينما الخطوط الأقصر مثل جدة إلى الطائف تناسب الحجز في نفس اليوم عبر واتساب. جميع أوقات الرحلات الموضحة أعلاه تقريبية وتعتمد على حركة المرور وموقع الاستلام وحالة الطريق.'
                 : 'Longer routes such as Jeddah to Madinah, or Riyadh to Makkah, Riyadh to Madinah and Riyadh to Jeddah, are usually booked in advance, while shorter routes like Jeddah to Taif work well for same-day WhatsApp booking. All travel times shown above are approximate and depend on traffic, pickup location and road conditions.'}
             </p>
-
-            <h3 style={{ fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px' }}>
-              {isAr ? 'أشهر الخطوط' : 'Popular Routes'}
-            </h3>
-            <p style={{ fontSize: '0.92rem', lineHeight: 2, color: 'var(--muted-foreground)' }}>
-              {isAr ? 'من الخطوط الرئيسية في شبكتنا: ' : 'Among the primary routes in our network: '}
-              <Link href="/jeddah-to-makkah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'جدة إلى مكة المكرمة' : 'Jeddah to Makkah'}</Link>
-              {', '}
-              <Link href="/makkah-to-madinah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'مكة المكرمة إلى المدينة المنورة' : 'Makkah to Madinah'}</Link>
-              {', '}
-              <Link href="/jeddah-to-madinah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'جدة إلى المدينة المنورة' : 'Jeddah to Madinah'}</Link>
-              {', '}
-              <Link href="/jeddah-to-taif" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'جدة إلى الطائف' : 'Jeddah to Taif'}</Link>
-              {', '}
-              <Link href="/riyadh-to-makkah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'الرياض إلى مكة المكرمة' : 'Riyadh to Makkah'}</Link>
-              {', '}
-              <Link href="/riyadh-to-madinah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'الرياض إلى المدينة المنورة' : 'Riyadh to Madinah'}</Link>
-              {isAr ? '، و' : ', and '}
-              <Link href="/riyadh-to-jeddah" style={{ color: 'var(--primary)', fontWeight: '700' }}>{isAr ? 'الرياض إلى جدة' : 'Riyadh to Jeddah'}</Link>
-              {isAr ? '.' : '.'}
-            </p>
           </div>
+        </div>
+      </section>
+
+      {/* ── Booking CTA ── */}
+      <section aria-labelledby="routes-cta-title" style={{ padding: '64px 0', background: 'linear-gradient(135deg, #0B3D2E 0%, #071f17 100%)', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '640px' }}>
+          <h2 id="routes-cta-title" style={{ color: 'white', fontSize: 'clamp(1.3rem, 3vw, 1.7rem)', fontWeight: 900, marginBottom: '10px' }}>
+            {isAr ? 'لم تجد خطك؟' : "Can't Find Your Route?"}
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.94rem', lineHeight: 1.75, marginBottom: '24px' }}>
+            {isAr
+              ? 'أخبرنا بموقع الاستلام والوجهة عبر واتساب. سنؤكد التوفر وخيارات السيارة والسعر الحالي قبل رحلتك.'
+              : "Tell us your pickup and destination on WhatsApp. We'll confirm availability, vehicle options and the current fare before your trip."}
+          </p>
+          <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ padding: '14px 32px', display: 'inline-flex' }}>
+            <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'اسأل عبر واتساب' : 'Ask on WhatsApp'}
+          </a>
         </div>
       </section>
 
