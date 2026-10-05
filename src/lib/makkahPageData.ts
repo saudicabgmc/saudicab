@@ -10,20 +10,15 @@ import type { PricingRoute } from '@/lib/pricingData'
 
 export type BText = { ar: string; en: string }
 
+export type MakkahServiceGroup = 'airport' | 'local' | 'religious' | 'intercity'
+
 export interface MakkahService {
   iconName: string
   title: BText
   desc: BText
   href: string
   cta: BText
-}
-
-export interface MakkahRouteCard {
-  from: BText
-  to: BText
-  time: BText
-  /** Existing internal route page. When absent the card opens WhatsApp with a pre-filled message. */
-  href?: string
+  group: MakkahServiceGroup
 }
 
 export interface MakkahLinkedRoute {
@@ -44,11 +39,17 @@ export interface MakkahPageProps {
   citySlogan: BText
   heroImage: string
   services: MakkahService[]
-  routes: MakkahRouteCard[]
   linkedRoutes: MakkahLinkedRoute[]
   highlights: MakkahHighlight[]
   faqs: FAQItem[]
   pricing: PricingRoute[]
+}
+
+export const SERVICE_GROUP_LABELS: Record<MakkahServiceGroup, BText> = {
+  airport: { en: 'Airport Transfers', ar: 'توصيل المطار' },
+  local: { en: 'Local Makkah Transport', ar: 'التنقل داخل مكة' },
+  religious: { en: 'Religious Travel', ar: 'النقل الديني' },
+  intercity: { en: 'Intercity Travel', ar: 'السفر بين المدن' },
 }
 
 /* ── Hero ─────────────────────────────────────────────────────── */
@@ -72,85 +73,55 @@ export const heroContent = {
   ] as BText[],
 }
 
-/* ── Trip types ───────────────────────────────────────────────── */
+/* ── Which service do you need? (decision helper) ───────────────
+   Short, scannable "need → service" prompts rather than paragraphs —
+   the fuller explanation for each already lives in its own section
+   (Services, Vehicle Comparison, Ziyarat guide topic), so this stays
+   a pointer, not a restatement. */
 
 export interface MakkahAudience {
   iconName: string
-  title: BText
-  desc: BText
+  need: BText
+  service: BText
   href: string
-  linkLabel: BText
 }
 
 export const audiences: MakkahAudience[] = [
   {
-    iconName: 'Moon',
-    title: { en: 'Umrah Travelers', ar: 'المعتمرون' },
-    desc: {
-      en: 'Arriving at Jeddah Airport or coming from Madinah for Umrah? Book a private transfer to your Makkah hotel, then ride between your hotel and the Holy Mosque whenever you need. Your fare is confirmed on WhatsApp before you travel.',
-      ar: 'هل تصل إلى مطار جدة أو تأتي من المدينة المنورة للعمرة؟ احجز توصيلاً خاصاً إلى فندقك في مكة، ثم تنقّل بين الفندق والحرم متى احتجت. يُؤكَّد سعرك عبر واتساب قبل رحلتك.',
-    },
-    href: '/umrah-travel-guide',
-    linkLabel: { en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
+    iconName: 'Plane',
+    need: { en: 'Arriving at Jeddah Airport', ar: 'تصل إلى مطار جدة' },
+    service: { en: 'Airport transfer', ar: 'توصيل من المطار' },
+    href: '/jeddah-airport-to-makkah',
+  },
+  {
+    iconName: 'Building2',
+    need: { en: 'Staying near the Haram', ar: 'تقيم قرب الحرم' },
+    service: { en: 'Hotel ↔ Haram transfer', ar: 'توصيل الفندق ↔ الحرم' },
+    href: '#booking',
+  },
+  {
+    iconName: 'Map',
+    need: { en: 'Visiting historical sites', ar: 'تريد زيارة المواقع التاريخية' },
+    service: { en: 'Ziyarat trip', ar: 'رحلة زيارات' },
+    href: '/makkah-ziyarat-tour',
+  },
+  {
+    iconName: 'Route',
+    need: { en: 'Travelling on to Madinah', ar: 'متجه إلى المدينة المنورة' },
+    service: { en: 'Private intercity taxi', ar: 'تاكسي خاص بين المدن' },
+    href: '/makkah-to-madinah',
   },
   {
     iconName: 'Users',
-    title: { en: 'Families & Groups', ar: 'العائلات والمجموعات' },
-    desc: {
-      en: 'Travelling with children, parents or luggage? The Hyundai Staria and GMC Yukon each seat 7, so everyone rides together in one private vehicle. Prices are per vehicle, not per person.',
-      ar: 'هل تسافر مع الأطفال أو الوالدين أو أمتعة كثيرة؟ تتسع هيونداي ستاريا وGMC يوكون لـ٧ ركاب لكل منهما، فيسافر الجميع معاً في سيارة خاصة واحدة. الأسعار للسيارة الواحدة وليس للفرد.',
-    },
+    need: { en: 'Travelling with family and luggage', ar: 'تسافر مع العائلة والأمتعة' },
+    service: { en: 'Hyundai Staria (7 seats)', ar: 'هيونداي ستاريا (٧ مقاعد)' },
     href: '/hyundai-staria-taxi',
-    linkLabel: { en: 'Hyundai Staria Taxi', ar: 'تاكسي هيونداي ستاريا' },
-  },
-  {
-    iconName: 'Tent',
-    title: { en: 'Hajj Travelers', ar: 'الحجاج' },
-    desc: {
-      en: 'Hajj days bring heavy traffic and official access rules. Arrange transport to Mina, Arafat and Muzdalifah ahead of time, allow for journey times that vary, and read our Hajj transport answers before you book.',
-      ar: 'تشهد أيام الحج ازدحاماً شديداً وأنظمة وصول رسمية. رتّب نقلك إلى منى وعرفات ومزدلفة مسبقاً، واحسب حساب اختلاف أوقات الرحلات، واطّلع على إجاباتنا حول نقل الحج قبل الحجز.',
-    },
-    href: '/hajj-transport-faq',
-    linkLabel: { en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
   },
   {
     iconName: 'Briefcase',
-    title: { en: 'Business & Private Travel', ar: 'الأعمال والتنقل الخاص' },
-    desc: {
-      en: 'Need a comfortable ride to a meeting, an appointment or the airport? Book a private <a href="/toyota-camry-taxi" style="color:var(--primary);font-weight:700;">Sedan</a> or a <a href="/gmc-yukon-hire" style="color:var(--primary);font-weight:700;">GMC Yukon</a> VIP for a point-to-point trip, or ask about a private driver for the day.',
-      ar: 'تحتاج إلى رحلة مريحة إلى اجتماع أو موعد أو المطار؟ احجز <a href="/toyota-camry-taxi" style="color:var(--primary);font-weight:700;">سيدان</a> خاصاً أو <a href="/gmc-yukon-hire" style="color:var(--primary);font-weight:700;">GMC يوكون</a> VIP لرحلة من نقطة إلى أخرى، أو اسأل عن سائق خاص ليوم كامل.',
-    },
-    href: '/private-driver',
-    linkLabel: { en: 'Private Driver', ar: 'سائق خاص' },
-  },
-]
-
-/* ── How booking works ────────────────────────────────────────── */
-
-export const bookingSteps: { n: string; title: BText; desc: BText }[] = [
-  {
-    n: '01',
-    title: { en: 'Send Your Trip Details', ar: 'أرسل تفاصيل رحلتك' },
-    desc: {
-      en: 'Pickup, destination, date, time and passenger information — through the form on this page or on WhatsApp.',
-      ar: 'موقع الاستلام والوجهة والتاريخ والوقت وعدد الركاب — عبر النموذج في هذه الصفحة أو عبر واتساب.',
-    },
-  },
-  {
-    n: '02',
-    title: { en: 'Choose Your Vehicle', ar: 'اختر سيارتك' },
-    desc: {
-      en: 'Sedan for up to 4 passengers, Hyundai Staria or GMC Yukon (VIP) for up to 7.',
-      ar: 'سيدان لـ٤ ركاب كحد أقصى، وهيونداي ستاريا أو GMC يوكون (VIP) لـ٧ ركاب كحد أقصى.',
-    },
-  },
-  {
-    n: '03',
-    title: { en: 'Confirm Your Price', ar: 'أكّد سعرك' },
-    desc: {
-      en: 'Receive the route price and confirm through WhatsApp. No advance payment is required.',
-      ar: 'استلم سعر الرحلة وأكّده عبر واتساب. لا يلزم أي دفع مسبق.',
-    },
+    need: { en: 'Wanting VIP comfort', ar: 'تريد راحة VIP' },
+    service: { en: 'GMC Yukon', ar: 'GMC يوكون' },
+    href: '/gmc-yukon-hire',
   },
 ]
 
@@ -169,6 +140,109 @@ export const vehicleBestFor: Record<'sedan' | 'staria' | 'gmc', BText> = {
     en: 'Up to 7 passengers — VIP and premium travel',
     ar: 'حتى ٧ ركاب — للتنقل الفاخر وVIP',
   },
+}
+
+/* ── How to choose your vehicle (comparison) ─────────────────── */
+
+export interface VehicleCompareCard {
+  key: 'sedan' | 'staria' | 'gmc'
+  name: BText
+  bestFor: BText[]
+}
+
+export const vehicleComparison: VehicleCompareCard[] = [
+  {
+    key: 'sedan',
+    name: { en: 'Sedan', ar: 'سيدان' },
+    bestFor: [
+      { en: '1–4 passengers', ar: '١–٤ ركاب' },
+      { en: 'Small luggage', ar: 'أمتعة خفيفة' },
+      { en: 'Couples and small families', ar: 'الأزواج والعائلات الصغيرة' },
+    ],
+  },
+  {
+    key: 'staria',
+    name: { en: 'Hyundai Staria', ar: 'هيونداي ستاريا' },
+    bestFor: [
+      { en: 'Families and groups', ar: 'العائلات والمجموعات' },
+      { en: 'Up to 7 passengers', ar: 'حتى ٧ ركاب' },
+      { en: 'More luggage space', ar: 'مساحة أمتعة أكبر' },
+    ],
+  },
+  {
+    key: 'gmc',
+    name: { en: 'GMC Yukon', ar: 'GMC يوكون' },
+    bestFor: [
+      { en: 'VIP and private travel', ar: 'تنقل VIP وخاص' },
+      { en: 'Families wanting SUV comfort', ar: 'عائلات تفضل راحة الدفع الرباعي' },
+      { en: 'Up to 7 passengers', ar: 'حتى ٧ ركاب' },
+    ],
+  },
+]
+
+/* ── What to expect ───────────────────────────────────────────── */
+
+export interface ExpectStep {
+  title: BText
+  desc: BText
+}
+
+export const whatToExpect: ExpectStep[] = [
+  {
+    title: { en: 'Before your trip', ar: 'قبل رحلتك' },
+    desc: {
+      en: 'Send your pickup location, destination, date, time and passenger details through the form or on WhatsApp.',
+      ar: 'أرسل موقع الاستلام والوجهة والتاريخ والوقت وعدد الركاب عبر النموذج أو واتساب.',
+    },
+  },
+  {
+    title: { en: 'Before pickup', ar: 'قبل الاستلام' },
+    desc: {
+      en: 'We confirm the vehicle, fare and pickup details with you on WhatsApp — no advance payment is required.',
+      ar: 'نؤكد معك السيارة والسعر وتفاصيل الاستلام عبر واتساب — دون أي دفع مسبق.',
+    },
+  },
+  {
+    title: { en: 'During the journey', ar: 'أثناء الرحلة' },
+    desc: {
+      en: 'You travel privately in the vehicle you chose, rather than sharing the ride with other passengers.',
+      ar: 'تسافر بشكل خاص في السيارة التي اخترتها، دون مشاركة الرحلة مع ركاب آخرين.',
+    },
+  },
+  {
+    title: { en: 'For airport pickups', ar: 'لاستقبال المطار' },
+    desc: {
+      en: 'Add your flight number when you book, so pickup can be coordinated around your arrival time.',
+      ar: 'أضف رقم رحلتك عند الحجز، ليتم تنسيق الاستقبال وفق موعد وصولك.',
+    },
+  },
+]
+
+/* ── Travelling with family ───────────────────────────────────── */
+
+export const familyTravel = {
+  intro: {
+    en: 'A few practical points to help you pick the right vehicle when you are travelling with children, elderly parents or extra luggage.',
+    ar: 'نقاط عملية تساعدك على اختيار السيارة المناسبة عند السفر مع الأطفال أو الوالدين كبار السن أو أمتعة إضافية.',
+  },
+  points: [
+    {
+      en: 'The Sedan carries up to 4 passengers with small luggage — fine for a couple or a small family travelling light.',
+      ar: 'يتسع السيدان لـ٤ ركاب كحد أقصى مع أمتعة خفيفة — مناسب لزوجين أو عائلة صغيرة بأمتعة قليلة.',
+    },
+    {
+      en: 'For a larger family or a group with multiple bags, the Hyundai Staria (7 seats) is usually more practical — everyone and the luggage travel together in one vehicle.',
+      ar: 'للعائلات الكبيرة أو المجموعات بعدة حقائب، تُعد هيونداي ستاريا (٧ مقاعد) أكثر عملية عادةً — يسافر الجميع والأمتعة معاً في سيارة واحدة.',
+    },
+    {
+      en: 'The GMC Yukon also seats 7 and suits families who prefer an SUV.',
+      ar: 'تتسع GMC يوكون أيضاً لـ٧ ركاب وتناسب العائلات التي تفضل سيارة الدفع الرباعي.',
+    },
+    {
+      en: 'Mention children, elderly travelers or extra bags when you book, so the right vehicle can be confirmed in advance.',
+      ar: 'اذكر وجود أطفال أو مسافرين كبار السن أو حقائب إضافية عند الحجز، ليتم تأكيد السيارة المناسبة مسبقاً.',
+    },
+  ] as BText[],
 }
 
 /* ── Makkah Transport Guide ───────────────────────────────────── */
@@ -233,8 +307,8 @@ export const guideTopics: GuideTopic[] = [
   {
     title: { en: 'Hajj-season considerations', ar: 'اعتبارات موسم الحج' },
     body: {
-      en: 'During Hajj, heavy traffic and official crowd-control and access rules can change routes and journey times, especially to Mina and Arafat. Book early, keep your schedule flexible, and check the guidance before you plan.',
-      ar: 'خلال الحج، قد يغيّر الازدحام الشديد وأنظمة إدارة الحشود والوصول الرسمية المسارات وأوقات الرحلات، خصوصاً إلى منى وعرفات. احجز مبكراً، وكن مرناً في جدولك، واطّلع على الإرشادات قبل التخطيط.',
+      en: 'Mina (~7 km from central Makkah), Arafat (~20 km) and Muzdalifah (~9 km) are reached by road during Hajj, but heavy traffic and official crowd-control and access rules can change routes and journey times, especially to Mina and Arafat. Book early, keep your schedule flexible, and check the guidance before you plan.',
+      ar: 'تُقطع المسافة إلى منى (نحو ٧ كم من وسط مكة) وعرفات (نحو ٢٠ كم) ومزدلفة (نحو ٩ كم) براً خلال الحج، لكن الازدحام الشديد وأنظمة إدارة الحشود والوصول الرسمية قد تغيّر المسارات وأوقات الرحلات، خصوصاً إلى منى وعرفات. احجز مبكراً، وكن مرناً في جدولك، واطّلع على الإرشادات قبل التخطيط.',
     },
     links: [
       { href: '/hajj-transport-faq', label: { en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' } },

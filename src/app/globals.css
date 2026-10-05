@@ -713,6 +713,7 @@ a.mk-card-light:hover, a.mk-card-light:focus-visible { box-shadow: var(--shadow-
 @media (prefers-reduced-motion: reduce) {
   .mk-card, .mk-btn-wa { transition: none; }
   a.mk-card:hover, a.mk-card:focus-visible, .mk-btn-wa:hover { transform: none; }
+  .animate-fadeIn, .animate-fadeInUp { animation: none; opacity: 1; transform: none; }
 }
 
 /* ── Homepage — Journey Types (editorial asymmetric grid) ── */

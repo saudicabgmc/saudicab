@@ -216,6 +216,16 @@ export const makkahFaqs: FAQItem[] = [
   },
   {
     q: {
+      en: 'Do I need to pay in advance?',
+      ar: 'هل يجب الدفع مسبقاً؟',
+    },
+    a: {
+      en: 'No advance payment is required to confirm a booking. Payment is made to your driver in cash (SAR) or by bank transfer, typically at the end of the trip unless otherwise agreed when you book.',
+      ar: 'لا يوجد دفع مسبق مطلوب لتأكيد الحجز. يتم الدفع لسائقك نقداً (بالريال السعودي) أو عن طريق التحويل البنكي، عادةً عند انتهاء الرحلة ما لم يُتفق على غير ذلك عند الحجز.',
+    },
+  },
+  {
+    q: {
       en: 'Is there a 24-hour cab service near the Holy Mosque in Makkah?',
       ar: 'هل توجد خدمة كاب على مدار الساعة بالقرب من المسجد الحرام في مكة؟',
     },

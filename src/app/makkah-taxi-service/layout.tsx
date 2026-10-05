@@ -5,9 +5,9 @@ const PAGE_URL = 'https://saudicabsgmc.com/makkah-taxi-service'
 const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/makkah-hero-saudi-cabs-gmc.webp', width: 735, height: 603, alt: 'The Kaaba and Masjid al-Haram at dusk, Makkah – Saudi Cabs GMC', type: 'image/webp' }
 
 export const metadata: Metadata = {
-  title: 'Makkah Taxi & Private Transport Services',
+  title: 'Makkah Taxi Service | Private Transfers & Airport Taxi',
   description:
-    'Private Makkah taxi for Jeddah Airport transfers, Haram and hotel trips, Umrah, Hajj and Ziyarat. Fixed prices, 24/7, no advance payment. Book on WhatsApp.',
+    'Book private Makkah taxi and transport services for Jeddah Airport transfers, hotels, Haram, Ziyarat and trips to Madinah, Jeddah and Taif. Fixed fares confirmed on WhatsApp.',
   keywords: [
     'taxi makkah', 'cab mecca', 'taxi mecca', 'makkah airport transfer',
     'jeddah airport to makkah', 'umrah taxi', 'hajj transport makkah',
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'ar_SA',
     siteName: 'Saudi Cabs GMC',
-    title: 'Makkah Taxi & Private Transport Services – Saudi Cabs GMC',
-    description: 'Private taxi in Makkah: Jeddah Airport transfers, Holy Mosque and hotel trips, Hajj, Umrah and Ziyarat. Fixed prices, 24/7.',
+    title: 'Makkah Taxi Service | Private Transfers & Airport Taxi',
+    description: 'Book private Makkah taxi and transport services for Jeddah Airport transfers, hotels, Haram, Ziyarat and trips to Madinah, Jeddah and Taif. Fixed fares confirmed on WhatsApp.',
     url: PAGE_URL,
     images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Makkah Taxi & Private Transport Services – Saudi Cabs GMC',
-    description: 'Private taxi in Makkah: Jeddah Airport transfers, Holy Mosque and hotel trips, Hajj, Umrah and Ziyarat. Fixed prices, 24/7.',
+    title: 'Makkah Taxi Service | Private Transfers & Airport Taxi',
+    description: 'Book private Makkah taxi and transport services for Jeddah Airport transfers, hotels, Haram, Ziyarat and trips to Madinah, Jeddah and Taif. Fixed fares confirmed on WhatsApp.',
     images: [OG_IMAGE.url],
   },
 }
@@ -90,7 +90,7 @@ const makkahWebPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${PAGE_URL}#webpage`,
-  name: 'Makkah Taxi & Private Transport Services',
+  name: 'Makkah Taxi Service | Private Transfers & Airport Taxi',
   url: PAGE_URL,
   inLanguage: 'en',
   isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },

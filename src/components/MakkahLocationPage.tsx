@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link'
+import { motion, useReducedMotion } from 'framer-motion'
 import FAQSection from './FAQSection'
 import PricingSection from './PricingSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Bus, Car, Briefcase, Map, Users, Shield, Clock, Banknote, Star,
-  Moon, MapPin, Mountain, Tent, Route,
+  Moon, MapPin, Mountain, Tent, Route, Send, CheckCircle2,
 } from 'lucide-react'
 import BookingForm from './BookingForm'
 import FleetSection from './FleetSection'
@@ -13,7 +14,8 @@ import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 import {
   type BText, type MakkahPageProps,
-  heroContent, audiences, bookingSteps, vehicleBestFor, guideTopics, relatedGuides,
+  heroContent, audiences, vehicleBestFor, vehicleComparison, whatToExpect, familyTravel,
+  guideTopics, relatedGuides, SERVICE_GROUP_LABELS,
 } from '@/lib/makkahPageData'
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -26,59 +28,31 @@ const waUrl = (msg: string) => `https://wa.me/${WA_NUMBER}?text=${encodeURICompo
 
 const GOLD = '#D4AF37'
 
-const NEIGHBOURHOODS: { icon: React.ElementType; kind: BText; name: BText; desc: BText }[] = [
+const SERVICE_GROUP_ORDER = ['airport', 'local', 'religious', 'intercity'] as const
+
+const PICKUP_AREAS: { icon: React.ElementType; name: BText; desc: BText }[] = [
   {
     icon: Building2,
-    kind: { ar: 'حي فنادق', en: 'Hotel district' },
     name: { ar: 'العزيزية', en: 'Al-Aziziyah' },
     desc: {
-      ar: 'حي فنادق شهير في مكة، يقع على بعد حوالي 3-4 كم من الحرم المكي وقريب من منى. نوفر رحلات منتظمة بين العزيزية والحرم.',
-      en: 'A popular hotel district in Makkah, roughly 3–4 km from the Holy Mosque and close to Mina. We run regular transfers between Al-Aziziyah and the Haram.',
+      ar: 'حي فنادق شهير في مكة، يقع على بعد حوالي 3-4 كم من الحرم المكي.',
+      en: 'A popular hotel district roughly 3–4 km from the Holy Mosque.',
     },
   },
   {
     icon: MapPin,
-    kind: { ar: 'حي فنادق', en: 'Hotel district' },
     name: { ar: 'المسفلة', en: 'Misfalah' },
     desc: {
-      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه. نوفر توصيلاً للفنادق والشقق في جميع أنحاء المسفلة، مع وصول مريح للحرم.',
-      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area. We provide transfers to hotels and apartments across Misfalah, with convenient access to the Haram.',
+      ar: 'حي تاريخي قريب جداً من الحرم المكي، على مسافة تصل مشياً في بعض أجزائه.',
+      en: 'A historic district right beside the Holy Mosque, walkable from parts of the area.',
     },
   },
   {
     icon: Building2,
-    kind: { ar: 'حي فنادق', en: 'Hotel district' },
     name: { ar: 'أجياد', en: 'Ajyad' },
     desc: {
-      ar: 'من أقرب الأحياء إلى المسجد الحرام، يطل مباشرة على برج الساعة ومنطقة الحرم. مثالي لمن يريد إقامة قريبة جداً، ونوفر توصيلاً من فنادق أجياد حسب التوفر.',
-      en: 'One of the closest neighborhoods to the Holy Mosque, overlooking the Clock Tower area. Ideal for travelers who want to stay within very close reach — we offer pickup from Ajyad hotels, subject to availability.',
-    },
-  },
-  {
-    icon: Tent,
-    kind: { ar: 'من المشاعر', en: 'Holy site' },
-    name: { ar: 'منى', en: 'Mina' },
-    desc: {
-      ar: 'مدينة الخيام على بعد حوالي 7 كم من مكة، محطة أساسية خلال أيام الحج. نوفر رحلات منظمة من وإلى منى خلال موسم الحج.',
-      en: 'The tent city roughly 7 km from central Makkah, a core stop during the days of Hajj. We run organized transfers to and from Mina during the Hajj season.',
-    },
-  },
-  {
-    icon: Mountain,
-    kind: { ar: 'من المشاعر', en: 'Holy site' },
-    name: { ar: 'عرفات', en: 'Arafat' },
-    desc: {
-      ar: 'موقع الوقوف الأهم في مناسك الحج، يبعد حوالي 20 كم عن مكة المكرمة. نساعد الحجاج والمجموعات على التنقل إلى عرفات ومنها وفق الجدول المخطط له.',
-      en: 'The site of the central Hajj ritual of standing (Wuquf), about 20 km from Makkah. We help pilgrims and groups travel to and from Arafat according to their planned schedule.',
-    },
-  },
-  {
-    icon: Moon,
-    kind: { ar: 'من المشاعر', en: 'Holy site' },
-    name: { ar: 'مزدلفة', en: 'Muzdalifah' },
-    desc: {
-      ar: 'محطة المبيت بين عرفات ومنى، على بعد حوالي 9 كم من مكة. نوفر خيارات نقل لرحلات الحج والعمرة التي تشمل مزدلفة.',
-      en: 'The overnight stop between Arafat and Mina, about 9 km from Makkah. We provide transport options for Hajj and Umrah travel involving Muzdalifah.',
+      ar: 'من أقرب الأحياء إلى المسجد الحرام، يطل على برج الساعة.',
+      en: 'One of the closest neighborhoods to the Holy Mosque, overlooking the Clock Tower area.',
     },
   },
 ]
@@ -117,16 +91,33 @@ function Head({ id, tag, title, subtitle, dark }: { id: string; tag: string; tit
   )
 }
 
+/** Shared fade+slight-up reveal, staggered per index. Respects prefers-reduced-motion. */
+function useReveal() {
+  const reduceMotion = useReducedMotion()
+  return (i = 0) => reduceMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 18 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, margin: '-60px' },
+        transition: { duration: 0.45, delay: Math.min(i * 0.06, 0.3) },
+      }
+}
+
 export default function MakkahLocationPage({
-  cityName, citySlogan, citySlug, heroImage, services, routes, linkedRoutes, highlights, faqs, pricing,
+  cityName, citySlogan, citySlug, heroImage, services, linkedRoutes, highlights, faqs, pricing,
 }: MakkahPageProps) {
   const { lang, isAr } = useLang()
   const tr = t[lang].locationPage
   const tx = (b: BText) => b[lang]
   const city = tx(cityName)
   const waText = isAr ? 'السلام عليكم، أرغب في حجز رحلة في مكة المكرمة' : "Hello, I'd like to book a trip in Makkah"
+  const reveal = useReveal()
 
   const cityAccent = (dark: boolean) => <span style={{ color: dark ? GOLD : 'var(--primary)' }}>{city}</span>
+
+  const primaryRoutes = linkedRoutes.slice(0, 6)
+  const longDistanceRoutes = linkedRoutes.slice(6)
 
   return (
     <main>
@@ -170,7 +161,7 @@ export default function MakkahLocationPage({
 
           <div aria-hidden="true" style={{ width: '72px', height: '3px', background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`, margin: '0 auto 22px' }} />
 
-          <p className="mk-hero-intro" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.05rem)', color: 'rgba(255,255,255,0.86)', lineHeight: 1.85, maxWidth: '660px', margin: '0 auto 32px' }}>
+          <p className="mk-hero-intro" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.05rem)', color: 'rgba(255,255,255,0.86)', lineHeight: 1.85, maxWidth: '660px', margin: '0 auto 32px' }} data-speakable>
             {tx(heroContent.intro)}
           </p>
 
@@ -222,7 +213,40 @@ export default function MakkahLocationPage({
         </div>
       </section>
 
-      {/* ── 3. Services ── */}
+      {/* ── 3. Which Makkah transport service do you need? ── */}
+      <section aria-labelledby="mk-decision-title" style={{ padding: '80px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <Head
+            id="mk-decision-title" tag={isAr ? 'ابدأ هنا' : 'Start Here'}
+            title={isAr ? 'أي خدمة نقل تحتاجها في مكة؟' : 'Which Makkah Transport Service Do You Need?'}
+            subtitle={isAr ? 'اختر ما يصف رحلتك لتصل مباشرة إلى الخدمة المناسبة.' : 'Pick what describes your trip to jump straight to the right service.'}
+          />
+          <div className="mk-grid">
+            {audiences.map((a, i) => {
+              const AIcon = ICON_MAP[a.iconName]
+              return (
+                <motion.div key={a.need.en} {...reveal(i)}>
+                  <Link href={a.href} className="mk-card mk-focus" style={{
+                    display: 'flex', alignItems: 'center', gap: '14px',
+                    background: 'var(--card, #fff)', border: '1.5px solid var(--border)', borderRadius: '14px', padding: '18px 20px',
+                  }}>
+                    <div style={{ background: 'var(--primary-light)', borderRadius: '10px', padding: '10px', flexShrink: 0, display: 'flex' }}>
+                      {AIcon && <AIcon size={20} strokeWidth={1.8} color="var(--primary)" aria-hidden="true" />}
+                    </div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', marginBottom: '2px' }}>{tx(a.need)}</div>
+                      <div style={{ fontSize: '0.96rem', fontWeight: 800, color: 'var(--foreground)' }}>{tx(a.service)}</div>
+                    </div>
+                    <Arrow />
+                  </Link>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. Services, grouped by category ── */}
       <section aria-labelledby="mk-services-title" style={{ padding: '84px 0', backgroundColor: '#0a2418' }}>
         <div className="container">
           <Head
@@ -230,108 +254,104 @@ export default function MakkahLocationPage({
             title={isAr ? <>خدمات التاكسي والنقل في {cityAccent(true)}</> : <>Taxi &amp; Transport Services in {cityAccent(true)}</>}
             subtitle={isAr ? 'من المطار إلى الحرم المكي وما بعده — اختر الخدمة المناسبة لرحلتك.' : 'From the airport to the Holy Mosque and beyond — choose the service that fits your trip.'}
           />
-          <div className="mk-grid-lg">
-            {services.map(s => {
-              const SIcon = ICON_MAP[s.iconName]
-              return (
-                <Link
-                  key={s.title.en} href={s.href}
-                  className="mk-card mk-card-dark"
-                  style={{
-                    display: 'flex', flexDirection: 'column', gap: '12px',
-                    background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(212,175,55,0.2)',
-                    borderInlineStart: `3px solid ${GOLD}`, borderRadius: '14px', padding: '22px 20px', color: 'white',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                    <div style={{ background: 'rgba(212,175,55,0.12)', borderRadius: '10px', padding: '10px', flexShrink: 0, display: 'flex' }}>
-                      {SIcon && <SIcon size={22} strokeWidth={1.8} color={GOLD} aria-hidden="true" />}
-                    </div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 800, lineHeight: 1.35, margin: 0 }}>{tx(s.title)}</h3>
-                  </div>
-                  <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.68)', lineHeight: 1.7, margin: 0, flex: 1 }}>{tx(s.desc)}</p>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: GOLD, fontWeight: 800, fontSize: '0.85rem' }}>
-                    {tx(s.cta)} <Arrow />
-                  </span>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 4. Makkah Taxi for Every Type of Trip ── */}
-      <section aria-labelledby="mk-trips-title" style={{ padding: '84px 0', backgroundColor: 'var(--background)' }}>
-        <div className="container">
-          <Head
-            id="mk-trips-title" tag={isAr ? 'لكل مسافر' : 'Who We Serve'}
-            title={isAr ? 'تاكسي مكة لكل أنواع الرحلات' : 'Makkah Taxi for Every Type of Trip'}
-            subtitle={isAr ? 'سواء كنت معتمراً أو حاجاً أو مسافراً مع عائلتك أو في رحلة عمل، اختر ما يناسب رحلتك.' : 'Whether you are here for Umrah, Hajj, a family trip or business, here is how we can help.'}
-          />
-          <div className="mk-grid">
-            {audiences.map(a => {
-              const AIcon = ICON_MAP[a.iconName]
-              return (
-                <div key={a.title.en} className="mk-card" style={{
-                  display: 'flex', flexDirection: 'column', gap: '12px',
-                  background: 'var(--card, #fff)', border: '1.5px solid var(--border)', borderRadius: '16px', padding: '26px 22px',
-                  borderTop: '3px solid var(--primary)',
+          {SERVICE_GROUP_ORDER.map(groupKey => {
+            const groupServices = services.filter(s => s.group === groupKey)
+            if (groupServices.length === 0) return null
+            return (
+              <div key={groupKey} style={{ marginBottom: '36px' }}>
+                <h3 style={{
+                  fontSize: '0.78rem', fontWeight: 800, color: GOLD, textTransform: 'uppercase',
+                  letterSpacing: '0.1em', marginBottom: '16px',
                 }}>
-                  <div style={{ background: 'var(--primary-light)', borderRadius: '12px', padding: '11px', width: 'fit-content', display: 'flex' }}>
-                    {AIcon && <AIcon size={24} strokeWidth={1.8} color="var(--primary)" aria-hidden="true" />}
-                  </div>
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: 800, margin: 0 }}>{tx(a.title)}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: 1.75, margin: 0, flex: 1 }} dangerouslySetInnerHTML={{ __html: tx(a.desc) }} />
-                  <Link href={a.href} className="mk-focus" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--primary)', fontWeight: 800, fontSize: '0.86rem', minHeight: '32px' }}>
-                    {tx(a.linkLabel)} <Arrow />
-                  </Link>
+                  {tx(SERVICE_GROUP_LABELS[groupKey])}
+                </h3>
+                <div className="mk-grid-lg">
+                  {groupServices.map((s, i) => {
+                    const SIcon = ICON_MAP[s.iconName]
+                    return (
+                      <motion.div key={s.title.en} {...reveal(i)}>
+                        <Link
+                          href={s.href}
+                          className="mk-card mk-card-dark"
+                          style={{
+                            display: 'flex', flexDirection: 'column', gap: '12px', height: '100%',
+                            background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(212,175,55,0.2)',
+                            borderInlineStart: `3px solid ${GOLD}`, borderRadius: '14px', padding: '22px 20px', color: 'white',
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                            <div style={{ background: 'rgba(212,175,55,0.12)', borderRadius: '10px', padding: '10px', flexShrink: 0, display: 'flex' }}>
+                              {SIcon && <SIcon size={22} strokeWidth={1.8} color={GOLD} aria-hidden="true" />}
+                            </div>
+                            <h4 style={{ fontSize: '1rem', fontWeight: 800, lineHeight: 1.35, margin: 0 }}>{tx(s.title)}</h4>
+                          </div>
+                          <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.68)', lineHeight: 1.7, margin: 0, flex: 1 }}>{tx(s.desc)}</p>
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: GOLD, fontWeight: 800, fontSize: '0.85rem' }}>
+                            {tx(s.cta)} <Arrow />
+                          </span>
+                        </Link>
+                      </motion.div>
+                    )
+                  })}
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
         </div>
       </section>
 
-      {/* ── 5. Popular routes ── */}
+      {/* ── 5. Popular routes (primary 6 + longer-distance) ── */}
       <section aria-labelledby="mk-routes-title" style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0B3D2E 0%, #071f17 100%)' }}>
         <div className="container">
           <Head
             dark id="mk-routes-title" tag={tr.routesTag}
             title={<>{tr.routesTitle} {cityAccent(true)}</>}
-            subtitle={isAr ? 'أوقات الرحلات تقريبية. اضغط على أي مسار لمعرفة التفاصيل والسعر.' : 'Approximate journey times for the routes travelers ask about most. Open any route for details and price.'}
+            subtitle={isAr ? 'لكل خط صفحة خاصة بالتفاصيل وخيارات السيارة والسعر.' : 'Each route has its own page with details, vehicle options and price.'}
           />
-          <div className="mk-grid">
-            {routes.map(r => {
-              const from = tx(r.from)
-              const to = tx(r.to)
-              const msg = isAr ? `السلام عليكم، أرغب في معرفة سعر رحلة من ${from} إلى ${to}` : `Hello, I'd like a price for ${from} → ${to}`
-              const inner = (
-                <>
-                  <h3 style={{ fontSize: '1.02rem', fontWeight: 800, color: 'white', margin: 0, lineHeight: 1.4 }}>
-                    {from} <span style={{ color: GOLD }}>{isAr ? '←' : '→'}</span> {to}
-                  </h3>
+          <div className="mk-grid-lg">
+            {primaryRoutes.map((r, i) => (
+              <motion.div key={r.slug} {...reveal(i)}>
+                <Link href={`/${r.slug}`} className="mk-card mk-card-dark" style={{
+                  display: 'flex', flexDirection: 'column', gap: '10px', padding: '20px',
+                  background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(212,175,55,0.3)', borderRadius: '16px', color: 'white', height: '100%',
+                }}>
+                  <h3 style={{ fontSize: '1.02rem', fontWeight: 800, color: 'white', margin: 0, lineHeight: 1.4 }}>{tx(r.label)}</h3>
                   <div>
                     <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 700 }}>
                       {isAr ? 'وقت الرحلة التقريبي' : 'Approx. travel time'}
                     </div>
-                    <div style={{ color: GOLD, fontWeight: 900, fontSize: '1.25rem', lineHeight: 1.3 }}>{tx(r.time)}</div>
+                    <div style={{ color: GOLD, fontWeight: 900, fontSize: '1.15rem', lineHeight: 1.3 }}>{tx(r.duration)}</div>
                   </div>
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'white', fontWeight: 800, fontSize: '0.85rem', borderTop: '1px solid rgba(255,255,255,0.14)', paddingTop: '12px', marginTop: 'auto' }}>
-                    {isAr ? 'تحقق من المسار والسعر' : 'Check Route & Price'} <Arrow />
+                    {isAr ? 'المسار والسعر وخيارات السيارة' : 'View route, price & vehicles'} <Arrow />
                   </span>
-                </>
-              )
-              const cardStyle: React.CSSProperties = {
-                display: 'flex', flexDirection: 'column', gap: '14px', padding: '20px',
-                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(212,175,55,0.3)', borderRadius: '16px', color: 'white',
-              }
-              return r.href ? (
-                <Link key={`${r.from.en}-${r.to.en}`} href={r.href} className="mk-card mk-card-dark" style={cardStyle}>{inner}</Link>
-              ) : (
-                <a key={`${r.from.en}-${r.to.en}`} href={waUrl(msg)} target="_blank" rel="noopener noreferrer" className="mk-card mk-card-dark" style={cardStyle}>{inner}</a>
-              )
-            })}
+                </Link>
+              </motion.div>
+            ))}
           </div>
+
+          {longDistanceRoutes.length > 0 && (
+            <div style={{ marginTop: '32px' }}>
+              <p style={{ textAlign: 'center', fontSize: '0.78rem', fontWeight: 800, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+                {isAr ? 'رحلات أطول' : 'Longer-Distance Routes'}
+              </p>
+              <div className="mk-grid-lg">
+                {longDistanceRoutes.map(r => (
+                  <Link key={r.slug} href={`/${r.slug}`} className="mk-card mk-card-dark" style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px', padding: '16px 20px',
+                    background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(212,175,55,0.18)', borderRadius: '14px', color: 'white',
+                  }}>
+                    <div>
+                      <div style={{ fontWeight: 800, fontSize: '0.92rem' }}>{tx(r.label)}</div>
+                      <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)' }}>{isAr ? 'تقريباً ' : 'Approx. '}{tx(r.duration)}</div>
+                    </div>
+                    <Arrow size={14} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div style={{ textAlign: 'center', marginTop: '30px' }}>
             <Link href={`/${citySlug}/routes`} className="mk-btn mk-focus" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -345,40 +365,76 @@ export default function MakkahLocationPage({
               ? 'أوقات الرحلات تقريبية وقد تختلف حسب حركة المرور وموقع الاستلام وحالة الطريق.'
               : 'Travel times are approximate and may vary depending on traffic, pickup location and road conditions.'}
           </p>
-          <p style={{ textAlign: 'center', marginTop: '6px', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-            {isAr
-              ? 'خلال موسم الحج، قد تتأثر أوقات الرحلات إلى منى وعرفات بشكل كبير بسبب الازدحام والقيود الرسمية لإدارة الحشود وأنظمة الوصول.'
-              : 'During Hajj season, travel times to Mina and Arafat can be significantly affected by heavy traffic, official crowd-control restrictions, and access regulations.'}
-          </p>
         </div>
       </section>
 
-      {/* ── 6. Hotel & neighbourhood service ── */}
+      {/* ── 6. What to expect ── */}
+      <section aria-labelledby="mk-expect-title" style={{ padding: '84px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <Head
+            id="mk-expect-title" tag={isAr ? 'التجربة' : 'The Experience'}
+            title={isAr ? 'ماذا تتوقع' : 'What to Expect'}
+          />
+          <div className="mk-grid">
+            {whatToExpect.map((step, i) => {
+              const StepIcon = [Send, CheckCircle2, Car, Plane][i]
+              return (
+                <motion.div key={step.title.en} {...reveal(i)} style={{
+                  background: 'var(--muted)', borderRadius: '16px', padding: '24px 20px', border: '1px solid var(--border)',
+                }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '14px' }}>
+                    <StepIcon size={19} color="var(--primary)" strokeWidth={1.8} aria-hidden="true" />
+                  </div>
+                  <h3 style={{ fontSize: '0.98rem', fontWeight: 800, marginBottom: '8px' }}>{tx(step.title)}</h3>
+                  <p style={{ fontSize: '0.86rem', color: 'var(--muted-foreground)', lineHeight: 1.7, margin: 0 }}>{tx(step.desc)}</p>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. Travelling with family? ── */}
+      <section aria-labelledby="mk-family-title" style={{ padding: '80px 0', background: '#071f17' }}>
+        <div className="container" style={{ maxWidth: '760px' }}>
+          <Head dark id="mk-family-title" tag={isAr ? 'العائلات' : 'Families'} title={isAr ? 'تسافر مع العائلة؟' : 'Travelling With Family?'} subtitle={tx(familyTravel.intro)} />
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            {familyTravel.points.map((p, i) => (
+              <motion.li key={p.en} {...reveal(i)} style={{
+                display: 'flex', alignItems: 'flex-start', gap: '12px',
+                background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.2)', borderRadius: '12px', padding: '16px 18px',
+              }}>
+                <Check size={16} strokeWidth={3} color={GOLD} aria-hidden="true" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.9rem', lineHeight: 1.7 }}>{tx(p)}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── 8. Makkah pickup areas ── */}
       <section aria-labelledby="mk-areas-title" style={{ padding: '84px 0', backgroundColor: 'var(--background)' }}>
         <div className="container">
           <Head
-            id="mk-areas-title" tag={isAr ? 'الأحياء والمشاعر' : 'Hotels & Holy Sites'}
-            title={isAr ? 'خدمة تاكسي للفنادق والأحياء في مكة المكرمة' : 'Makkah Hotel & Neighborhood Taxi Service'}
+            id="mk-areas-title" tag={isAr ? 'نقاط الاستلام' : 'Pickup Areas'}
+            title={isAr ? 'مناطق الاستلام في مكة المكرمة' : 'Makkah Pickup Areas'}
             subtitle={isAr
-              ? 'من أحياء الفنادق القريبة من الحرم إلى المشاعر المقدسة — سائقونا على دراية بأبرز الفنادق والأحياء والمواقع الرئيسية في مكة. شاركنا اسم فندقك أو حيّك عند الحجز.'
-              : 'From hotel districts near the Haram to the sacred sites — our drivers are familiar with major hotels, neighborhoods, and key locations across Makkah. Share your hotel name or area when you book.'}
+              ? 'نوفر الاستلام من الفنادق والشقق في جميع أنحاء مكة، بما في ذلك أحياء الفنادق القريبة من الحرم أدناه. شاركنا اسم فندقك عند الحجز وسنؤكد نقطة الاستلام الدقيقة عبر واتساب.'
+              : 'We pick up from hotels and apartments across Makkah, including the hotel districts near the Haram below. Share your hotel name when you book and we will confirm the exact pickup point on WhatsApp.'}
           />
           <div className="mk-grid-lg">
-            {NEIGHBOURHOODS.map(n => {
+            {PICKUP_AREAS.map((n, i) => {
               const NIcon = n.icon
               return (
-                <div key={n.name.en} className="mk-card" style={{ padding: '24px 22px', borderRadius: '16px', border: '1.5px solid var(--border)', background: 'var(--card, #fff)' }}>
+                <motion.div key={n.name.en} {...reveal(i)} className="mk-card" style={{ padding: '24px 22px', borderRadius: '16px', border: '1.5px solid var(--border)', background: 'var(--card, #fff)' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                     <div style={{ background: 'var(--primary-light)', borderRadius: '10px', padding: '9px', flexShrink: 0, display: 'flex' }}>
                       <NIcon size={20} strokeWidth={1.8} color="var(--primary)" aria-hidden="true" />
                     </div>
-                    <div style={{ minWidth: 0 }}>
-                      <h3 style={{ fontSize: '1.02rem', fontWeight: 800, color: 'var(--foreground)', margin: 0, lineHeight: 1.3 }}>{tx(n.name)}</h3>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{tx(n.kind)}</span>
-                    </div>
+                    <h3 style={{ fontSize: '1.02rem', fontWeight: 800, color: 'var(--foreground)', margin: 0, lineHeight: 1.3 }}>{tx(n.name)}</h3>
                   </div>
                   <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', lineHeight: 1.75, margin: 0 }}>{tx(n.desc)}</p>
-                </div>
+                </motion.div>
               )
             })}
           </div>
@@ -394,81 +450,53 @@ export default function MakkahLocationPage({
         </div>
       </section>
 
-      {/* ── 7. Direct routes ── */}
-      {linkedRoutes.length > 0 && (
-        <section aria-labelledby="mk-direct-title" style={{ padding: '72px 0', backgroundColor: 'var(--muted)' }}>
-          <div className="container">
-            <Head
-              id="mk-direct-title" tag={isAr ? 'رحلات مباشرة' : 'Direct Routes'}
-              title={isAr ? <>{cityAccent(false)} — خطوط مباشرة بسعر ثابت</> : <>{cityAccent(false)} Direct Routes at Fixed Prices</>}
-              subtitle={isAr ? 'لكل خط صفحة خاصة بالتفاصيل والأسعار حسب السيارة.' : 'Each route has its own page with details and prices by vehicle.'}
-            />
-            <div className="mk-grid-lg">
-              {linkedRoutes.map(r => (
-                <Link
-                  key={r.slug} href={`/${r.slug}`} className="mk-card mk-card-light"
-                  style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px',
-                    background: 'var(--background)', borderRadius: '14px', padding: '18px 20px', border: '1.5px solid var(--border)',
-                  }}
-                >
-                  <div style={{ minWidth: 0 }}>
-                    <h3 style={{ fontWeight: 800, fontSize: '0.98rem', marginBottom: '4px', color: 'var(--foreground)', lineHeight: 1.35 }}>{tx(r.label)}</h3>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>
-                      {isAr ? 'تقريباً ' : 'Approx. '}{tx(r.duration)} • {isAr ? 'سعر ثابت' : 'Fixed Price'}
-                    </div>
-                  </div>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--primary)', fontWeight: 800, fontSize: '0.82rem', whiteSpace: 'nowrap' }}>
-                    {isAr ? 'المسار والسعر' : 'Route & price'} <Arrow size={14} />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── 8. How booking works ── */}
-      <section aria-labelledby="mk-steps-title" style={{ padding: '80px 0', background: '#071f17' }}>
+      {/* ── 9. How to choose your vehicle ── */}
+      <section aria-labelledby="mk-compare-title" style={{ padding: '84px 0', background: '#0a2418' }}>
         <div className="container">
-          <Head dark id="mk-steps-title" tag={isAr ? 'خطوات بسيطة' : 'Simple Booking'} title={isAr ? 'كيف يعمل الحجز' : 'How Booking Works'} />
-          <ol className="mk-grid-lg" style={{ listStyle: 'none', padding: 0 }}>
-            {bookingSteps.map(s => (
-              <li key={s.n} style={{
+          <Head
+            dark id="mk-compare-title" tag={isAr ? 'اختر سيارتك' : 'Choose Your Vehicle'}
+            title={isAr ? 'كيف تختار سيارتك' : 'How to Choose Your Vehicle'}
+          />
+          <div className="mk-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+            {vehicleComparison.map((v, i) => (
+              <motion.div key={v.key} {...reveal(i)} style={{
                 background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)', borderRadius: '16px', padding: '26px 22px',
               }}>
-                <div aria-hidden="true" style={{ fontSize: '2.2rem', fontWeight: 900, color: GOLD, lineHeight: 1, marginBottom: '12px' }}>{s.n}</div>
-                <h3 style={{ color: 'white', fontSize: '1.05rem', fontWeight: 800, marginBottom: '8px' }}>{tx(s.title)}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>{tx(s.desc)}</p>
-              </li>
+                <h3 style={{ color: 'white', fontSize: '1.1rem', fontWeight: 900, marginBottom: '14px' }}>{tx(v.name)}</h3>
+                <div style={{ fontSize: '0.74rem', fontWeight: 800, color: GOLD, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>
+                  {isAr ? 'الأنسب لـ' : 'Best for'}
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '9px' }}>
+                  {v.bestFor.map(point => (
+                    <li key={point.en} style={{ display: 'flex', alignItems: 'center', gap: '9px', color: 'rgba(255,255,255,0.8)', fontSize: '0.88rem' }}>
+                      <Check size={14} strokeWidth={3} color={GOLD} aria-hidden="true" style={{ flexShrink: 0 }} />
+                      {tx(point)}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
-          </ol>
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '34px' }}>
-            <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus">
-              <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'ابدأ عبر واتساب' : 'Start on WhatsApp'}
-            </a>
-            <a href="#booking" className="btn-outline mk-btn mk-focus">{isAr ? 'أو استخدم النموذج' : 'Or Use the Form'}</a>
           </div>
         </div>
       </section>
 
-      {/* ── 9. Fleet ── */}
+      {/* ── 10. Fleet ── */}
       {pricing.length > 0 && <FleetSection pricing={pricing} cityName={cityName} showFromPrice={false} bestFor={vehicleBestFor} />}
 
-      {/* ── 10. Pricing ── */}
+      {/* ── 11. Pricing ── */}
       {pricing.length > 0 && (
         <PricingSection routes={pricing} heading={{ ar: 'أسعار التاكسي والتوصيل في مكة المكرمة', en: 'Makkah Taxi Prices & Transfer Rates' }} />
       )}
 
-      {/* ── 11. Why choose us ── */}
+      {/* ── 12. Why choose us ── */}
       <section aria-labelledby="mk-why-title" style={{ padding: '84px 0', background: '#071f17' }}>
         <div className="container">
           <Head dark id="mk-why-title" tag={tr.whyTag} title={<>{tr.whyTitle} {cityAccent(true)}</>} />
           <div className="mk-grid" style={{ marginBottom: '40px' }}>
-            {highlights.map(h => {
+            {highlights.map((h, i) => {
               const HIcon = ICON_MAP[h.iconName]
               return (
-                <div key={h.title.en} style={{
+                <motion.div key={h.title.en} {...reveal(i)} style={{
                   background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.22)',
                   borderRadius: '16px', padding: '26px 22px', textAlign: 'center',
                 }}>
@@ -480,7 +508,7 @@ export default function MakkahLocationPage({
                   </div>
                   <h3 style={{ fontWeight: 800, marginBottom: '8px', color: 'white', fontSize: '0.98rem', lineHeight: 1.35 }}>{tx(h.title)}</h3>
                   <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.68)', lineHeight: 1.7, margin: 0 }}>{tx(h.desc)}</p>
-                </div>
+                </motion.div>
               )
             })}
           </div>
@@ -492,7 +520,7 @@ export default function MakkahLocationPage({
         </div>
       </section>
 
-      {/* ── 12. Makkah Transport Guide ── */}
+      {/* ── 13. Makkah Transport Guide ── */}
       <section aria-labelledby="mk-guide-title" style={{ padding: '84px 0', backgroundColor: 'var(--background)' }}>
         <div className="container">
           <Head
@@ -533,10 +561,10 @@ export default function MakkahLocationPage({
         </div>
       </section>
 
-      {/* ── 13. FAQ ── */}
+      {/* ── 14. FAQ ── */}
       <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${city}`, en: `Frequently Asked Questions — ${city}` }} />
 
-      {/* ── 14. Closing CTA ── */}
+      {/* ── 15. Closing CTA ── */}
       <section aria-labelledby="mk-final-title" style={{ padding: '64px 0', background: 'linear-gradient(135deg, #0B3D2E 0%, #071f17 100%)', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '720px' }}>
           <h2 id="mk-final-title" style={{ color: 'white', fontSize: 'clamp(1.35rem, 3vw, 1.8rem)', fontWeight: 900, marginBottom: '10px' }}>

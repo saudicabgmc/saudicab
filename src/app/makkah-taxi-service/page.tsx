@@ -12,6 +12,7 @@ export default function MakkahPage() {
       heroImage="/hero/makkah-hero-saudi-cabs-gmc.webp"
       services={[
         {
+          group: 'airport',
           iconName: 'Plane',
           title: { ar: 'توصيل من مطار جدة إلى مكة', en: 'Jeddah Airport → Makkah Transfer' },
           desc: {
@@ -22,6 +23,7 @@ export default function MakkahPage() {
           cta: { ar: 'تفاصيل الخط والأسعار', en: 'Route details & prices' },
         },
         {
+          group: 'local',
           iconName: 'Building2',
           title: { ar: 'توصيل الحرم المكي والفنادق', en: 'Holy Mosque / Haram Transfers' },
           desc: {
@@ -32,46 +34,7 @@ export default function MakkahPage() {
           cta: { ar: 'احصل على سعر رحلتك', en: 'Get a trip price' },
         },
         {
-          iconName: 'Map',
-          title: { ar: 'جولات زيارات مكة', en: 'Makkah Ziyarat Tours' },
-          desc: {
-            ar: 'زيارة المواقع الإسلامية التاريخية في مكة مع سائق خاص وسيارة للمدة التي تختارها، بسعر ثابت.',
-            en: 'Visit historical Islamic sites in Makkah with a private driver and vehicle for the duration you choose, at a fixed price.',
-          },
-          href: '/makkah-ziyarat-tour',
-          cta: { ar: 'عرض جولة الزيارات', en: 'View Ziyarat tours' },
-        },
-        {
-          iconName: 'Tent',
-          title: { ar: 'نقل الحج والمشاعر المقدسة', en: 'Hajj & Holy Sites Transport' },
-          desc: {
-            ar: 'نقل مريح للأفراد والمجموعات إلى منى وعرفات ومزدلفة خلال موسم الحج، حسب التوفر والأنظمة المحلية لنقل الحج.',
-            en: 'Comfortable transport for individuals and groups to Mina, Arafat and Muzdalifah during Hajj season — subject to availability and local Hajj transportation rules.',
-          },
-          href: '/hajj-umrah-transport',
-          cta: { ar: 'نقل الحج والعمرة', en: 'Hajj & Umrah transport' },
-        },
-        {
-          iconName: 'Car',
-          title: { ar: 'تاكسي خاص مكة ↔ المدينة المنورة', en: 'Makkah ↔ Madinah Private Taxi' },
-          desc: {
-            ar: 'رحلات خاصة من باب إلى باب بين مكة والمدينة المنورة، وتستغرق من 4.5 إلى 5 ساعات تقريباً حسب حركة المرور وحالة الطريق.',
-            en: 'Private door-to-door trips between Makkah and Madinah, taking about 4.5–5 hours depending on traffic and road conditions.',
-          },
-          href: '/makkah-to-madinah',
-          cta: { ar: 'تفاصيل الخط والأسعار', en: 'Route details & prices' },
-        },
-        {
-          iconName: 'Route',
-          title: { ar: 'تاكسي مكة ↔ جدة', en: 'Makkah ↔ Jeddah Taxi' },
-          desc: {
-            ar: 'رحلات خاصة بين مكة وجدة — إلى المدينة أو الفندق أو المطار — وتستغرق من 50 إلى 90 دقيقة تقريباً حسب حركة المرور.',
-            en: 'Private trips between Makkah and Jeddah — to the city, a hotel or the airport — taking roughly 50–90 minutes depending on traffic.',
-          },
-          href: '/makkah-to-jeddah',
-          cta: { ar: 'تفاصيل الخط والأسعار', en: 'Route details & prices' },
-        },
-        {
+          group: 'local',
           iconName: 'Briefcase',
           title: { ar: 'سائق خاص في مكة', en: 'Private Driver in Makkah' },
           desc: {
@@ -82,6 +45,51 @@ export default function MakkahPage() {
           cta: { ar: 'استئجار سائق خاص', en: 'Hire a private driver' },
         },
         {
+          group: 'religious',
+          iconName: 'Map',
+          title: { ar: 'جولات زيارات مكة', en: 'Makkah Ziyarat Tours' },
+          desc: {
+            ar: 'زيارة المواقع الإسلامية التاريخية في مكة مع سائق خاص وسيارة للمدة التي تختارها، بسعر ثابت.',
+            en: 'Visit historical Islamic sites in Makkah with a private driver and vehicle for the duration you choose, at a fixed price.',
+          },
+          href: '/makkah-ziyarat-tour',
+          cta: { ar: 'عرض جولة الزيارات', en: 'View Ziyarat tours' },
+        },
+        {
+          group: 'religious',
+          iconName: 'Tent',
+          title: { ar: 'نقل الحج والمشاعر المقدسة', en: 'Hajj & Holy Sites Transport' },
+          desc: {
+            ar: 'نقل مريح للأفراد والمجموعات إلى منى وعرفات ومزدلفة خلال موسم الحج، حسب التوفر والأنظمة المحلية لنقل الحج.',
+            en: 'Comfortable transport for individuals and groups to Mina, Arafat and Muzdalifah during Hajj season — subject to availability and local Hajj transportation rules.',
+          },
+          href: '/hajj-umrah-transport',
+          cta: { ar: 'نقل الحج والعمرة', en: 'Hajj & Umrah transport' },
+        },
+        {
+          group: 'intercity',
+          iconName: 'Car',
+          title: { ar: 'تاكسي خاص مكة ↔ المدينة المنورة', en: 'Makkah ↔ Madinah Private Taxi' },
+          desc: {
+            ar: 'رحلات خاصة من باب إلى باب بين مكة والمدينة المنورة، وتستغرق من 4.5 إلى 5 ساعات تقريباً حسب حركة المرور وحالة الطريق.',
+            en: 'Private door-to-door trips between Makkah and Madinah, taking about 4.5–5 hours depending on traffic and road conditions.',
+          },
+          href: '/makkah-to-madinah',
+          cta: { ar: 'تفاصيل الخط والأسعار', en: 'Route details & prices' },
+        },
+        {
+          group: 'intercity',
+          iconName: 'Route',
+          title: { ar: 'تاكسي مكة ↔ جدة', en: 'Makkah ↔ Jeddah Taxi' },
+          desc: {
+            ar: 'رحلات خاصة بين مكة وجدة — إلى المدينة أو الفندق أو المطار — وتستغرق من 50 إلى 90 دقيقة تقريباً حسب حركة المرور.',
+            en: 'Private trips between Makkah and Jeddah — to the city, a hotel or the airport — taking roughly 50–90 minutes depending on traffic.',
+          },
+          href: '/makkah-to-jeddah',
+          cta: { ar: 'تفاصيل الخط والأسعار', en: 'Route details & prices' },
+        },
+        {
+          group: 'intercity',
           iconName: 'Users',
           title: { ar: 'نقل العائلات والمجموعات', en: 'Family & Group Transport' },
           desc: {
@@ -91,16 +99,6 @@ export default function MakkahPage() {
           href: '/hyundai-staria-taxi',
           cta: { ar: 'عرض هيونداي ستاريا', en: 'View Hyundai Staria' },
         },
-      ]}
-      routes={[
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'جدة', en: 'Jeddah' }, time: { ar: '50 إلى 90 دقيقة', en: '50–90 min' }, href: '/makkah-to-jeddah' },
-        { from: { ar: 'مطار جدة', en: 'Jeddah Airport' }, to: { ar: 'مكة', en: 'Makkah' }, time: { ar: '55 إلى 90 دقيقة', en: '55–90 min' }, href: '/jeddah-airport-to-makkah' },
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'مطار جدة', en: 'Jeddah Airport' }, time: { ar: '55 إلى 90 دقيقة', en: '55–90 min' }, href: '/makkah-to-jeddah-airport' },
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'المدينة المنورة', en: 'Madinah' }, time: { ar: '4.5 إلى 5 ساعات', en: '4.5–5 hrs' }, href: '/makkah-to-madinah' },
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'الطائف', en: 'Taif' }, time: { ar: '1.5 إلى 2 ساعة', en: '1.5–2 hrs' }, href: '/makkah-to-taif' },
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'منى', en: 'Mina' }, time: { ar: '20 دقيقة', en: '20 min' } },
-        { from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'عرفات', en: 'Arafat' }, time: { ar: '30 دقيقة', en: '30 min' } },
-        { from: { ar: 'العزيزية', en: 'Al-Aziziyah' }, to: { ar: 'الحرم المكي', en: 'Holy Mosque' }, time: { ar: '15 دقيقة', en: '15 min' } },
       ]}
       linkedRoutes={[
         { slug: 'jeddah-airport-to-makkah', label: { ar: 'مطار جدة ← مكة المكرمة', en: 'Jeddah Airport → Makkah' }, duration: { ar: '55 إلى 90 دقيقة', en: '55–90 min' } },
@@ -130,27 +128,11 @@ export default function MakkahPage() {
           },
         },
         {
-          iconName: 'Users',
-          title: { ar: 'سيارات من ١ إلى ٧ ركاب', en: 'Vehicles for 1–7 Passengers' },
-          desc: {
-            ar: 'سيدان لـ٤ ركاب كحد أقصى، وهيونداي ستاريا وGMC يوكون (VIP) لـ٧ ركاب كحد أقصى.',
-            en: 'Sedan for up to 4 passengers; Hyundai Staria and GMC Yukon (VIP) for up to 7.',
-          },
-        },
-        {
           iconName: 'Clock',
           title: { ar: 'دعم الحجز على مدار الساعة', en: '24/7 Booking Support' },
           desc: {
             ar: 'احجز لرحلات الصباح الباكر والنهار والليل المتأخر. يخضع التوفر لجاهزية السائقين وظروف الوصول المحلية.',
             en: 'Book for early-morning, daytime and late-night trips. Availability depends on driver availability and local access conditions.',
-          },
-        },
-        {
-          iconName: 'MapPin',
-          title: { ar: 'تغطية مكة والرحلات بين المدن', en: 'Makkah & Intercity Coverage' },
-          desc: {
-            ar: 'فنادق ومناطق مكة، ومنى وعرفات ومزدلفة، إضافة إلى خطوط إلى جدة والمدينة المنورة والطائف والرياض والدمام.',
-            en: 'Hotels and areas across Makkah, Mina, Arafat and Muzdalifah, plus routes to Jeddah, Madinah, Taif, Riyadh and Dammam.',
           },
         },
         {
