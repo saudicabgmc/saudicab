@@ -429,16 +429,6 @@ export const madinahFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'Can I book a cab to visit Al-Baqi Cemetery in Madinah?',
-      ar: 'هل يمكنني حجز كاب لزيارة البقيع في المدينة المنورة؟',
-    },
-    a: {
-      en: "Yes, Saudi Cabs GMC provides transportation to the Al-Baqi area (Jannat Al-Baqi), located directly beside the Prophet's Mosque in Madinah, subject to local access and visitor regulations. We also offer combined trips covering Al-Baqi, Masjid Quba, Mount Uhud, and other nearby sites.",
-      ar: 'نعم، توفر Saudi Cabs GMC نقلاً إلى منطقة البقيع (جنة البقيع) المجاورة مباشرة للمسجد النبوي في المدينة المنورة، وفق أنظمة الدخول والزيارة المحلية. كما نقدم رحلات مدمجة تشمل البقيع ومسجد قباء وجبل أحد والمواقع المجاورة.',
-    },
-  },
-  {
-    q: {
       en: 'How much does a trip from Madinah to Yanbu cost?',
       ar: 'كم تكلف رحلة من المدينة المنورة إلى ينبع؟',
     },
@@ -449,12 +439,22 @@ export const madinahFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'Are Saudi Cabs GMC drivers familiar with all Islamic sites in Madinah?',
-      ar: 'هل سائقو Saudi Cabs GMC على دراية بجميع المواقع الإسلامية في المدينة المنورة؟',
+      en: 'Do I pay per person or per vehicle?',
+      ar: 'هل أدفع للفرد أم للسيارة؟',
     },
     a: {
-      en: "Yes, Saudi Cabs GMC drivers serving Madinah are familiar with the city's major Islamic sites and landmarks — including the Prophet's Mosque, Quba, Uhud, Al-Baqi, and Masjid Al-Qiblatayn — as well as major hotels, neighborhoods, and the airport.",
-      ar: 'نعم، سائقو Saudi Cabs GMC العاملون في المدينة المنورة على دراية بأبرز المواقع الإسلامية والمعالم في المدينة — بما في ذلك المسجد النبوي ومسجد قباء وجبل أحد والبقيع ومسجد القبلتين — إضافة إلى أبرز الفنادق والأحياء والمطار.',
+      en: 'Prices are per vehicle, not per person. The same Sedan, Staria or GMC Yukon fare applies whether one passenger travels or the vehicle is full, up to its seat limit.',
+      ar: 'الأسعار للسيارة الواحدة وليست للفرد. ينطبق سعر السيدان أو ستاريا أو GMC يوكون نفسه سواء سافر راكب واحد أو امتلأت السيارة حتى سعتها القصوى.',
+    },
+  },
+  {
+    q: {
+      en: 'How much does Madinah Airport to a hotel cost?',
+      ar: 'كم تكلفة الرحلة من مطار المدينة المنورة إلى الفندق؟',
+    },
+    a: {
+      en: 'Madinah Airport to a Madinah hotel is currently listed from 230 SAR by Sedan, 260 SAR by Hyundai Staria and 380 SAR by GMC Yukon, per vehicle. The exact fare is confirmed on WhatsApp before you travel.',
+      ar: 'تبدأ أسعار الرحلة من مطار المدينة المنورة إلى فندق في المدينة من ٢٣٠ ريال بالسيدان، و٢٦٠ ريال بهيونداي ستاريا، و٣٨٠ ريال بـGMC يوكون، للسيارة الواحدة. يتم تأكيد السعر النهائي عبر واتساب قبل رحلتك.',
     },
   },
 ]

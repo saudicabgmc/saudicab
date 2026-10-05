@@ -2,6 +2,7 @@
 import MadinahLocationPage from '@/components/MadinahLocationPage'
 import { madinahFaqs } from '@/lib/faqData'
 import { getPricing } from '@/lib/pricingData'
+import { services, highlights } from '@/lib/madinahPageData'
 
 export default function MadinahPage() {
   return (
@@ -9,47 +10,67 @@ export default function MadinahPage() {
       cityName={{ ar: 'المدينة المنورة', en: 'Madinah' }}
       citySlug="madinah-taxi-service"
       citySlogan={{ ar: 'مدينة النور • المسجد النبوي الشريف', en: 'City of Light • Al-Masjid An-Nabawi' }}
-      description={{
-        ar: 'نصحبكم في رحاب مدينة المصطفى ﷺ بأرقى خدمات النقل. توصيل من وإلى المسجد النبوي الشريف، المزارات الإسلامية، ومطار الأمير محمد بن عبدالعزيز الدولي (مطار المدينة المنورة) بأسعار شفافة وتنافسية وسائقين محترفين.',
-        en: 'We accompany you in the city of the Prophet ﷺ with premium transportation services. Transfers to and from the Prophet\'s Mosque, Islamic landmarks, and Prince Mohammad bin Abdulaziz International Airport (Madinah Airport) with transparent and competitive fares and professional drivers.',
-      }}
       heroImage="/hero/madinah-hero-saudi-cabs-gmc.webp"
-      services={[
-        { iconName: 'Building2', title: { ar: 'توصيل المسجد النبوي', en: "Prophet's Mosque Transfer" }, desc: { ar: 'رحلات من الفنادق والشقق إلى المسجد النبوي الشريف على مدار اليوم.', en: "Trips from hotels and apartments to the Prophet's Mosque throughout the day." } },
-        { iconName: 'Plane', title: { ar: 'مطار المدينة المنورة', en: 'Madinah Airport' }, desc: { ar: 'استقبال وتوديع من مطار المدينة المنورة إلى أحياء المدينة الرئيسية. راجع <a href="/blog/madinah-airport-to-hotel-what-to-expect" style="color:#1a4a3a;font-weight:700;">ماذا تتوقع عند الوصول لمطار المدينة</a>.', en: 'Pickup and drop-off from Madinah Airport to major neighborhoods across the city. See what to expect <a href="/blog/madinah-airport-to-hotel-what-to-expect" style="color:#1a4a3a;font-weight:700;">arriving at Madinah Airport</a>.' } },
-        { iconName: 'Map', title: { ar: 'زيارة المزارات الإسلامية', en: 'Islamic Landmarks Visit' }, desc: { ar: 'رحلات نقل إلى قباء وأحد والبقيع والمواقع التاريخية مع سائق محلي متمرس. لجولة كاملة، راجع <a href="/madinah-ziyarat-tour" style="color:#1a4a3a;font-weight:700;">جولة زيارات المدينة المنورة</a>.', en: 'Transportation to Quba, Uhud, Al-Baqi, and historical sites with an experienced local driver. For a full itinerary, see our <a href="/madinah-ziyarat-tour" style="color:#1a4a3a;font-weight:700;">Madinah Ziyarat tour</a>.' } },
-        { iconName: 'Car', title: { ar: 'كاب بين المدن', en: 'Intercity Cab' }, desc: { ar: 'رحلات مريحة من المدينة إلى مكة المكرمة، جدة، والطائف.', en: 'Comfortable trips from Madinah to Makkah, Jeddah, and Taif.' } },
-        { iconName: 'Briefcase', title: { ar: 'سائق خاص', en: 'Private Driver' }, desc: { ar: 'سائق خاص طوال إقامتك في المدينة للزيارات والتسوق والمناسبات.', en: 'A private driver throughout your stay in Madinah for visits, shopping, and occasions.' } },
-        { iconName: 'Users', title: { ar: 'سيارات عائلية وجماعية', en: 'Family & Group Transfers' }, desc: { ar: 'مركبات واسعة ومريحة لعائلات الزوار والمجموعات بمختلف الأحجام — اختر <a href="/hyundai-staria-taxi" style="color:#1a4a3a;font-weight:700;">هيونداي ستاريا</a> أو <a href="/gmc-yukon-hire" style="color:#1a4a3a;font-weight:700;">GMC يوكون</a>.', en: 'Spacious and comfortable vehicles for visiting families and groups of various sizes — choose a <a href="/hyundai-staria-taxi" style="color:#1a4a3a;font-weight:700;">Hyundai Staria</a> or <a href="/gmc-yukon-hire" style="color:#1a4a3a;font-weight:700;">GMC Yukon</a>.' } },
-        { iconName: 'Building', title: { ar: 'توصيل الفنادق', en: 'Hotel Transfer' }, desc: { ar: 'خدمة توصيل بين فنادق المدينة والوجهات الرئيسية داخلها.', en: 'Transfer service between Madinah hotels and major destinations across the city.' } },
-        { iconName: 'Moon', title: { ar: 'خدمة ليلية', en: 'Night Service' }, desc: { ar: 'متاحون لتوصيلات الفجر والرحلات المتأخرة ليلاً إلى المسجد النبوي.', en: "Available for Fajr prayer transfers and late-night trips to the Prophet's Mosque." } },
-      ]}
-      routes={[
-        { label: { ar: 'المدينة ← مكة المكرمة', en: 'Madinah → Makkah' }, duration: 'Approx. 4.5 hrs' },
-        { label: { ar: 'المدينة ← جدة', en: 'Madinah → Jeddah' }, duration: 'Approx. 4 hrs' },
-        { label: { ar: 'المسجد النبوي ← المطار', en: "Prophet's Mosque → Airport" }, duration: 'Approx. 30 min' },
-        { label: { ar: 'المدينة ← الطائف', en: 'Madinah → Taif' }, duration: 'Approx. 5 hrs' },
-        { label: { ar: 'المسجد النبوي ← قباء', en: "Prophet's Mosque → Quba" }, duration: 'Approx. 10 min' },
-        { label: { ar: 'المسجد النبوي ← جبل أحد', en: "Prophet's Mosque → Mount Uhud" }, duration: 'Approx. 15 min' },
-        { label: { ar: 'المدينة ← ينبع', en: 'Madinah → Yanbu' }, duration: 'Approx. 2.5 hrs' },
-        { label: { ar: 'البقيع ← قباء ← المسجد', en: 'Al-Baqi → Quba → Mosque' }, duration: 'Approx. 20 min' },
-      ]}
+      services={services}
       linkedRoutes={[
-        { slug: 'madinah-to-makkah', label: { ar: 'المدينة المنورة ← مكة المكرمة', en: 'Madinah → Makkah' }, duration: 'Approx. 4.5 hrs' },
-        { slug: 'madinah-to-jeddah', label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' }, duration: 'Approx. 4 hrs' },
-        { slug: 'madinah-airport-taxi', label: { ar: 'مطار المدينة ← المسجد النبوي', en: 'Madinah Airport → Prophet\'s Mosque' }, duration: 'Approx. 30 min' },
-        { slug: 'jeddah-airport-to-madinah', label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' }, duration: 'Approx. 4 hrs' },
-        { slug: 'makkah-to-madinah', label: { ar: 'مكة المكرمة ← المدينة المنورة', en: 'Makkah → Madinah' }, duration: 'Approx. 4.5 hrs' },
-        { slug: 'taif-to-madinah', label: { ar: 'الطائف ← المدينة المنورة', en: 'Taif → Madinah' }, duration: 'Approx. 5 hrs' },
+        {
+          slug: 'madinah-to-makkah',
+          label: { ar: 'المدينة المنورة ← مكة المكرمة', en: 'Madinah → Makkah' },
+          duration: { ar: '٤ إلى ٤.٥ ساعة', en: '4–4.5 hrs' },
+          desc: {
+            ar: 'أكثر خط بين المدن يسلكه المعتمرون بعد المدينة المنورة — من باب إلى باب عبر طريق الحرمين السريع.',
+            en: 'The private intercity route most pilgrims travel after Madinah — door-to-door via the Haramain Expressway.',
+          },
+        },
+        {
+          slug: 'madinah-to-jeddah',
+          label: { ar: 'المدينة المنورة ← جدة', en: 'Madinah → Jeddah' },
+          duration: { ar: '٤ ساعات', en: '~4 hrs' },
+          desc: {
+            ar: 'رحلة خاصة مباشرة إلى مدينة جدة أو مطارها، على مسافة تقارب ٣٩٠ كم.',
+            en: 'A direct private trip to Jeddah city or Jeddah Airport, about 390 km.',
+          },
+        },
+        {
+          slug: 'madinah-airport-taxi',
+          label: { ar: 'مطار المدينة ← الفندق / المسجد النبوي', en: 'Madinah Airport → Hotel / Prophet\'s Mosque' },
+          duration: { ar: '٢٥ إلى ٣٥ دقيقة', en: '~25–35 min' },
+          desc: {
+            ar: 'استلام من مطار الأمير محمد بن عبدالعزيز إلى الفنادق القريبة من المسجد النبوي وبقية أحياء المدينة.',
+            en: 'Pickup from Prince Mohammad bin Abdulaziz Airport to hotels near the Prophet\'s Mosque and across the city.',
+          },
+        },
+        {
+          slug: 'jeddah-airport-to-madinah',
+          label: { ar: 'مطار جدة ← المدينة المنورة', en: 'Jeddah Airport → Madinah' },
+          duration: { ar: '٣.٥ إلى ٤ ساعات', en: '~3.5–4 hrs' },
+          desc: {
+            ar: 'خط شائع للحجاج والمعتمرين القادمين إلى جدة والمتجهين مباشرة إلى المدينة المنورة دون أي تنقلات.',
+            en: 'A popular route for pilgrims landing in Jeddah and travelling straight to Madinah without a transfer.',
+          },
+        },
+        {
+          slug: 'taif-to-madinah',
+          label: { ar: 'المدينة المنورة ← الطائف', en: 'Madinah → Taif' },
+          duration: { ar: '٥ ساعات', en: '~5 hrs' },
+          desc: {
+            ar: 'رحلة خاصة أطول إلى الطائف، على مسافة تقارب ٥٢٠ كم، للزوار المتجهين من المدينة المنورة.',
+            en: 'A longer private trip to Taif, around 520 km, for visitors continuing on from Madinah.',
+          },
+        },
+        {
+          slug: null,
+          label: { ar: 'المدينة المنورة ← ينبع', en: 'Madinah → Yanbu' },
+          duration: { ar: '٢.٥ ساعة', en: '~2.5 hrs' },
+          desc: {
+            ar: 'رحلة خاصة إلى مدينة ينبع الساحلية على البحر الأحمر — أكّد سعرك وموعد استلامك عبر واتساب.',
+            en: 'A private trip to the Red Sea coastal city of Yanbu — confirm your fare and pickup on WhatsApp.',
+          },
+        },
       ]}
-      highlights={[
-        { iconName: 'Star', title: { ar: "متخصصون في خدمة زوار المسجد النبوي", en: "Specialists in Prophet's Mosque Visitors" }, desc: { ar: 'نفخر بخدمة ضيوف نبي الرحمة ﷺ بكل أدب واحترام، وننسق أيضاً رحلات <a href="/hajj-umrah-transport" style="color:#1a4a3a;font-weight:700;">نقل الحج والعمرة</a>.', en: 'We are proud to serve the guests of the Prophet of Mercy ﷺ with the utmost respect and care, and also coordinate <a href="/hajj-umrah-transport" style="color:#1a4a3a;font-weight:700;">Hajj & Umrah transport</a>.' } },
-        { iconName: 'Map', title: { ar: 'سائقون يعرفون المزارات والمواقع', en: 'Drivers Who Know the Landmarks' }, desc: { ar: 'سائقونا على دراية بالمواقع الإسلامية الرئيسية في المدينة المنورة.', en: 'Our drivers are familiar with the major Islamic sites in Madinah.' } },
-        { iconName: 'Clock', title: { ar: 'خدمة متواصلة على مدار الساعة', en: 'Round-the-Clock Availability' }, desc: { ar: 'نقل على مدار الساعة، بما في ذلك رحلات الفجر الباكرة والرحلات المتأخرة ليلاً، حسب توفر السائقين.', en: '24/7 transportation, including early-morning Fajr and late-night trips, subject to driver availability.' } },
-        { iconName: 'Banknote', title: { ar: 'أسعار شفافة للزوار والمعتمرين', en: 'Transparent Fares for Visitors & Pilgrims' }, desc: { ar: 'أسعار واضحة وتنافسية للزيارات الفردية والعائلية طوال فترة إقامتكم. راجع <a href="/taxi-prices-saudi-arabia" style="color:#1a4a3a;font-weight:700;">أسعار التاكسي في المدينة المنورة</a>.', en: 'Clear, competitive fares for individual and family visits throughout your stay. See <a href="/taxi-prices-saudi-arabia" style="color:#1a4a3a;font-weight:700;">Madinah taxi prices</a> for full route fares.' } },
-      ]}
+      highlights={highlights}
       faqs={madinahFaqs}
-      pricing={getPricing('jed-madinah', 'mad-hotel', 'hotel-mad', 'ziyarat-madinah')}
+      pricing={getPricing('jed-madinah', 'mad-hotel', 'hotel-mad', 'madinah-makkah', 'ziyarat-madinah')}
     />
   )
 }
