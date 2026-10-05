@@ -111,6 +111,12 @@ export const makkahRoutes: CityRoutesData = {
     },
     {
       from: { ar: 'مكة المكرمة', en: 'Makkah' },
+      to:   { ar: 'الدمام', en: 'Dammam' },
+      type: 'intercity', duration: '~8–9 hrs', distance: '~870 km',
+      desc: { ar: 'رحلة طويلة من مكة المكرمة إلى الدمام في المنطقة الشرقية بسيارة خاصة.', en: 'Long-distance trip from Makkah to Dammam in the Eastern Province by private car.' },
+    },
+    {
+      from: { ar: 'مكة المكرمة', en: 'Makkah' },
       to:   { ar: 'ينبع', en: 'Yanbu' },
       type: 'intercity', duration: '~5 hrs', distance: '~480 km',
       desc: { ar: 'رحلة مريحة من مكة المكرمة إلى ينبع على ساحل البحر الأحمر.', en: 'Comfortable trip from Makkah to Yanbu on the Red Sea coast.' },
