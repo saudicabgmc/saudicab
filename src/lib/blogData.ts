@@ -1458,4 +1458,172 @@ export const blogPosts: BlogPost[] = [
     date: '2026-09-27',
     image: '/location/madinah.webp',
   },
+  {
+    slug: 'madinah-airport-to-makkah-by-taxi',
+    category: 'Airport Transfers',
+    relatedRoute: { slug: 'madinah-to-makkah', label: { en: 'Madinah to Makkah', ar: 'المدينة المنورة إلى مكة المكرمة' } },
+    seoTitle: 'Madinah Airport to Makkah by Taxi: Complete 2026 Travel Guide',
+    title: {
+      en: 'Madinah Airport to Makkah by Taxi: Complete 2026 Travel Guide',
+      ar: 'من مطار المدينة المنورة إلى مكة المكرمة بالتاكسي: دليل السفر الكامل 2026',
+    },
+    excerpt: {
+      en: "Flying into Madinah and continuing straight to Makkah? Here's how a private taxi works door-to-door, what the journey involves, and how to book ahead.",
+      ar: 'هل تصل إلى المدينة المنورة وتتجه مباشرة إلى مكة المكرمة؟ إليك كيف يعمل التاكسي الخاص من باب إلى باب، وما تتضمنه الرحلة، وكيفية الحجز مسبقاً.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Some travelers landing at Madinah Airport aren't staying in Madinah first — they're heading straight on to Makkah to begin Umrah. Instead of arranging a transfer into the city and a separate onward trip later, a private taxi can take you directly from the airport to your hotel or pickup point in Makkah in a single booking. Here's how that works, what to expect, and how to arrange it.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Quick Answer</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Route:</strong> Madinah Airport (Prince Mohammad bin Abdulaziz Airport, MED) to your hotel or pickup point in Makkah</li>
+  <li style="margin-bottom:0.5rem;"><strong>Journey time:</strong> the Madinah–Makkah leg alone runs approximately 4 to 4.5 hours by private car; add the short airport-to-city leg (approximately 25–35 minutes) and the full door-to-door trip is typically around 4.5 to 5 hours, depending on traffic and your exact pickup point</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicle:</strong> a private car for your group only — Sedan, Hyundai Staria or GMC Yukon</li>
+  <li style="margin-bottom:0.5rem;"><strong>Booking:</strong> via WhatsApp, 24/7</li>
+  <li style="margin-bottom:0.5rem;"><strong>Fare:</strong> contact Saudi Cabs GMC on WhatsApp for the current fare — this airport-to-Makkah journey isn't a single fixed listed route, so the price is confirmed with you directly</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Can You Go Directly from Madinah Airport to Makkah?</h2>
+<p style="margin-bottom:1rem;">Yes. You don't need to stop at a Madinah hotel first if Makkah is your actual destination. The process is straightforward: your driver meets you at the arrivals hall after you collect your luggage, loads your bags, and drives directly to your hotel, apartment or agreed pickup point in Makkah — all in one private vehicle, with no transfer in between.</p>
+<p style="margin-bottom:1rem;">This is worth booking ahead rather than arranging on arrival, since it means your vehicle and driver are already confirmed before you land. Share your flight number when you book — if your flight is delayed, the pickup time adjusts automatically.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Madinah Airport to Makkah: What the Journey Is Like</h2>
+<p style="margin-bottom:1rem;">After leaving the airport, the route joins the main highway connecting Madinah and Makkah — the same road used for the standalone <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">Madinah to Makkah</a> route, just starting from the airport rather than a city hotel. It's a long highway drive, so most travelers use the time to rest after their flight. Your driver handles the route and any formalities along the way; you're free to sleep, pray at rest stops, or simply relax for the several hours it takes to reach Makkah.</p>
+<p style="margin-bottom:1rem;">Because it's a single private vehicle, there's no waiting for other passengers and no fixed departure schedule to work around — the trip starts when you're ready after collecting your luggage.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Private Taxi vs Other Transport Options</h2>
+<p style="margin-bottom:1rem;">A private taxi isn't the only way to get from the Madinah area to Makkah — the Haramain High-Speed Train is a well-known alternative on the Makkah–Madinah corridor. The right choice depends on your situation rather than one option being better in every case:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Door-to-door convenience:</strong> a private taxi picks you up at arrivals and drops you at your Makkah hotel directly — no transfer to a train station, no second leg of the journey to arrange.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Luggage:</strong> with Umrah luggage, prayer items and sometimes extra bags, having one vehicle for the entire journey is simpler than moving bags between a taxi and a train.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Family and group travel:</strong> a group can travel together in one vehicle rather than coordinating train seats and a separate transfer at each end.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Flexible pickup:</strong> you set the pickup time around your actual flight, rather than a fixed train departure.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Privacy:</strong> the vehicle is for your group only, for the whole trip.</li>
+</ul>
+<p style="margin-bottom:1rem;">If you'd like a fuller comparison of timing and the overall experience, see our <a href="/blog/haramain-train-vs-private-taxi-makkah-madinah" style="color:#0B3D2E;font-weight:700;">Haramain train vs private taxi</a> guide.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Which Vehicle Should You Choose?</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a> (4 seats):</strong> a comfortable option for individuals, couples or a small family with manageable luggage.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> (7 seats):</strong> better suited to families or groups travelling together, with more room for Umrah luggage.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> (7 seats, VIP):</strong> for travelers who want a more premium, spacious vehicle for the long drive.</li>
+</ul>
+<p style="margin-bottom:1rem;">This airport-to-Makkah journey doesn't have a single fixed listed fare, so contact Saudi Cabs GMC on WhatsApp for the current fare for your chosen vehicle before you book.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Send your flight number and estimated arrival time on WhatsApp.</li>
+  <li style="margin-bottom:0.5rem;">Tell us your destination in Makkah and your passenger and luggage details.</li>
+  <li style="margin-bottom:0.5rem;">Confirm your vehicle and the current fare with Saudi Cabs GMC.</li>
+  <li style="margin-bottom:0.5rem;">Your driver meets you at arrivals once everything is confirmed.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Important Things to Prepare Before Booking</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Your flight number and estimated arrival time</li>
+  <li style="margin-bottom:0.5rem;">The number of passengers travelling</li>
+  <li style="margin-bottom:0.5rem;">How much luggage you're bringing</li>
+  <li style="margin-bottom:0.5rem;">Your hotel name or exact pickup address in Makkah</li>
+  <li style="margin-bottom:0.5rem;">Your preferred vehicle (Sedan, Hyundai Staria or GMC Yukon)</li>
+</ul>
+<p style="margin-bottom:1rem;">Having these ready when you message us means your vehicle and fare can be confirmed faster.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I go from Madinah Airport directly to Makkah by taxi?</h3>
+<p style="margin-bottom:1rem;">Yes. A private taxi can take you from Madinah Airport straight to your hotel or pickup point in Makkah in one trip, without stopping at a Madinah hotel first.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How do I book a taxi from Madinah Airport to Makkah?</h3>
+<p style="margin-bottom:1rem;">Send your flight number, arrival time and Makkah destination on WhatsApp. We confirm the vehicle and current fare before your trip.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the journey take?</h3>
+<p style="margin-bottom:1rem;">The Madinah-to-Makkah leg alone takes approximately 4 to 4.5 hours. Including the short airport-to-city leg, plan for roughly 4.5 to 5 hours door-to-door, depending on traffic.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does a taxi from Madinah Airport to Makkah cost?</h3>
+<p style="margin-bottom:1rem;">Contact Saudi Cabs GMC on WhatsApp for the current fare. This route doesn't have a single fixed listed price, so the fare is confirmed with you directly based on your vehicle choice.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which vehicle is suitable for a family?</h3>
+<p style="margin-bottom:1rem;">The Hyundai Staria (7 seats) or GMC Yukon (7 seats, VIP) are usually more practical for families with luggage than a Sedan.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book a private taxi in advance?</h3>
+<p style="margin-bottom:1rem;">Yes, and it's recommended for this route. Booking ahead means your vehicle and driver are confirmed before you land.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can the driver pick me up after my flight arrives?</h3>
+<p style="margin-bottom:1rem;">Yes. Share your flight number when you book — if your flight is delayed, the pickup time adjusts automatically at no extra charge.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">What information should I send when booking?</h3>
+<p style="margin-bottom:1rem;">Your flight number, estimated arrival time, passenger and luggage count, your Makkah hotel or pickup address, and your preferred vehicle.</p>
+
+<p style="margin-bottom:1rem;">Need a private taxi from Madinah Airport to Makkah? Send your flight details and Makkah destination on <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">WhatsApp</a> to confirm the current fare and vehicle. For getting around once you arrive, see our <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">Makkah taxi service</a> page, or our <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">Madinah taxi service</a> and <a href="/madinah-airport-taxi" style="color:#0B3D2E;font-weight:700;">Madinah Airport taxi</a> pages if you're starting your trip in Madinah. Planning the rest of your Umrah journey? See our <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">Umrah Travel Guide</a>.</p>`,
+      ar: `<p style="margin-bottom:1rem;">لا يبقى بعض المسافرين الواصلين إلى مطار المدينة المنورة في المدينة أولاً — بل يتجهون مباشرة إلى مكة المكرمة لبدء العمرة. وبدلاً من ترتيب توصيلة إلى المدينة ثم رحلة منفصلة لاحقاً، يمكن للتاكسي الخاص أخذك مباشرة من المطار إلى فندقك أو نقطة استلامك في مكة المكرمة في حجز واحد. إليك كيف يعمل ذلك، وما تتوقعه، وكيفية ترتيبه.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">إجابة سريعة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>المسار:</strong> من مطار المدينة المنورة (مطار الأمير محمد بن عبدالعزيز، MED) إلى فندقك أو نقطة استلامك في مكة المكرمة</li>
+  <li style="margin-bottom:0.5rem;"><strong>مدة الرحلة:</strong> تستغرق رحلة المدينة المنورة إلى مكة وحدها تقريباً من 4 إلى 4.5 ساعة بالسيارة الخاصة؛ أضف المرحلة القصيرة من المطار إلى المدينة (تقريباً 25-35 دقيقة) لتصبح الرحلة الكاملة من باب إلى باب عادةً حوالي 4.5 إلى 5 ساعات، حسب حركة المرور ونقطة الاستلام بالضبط</li>
+  <li style="margin-bottom:0.5rem;"><strong>السيارة:</strong> سيارة خاصة لمجموعتك فقط — سيدان أو هيونداي ستاريا أو GMC يوكون</li>
+  <li style="margin-bottom:0.5rem;"><strong>الحجز:</strong> عبر واتساب، على مدار الساعة</li>
+  <li style="margin-bottom:0.5rem;"><strong>السعر:</strong> تواصل مع Saudi Cabs GMC عبر واتساب لمعرفة السعر الحالي — هذه الرحلة من المطار إلى مكة ليست خطاً واحداً بسعر ثابت معروض، لذا يُؤكَّد السعر معك مباشرة</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">هل يمكنك الذهاب مباشرة من مطار المدينة المنورة إلى مكة المكرمة؟</h2>
+<p style="margin-bottom:1rem;">نعم. لا تحتاج إلى التوقف في فندق بالمدينة المنورة أولاً إذا كانت مكة المكرمة هي وجهتك الفعلية. العملية بسيطة: يقابلك سائقك في صالة الوصول بعد استلام أمتعتك، ويحمّل حقائبك، ويقود مباشرة إلى فندقك أو شقتك أو نقطة الاستلام المتفق عليها في مكة المكرمة — كل ذلك في سيارة خاصة واحدة، دون أي تنقل بينهما.</p>
+<p style="margin-bottom:1rem;">يستحق هذا الحجز المسبق بدلاً من الترتيب عند الوصول، لأن ذلك يعني تأكيد سيارتك وسائقك قبل هبوط طائرتك. شارك رقم رحلتك عند الحجز — وإذا تأخرت رحلتك، يتكيف موعد الاستلام تلقائياً.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من مطار المدينة المنورة إلى مكة المكرمة: كيف تبدو الرحلة</h2>
+<p style="margin-bottom:1rem;">بعد مغادرة المطار، يسلك المسار الطريق السريع الرئيسي الذي يربط المدينة المنورة بمكة المكرمة — وهو نفس الطريق المستخدم في خط <a href="/madinah-to-makkah" style="color:#0B3D2E;font-weight:700;">المدينة المنورة إلى مكة المكرمة</a> المستقل، لكن بداية من المطار بدلاً من فندق في المدينة. إنها رحلة طويلة عبر الطريق السريع، لذا يستخدم معظم المسافرين الوقت للراحة بعد رحلة الطيران. يتولى سائقك المسار وأي إجراءات على الطريق؛ وأنت حر في النوم أو الصلاة في محطات الاستراحة أو الاسترخاء ببساطة خلال الساعات التي تستغرقها الرحلة للوصول إلى مكة المكرمة.</p>
+<p style="margin-bottom:1rem;">نظراً لأنها سيارة خاصة واحدة، فلا داعي لانتظار ركاب آخرين ولا جدول انطلاق ثابت للتقيد به — تبدأ الرحلة عندما تكون جاهزاً بعد استلام أمتعتك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التاكسي الخاص مقابل وسائل النقل الأخرى</h2>
+<p style="margin-bottom:1rem;">التاكسي الخاص ليس الطريقة الوحيدة للوصول من منطقة المدينة المنورة إلى مكة المكرمة — فقطار الحرمين السريع بديل معروف على هذا المحور. يعتمد الخيار الأنسب على وضعك وليس على أن أحد الخيارين أفضل في كل الحالات:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>راحة من باب إلى باب:</strong> يستلمك التاكسي الخاص من صالة الوصول ويوصلك إلى فندقك في مكة مباشرة — دون تنقل إلى محطة قطار، ودون مرحلة ثانية من الرحلة لترتيبها.</li>
+  <li style="margin-bottom:0.5rem;"><strong>الأمتعة:</strong> مع أمتعة العمرة ولوازم الصلاة وأحياناً حقائب إضافية، يكون وجود سيارة واحدة للرحلة بأكملها أبسط من نقل الحقائب بين تاكسي وقطار.</li>
+  <li style="margin-bottom:0.5rem;"><strong>سفر العائلات والمجموعات:</strong> يمكن للمجموعة السفر معاً في سيارة واحدة بدلاً من تنسيق مقاعد القطار وتوصيلة منفصلة في كل طرف.</li>
+  <li style="margin-bottom:0.5rem;"><strong>استلام مرن:</strong> تحدد وقت الاستلام وفق رحلة طيرانك الفعلية، وليس وفق موعد انطلاق قطار ثابت.</li>
+  <li style="margin-bottom:0.5rem;"><strong>الخصوصية:</strong> السيارة لمجموعتك فقط طوال الرحلة.</li>
+</ul>
+<p style="margin-bottom:1rem;">إذا أردت مقارنة أوفى للتوقيت والتجربة الكاملة، راجع دليل <a href="/blog/haramain-train-vs-private-taxi-makkah-madinah" style="color:#0B3D2E;font-weight:700;">قطار الحرمين مقابل التاكسي الخاص</a>.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ما السيارة التي يجب أن تختارها؟</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a> (4 مقاعد):</strong> خيار مريح للأفراد أو الأزواج أو عائلة صغيرة بأمتعة محدودة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> (7 مقاعد):</strong> أنسب للعائلات أو المجموعات المسافرة معاً، مع مساحة أكبر لأمتعة العمرة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a> (7 مقاعد، VIP):</strong> لمن يرغب بسيارة أكثر فخامة واتساعاً للرحلة الطويلة.</li>
+</ul>
+<p style="margin-bottom:1rem;">لا تملك هذه الرحلة من المطار إلى مكة سعراً ثابتاً معروضاً واحداً، لذا تواصل مع Saudi Cabs GMC عبر واتساب لمعرفة السعر الحالي للسيارة التي تختارها قبل الحجز.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أرسل رقم رحلتك والوقت المتوقع للوصول عبر واتساب.</li>
+  <li style="margin-bottom:0.5rem;">أخبرنا بوجهتك في مكة المكرمة وعدد الركاب وتفاصيل الأمتعة.</li>
+  <li style="margin-bottom:0.5rem;">أكّد سيارتك والسعر الحالي مع Saudi Cabs GMC.</li>
+  <li style="margin-bottom:0.5rem;">يقابلك سائقك في صالة الوصول بمجرد تأكيد كل شيء.</li>
+</ol>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">أمور مهمة يجب تجهيزها قبل الحجز</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">رقم رحلتك والوقت المتوقع للوصول</li>
+  <li style="margin-bottom:0.5rem;">عدد الركاب المسافرين</li>
+  <li style="margin-bottom:0.5rem;">كمية الأمتعة التي تحملها</li>
+  <li style="margin-bottom:0.5rem;">اسم فندقك أو عنوان الاستلام الدقيق في مكة المكرمة</li>
+  <li style="margin-bottom:0.5rem;">سيارتك المفضلة (سيدان أو هيونداي ستاريا أو GMC يوكون)</li>
+</ul>
+<p style="margin-bottom:1rem;">تجهيز هذه المعلومات عند مراسلتنا يعني تأكيد سيارتك وسعرك بشكل أسرع.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني الذهاب من مطار المدينة المنورة مباشرة إلى مكة المكرمة بتاكسي؟</h3>
+<p style="margin-bottom:1rem;">نعم. يمكن للتاكسي الخاص أخذك من مطار المدينة المنورة مباشرة إلى فندقك أو نقطة استلامك في مكة المكرمة في رحلة واحدة، دون التوقف في فندق بالمدينة أولاً.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كيف أحجز تاكسي من مطار المدينة المنورة إلى مكة المكرمة؟</h3>
+<p style="margin-bottom:1rem;">أرسل رقم رحلتك وموعد الوصول ووجهتك في مكة المكرمة عبر واتساب. نؤكد لك السيارة والسعر الحالي قبل رحلتك.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة؟</h3>
+<p style="margin-bottom:1rem;">تستغرق رحلة المدينة المنورة إلى مكة المكرمة وحدها تقريباً من 4 إلى 4.5 ساعة. مع إضافة المرحلة القصيرة من المطار إلى المدينة، خطط لنحو 4.5 إلى 5 ساعات من باب إلى باب، حسب حركة المرور.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تكلفة تاكسي من مطار المدينة المنورة إلى مكة المكرمة؟</h3>
+<p style="margin-bottom:1rem;">تواصل مع Saudi Cabs GMC عبر واتساب لمعرفة السعر الحالي. لا يملك هذا الخط سعراً ثابتاً معروضاً واحداً، لذا يُؤكَّد السعر معك مباشرة بحسب السيارة التي تختارها.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما السيارة المناسبة للعائلة؟</h3>
+<p style="margin-bottom:1rem;">تُعد هيونداي ستاريا (7 مقاعد) أو GMC يوكون (7 مقاعد، VIP) عادةً أكثر عملية من السيدان للعائلات التي لديها أمتعة.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني حجز تاكسي خاص مسبقاً؟</h3>
+<p style="margin-bottom:1rem;">نعم، ويُنصح بذلك لهذا الخط. الحجز المسبق يعني تأكيد سيارتك وسائقك قبل هبوط طائرتك.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكن للسائق استلامي بعد وصول رحلتي؟</h3>
+<p style="margin-bottom:1rem;">نعم. شارك رقم رحلتك عند الحجز — وإذا تأخرت رحلتك، يتكيف موعد الاستلام تلقائياً دون أي رسوم إضافية.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما المعلومات التي يجب إرسالها عند الحجز؟</h3>
+<p style="margin-bottom:1rem;">رقم رحلتك والوقت المتوقع للوصول وعدد الركاب والأمتعة واسم فندقك أو عنوان الاستلام في مكة المكرمة، وسيارتك المفضلة.</p>
+
+<p style="margin-bottom:1rem;">تحتاج تاكسي خاص من مطار المدينة المنورة إلى مكة المكرمة؟ أرسل تفاصيل رحلتك ووجهتك في مكة عبر <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">واتساب</a> لتأكيد السعر الحالي والسيارة. للتنقل بعد وصولك، راجع صفحة <a href="/makkah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي مكة المكرمة</a>، أو صفحتي <a href="/madinah-taxi-service" style="color:#0B3D2E;font-weight:700;">خدمة تاكسي المدينة المنورة</a> و<a href="/madinah-airport-taxi" style="color:#0B3D2E;font-weight:700;">تاكسي مطار المدينة المنورة</a> إذا كنت تبدأ رحلتك من المدينة المنورة. تخطط لبقية رحلة عمرتك؟ راجع <a href="/umrah-travel-guide" style="color:#0B3D2E;font-weight:700;">دليل سفر العمرة</a>.</p>`,
+    },
+    date: '2026-10-05',
+    image: '/location/makkah.webp',
+  },
 ];
