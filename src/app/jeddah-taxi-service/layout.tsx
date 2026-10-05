@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 
+const PAGE_URL = 'https://saudicabsgmc.com/jeddah-taxi-service'
+const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/jeddah-hero-saudi-cabs-gmc.webp', width: 2000, height: 1334, alt: 'Private taxi and transport service in Jeddah – Saudi Cabs GMC', type: 'image/webp' }
+
 export const metadata: Metadata = {
-  title: 'Taxi Service in Jeddah | King Abdulaziz Airport Transfer & Cab',
+  title: 'Jeddah Taxi Service | Airport Transfers & Private Transport',
   description:
-    'Taxi service in Jeddah. Book cab from King Abdulaziz International Airport, Corniche, malls & business districts. Route-based fares, 24/7. Book via WhatsApp now.',
+    'Book private Jeddah taxi and airport transfers to Makkah, Madinah and Taif. Choose Sedan, Hyundai Staria or GMC Yukon with route-based fares confirmed before booking.',
   keywords: [
     'taxi jeddah', 'cab jeddah', 'jeddah airport taxi', 'king abdulaziz airport transfer',
     'jeddah to makkah taxi', 'jeddah corniche cab', 'private driver jeddah',
@@ -11,25 +14,36 @@ export const metadata: Metadata = {
     'تاكسي جدة', 'سيارة أجرة جدة', 'نقل مطار الملك عبدالعزيز', 'تاكسي جدة مكة',
   ],
   alternates: {
-    canonical: 'https://saudicabsgmc.com/jeddah-taxi-service',
+    canonical: PAGE_URL,
   },
   openGraph: {
-    title: 'Taxi Service in Jeddah – Saudi Cabs GMC',
-    description: 'Book taxi in Jeddah. Airport transfers, Corniche, Makkah. Fixed prices 24/7.',
-    url: 'https://saudicabsgmc.com/jeddah-taxi-service',
-    images: [{ url: 'https://saudicabsgmc.com/location/jeddah.webp', width: 1200, height: 630, alt: 'Taxi Service in Jeddah – Saudi Cabs GMC' }],
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'ar_SA',
+    siteName: 'Saudi Cabs GMC',
+    title: 'Jeddah Taxi Service | Airport Transfers & Private Transport',
+    description: 'Book private Jeddah taxi and airport transfers to Makkah, Madinah and Taif. Choose Sedan, Hyundai Staria or GMC Yukon with route-based fares confirmed before booking.',
+    url: PAGE_URL,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jeddah Taxi Service | Airport Transfers & Private Transport',
+    description: 'Book private Jeddah taxi and airport transfers to Makkah, Madinah and Taif. Choose Sedan, Hyundai Staria or GMC Yukon with route-based fares confirmed before booking.',
+    images: [OG_IMAGE.url],
   },
 }
 
 const jeddahLocalBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'TaxiService'],
-  '@id': 'https://saudicabsgmc.com/jeddah-taxi-service#business',
+  '@id': `${PAGE_URL}#business`,
   name: 'Saudi Cabs GMC — Jeddah Taxi Service',
-  url: 'https://saudicabsgmc.com/jeddah-taxi-service',
+  url: PAGE_URL,
   telephone: '+923097811785',
-  image: 'https://saudicabsgmc.com/location/jeddah.webp',
-  description: 'Premium taxi service in Jeddah. King Abdulaziz Airport (KAIA) transfers, Corniche, business districts, intercity routes to Makkah, Madinah & Taif. Fixed prices 24/7.',
+  email: 'info@saudicabsgmc.com',
+  image: OG_IMAGE.url,
+  description: 'Private taxi and transport in Jeddah: King Abdulaziz International Airport (KAIA) transfers, city rides, business and chauffeur services, and intercity routes to Makkah, Madinah and Taif. Route-based fares, 24/7 booking.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Jeddah',
@@ -43,27 +57,42 @@ const jeddahLocalBusinessSchema = {
     dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
     opens: '00:00', closes: '23:59',
   },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Jeddah taxi and transport services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'King Abdulaziz Airport transfers' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jeddah city transport' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jeddah to Makkah, Madinah and Taif intercity transport' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Private driver and chauffeur service' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Family and group transport' } },
+    ],
+  },
   parentOrganization: { '@id': 'https://saudicabsgmc.com/#organization' },
 }
 
 const jeddahBreadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://saudicabsgmc.com' },
-    { '@type': 'ListItem', position: 2, name: 'Jeddah Taxi Service', item: 'https://saudicabsgmc.com/jeddah-taxi-service' },
+    { '@type': 'ListItem', position: 2, name: 'Jeddah Taxi Service', item: PAGE_URL },
   ],
 }
 
 const jeddahWebPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://saudicabsgmc.com/jeddah-taxi-service#webpage',
-  name: 'Taxi Service in Jeddah | King Abdulaziz Airport Transfer & Cab',
-  url: 'https://saudicabsgmc.com/jeddah-taxi-service',
+  '@id': `${PAGE_URL}#webpage`,
+  name: 'Jeddah Taxi Service | Airport Transfers & Private Transport',
+  url: PAGE_URL,
+  inLanguage: 'en',
   isPartOf: { '@id': 'https://saudicabsgmc.com/#website' },
-  about: { '@id': 'https://saudicabsgmc.com/jeddah-taxi-service#business' },
-  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2'] },
+  about: { '@id': `${PAGE_URL}#business` },
+  breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+  primaryImageOfPage: { '@type': 'ImageObject', url: OG_IMAGE.url, width: OG_IMAGE.width, height: OG_IMAGE.height },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.mk-hero-intro'] },
 }
 
 export default function JeddahLayout({ children }: { children: React.ReactNode }) {

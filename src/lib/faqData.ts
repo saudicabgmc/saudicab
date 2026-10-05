@@ -472,12 +472,12 @@ export const jeddahFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'What cab services does Saudi Cabs GMC offer in Jeddah?',
-      ar: 'ما هي خدمات الكاب التي تقدمها Saudi Cabs GMC في جدة؟',
+      en: 'How much is a private taxi from Jeddah Airport to Makkah?',
+      ar: 'كم سعر تاكسي خاص من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers route-based fares, professional drivers, a range of vehicle options, and 24/7 availability in Jeddah. We cover major Jeddah neighborhoods including Al-Hamra, Al-Rawdah, Al-Corniche, Al-Muhammadiyah, Obhur, and North Jeddah.',
-      ar: 'تقدم Saudi Cabs GMC رحلات بأسعار حسب المسار وسائقين محترفين ومجموعة متنوعة من السيارات وتوفراً على مدار الساعة في جدة. نغطي أبرز أحياء جدة بما فيها الحمراء والروضة والكورنيش والمحمدية وأبحر وشمال جدة.',
+      en: 'A private taxi from Jeddah Airport to a Makkah hotel is 330 SAR by Sedan, 380 SAR by Hyundai Staria or 530 SAR by GMC Yukon, per vehicle. The fare is confirmed on WhatsApp before you travel.',
+      ar: 'سعر التاكسي الخاص من مطار جدة إلى فندق في مكة المكرمة هو ٣٣٠ ريال بالسيدان، و٣٨٠ ريال بهيونداي ستاريا، و٥٣٠ ريال بـGMC يوكون، للسيارة الواحدة. يتم تأكيد السعر عبر واتساب قبل رحلتك.',
     },
   },
   {
@@ -552,12 +552,12 @@ export const jeddahFaqs: FAQItem[] = [
   },
   {
     q: {
-      en: 'How do I book a luxury cab for a VIP transfer in Jeddah?',
-      ar: 'كيف أحجز كاباً فاخراً لتوصيل VIP في جدة؟',
+      en: 'Do I pay per person or per vehicle?',
+      ar: 'هل أدفع للفرد أم للسيارة؟',
     },
     a: {
-      en: 'Saudi Cabs GMC offers luxury vehicle options in Jeddah including premium SUVs and executive sedans. To book a VIP or luxury transfer, contact us via WhatsApp, specify the vehicle type and occasion, and we will arrange a top-tier professional service.',
-      ar: 'Saudi Cabs GMC تقدم خيارات سيارات فاخرة في جدة تشمل سيارات دفع رباعي راقية وسيدانات تنفيذية. لحجز توصيل VIP أو فاخر، تواصل معنا عبر واتساب وحدد نوع السيارة والمناسبة وسنرتب لك خدمة احترافية من الدرجة الأولى.',
+      en: 'Prices are per vehicle, not per person. The same Sedan, Staria or GMC Yukon fare applies whether one passenger travels or the vehicle is full, up to its seat limit.',
+      ar: 'الأسعار للسيارة الواحدة وليست للفرد. ينطبق سعر السيدان أو ستاريا أو GMC يوكون نفسه سواء سافر راكب واحد أو امتلأت السيارة حتى سعتها القصوى.',
     },
   },
 ]
