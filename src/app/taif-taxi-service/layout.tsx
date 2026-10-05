@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const PAGE_URL = 'https://saudicabsgmc.com/taif-taxi-service'
-const OG_IMAGE = { url: 'https://saudicabsgmc.com/location/taif.webp', width: 600, height: 480, alt: 'Mountain road near Taif – Saudi Cabs GMC private taxi service', type: 'image/webp' }
+const OG_IMAGE = { url: 'https://saudicabsgmc.com/location/taif.webp', width: 1672, height: 941, alt: 'Al-Hada mountain road and rose fields at sunset, Taif – Saudi Cabs GMC private taxi service', type: 'image/webp' }
 
 export const metadata: Metadata = {
   title: 'Taif Taxi Service | Airport, Mountain & Private Transfers',

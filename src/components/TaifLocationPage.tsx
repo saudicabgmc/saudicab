@@ -232,7 +232,7 @@ export default function TaifLocationPage({ cityName, citySlogan, citySlug, heroI
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(220px, 340px) 1fr', gap: '36px', alignItems: 'center' }} className="tf-split">
             <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 12px 32px rgba(27,67,50,0.18)' }}>
-              <img src={heroImage} alt="Mountain road near Al-Hada, Taif" width={340} height={260} loading="lazy" style={{ width: '100%', height: '260px', objectFit: 'cover', display: 'block' }} />
+              <img src={heroImage} alt="Al-Hada mountain road and rose fields at sunset, Taif" width={340} height={260} loading="lazy" style={{ width: '100%', height: '260px', objectFit: 'cover', display: 'block' }} />
             </div>
             <div>
               <span className="section-tag" style={{ background: 'rgba(45,106,79,0.1)', border: '1px solid rgba(45,106,79,0.3)', color: GREEN }}>{isAr ? 'الهدا' : 'Al-Hada'}</span>
