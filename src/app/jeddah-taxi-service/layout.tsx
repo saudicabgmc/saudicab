@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const PAGE_URL = 'https://saudicabsgmc.com/jeddah-taxi-service'
-const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/jeddah-hero-saudi-cabs-gmc.webp', width: 2000, height: 1334, alt: 'Private taxi and transport service in Jeddah – Saudi Cabs GMC', type: 'image/webp' }
+const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/jeddah-hero-saudi-cabs-gmc.webp', width: 750, height: 536, alt: 'King Fahd Fountain at sunset, Jeddah – Saudi Cabs GMC private taxi service', type: 'image/webp' }
 
 export const metadata: Metadata = {
   title: 'Jeddah Taxi Service | Airport Transfers & Private Transport',
