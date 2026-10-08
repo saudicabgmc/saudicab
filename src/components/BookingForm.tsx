@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Car, MapPin, Navigation, Calendar, Clock, Users, MessageCircle, ChevronDown, Check, Phone, User, CheckCircle, Briefcase, HelpCircle, Home } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
-import { vehicleImages, findRoutePrice } from '@/lib/pricingData'
+import { vehicleImages } from '@/lib/pricingData'
 
 const CITIES = {
   ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'الرياض', 'الدمام', 'مطار جدة الدولي', 'مطار المدينة المنورة', 'موقع آخر'],
@@ -215,8 +215,6 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
     form.to.toLowerCase().includes('airport') ||
     form.to.includes('مطار')
 
-  const routePrice = findRoutePrice(form.from, form.to, vehicle)
-
   const validate = () => {
     const e: Record<string, string> = {}
     if (!vehicle)   e.vehicle  = isAr ? 'اختر السيارة أولاً'    : 'Please select a vehicle'
@@ -268,11 +266,10 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
     const flightStr = isAirportTransfer ? (isAr ? `رقم الرحلة: ${form.flightNumber}` : `Flight: ${form.flightNumber}`) : ''
     const addressStr = form.pickupAddress.trim() ? (isAr ? `عنوان الاستقبال: ${form.pickupAddress.trim()}` : `Pickup address: ${form.pickupAddress.trim()}`) : ''
     const requestsStr = form.specialRequests ? (isAr ? `طلبات خاصة: ${form.specialRequests}` : `Requests: ${form.specialRequests}`) : ''
-    const priceStr = routePrice ? (isAr ? `السعر المتوقع: ${routePrice} ريال` : `Estimated Price: ${routePrice} SAR`) : ''
 
     const msg = isAr
-      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${enc(vLabel)}%0Aمن: ${enc(fromLabel)}%0Aإلى: ${enc(toLabel)}%0Aالتاريخ: ${enc(form.date)}%0Aالوقت: ${enc(form.time)}%0Aالركاب: ${enc(form.passengers)}${form.name ? `%0Aالاسم: ${enc(form.name)}` : ''}${form.phone ? `%0Aالهاتف: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${addressStr ? `%0A${enc(addressStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}${priceStr ? `%0A${enc(priceStr)}` : ''}`
-      : `Hello, I'd like to book a trip:%0AVehicle: ${enc(vLabel)}%0AFrom: ${enc(fromLabel)}%0ATo: ${enc(toLabel)}%0ADate: ${enc(form.date)}%0ATime: ${enc(form.time)}%0APassengers: ${enc(form.passengers)}${form.name ? `%0AName: ${enc(form.name)}` : ''}${form.phone ? `%0APhone: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${addressStr ? `%0A${enc(addressStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}${priceStr ? `%0A${enc(priceStr)}` : ''}`
+      ? `السلام عليكم، أرغب في حجز رحلة:%0Aالسيارة: ${enc(vLabel)}%0Aمن: ${enc(fromLabel)}%0Aإلى: ${enc(toLabel)}%0Aالتاريخ: ${enc(form.date)}%0Aالوقت: ${enc(form.time)}%0Aالركاب: ${enc(form.passengers)}${form.name ? `%0Aالاسم: ${enc(form.name)}` : ''}${form.phone ? `%0Aالهاتف: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${addressStr ? `%0A${enc(addressStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}`
+      : `Hello, I'd like to book a trip:%0AVehicle: ${enc(vLabel)}%0AFrom: ${enc(fromLabel)}%0ATo: ${enc(toLabel)}%0ADate: ${enc(form.date)}%0ATime: ${enc(form.time)}%0APassengers: ${enc(form.passengers)}${form.name ? `%0AName: ${enc(form.name)}` : ''}${form.phone ? `%0APhone: ${enc(form.phone)}` : ''}${flightStr ? `%0A${enc(flightStr)}` : ''}${addressStr ? `%0A${enc(addressStr)}` : ''}${luggageStr ? `%0A${enc(luggageStr)}` : ''}${requestsStr ? `%0A${enc(requestsStr)}` : ''}`
 
     const link = `https://wa.me/923097811785?text=${msg}`
     setWaLink(link)
@@ -625,29 +622,6 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
               onChange={e => set('specialRequests', e.target.value)}
               style={{ minHeight: '68px', resize: 'vertical', padding: '10px 12px' }}
             />
-          </div>
-        </div>
-      )}
-
-      {/* Live Price Preview */}
-      {routePrice !== null && (
-        <div className="animate-fadeInUp" style={{
-          background: 'rgba(11,61,46,0.04)',
-          border: '1.5px solid var(--primary)',
-          borderRadius: '12px',
-          padding: '12px 16px',
-          marginBottom: '16px',
-          textAlign: 'center',
-          boxShadow: '0 4px 12px rgba(11,61,46,0.06)'
-        }}>
-          <div style={{ fontSize: '0.76rem', color: 'var(--muted-foreground)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-            {isAr ? 'السعر التقديري — يُؤكد عبر واتساب' : 'Estimated fare — confirmed on WhatsApp'}
-          </div>
-          <div style={{ fontSize: '1.65rem', fontWeight: '950', color: 'var(--primary)', marginTop: '3px', lineHeight: 1.1 }}>
-            {routePrice} <span style={{ fontSize: '0.9rem', fontWeight: '700' }}>SAR</span>
-          </div>
-          <div style={{ fontSize: '0.7rem', color: 'var(--muted-foreground)', marginTop: '4px', fontWeight: '600' }}>
-            {isAr ? 'للسيارة الواحدة وليس للفرد • شامل الضرائب والرسوم • بدون دفع مسبق' : 'Per vehicle, not per person • Includes all taxes & fees • No prepayment'}
           </div>
         </div>
       )}
