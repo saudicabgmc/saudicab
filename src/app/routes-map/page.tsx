@@ -726,6 +726,51 @@ export default function RoutesMap() {
         </div>
       </section>
 
+      {/* ── International GCC Transfers ── */}
+      <section aria-labelledby="routes-intl-title" style={{ padding: '70px 0', background: 'linear-gradient(135deg, #1b2735 0%, #28384d 100%)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+            <span className="section-tag" style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.4)', color: 'var(--primary)' }}>
+              {isAr ? 'خارج السعودية' : 'Beyond Saudi Arabia'}
+            </span>
+            <h2 id="routes-intl-title" style={{ color: 'white', fontSize: 'clamp(1.3rem, 2.6vw, 1.7rem)', fontWeight: 900, marginTop: '12px', marginBottom: '8px' }}>
+              {isAr ? 'رحلات خاصة دولية من الرياض' : 'International Private Transfers from Riyadh'}
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem', maxWidth: '560px', margin: '0 auto' }}>
+              {isAr
+                ? 'رحلات طويلة مخصصة تُحجز مسبقاً عبر الحدود البرية إلى دول مجلس التعاون الخليجي — تواصل معنا عبر واتساب للتأكد من الإمكانية والمستندات المطلوبة.'
+                : 'Custom, advance-booked long-distance trips across the land border to other GCC countries — contact us on WhatsApp to confirm feasibility and documentation.'}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+            {([
+              { href: '/riyadh-to-doha', en: 'Riyadh → Doha, Qatar', ar: 'الرياض ← الدوحة، قطر', dist: { en: '~1,100 km', ar: 'نحو ١,١٠٠ كم' } },
+              { href: '/riyadh-to-dubai', en: 'Riyadh → Dubai, UAE', ar: 'الرياض ← دبي، الإمارات', dist: { en: '~1,230 km', ar: 'نحو ١,٢٣٠ كم' } },
+              { href: '/riyadh-to-abu-dhabi', en: 'Riyadh → Abu Dhabi, UAE', ar: 'الرياض ← أبوظبي، الإمارات', dist: { en: '~1,050 km', ar: 'نحو ١,٠٥٠ كم' } },
+              { href: '/riyadh-to-bahrain', en: 'Riyadh → Manama, Bahrain', ar: 'الرياض ← المنامة، البحرين', dist: { en: '~480 km', ar: 'نحو ٤٨٠ كم' } },
+              { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait City', ar: 'الرياض ← مدينة الكويت', dist: { en: '~550 km', ar: 'نحو ٥٥٠ كم' } },
+              { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat, Oman', ar: 'الرياض ← مسقط، عمان', dist: { en: '~1,900+ km via UAE', ar: 'نحو ١,٩٠٠+ كم عبر الإمارات' } },
+            ]).map(d => (
+              <Link key={d.href} href={d.href} style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+                padding: '16px 18px', borderRadius: '14px', textDecoration: 'none',
+                background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
+                transition: 'all 0.2s',
+              }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'none' }}
+              >
+                <div>
+                  <div style={{ color: 'white', fontWeight: 800, fontSize: '0.92rem', marginBottom: '2px' }}>{isAr ? d.ar : d.en}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.76rem' }}>{isAr ? d.dist.ar : d.dist.en}</div>
+                </div>
+                <ArrowRight size={16} color="var(--primary)" style={{ flexShrink: 0, transform: isAr ? 'scaleX(-1)' : undefined }} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Booking CTA ── */}
       <section aria-labelledby="routes-cta-title" style={{ padding: '64px 0', background: 'linear-gradient(135deg, #0B3D2E 0%, #071f17 100%)', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '640px' }}>

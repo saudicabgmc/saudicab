@@ -4,10 +4,10 @@ import { MessageCircle, Globe, Mail } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 
-const locationSlugs = ['makkah-taxi-service', 'madinah-taxi-service', 'jeddah-taxi-service', 'taif-taxi-service']
+const locationSlugs = ['makkah-taxi-service', 'madinah-taxi-service', 'jeddah-taxi-service', 'taif-taxi-service', 'riyadh-taxi-service', 'dammam-taxi-service']
 const locationNames = {
-  en: ['Makkah', 'Madinah', 'Jeddah', 'Taif'],
-  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف'],
+  en: ['Makkah', 'Madinah', 'Jeddah', 'Taif', 'Riyadh', 'Dammam'],
+  ar: ['مكة المكرمة', 'المدينة المنورة', 'جدة', 'الطائف', 'الرياض', 'الدمام'],
 }
 
 const guideLinks = [
@@ -16,6 +16,15 @@ const guideLinks = [
   { href: '/taxi-prices-saudi-arabia', en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' },
   { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
   { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
+]
+
+const intlLinks = [
+  { href: '/riyadh-to-doha', en: 'Riyadh → Doha', ar: 'الرياض ← الدوحة' },
+  { href: '/riyadh-to-dubai', en: 'Riyadh → Dubai', ar: 'الرياض ← دبي' },
+  { href: '/riyadh-to-abu-dhabi', en: 'Riyadh → Abu Dhabi', ar: 'الرياض ← أبوظبي' },
+  { href: '/riyadh-to-bahrain', en: 'Riyadh → Bahrain', ar: 'الرياض ← البحرين' },
+  { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait', ar: 'الرياض ← الكويت' },
+  { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat', ar: 'الرياض ← مسقط' },
 ]
 
 const socialLinks = [
@@ -82,6 +91,16 @@ export default function Footer() {
             <ul className="footer-links">
               {guideLinks.map((g) => (
                 <li key={g.href}><Link href={g.href}>{isAr ? g.ar : g.en}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* International Transfers */}
+          <div>
+            <h4 className="footer-heading">{isAr ? 'رحلات دولية' : 'International Transfers'}</h4>
+            <ul className="footer-links">
+              {intlLinks.map((r) => (
+                <li key={r.href}><Link href={r.href}>{isAr ? r.ar : r.en}</Link></li>
               ))}
             </ul>
           </div>

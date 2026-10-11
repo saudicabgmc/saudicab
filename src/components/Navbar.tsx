@@ -9,6 +9,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [guidesOpen, setGuidesOpen] = useState(false)
+  const [intlOpen, setIntlOpen] = useState(false)
   const { lang, toggle, isAr } = useLang()
   const tr = t[lang].nav
 
@@ -18,6 +19,8 @@ export default function Navbar() {
     { href: '/madinah-taxi-service', label: tr.madinah },
     { href: '/jeddah-taxi-service', label: tr.jeddah },
     { href: '/taif-taxi-service', label: tr.taif },
+    { href: '/riyadh-taxi-service', label: isAr ? 'الرياض' : 'Riyadh' },
+    { href: '/dammam-taxi-service', label: isAr ? 'الدمام' : 'Dammam' },
     { href: '/routes-map', label: isAr ? 'خريطة الخطوط' : 'Routes Map' },
     { href: '/blog', label: isAr ? 'المدونة' : 'Blog' },
   ]
@@ -28,6 +31,15 @@ export default function Navbar() {
     { href: '/taxi-prices-saudi-arabia', label: isAr ? 'دليل الأسعار' : 'Taxi Prices Guide' },
     { href: '/umrah-travel-guide', label: isAr ? 'دليل سفر العمرة' : 'Umrah Travel Guide' },
     { href: '/hajj-transport-faq', label: isAr ? 'أسئلة الحج' : 'Hajj Transport FAQ' },
+  ]
+
+  const intlRoutes = [
+    { href: '/riyadh-to-doha', label: isAr ? 'الرياض ← الدوحة' : 'Riyadh → Doha' },
+    { href: '/riyadh-to-dubai', label: isAr ? 'الرياض ← دبي' : 'Riyadh → Dubai' },
+    { href: '/riyadh-to-abu-dhabi', label: isAr ? 'الرياض ← أبوظبي' : 'Riyadh → Abu Dhabi' },
+    { href: '/riyadh-to-bahrain', label: isAr ? 'الرياض ← البحرين' : 'Riyadh → Bahrain' },
+    { href: '/riyadh-to-kuwait', label: isAr ? 'الرياض ← الكويت' : 'Riyadh → Kuwait' },
+    { href: '/riyadh-to-muscat', label: isAr ? 'الرياض ← مسقط' : 'Riyadh → Muscat' },
   ]
 
   useEffect(() => {
@@ -86,6 +98,34 @@ export default function Navbar() {
                 {guides.map(g => (
                   <Link key={g.href} href={g.href} style={{ display: 'block', padding: '10px 20px', color: 'var(--foreground)', textDecoration: 'none', fontWeight: '600', fontSize: '0.88rem', transition: 'background 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--muted)')} onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}>
                     {g.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* International Dropdown */}
+          <div
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setIntlOpen(true)}
+            onMouseLeave={() => setIntlOpen(false)}
+          >
+            <button
+              onClick={() => setIntlOpen(!intlOpen)}
+              aria-haspopup="true"
+              aria-expanded={intlOpen}
+              className={`nav-link ${scrolled ? 'nav-link-dark' : 'nav-link-white'}`}
+              style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
+              {isAr ? 'رحلات دولية' : 'International'}
+              <ChevronDown size={14} style={{ transform: intlOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+            </button>
+
+            {intlOpen && (
+              <div style={{ position: 'absolute', top: '100%', left: isAr ? 'auto' : 0, right: isAr ? 0 : 'auto', background: 'white', minWidth: '200px', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.15)', padding: '10px 0', zIndex: 100, border: '1px solid var(--border)' }}>
+                {intlRoutes.map(r => (
+                  <Link key={r.href} href={r.href} style={{ display: 'block', padding: '10px 20px', color: 'var(--foreground)', textDecoration: 'none', fontWeight: '600', fontSize: '0.88rem', transition: 'background 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--muted)')} onMouseLeave={(e) => (e.currentTarget.style.background = 'none')}>
+                    {r.label}
                   </Link>
                 ))}
               </div>
@@ -183,6 +223,27 @@ export default function Navbar() {
                   {guides.map(g => (
                     <Link key={g.href} href={g.href} onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '6px 0', color: 'var(--muted-foreground)', fontSize: '0.9rem', fontWeight: '600' }}>
                       {g.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile International Expandable */}
+            <div style={{ borderBottom: '1px solid var(--border)' }}>
+              <button
+                onClick={() => setIntlOpen(!intlOpen)}
+                aria-expanded={intlOpen}
+                style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', fontWeight: '700', color: 'var(--primary)', background: 'none', border: 'none', fontSize: '0.95rem' }}
+              >
+                {isAr ? 'رحلات دولية' : 'International Transfers'}
+                <ChevronDown size={18} style={{ transform: intlOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+              </button>
+              {intlOpen && (
+                <div style={{ padding: '0 0 12px 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {intlRoutes.map(r => (
+                    <Link key={r.href} href={r.href} onClick={() => setMenuOpen(false)} style={{ display: 'block', padding: '6px 0', color: 'var(--muted-foreground)', fontSize: '0.9rem', fontWeight: '600' }}>
+                      {r.label}
                     </Link>
                   ))}
                 </div>
