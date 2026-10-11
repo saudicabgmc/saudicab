@@ -946,3 +946,155 @@ export const riyadhToDubaiFaqs: FAQItem[] = [
     },
   },
 ]
+
+export const riyadhToBahrainFaqs: FAQItem[] = [
+  {
+    q: { en: 'Can I book a private taxi from Riyadh to Bahrain?', ar: 'هل يمكنني حجز تاكسي خاص من الرياض إلى البحرين؟' },
+    a: {
+      en: 'Yes, this is available as a custom, advance-booked trip via the King Fahd Causeway. Send your travel dates on WhatsApp so we can confirm feasibility, documentation and a current quote.',
+      ar: 'نعم، هذه رحلة مخصصة تُحجز مسبقاً عبر جسر الملك فهد. أرسل مواعيد سفرك عبر واتساب لنؤكد لك الإمكانية والمستندات المطلوبة والسعر الحالي.',
+    },
+  },
+  {
+    q: { en: 'Do I cross into Bahrain by a land border or a causeway?', ar: 'هل أعبر إلى البحرين عبر حدود برية أم جسر؟' },
+    a: {
+      en: "By causeway — the King Fahd Causeway, a 25 km toll bridge connecting Saudi Arabia's Eastern Province to Bahrain, with immigration and customs posts at both ends.",
+      ar: 'عبر جسر — جسر الملك فهد، وهو جسر رسوم بطول ٢٥ كم يربط المنطقة الشرقية بالسعودية بالبحرين، وله نقاط جوازات وجمارك عند الطرفين.',
+    },
+  },
+  {
+    q: { en: 'Do I need a visa to travel from Riyadh to Bahrain?', ar: 'هل أحتاج تأشيرة للسفر من الرياض إلى البحرين؟' },
+    a: {
+      en: "This depends on your nationality and current Bahraini entry requirements, which we don't control. Check Bahrain's official government portal before booking.",
+      ar: 'يعتمد ذلك على جنسيتك ومتطلبات الدخول البحرينية الحالية، وهي أمور لا نتحكم بها. راجع البوابة الحكومية الرسمية للبحرين قبل الحجز.',
+    },
+  },
+  {
+    q: { en: 'How long does the drive from Riyadh to Manama take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى المنامة؟' },
+    a: {
+      en: "The road distance is approximately 480 km. We don't quote a fixed total time, since causeway queue times vary by day — we'll discuss realistic timing based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٤٨٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار عند الجسر تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+    },
+  },
+  {
+    q: { en: 'How much does a Riyadh to Bahrain private transfer cost?', ar: 'كم تكلفة التوصيل الخاص من الرياض إلى البحرين؟' },
+    a: {
+      en: "This route doesn't have a fixed listed fare, since it's a custom international trip. Contact us on WhatsApp with your dates and group size for a current quote.",
+      ar: 'لا يوجد سعر ثابت معروض لهذا الخط، لأنها رحلة دولية مخصصة. تواصل معنا عبر واتساب بمواعيد سفرك وحجم مجموعتك للحصول على سعر حالي.',
+    },
+  },
+  {
+    q: { en: 'Which vehicle suits a family travelling to Bahrain?', ar: 'ما السيارة المناسبة لعائلة مسافرة إلى البحرين؟' },
+    a: {
+      en: 'The Hyundai Staria or GMC Yukon (7 seats) are usually more practical than a Sedan for families with luggage.',
+      ar: 'تُعد هيونداي ستاريا أو GMC يوكون (٧ مقاعد) عادةً أكثر عملية من السيدان للعائلات التي لديها أمتعة.',
+    },
+  },
+]
+
+export const riyadhToKuwaitFaqs: FAQItem[] = [
+  {
+    q: { en: 'Can I book a private taxi from Riyadh to Kuwait City?', ar: 'هل يمكنني حجز تاكسي خاص من الرياض إلى مدينة الكويت؟' },
+    a: {
+      en: 'Yes, this is available as a custom, advance-booked trip rather than a same-day route. Send your travel dates on WhatsApp so we can confirm feasibility, documentation and a current quote.',
+      ar: 'نعم، هذه رحلة مخصصة تُحجز مسبقاً وليست خطاً يومياً ثابتاً. أرسل مواعيد سفرك عبر واتساب لنؤكد لك الإمكانية والمستندات المطلوبة والسعر الحالي.',
+    },
+  },
+  {
+    q: { en: 'Do I need a visa to travel from Riyadh to Kuwait by road?', ar: 'هل أحتاج تأشيرة للسفر من الرياض إلى الكويت براً؟' },
+    a: {
+      en: "This depends on your nationality and current Kuwaiti entry requirements, which we don't control. Check Kuwait's official government e-services portal before booking.",
+      ar: 'يعتمد ذلك على جنسيتك ومتطلبات الدخول الكويتية الحالية، وهي أمور لا نتحكم بها. راجع بوابة الخدمات الحكومية الرسمية للكويت قبل الحجز.',
+    },
+  },
+  {
+    q: { en: 'How long does the drive from Riyadh to Kuwait City take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى مدينة الكويت؟' },
+    a: {
+      en: "The road distance is approximately 550 km. We don't quote a fixed total time because border-crossing duration varies — we'll discuss realistic timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٥٥٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+    },
+  },
+  {
+    q: { en: 'How much does a Riyadh to Kuwait private transfer cost?', ar: 'كم تكلفة التوصيل الخاص من الرياض إلى الكويت؟' },
+    a: {
+      en: "This route doesn't have a fixed listed fare, since it's a custom international trip. Contact us on WhatsApp with your dates and group size for a current quote.",
+      ar: 'لا يوجد سعر ثابت معروض لهذا الخط، لأنها رحلة دولية مخصصة. تواصل معنا عبر واتساب بمواعيد سفرك وحجم مجموعتك للحصول على سعر حالي.',
+    },
+  },
+  {
+    q: { en: 'Which vehicle suits a family travelling to Kuwait?', ar: 'ما السيارة المناسبة لعائلة مسافرة إلى الكويت؟' },
+    a: {
+      en: 'The Hyundai Staria or GMC Yukon (7 seats) are usually more practical than a Sedan for families with luggage.',
+      ar: 'تُعد هيونداي ستاريا أو GMC يوكون (٧ مقاعد) عادةً أكثر عملية من السيدان للعائلات التي لديها أمتعة.',
+    },
+  },
+]
+
+export const riyadhToAbuDhabiFaqs: FAQItem[] = [
+  {
+    q: { en: 'Can I book a private taxi from Riyadh to Abu Dhabi?', ar: 'هل يمكنني حجز تاكسي خاص من الرياض إلى أبوظبي؟' },
+    a: {
+      en: 'Yes, this is available as a custom, advance-booked trip rather than a same-day route. Send your travel dates on WhatsApp so we can confirm feasibility, documentation and a current quote.',
+      ar: 'نعم، هذه رحلة مخصصة تُحجز مسبقاً وليست خطاً يومياً ثابتاً. أرسل مواعيد سفرك عبر واتساب لنؤكد لك الإمكانية والمستندات المطلوبة والسعر الحالي.',
+    },
+  },
+  {
+    q: { en: 'Is Riyadh to Abu Dhabi the same route as Riyadh to Dubai?', ar: 'هل خط الرياض إلى أبوظبي هو نفسه خط الرياض إلى دبي؟' },
+    a: {
+      en: "It crosses the same Saudi-UAE border, but Abu Dhabi is somewhat closer to Saudi Arabia than Dubai, so the distance and drop-off point are different. Tell us which city you're headed to when you book.",
+      ar: 'يعبر نفس الحدود السعودية الإماراتية، لكن أبوظبي أقرب نسبياً إلى السعودية من دبي، لذا تختلف المسافة ونقطة التوصيل. أخبرنا بالمدينة التي تتجه إليها عند الحجز.',
+    },
+  },
+  {
+    q: { en: 'Do I need a visa to travel from Riyadh to Abu Dhabi by road?', ar: 'هل أحتاج تأشيرة للسفر من الرياض إلى أبوظبي براً؟' },
+    a: {
+      en: "This depends on your nationality and current UAE entry requirements, which we don't control. Check the UAE's official government portal before booking.",
+      ar: 'يعتمد ذلك على جنسيتك ومتطلبات الدخول الإماراتية الحالية، وهي أمور لا نتحكم بها. راجع البوابة الحكومية الرسمية للإمارات قبل الحجز.',
+    },
+  },
+  {
+    q: { en: 'How long does the drive from Riyadh to Abu Dhabi take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى أبوظبي؟' },
+    a: {
+      en: "The road distance is approximately 1,050 km. We don't quote a fixed total time because border-crossing duration varies — we'll discuss realistic timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ١,٠٥٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+    },
+  },
+  {
+    q: { en: 'How much does a Riyadh to Abu Dhabi private transfer cost?', ar: 'كم تكلفة التوصيل الخاص من الرياض إلى أبوظبي؟' },
+    a: {
+      en: "This route doesn't have a fixed listed fare, since it's a custom international trip. Contact us on WhatsApp with your dates and group size for a current quote.",
+      ar: 'لا يوجد سعر ثابت معروض لهذا الخط، لأنها رحلة دولية مخصصة. تواصل معنا عبر واتساب بمواعيد سفرك وحجم مجموعتك للحصول على سعر حالي.',
+    },
+  },
+]
+
+export const riyadhToMuscatFaqs: FAQItem[] = [
+  {
+    q: { en: 'Can I book a private taxi from Riyadh to Muscat?', ar: 'هل يمكنني حجز تاكسي خاص من الرياض إلى مسقط؟' },
+    a: {
+      en: "Possibly, but this route is more complex than our other GCC trips — it typically requires transiting through the UAE, with two border crossings. Message us on WhatsApp with your dates so we can tell you honestly whether this is feasible for your trip.",
+      ar: 'ربما، لكن هذا الخط أكثر تعقيداً من رحلاتنا الأخرى لدول الخليج — إذ يتطلب عادةً المرور عبر الإمارات، بعبور حدودين. راسلنا عبر واتساب بمواعيدك لنخبرك بصراحة إن كانت الرحلة ممكنة.',
+    },
+  },
+  {
+    q: { en: 'Is there a direct land border between Saudi Arabia and Oman?', ar: 'هل توجد حدود برية مباشرة بين السعودية وعمان؟' },
+    a: {
+      en: 'A border exists in a remote part of the Empty Quarter, but there is no standard paved crossing used for regular private passenger travel there. In practice, the realistic overland route goes via the UAE.',
+      ar: 'توجد حدود في منطقة نائية من الربع الخالي، لكن لا يوجد معبر مرصوف معتاد للمسافرين العاديين هناك. عملياً، يمر المسار البري الواقعي عبر الإمارات.',
+    },
+  },
+  {
+    q: { en: 'How long does the drive from Riyadh to Muscat take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى مسقط؟' },
+    a: {
+      en: "The distance via the UAE is well over 1,900 km with two border crossings, so we don't quote a fixed time. We'll discuss realistic timing only once we've confirmed the trip is feasible.",
+      ar: 'تتجاوز المسافة عبر الإمارات ١,٩٠٠ كم مع عبور حدودين، لذا لا نحدد وقتاً ثابتاً. سنناقش التوقيت الواقعي فقط بعد تأكيد إمكانية الرحلة.',
+    },
+  },
+  {
+    q: { en: 'Should I fly to Muscat instead of booking a private car?', ar: 'هل يجب أن أسافر جواً إلى مسقط بدلاً من حجز سيارة خاصة؟' },
+    a: {
+      en: "For most travelers, yes — flying is far more practical for this specific route given the two-border overland journey. We'll always tell you honestly if a road trip isn't the right fit.",
+      ar: 'بالنسبة لمعظم المسافرين، نعم — السفر جواً أكثر عملية بكثير لهذا الخط تحديداً نظراً لعبور حدودين براً. سنخبرك دائماً بصراحة إن لم تكن الرحلة البرية الخيار الأنسب.',
+    },
+  },
+]

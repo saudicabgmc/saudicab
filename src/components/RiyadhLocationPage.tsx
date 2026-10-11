@@ -247,28 +247,26 @@ export default function RiyadhLocationPage({ cityName, citySlogan, citySlug, faq
               : 'Custom, advance-booked long-distance trips across the land border — contact us on WhatsApp to confirm feasibility and documentation.'}
           />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
-            <Link href="/riyadh-to-doha" className="mk-focus" style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
-              padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
-              background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
-            }}>
-              <div>
-                <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? 'الرياض ← الدوحة، قطر' : 'Riyadh → Doha, Qatar'}</div>
-                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? 'نحو ١,١٠٠ كم' : '~1,100 km'}</div>
-              </div>
-              <Arrow />
-            </Link>
-            <Link href="/riyadh-to-dubai" className="mk-focus" style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
-              padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
-              background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
-            }}>
-              <div>
-                <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? 'الرياض ← دبي، الإمارات' : 'Riyadh → Dubai, UAE'}</div>
-                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? 'نحو ١,٢٣٠ كم' : '~1,230 km'}</div>
-              </div>
-              <Arrow />
-            </Link>
+            {([
+              { href: '/riyadh-to-doha', en: 'Riyadh → Doha, Qatar', ar: 'الرياض ← الدوحة، قطر', dist: { en: '~1,100 km', ar: 'نحو ١,١٠٠ كم' } },
+              { href: '/riyadh-to-dubai', en: 'Riyadh → Dubai, UAE', ar: 'الرياض ← دبي، الإمارات', dist: { en: '~1,230 km', ar: 'نحو ١,٢٣٠ كم' } },
+              { href: '/riyadh-to-abu-dhabi', en: 'Riyadh → Abu Dhabi, UAE', ar: 'الرياض ← أبوظبي، الإمارات', dist: { en: '~1,050 km', ar: 'نحو ١,٠٥٠ كم' } },
+              { href: '/riyadh-to-bahrain', en: 'Riyadh → Manama, Bahrain', ar: 'الرياض ← المنامة، البحرين', dist: { en: '~480 km', ar: 'نحو ٤٨٠ كم' } },
+              { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait City', ar: 'الرياض ← مدينة الكويت', dist: { en: '~550 km', ar: 'نحو ٥٥٠ كم' } },
+              { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat, Oman', ar: 'الرياض ← مسقط، عمان', dist: { en: '~1,900+ km via UAE', ar: 'نحو ١,٩٠٠+ كم عبر الإمارات' } },
+            ]).map(d => (
+              <Link key={d.href} href={d.href} className="mk-focus" style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+                padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+                background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
+              }}>
+                <div>
+                  <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? d.ar : d.en}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? d.dist.ar : d.dist.en}</div>
+                </div>
+                <Arrow />
+              </Link>
+            ))}
           </div>
         </div>
       </section>
