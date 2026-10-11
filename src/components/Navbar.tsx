@@ -40,6 +40,8 @@ export default function Navbar() {
     { href: '/riyadh-to-bahrain', label: isAr ? 'الرياض ← البحرين' : 'Riyadh → Bahrain' },
     { href: '/riyadh-to-kuwait', label: isAr ? 'الرياض ← الكويت' : 'Riyadh → Kuwait' },
     { href: '/riyadh-to-muscat', label: isAr ? 'الرياض ← مسقط' : 'Riyadh → Muscat' },
+    { href: '/dammam-to-bahrain', label: isAr ? 'الدمام ← البحرين' : 'Dammam → Bahrain' },
+    { href: '/dammam-to-kuwait', label: isAr ? 'الدمام ← الكويت' : 'Dammam → Kuwait' },
   ]
 
   useEffect(() => {

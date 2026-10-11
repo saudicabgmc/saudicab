@@ -20,6 +20,8 @@ export interface InternationalTransferTheme {
 export interface InternationalTransferProps {
   destinationLabel: string
   breadcrumbLabel: string
+  originCityLabel?: string
+  originCityHref?: string
   theme: InternationalTransferTheme
   heroContent: {
     eyebrow: string
@@ -66,7 +68,8 @@ function Arrow({ size = 15 }: { size?: number }) {
 }
 
 export default function InternationalTransferPage({
-  destinationLabel, breadcrumbLabel, theme, heroContent, quickFacts, journeySection,
+  destinationLabel, breadcrumbLabel, originCityLabel = 'Riyadh', originCityHref = '/riyadh-taxi-service',
+  theme, heroContent, quickFacts, journeySection,
   requirementsSection, whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink, faqs,
 }: InternationalTransferProps) {
   const { isAr } = useLang()
@@ -97,7 +100,7 @@ export default function InternationalTransferPage({
             <ol style={{ listStyle: 'none', display: 'flex', gap: '6px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)' }}>
               <li><Link href="/" className="mk-focus" style={{ color: 'inherit' }}>Home</Link></li>
               <li aria-hidden="true" style={{ display: 'flex' }}><ChevronRight size={14} /></li>
-              <li><Link href="/riyadh-taxi-service" className="mk-focus" style={{ color: 'inherit' }}>Riyadh</Link></li>
+              <li><Link href={originCityHref} className="mk-focus" style={{ color: 'inherit' }}>{originCityLabel}</Link></li>
               <li aria-hidden="true" style={{ display: 'flex' }}><ChevronRight size={14} /></li>
               <li aria-current="page" style={{ color: accent, fontWeight: 700 }}>{breadcrumbLabel}</li>
             </ol>

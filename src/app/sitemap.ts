@@ -53,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/riyadh-to-kuwait`,     lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/riyadh-to-abu-dhabi`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/riyadh-to-muscat`,     lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/dammam-to-bahrain`,    lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/dammam-to-kuwait`,     lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
+
+    // Riyadh / Dammam airport transfers
+    { url: `${BASE}/riyadh-airport-taxi`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/dammam-airport-taxi`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.8 },
 
     // City routes sub-pages
     { url: `${BASE}/makkah-taxi-service/routes`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },

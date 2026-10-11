@@ -1002,6 +1002,78 @@ export const dammamToMadinah: RoutePageData = {
   ],
 }
 
+/* ─── RIYADH AIRPORT → RIYADH CITY ──────────────────────────────── */
+export const riyadhAirportTaxi: RoutePageData = {
+  from:      { ar: 'مطار الملك خالد الدولي', en: 'King Khalid International Airport' },
+  to:        { ar: 'مدينة الرياض', en: 'Riyadh City' },
+  slug:      'riyadh-airport-taxi',
+  duration:  '~35–45 min',
+  distance:  '~35 km',
+  type:      'airport',
+  heroImage: '/hero/hero-fallback-saudi-cabs-gmc.webp',
+  fromCitySlug: 'riyadh-taxi-service',
+  toCitySlug:   'riyadh-taxi-service',
+  description: {
+    en: 'Private cab from King Khalid International Airport (RUH) directly to your hotel, office, or any Riyadh address. Name-board pickup, fixed price, 24/7 availability.',
+    ar: 'كاب خاص من مطار الملك خالد الدولي (RUH) مباشرةً إلى فندقك أو مكتبك أو أي عنوان في الرياض. استقبال بلوحة الاسم، سعر ثابت، توفر ٢٤/٧.',
+  },
+  highlights: [
+    { icon: '🪧', en: 'Name-board meet-and-greet at arrivals hall', ar: 'استقبال بلوحة الاسم في صالة الوصول' },
+    { icon: '✈️', en: 'Flight monitoring — no extra charge for delays', ar: 'متابعة الرحلة — بلا رسوم إضافية للتأخير' },
+    { icon: '🏙️', en: 'Drop-off anywhere in Riyadh, including King Abdullah Financial District', ar: 'توصيل لأي مكان في الرياض، بما في ذلك حي الملك عبدالله المالي' },
+    { icon: '🏨', en: 'Drop-off at all Riyadh hotels and business addresses', ar: 'توصيل لجميع فنادق الرياض والعناوين التجارية' },
+    { icon: '💰', en: 'Fixed fare — no meter, no surge pricing', ar: 'أجرة ثابتة — بلا عداد ولا أسعار متغيرة' },
+    { icon: '⏰', en: '24/7 — every flight, every hour', ar: '٢٤/٧ — لكل رحلة وكل ساعة' },
+  ],
+  vehicles: VEHICLES_STANDARD,
+  whyPrivate: { en: WHY_PRIVATE_EN, ar: WHY_PRIVATE_AR },
+  relatedRoutes: [
+    { slug: 'riyadh-to-makkah',  from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8–9 hrs' },
+    { slug: 'riyadh-to-madinah', from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'المدينة', en: 'Madinah' }, duration: '~9–10 hrs' },
+    { slug: 'riyadh-to-jeddah',  from: { ar: 'الرياض', en: 'Riyadh' }, to: { ar: 'جدة', en: 'Jeddah' },   duration: '~9 hrs' },
+  ],
+  faqs: [
+    { q: { en: 'How far is King Khalid International Airport from central Riyadh?', ar: 'كم يبعد مطار الملك خالد الدولي عن وسط الرياض؟' }, a: { en: 'King Khalid International Airport (RUH) is approximately 35 km north of central Riyadh. The private cab journey takes 35–45 minutes depending on traffic and your exact destination.', ar: 'يبعد مطار الملك خالد الدولي (RUH) حوالي 35 كم شمال وسط الرياض. تستغرق رحلة الكاب الخاص 35-45 دقيقة حسب حركة المرور ووجهتك بالضبط.' } },
+    { q: { en: 'Can I book a cab from Riyadh Airport to Makkah or Madinah?', ar: 'هل يمكنني حجز كاب من مطار الرياض إلى مكة أو المدينة؟' }, a: { en: 'For a long-distance trip like this, book our Riyadh to Makkah or Riyadh to Madinah intercity route and mention your airport pickup when you message us on WhatsApp.', ar: 'لرحلة طويلة كهذه، احجز خط الرياض إلى مكة أو الرياض إلى المدينة بين المدن واذكر استلامك من المطار عند مراسلتنا عبر واتساب.' } },
+  ],
+}
+
+/* ─── DAMMAM AIRPORT → DAMMAM CITY ──────────────────────────────── */
+export const dammamAirportTaxi: RoutePageData = {
+  from:      { ar: 'مطار الملك فهد الدولي', en: 'King Fahd International Airport' },
+  to:        { ar: 'مدينة الدمام', en: 'Dammam City' },
+  slug:      'dammam-airport-taxi',
+  duration:  '~25–35 min',
+  distance:  '~20 km',
+  type:      'airport',
+  heroImage: '/hero/hero-fallback-saudi-cabs-gmc.webp',
+  fromCitySlug: 'dammam-taxi-service',
+  toCitySlug:   'dammam-taxi-service',
+  description: {
+    en: 'Private cab from King Fahd International Airport (DMM) directly to your hotel, office, or any address in Dammam, Khobar or Dhahran. Name-board pickup, fixed price, 24/7 availability.',
+    ar: 'كاب خاص من مطار الملك فهد الدولي (DMM) مباشرةً إلى فندقك أو مكتبك أو أي عنوان في الدمام أو الخبر أو الظهران. استقبال بلوحة الاسم، سعر ثابت، توفر ٢٤/٧.',
+  },
+  highlights: [
+    { icon: '🪧', en: 'Name-board meet-and-greet at arrivals hall', ar: 'استقبال بلوحة الاسم في صالة الوصول' },
+    { icon: '✈️', en: 'Flight monitoring — no extra charge for delays', ar: 'متابعة الرحلة — بلا رسوم إضافية للتأخير' },
+    { icon: '🏙️', en: 'Drop-off across the Eastern Province — Dammam, Khobar or Dhahran', ar: 'توصيل في أنحاء المنطقة الشرقية — الدمام أو الخبر أو الظهران' },
+    { icon: '🏨', en: 'Drop-off at all Dammam hotels and business addresses', ar: 'توصيل لجميع فنادق الدمام والعناوين التجارية' },
+    { icon: '💰', en: 'Fixed fare — no meter, no surge pricing', ar: 'أجرة ثابتة — بلا عداد ولا أسعار متغيرة' },
+    { icon: '⏰', en: '24/7 — every flight, every hour', ar: '٢٤/٧ — لكل رحلة وكل ساعة' },
+  ],
+  vehicles: VEHICLES_STANDARD,
+  whyPrivate: { en: WHY_PRIVATE_EN, ar: WHY_PRIVATE_AR },
+  relatedRoutes: [
+    { slug: 'dammam-to-makkah',  from: { ar: 'الدمام', en: 'Dammam' }, to: { ar: 'مكة', en: 'Makkah' },   duration: '~8–9 hrs' },
+    { slug: 'dammam-to-madinah', from: { ar: 'الدمام', en: 'Dammam' }, to: { ar: 'المدينة', en: 'Madinah' }, duration: '~9–10 hrs' },
+    { slug: 'makkah-to-dammam',  from: { ar: 'مكة', en: 'Makkah' }, to: { ar: 'الدمام', en: 'Dammam' },   duration: '~8–9 hrs' },
+  ],
+  faqs: [
+    { q: { en: 'How far is King Fahd International Airport from Dammam?', ar: 'كم يبعد مطار الملك فهد الدولي عن الدمام؟' }, a: { en: 'King Fahd International Airport (DMM) is approximately 20 km from central Dammam — it sits well outside the city itself. The private cab journey takes 25–35 minutes depending on traffic and your exact destination.', ar: 'يبعد مطار الملك فهد الدولي (DMM) حوالي 20 كم عن وسط الدمام — فهو يقع خارج المدينة نفسها. تستغرق رحلة الكاب الخاص 25-35 دقيقة حسب حركة المرور ووجهتك بالضبط.' } },
+    { q: { en: 'Can I book a cab from Dammam Airport to Khobar or Dhahran?', ar: 'هل يمكنني حجز كاب من مطار الدمام إلى الخبر أو الظهران؟' }, a: { en: 'Yes, we cover the wider Eastern Province including Khobar and Dhahran. Share your exact destination address when you book on WhatsApp.', ar: 'نعم، نغطي المنطقة الشرقية بأكملها بما فيها الخبر والظهران. شارك عنوان وجهتك بالضبط عند الحجز عبر واتساب.' } },
+  ],
+}
+
 /* ─── MASTER EXPORT MAP ─────────────────────────────────────────── */
 export const allRoutePages: Record<string, RoutePageData> = {
   'jeddah-airport-to-makkah':  jedAirportToMakkah,
@@ -1027,4 +1099,6 @@ export const allRoutePages: Record<string, RoutePageData> = {
   'dammam-to-makkah':          dammamToMakkah,
   'makkah-to-dammam':          makkahToDammam,
   'dammam-to-madinah':         dammamToMadinah,
+  'riyadh-airport-taxi':       riyadhAirportTaxi,
+  'dammam-airport-taxi':       dammamAirportTaxi,
 }

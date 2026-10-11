@@ -236,6 +236,37 @@ export default function DammamLocationPage({ cityName, citySlogan, citySlug, faq
         </div>
       </section>
 
+      {/* ── 6b. International transfers ── */}
+      <section aria-labelledby="dmm-intl-title" style={{ padding: '70px 0', background: `linear-gradient(135deg, ${PETROL2} 0%, ${PETROL} 100%)` }}>
+        <div className="container" style={{ maxWidth: '760px' }}>
+          <Head
+            dark id="dmm-intl-title" tag={isAr ? 'رحلات دولية' : 'International Transfers'}
+            title={isAr ? 'رحلات خاصة من الدمام إلى خارج المملكة' : 'International Private Transfers from Dammam'}
+            subtitle={isAr
+              ? 'رحلات طويلة مخصصة تُحجز مسبقاً عبر الحدود البرية — تواصل معنا عبر واتساب للتأكد من الإمكانية والمستندات المطلوبة.'
+              : 'Custom, advance-booked long-distance trips across the land border — contact us on WhatsApp to confirm feasibility and documentation.'}
+          />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+            {([
+              { href: '/dammam-to-bahrain', en: 'Dammam → Manama, Bahrain', ar: 'الدمام ← المنامة، البحرين', dist: { en: '~50 km', ar: 'نحو ٥٠ كم' } },
+              { href: '/dammam-to-kuwait', en: 'Dammam → Kuwait City', ar: 'الدمام ← مدينة الكويت', dist: { en: '~290 km', ar: 'نحو ٢٩٠ كم' } },
+            ]).map(d => (
+              <Link key={d.href} href={d.href} className="mk-focus" style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+                padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+                background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
+              }}>
+                <div>
+                  <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? d.ar : d.en}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? d.dist.ar : d.dist.en}</div>
+                </div>
+                <Arrow />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 7. Why book with Saudi Cabs GMC ── */}
       <section aria-labelledby="dmm-why-title" style={{ padding: '84px 0', background: PETROL }}>
         <div className="container">

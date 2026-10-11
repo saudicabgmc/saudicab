@@ -96,6 +96,8 @@ const ROUTE_PAGES = [
   { slug: 'jeddah-airport-to-madinah', fromId: 'jeddah',  toId: 'madinah', from: { en: 'Jeddah Airport', ar: 'مطار جدة' },  to: { en: 'Madinah', ar: 'المدينة المنورة' },          duration: { en: 'Approx. 3.5–4 hrs', ar: 'حوالي ٣.٥–٤ ساعات' }, category: 'airport' as const },
   { slug: 'madinah-airport-taxi',      fromId: 'madinah', toId: 'madinah', from: { en: 'Madinah Airport', ar: 'مطار المدينة' }, to: { en: "Prophet's Mosque", ar: 'المسجد النبوي' }, duration: { en: 'Approx. 25–35 min', ar: 'حوالي ٢٥–٣٥ دقيقة' }, category: 'airport' as const },
   { slug: 'taif-airport-taxi',         fromId: 'taif',    toId: 'taif',    from: { en: 'Taif Airport', ar: 'مطار الطائف' },    to: { en: 'Taif City', ar: 'مدينة الطائف' },       duration: { en: 'Approx. 20–30 min', ar: 'حوالي ٢٠–٣٠ دقيقة' }, category: 'airport' as const },
+  { slug: 'riyadh-airport-taxi',       fromId: 'riyadh',  toId: 'riyadh',  from: { en: 'Riyadh Airport', ar: 'مطار الرياض' },  to: { en: 'Riyadh City', ar: 'مدينة الرياض' },       duration: { en: 'Approx. 35–45 min', ar: 'حوالي ٣٥–٤٥ دقيقة' }, category: 'airport' as const },
+  { slug: 'dammam-airport-taxi',       fromId: 'dammam',  toId: 'dammam',  from: { en: 'Dammam Airport', ar: 'مطار الدمام' },  to: { en: 'Dammam City', ar: 'مدينة الدمام' },       duration: { en: 'Approx. 25–35 min', ar: 'حوالي ٢٥–٣٥ دقيقة' }, category: 'airport' as const },
 ]
 
 // Curated quick-access slugs for the Popular Routes strip — looked up from ROUTE_PAGES, not restated.
@@ -750,6 +752,8 @@ export default function RoutesMap() {
               { href: '/riyadh-to-bahrain', en: 'Riyadh → Manama, Bahrain', ar: 'الرياض ← المنامة، البحرين', dist: { en: '~480 km', ar: 'نحو ٤٨٠ كم' } },
               { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait City', ar: 'الرياض ← مدينة الكويت', dist: { en: '~550 km', ar: 'نحو ٥٥٠ كم' } },
               { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat, Oman', ar: 'الرياض ← مسقط، عمان', dist: { en: '~1,900+ km via UAE', ar: 'نحو ١,٩٠٠+ كم عبر الإمارات' } },
+              { href: '/dammam-to-bahrain', en: 'Dammam → Manama, Bahrain', ar: 'الدمام ← المنامة، البحرين', dist: { en: '~50 km', ar: 'نحو ٥٠ كم' } },
+              { href: '/dammam-to-kuwait', en: 'Dammam → Kuwait City', ar: 'الدمام ← مدينة الكويت', dist: { en: '~290 km', ar: 'نحو ٢٩٠ كم' } },
             ]).map(d => (
               <Link key={d.href} href={d.href} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
