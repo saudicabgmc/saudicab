@@ -19,8 +19,6 @@ export default function Navbar() {
     { href: '/madinah-taxi-service', label: tr.madinah },
     { href: '/jeddah-taxi-service', label: tr.jeddah },
     { href: '/taif-taxi-service', label: tr.taif },
-    { href: '/riyadh-taxi-service', label: isAr ? 'الرياض' : 'Riyadh' },
-    { href: '/dammam-taxi-service', label: isAr ? 'الدمام' : 'Dammam' },
     { href: '/routes-map', label: isAr ? 'خريطة الخطوط' : 'Routes Map' },
     { href: '/blog', label: isAr ? 'المدونة' : 'Blog' },
   ]
