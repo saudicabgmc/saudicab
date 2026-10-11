@@ -236,6 +236,43 @@ export default function RiyadhLocationPage({ cityName, citySlogan, citySlug, faq
         </div>
       </section>
 
+      {/* ── 6b. International transfers ── */}
+      <section aria-labelledby="ryd-intl-title" style={{ padding: '70px 0', background: `linear-gradient(135deg, ${SLATE2} 0%, ${SLATE} 100%)` }}>
+        <div className="container" style={{ maxWidth: '760px' }}>
+          <Head
+            dark id="ryd-intl-title" tag={isAr ? 'رحلات دولية' : 'International Transfers'}
+            title={isAr ? 'رحلات خاصة من الرياض إلى خارج المملكة' : 'International Private Transfers from Riyadh'}
+            subtitle={isAr
+              ? 'رحلات طويلة مخصصة تُحجز مسبقاً عبر الحدود البرية — تواصل معنا عبر واتساب للتأكد من الإمكانية والمستندات المطلوبة.'
+              : 'Custom, advance-booked long-distance trips across the land border — contact us on WhatsApp to confirm feasibility and documentation.'}
+          />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+            <Link href="/riyadh-to-doha" className="mk-focus" style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+              padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+              background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
+            }}>
+              <div>
+                <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? 'الرياض ← الدوحة، قطر' : 'Riyadh → Doha, Qatar'}</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? 'نحو ١,١٠٠ كم' : '~1,100 km'}</div>
+              </div>
+              <Arrow />
+            </Link>
+            <Link href="/riyadh-to-dubai" className="mk-focus" style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+              padding: '18px 20px', borderRadius: '14px', textDecoration: 'none',
+              background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.25)',
+            }}>
+              <div>
+                <div style={{ color: 'white', fontWeight: 800, fontSize: '0.95rem', marginBottom: '2px' }}>{isAr ? 'الرياض ← دبي، الإمارات' : 'Riyadh → Dubai, UAE'}</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>{isAr ? 'نحو ١,٢٣٠ كم' : '~1,230 km'}</div>
+              </div>
+              <Arrow />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── 7. Why book with Saudi Cabs GMC ── */}
       <section aria-labelledby="ryd-why-title" style={{ padding: '84px 0', background: SLATE }}>
         <div className="container">

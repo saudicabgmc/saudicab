@@ -46,6 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/riyadh-taxi-service`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/dammam-taxi-service`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
 
+    // International private transfers (advance-booked, custom routes)
+    { url: `${BASE}/riyadh-to-doha`,   lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/riyadh-to-dubai`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
+
     // City routes sub-pages
     { url: `${BASE}/makkah-taxi-service/routes`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/madinah-taxi-service/routes`, lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
