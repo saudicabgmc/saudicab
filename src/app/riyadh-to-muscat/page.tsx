@@ -6,7 +6,7 @@ import {
   whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink,
 } from '@/lib/riyadhToMuscatPageData'
 
-const theme = { dark: '#3a2414', dark2: '#52331c', accent: '#D4AF37' }
+const theme = { dark: '#071f17', dark2: '#0b3d2e', accent: '#D4AF37' }
 
 export default function RiyadhToMuscatPage() {
   return (

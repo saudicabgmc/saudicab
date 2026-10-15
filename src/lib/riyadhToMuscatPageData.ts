@@ -47,10 +47,11 @@ export const requirementsSection = {
   items: [
     'A valid passport for every passenger, meeting entry requirements for both the UAE and Oman.',
     'Confirmation of visa or entry permit requirements for the UAE and for Oman separately — these depend on your nationality and must both be checked.',
-    'Vehicle documentation and insurance valid for cross-border use across all three countries on this route.',
+    'That a vehicle and driver actually authorized for this specific two-border routing are available for your dates — this is not guaranteed by default, and we confirm it with you individually rather than assuming it, the same way we assess the whole trip.',
+    'Vehicle documentation and insurance valid for cross-border use across all three countries on this route, plus any permit or documentation charges that may apply.',
     'A realistic view of total trip time, given two border crossings rather than one.',
   ],
-  disclaimer: 'Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE and Omani immigration authorities respectively. For current, authoritative entry requirements, check the official government portals for both countries before you travel.',
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE and Omani immigration authorities respectively. We also don't guarantee that a vehicle or driver cleared for this two-border route is available for every request until our team confirms it with you directly. For current, authoritative entry requirements, check the official government portals for both countries before you travel.",
   officialLinkLabel: "UAE official government portal (u.ae) — also check Oman's official tourism portal",
   officialLinkUrl: 'https://u.ae/en',
 }
