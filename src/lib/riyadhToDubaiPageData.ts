@@ -37,21 +37,22 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Riyadh to Dubai is a long-distance international road trip of roughly 1,230 km, crossing from Saudi Arabia into the United Arab Emirates at the shared land border. It involves a single border crossing, immigration and customs formalities for everyone in the vehicle, and realistic planning around how long that crossing may take on the day.",
-    "We don't quote a fixed journey time for this route, because the driving time itself (typically well over twelve hours before stops) is only part of the trip — border processing time varies by day, time of year and individual circumstances, and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
+    "At roughly 1,230 km, Riyadh to Dubai is one of the longer cross-border road trips we arrange — longer than our Bahrain and Kuwait transfers, and a full day's drive before you factor in the border itself. The route takes you out of Riyadh, across the Kingdom toward the UAE land border, then on into Dubai — with one immigration and customs crossing for everyone in the vehicle along the way.",
+    "Dubai is one of the busiest business and travel hubs in the Gulf, and a lot of our enquiries for this route come from people combining a family visit with a Dubai stopover, or professionals who'd rather travel by private car with their own luggage and schedule than coordinate connecting flights. Whatever brings you to Dubai, the road trip itself needs the same honest planning: driving time alone runs well past twelve hours, and border processing adds a variable amount on top that we genuinely can't predict from here — it depends on the day, the season, and your own documentation. We'll walk through realistic timing with you on WhatsApp once we know your travel dates.",
   ],
 }
 
 export const requirementsSection = {
   heading: 'What to Prepare Before Booking',
-  intro: "Every traveler's situation is different, so we can't give a single blanket answer here — but these are the things that matter for a Riyadh-to-Dubai road trip, and the things our team will ask you about:",
+  intro: "A Riyadh-to-Dubai trip has more moving parts than a domestic transfer, so before you book, confirm the following with our team directly:",
   items: [
     'A valid passport for every passenger, with the validity period required for entry into the UAE.',
-    'Confirmation of whether you need a visa or entry permit for the UAE — this depends on your nationality and should be checked against current requirements before travel.',
-    'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and the UAE.',
-    'Realistic expectations around border wait times, which can vary and are outside our control.',
+    'Whether you need a visa or entry permit for the UAE — this depends on your nationality and current rules, so check it against official sources before travel, not against general assumptions.',
+    'That a vehicle and driver authorized for cross-border travel into the UAE are actually available for your travel date — not every vehicle in our fleet is cleared for international trips, and this needs to be confirmed with us in advance, not assumed.',
+    'Any cross-border charges, permit costs or documentation fees that may apply, confirmed with our team before you commit to a date.',
+    'Your exact pickup location and timing in Riyadh, and realistic expectations around border wait times, which vary and are outside our control.',
   ],
-  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE immigration authorities. For current, authoritative entry requirements, check the UAE's official government portal before you travel.",
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the UAE's official government portal before you travel.",
   officialLinkLabel: 'UAE official government portal (u.ae)',
   officialLinkUrl: 'https://u.ae/en',
 }
@@ -59,8 +60,8 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Dubai',
   paragraphs: [
-    "For a distance like Riyadh to Dubai, flying is usually the faster option, and we'd rather tell you that directly than oversell a road trip that isn't the right fit for every traveler. A private car makes more sense if you specifically want to travel by road — for example, bringing a vehicle's worth of luggage, travelling as a family or group who'd rather not coordinate flights, or treating the drive itself as part of the trip.",
-    'Whichever you choose, the advantage of a private vehicle over any shared or public transport option on this route is the same as on our domestic trips: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way.',
+    "Riyadh and Dubai are both major air hubs, and for most travelers flying is simply the faster way to cover this distance — we'd rather say that plainly than sell you on a 1,230 km drive that doesn't suit your trip. A private car earns its place when the road itself is part of the plan: families travelling with more luggage than a flight allows comfortably, groups who'd rather not split across separate bookings, or anyone making stops in Saudi Arabia along the way before continuing on to the UAE.",
+    "If a road trip is the right call for you, the point of booking it privately rather than any shared option is the same reasoning behind every trip we run: one vehicle reserved for your group only, a pickup time built around you instead of a fixed schedule, and no changing vehicles partway through the journey.",
   ],
 }
 

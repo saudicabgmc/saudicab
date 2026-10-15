@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const PAGE_URL = 'https://saudicabsgmc.com/riyadh-to-dubai'
-const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/hero-fallback-saudi-cabs-gmc.webp', width: 800, height: 533, alt: 'Saudi Cabs GMC private transfer from Riyadh to Dubai, UAE', type: 'image/webp' }
+const OG_IMAGE = { url: 'https://saudicabsgmc.com/fleet/gmc-yukon-exterior-front-grille-saudi-cabs-gmc.webp', width: 800, height: 533, alt: 'Saudi Cabs GMC GMC Yukon for the Riyadh to Dubai private transfer', type: 'image/webp' }
 
 export const metadata: Metadata = {
   title: 'Riyadh to Dubai Taxi | Private Transfer to the UAE',
