@@ -41,10 +41,11 @@ export const requirementsSection = {
   items: [
     'A valid passport (or, for GCC nationals, the ID accepted at the causeway) for every passenger.',
     'Confirmation of whether you need a visa for Bahrain — this depends on your nationality and should be checked against current requirements before travel.',
-    'Vehicle documentation and insurance valid for use on the King Fahd Causeway and within Bahrain.',
+    'That a vehicle and driver authorized for causeway crossing into Bahrain are actually available on your travel date — not every vehicle in our fleet is cleared for this crossing, and it must be confirmed with us in advance, not assumed.',
+    'Vehicle documentation and insurance valid for use on the King Fahd Causeway and within Bahrain, plus any causeway toll or permit charges that may apply.',
     'Realistic expectations around causeway queue times, which vary by day and are outside our control.',
   ],
-  disclaimer: 'Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Bahraini immigration authorities. For current, authoritative entry requirements, check the official Bahrain government portal before you travel.',
+  disclaimer: 'Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Bahraini immigration authorities. We also don\'t guarantee that any specific vehicle or driver is pre-authorized for this crossing until our team confirms it with you directly. For current, authoritative entry requirements, check the official Bahrain government portal before you travel.',
   officialLinkLabel: 'Bahrain official government portal',
   officialLinkUrl: 'https://www.bahrain.bh/',
 }
