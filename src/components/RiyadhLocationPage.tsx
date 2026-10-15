@@ -92,6 +92,37 @@ export default function RiyadhLocationPage({ cityName, citySlogan, citySlug, faq
       >
         <div aria-hidden="true" style={{ position: 'absolute', inset: '16px', border: '1px solid rgba(212,175,55,0.18)', pointerEvents: 'none' }} />
 
+        {/* Riyadh skyline silhouette — Kingdom Centre + Al Faisaliah Tower, drawn inline so
+            the hero has a real Riyadh identity without relying on stock photography. */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1200 220"
+          preserveAspectRatio="xMidYMax slice"
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '42%', opacity: 0.22, pointerEvents: 'none' }}
+        >
+          <g fill={GOLD}>
+            <rect x="40" y="130" width="46" height="90" />
+            <rect x="96" y="100" width="34" height="120" />
+            <rect x="150" y="150" width="40" height="70" />
+            {/* Al Faisaliah Tower — tapered obelisk with sphere */}
+            <path d="M330 220 L345 60 L365 60 L380 220 Z" />
+            <circle cx="355" cy="46" r="13" />
+            <rect x="420" y="120" width="36" height="100" />
+            <rect x="470" y="90" width="30" height="130" />
+            {/* Kingdom Centre Tower — tapered sides meeting an inverted-U notch near the top */}
+            <path d="M560 220 L578 50 Q578 20 600 20 Q622 20 622 50 L640 220 Z" />
+            <rect x="588" y="18" width="24" height="46" fill="#0f1823" />
+            <rect x="700" y="110" width="38" height="110" />
+            <rect x="750" y="140" width="30" height="80" />
+            <rect x="800" y="95" width="34" height="125" />
+            <rect x="860" y="135" width="40" height="85" />
+            <rect x="920" y="105" width="28" height="115" />
+            <rect x="970" y="150" width="36" height="70" />
+            <rect x="1030" y="120" width="30" height="100" />
+            <rect x="1080" y="145" width="42" height="75" />
+          </g>
+        </svg>
+
         <div className="animate-fadeInUp" style={{ color: 'white', maxWidth: '780px', position: 'relative' }}>
           <nav aria-label={isAr ? 'مسار التنقل' : 'Breadcrumb'} className="mk-crumbs" style={{ marginBottom: '18px' }}>
             <ol style={{ listStyle: 'none', display: 'flex', gap: '6px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)' }}>

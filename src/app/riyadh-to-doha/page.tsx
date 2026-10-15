@@ -6,13 +6,14 @@ import {
   whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink,
 } from '@/lib/riyadhToDohaPageData'
 
-const theme = { dark: '#5c0e26', dark2: '#7a1431', accent: '#D4AF37' }
+const theme = { dark: '#0b3d2e', dark2: '#145c44', accent: '#D4AF37' }
 
 export default function RiyadhToDohaPage() {
   return (
     <InternationalTransferPage
       destinationLabel="Doha"
       breadcrumbLabel="Riyadh to Doha"
+      heroImage="/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp"
       theme={theme}
       heroContent={heroContent}
       quickFacts={quickFacts}

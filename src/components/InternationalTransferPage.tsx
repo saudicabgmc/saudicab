@@ -22,6 +22,8 @@ export interface InternationalTransferProps {
   breadcrumbLabel: string
   originCityLabel?: string
   originCityHref?: string
+  /** Optional hero background photo (e.g. a real fleet vehicle). Falls back to the plain gradient when omitted. */
+  heroImage?: string
   theme: InternationalTransferTheme
   heroContent: {
     eyebrow: string
@@ -67,8 +69,17 @@ function Arrow({ size = 15 }: { size?: number }) {
   return <ArrowRight size={size} strokeWidth={2.4} aria-hidden="true" style={{ flexShrink: 0, transform: isAr ? 'scaleX(-1)' : undefined }} />
 }
 
+/* Real fleet photos — matched by vehicle name so every page using this shared
+   component shows an actual car instead of a blank card. */
+const VEHICLE_IMAGES: Record<string, { src: string; alt: string; position?: string }> = {
+  Sedan: { src: '/fleet/sedan-exterior-side-saudi-cabs-gmc.webp', alt: 'Saudi Cabs GMC Sedan taxi' },
+  'Hyundai Staria': { src: '/fleet/hyundai-staria-exterior-front-saudi-cabs-gmc.webp', alt: 'Saudi Cabs GMC Hyundai Staria 7-seat van', position: '50% 70%' },
+  'GMC Yukon': { src: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp', alt: 'Saudi Cabs GMC GMC Yukon VIP SUV' },
+}
+
 export default function InternationalTransferPage({
   destinationLabel, breadcrumbLabel, originCityLabel = 'Riyadh', originCityHref = '/riyadh-taxi-service',
+  heroImage,
   theme, heroContent, quickFacts, journeySection,
   requirementsSection, whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink, faqs,
 }: InternationalTransferProps) {
@@ -93,7 +104,17 @@ export default function InternationalTransferPage({
   return (
     <main>
       {/* ── 1. Hero ── */}
-      <section className="mk-hero" style={{ background: `linear-gradient(135deg, ${dark} 0%, ${dark2} 60%, #0a0a0c 100%)`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative' }}>
+      {heroImage && <link rel="preload" as="image" href={heroImage} fetchPriority="high" />}
+      <section
+        className="mk-hero"
+        style={{
+          background: heroImage
+            ? `linear-gradient(135deg, ${dark}e6 0%, ${dark2}cc 55%, ${dark}f2 100%), url("${heroImage}")`
+            : `linear-gradient(135deg, ${dark} 0%, ${dark2} 60%, #0a0a0c 100%)`,
+          backgroundSize: 'cover', backgroundPosition: 'center',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative',
+        }}
+      >
         <div aria-hidden="true" style={{ position: 'absolute', inset: '16px', border: `1px solid ${accent}2e`, pointerEvents: 'none' }} />
         <div className="animate-fadeInUp" style={{ color: 'white', maxWidth: '780px', position: 'relative' }}>
           <nav aria-label="Breadcrumb" className="mk-crumbs" style={{ marginBottom: '18px' }}>
@@ -197,13 +218,23 @@ export default function InternationalTransferPage({
         <div className="container">
           <Head dk id="it-vehicles-title" tag="Vehicle Options" title="Choose Your Vehicle" />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '18px' }}>
-            {vehicleOptions.map((v, i) => (
-              <motion.div key={v.name.en} {...reveal(i)} style={{ background: `${accent}10`, border: `1px solid ${accent}40`, borderRadius: '16px', padding: '24px 20px' }}>
-                <h3 style={{ color: 'white', fontSize: '1.05rem', fontWeight: 900, marginBottom: '4px' }}>{v.name.en}</h3>
-                <div style={{ color: accent, fontWeight: 800, fontSize: '0.8rem', marginBottom: '10px' }}>{v.seats}</div>
-                <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.85rem', lineHeight: 1.65, margin: 0 }}>{v.note}</p>
-              </motion.div>
-            ))}
+            {vehicleOptions.map((v, i) => {
+              const img = VEHICLE_IMAGES[v.name.en]
+              return (
+                <motion.div key={v.name.en} {...reveal(i)} style={{ background: `${accent}10`, border: `1px solid ${accent}40`, borderRadius: '16px', overflow: 'hidden' }}>
+                  {img && (
+                    <div style={{ height: '150px', overflow: 'hidden', background: '#111' }}>
+                      <img src={img.src} alt={img.alt} width={400} height={150} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: img.position ?? 'center', display: 'block' }} />
+                    </div>
+                  )}
+                  <div style={{ padding: '20px 20px 24px' }}>
+                    <h3 style={{ color: 'white', fontSize: '1.05rem', fontWeight: 900, marginBottom: '4px' }}>{v.name.en}</h3>
+                    <div style={{ color: accent, fontWeight: 800, fontSize: '0.8rem', marginBottom: '10px' }}>{v.seats}</div>
+                    <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.85rem', lineHeight: 1.65, margin: 0 }}>{v.note}</p>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '24px' }}>
             <Link href="/toyota-camry-taxi" className="mk-focus" style={{ color: accent, fontWeight: 800, fontSize: '0.82rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>Sedan details <Arrow size={12} /></Link>
