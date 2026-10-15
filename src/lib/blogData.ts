@@ -1626,4 +1626,172 @@ export const blogPosts: BlogPost[] = [
     date: '2026-10-05',
     image: '/location/makkah.webp',
   },
+  {
+    slug: 'riyadh-to-doha-by-road-travel-guide',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'riyadh-to-doha', label: { en: 'Riyadh to Doha', ar: 'الرياض إلى الدوحة' } },
+    seoTitle: 'Riyadh to Doha by Road: Distance, Travel Time, Border Crossing and Private Taxi Guide',
+    title: {
+      en: 'Riyadh to Doha by Road: Distance, Travel Time, Border Crossing and Private Taxi Guide',
+      ar: 'الرياض إلى الدوحة براً: المسافة ووقت الرحلة وعبور الحدود ودليل التاكسي الخاص',
+    },
+    excerpt: {
+      en: 'Thinking about driving from Riyadh to Doha instead of flying? Here is what the road trip actually involves — distance, realistic timing, the Saudi–Qatar border, documents and how a private taxi compares.',
+      ar: 'تفكر بالسفر من الرياض إلى الدوحة براً بدلاً من الطيران؟ إليك ما تتضمنه الرحلة فعلياً — المسافة والتوقيت الواقعي والحدود السعودية القطرية والمستندات ومقارنة التاكسي الخاص.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Riyadh to Doha isn't a route most people drive casually — it's a genuine long-distance international trip, closer in character to a cross-country journey than a day out. If you're weighing a private car against flying, or you already know road travel is right for you and want to understand what the trip actually involves, this guide covers the distance, realistic timing, the Saudi–Qatar border crossing, the documents worth having ready, and how a private taxi compares to other ways of making the trip.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Quick Facts</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>Road distance:</strong> approximately 1,100 km</li>
+  <li style="margin-bottom:0.5rem;"><strong>Route:</strong> east from Riyadh through Saudi Arabia's Eastern Province toward the Saudi–Qatar land border, commonly known as the Salwa (Saudi side) / Abu Samra (Qatar side) crossing, then on to Doha</li>
+  <li style="margin-bottom:0.5rem;"><strong>Driving time:</strong> well over 10 hours of actual driving, before any stops</li>
+  <li style="margin-bottom:0.5rem;"><strong>Border crossing time:</strong> not fixed — varies by day, season and individual documentation, and is outside any driver's control</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicle options:</strong> Sedan, Hyundai Staria or GMC Yukon</li>
+  <li style="margin-bottom:0.5rem;"><strong>Booking:</strong> via WhatsApp, in advance — this is a custom-coordinated trip, not a same-day listed route</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">The Distance and the Route</h2>
+<p style="margin-bottom:1rem;">The road distance between Riyadh and Doha is roughly 1,100 km. The route runs east out of Riyadh, through Saudi Arabia's Eastern Province, toward the shared land border with Qatar. The crossing itself is commonly referred to by the names of the posts on each side — Salwa on the Saudi side, Abu Samra on the Qatar side — and it's the only road link between the two countries. Once through, it's a more direct run on into Doha.</p>
+<p style="margin-bottom:1rem;">It's worth being clear-eyed about what this means in practice: this is not a quick hop. You're covering the better part of the Arabian Peninsula, plus a genuine international border, in a single trip.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How Long Does It Actually Take?</h2>
+<p style="margin-bottom:1rem;">We deliberately don't quote a single fixed journey time for this route, and here's why: the driving portion alone is well over 10 hours before you factor in any stops for prayer, meals or rest — and that's the predictable part. The unpredictable part is the border. Processing time at Salwa/Abu Samra depends on the day of the week, the time of year, how busy the crossing is, and whether everyone's documentation is straightforward. That can mean a relatively quick crossing on one day and a much longer wait on another, and it genuinely isn't something a driver, a travel company, or anyone else can promise in advance.</p>
+<p style="margin-bottom:1rem;">The realistic way to plan this trip is to treat it as a full-day journey at minimum, build in buffer time rather than cutting it close, and talk through your specific travel date with whoever you're booking through — timing on this route is discussed per trip, not quoted as a fixed number.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What to Expect at the Saudi–Qatar Border</h2>
+<p style="margin-bottom:1rem;">Crossing at Salwa/Abu Samra means standard international border procedure for everyone in the vehicle: passport and immigration checks, customs formalities, and verification of the vehicle's documentation for cross-border use. Every passenger needs to be prepared individually — this isn't a formality that one person in the group can handle on everyone's behalf.</p>
+<p style="margin-bottom:1rem;">A private vehicle doesn't exempt you from any of this — what it does is keep your group together as one unit through the process, rather than managing it separately as individuals on a bus or shared transport. Your driver handles the vehicle-side paperwork; the passport and visa side is still each traveler's own responsibility.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Documents to Have Ready</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>A valid passport</strong> for every passenger, meeting the validity period Qatar requires for entry — check this well before travel, not at the border.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Confirmation of your visa or entry permit status for Qatar.</strong> Whether you need one, and what type, depends entirely on your nationality and Qatar's current entry rules. This changes over time and varies by passport, so it isn't something to assume from general knowledge — check it directly.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Vehicle documentation and insurance</strong> valid for cross-border travel between Saudi Arabia and Qatar.</li>
+  <li style="margin-bottom:0.5rem;"><strong>Realistic expectations around timing</strong> — build in buffer rather than planning against a tight schedule on the other end.</li>
+</ul>
+<p style="margin-bottom:1rem;">For current, authoritative entry requirements, check Qatar's official government portal, <a href="https://hukoomi.gov.qa/" target="_blank" rel="noopener noreferrer nofollow" style="color:#0B3D2E;font-weight:700;">Hukoomi</a>, before you travel — rules can change, and a travel operator isn't the authority on visa decisions. Saudi Cabs GMC arranges private transportation only; entry decisions rest entirely with Qatari immigration authorities.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Private Taxi vs Flying vs Other Options</h2>
+<p style="margin-bottom:1rem;">For most travelers covering 1,100 km, flying between Riyadh and Doha is simply faster, and it's worth saying that plainly rather than talking up a road trip that isn't the right fit for everyone. A private car makes sense when the road itself serves a purpose for you — bringing more luggage than a flight comfortably allows, travelling as a family or group who'd rather stay together in one vehicle, or making stops along the way rather than going point to point.</p>
+<p style="margin-bottom:1rem;">Compared to a shared or public option for the same distance, the advantage of a private vehicle is the same one that applies to any of our long-distance trips: one car reserved for your group only, a pickup time built around your own schedule rather than someone else's, and no changing vehicles partway through — including at the border itself.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Choosing Your Vehicle</h2>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a> (4 seats):</strong> suits individuals, couples or a small family travelling light over this distance.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> (7 seats):</strong> more practical for families or groups, with the extra space a trip this long benefits from.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> (7 seats, VIP):</strong> a more spacious, premium option for a long drive like this one.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Once You're in Doha</h2>
+<p style="margin-bottom:1rem;">Doha itself is a compact, walkable city once you're past the arrival. The Corniche waterfront promenade, the Museum of Islamic Art, Souq Waqif's old market lanes, and the West Bay skyline across the bay are among the places most visitors want to see first. None of this is something we operate or guide — it's simply useful context if Doha itself, rather than the drive, is the actual reason for your trip.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Book</h2>
+<ol style="padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Send your intended travel date and passenger count on WhatsApp.</li>
+  <li style="margin-bottom:0.5rem;">We talk through feasibility, documentation and realistic timing for your specific date.</li>
+  <li style="margin-bottom:0.5rem;">Choose your vehicle — Sedan, Hyundai Staria or GMC Yukon.</li>
+  <li style="margin-bottom:0.5rem;">We confirm the current rate and finalize the trip with you directly.</li>
+</ol>
+<p style="margin-bottom:1rem;">Because this is a custom long-distance trip rather than a fixed daily route, fares and final arrangements are always confirmed with you individually — nothing is quoted sight unseen.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Is it faster to fly from Riyadh to Doha instead of driving?</h3>
+<p style="margin-bottom:1rem;">Yes, for almost all travelers. Flying covers the distance in a fraction of the time. Road travel makes sense when the drive itself has a purpose for you — more luggage, a family group, or stops along the way — not primarily as a faster alternative.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Is there a direct land border between Saudi Arabia and Qatar?</h3>
+<p style="margin-bottom:1rem;">Yes — the Salwa/Abu Samra crossing is the only road link between the two countries, and it's the crossing used for this route.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Does every nationality need a visa to enter Qatar by road?</h3>
+<p style="margin-bottom:1rem;">This depends entirely on your passport and Qatar's current entry rules, which we don't control and which change over time. Check Qatar's official Hukoomi portal for requirements specific to your nationality before you travel.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can the border crossing take a long time?</h3>
+<p style="margin-bottom:1rem;">It can, and the time genuinely varies by day, season and individual documentation. We don't promise a fixed crossing time because it isn't something anyone can guarantee in advance — build buffer time into your plans.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does a private taxi from Riyadh to Doha cost?</h3>
+<p style="margin-bottom:1rem;">There's no fixed listed fare for this route since it's a custom, advance-booked trip. Contact Saudi Cabs GMC on WhatsApp with your travel dates for a current quote.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which vehicle is best for a family making this trip?</h3>
+<p style="margin-bottom:1rem;">The Hyundai Staria or GMC Yukon (both 7 seats) are generally more practical than a Sedan for a family travelling this distance with luggage.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far in advance should I book?</h3>
+<p style="margin-bottom:1rem;">As early as possible. Because vehicle and driver availability for this kind of trip need to be confirmed individually, booking well ahead of your travel date gives more certainty than arranging it last minute.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Is Saudi Cabs GMC a travel agency that handles visas?</h3>
+<p style="margin-bottom:1rem;">No. Saudi Cabs GMC provides private transportation only. Visa and entry decisions rest entirely with Qatari immigration authorities — check official sources directly for your own requirements.</p>
+
+<p style="margin-bottom:1rem;">Planning a Riyadh-to-Doha trip? See our <a href="/riyadh-to-doha" style="color:#0B3D2E;font-weight:700;">Riyadh to Doha private transfer</a> page for vehicle options and booking, or send your travel dates directly on <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">WhatsApp</a> to discuss feasibility and the current rate. Also considering the UAE instead? See our <a href="/riyadh-to-dubai" style="color:#0B3D2E;font-weight:700;">Riyadh to Dubai private transfer</a> guide.</p>`,
+      ar: `<p style="margin-bottom:1rem;">السفر من الرياض إلى الدوحة ليس خطاً يقوده معظم الناس بشكل عابر — إنها رحلة دولية طويلة فعلية، أقرب في طبيعتها إلى رحلة عبر البلاد منها إلى نزهة يومية. سواء كنت تقارن بين السيارة الخاصة والطيران، أو تعرف بالفعل أن السفر براً هو الخيار المناسب لك وتريد فهم ما تتضمنه الرحلة فعلياً، يغطي هذا الدليل المسافة والتوقيت الواقعي وعبور الحدود السعودية القطرية والمستندات التي يُستحسن تجهيزها، وكيف يقارن التاكسي الخاص بالطرق الأخرى للقيام بالرحلة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">حقائق سريعة</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>مسافة الطريق:</strong> نحو 1,100 كم</li>
+  <li style="margin-bottom:0.5rem;"><strong>المسار:</strong> شرقاً من الرياض عبر المنطقة الشرقية بالمملكة باتجاه الحدود السعودية القطرية البرية، المعروفة بمعبر سلوى (الجانب السعودي) / أبو سمرة (الجانب القطري)، ثم إلى الدوحة</li>
+  <li style="margin-bottom:0.5rem;"><strong>وقت القيادة:</strong> يتجاوز 10 ساعات من القيادة الفعلية، قبل أي توقفات</li>
+  <li style="margin-bottom:0.5rem;"><strong>وقت عبور الحدود:</strong> غير ثابت — يختلف حسب اليوم والموسم والمستندات الفردية، ويخرج عن سيطرة أي سائق</li>
+  <li style="margin-bottom:0.5rem;"><strong>خيارات السيارة:</strong> سيدان أو هيونداي ستاريا أو GMC يوكون</li>
+  <li style="margin-bottom:0.5rem;"><strong>الحجز:</strong> عبر واتساب، مسبقاً — هذه رحلة مخصصة تُنسَّق فردياً وليست خطاً يومياً ثابتاً</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">المسافة والمسار</h2>
+<p style="margin-bottom:1rem;">تبلغ مسافة الطريق بين الرياض والدوحة نحو 1,100 كم. يسلك المسار الاتجاه الشرقي خارج الرياض، عبر المنطقة الشرقية بالمملكة، باتجاه الحدود البرية المشتركة مع قطر. يُعرف المعبر نفسه عادةً بأسماء النقاط على كل جانب — سلوى في الجانب السعودي، وأبو سمرة في الجانب القطري — وهو الرابط البري الوحيد بين البلدين. وبعد العبور، تصبح الرحلة أكثر مباشرة نحو الدوحة.</p>
+<p style="margin-bottom:1rem;">من المهم أن تكون واضحاً مع نفسك حول ما يعنيه هذا عملياً: ليست رحلة قصيرة. أنت تقطع الجزء الأكبر من شبه الجزيرة العربية، بالإضافة إلى حدود دولية فعلية، في رحلة واحدة.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كم تستغرق الرحلة فعلياً؟</h2>
+<p style="margin-bottom:1rem;">نتعمد عدم تحديد وقت ثابت لهذه الرحلة، وإليك السبب: مرحلة القيادة وحدها تتجاوز 10 ساعات قبل احتساب أي توقفات للصلاة أو الطعام أو الراحة — وهذا هو الجزء القابل للتوقع. الجزء غير القابل للتوقع هو الحدود. يعتمد وقت المعالجة عند معبر سلوى/أبو سمرة على يوم الأسبوع والموسم ومدى ازدحام المعبر وما إذا كانت مستندات الجميع واضحة. قد يعني ذلك عبوراً سريعاً نسبياً في يوم، وانتظاراً أطول بكثير في يوم آخر، وهذا أمر لا يستطيع أي سائق أو شركة سفر أو أي جهة أخرى ضمانه مسبقاً.</p>
+<p style="margin-bottom:1rem;">الطريقة الواقعية للتخطيط لهذه الرحلة هي التعامل معها كرحلة يوم كامل على الأقل، وإضافة وقت احتياطي بدلاً من التخطيط بشكل ضيق، ومناقشة تاريخ سفرك المحدد مع من تحجز معه — يُناقش التوقيت في هذا الخط لكل رحلة على حدة، وليس كرقم ثابت.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ماذا تتوقع عند الحدود السعودية القطرية</h2>
+<p style="margin-bottom:1rem;">يعني العبور عند سلوى/أبو سمرة إجراءات حدودية دولية معتادة لجميع من في السيارة: فحوصات الجوازات والهجرة، إجراءات الجمارك، والتحقق من مستندات السيارة لاستخدامها عبر الحدود. يجب أن يكون كل راكب مستعداً بشكل فردي — هذا ليس إجراءً شكلياً يمكن لشخص واحد في المجموعة التعامل معه نيابة عن الجميع.</p>
+<p style="margin-bottom:1rem;">السيارة الخاصة لا تعفيك من أي من ذلك — ما تفعله هو إبقاء مجموعتك معاً كوحدة واحدة خلال هذه الإجراءات، بدلاً من إدارتها بشكل منفصل كأفراد في حافلة أو وسيلة نقل مشتركة. يتولى سائقك الأوراق الخاصة بالسيارة؛ أما جانب الجواز والتأشيرة فيبقى مسؤولية كل مسافر بنفسه.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">المستندات التي يجب تجهيزها</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong>جواز سفر ساري المفعول</strong> لكل راكب، بما يستوفي مدة الصلاحية التي تتطلبها قطر للدخول — تحقق من ذلك قبل السفر بوقت كافٍ، وليس عند الحدود.</li>
+  <li style="margin-bottom:0.5rem;"><strong>تأكيد حالة التأشيرة أو تصريح الدخول إلى قطر.</strong> يعتمد ذلك كلياً على جنسيتك وقواعد الدخول الحالية لقطر. تتغير هذه القواعد مع الوقت وتختلف حسب الجواز، لذا لا يجب افتراضها من معرفة عامة — تحقق منها مباشرة.</li>
+  <li style="margin-bottom:0.5rem;"><strong>مستندات السيارة والتأمين</strong> الصالحة للسفر عبر الحدود بين السعودية وقطر.</li>
+  <li style="margin-bottom:0.5rem;"><strong>توقعات واقعية حول التوقيت</strong> — أضف وقتاً احتياطياً بدلاً من التخطيط وفق جدول ضيق في الطرف الآخر.</li>
+</ul>
+<p style="margin-bottom:1rem;">للاطلاع على متطلبات الدخول الحالية والموثوقة، راجع البوابة الحكومية الرسمية لقطر، <a href="https://hukoomi.gov.qa/" target="_blank" rel="noopener noreferrer nofollow" style="color:#0B3D2E;font-weight:700;">Hukoomi</a>، قبل سفرك — فالقواعد قد تتغير، وشركة النقل ليست الجهة المخولة بقرارات التأشيرات. تقدم Saudi Cabs GMC النقل الخاص فقط؛ وتقرارات الدخول تعود كلياً لسلطات الهجرة القطرية.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">التاكسي الخاص مقابل الطيران مقابل خيارات أخرى</h2>
+<p style="margin-bottom:1rem;">بالنسبة لمعظم المسافرين الذين يقطعون 1,100 كم، يُعد الطيران بين الرياض والدوحة ببساطة أسرع، ومن الأفضل قول ذلك بصراحة بدلاً من الترويج لرحلة برية لا تناسب الجميع. تكون السيارة الخاصة منطقية حين يخدم الطريق نفسه غرضاً لديك — حمل أمتعة أكثر مما تسمح به الرحلة الجوية بارتياح، أو السفر كعائلة أو مجموعة تفضل البقاء معاً في سيارة واحدة، أو التوقف في محطات على الطريق بدلاً من السفر المباشر.</p>
+<p style="margin-bottom:1rem;">مقارنةً بخيار مشترك أو عام لنفس المسافة، فإن ميزة السيارة الخاصة هي ذاتها التي تنطبق على أي من رحلاتنا الطويلة: سيارة واحدة محجوزة لمجموعتك فقط، وموعد استلام مبني على جدولك الخاص وليس جدول شخص آخر، ودون تغيير السيارات في منتصف الطريق — بما في ذلك عند الحدود نفسها.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">اختيار سيارتك</h2>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a> (4 مقاعد):</strong> مناسبة للأفراد أو الأزواج أو عائلة صغيرة تسافر بأمتعة خفيفة لهذه المسافة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> (7 مقاعد):</strong> أنسب للعائلات أو المجموعات، مع المساحة الإضافية التي تفيد رحلة بهذا الطول.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a> (7 مقاعد، VIP):</strong> خيار أكثر اتساعاً وفخامة لرحلة طويلة كهذه.</li>
+</ul>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">بمجرد وصولك إلى الدوحة</h2>
+<p style="margin-bottom:1rem;">الدوحة نفسها مدينة مدمجة يسهل التجول فيها بمجرد وصولك. كورنيش الواجهة البحرية، ومتحف الفن الإسلامي، وأزقة سوق واقف القديمة، وأفق خليج الويست باي عبر الخليج من بين الأماكن التي يرغب معظم الزوار برؤيتها أولاً. لا نقوم بتشغيل أو ترتيب أي من ذلك — إنها فقط معلومات مفيدة إذا كانت الدوحة نفسها، وليس القيادة، هي السبب الفعلي لرحلتك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز</h2>
+<ol style="padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">أرسل تاريخ سفرك المقصود وعدد الركاب عبر واتساب.</li>
+  <li style="margin-bottom:0.5rem;">نناقش معك الإمكانية والمستندات والتوقيت الواقعي لتاريخك المحدد.</li>
+  <li style="margin-bottom:0.5rem;">اختر سيارتك — سيدان أو هيونداي ستاريا أو GMC يوكون.</li>
+  <li style="margin-bottom:0.5rem;">نؤكد لك السعر الحالي وننهي ترتيبات الرحلة معك مباشرة.</li>
+</ol>
+<p style="margin-bottom:1rem;">بما أن هذه رحلة طويلة مخصصة وليست خطاً يومياً ثابتاً، تُؤكَّد الأسعار والترتيبات النهائية معك فردياً دائماً — لا شيء يُعرض دون معرفة تفاصيل رحلتك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل الطيران من الرياض إلى الدوحة أسرع من القيادة؟</h3>
+<p style="margin-bottom:1rem;">نعم، بالنسبة لمعظم المسافرين. يقطع الطيران المسافة في جزء بسيط من الوقت. يكون السفر براً منطقياً حين يخدم القيادة نفسها غرضاً لديك — أمتعة أكثر، مجموعة عائلية، أو توقفات على الطريق — وليس كبديل أسرع بشكل أساسي.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل توجد حدود برية مباشرة بين السعودية وقطر؟</h3>
+<p style="margin-bottom:1rem;">نعم — معبر سلوى/أبو سمرة هو الرابط البري الوحيد بين البلدين، وهو المعبر المستخدم لهذا الخط.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل تحتاج كل الجنسيات تأشيرة لدخول قطر براً؟</h3>
+<p style="margin-bottom:1rem;">يعتمد ذلك كلياً على جوازك وقواعد الدخول الحالية لقطر، وهي أمور لا نتحكم بها وتتغير مع الوقت. راجع بوابة Hukoomi الرسمية لقطر لمعرفة المتطلبات الخاصة بجنسيتك قبل السفر.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكن أن يستغرق عبور الحدود وقتاً طويلاً؟</h3>
+<p style="margin-bottom:1rem;">نعم، والوقت يختلف فعلياً حسب اليوم والموسم والمستندات الفردية. لا نعد بوقت عبور ثابت لأنه ليس أمراً يمكن لأي جهة ضمانه مسبقاً — أضف وقتاً احتياطياً لخططك.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تكلفة تاكسي خاص من الرياض إلى الدوحة؟</h3>
+<p style="margin-bottom:1rem;">لا يوجد سعر ثابت معروض لهذا الخط لأنه رحلة مخصصة تُحجز مسبقاً. تواصل مع Saudi Cabs GMC عبر واتساب بتواريخ سفرك للحصول على سعر حالي.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما السيارة الأفضل لعائلة تقوم بهذه الرحلة؟</h3>
+<p style="margin-bottom:1rem;">تُعد هيونداي ستاريا أو GMC يوكون (كلاهما 7 مقاعد) عادةً أكثر عملية من السيدان لعائلة تسافر هذه المسافة مع أمتعة.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">قبل كم من الوقت يجب أن أحجز؟</h3>
+<p style="margin-bottom:1rem;">في أقرب وقت ممكن. نظراً لأن توفر السيارة والسائق لهذا النوع من الرحلات يجب تأكيده فردياً، فإن الحجز المبكر قبل تاريخ سفرك يمنح يقيناً أكبر من الترتيب في اللحظة الأخيرة.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل Saudi Cabs GMC شركة سفر تتعامل مع التأشيرات؟</h3>
+<p style="margin-bottom:1rem;">لا. تقدم Saudi Cabs GMC النقل الخاص فقط. قرارات التأشيرة والدخول تعود كلياً لسلطات الهجرة القطرية — راجع المصادر الرسمية مباشرة لمعرفة متطلباتك الخاصة.</p>
+
+<p style="margin-bottom:1rem;">تخطط لرحلة من الرياض إلى الدوحة؟ راجع صفحة <a href="/riyadh-to-doha" style="color:#0B3D2E;font-weight:700;">النقل الخاص من الرياض إلى الدوحة</a> لخيارات السيارة والحجز، أو أرسل تواريخ سفرك مباشرة عبر <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">واتساب</a> لمناقشة الإمكانية والسعر الحالي. تفكر في الإمارات بدلاً من ذلك؟ راجع دليل <a href="/riyadh-to-dubai" style="color:#0B3D2E;font-weight:700;">النقل الخاص من الرياض إلى دبي</a>.</p>`,
+    },
+    date: '2026-10-15',
+    image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
+  },
 ];
