@@ -29,21 +29,22 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Riyadh to Abu Dhabi is a road trip of roughly 1,050 km, crossing from Saudi Arabia into the UAE at the shared land border — the same crossing used on our Riyadh to Dubai route, since Abu Dhabi sits further west and is actually somewhat closer to the Saudi border than Dubai. It involves a single border crossing, with immigration and customs formalities for everyone in the vehicle.",
-    "We don't quote a fixed journey time for this route, because the driving time itself (typically well over ten hours before stops) is only part of the trip — border processing time varies by day and individual circumstances, and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
+    "Abu Dhabi is the UAE's capital — a seat of government and diplomacy rather than purely a tourism stop — and at roughly 1,050 km it's actually the nearer of the two UAE cities we cover, somewhat closer to the Saudi border than our Riyadh-to-Dubai route. The road still crosses from Saudi Arabia into the UAE at the same shared land border, with one immigration and customs check for everyone in the vehicle.",
+    "What we won't do is promise you a fixed total journey time. The driving portion alone runs well past ten hours before any stops, and border processing on top of that depends on the day, the season and your own paperwork — none of which we control from our side. Once we know your travel dates, we'll talk through what's realistic for your specific trip on WhatsApp.",
   ],
 }
 
 export const requirementsSection = {
   heading: 'What to Prepare Before Booking',
-  intro: "These are the things that matter for a Riyadh-to-Abu Dhabi road trip, and what our team will ask you about:",
+  intro: "A trip to the UAE capital involves more than a domestic transfer, so confirm the following with our team directly before you commit to a date:",
   items: [
     'A valid passport for every passenger, with the validity period required for entry into the UAE.',
-    'Confirmation of whether you need a visa or entry permit for the UAE — this depends on your nationality and should be checked against current requirements before travel.',
-    'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and the UAE.',
-    'Realistic expectations around border wait times, which can vary and are outside our control.',
+    'Whether you need a visa or entry permit for the UAE — this depends on your nationality and current rules, so check official sources rather than assuming.',
+    'That a vehicle and driver authorized for cross-border travel into the UAE are actually available on your travel date — not every vehicle in our fleet is cleared for international trips, and this has to be confirmed with us, not assumed.',
+    'Any cross-border charges, permit costs or documentation fees that may apply, confirmed with our team before booking.',
+    'Realistic expectations around border wait times, which vary and are outside our control.',
   ],
-  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE immigration authorities. For current, authoritative entry requirements, check the UAE's official government portal before you travel.",
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with UAE immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the UAE's official government portal before you travel.",
   officialLinkLabel: 'UAE official government portal (u.ae)',
   officialLinkUrl: 'https://u.ae/en',
 }
@@ -51,8 +52,8 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Abu Dhabi',
   paragraphs: [
-    "For a distance like Riyadh to Abu Dhabi, flying is usually the faster option, and we'd rather tell you that directly than oversell a road trip that isn't the right fit for every traveler. A private car makes more sense if you specifically want to travel by road — for example, bringing a vehicle's worth of luggage, travelling as a family or group who'd rather not coordinate flights, or treating the drive itself as part of the trip.",
-    'Whichever you choose, the advantage of a private vehicle over any shared or public transport option on this route is the same as on our domestic trips: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way.',
+    "Abu Dhabi has its own international airport, and for most travelers flying remains the quicker way to get there — we'd rather say so plainly than talk you into a road trip that doesn't suit your plans. Where a private car does make sense is for travelers who want to bring more luggage than a flight allows, families or groups who'd rather stay together in one vehicle than split across flight bookings, or anyone combining stops inside Saudi Arabia before continuing on to the capital.",
+    "If you do choose the road, the reasoning is the same as on every trip we run: a vehicle booked for your group alone, a pickup built around your own schedule rather than a departure board, and no changing vehicles partway through the journey.",
   ],
 }
 
