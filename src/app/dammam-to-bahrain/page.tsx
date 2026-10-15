@@ -6,7 +6,7 @@ import {
   whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink,
 } from '@/lib/dammamToBahrainPageData'
 
-const theme = { dark: '#7a0c1e', dark2: '#9e1226', accent: '#D4AF37' }
+const theme = { dark: '#071f17', dark2: '#0b3d2e', accent: '#D4AF37' }
 
 export default function DammamToBahrainPage() {
   return (
