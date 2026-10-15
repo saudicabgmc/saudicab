@@ -40,10 +40,11 @@ export const requirementsSection = {
   items: [
     'A valid passport for every passenger, with the validity period required for entry into Kuwait.',
     'Confirmation of whether you need a visa or entry permit for Kuwait — this depends on your nationality and should be checked against current requirements before travel.',
-    'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and Kuwait.',
+    'That a vehicle and driver authorized for cross-border travel into Kuwait are actually available on your travel date — not every vehicle in our fleet is cleared for this crossing, and it must be confirmed with us in advance, not assumed.',
+    'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and Kuwait, plus any cross-border charges or documentation fees that may apply.',
     'Realistic expectations around border wait times, which can vary and are outside our control.',
   ],
-  disclaimer: 'Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. For current, authoritative entry requirements, check the official Kuwait government e-services portal before you travel.',
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the official Kuwait government e-services portal before you travel.",
   officialLinkLabel: 'Kuwait official government portal (e.gov.kw)',
   officialLinkUrl: 'https://www.e.gov.kw/',
 }
