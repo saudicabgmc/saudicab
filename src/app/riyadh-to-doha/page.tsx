@@ -13,7 +13,7 @@ export default function RiyadhToDohaPage() {
     <InternationalTransferPage
       destinationLabel="Doha"
       breadcrumbLabel="Riyadh to Doha"
-      heroImage="/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp"
+      heroImage="/hero/riyadh-to-doha-hero-saudi-cabs-gmc.webp"
       theme={theme}
       heroContent={heroContent}
       quickFacts={quickFacts}
