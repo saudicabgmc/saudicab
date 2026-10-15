@@ -27,21 +27,22 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    'Riyadh to Kuwait City is a road trip of roughly 550 km, running up through the Eastern Province and along the Gulf coastal highway to the Saudi–Kuwait border crossing near Al-Khafji. From there, the route continues into Kuwait toward Kuwait City. It involves a single border crossing, with immigration and customs formalities for everyone in the vehicle.',
-    "We don't quote a fixed journey time for this route. The driving time alone is several hours, and the time spent at the border crossing varies by day and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
+    "Riyadh to Kuwait City runs roughly 550 km — up through the Eastern Province, then along the Gulf coastal highway to the Saudi–Kuwait border crossing near Al-Khafji, before continuing into Kuwait toward the city. Of all our GCC routes from Riyadh, this one and Bahrain are the shortest, which is partly why we're often asked whether it's a realistic road alternative to flying for Gulf-coast business and family travel — it genuinely can be, depending on your schedule.",
+    "What we won't do is give you a fixed total journey time. The driving itself is several hours even before any stops, and the time spent at the Al-Khafji crossing depends on the day and on your own documentation being in order — neither of which we control. Tell us your travel dates on WhatsApp and we'll talk through what's realistic for that specific day.",
   ],
 }
 
 export const requirementsSection = {
   heading: 'What to Prepare Before Booking',
-  intro: "These are the things that matter for a Riyadh-to-Kuwait road trip, and what our team will ask you about:",
+  intro: "Before you book a Riyadh-to-Kuwait trip, confirm the following with our team directly:",
   items: [
     'A valid passport for every passenger, with the validity period required for entry into Kuwait.',
-    'Confirmation of whether you need a visa or entry permit for Kuwait — this depends on your nationality and should be checked against current requirements before travel.',
-    'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and Kuwait.',
-    'Realistic expectations around border wait times, which can vary and are outside our control.',
+    'Whether you need a visa or entry permit for Kuwait — this depends on your nationality and current rules, so check official sources rather than assuming.',
+    'That a vehicle and driver authorized for cross-border travel into Kuwait are actually available on your travel date — not every vehicle in our fleet is cleared for this crossing, and it must be confirmed with us in advance, not assumed.',
+    'Any cross-border charges, permit costs or documentation fees that may apply, confirmed with our team before booking.',
+    'Realistic expectations around border wait times at Al-Khafji, which vary and are outside our control.',
   ],
-  disclaimer: 'Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. For current, authoritative entry requirements, check the official Kuwait government e-services portal before you travel.',
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the official Kuwait government e-services portal before you travel.",
   officialLinkLabel: 'Kuwait official government portal (e.gov.kw)',
   officialLinkUrl: 'https://www.e.gov.kw/',
 }
@@ -49,8 +50,8 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Kuwait',
   paragraphs: [
-    "For a distance like Riyadh to Kuwait City, flying is usually the faster option, and we'd rather tell you that directly than oversell a road trip that isn't the right fit for every traveler. A private car makes more sense if you specifically want to travel by road — for example, bringing a vehicle's worth of luggage, travelling as a family or group who'd rather not coordinate flights, or treating the drive itself as part of the trip.",
-    'Whichever you choose, the advantage of a private vehicle over any shared or public transport option on this route is the same as on our domestic trips: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way.',
+    "Kuwait City is close enough that, for some travelers, the road genuinely competes with a short flight — especially once you add airport check-in and transfer time on either end. It tends to suit people carrying more than carry-on luggage, families who'd rather stay together in one vehicle, or anyone making other stops in the Eastern Province on the way north.",
+    "That said, we're not going to pretend a private car beats flying for everyone — if your priority is pure speed and you're travelling light, a flight will usually still win. Where a private vehicle does pay off is the same reason it does on every route we run: one car for your group only, a pickup built around your own schedule, and no changing vehicles between Riyadh and the border.",
   ],
 }
 
