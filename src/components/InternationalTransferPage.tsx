@@ -121,8 +121,12 @@ export default function InternationalTransferPage({
             <ol style={{ listStyle: 'none', display: 'flex', gap: '6px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)' }}>
               <li><Link href="/" className="mk-focus" style={{ color: 'inherit' }}>Home</Link></li>
               <li aria-hidden="true" style={{ display: 'flex' }}><ChevronRight size={14} /></li>
-              <li><Link href={originCityHref} className="mk-focus" style={{ color: 'inherit' }}>{originCityLabel}</Link></li>
-              <li aria-hidden="true" style={{ display: 'flex' }}><ChevronRight size={14} /></li>
+              {originCityLabel && (
+                <>
+                  <li><Link href={originCityHref} className="mk-focus" style={{ color: 'inherit' }}>{originCityLabel}</Link></li>
+                  <li aria-hidden="true" style={{ display: 'flex' }}><ChevronRight size={14} /></li>
+                </>
+              )}
               <li aria-current="page" style={{ color: accent, fontWeight: 700 }}>{breadcrumbLabel}</li>
             </ol>
           </nav>

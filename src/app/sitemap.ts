@@ -55,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/riyadh-to-muscat`,     lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/dammam-to-bahrain`,    lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/dammam-to-kuwait`,     lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/bahrain-to-riyadh`,    lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },
 
     // Riyadh / Dammam airport transfers
     { url: `${BASE}/riyadh-airport-taxi`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.8 },
