@@ -761,6 +761,7 @@ export default function RoutesMap() {
               { href: '/kuwait-to-riyadh', en: 'Kuwait → Riyadh', ar: 'الكويت ← الرياض', dist: { en: '~550 km', ar: 'نحو ٥٥٠ كم' } },
               { href: '/muscat-to-riyadh', en: 'Muscat → Riyadh (via UAE)', ar: 'مسقط ← الرياض (عبر الإمارات)', dist: { en: '~1,900+ km', ar: 'نحو ١,٩٠٠+ كم' } },
               { href: '/bahrain-to-dammam', en: 'Bahrain → Dammam', ar: 'البحرين ← الدمام', dist: { en: '~50 km', ar: 'نحو ٥٠ كم' } },
+              { href: '/kuwait-to-dammam', en: 'Kuwait → Dammam', ar: 'الكويت ← الدمام', dist: { en: '~290 km', ar: 'نحو ٢٩٠ كم' } },
             ]).map(d => (
               <Link key={d.href} href={d.href} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
