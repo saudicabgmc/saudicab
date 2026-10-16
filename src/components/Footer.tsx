@@ -30,6 +30,7 @@ const intlLinks = [
   { href: '/bahrain-to-riyadh', en: 'Bahrain → Riyadh', ar: 'البحرين ← الرياض' },
   { href: '/doha-to-riyadh', en: 'Doha → Riyadh', ar: 'الدوحة ← الرياض' },
   { href: '/dubai-to-riyadh', en: 'Dubai → Riyadh', ar: 'دبي ← الرياض' },
+  { href: '/abu-dhabi-to-riyadh', en: 'Abu Dhabi → Riyadh', ar: 'أبوظبي ← الرياض' },
 ]
 
 const socialLinks = [

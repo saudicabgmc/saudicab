@@ -757,6 +757,7 @@ export default function RoutesMap() {
               { href: '/bahrain-to-riyadh', en: 'Bahrain → Riyadh', ar: 'البحرين ← الرياض', dist: { en: '~480 km', ar: 'نحو ٤٨٠ كم' } },
               { href: '/doha-to-riyadh', en: 'Doha → Riyadh', ar: 'الدوحة ← الرياض', dist: { en: '~1,100 km', ar: 'نحو ١,١٠٠ كم' } },
               { href: '/dubai-to-riyadh', en: 'Dubai → Riyadh', ar: 'دبي ← الرياض', dist: { en: '~1,230 km', ar: 'نحو ١,٢٣٠ كم' } },
+              { href: '/abu-dhabi-to-riyadh', en: 'Abu Dhabi → Riyadh', ar: 'أبوظبي ← الرياض', dist: { en: '~1,050 km', ar: 'نحو ١,٠٥٠ كم' } },
             ]).map(d => (
               <Link key={d.href} href={d.href} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
