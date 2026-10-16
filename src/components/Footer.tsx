@@ -33,6 +33,7 @@ const intlLinks = [
   { href: '/abu-dhabi-to-riyadh', en: 'Abu Dhabi → Riyadh', ar: 'أبوظبي ← الرياض' },
   { href: '/kuwait-to-riyadh', en: 'Kuwait → Riyadh', ar: 'الكويت ← الرياض' },
   { href: '/muscat-to-riyadh', en: 'Muscat → Riyadh', ar: 'مسقط ← الرياض' },
+  { href: '/bahrain-to-dammam', en: 'Bahrain → Dammam', ar: 'البحرين ← الدمام' },
 ]
 
 const socialLinks = [
