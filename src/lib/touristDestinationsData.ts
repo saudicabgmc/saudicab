@@ -355,6 +355,7 @@ export const destinations: Destination[] = [
       { name: { en: 'Royal Opera House Muscat', ar: 'دار الأوبرا السلطانية مسقط' }, desc: { en: 'A performing arts venue built in a distinctive Omani-Islamic architectural style.', ar: 'صرح للفنون الأدائية بُني بطراز معماري عُماني إسلامي مميز.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/muscat.webp',
     gradient: ['#4a2f1f', '#7a4f2e'],
     icon: 'Mountain',
     serviceLinks: [
