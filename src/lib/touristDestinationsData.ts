@@ -311,6 +311,7 @@ export const destinations: Destination[] = [
       { name: { en: 'Manama Souq', ar: 'سوق المنامة' }, desc: { en: "A traditional market in the old city, known for gold, spices and textiles.", ar: 'سوق تقليدي في المدينة القديمة، يشتهر بالذهب والتوابل والأقمشة.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/manama.webp',
     gradient: ['#0a2f3d', '#145a6e'],
     icon: 'Waves',
     serviceLinks: [
