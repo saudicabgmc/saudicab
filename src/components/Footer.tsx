@@ -17,6 +17,7 @@ const guideLinks = [
   { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
   { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
   { href: '/saudi-arabia-tourist-destinations', en: 'Tourist Destinations', ar: 'الوجهات السياحية' },
+  { href: '/event-transportation', en: 'Event Transportation', ar: 'نقل الفعاليات' },
 ]
 
 const intlLinks = [

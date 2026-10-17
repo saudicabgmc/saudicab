@@ -78,6 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/airport-transfer`,      lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/hajj-umrah-transport`,  lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/private-driver`,        lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/event-transportation`,  lastModified: new Date('2026-10-17'), changeFrequency: 'weekly', priority: 0.8 },
 
     // EEAT pages
     { url: `${BASE}/contact`,        lastModified: SITE_LAST_VERIFIED, changeFrequency: 'monthly', priority: 0.7 },

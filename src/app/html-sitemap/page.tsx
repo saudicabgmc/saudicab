@@ -74,6 +74,7 @@ const sections = [
       { href: '/makkah-ziyarat-tour', label: 'Makkah Ziyarat Tour' },
       { href: '/madinah-ziyarat-tour', label: 'Madinah Ziyarat Tour' },
       { href: '/hajj-umrah-transport', label: 'Hajj & Umrah Transport' },
+      { href: '/event-transportation', label: 'Event Transportation' },
     ],
   },
   {

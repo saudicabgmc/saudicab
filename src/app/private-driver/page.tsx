@@ -62,15 +62,22 @@ export default function PrivateDriverPage() {
               { icon: '🌹', t: { en: 'Taif Mountain Tours', ar: 'جولات جبال الطائف' }, d: { en: 'Shafa, Hada, rose farms & Al-Rudaf Park in one trip', ar: 'شفا وهدا ومزارع الورد وحديقة الرضف في رحلة واحدة' } },
               { icon: '🏥', t: { en: 'Medical Visits', ar: 'الزيارات الطبية' }, d: { en: 'Reliable transport to hospitals and clinics', ar: 'مواصلات موثوقة للمستشفيات والعيادات' } },
               { icon: '🎓', t: { en: 'School & University', ar: 'المدارس والجامعات' }, d: { en: 'Safe daily school runs and campus transport', ar: 'رحلات مدرسية يومية آمنة' } },
-              { icon: '💍', t: { en: 'Weddings & Events', ar: 'الأعراس والفعاليات' }, d: { en: 'VIP transport for special occasions', ar: 'نقل VIP للمناسبات الخاصة' } },
+              { icon: '💍', t: { en: 'Weddings & Events', ar: 'الأعراس والفعاليات' }, d: { en: 'VIP transport for special occasions', ar: 'نقل VIP للمناسبات الخاصة' }, href: '/event-transportation' },
               { icon: '🛍️', t: { en: 'Shopping Tours', ar: 'جولات التسوق' }, d: { en: 'Mall to mall in Jeddah, Makkah & Madinah', ar: 'من مول لمول في جدة ومكة والمدينة' } },
-            ].map(s => (
-              <div key={s.t.en} className="service-card">
-                <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{s.icon}</div>
-                <h3 style={{ fontSize: '0.88rem', fontWeight: '800', marginBottom: '8px' }}>{tx(s.t)}</h3>
-                <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)' }}>{tx(s.d)}</p>
-              </div>
-            ))}
+            ].map(s => {
+              const content = (
+                <>
+                  <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{s.icon}</div>
+                  <h3 style={{ fontSize: '0.88rem', fontWeight: '800', marginBottom: '8px' }}>{tx(s.t)}</h3>
+                  <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)' }}>{tx(s.d)}</p>
+                </>
+              )
+              return s.href ? (
+                <Link key={s.t.en} href={s.href} className="service-card" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>{content}</Link>
+              ) : (
+                <div key={s.t.en} className="service-card">{content}</div>
+              )
+            })}
           </div>
         </div>
       </section>
