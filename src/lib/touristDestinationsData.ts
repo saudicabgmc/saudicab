@@ -333,6 +333,7 @@ export const destinations: Destination[] = [
       { name: { en: 'The Avenues', ar: 'الأفنيوز' }, desc: { en: 'A major shopping and entertainment complex, among the largest in the region.', ar: 'مجمع تسوق وترفيه كبير، من أكبر المجمعات في المنطقة.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/kuwait-city.webp',
     gradient: ['#0d2b45', '#1f4d6b'],
     icon: 'Waves',
     serviceLinks: [
