@@ -361,7 +361,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Best Vehicle for Riyadh to Makkah</h2>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
-  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a>:</strong> For 1–3 passengers traveling light</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a>:</strong> For up to 4 passengers traveling light</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>:</strong> For families up to 7 with luggage</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a>:</strong> VIP comfort for long journeys — built-in cooler, leather seats</li>
 </ul>

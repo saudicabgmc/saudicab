@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
+    default: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam',
     template: '%s | Saudi Cabs GMC',
   },
   description:
-    'Private taxi, chauffeur and airport transfer service across Makkah, Madinah, Jeddah and Taif. Fixed, route-based prices confirmed before you travel. Book in minutes on WhatsApp.',
+    'Private taxi and airport transfer service across Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam. Fixed, route-based prices confirmed before you travel. Book in minutes on WhatsApp.',
   keywords: [
     'taxi makkah', 'taxi madinah', 'taxi jeddah', 'taxi taif',
     'cab saudi arabia', 'private driver makkah', 'airport transfer jeddah',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     alternateLocale: 'ar_SA',
     url: 'https://saudicabsgmc.com',
     siteName: 'Saudi Cabs GMC',
-    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
+    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam',
     description:
-      'Private taxi, chauffeur and airport transfer service across Makkah, Madinah, Jeddah and Taif. Fixed prices, 24/7 available.',
+      'Private taxi and airport transfer service across Makkah, Madinah, Jeddah, Taif, Riyadh and Dammam. Fixed prices, 24/7 available.',
     images: [
       {
         url: '/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp',
@@ -69,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah & Taif',
-    description: 'Private taxi and airport transfers in Makkah, Madinah, Jeddah & Taif. Fixed prices, 24/7.',
+    title: 'Saudi Taxi & Private Transport | Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam',
+    description: 'Private taxi and airport transfers in Makkah, Madinah, Jeddah, Taif, Riyadh & Dammam. Fixed prices, 24/7.',
     images: ['/fleet/toyota-camry-exterior-front-saudi-cabs-gmc.webp'],
   },
   verification: {
@@ -101,7 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       width: 200,
       height: 200,
     },
-    description: 'Saudi Cabs GMC is a private taxi and chauffeur service operating 24/7 across Saudi Arabia — Makkah, Madinah, Jeddah, Taif, and Riyadh. We specialise in Hajj & Umrah pilgrimage transport, airport transfers from King Abdulaziz International Airport (KAIA), and intercity routes. Fixed prices, no meters, professional English- and Arabic-speaking drivers. Vehicles: Toyota Camry Sedan, Hyundai Staria 7-seat van, and GMC Yukon VIP luxury SUV.',
+    description: 'Saudi Cabs GMC is a private taxi and chauffeur service operating 24/7 across Saudi Arabia — Makkah, Madinah, Jeddah, Taif, Riyadh, and Dammam. We specialise in Hajj & Umrah pilgrimage transport, airport transfers from King Abdulaziz International Airport (KAIA), and intercity routes. Fixed prices, no meters, professional English- and Arabic-speaking drivers. Vehicles: Toyota Camry Sedan, Hyundai Staria 7-seat van, and GMC Yukon VIP luxury SUV.',
     slogan: 'Fixed Price. Professional Drivers. 24/7 Across Saudi Arabia.',
     areaServed: [
       { '@type': 'City', name: 'Makkah', sameAs: 'https://www.wikidata.org/wiki/Q42788' },
@@ -109,14 +109,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       { '@type': 'City', name: 'Jeddah', sameAs: 'https://www.wikidata.org/wiki/Q41261' },
       { '@type': 'City', name: 'Taif', sameAs: 'https://www.wikidata.org/wiki/Q200047' },
       { '@type': 'City', name: 'Riyadh', sameAs: 'https://www.wikidata.org/wiki/Q3692' },
+      { '@type': 'City', name: 'Dammam' },
     ],
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SA',
-      addressRegion: 'Makkah Province',
-      addressLocality: 'Makkah',
     },
-    geo: { '@type': 'GeoCoordinates', latitude: 21.3891, longitude: 39.8579 },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
@@ -232,7 +230,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       width: 200,
       height: 200,
     },
-    description: 'Saudi Cabs GMC is a private taxi and transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers. We provide fixed-price transportation between Makkah, Madinah, Jeddah, Taif, and Riyadh.',
+    description: 'Saudi Cabs GMC is a private taxi and transport company operating 24/7 across Saudi Arabia, serving pilgrims, families, and business travelers. We provide fixed-price transportation between Makkah, Madinah, Jeddah, Taif, Riyadh, and Dammam.',
     knowsAbout: [
       'Private taxi service in Makkah',
       'Airport transfers from King Abdulaziz International Airport Jeddah',
@@ -273,7 +271,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@id': 'https://saudicabsgmc.com/#website',
     name: 'Saudi Cabs GMC',
     url: 'https://saudicabsgmc.com',
-    description: 'Book taxi, private driver, and airport transfers across Saudi Arabia. Fixed prices for Makkah, Madinah, Jeddah, Taif, and Riyadh.',
+    description: 'Book taxi, private driver, and airport transfers across Saudi Arabia. Fixed prices for Makkah, Madinah, Jeddah, Taif, Riyadh, and Dammam.',
     inLanguage: ['en', 'ar'],
     publisher: { '@id': 'https://saudicabsgmc.com/#organization' },
     potentialAction: {

@@ -322,4 +322,5 @@ export const relatedGuides: { href: string; label: BText }[] = [
   { href: '/umrah-travel-guide', label: { en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' } },
   { href: '/hajj-transport-faq', label: { en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' } },
   { href: '/taxi-prices-saudi-arabia', label: { en: 'Taxi Prices in Saudi Arabia', ar: 'أسعار التاكسي في السعودية' } },
+  { href: '/saudi-arabia-tourist-destinations', label: { en: 'Saudi Arabia Tourist Destinations', ar: 'الوجهات السياحية في السعودية' } },
 ]
