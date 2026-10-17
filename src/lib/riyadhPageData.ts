@@ -143,3 +143,49 @@ export const bookingSteps: BookingStep[] = [
   { n: '2', title: { en: 'Confirm vehicle and fare', ar: 'أكّد السيارة والسعر' }, desc: { en: 'We reply with the vehicle options and the fare for your trip.', ar: 'نرد عليك بخيارات السيارة وسعر رحلتك.' } },
   { n: '3', title: { en: 'Meet your driver and travel', ar: 'قابل سائقك وسافر' }, desc: { en: 'Your driver meets you at the agreed pickup point.', ar: 'يقابلك سائقك عند نقطة الاستلام المتفق عليها.' } },
 ]
+
+/* ── Riyadh sightseeing (kept short — a local teaser; the full,
+   cross-Saudi-Arabia version of this content lives on
+   /saudi-arabia-tourist-destinations, which this section links to) ── */
+
+export const sightseeingIntro: BText = {
+  en: 'Riyadh pairs a fast-growing modern skyline with restored historic sites nearby — worth building into your trip if you have a day or two beyond business or transit.',
+  ar: 'تجمع الرياض بين أفق حديث سريع التغير ومواقع تاريخية مُرممة قريبة منها — تستحق إدراجها في برنامجك إن كان لديك يوم أو يومان إضافيان بعيداً عن العمل أو العبور.',
+}
+
+export interface SightseeingSpot { iconName: string; name: BText; desc: BText }
+
+export const sightseeingSpots: SightseeingSpot[] = [
+  {
+    iconName: 'Building',
+    name: { en: 'Diriyah (At-Turaif District)', ar: 'الدرعية (حي الطريف)' },
+    desc: {
+      en: 'A restored 18th-century mud-brick city just outside Riyadh and a UNESCO World Heritage Site — the birthplace of the first Saudi state, now surrounded by the Bujairi Terrace restaurants.',
+      ar: 'مدينة طينية مُرممة من القرن الثامن عشر على أطراف الرياض، ومسجلة في التراث العالمي لليونسكو — مهد الدولة السعودية الأولى، ويحيط بها اليوم مطاعم حي البجيري.',
+    },
+  },
+  {
+    iconName: 'Landmark',
+    name: { en: 'Masmak Fortress', ar: 'قلعة المصمك' },
+    desc: {
+      en: 'A 19th-century clay-and-mudbrick fort in the old city center, central to the founding of modern Saudi Arabia.',
+      ar: 'حصن طيني من القرن التاسع عشر في وسط المدينة القديم، له دور محوري في تأسيس المملكة الحديثة.',
+    },
+  },
+  {
+    iconName: 'Building2',
+    name: { en: 'National Museum', ar: 'المتحف الوطني' },
+    desc: {
+      en: 'A well-regarded overview of Arabian Peninsula history, from pre-Islamic times to the founding of the Kingdom.',
+      ar: 'عرض شامل ومُقدَّر لتاريخ الجزيرة العربية، من العصور ما قبل الإسلام إلى تأسيس المملكة.',
+    },
+  },
+  {
+    iconName: 'Mountain',
+    name: { en: 'Edge of the World', ar: 'حافة العالم' },
+    desc: {
+      en: 'A dramatic desert escarpment outside the city — a popular day trip, though the hike itself is usually arranged through specialized desert-tour operators rather than a standard taxi route.',
+      ar: 'هضبة صحراوية مثيرة خارج المدينة — رحلة نهارية شائعة، إلا أن المسار الصحراوي نفسه يُرتَّب عادة عبر متخصصين في الجولات الصحراوية لا عبر خط تاكسي عادي.',
+    },
+  },
+]
