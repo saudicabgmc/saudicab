@@ -139,6 +139,7 @@ export default function MadinahZiyaratPage() {
               { href: '/makkah-to-madinah', ar: 'مكة ← المدينة', en: 'Makkah → Madinah' },
               { href: '/hajj-umrah-transport', ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
               { href: '/private-driver', ar: 'سائق خاص', en: 'Private Driver' },
+              { href: '/saudi-arabia-tourist-destinations', ar: 'وجهات المملكة السياحية', en: 'Saudi Arabia Destinations' },
             ].map(c => (
               <Link key={c.href} href={c.href} className="route-badge"><MapPin size={14} />{isAr ? c.ar : c.en}</Link>
             ))}

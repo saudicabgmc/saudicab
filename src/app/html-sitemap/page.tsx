@@ -104,6 +104,7 @@ const sections = [
       { href: '/taxi-prices-saudi-arabia', label: 'Taxi Prices Guide' },
       { href: '/umrah-travel-guide', label: 'Umrah Travel Guide' },
       { href: '/hajj-transport-faq', label: 'Hajj Transport FAQ' },
+      { href: '/saudi-arabia-tourist-destinations', label: 'Tourist Destinations in Saudi Arabia' },
     ],
   },
 ]

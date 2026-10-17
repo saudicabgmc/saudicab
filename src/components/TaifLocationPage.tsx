@@ -263,9 +263,14 @@ export default function TaifLocationPage({ cityName, citySlogan, citySlug, heroI
           <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🌹</div>
           <Head id="tf-rose-title" tag={isAr ? 'مزارع الورد' : 'Rose Farms'} title={isAr ? 'استكشف بلاد الورد الطائفي' : "Visit Taif's Rose Country"} />
           <p style={{ fontSize: '0.95rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '26px' }}>{tx(roseFarms.text)}</p>
-          <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ display: 'inline-flex' }}>
+          <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ display: 'inline-flex', marginBottom: '16px' }}>
             <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'اسأل عن رحلة مزارع الورد' : 'Ask About a Rose Farm Trip'}
           </a>
+          <div>
+            <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: GREEN, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              {isAr ? 'استكشف الطائف وبقية وجهات المملكة' : 'Explore Taif & More Saudi Destinations'} <Arrow size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 

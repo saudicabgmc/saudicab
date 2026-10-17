@@ -232,7 +232,10 @@ export default function DammamLocationPage({ cityName, citySlogan, citySlug, faq
       <section aria-labelledby="dmm-major-title" style={{ padding: '70px 0', backgroundColor: 'var(--background)' }}>
         <div className="container" style={{ maxWidth: '700px', textAlign: 'center' }}>
           <Head id="dmm-major-title" tag={isAr ? 'الوجهات الرئيسية' : 'Major Destinations'} title={isAr ? 'الدمام ومدن المملكة الرئيسية' : 'Dammam to Major Cities'} />
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85 }}>{tx(majorCitiesNote)}</p>
+          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '18px' }}>{tx(majorCitiesNote)}</p>
+          <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: PETROL, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+            {isAr ? 'استكشف الدمام وبقية وجهات المملكة' : 'Explore Dammam & More Saudi Destinations'} <Arrow size={13} />
+          </Link>
         </div>
       </section>
 

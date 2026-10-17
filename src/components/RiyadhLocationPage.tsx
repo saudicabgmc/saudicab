@@ -263,7 +263,10 @@ export default function RiyadhLocationPage({ cityName, citySlogan, citySlug, faq
       <section aria-labelledby="ryd-major-title" style={{ padding: '70px 0', backgroundColor: 'var(--background)' }}>
         <div className="container" style={{ maxWidth: '700px', textAlign: 'center' }}>
           <Head id="ryd-major-title" tag={isAr ? 'الوجهات الرئيسية' : 'Major Destinations'} title={isAr ? 'الرياض ومدن المملكة الرئيسية' : 'Riyadh to Major Cities'} />
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85 }}>{tx(majorCitiesNote)}</p>
+          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '18px' }}>{tx(majorCitiesNote)}</p>
+          <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: SLATE, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+            {isAr ? 'استكشف الرياض والدرعية وبقية وجهات المملكة' : 'Explore Riyadh, Diriyah & More Saudi Destinations'} <Arrow size={13} />
+          </Link>
         </div>
       </section>
 

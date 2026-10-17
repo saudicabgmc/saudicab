@@ -136,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/taxi-prices-saudi-arabia`,  lastModified: new Date('2026-09-03'), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/umrah-travel-guide`,        lastModified: new Date('2026-09-07'), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/hajj-transport-faq`,        lastModified: new Date('2026-09-03'), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE}/saudi-arabia-tourist-destinations`, lastModified: new Date('2026-10-17'), changeFrequency: 'weekly', priority: 0.85 },
 
     // Legal
     { url: `${BASE}/privacy-policy`,       lastModified: SITE_LAST_VERIFIED, changeFrequency: 'yearly', priority: 0.4 },

@@ -16,6 +16,7 @@ const guideLinks = [
   { href: '/taxi-prices-saudi-arabia', en: 'Taxi Prices Guide', ar: 'دليل أسعار التاكسي' },
   { href: '/umrah-travel-guide', en: 'Umrah Travel Guide', ar: 'دليل سفر العمرة' },
   { href: '/hajj-transport-faq', en: 'Hajj Transport FAQ', ar: 'الأسئلة الشائعة لنقل الحج' },
+  { href: '/saudi-arabia-tourist-destinations', en: 'Tourist Destinations', ar: 'الوجهات السياحية' },
 ]
 
 const intlLinks = [

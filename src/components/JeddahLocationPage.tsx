@@ -304,9 +304,14 @@ export default function JeddahLocationPage({
         <div className="container" style={{ maxWidth: '760px', textAlign: 'center' }}>
           <Head id="jed-corniche-title" tag={isAr ? 'الكورنيش' : 'The Corniche'} title={isAr ? 'تخطط ليوم على كورنيش جدة؟' : 'Planning a Day on the Jeddah Corniche?'} />
           <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '26px' }}>{tx(cornicheSection.text)}</p>
-          <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ display: 'inline-flex' }}>
+          <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ display: 'inline-flex', marginBottom: '16px' }}>
             <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'خطط لرحلتك على الكورنيش عبر واتساب' : 'Plan Your Corniche Trip on WhatsApp'}
           </a>
+          <div>
+            <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: NAVY, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              {isAr ? 'استكشف جدة وبقية وجهات المملكة' : 'Explore Jeddah & More Saudi Destinations'} <Arrow size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 
