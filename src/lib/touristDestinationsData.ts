@@ -179,6 +179,7 @@ export const destinations: Destination[] = [
       { name: { en: 'King Fahd Causeway', ar: 'جسر الملك فهد' }, desc: { en: 'The road link to Bahrain, about 50 km from central Dammam.', ar: 'الطريق الرابط مع البحرين، على مسافة نحو ٥٠ كم من وسط الدمام.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/dammam.webp',
     gradient: ['#063449', '#0a6a8a'],
     icon: 'Waves',
     serviceLinks: [
