@@ -267,6 +267,7 @@ export const destinations: Destination[] = [
       { name: { en: 'Palm Jumeirah', ar: 'نخلة جميرا' }, desc: { en: 'A man-made, palm-shaped island lined with resorts and beach clubs.', ar: 'جزيرة صناعية على شكل نخلة، تصطف حولها المنتجعات والنوادي الشاطئية.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/dubai.webp',
     gradient: ['#3d2817', '#6b4a2a'],
     icon: 'Building',
     serviceLinks: [
