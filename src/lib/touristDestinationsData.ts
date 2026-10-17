@@ -200,6 +200,7 @@ export const destinations: Destination[] = [
     ],
     goodToKnow: { en: "AlUla is well outside our regular service area. If you'd like to arrange a long-distance private transfer there, contact us on WhatsApp to check feasibility and routing before booking.", ar: 'تقع العلا خارج نطاق خدمتنا المعتاد. إذا كنت ترغب في ترتيب رحلة خاصة طويلة إليها، تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ ومسار الرحلة قبل الحجز.' },
     status: 'serviced',
+    heroImage: '/location/alula.webp',
     gradient: ['#5c3a2e', '#a85c3f'],
     icon: 'Map',
     serviceLinks: [],
