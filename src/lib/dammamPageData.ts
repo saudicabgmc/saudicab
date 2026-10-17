@@ -138,3 +138,41 @@ export const bookingSteps: BookingStep[] = [
   { n: '2', title: { en: 'Confirm vehicle and fare', ar: 'أكّد السيارة والسعر' }, desc: { en: 'We reply with the vehicle options and the fare for your trip.', ar: 'نرد عليك بخيارات السيارة وسعر رحلتك.' } },
   { n: '3', title: { en: 'Meet your driver and travel', ar: 'قابل سائقك وسافر' }, desc: { en: 'Your driver meets you at the agreed pickup point.', ar: 'يقابلك سائقك عند نقطة الاستلام المتفق عليها.' } },
 ]
+
+/* ── Dammam sightseeing (kept short — a local teaser; the full,
+   cross-Saudi-Arabia version of this content lives on
+   /saudi-arabia-tourist-destinations, which this section links to) ── */
+
+export const sightseeingIntro: BText = {
+  en: "Dammam isn't only a long-haul starting point — the Gulf waterfront itself is worth an afternoon if your schedule allows it.",
+  ar: 'الدمام ليست فقط نقطة انطلاق للرحلات الطويلة — فواجهة الخليج نفسها تستحق قضاء فترة بعد الظهر إن سمح وقتك.',
+}
+
+export interface SightseeingSpot { iconName: string; name: BText; desc: BText }
+
+export const sightseeingSpots: SightseeingSpot[] = [
+  {
+    iconName: 'Waves',
+    name: { en: 'Dammam Corniche', ar: 'كورنيش الدمام' },
+    desc: {
+      en: 'A long Gulf-front promenade with parks and family-friendly spots along the waterfront.',
+      ar: 'ممشى طويل على واجهة الخليج يضم حدائق ومرافق مناسبة للعائلات.',
+    },
+  },
+  {
+    iconName: 'Waves',
+    name: { en: 'Half Moon Bay', ar: 'نصف القمر' },
+    desc: {
+      en: 'A popular beach area south of Khobar, known for its curved shoreline.',
+      ar: 'منطقة شاطئية شائعة جنوب الخبر، تشتهر بخط ساحلها المنحني.',
+    },
+  },
+  {
+    iconName: 'Route',
+    name: { en: 'King Fahd Causeway', ar: 'جسر الملك فهد' },
+    desc: {
+      en: 'The road link to Bahrain, about 50 km from central Dammam — a separate, shorter trip from the long-distance routes above.',
+      ar: 'الطريق الرابط مع البحرين، على مسافة نحو ٥٠ كم من وسط الدمام — رحلة قصيرة منفصلة عن المسارات الطويلة أعلاه.',
+    },
+  },
+]

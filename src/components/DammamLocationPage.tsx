@@ -5,17 +5,18 @@ import FAQSection from './FAQSection'
 import FleetSection from './FleetSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
-  Building2, Plane, Briefcase, Route, Car, Users, Banknote,
+  Building2, Plane, Briefcase, Route, Car, Users, Banknote, Waves,
 } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import {
   type BText, type DammamPageProps,
   heroContent, trustItems, servicesIntro, serviceList, vehicleBestFor,
   linkedRoutes, majorCitiesNote, highlights, bookingSteps,
+  sightseeingIntro, sightseeingSpots,
 } from '@/lib/dammamPageData'
 
 const ICON_MAP: Record<string, React.ElementType> = {
-  Building2, Plane, Briefcase, Route, Car, Users, Banknote, MessageCircle,
+  Building2, Plane, Briefcase, Route, Car, Users, Banknote, MessageCircle, Waves,
 }
 
 const WA_NUMBER = '923097811785'
@@ -196,6 +197,50 @@ export default function DammamLocationPage({ cityName, citySlogan, citySlug, faq
         </Link>
       </div>
 
+      {/* ── 4b. Dammam sightseeing & attractions ── */}
+      <section aria-labelledby="dmm-sights-title" style={{ padding: '80px 0', backgroundColor: 'var(--muted)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <div className="container">
+          <Head
+            id="dmm-sights-title" tag={isAr ? 'استكشف الدمام' : 'Sightseeing'}
+            title={isAr ? 'معالم ووجهات في الدمام' : 'Dammam Sightseeing & Attractions'}
+            subtitle={tx(sightseeingIntro)}
+          />
+          <div className="mk-grid">
+            {sightseeingSpots.map((s, i) => {
+              const SIcon = ICON_MAP[s.iconName]
+              return (
+                <motion.div key={s.name.en} {...reveal(i)} style={{
+                  background: 'var(--card, #fff)', border: '1.5px solid var(--border)', borderRadius: '14px',
+                  padding: '24px 20px', textAlign: 'center',
+                }}>
+                  <div style={{
+                    background: 'rgba(7,54,66,0.06)', borderRadius: '50%',
+                    width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px',
+                  }}>
+                    {SIcon && <SIcon size={22} strokeWidth={1.8} color={PETROL} aria-hidden="true" />}
+                  </div>
+                  <h3 style={{ fontWeight: 800, marginBottom: '8px', fontSize: '0.95rem', lineHeight: 1.35, color: 'var(--foreground)' }}>{tx(s.name)}</h3>
+                  <p style={{ fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.7, margin: 0 }}>{tx(s.desc)}</p>
+                </motion.div>
+              )
+            })}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '36px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={waUrl(isAr ? 'السلام عليكم، أرغب في الاستفسار عن زيارة معالم الدمام' : "Hello, I'd like to ask about visiting Dammam's sights")}
+              target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus"
+            >
+              <MessageCircle size={16} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'استفسر عبر واتساب' : 'Ask About Sightseeing on WhatsApp'}
+            </a>
+            <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{
+              color: PETROL, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px',
+            }}>
+              {isAr ? 'الدليل الكامل لوجهات المملكة' : 'Full Saudi Arabia Destinations Guide'} <Arrow size={13} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── 5. Dammam intercity taxi routes ── */}
       <section id="dammam-routes" aria-labelledby="dmm-routes-title" style={{ padding: '80px 0', background: `linear-gradient(135deg, ${PETROL2} 0%, ${PETROL} 100%)`, scrollMarginTop: '90px' }}>
         <div className="container">
@@ -232,10 +277,7 @@ export default function DammamLocationPage({ cityName, citySlogan, citySlug, faq
       <section aria-labelledby="dmm-major-title" style={{ padding: '70px 0', backgroundColor: 'var(--background)' }}>
         <div className="container" style={{ maxWidth: '700px', textAlign: 'center' }}>
           <Head id="dmm-major-title" tag={isAr ? 'الوجهات الرئيسية' : 'Major Destinations'} title={isAr ? 'الدمام ومدن المملكة الرئيسية' : 'Dammam to Major Cities'} />
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '18px' }}>{tx(majorCitiesNote)}</p>
-          <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: PETROL, fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-            {isAr ? 'استكشف الدمام وبقية وجهات المملكة' : 'Explore Dammam & More Saudi Destinations'} <Arrow size={13} />
-          </Link>
+          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85 }}>{tx(majorCitiesNote)}</p>
         </div>
       </section>
 
