@@ -158,6 +158,16 @@ function DestinationCard({ d, index, reveal }: { d: Destination; index: number; 
               {isAr ? 'اسأل عن إمكانية الرحلة' : 'Ask About This Trip'}
             </a>
           )}
+          {d.status === 'serviced' && d.whatsappCta && (
+            <a
+              href={waUrl(waText)} target="_blank" rel="noopener noreferrer"
+              className="btn-primary mk-btn mk-btn-wa mk-focus"
+              style={{ justifyContent: 'center', fontSize: '0.82rem', padding: '10px 14px' }}
+            >
+              <MessageCircle size={15} strokeWidth={2.5} aria-hidden="true" />
+              {isAr ? 'احجز عبر واتساب' : 'Book on WhatsApp'}
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

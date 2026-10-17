@@ -23,6 +23,9 @@ export interface Destination {
   gradient: [string, string]
   icon: 'Landmark' | 'Waves' | 'Mountain' | 'Building2' | 'Building' | 'Map'
   serviceLinks: ServiceLink[]
+  /** Shows a WhatsApp booking CTA on the card even when status is 'serviced' and
+   *  serviceLinks is empty (no dedicated route/service page exists yet to link to). */
+  whatsappCta?: boolean
 }
 
 export const destinations: Destination[] = [
@@ -195,10 +198,11 @@ export const destinations: Destination[] = [
       { name: { en: 'AlUla Old Town', ar: 'بلدة العلا القديمة' }, desc: { en: 'A historic mudbrick settlement inhabited for centuries, now open to visitors.', ar: 'مستوطنة طينية تاريخية كانت مأهولة لقرون، وهي اليوم مفتوحة للزوار.' } },
     ],
     goodToKnow: { en: "AlUla is well outside our regular service area. If you'd like to arrange a long-distance private transfer there, contact us on WhatsApp to check feasibility and routing before booking.", ar: 'تقع العلا خارج نطاق خدمتنا المعتاد. إذا كنت ترغب في ترتيب رحلة خاصة طويلة إليها، تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ ومسار الرحلة قبل الحجز.' },
-    status: 'inquire',
+    status: 'serviced',
     gradient: ['#5c3a2e', '#a85c3f'],
     icon: 'Map',
     serviceLinks: [],
+    whatsappCta: true,
   },
   {
     id: 'abha',
@@ -215,10 +219,11 @@ export const destinations: Destination[] = [
       { name: { en: 'Abha Lake Park', ar: 'حديقة بحيرة أبها' }, desc: { en: 'A lakeside park in the city, popular in the cooler months.', ar: 'حديقة على بحيرة في المدينة، شائعة في الأشهر الأكثر برودة.' } },
     ],
     goodToKnow: { en: "Abha is well outside our regular service area. If you'd like to arrange a long-distance private transfer there, contact us on WhatsApp to check feasibility and routing before booking.", ar: 'تقع أبها خارج نطاق خدمتنا المعتاد. إذا كنت ترغب في ترتيب رحلة خاصة طويلة إليها، تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ ومسار الرحلة قبل الحجز.' },
-    status: 'inquire',
+    status: 'serviced',
     gradient: ['#1c3d2a', '#2f6b45'],
     icon: 'Mountain',
     serviceLinks: [],
+    whatsappCta: true,
   },
 ]
 
