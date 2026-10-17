@@ -294,6 +294,11 @@ export default function InternationalTransferPage({
               {relatedLink.label} <Arrow size={13} />
             </Link>
           </p>
+          <p style={{ marginTop: '10px' }}>
+            <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: 'rgba(255,255,255,0.65)', fontWeight: 700, fontSize: '0.82rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              Explore more about {destinationLabel} and other destinations <Arrow size={12} />
+            </Link>
+          </p>
         </div>
       </section>
     </main>
