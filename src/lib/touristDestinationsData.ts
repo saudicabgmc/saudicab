@@ -289,6 +289,7 @@ export const destinations: Destination[] = [
       { name: { en: 'Abu Dhabi Corniche', ar: 'كورنيش أبوظبي' }, desc: { en: 'A long waterfront promenade along the Arabian Gulf, popular for walking and cycling.', ar: 'ممشى طويل على الواجهة البحرية على الخليج العربي، مفضل للمشي وركوب الدراجات.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/abu-dhabi.webp',
     gradient: ['#2e2a1f', '#5c5238'],
     icon: 'Landmark',
     serviceLinks: [
