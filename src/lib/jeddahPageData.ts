@@ -178,6 +178,10 @@ export const cornicheSection = {
     en: 'The Corniche stretches along the Red Sea waterfront, past the King Fahd Fountain and the Floating Mosque, with stops such as Al-Shallal Theme Park along the way. A private vehicle lets you move between these spots and back to your hotel without arranging a separate ride for each stop.',
     ar: 'يمتد الكورنيش على طول واجهة البحر الأحمر، بجانب نافورة الملك فهد والمسجد العائم، مع محطات مثل منتزه الشلال على الطريق. السيارة الخاصة تتيح لك التنقل بين هذه المواقع والعودة إلى فندقك دون ترتيب رحلة منفصلة لكل محطة.',
   },
+  balad: {
+    en: 'Many visitors pair a Corniche afternoon with a stop at Historic Al-Balad — Jeddah\'s UNESCO-listed old town is a separate part of the city, so a private car between the two saves arranging transport twice in one day.',
+    ar: 'يربط كثير من الزوار جولة الكورنيش بزيارة البلد التاريخية — فحي جدة القديم المسجل في اليونسكو يقع في جزء مختلف من المدينة، والسيارة الخاصة بين الموقعين توفر عليك ترتيب رحلتين منفصلتين في يوم واحد.',
+  },
 }
 
 /* ── Family & group vehicle comparison ────────────────────────── */
@@ -275,6 +279,23 @@ export const highlights: JeddahHighlight[] = [
   { iconName: 'Car', title: { en: 'Vehicle Choice', ar: 'خيار السيارة' }, desc: { en: 'Sedan, Hyundai Staria or GMC Yukon depending on your group and preference.', ar: 'سيدان أو هيونداي ستاريا أو GMC يوكون بحسب مجموعتك وتفضيلك.' } },
   { iconName: 'Plane', title: { en: 'Airport Coverage', ar: 'تغطية المطار' }, desc: { en: 'Regular pickups and drop-offs at King Abdulaziz International Airport.', ar: 'استقبال وتوديع منتظم في مطار الملك عبدالعزيز الدولي.' } },
   { iconName: 'Shield', title: { en: 'No Advance Payment', ar: 'بدون دفع مسبق' }, desc: { en: 'Pay your driver directly — no deposit required to confirm a booking.', ar: 'الدفع لسائقك مباشرة — دون أي عربون مطلوب لتأكيد الحجز.' } },
+]
+
+/* ── How booking works (general — airport arrival has its own
+   step-by-step section above; this covers city rides, Corniche,
+   business and intercity bookings) ───────────────────────────── */
+
+export interface BookingStep {
+  n: string
+  title: BText
+  desc: BText
+}
+
+export const bookingSteps: BookingStep[] = [
+  { n: '1', title: { en: 'Send Your Trip Details', ar: 'أرسل تفاصيل رحلتك' }, desc: { en: 'Pickup, destination, date, time and passenger count.', ar: 'الاستلام والوجهة والتاريخ والوقت وعدد الركاب.' } },
+  { n: '2', title: { en: 'Choose Your Vehicle', ar: 'اختر سيارتك' }, desc: { en: 'Sedan, Hyundai Staria or GMC Yukon.', ar: 'سيدان أو هيونداي ستاريا أو GMC يوكون.' } },
+  { n: '3', title: { en: 'Receive Your Fare', ar: 'استلم سعرك' }, desc: { en: 'The route fare is confirmed on WhatsApp — no advance payment.', ar: 'يُؤكَّد سعر المسار عبر واتساب — دون أي دفع مسبق.' } },
+  { n: '4', title: { en: 'Meet Your Driver', ar: 'قابل سائقك' }, desc: { en: 'Your driver meets you at the agreed pickup point.', ar: 'يقابلك سائقك عند نقطة الاستلام المتفق عليها.' } },
 ]
 
 /* ── Jeddah transport questions (direct-answer AEO block) ─────

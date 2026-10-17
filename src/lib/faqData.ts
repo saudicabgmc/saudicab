@@ -580,6 +580,16 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'الأسعار للسيارة الواحدة وليست للفرد. ينطبق سعر السيدان أو ستاريا أو GMC يوكون نفسه سواء سافر راكب واحد أو امتلأت السيارة حتى سعتها القصوى.',
     },
   },
+  {
+    q: {
+      en: 'Is Historic Al-Balad walkable, or do I need a taxi there?',
+      ar: 'هل يمكن استكشاف البلد التاريخية سيراً، أم أحتاج تاكسي للوصول إليها؟',
+    },
+    a: {
+      en: "Al-Balad itself is best explored on foot once you're there — it's a historic old town with narrow lanes. A taxi is mainly useful for getting to Al-Balad from your hotel or the Corniche, since it's a separate part of the city, and for the trip back afterward.",
+      ar: 'يُفضَّل استكشاف البلد التاريخية سيراً على الأقدام بعد الوصول إليها — فهي حي قديم بأزقة ضيقة. يفيد التاكسي بشكل أساسي في الوصول إلى البلد من فندقك أو من الكورنيش، لأنها تقع في جزء مختلف من المدينة، وكذلك في رحلة العودة بعد الزيارة.',
+    },
+  },
 ]
 
 export const taifFaqs: FAQItem[] = [

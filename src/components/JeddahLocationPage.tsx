@@ -6,7 +6,7 @@ import PricingSection from './PricingSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, Shield, Route, Mountain,
-  UserRound, Waves, ShoppingBag, Building, Anchor,
+  UserRound, Waves, ShoppingBag, Building, Anchor, Send, CheckCircle2,
 } from 'lucide-react'
 import FleetSection from './FleetSection'
 import { useLang } from '@/contexts/LanguageContext'
@@ -14,12 +14,12 @@ import { t } from '@/lib/translations'
 import {
   type BText, type JeddahPageProps,
   heroContent, needCards, arrivalSteps, cityTransport, cornicheSection,
-  vehicleComparison, vehicleBestFor, businessSection, areas, aeoQA,
+  vehicleComparison, vehicleBestFor, businessSection, areas, aeoQA, bookingSteps,
 } from '@/lib/jeddahPageData'
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, Shield, Route, Mountain,
-  UserRound, Waves, ShoppingBag, Building, Anchor, MessageCircle,
+  UserRound, Waves, ShoppingBag, Building, Anchor, MessageCircle, Send, CheckCircle2,
 }
 
 const WA_NUMBER = '923097811785'
@@ -303,7 +303,8 @@ export default function JeddahLocationPage({
       <section aria-labelledby="jed-corniche-title" style={{ padding: '84px 0', backgroundColor: 'var(--background)' }}>
         <div className="container" style={{ maxWidth: '760px', textAlign: 'center' }}>
           <Head id="jed-corniche-title" tag={isAr ? 'الكورنيش' : 'The Corniche'} title={isAr ? 'تخطط ليوم على كورنيش جدة؟' : 'Planning a Day on the Jeddah Corniche?'} />
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '26px' }}>{tx(cornicheSection.text)}</p>
+          <p style={{ fontSize: '0.92rem', color: 'var(--muted-foreground)', lineHeight: 1.85, marginBottom: '16px' }}>{tx(cornicheSection.text)}</p>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted-foreground)', lineHeight: 1.8, marginBottom: '26px' }}>{tx(cornicheSection.balad)}</p>
           <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ display: 'inline-flex', marginBottom: '16px' }}>
             <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'خطط لرحلتك على الكورنيش عبر واتساب' : 'Plan Your Corniche Trip on WhatsApp'}
           </a>
@@ -465,6 +466,37 @@ export default function JeddahLocationPage({
                 </motion.div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 14b. How booking works ── */}
+      <section aria-labelledby="jed-booking-title" style={{ padding: '80px 0', backgroundColor: 'var(--background)' }}>
+        <div className="container">
+          <Head id="jed-booking-title" tag={isAr ? 'الحجز' : 'Booking'} title={isAr ? 'كيف يتم الحجز' : 'How Booking Works'} />
+          <div className="mk-grid-lg" style={{ marginBottom: '32px' }}>
+            {bookingSteps.map((s, i) => {
+              const StepIcon = [Send, Car, Banknote, CheckCircle2][i]
+              return (
+                <motion.div key={s.n} {...reveal(i)} style={{
+                  background: 'var(--muted)', border: '1px solid var(--border)', borderRadius: '14px', padding: '22px 20px', textAlign: 'center',
+                }}>
+                  <div style={{
+                    width: '42px', height: '42px', borderRadius: '10px', background: 'rgba(8,145,178,0.1)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px',
+                  }}>
+                    <StepIcon size={19} color={TEAL} strokeWidth={1.8} aria-hidden="true" />
+                  </div>
+                  <h3 style={{ fontSize: '0.92rem', fontWeight: 800, marginBottom: '6px' }}>{tx(s.title)}</h3>
+                  <p style={{ fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.65, margin: 0 }}>{tx(s.desc)}</p>
+                </motion.div>
+              )
+            })}
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <a href={waUrl(waText)} target="_blank" rel="noopener noreferrer" className="btn-primary mk-btn mk-btn-wa mk-focus" style={{ padding: '14px 32px', display: 'inline-flex' }}>
+              <MessageCircle size={17} strokeWidth={2.5} aria-hidden="true" /> {isAr ? 'احجز عبر واتساب' : 'Book on WhatsApp'}
+            </a>
           </div>
         </div>
       </section>
