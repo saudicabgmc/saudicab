@@ -369,6 +369,26 @@ export const madinahFaqs: FAQItem[] = [
   },
   {
     q: {
+      en: 'Is Madinah open to non-Muslim visitors?',
+      ar: 'هل المدينة المنورة مفتوحة للزوار غير المسلمين؟',
+    },
+    a: {
+      en: "Madinah city itself is generally open to visitors of all faiths, unlike Makkah. Some areas inside Al-Masjid An-Nabawi, such as the Rawdah, may have restrictions or timing arrangements for non-Muslims — check current signage and guidance on site, as this can change.",
+      ar: 'مدينة المدينة المنورة نفسها مفتوحة عموماً لزوار جميع الأديان، بخلاف مكة المكرمة. قد تكون بعض المناطق داخل المسجد النبوي الشريف، مثل الروضة الشريفة، مقيدة أو لها ترتيبات زمنية لغير المسلمين — يُرجى مراجعة اللوحات والتوجيهات الحالية في الموقع، فقد تتغير هذه الترتيبات.',
+    },
+  },
+  {
+    q: {
+      en: "Do I need a taxi if my hotel is close to the Prophet's Mosque?",
+      ar: 'هل أحتاج تاكسي إذا كان فندقي قريباً من المسجد النبوي الشريف؟',
+    },
+    a: {
+      en: "Not always — many hotels in the Central Area are within walking distance. A private car tends to help more for a late check-in or check-out with luggage, a hotel farther from the mosque, moving between prayer times without crossing crowds on foot, or when traveling with elderly family members or young children.",
+      ar: 'ليس دائماً — كثير من الفنادق في المنطقة المركزية تقع على مسافة يمكن المشي إليها. يفيد النقل الخاص أكثر عند تسجيل الوصول أو المغادرة المتأخرة مع الأمتعة، أو عند الإقامة في فندق أبعد عن المسجد، أو للتنقل بين أوقات الصلاة دون عبور الحشود سيراً، أو عند السفر مع كبار السن أو الأطفال الصغار.',
+    },
+  },
+  {
+    q: {
       en: "How do I get from Madinah Airport to the Prophet's Mosque?",
       ar: 'كيف أصل من مطار المدينة المنورة إلى المسجد النبوي الشريف؟',
     },

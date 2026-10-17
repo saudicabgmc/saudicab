@@ -227,6 +227,10 @@ export const mosqueSection = {
     en: "Traffic and access arrangements around the Prophet's Mosque can change, particularly during busy prayer periods, so nearby pickup points may shift slightly.",
     ar: 'قد تتغير حركة المرور وترتيبات الوصول حول المسجد النبوي الشريف، خاصة في أوقات الصلاة المزدحمة، فقد تتغير نقاط الاستلام القريبة قليلاً تبعاً لذلك.',
   },
+  whyPrivateCar: {
+    en: "Plenty of hotels are within walking distance of Al-Masjid An-Nabawi, so a taxi isn't always necessary just to reach it. A private car tends to help more for a later check-in or check-out with luggage, a hotel outside the Central Area, moving between prayer times without re-crossing the crowds on foot, or when traveling with elderly family members or young children.",
+    ar: 'تقع كثير من الفنادق على مسافة قريبة يمكن المشي إليها من المسجد النبوي الشريف، فلا يكون التاكسي ضرورياً دائماً للوصول إليه فقط. يفيد النقل الخاص أكثر عند تسجيل الوصول أو المغادرة مع الأمتعة، أو عند الإقامة في فندق خارج المنطقة المركزية، أو للتنقل بين أوقات الصلاة دون عبور الحشود سيراً، أو عند السفر مع كبار السن أو الأطفال الصغار.',
+  },
 }
 
 /* ── Madinah Ziyarat by private vehicle ───────────────────────── */

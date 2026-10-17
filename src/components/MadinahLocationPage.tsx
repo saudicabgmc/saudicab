@@ -287,8 +287,11 @@ export default function MadinahLocationPage({
               </div>
             ))}
           </div>
-          <p style={{ textAlign: 'center', fontSize: '0.84rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, margin: 0 }}>
+          <p style={{ textAlign: 'center', fontSize: '0.84rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, margin: '0 0 16px' }}>
             {tx(mosqueSection.caveat)}
+          </p>
+          <p style={{ textAlign: 'center', fontSize: '0.84rem', color: 'rgba(255,255,255,0.68)', lineHeight: 1.8, margin: 0, maxWidth: '640px', marginInline: 'auto' }}>
+            {tx(mosqueSection.whyPrivateCar)}
           </p>
         </div>
       </section>
@@ -320,6 +323,11 @@ export default function MadinahLocationPage({
           }}>
             {isAr ? 'عرض زيارات المدينة المنورة' : 'View Madinah Ziyarat'} <Arrow />
           </Link>
+          <div style={{ marginTop: '18px' }}>
+            <Link href="/saudi-arabia-tourist-destinations" className="mk-focus" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              {isAr ? 'استكشف المزيد من وجهات المملكة' : 'Explore More Saudi Arabia Destinations'} <Arrow size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 
