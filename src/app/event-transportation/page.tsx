@@ -1,7 +1,10 @@
 'use client'
+import { useState } from 'react'
 import Link from 'next/link'
-import { MessageCircle, MapPin, Users, Car, CalendarCheck, Send, CheckCircle2 } from 'lucide-react'
-import BookingForm from '@/components/BookingForm'
+import {
+  MessageCircle, MapPin, Users, Car, CalendarCheck, Send, CheckCircle2,
+  Calendar, Phone, PartyPopper, Building2, HelpCircle,
+} from 'lucide-react'
 import FAQSection from '@/components/FAQSection'
 import { useLang } from '@/contexts/LanguageContext'
 
@@ -34,8 +37,8 @@ const EVENT_TYPES = [
     icon: '⭐',
     t: { en: 'VIP Guest Transport', ar: 'نقل كبار الضيوف' },
     d: {
-      en: 'A dedicated GMC Yukon or Hyundai Staria with a professional driver for VIP arrivals, departures, and movements during the event.',
-      ar: 'سيارة GMC يوكون أو هيونداي ستاريا مخصصة مع سائق محترف لاستقبال وتوديع كبار الضيوف وتنقلاتهم خلال الفعالية.',
+      en: 'A GMC Yukon or Hyundai Staria with a professional driver can be arranged for VIP arrivals, departures, and movements during the event, subject to availability on your date.',
+      ar: 'يمكن ترتيب سيارة GMC يوكون أو هيونداي ستاريا مع سائق محترف لاستقبال وتوديع كبار الضيوف وتنقلاتهم خلال الفعالية، حسب التوفر في تاريخك.',
     },
   },
   {
@@ -67,7 +70,7 @@ const VEHICLES = [
     name: { en: 'Hyundai Staria', ar: 'هيونداي ستاريا' },
     seats: { en: 'Up to 7 passengers', ar: 'حتى ٧ ركاب' },
     bestFor: { en: 'Guest groups travelling together, with room for luggage or gifts.', ar: 'مجموعات ضيوف تسافر معاً، مع مساحة للأمتعة أو الهدايا.' },
-    img: '/fleet/hyundai-staria-exterior-front-saudi-cabs-gmc.webp',
+    img: null,
   },
   {
     name: { en: 'GMC Yukon', ar: 'GMC يوكون' },
@@ -145,6 +148,209 @@ const FAQS = [
   },
 ]
 
+const EVENT_TYPE_OPTIONS = [
+  { en: 'Wedding', ar: 'عرس' },
+  { en: 'Corporate Event', ar: 'فعالية شركة' },
+  { en: 'Conference / Seminar', ar: 'مؤتمر / ندوة' },
+  { en: 'VIP Guest Transport', ar: 'نقل كبار الضيوف' },
+  { en: 'Private Function', ar: 'مناسبة خاصة' },
+  { en: 'Other', ar: 'أخرى' },
+]
+
+const GUEST_COUNT_OPTIONS = [
+  { en: '1–4', ar: '١–٤' },
+  { en: '5–7', ar: '٥–٧' },
+  { en: '8–15', ar: '٨–١٥' },
+  { en: '16–30', ar: '١٦–٣٠' },
+  { en: '30+', ar: '٣٠+' },
+  { en: 'Not sure yet', ar: 'غير محدد بعد' },
+]
+
+const VEHICLE_NEED_OPTIONS = [
+  { en: 'Sedan', ar: 'سيدان' },
+  { en: 'Hyundai Staria', ar: 'هيونداي ستاريا' },
+  { en: 'GMC Yukon', ar: 'GMC يوكون' },
+  { en: 'Multiple vehicles', ar: 'عدة سيارات' },
+  { en: 'Not sure yet', ar: 'غير محدد بعد' },
+]
+
+/* Event-specific WhatsApp enquiry form — distinct from the site's general point-to-point
+   BookingForm (single pickup/drop-off, max 7 passengers), since events need an event type,
+   venue, an open-ended guest estimate, and sometimes multiple vehicles. The shared
+   BookingForm component itself is untouched and keeps working as-is everywhere else. */
+function EventEnquiryForm() {
+  const { isAr } = useLang()
+  const tx = (b: { en: string; ar: string }) => (isAr ? b.ar : b.en)
+  const [eventType, setEventType] = useState('')
+  const [date, setDate] = useState('')
+  const [pickup, setPickup] = useState('')
+  const [venue, setVenue] = useState('')
+  const [guests, setGuests] = useState('')
+  const [vehicleNeed, setVehicleNeed] = useState('')
+  const [phone, setPhone] = useState('')
+  const [notes, setNotes] = useState('')
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [submitted, setSubmitted] = useState(false)
+  const [waLink, setWaLink] = useState('')
+  const [todayStr] = useState(() => {
+    const d = new Date()
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+  })
+
+  const validate = () => {
+    const e: Record<string, string> = {}
+    if (!eventType) e.eventType = isAr ? 'اختر نوع الفعالية' : 'Please select an event type'
+    if (!date) e.date = isAr ? 'اختر التاريخ' : 'Please select a date'
+    if (!pickup.trim()) e.pickup = isAr ? 'اكتب موقع الاستلام' : 'Please enter a pickup location'
+    if (!phone.trim()) {
+      e.phone = isAr ? 'رقم الهاتف مطلوب' : 'Phone number is required'
+    } else if (!/^\+?[0-9\s\-]{8,20}$/.test(phone.trim())) {
+      e.phone = isAr ? 'يرجى إدخال رقم هاتف صحيح' : 'Please enter a valid phone number'
+    }
+    setErrors(e)
+    return Object.keys(e).length === 0
+  }
+
+  const handleSubmit = () => {
+    if (!validate()) return
+    const enc = encodeURIComponent
+    const msg = isAr
+      ? `السلام عليكم، أرغب في الاستفسار عن نقل فعالية:%0Aنوع الفعالية: ${enc(eventType)}%0Aالتاريخ: ${enc(date)}%0Aموقع الاستلام: ${enc(pickup.trim())}${venue.trim() ? `%0Aموقع الفعالية: ${enc(venue.trim())}` : ''}${guests ? `%0Aعدد الضيوف التقريبي: ${enc(guests)}` : ''}${vehicleNeed ? `%0Aالسيارة المطلوبة: ${enc(vehicleNeed)}` : ''}%0Aالهاتف: ${enc(phone.trim())}${notes.trim() ? `%0Aملاحظات: ${enc(notes.trim())}` : ''}`
+      : `Hello, I'd like to ask about event transportation:%0AEvent type: ${enc(eventType)}%0ADate: ${enc(date)}%0APickup location: ${enc(pickup.trim())}${venue.trim() ? `%0AVenue: ${enc(venue.trim())}` : ''}${guests ? `%0AEstimated guests: ${enc(guests)}` : ''}${vehicleNeed ? `%0AVehicle needed: ${enc(vehicleNeed)}` : ''}%0APhone: ${enc(phone.trim())}${notes.trim() ? `%0ANotes: ${enc(notes.trim())}` : ''}`
+
+    const link = `https://wa.me/923097811785?text=${msg}`
+    setWaLink(link)
+    const win = window.open(link, '_blank')
+    if (!win) window.location.href = link
+    setSubmitted(true)
+    setTimeout(() => setSubmitted(false), 20000)
+  }
+
+  const selectStyle = (hasError?: boolean): React.CSSProperties => ({
+    width: '100%', padding: '10px 14px', borderRadius: '10px', fontFamily: 'inherit', fontSize: '0.9rem',
+    border: hasError ? '1.5px solid #e53e3e' : '1.5px solid #ddd', background: 'white', color: 'var(--foreground)',
+    appearance: 'none' as const, backgroundImage: 'none',
+  })
+
+  return (
+    <div className="booking-form-card">
+      {submitted && (
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: '10px',
+          background: 'rgba(11,61,46,0.08)', border: '1.5px solid rgba(11,61,46,0.25)',
+          borderRadius: '10px', padding: '10px 14px', marginBottom: '14px',
+          color: 'var(--secondary)', fontSize: '0.88rem', fontWeight: '700',
+        }}>
+          <CheckCircle2 size={18} strokeWidth={2.5} style={{ flexShrink: 0 }} />
+          <span>
+            {isAr ? 'تم تجهيز رسالتك في واتساب. لم يفتح واتساب؟ ' : "Your request is ready in WhatsApp. Didn't open? "}
+            <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary)', textDecoration: 'underline' }}>
+              {isAr ? 'افتح واتساب' : 'Open WhatsApp'}
+            </a>
+          </span>
+        </div>
+      )}
+
+      <h3 style={{ fontSize: '1.1rem', fontWeight: '900', textAlign: 'center', marginBottom: '18px', color: 'var(--foreground)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+        <PartyPopper size={20} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+        {isAr ? 'استفسر عن نقل فعاليتك' : 'Ask About Your Event'}
+      </h3>
+
+      <div className="form-group">
+        <label htmlFor="event-type" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <PartyPopper size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'نوع الفعالية' : 'Event Type'}
+          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+        </label>
+        <select id="event-type" className="form-input" style={selectStyle(!!errors.eventType)} value={eventType} onChange={e => { setEventType(e.target.value); if (errors.eventType) setErrors(p => ({ ...p, eventType: '' })) }}>
+          <option value="">{isAr ? 'اختر نوع الفعالية' : 'Choose event type'}</option>
+          {EVENT_TYPE_OPTIONS.map(o => <option key={o.en} value={tx(o)}>{tx(o)}</option>)}
+        </select>
+        {errors.eventType && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.eventType}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="event-date" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <Calendar size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'تاريخ الفعالية' : 'Event Date'}
+          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+        </label>
+        <input id="event-date" type="date" className="form-input" min={todayStr} value={date} onChange={e => { setDate(e.target.value); if (errors.date) setErrors(p => ({ ...p, date: '' })) }} style={errors.date ? { borderColor: '#e53e3e' } : {}} />
+        {errors.date && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.date}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="event-pickup" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <MapPin size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'موقع الاستلام' : 'Pickup Location(s)'}
+          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+        </label>
+        <input id="event-pickup" type="text" className="form-input" placeholder={isAr ? 'الفندق أو المدينة أو عدة مواقع' : 'Hotel, city, or multiple locations'} value={pickup} onChange={e => { setPickup(e.target.value); if (errors.pickup) setErrors(p => ({ ...p, pickup: '' })) }} style={errors.pickup ? { borderColor: '#e53e3e' } : {}} />
+        {errors.pickup && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.pickup}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="event-venue" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <Building2 size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'موقع الفعالية' : 'Venue'}
+        </label>
+        <input id="event-venue" type="text" className="form-input" placeholder={isAr ? 'اسم القاعة أو الفندق أو المكان' : 'Venue, hall or hotel name'} value={venue} onChange={e => setVenue(e.target.value)} />
+      </div>
+
+      <div className="form-grid-2">
+        <div className="form-group">
+          <label htmlFor="event-guests" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Users size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+            {isAr ? 'عدد الضيوف التقريبي' : 'Estimated Guests'}
+          </label>
+          <select id="event-guests" className="form-input" style={selectStyle()} value={guests} onChange={e => setGuests(e.target.value)}>
+            <option value="">{isAr ? 'اختر' : 'Choose'}</option>
+            {GUEST_COUNT_OPTIONS.map(o => <option key={o.en} value={tx(o)}>{tx(o)}</option>)}
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="event-vehicle" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Car size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+            {isAr ? 'السيارة المطلوبة' : 'Vehicle Needed'}
+          </label>
+          <select id="event-vehicle" className="form-input" style={selectStyle()} value={vehicleNeed} onChange={e => setVehicleNeed(e.target.value)}>
+            <option value="">{isAr ? 'اختر' : 'Choose'}</option>
+            {VEHICLE_NEED_OPTIONS.map(o => <option key={o.en} value={tx(o)}>{tx(o)}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="event-phone" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <Phone size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'رقم الهاتف' : 'Phone'}
+          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+        </label>
+        <input id="event-phone" type="tel" className="form-input" dir="ltr" placeholder={isAr ? 'رقم هاتفك' : 'Your phone'} value={phone} onChange={e => { setPhone(e.target.value); if (errors.phone) setErrors(p => ({ ...p, phone: '' })) }} style={errors.phone ? { borderColor: '#e53e3e' } : {}} />
+        {errors.phone && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.phone}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="event-notes" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <HelpCircle size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+          {isAr ? 'ملاحظات إضافية' : 'Additional Notes'}
+        </label>
+        <textarea id="event-notes" className="form-input" placeholder={isAr ? 'أي تفاصيل إضافية عن فعاليتك...' : 'Any other details about your event...'} value={notes} onChange={e => setNotes(e.target.value)} style={{ minHeight: '64px', resize: 'vertical', padding: '10px 12px' }} />
+      </div>
+
+      <button type="button" className="btn-whatsapp" onClick={handleSubmit} style={{ marginTop: '8px' }}>
+        <MessageCircle size={18} strokeWidth={2.5} aria-hidden="true" />
+        {isAr ? 'استفسر عبر واتساب' : 'Ask on WhatsApp'}
+      </button>
+      <p style={{ textAlign: 'center', fontSize: '0.74rem', color: 'var(--muted-foreground)', margin: '8px 0 0', lineHeight: 1.5 }}>
+        {isAr
+          ? 'بعد ذلك: نراجع تفاصيل فعاليتك ونرد عبر واتساب بعرض سعر وتأكيد الإمكانية.'
+          : "Next: we review your event details and reply on WhatsApp with a quote and availability."}
+      </p>
+    </div>
+  )
+}
+
 export default function EventTransportationPage() {
   const { lang, isAr } = useLang()
   const tx = (b: { en: string; ar: string }) => b[lang]
@@ -188,7 +394,7 @@ export default function EventTransportationPage() {
                 </a>
               </div>
             </div>
-            <div className="animate-fadeInUp animate-delay-1"><BookingForm /></div>
+            <div className="animate-fadeInUp animate-delay-1"><EventEnquiryForm /></div>
           </div>
         </div>
       </section>
@@ -228,8 +434,12 @@ export default function EventTransportationPage() {
           <div className="grid-3">
             {VEHICLES.map(v => (
               <div key={v.name.en} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
-                <div style={{ height: '170px', overflow: 'hidden', background: '#111' }}>
-                  <img src={v.img} alt={`${v.name.en} — Saudi Cabs GMC event transport vehicle`} width={400} height={170} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <div style={{ height: '170px', overflow: 'hidden', background: v.img ? '#111' : 'linear-gradient(135deg, #071f17, #0b3d2e)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {v.img ? (
+                    <img src={v.img} alt={`${v.name.en} — Saudi Cabs GMC event transport vehicle`} width={400} height={170} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  ) : (
+                    <Car size={48} strokeWidth={1.3} color="rgba(212,175,55,0.5)" aria-hidden="true" />
+                  )}
                 </div>
                 <div style={{ padding: '22px 20px' }}>
                   <h3 style={{ fontSize: '1.1rem', fontWeight: '900', marginBottom: '4px' }}>{tx(v.name)}</h3>
