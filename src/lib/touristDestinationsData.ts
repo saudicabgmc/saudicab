@@ -378,6 +378,7 @@ export const destinations: Destination[] = [
     ],
     goodToKnow: { en: "Direct cross-border transport to Jordan is available. Contact us on WhatsApp to confirm your itinerary, vehicle and fare before booking.", ar: 'يتوفر نقل مباشر عبر الحدود إلى الأردن. تواصل معنا عبر واتساب لتأكيد برنامج رحلتك والسيارة والسعر قبل الحجز.' },
     status: 'serviced',
+    heroImage: '/location/jordan.webp',
     gradient: ['#5c2e1f', '#9c4a2e'],
     icon: 'Map',
     serviceLinks: [],
