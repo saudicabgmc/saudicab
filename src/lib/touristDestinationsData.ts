@@ -157,6 +157,7 @@ export const destinations: Destination[] = [
     ],
     goodToKnow: { en: 'Diriyah is a short trip from central Riyadh, arranged as part of a Riyadh booking rather than its own route.', ar: 'تبعد الدرعية مسافة قصيرة عن وسط الرياض، ويمكن ترتيب الزيارة كجزء من حجز الرياض وليس كخط مستقل.' },
     status: 'serviced',
+    heroImage: '/location/diriyah.webp',
     gradient: ['#4a3420', '#7a5230'],
     icon: 'Building',
     serviceLinks: [
