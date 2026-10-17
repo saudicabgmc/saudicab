@@ -245,6 +245,7 @@ export const destinations: Destination[] = [
       { name: { en: 'The Corniche', ar: 'الكورنيش' }, desc: { en: 'A waterfront promenade curving around Doha Bay, facing the West Bay skyline.', ar: 'ممشى على الواجهة البحرية يلتف حول خليج الدوحة، يواجه أفق منطقة الخليج الغربي.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/doha.webp',
     gradient: ['#0c1f3d', '#1a3a5c'],
     icon: 'Building2',
     serviceLinks: [
