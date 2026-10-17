@@ -70,7 +70,9 @@ const VEHICLES = [
     name: { en: 'Hyundai Staria', ar: 'هيونداي ستاريا' },
     seats: { en: 'Up to 7 passengers', ar: 'حتى ٧ ركاب' },
     bestFor: { en: 'Guest groups travelling together, with room for luggage or gifts.', ar: 'مجموعات ضيوف تسافر معاً، مع مساحة للأمتعة أو الهدايا.' },
-    img: null,
+    img: '/fleet/hyundai-staria-event.webp',
+    imgPosition: 'center 55%',
+    alt: 'White Hyundai Staria used for event transportation in Saudi Arabia.',
   },
   {
     name: { en: 'GMC Yukon', ar: 'GMC يوكون' },
@@ -436,7 +438,7 @@ export default function EventTransportationPage() {
               <div key={v.name.en} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
                 <div style={{ height: '170px', overflow: 'hidden', background: v.img ? '#111' : 'linear-gradient(135deg, #071f17, #0b3d2e)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {v.img ? (
-                    <img src={v.img} alt={`${v.name.en} — Saudi Cabs GMC event transport vehicle`} width={400} height={170} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={v.img} alt={v.alt ?? `${v.name.en} — Saudi Cabs GMC event transport vehicle`} width={400} height={170} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: v.imgPosition ?? 'center', display: 'block' }} />
                   ) : (
                     <Car size={48} strokeWidth={1.3} color="rgba(212,175,55,0.5)" aria-hidden="true" />
                   )}
