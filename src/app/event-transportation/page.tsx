@@ -164,7 +164,7 @@ const GUEST_COUNT_OPTIONS = [
   { en: '5–7', ar: '٥–٧' },
   { en: '8–15', ar: '٨–١٥' },
   { en: '16–30', ar: '١٦–٣٠' },
-  { en: '30+', ar: '٣٠+' },
+  { en: '31+', ar: '٣١+' },
   { en: 'Not sure yet', ar: 'غير محدد بعد' },
 ]
 
@@ -185,6 +185,7 @@ function EventEnquiryForm() {
   const tx = (b: { en: string; ar: string }) => (isAr ? b.ar : b.en)
   const [eventType, setEventType] = useState('')
   const [date, setDate] = useState('')
+  const [startTime, setStartTime] = useState('')
   const [pickup, setPickup] = useState('')
   const [venue, setVenue] = useState('')
   const [guests, setGuests] = useState('')
@@ -204,10 +205,11 @@ function EventEnquiryForm() {
     if (!eventType) e.eventType = isAr ? 'اختر نوع الفعالية' : 'Please select an event type'
     if (!date) e.date = isAr ? 'اختر التاريخ' : 'Please select a date'
     if (!pickup.trim()) e.pickup = isAr ? 'اكتب موقع الاستلام' : 'Please enter a pickup location'
+    if (!guests) e.guests = isAr ? 'اختر عدد الضيوف التقريبي' : 'Please select an estimated guest count'
     if (!phone.trim()) {
       e.phone = isAr ? 'رقم الهاتف مطلوب' : 'Phone number is required'
-    } else if (!/^\+?[0-9\s\-]{8,20}$/.test(phone.trim())) {
-      e.phone = isAr ? 'يرجى إدخال رقم هاتف صحيح' : 'Please enter a valid phone number'
+    } else if (!/^\+?[0-9\s\-()]{8,20}$/.test(phone.trim())) {
+      e.phone = isAr ? 'يرجى إدخال رقم هاتف صحيح (سعودي أو دولي)' : 'Please enter a valid Saudi or international phone number'
     }
     setErrors(e)
     return Object.keys(e).length === 0
@@ -217,8 +219,8 @@ function EventEnquiryForm() {
     if (!validate()) return
     const enc = encodeURIComponent
     const msg = isAr
-      ? `السلام عليكم، أرغب في الاستفسار عن نقل فعالية:%0Aنوع الفعالية: ${enc(eventType)}%0Aالتاريخ: ${enc(date)}%0Aموقع الاستلام: ${enc(pickup.trim())}${venue.trim() ? `%0Aموقع الفعالية: ${enc(venue.trim())}` : ''}${guests ? `%0Aعدد الضيوف التقريبي: ${enc(guests)}` : ''}${vehicleNeed ? `%0Aالسيارة المطلوبة: ${enc(vehicleNeed)}` : ''}%0Aالهاتف: ${enc(phone.trim())}${notes.trim() ? `%0Aملاحظات: ${enc(notes.trim())}` : ''}`
-      : `Hello, I'd like to ask about event transportation:%0AEvent type: ${enc(eventType)}%0ADate: ${enc(date)}%0APickup location: ${enc(pickup.trim())}${venue.trim() ? `%0AVenue: ${enc(venue.trim())}` : ''}${guests ? `%0AEstimated guests: ${enc(guests)}` : ''}${vehicleNeed ? `%0AVehicle needed: ${enc(vehicleNeed)}` : ''}%0APhone: ${enc(phone.trim())}${notes.trim() ? `%0ANotes: ${enc(notes.trim())}` : ''}`
+      ? `السلام عليكم، أرغب في الاستفسار عن نقل فعالية:%0Aنوع الفعالية: ${enc(eventType)}%0Aالتاريخ: ${enc(date)}${startTime ? `%0Aوقت البدء: ${enc(startTime)}` : ''}%0Aموقع الاستلام: ${enc(pickup.trim())}${venue.trim() ? `%0Aموقع الفعالية / التوصيل: ${enc(venue.trim())}` : ''}%0Aعدد الضيوف التقريبي: ${enc(guests)}${vehicleNeed ? `%0Aالسيارة المطلوبة: ${enc(vehicleNeed)}` : ''}%0Aالهاتف: ${enc(phone.trim())}${notes.trim() ? `%0Aملاحظات: ${enc(notes.trim())}` : ''}`
+      : `Hello, I'd like to ask about event transportation:%0AEvent type: ${enc(eventType)}%0ADate: ${enc(date)}${startTime ? `%0AStart time: ${enc(startTime)}` : ''}%0APickup location: ${enc(pickup.trim())}${venue.trim() ? `%0AEvent venue / drop-off: ${enc(venue.trim())}` : ''}%0AEstimated guests: ${enc(guests)}${vehicleNeed ? `%0AVehicle needed: ${enc(vehicleNeed)}` : ''}%0APhone: ${enc(phone.trim())}${notes.trim() ? `%0ANotes: ${enc(notes.trim())}` : ''}`
 
     const link = `https://wa.me/923097811785?text=${msg}`
     setWaLink(link)
@@ -271,14 +273,23 @@ function EventEnquiryForm() {
         {errors.eventType && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.eventType}</p>}
       </div>
 
-      <div className="form-group">
-        <label htmlFor="event-date" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <Calendar size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
-          {isAr ? 'تاريخ الفعالية' : 'Event Date'}
-          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
-        </label>
-        <input id="event-date" type="date" className="form-input" min={todayStr} value={date} onChange={e => { setDate(e.target.value); if (errors.date) setErrors(p => ({ ...p, date: '' })) }} style={errors.date ? { borderColor: '#e53e3e' } : {}} />
-        {errors.date && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.date}</p>}
+      <div className="form-grid-2">
+        <div className="form-group">
+          <label htmlFor="event-date" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Calendar size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+            {isAr ? 'تاريخ الفعالية' : 'Event Date'}
+            <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
+          </label>
+          <input id="event-date" type="date" className="form-input" min={todayStr} value={date} onChange={e => { setDate(e.target.value); if (errors.date) setErrors(p => ({ ...p, date: '' })) }} style={errors.date ? { borderColor: '#e53e3e' } : {}} />
+          {errors.date && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.date}</p>}
+        </div>
+        <div className="form-group">
+          <label htmlFor="event-start-time" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Calendar size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
+            {isAr ? 'وقت بدء الفعالية' : 'Event Start Time'}
+          </label>
+          <input id="event-start-time" type="time" className="form-input" value={startTime} onChange={e => setStartTime(e.target.value)} />
+        </div>
       </div>
 
       <div className="form-group">
@@ -294,7 +305,7 @@ function EventEnquiryForm() {
       <div className="form-group">
         <label htmlFor="event-venue" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <Building2 size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
-          {isAr ? 'موقع الفعالية' : 'Venue'}
+          {isAr ? 'موقع الفعالية / التوصيل' : 'Event Venue / Drop-off Location'}
         </label>
         <input id="event-venue" type="text" className="form-input" placeholder={isAr ? 'اسم القاعة أو الفندق أو المكان' : 'Venue, hall or hotel name'} value={venue} onChange={e => setVenue(e.target.value)} />
       </div>
@@ -304,11 +315,13 @@ function EventEnquiryForm() {
           <label htmlFor="event-guests" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             <Users size={13} color="var(--primary)" strokeWidth={2.5} aria-hidden="true" />
             {isAr ? 'عدد الضيوف التقريبي' : 'Estimated Guests'}
+            <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
           </label>
-          <select id="event-guests" className="form-input" style={selectStyle()} value={guests} onChange={e => setGuests(e.target.value)}>
+          <select id="event-guests" className="form-input" style={selectStyle(!!errors.guests)} value={guests} onChange={e => { setGuests(e.target.value); if (errors.guests) setErrors(p => ({ ...p, guests: '' })) }}>
             <option value="">{isAr ? 'اختر' : 'Choose'}</option>
             {GUEST_COUNT_OPTIONS.map(o => <option key={o.en} value={tx(o)}>{tx(o)}</option>)}
           </select>
+          {errors.guests && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.guests}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="event-vehicle" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
