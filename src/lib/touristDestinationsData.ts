@@ -135,6 +135,7 @@ export const destinations: Destination[] = [
       { name: { en: 'Edge of the World', ar: 'حافة العالم' }, desc: { en: 'A dramatic desert escarpment outside the city — a popular day trip, though the hike itself is usually arranged through specialized desert-tour operators rather than a standard taxi route.', ar: 'هضبة صحراوية مثيرة خارج المدينة — رحلة نهارية شائعة، إلا أن المسار الصحراوي نفسه يُرتَّب عادة عبر متخصصين في الجولات الصحراوية لا عبر خط تاكسي عادي.' } },
     ],
     status: 'serviced',
+    heroImage: '/location/riyadh.webp',
     gradient: ['#1b2735', '#28384d'],
     icon: 'Building2',
     serviceLinks: [
