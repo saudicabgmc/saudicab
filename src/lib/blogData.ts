@@ -1794,4 +1794,124 @@ export const blogPosts: BlogPost[] = [
     date: '2026-10-15',
     image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
   },
+  {
+    slug: 'riyadh-to-kuwait-by-road-travel-guide',
+    category: 'Intercity Travel',
+    relatedRoute: { slug: 'riyadh-to-kuwait', label: { en: 'Riyadh to Kuwait', ar: 'الرياض إلى الكويت' } },
+    seoTitle: 'Riyadh to Kuwait by Road: Distance, Border Crossing and Private Taxi Guide',
+    title: {
+      en: 'Riyadh to Kuwait by Road: A Practical Private Taxi Travel Guide',
+      ar: 'الرياض إلى الكويت براً: دليل عملي للتاكسي الخاص',
+    },
+    excerpt: {
+      en: 'Planning a road trip from Riyadh to Kuwait City? Here is what the journey actually involves — the route, the border crossing, documents to check and which vehicle suits your group.',
+      ar: 'تخطط لرحلة برية من الرياض إلى مدينة الكويت؟ إليك ما تتضمنه الرحلة فعلياً — المسار وعبور الحدود والمستندات التي يجب التحقق منها وأي سيارة تناسب مجموعتك.',
+    },
+    content: {
+      en: `<p style="margin-bottom:1rem;">Planning a road trip from Riyadh to Kuwait City? Travelling by private car can be a convenient option for families, business travellers and anyone who prefers a direct journey instead of arranging several stages of transport.</p>
+<p style="margin-bottom:1rem;">The road distance is approximately 550 km, depending on your exact pickup and destination. Before setting off, it's worth understanding the route, the border-crossing requirements and the vehicle that best suits your group.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What to Expect on the Riyadh to Kuwait Journey</h2>
+<p style="margin-bottom:1rem;">The journey begins in Riyadh and continues through Saudi Arabia's Eastern Province before heading north toward the Saudi–Kuwait border. The crossing is typically made via Al-Khafji, one of two official land border posts between the two countries — the other, Al-Ruqi, lies further west in Hafr Al-Batin Governorate. After completing the required border formalities, the journey continues into Kuwait toward Kuwait City.</p>
+<p style="margin-bottom:1rem;">Total travel time depends on road conditions, your pickup location and how long border procedures take on the day. It's better to plan with some flexibility rather than rely on a guaranteed arrival time.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Is a Private Taxi a Good Choice?</h2>
+<p style="margin-bottom:1rem;">A private transfer gives your group its own vehicle and an agreed pickup arrangement. You don't need to coordinate separate vehicles for different parts of the journey.</p>
+<p style="margin-bottom:1rem;">This option can work well for families carrying luggage, business travellers with a planned schedule, or passengers who prefer travelling together. However, flying may be more suitable if reaching Kuwait as quickly as possible is your main priority.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Which Vehicle Should You Choose?</h2>
+<p style="margin-bottom:1rem;">The right vehicle depends on the number of passengers and how much luggage you're carrying.</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">Sedan</a>:</strong> Suitable for individuals, couples or small groups travelling with lighter luggage.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>:</strong> A practical option for families and groups needing additional passenger and luggage space.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a>:</strong> A spacious SUV option for travellers looking for a more comfortable, VIP-style journey.</li>
+</ul>
+<p style="margin-bottom:1rem;">Confirm the available vehicle, passenger capacity and cross-border arrangements before booking.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Documents to Check Before Crossing the Border</h2>
+<p style="margin-bottom:1rem;">International road travel requires more preparation than an ordinary journey between Saudi cities. Before departure, check the following:</p>
+<ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">Every passenger has a valid passport and any required entry documents.</li>
+  <li style="margin-bottom:0.5rem;">Your nationality and residency status meet Kuwait's current entry requirements.</li>
+  <li style="margin-bottom:0.5rem;">The vehicle and driver are authorised and properly documented for cross-border travel.</li>
+  <li style="margin-bottom:0.5rem;">The required vehicle insurance and border formalities are confirmed in advance.</li>
+</ul>
+<p style="margin-bottom:1rem;">Visa and entry rules differ by nationality and residency status, and they can change. For current, authoritative requirements, check Kuwait's Ministry of Interior directly before you travel. Saudi Cabs GMC arranges private transportation only — a booking with us does not guarantee permission to enter Kuwait; entry decisions rest entirely with Kuwaiti immigration authorities.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Arrange Your Private Transfer</h2>
+<p style="margin-bottom:1rem;">If you're considering a Riyadh to Kuwait private taxi, share your travel date, passenger count and preferred vehicle before making plans.</p>
+<p style="margin-bottom:1rem;">Saudi Cabs GMC offers Sedan, Hyundai Staria and GMC Yukon options for enquiries about this route. Because it's an international journey, the trip must be discussed and confirmed in advance. The current fare, vehicle availability and cross-border arrangements should be verified directly before booking.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far is Kuwait City from Riyadh by road?</h3>
+<p style="margin-bottom:1rem;">The road distance is approximately 550 km, depending on the exact pickup and destination.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the journey take?</h3>
+<p style="margin-bottom:1rem;">The driving takes several hours, but total journey time varies with traffic and border-crossing delays. Confirm a realistic schedule before departure.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which border crossing is used for this route?</h3>
+<p style="margin-bottom:1rem;">The route typically crosses at Al-Khafji, one of the two official Saudi–Kuwait land border posts — the other, Al-Ruqi, lies further west in Hafr Al-Batin Governorate.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book a private taxi from Riyadh to Kuwait?</h3>
+<p style="margin-bottom:1rem;">You can enquire about an advance-booked private transfer. Contact Saudi Cabs GMC to confirm whether the trip can be arranged for your travel date.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does a Riyadh to Kuwait taxi cost?</h3>
+<p style="margin-bottom:1rem;">The route doesn't have a fixed published fare. The price depends on the vehicle and confirmed travel arrangements. Request a current quote before booking.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Do I need a visa to travel to Kuwait by road?</h3>
+<p style="margin-bottom:1rem;">Entry requirements depend on your nationality and residency status, and they change over time. Check Kuwait's Ministry of Interior for current requirements before travelling.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which vehicle is best for a family making this trip?</h3>
+<p style="margin-bottom:1rem;">The Hyundai Staria or GMC Yukon are generally more practical than a Sedan for a family travelling this distance with luggage.</p>
+
+<p style="margin-bottom:1rem;">Planning a Riyadh-to-Kuwait trip? See our <a href="/riyadh-to-kuwait" style="color:#0B3D2E;font-weight:700;">Riyadh to Kuwait private transfer</a> page for vehicle options and booking, or send your travel dates directly on <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">WhatsApp</a> to discuss feasibility and the current rate.</p>`,
+      ar: `<p style="margin-bottom:1rem;">تخطط لرحلة برية من الرياض إلى مدينة الكويت؟ قد يكون السفر بسيارة خاصة خياراً مريحاً للعائلات ورجال الأعمال وكل من يفضل رحلة مباشرة بدلاً من ترتيب عدة مراحل من التنقل.</p>
+<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 550 كم، حسب نقطتي الانطلاق والوصول بالتحديد. قبل الانطلاق، من المفيد فهم المسار ومتطلبات عبور الحدود والسيارة الأنسب لمجموعتك.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ما يمكن توقعه في رحلة الرياض إلى الكويت</h2>
+<p style="margin-bottom:1rem;">تبدأ الرحلة من الرياض وتستمر عبر المنطقة الشرقية بالمملكة قبل التوجه شمالاً نحو الحدود السعودية الكويتية. يتم العبور عادةً عبر منفذ الخفجي، أحد المنفذين البريين الرسميين بين البلدين — أما المنفذ الآخر، الرقعي، فيقع غرباً في محافظة حفر الباطن. وبعد إتمام إجراءات الحدود المطلوبة، تتابع الرحلة داخل الكويت باتجاه مدينة الكويت.</p>
+<p style="margin-bottom:1rem;">يعتمد إجمالي وقت الرحلة على حالة الطريق وموقع الانطلاق ومدة إجراءات الحدود في ذلك اليوم. من الأفضل التخطيط بمرونة بدلاً من الاعتماد على وقت وصول مضمون.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">هل التاكسي الخاص خيار جيد؟</h2>
+<p style="margin-bottom:1rem;">يمنحك النقل الخاص سيارة مخصصة لمجموعتك وترتيب استلام متفق عليه. لا تحتاج إلى تنسيق سيارات منفصلة لمراحل مختلفة من الرحلة.</p>
+<p style="margin-bottom:1rem;">قد يناسب هذا الخيار العائلات التي تحمل أمتعة، ورجال الأعمال ذوي الجدول المخطط له، أو الركاب الذين يفضلون السفر معاً. مع ذلك، قد يكون الطيران أنسب إذا كانت أولويتك الأساسية الوصول إلى الكويت بأسرع وقت ممكن.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">أي سيارة تختار؟</h2>
+<p style="margin-bottom:1rem;">تعتمد السيارة المناسبة على عدد الركاب وكمية الأمتعة.</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;"><strong><a href="/toyota-camry-taxi" style="color:#0B3D2E;font-weight:700;">سيدان</a>:</strong> مناسبة للأفراد أو الأزواج أو المجموعات الصغيرة التي تسافر بأمتعة خفيفة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a>:</strong> خيار عملي للعائلات والمجموعات التي تحتاج مساحة إضافية للركاب والأمتعة.</li>
+  <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون</a>:</strong> سيارة SUV واسعة لمن يرغب برحلة أكثر راحة وبطابع VIP.</li>
+</ul>
+<p style="margin-bottom:1rem;">تأكد من توفر السيارة وسعتها وترتيبات عبور الحدود قبل الحجز.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">المستندات التي يجب التحقق منها قبل عبور الحدود</h2>
+<p style="margin-bottom:1rem;">يتطلب السفر البري الدولي تحضيراً أكبر من رحلة عادية بين مدن سعودية. قبل السفر، تحقق مما يلي:</p>
+<ul style="list-style:disc;padding-right:1.5rem;margin-bottom:1rem;">
+  <li style="margin-bottom:0.5rem;">جواز سفر ساري المفعول لكل راكب، إضافة إلى أي مستندات دخول مطلوبة.</li>
+  <li style="margin-bottom:0.5rem;">أن تستوفي جنسيتك وحالتك الإقامية متطلبات الدخول الحالية للكويت.</li>
+  <li style="margin-bottom:0.5rem;">أن تكون السيارة والسائق مرخصين وموثقين بشكل صحيح للسفر عبر الحدود.</li>
+  <li style="margin-bottom:0.5rem;">تأكيد تأمين السيارة المطلوب وإجراءات الحدود مسبقاً.</li>
+</ul>
+<p style="margin-bottom:1rem;">تختلف قواعد التأشيرة والدخول حسب الجنسية والحالة الإقامية، وقد تتغير مع الوقت. للاطلاع على المتطلبات الحالية والموثوقة، راجع وزارة الداخلية الكويتية مباشرة قبل سفرك. تقدم Saudi Cabs GMC النقل الخاص فقط — وحجز رحلة معنا لا يضمن السماح بدخول الكويت؛ وتعود قرارات الدخول كلياً لسلطات الهجرة الكويتية.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحجز نقلك الخاص</h2>
+<p style="margin-bottom:1rem;">إذا كنت تفكر في تاكسي خاص من الرياض إلى الكويت، شارك تاريخ سفرك وعدد الركاب والسيارة المفضلة قبل التخطيط.</p>
+<p style="margin-bottom:1rem;">تقدم Saudi Cabs GMC خيارات السيدان وهيونداي ستاريا وGMC يوكون للاستفسار عن هذا الخط. وبما أنها رحلة دولية، يجب مناقشة الرحلة وتأكيدها مسبقاً. يُستحسن التحقق مباشرة من السعر الحالي وتوفر السيارة وترتيبات عبور الحدود قبل الحجز.</p>
+
+<h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تبعد مدينة الكويت عن الرياض براً؟</h3>
+<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 550 كم، حسب نقطتي الانطلاق والوصول بالتحديد.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة؟</h3>
+<p style="margin-bottom:1rem;">تستغرق القيادة عدة ساعات، لكن إجمالي وقت الرحلة يختلف حسب الازدحام وتأخيرات عبور الحدود. تأكد من جدول واقعي قبل السفر.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما المنفذ الحدودي المستخدم لهذا الخط؟</h3>
+<p style="margin-bottom:1rem;">يُعبر هذا الخط عادةً عبر منفذ الخفجي، أحد المنفذين البريين الرسميين بين السعودية والكويت — أما المنفذ الآخر، الرقعي، فيقع غرباً في محافظة حفر الباطن.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني حجز تاكسي خاص من الرياض إلى الكويت؟</h3>
+<p style="margin-bottom:1rem;">يمكنك الاستفسار عن نقل خاص يُحجز مسبقاً. تواصل مع Saudi Cabs GMC للتأكد من إمكانية ترتيب الرحلة في تاريخ سفرك.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تكلفة تاكسي من الرياض إلى الكويت؟</h3>
+<p style="margin-bottom:1rem;">لا يوجد سعر ثابت معروض لهذا الخط. يعتمد السعر على السيارة وترتيبات السفر المؤكدة. اطلب عرض سعر حالي قبل الحجز.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل أحتاج تأشيرة للسفر إلى الكويت براً؟</h3>
+<p style="margin-bottom:1rem;">تعتمد متطلبات الدخول على جنسيتك وحالتك الإقامية، وتتغير مع الوقت. راجع وزارة الداخلية الكويتية لمعرفة المتطلبات الحالية قبل السفر.</p>
+<h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما السيارة الأفضل لعائلة تقوم بهذه الرحلة؟</h3>
+<p style="margin-bottom:1rem;">تُعد هيونداي ستاريا أو GMC يوكون عادةً أكثر عملية من السيدان لعائلة تسافر هذه المسافة مع أمتعة.</p>
+
+<p style="margin-bottom:1rem;">تخطط لرحلة من الرياض إلى الكويت؟ راجع صفحة <a href="/riyadh-to-kuwait" style="color:#0B3D2E;font-weight:700;">النقل الخاص من الرياض إلى الكويت</a> لخيارات السيارة والحجز، أو أرسل تواريخ سفرك مباشرة عبر <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">واتساب</a> لمناقشة الإمكانية والسعر الحالي.</p>`,
+    },
+    date: '2026-10-19',
+    image: '/location/kuwait-city.webp',
+  },
 ];
