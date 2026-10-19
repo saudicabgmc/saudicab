@@ -1,9 +1,18 @@
 ﻿'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Phone, Menu, X, MessageCircle, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
+
+function WhatsAppIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.95.542 3.773 1.484 5.328L2.06 22l4.787-1.393a9.96 9.96 0 0 0 5.157 1.397h.005c5.517 0 10.004-4.486 10.004-10.004C22.013 6.486 17.526 2 12.004 2zm0 18.17h-.004a8.14 8.14 0 0 1-4.157-1.137l-.298-.177-3.093.9.826-3.05-.194-.312a8.146 8.146 0 0 1-1.248-4.39c0-4.507 3.665-8.172 8.172-8.172 2.183 0 4.235.85 5.78 2.395a8.123 8.123 0 0 1 2.39 5.782c0 4.507-3.667 8.172-8.174 8.172z"/>
+    </svg>
+  )
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -113,31 +122,37 @@ export default function Navbar() {
             {isAr ? 'EN' : 'AR'}
           </button>
 
-          <a href="tel:+923097811785" style={{ fontWeight: '700', fontSize: '0.85rem', color: textColor, transition: 'color 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <Phone size={14} strokeWidth={2.5} />
-            ‎+92 309 7811785
-          </a>
           <a
             href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: scrolled ? 'var(--primary)' : 'rgba(255,255,255,0.18)',
-              border: `1.5px solid ${scrolled ? 'rgba(212,175,55,0.6)' : 'rgba(255,255,255,0.55)'}`,
-              color: scrolled ? 'var(--foreground)' : 'white',
-              padding: '8px 18px',
-              borderRadius: '8px',
+              background: '#25D366',
+              color: 'white',
+              padding: '9px 20px',
+              borderRadius: '10px',
               fontWeight: '700',
               fontSize: '0.85rem',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
-              transition: 'all 0.3s',
+              gap: '7px',
+              transition: 'all 0.3s ease',
               textDecoration: 'none',
+              boxShadow: '0 2px 12px rgba(37,211,102,0.3)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#20bd5a'
+              e.currentTarget.style.transform = 'translateY(-2px)'
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(37,211,102,0.45)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#25D366'
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 2px 12px rgba(37,211,102,0.3)'
             }}
           >
-            <MessageCircle size={14} strokeWidth={2.5} />
-            {tr.bookNow}
+            <WhatsAppIcon size={15} />
+            {tr.bookWhatsapp}
           </a>
         </div>
 
@@ -198,19 +213,12 @@ export default function Navbar() {
               </button>
             </div>
             <a
-              href="tel:+923097811785"
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 0', fontWeight: '700', color: 'var(--foreground)', fontSize: '0.95rem' }}
-            >
-              <Phone size={16} strokeWidth={2.5} />
-              {isAr ? 'اتصل بنا الآن' : 'Call Us Now'}
-            </a>
-            <a
               href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', padding: '12px 16px', background: '#25D366', color: 'white', fontWeight: '700', borderRadius: '8px', textAlign: 'center', marginTop: '8px', fontSize: '0.95rem', textDecoration: 'none' }}
+              style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', padding: '12px 16px', background: '#25D366', color: 'white', fontWeight: '700', borderRadius: '10px', textAlign: 'center', marginTop: '10px', fontSize: '0.95rem', textDecoration: 'none', boxShadow: '0 2px 12px rgba(37,211,102,0.3)' }}
             >
-              <MessageCircle size={16} strokeWidth={2.5} />
+              <WhatsAppIcon size={17} />
               {tr.bookWhatsapp}
             </a>
           </div>
