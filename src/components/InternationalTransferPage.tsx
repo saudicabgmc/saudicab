@@ -47,6 +47,10 @@ export interface InternationalTransferProps {
   bookingSteps: { n: string; title: string; desc: string }[]
   relatedLink: { href: string; label: string }
   faqs: FAQItem[]
+  /** Optional override for the FAQ section's subtitle. Falls back to FAQSection's generic default when omitted. */
+  faqSubheading?: BText
+  /** Optional override for the prefilled WhatsApp message (hero + closing CTA). Falls back to the generic per-destination message when omitted. */
+  waMessage?: string
 }
 
 const WA_NUMBER = '923097811785'
@@ -82,11 +86,12 @@ export default function InternationalTransferPage({
   heroImage,
   theme, heroContent, quickFacts, journeySection,
   requirementsSection, whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink, faqs,
+  faqSubheading, waMessage,
 }: InternationalTransferProps) {
   const { isAr } = useLang()
   const reveal = useReveal()
   const { dark, dark2, accent } = theme
-  const waText = `Hello, I'd like to ask about a private transfer to ${destinationLabel}.`
+  const waText = waMessage ?? `Hello, I'd like to ask about a private transfer to ${destinationLabel}.`
 
   const Head = ({ id, tag, title, subtitle, dk }: { id: string; tag: string; title: React.ReactNode; subtitle?: string; dk?: boolean }) => (
     <div style={{ textAlign: 'center', marginBottom: '36px' }}>
@@ -270,7 +275,7 @@ export default function InternationalTransferPage({
       </section>
 
       {/* ── 8. FAQ ── */}
-      <FAQSection faqs={faqs} heading={{ en: `Frequently Asked Questions — ${destinationLabel}`, ar: `أسئلة شائعة — ${isAr ? destinationLabel : destinationLabel}` }} />
+      <FAQSection faqs={faqs} heading={{ en: `Frequently Asked Questions — ${destinationLabel}`, ar: `أسئلة شائعة — ${isAr ? destinationLabel : destinationLabel}` }} subheading={faqSubheading} />
 
       {/* ── 9. Closing CTA ── */}
       <section aria-labelledby="it-final-title" style={{ padding: '60px 0', background: `linear-gradient(135deg, ${dark2} 0%, ${dark} 100%)`, textAlign: 'center' }}>

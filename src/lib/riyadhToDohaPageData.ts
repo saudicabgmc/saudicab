@@ -5,7 +5,10 @@ import type { FAQItem } from '@/components/FAQSection'
  * page, distinct from the domestic route pages in routePageData.ts.
  *
  * IMPORTANT — scope of facts used here:
- * - The road distance (~1,100 km) is a public geographic fact, not a business claim.
+ * - The road distance (~580 km) is a public geographic fact, not a business claim.
+ *   Verified 2026-10-21 against multiple independent route sources (Rome2Rio, Qatar
+ *   Living), which converge on ~575-590 km / ~6.5-7.5 hours driving — NOT the ~1,100 km
+ *   figure this page previously stated, which was incorrect and has been corrected.
  * - No specific journey TIME is stated as a guarantee: border-crossing duration is
  *   genuinely unpredictable and outside the company's control, so this page is
  *   explicit that timing varies and must be discussed per trip.
@@ -30,7 +33,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,100 km' },
+  { label: 'Approx. road distance', value: '~580 km' },
   { label: 'Border', value: 'Saudi Arabia ↔ Qatar land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -39,8 +42,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Riyadh to Doha is a long-distance international road trip of roughly 1,100 km, crossing from Saudi Arabia into Qatar at the shared land border. This is a different kind of trip from our domestic Saudi routes: it involves a single border crossing, immigration and customs formalities for everyone in the vehicle, and realistic planning around how long that crossing may take on the day.",
-    "We don't quote a fixed journey time for this route, because the driving time itself (typically well over ten hours before stops) is only part of the trip — border processing time varies by day, time of year and individual circumstances, and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
+    "Riyadh to Doha is a long-distance international road trip of roughly 580 km, crossing from Saudi Arabia into Qatar at the shared land border. This is a different kind of trip from our domestic Saudi routes: it involves a single border crossing, immigration and customs formalities for everyone in the vehicle, and realistic planning around how long that crossing may take on the day.",
+    "We don't quote a fixed journey time for this route, because the driving time itself (roughly 6-7 hours before stops) is only part of the trip — border processing time varies by day, time of year and individual circumstances, and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
   ],
 }
 
@@ -61,7 +64,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Doha',
   paragraphs: [
-    "For a distance like Riyadh to Doha, flying is usually the faster option, and we'd rather tell you that directly than oversell a road trip that isn't the right fit for every traveler. A private car makes more sense if you specifically want to travel by road — for example, bringing a vehicle's worth of luggage, travelling as a family or group who'd rather not coordinate flights, or treating the drive itself as part of the trip.",
+    "A private car makes the most sense when you specifically want to travel by road rather than fly — for example, bringing a vehicle's worth of luggage, travelling as a family or group who'd rather stay together without coordinating flights, or treating the drive itself as part of the trip.",
     'Whichever you choose, the advantage of a private vehicle over any shared or public transport option on this route is the same as on our domestic trips: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way.',
   ],
 }

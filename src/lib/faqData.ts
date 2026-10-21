@@ -878,8 +878,8 @@ export const riyadhToDohaFaqs: FAQItem[] = [
       ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى الدوحة؟',
     },
     a: {
-      en: "The road distance is approximately 1,100 km, which is many hours of driving on its own. We don't quote a fixed total time because border-crossing duration varies and is outside our control — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ١,١٠٠ كم، وهي وحدها عدة ساعات من القيادة. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف وتخرج عن سيطرتنا — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 580 km, which is roughly 6-7 hours of driving on its own. We don't quote a fixed total time because border-crossing duration varies and is outside our control — we'll discuss realistic timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٥٨٠ كم، أي ما يقارب ٦-٧ ساعات من القيادة. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف وتخرج عن سيطرتنا — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
