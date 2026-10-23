@@ -1809,7 +1809,7 @@ export const blogPosts: BlogPost[] = [
     },
     content: {
       en: `<p style="margin-bottom:1rem;">Planning a road trip from Riyadh to Kuwait City? Travelling by private car can be a convenient option for families, business travellers and anyone who prefers a direct journey instead of arranging several stages of transport.</p>
-<p style="margin-bottom:1rem;">The road distance is approximately 550 km, depending on your exact pickup and destination. Before setting off, it's worth understanding the route, the border-crossing requirements and the vehicle that best suits your group.</p>
+<p style="margin-bottom:1rem;">The road distance is approximately 628-633 km, depending on your exact pickup and destination. Before setting off, it's worth understanding the route, the border-crossing requirements and the vehicle that best suits your group.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">What to Expect on the Riyadh to Kuwait Journey</h2>
 <p style="margin-bottom:1rem;">The journey begins in Riyadh and continues through Saudi Arabia's Eastern Province before heading north toward the Saudi–Kuwait border. The crossing is typically made via Al-Khafji, one of two official land border posts between the two countries — the other, Al-Ruqi, lies further west in Hafr Al-Batin Governorate. After completing the required border formalities, the journey continues into Kuwait toward Kuwait City.</p>
@@ -1844,9 +1844,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Frequently Asked Questions</h2>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How far is Kuwait City from Riyadh by road?</h3>
-<p style="margin-bottom:1rem;">The road distance is approximately 550 km, depending on the exact pickup and destination.</p>
+<p style="margin-bottom:1rem;">The road distance is approximately 628-633 km, depending on the exact pickup and destination.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the journey take?</h3>
-<p style="margin-bottom:1rem;">The driving takes several hours, but total journey time varies with traffic and border-crossing delays. Confirm a realistic schedule before departure.</p>
+<p style="margin-bottom:1rem;">Driving alone takes approximately 8 hours. Border-crossing delays are additional on top of that, and total journey time can vary with traffic and border conditions. Confirm a realistic schedule before departure.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Which border crossing is used for this route?</h3>
 <p style="margin-bottom:1rem;">The route typically crosses at Al-Khafji, one of the two official Saudi–Kuwait land border posts — the other, Al-Ruqi, lies further west in Hafr Al-Batin Governorate.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book a private taxi from Riyadh to Kuwait?</h3>
@@ -1860,7 +1860,7 @@ export const blogPosts: BlogPost[] = [
 
 <p style="margin-bottom:1rem;">Planning a Riyadh-to-Kuwait trip? See our <a href="/riyadh-to-kuwait" style="color:#0B3D2E;font-weight:700;">Riyadh to Kuwait private transfer</a> page for vehicle options and booking, or send your travel dates directly on <a href="https://wa.me/923097811785" style="color:#0B3D2E;font-weight:700;" target="_blank" rel="noopener noreferrer">WhatsApp</a> to discuss feasibility and the current rate.</p>`,
       ar: `<p style="margin-bottom:1rem;">تخطط لرحلة برية من الرياض إلى مدينة الكويت؟ قد يكون السفر بسيارة خاصة خياراً مريحاً للعائلات ورجال الأعمال وكل من يفضل رحلة مباشرة بدلاً من ترتيب عدة مراحل من التنقل.</p>
-<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 550 كم، حسب نقطتي الانطلاق والوصول بالتحديد. قبل الانطلاق، من المفيد فهم المسار ومتطلبات عبور الحدود والسيارة الأنسب لمجموعتك.</p>
+<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 628-633 كم، حسب نقطتي الانطلاق والوصول بالتحديد. قبل الانطلاق، من المفيد فهم المسار ومتطلبات عبور الحدود والسيارة الأنسب لمجموعتك.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">ما يمكن توقعه في رحلة الرياض إلى الكويت</h2>
 <p style="margin-bottom:1rem;">تبدأ الرحلة من الرياض وتستمر عبر المنطقة الشرقية بالمملكة قبل التوجه شمالاً نحو الحدود السعودية الكويتية. يتم العبور عادةً عبر منفذ الخفجي، أحد المنفذين البريين الرسميين بين البلدين — أما المنفذ الآخر، الرقعي، فيقع غرباً في محافظة حفر الباطن. وبعد إتمام إجراءات الحدود المطلوبة، تتابع الرحلة داخل الكويت باتجاه مدينة الكويت.</p>
@@ -1895,9 +1895,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">الأسئلة الشائعة</h2>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تبعد مدينة الكويت عن الرياض براً؟</h3>
-<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 550 كم، حسب نقطتي الانطلاق والوصول بالتحديد.</p>
+<p style="margin-bottom:1rem;">تبلغ مسافة الطريق نحو 628-633 كم، حسب نقطتي الانطلاق والوصول بالتحديد.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة؟</h3>
-<p style="margin-bottom:1rem;">تستغرق القيادة عدة ساعات، لكن إجمالي وقت الرحلة يختلف حسب الازدحام وتأخيرات عبور الحدود. تأكد من جدول واقعي قبل السفر.</p>
+<p style="margin-bottom:1rem;">تستغرق القيادة وحدها نحو 8 ساعات. تُضاف تأخيرات عبور الحدود فوق ذلك، ويختلف إجمالي وقت الرحلة حسب الازدحام وظروف الحدود. تأكد من جدول واقعي قبل السفر.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">ما المنفذ الحدودي المستخدم لهذا الخط؟</h3>
 <p style="margin-bottom:1rem;">يُعبر هذا الخط عادةً عبر منفذ الخفجي، أحد المنفذين البريين الرسميين بين السعودية والكويت — أما المنفذ الآخر، الرقعي، فيقع غرباً في محافظة حفر الباطن.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني حجز تاكسي خاص من الرياض إلى الكويت؟</h3>
