@@ -5,7 +5,13 @@ import type { FAQItem } from '@/components/FAQSection'
  * page, distinct from the domestic route pages in routePageData.ts.
  *
  * IMPORTANT — scope of facts used here:
- * - The road distance (~1,230 km) is a public geographic fact, not a business claim.
+ * - The road distance (~1,000 km) is a public geographic fact, not a business claim.
+ *   Verified 2026-10-23 against multiple independent sources (a dedicated Saudi-UAE
+ *   road-trip guide, a distance calculator, and a Rome2Rio proxy via a nearby UAE
+ *   city), which converge on ~980-1,030 km / ~9-11.5 hours driving via the Al Batha
+ *   (Saudi side) / Al Ghuwaifat (UAE side) crossing — NOT the ~1,230 km / 12+ hour
+ *   figures this page previously stated, which were overestimates and have been
+ *   corrected.
  * - No specific journey TIME is stated as a guarantee: border-crossing duration is
  *   genuinely unpredictable and outside the company's control, so this page is
  *   explicit that timing varies and must be discussed per trip.
@@ -28,7 +34,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,230 km' },
+  { label: 'Approx. road distance', value: '~1,000 km' },
   { label: 'Border', value: 'Saudi Arabia ↔ UAE land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -37,8 +43,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "At roughly 1,230 km, Riyadh to Dubai is one of the longer cross-border road trips we arrange — longer than our Bahrain and Kuwait transfers, and a full day's drive before you factor in the border itself. The route takes you out of Riyadh, across the Kingdom toward the UAE land border, then on into Dubai — with one immigration and customs crossing for everyone in the vehicle along the way.",
-    "Dubai is one of the busiest business and travel hubs in the Gulf, and a lot of our enquiries for this route come from people combining a family visit with a Dubai stopover, or professionals who'd rather travel by private car with their own luggage and schedule than coordinate connecting flights. Whatever brings you to Dubai, the road trip itself needs the same honest planning: driving time alone runs well past twelve hours, and border processing adds a variable amount on top that we genuinely can't predict from here — it depends on the day, the season, and your own documentation. We'll walk through realistic timing with you on WhatsApp once we know your travel dates.",
+    "At roughly 1,000 km, Riyadh to Dubai is one of the longer cross-border road trips we arrange — longer than our Bahrain and Kuwait transfers, and a full day's drive before you factor in the border itself. The route takes you out of Riyadh, across the Kingdom toward the UAE, then crosses at the Al Batha (Saudi side) / Al Ghuwaifat (UAE side) border before continuing on into Dubai — with one immigration and customs crossing for everyone in the vehicle along the way.",
+    "Dubai is one of the busiest business and travel hubs in the Gulf, and a lot of our enquiries for this route come from people combining a family visit with a Dubai stopover, or professionals who'd rather travel by private car with their own luggage and schedule than coordinate connecting flights. Whatever brings you to Dubai, the road trip itself needs the same honest planning: driving time alone runs roughly 9 to 11 hours, and border processing adds a variable amount on top that we genuinely can't predict from here — it depends on the day, the season, and your own documentation. We'll walk through realistic timing with you on WhatsApp once we know your travel dates.",
   ],
 }
 
@@ -60,7 +66,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Dubai',
   paragraphs: [
-    "Riyadh and Dubai are both major air hubs, and for most travelers flying is simply the faster way to cover this distance — we'd rather say that plainly than sell you on a 1,230 km drive that doesn't suit your trip. A private car earns its place when the road itself is part of the plan: families travelling with more luggage than a flight allows comfortably, groups who'd rather not split across separate bookings, or anyone making stops in Saudi Arabia along the way before continuing on to the UAE.",
+    "A private car earns its place on a route like this when the road itself is part of the plan: families travelling with more luggage than a flight allows comfortably, groups who'd rather not split across separate bookings, or anyone making stops in Saudi Arabia along the way before continuing on to the UAE.",
     "If a road trip is the right call for you, the point of booking it privately rather than any shared option is the same reasoning behind every trip we run: one vehicle reserved for your group only, a pickup time built around you instead of a fixed schedule, and no changing vehicles partway through the journey.",
   ],
 }

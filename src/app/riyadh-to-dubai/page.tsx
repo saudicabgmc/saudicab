@@ -8,6 +8,17 @@ import {
 
 const theme = { dark: '#071f17', dark2: '#0b3d2e', accent: '#D4AF37' }
 
+const faqSubheading = {
+  en: 'Clear answers about driving from Riyadh to Dubai — the border crossing, documents and private transfer booking.',
+  ar: 'إجابات واضحة حول القيادة من الرياض إلى دبي — عبور الحدود والمستندات وحجز النقل الخاص.',
+}
+
+const waMessage = `Hello, I'd like to ask about a private transfer from Riyadh to Dubai.
+Travel date:
+Passenger count:
+Luggage:
+Preferred vehicle (Sedan / Hyundai Staria / GMC Yukon): `
+
 export default function RiyadhToDubaiPage() {
   return (
     <InternationalTransferPage
@@ -24,6 +35,8 @@ export default function RiyadhToDubaiPage() {
       bookingSteps={bookingSteps}
       relatedLink={relatedLink}
       faqs={riyadhToDubaiFaqs}
+      faqSubheading={faqSubheading}
+      waMessage={waMessage}
     />
   )
 }

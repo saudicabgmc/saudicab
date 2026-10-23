@@ -941,8 +941,8 @@ export const riyadhToDubaiFaqs: FAQItem[] = [
       ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى دبي؟',
     },
     a: {
-      en: "The road distance is approximately 1,230 km, which is many hours of driving on its own. We don't quote a fixed total time because border-crossing duration varies and is outside our control — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ١,٢٣٠ كم، وهي وحدها عدة ساعات من القيادة. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف وتخرج عن سيطرتنا — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 1,000 km, which is roughly 9-11 hours of driving on its own. We don't quote a fixed total time because border-crossing duration varies and is outside our control — we'll discuss realistic timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ١,٠٠٠ كم، أي ما يقارب ٩-١١ ساعة من القيادة. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف وتخرج عن سيطرتنا — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
