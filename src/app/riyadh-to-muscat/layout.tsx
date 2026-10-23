@@ -6,7 +6,7 @@ const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/hero-fallback-saudi-cabs-
 export const metadata: Metadata = {
   title: 'Riyadh to Muscat Taxi | Private Transfer to Oman',
   description:
-    'Private transfer from Riyadh to Muscat, Oman, typically routed via the UAE. Advance-booked, custom-coordinated trip. Contact us on WhatsApp to discuss feasibility for your journey.',
+    'Private transfer from Riyadh to Muscat, Oman, via the direct Saudi-Oman border crossing. Advance-booked, custom-coordinated trip. Contact us on WhatsApp to discuss feasibility for your journey.',
   keywords: [
     'riyadh to muscat taxi', 'riyadh to oman private transfer', 'saudi arabia to oman taxi',
     'private car riyadh to muscat',
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Saudi Cabs GMC',
     title: 'Riyadh to Muscat Taxi | Private Transfer to Oman',
-    description: 'Private transfer from Riyadh to Muscat, Oman, typically routed via the UAE. Advance-booked, custom-coordinated trip. Contact us on WhatsApp to discuss feasibility for your journey.',
+    description: 'Private transfer from Riyadh to Muscat, Oman, via the direct Saudi-Oman border crossing. Advance-booked, custom-coordinated trip. Contact us on WhatsApp to discuss feasibility for your journey.',
     url: PAGE_URL,
     images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Riyadh to Muscat Taxi | Private Transfer to Oman',
-    description: 'Private transfer from Riyadh to Muscat, Oman, typically routed via the UAE.',
+    description: 'Private transfer from Riyadh to Muscat, Oman, via the direct Saudi-Oman border crossing.',
     images: [OG_IMAGE.url],
   },
 }
@@ -38,11 +38,10 @@ const serviceSchema = {
   provider: { '@id': 'https://saudicabsgmc.com/#organization' },
   areaServed: [
     { '@type': 'Country', name: 'Saudi Arabia' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
     { '@type': 'Country', name: 'Oman' },
   ],
   url: PAGE_URL,
-  description: 'Custom, individually-assessed private vehicle transfer request from Riyadh, Saudi Arabia to Muscat, Oman, typically routed via the UAE. Feasibility, documentation and current rate are confirmed directly with the traveler before any booking is accepted.',
+  description: 'Custom, individually-assessed private vehicle transfer request from Riyadh, Saudi Arabia to Muscat, Oman, via the direct Saudi-Oman border crossing. Feasibility, documentation and current rate are confirmed directly with the traveler before any booking is accepted.',
 }
 
 const breadcrumbSchema = {
