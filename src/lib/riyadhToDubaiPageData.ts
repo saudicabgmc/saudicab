@@ -11,7 +11,9 @@ import type { FAQItem } from '@/components/FAQSection'
  *   city), which converge on ~980-1,030 km / ~9-11.5 hours driving via the Al Batha
  *   (Saudi side) / Al Ghuwaifat (UAE side) crossing — NOT the ~1,230 km / 12+ hour
  *   figures this page previously stated, which were overestimates and have been
- *   corrected.
+ *   corrected. Independently re-checked again 2026-10-23 against two further
+ *   calculator sources (distancebetween2.com, himmera.com) — both confirm ~1,000-
+ *   1,005 km / ~9h20m-11.5h, so the ~1,000 km / 9-11 hour figures below stand.
  * - No specific journey TIME is stated as a guarantee: border-crossing duration is
  *   genuinely unpredictable and outside the company's control, so this page is
  *   explicit that timing varies and must be discussed per trip.
@@ -44,7 +46,7 @@ export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
     "At roughly 1,000 km, Riyadh to Dubai is one of the longer cross-border road trips we arrange — longer than our Bahrain and Kuwait transfers, and a full day's drive before you factor in the border itself. The route takes you out of Riyadh, across the Kingdom toward the UAE, then crosses at the Al Batha (Saudi side) / Al Ghuwaifat (UAE side) border before continuing on into Dubai — with one immigration and customs crossing for everyone in the vehicle along the way.",
-    "Dubai is one of the busiest business and travel hubs in the Gulf, and a lot of our enquiries for this route come from people combining a family visit with a Dubai stopover, or professionals who'd rather travel by private car with their own luggage and schedule than coordinate connecting flights. Whatever brings you to Dubai, the road trip itself needs the same honest planning: driving time alone runs roughly 9 to 11 hours, and border processing adds a variable amount on top that we genuinely can't predict from here — it depends on the day, the season, and your own documentation. We'll walk through realistic timing with you on WhatsApp once we know your travel dates.",
+    "Dubai is one of the busiest business and travel hubs in the Gulf, and this route tends to suit people combining a family visit with a Dubai stopover, or travellers who'd rather bring their own luggage and set their own schedule than coordinate connecting flights. Whatever brings you to Dubai, the road trip itself needs honest planning: driving time alone runs roughly 9 to 11 hours, and border processing adds a variable amount on top that we genuinely can't predict from here — it depends on the day, the season, and your own documentation. We'll walk through realistic timing with you on WhatsApp once we know your travel dates.",
   ],
 }
 
