@@ -1002,8 +1002,8 @@ export const riyadhToBahrainFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Riyadh to Manama take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى المنامة؟' },
     a: {
-      en: "The road distance is approximately 480 km. We don't quote a fixed total time, since causeway queue times vary by day — we'll discuss realistic timing based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ٤٨٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار عند الجسر تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 460-475 km, which is roughly 4 hours of driving on its own. The King Fahd Causeway crossing adds more time on top — commonly another 30-60 minutes, longer on weekends and public holidays, though we can't guarantee it — so we'll discuss realistic total timing based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٤٦٠-٤٧٥ كم، أي ما يقارب ٤ ساعات من القيادة. يضيف عبور جسر الملك فهد وقتاً إضافياً — عادةً ٣٠-٦٠ دقيقة أخرى، وأطول في عطلات نهاية الأسبوع والعطلات الرسمية، لكن لا يمكننا ضمان ذلك — لذا سنناقش معك التوقيت الإجمالي الواقعي بحسب تاريخ سفرك.',
     },
   },
   {

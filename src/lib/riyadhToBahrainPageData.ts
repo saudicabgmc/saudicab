@@ -8,6 +8,31 @@ import type { FAQItem } from '@/components/FAQSection'
  * not the generic "land border" framing used for the other GCC pages.
  * No pricing/duration data exists for this route in pricingData.ts, so no
  * fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~460-475 km) was re-verified 2026-10-23 against Rome2Rio
+ *   (multiple query variants: Riyadh->Manama direct = 459.2 km/~4h5m driving;
+ *   Riyadh Central Bus->Manama = 471.1 km; Riyadh->Muharraq = 464.4 km), and
+ *   cross-checked by triangulating Riyadh->Dammam + Dammam->Manama (~60-75 km
+ *   per Kupi/Rome2Rio), which lands in the same range. The previous "~480 km"
+ *   figure was close but appears to have conflated Rome2Rio's STRAIGHT-LINE
+ *   distance (481-482 km) with the actual road distance — corrected to the
+ *   verified road-distance range.
+ * - Causeway length (~25 km) and immigration/customs posts at both ends were
+ *   already accurate and are unchanged. Crossing-time itself (separate from
+ *   the ~4h driving leg) is commonly reported as roughly 30-60 minutes, longer
+ *   on weekends and public holidays (travel-guide sources, not official KFCA
+ *   data — flagged as such).
+ * - Official source for the causeway itself: the King Fahd Causeway Authority
+ *   (KFCA), a joint Saudi-Bahraini body at kfca.sa — confirmed as the genuine
+ *   official operator (per Wikipedia's citation and the authority's own
+ *   "About" page). Toll amounts are real but change over time and vary by
+ *   vehicle class (e.g. a Feb 2026 increase reported by Gulf Business/Saudi
+ *   Gazette and corroborated by Bahrain's GDN), so no specific toll figure is
+ *   stated on this page — travelers/the business should check kfca.sa or the
+ *   JESR app directly.
+ * - The "~480 km" distance also appeared in the FAQ data (faqData.ts); fixed
+ *   there to match.
  */
 
 export type BText = { en: string; ar: string }
@@ -21,7 +46,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~480 km' },
+  { label: 'Approx. road distance', value: '~460–475 km' },
   { label: 'Crossing', value: 'King Fahd Causeway (Saudi Arabia ↔ Bahrain)' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -30,8 +55,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Riyadh to Manama is a road trip of roughly 480 km, most of it along the highway to the Eastern Province before reaching the King Fahd Causeway — the 25 km toll causeway that physically connects Saudi Arabia to Bahrain. Unlike the open desert border crossings on our other GCC routes, this crossing is a bridge with immigration and customs checkpoints at the Saudi end and the Bahraini end.",
-    "We don't quote a fixed journey time for this route. The Riyadh-to-Eastern-Province leg alone is several hours of driving, and the time spent at the causeway checkpoints varies by day and time — it can be quick, or it can take longer, especially around weekends and public holidays when causeway traffic is known to build up. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
+    "Riyadh to Manama is a road trip of roughly 460-475 km, most of it along the highway to the Eastern Province before reaching the King Fahd Causeway — the 25 km toll causeway that physically connects Saudi Arabia to Bahrain, operated by the joint Saudi-Bahraini King Fahd Causeway Authority. Unlike the open desert border crossings on our other GCC routes, this crossing is a bridge with immigration and customs checkpoints at the Saudi end and the Bahraini end.",
+    "We don't quote a fixed journey time for this route. The Riyadh-to-Eastern-Province driving leg alone runs roughly 4 hours, and that's before the causeway itself — crossing time is commonly reported as another 30 to 60 minutes, longer around weekends and public holidays when causeway traffic is known to build up, though we can't guarantee any of that from here. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
   ],
 }
 
@@ -53,7 +78,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Bahrain',
   paragraphs: [
-    "Of our GCC routes from Riyadh, this is the one where a private car genuinely competes with flying on time — Manama is close enough that the causeway crossing is a realistic option, not just a scenic alternative to a short flight. It suits travelers who want to bring more luggage than carry-on allows, families who'd rather not coordinate a connecting flight, or anyone who simply prefers a direct door-to-door trip.",
+    "Of our GCC routes from Riyadh, this is the shortest drive, which makes the causeway crossing a realistic option rather than just a scenic alternative to a short flight. It suits travelers who want to bring more luggage than carry-on allows, families who'd rather not coordinate a connecting flight, or anyone who simply prefers a direct door-to-door trip without changing vehicles or terminals.",
     'As with our other routes, the core advantage of a private vehicle is the same: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way — including at the causeway itself.',
   ],
 }
