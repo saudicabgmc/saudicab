@@ -7,6 +7,24 @@ import type { FAQItem } from '@/components/FAQSection'
  * are genuinely different — this is a distinct page, not a reskin of
  * riyadh-to-dubai. No pricing/duration data exists for this route, so no
  * fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~880-965 km) is a public geographic fact, not a business
+ *   claim. Verified 2026-10-25 against four independent sources — Travelmath
+ *   (~879 km), Rome2Rio (~885 km), distancecalculator.himmera.com (898 km /
+ *   ~8h8m driving), and Air Miles Calculator (~964 km / ~9h41m driving) — which
+ *   converge in the ~880-965 km / ~8-10 hour range. This replaces the previous
+ *   ~1,050 km figure, which was an overestimate and has been corrected. A
+ *   range is shown (not a single point figure) because sources genuinely
+ *   disagree by up to ~85 km depending on exact routing.
+ * - The Al Batha (Saudi side) / Al Ghuwaifat (UAE side) crossing is confirmed as
+ *   the standard Saudi-UAE land route; Ghuwaifat is in the far west of Abu
+ *   Dhabi emirate itself, so this crossing is, if anything, more directly
+ *   associated with the Abu Dhabi route than with Dubai (which continues past
+ *   Abu Dhabi). A travel-blog source (Property Finder) reports border
+ *   processing at this crossing commonly takes roughly 1-2 hours, which this
+ *   page states as a separate, non-guaranteed estimate distinct from driving
+ *   time.
  */
 
 export type BText = { en: string; ar: string }
@@ -20,7 +38,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,050 km' },
+  { label: 'Approx. road distance', value: '~880–965 km' },
   { label: 'Border', value: 'Saudi Arabia ↔ UAE land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -29,8 +47,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Abu Dhabi is the UAE's capital — a seat of government and diplomacy rather than purely a tourism stop — and at roughly 1,050 km it's actually the nearer of the two UAE cities we cover, somewhat closer to the Saudi border than our Riyadh-to-Dubai route. The road still crosses from Saudi Arabia into the UAE at the same shared land border, with one immigration and customs check for everyone in the vehicle.",
-    "What we won't do is promise you a fixed total journey time. The driving portion alone runs well past ten hours before any stops, and border processing on top of that depends on the day, the season and your own paperwork — none of which we control from our side. Once we know your travel dates, we'll talk through what's realistic for your specific trip on WhatsApp.",
+    "Abu Dhabi is the UAE's capital — a seat of government and diplomacy rather than purely a tourism stop — and at roughly 880-965 km it's actually the nearer of the two UAE cities we cover, somewhat closer to the Saudi border than our Riyadh-to-Dubai route. The road crosses from Saudi Arabia into the UAE at the Al Batha (Saudi side) / Al Ghuwaifat (UAE side) border, with one immigration and customs check for everyone in the vehicle.",
+    "What we won't do is promise you a fixed total journey time. Driving alone runs roughly 8 to 10 hours, and that's before border processing, which is commonly reported as taking another 1-2 hours at this crossing — though that figure varies by day, season and your own paperwork, and isn't something we can guarantee from here. Once we know your travel dates, we'll talk through what's realistic for your specific trip on WhatsApp.",
   ],
 }
 
@@ -52,7 +70,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Abu Dhabi',
   paragraphs: [
-    "Abu Dhabi has its own international airport, and for most travelers flying remains the quicker way to get there — we'd rather say so plainly than talk you into a road trip that doesn't suit your plans. Where a private car does make sense is for travelers who want to bring more luggage than a flight allows, families or groups who'd rather stay together in one vehicle than split across flight bookings, or anyone combining stops inside Saudi Arabia before continuing on to the capital.",
+    "Abu Dhabi has its own international airport. Where a private car does make sense is for travelers who want to bring more luggage than a flight allows, families or groups who'd rather stay together in one vehicle than split across flight bookings, or anyone combining stops inside Saudi Arabia before continuing on to the capital.",
     "If you do choose the road, the reasoning is the same as on every trip we run: a vehicle booked for your group alone, a pickup built around your own schedule rather than a departure board, and no changing vehicles partway through the journey.",
   ],
 }

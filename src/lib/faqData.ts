@@ -1085,8 +1085,8 @@ export const riyadhToAbuDhabiFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Riyadh to Abu Dhabi take?', ar: 'كم تستغرق الرحلة بالسيارة من الرياض إلى أبوظبي؟' },
     a: {
-      en: "The road distance is approximately 1,050 km. We don't quote a fixed total time because border-crossing duration varies — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ١,٠٥٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 880-965 km, which is roughly 8-10 hours of driving on its own. Border processing adds more time on top of that — commonly another 1-2 hours at this crossing, though it varies and we don't guarantee it — so we'll discuss realistic total timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٨٨٠-٩٦٥ كم، أي ما يقارب ٨-١٠ ساعات من القيادة. تضيف إجراءات الحدود وقتاً إضافياً — عادةً ١-٢ ساعة أخرى عند هذا المعبر، لكنه يختلف ولا نضمنه — لذا سنناقش معك التوقيت الإجمالي الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
