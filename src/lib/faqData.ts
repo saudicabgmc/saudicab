@@ -1216,8 +1216,8 @@ export const bahrainToRiyadhFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Bahrain to Riyadh take?', ar: 'كم تستغرق الرحلة بالسيارة من البحرين إلى الرياض؟' },
     a: {
-      en: "The road distance is approximately 480 km. We don't quote a fixed total time because causeway queue times vary by day, and the drive from the Eastern Province into Riyadh adds several more hours on top — we'll discuss realistic timing based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو 480 كم. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار على الجسر تختلف حسب اليوم، وتضيف الرحلة من المنطقة الشرقية إلى الرياض عدة ساعات أخرى — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 460-475 km, depending on your exact pickup point in Bahrain and drop-off in Riyadh. We don't quote a fixed total time because causeway queue times vary by day, and the drive from the Eastern Province into Riyadh adds several more hours on top — we'll discuss realistic timing based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو 460-475 كم، حسب نقطة الاستلام بالتحديد في البحرين ووجهتك في الرياض. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار على الجسر تختلف حسب اليوم، وتضيف الرحلة من المنطقة الشرقية إلى الرياض عدة ساعات أخرى — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
     },
   },
   {

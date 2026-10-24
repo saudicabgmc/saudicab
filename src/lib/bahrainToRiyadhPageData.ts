@@ -5,9 +5,36 @@
  * Bahrain, exiting Bahrain and entering Saudi Arabia at the causeway (the
  * opposite order of formalities to the Riyadh-origin page), then the long
  * drive west into Riyadh. Distance mirrors riyadhToBahrainPageData.ts
- * (~480 km) because it's the same road — not a new or invented figure.
+ * because it's the same road — not a new or invented figure.
  * No pricing/duration data exists for this route in pricingData.ts, so no
  * fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~460-475 km) was corrected 2026-10-24 to match the
+ *   figure independently verified on riyadh-to-bahrain (same physical road,
+ *   same causeway): Rome2Rio Riyadh-Manama 459.2 km, Riyadh Central
+ *   Bus-Manama 471.1 km, Riyadh-Muharraq 464.4 km. The previous "~480 km"
+ *   on this page was a stale mirror of riyadh-to-bahrain's own earlier,
+ *   already-corrected ~480 km error, so it was never updated when that page
+ *   was fixed — now brought back in sync.
+ * - Cross-border passenger-transport eligibility: a regulation reportedly
+ *   effective September 6, 2026 — covered by at least 5 independent Gulf
+ *   news outlets (Gulf News, GDN, onmanorama, Daily Tribune Bahrain,
+ *   GCC Business News), naming Bahrain's Undersecretary for Land Transport
+ *   and Post and Saudi Arabia's Transport General Authority as the source —
+ *   reportedly permits ONLY officially licensed taxis, meeting approved
+ *   technical/safety standards and no more than five years old, to carry
+ *   passengers across the King Fahd Causeway. Attempted 2026-10-24 to
+ *   verify against a PRIMARY official source: tga.gov.sa does not resolve
+ *   (likely not the TGA's real domain); mot.gov.sa and mtt.gov.bh (Bahrain's
+ *   Ministry of Transportation and Telecommunications) both resolve as
+ *   genuine live government sites, but no specific announcement/press-
+ *   release page could be located on either via search. This claim is
+ *   therefore NEWS-SOURCED, not primary-source-confirmed — the page wording
+ *   reflects that distinction explicitly rather than stating it as settled
+ *   fact. Separately and regardless of sourcing confidence: whether Saudi
+ *   Cabs GMC's own fleet/drivers hold this licensing has NOT been verified
+ *   and is unknown — flagged for the business to confirm operationally.
  */
 
 export type BText = { en: string; ar: string }
@@ -21,7 +48,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~480 km' },
+  { label: 'Approx. road distance', value: '~460–475 km' },
   { label: 'Crossing', value: 'King Fahd Causeway (Bahrain ↔ Saudi Arabia)' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -41,11 +68,11 @@ export const requirementsSection = {
   items: [
     'A valid passport (or, for GCC nationals, the ID accepted at the causeway) for every passenger.',
     "Confirmation of whether you need a Saudi visa or entry permit — this depends on your nationality and residency status, and should be checked against Saudi Arabia's current entry rules before travel, not assumed from general knowledge.",
-    'That a vehicle and driver authorized for causeway crossing into Saudi Arabia are actually available on your travel date — not every vehicle in our fleet is cleared for this crossing, and it must be confirmed with us in advance.',
+    "Whether a vehicle and driver meeting this crossing's specific licensing requirements can be arranged for your travel date — this is not guaranteed and must be confirmed with us directly, not assumed. According to multiple regional news reports (not independently confirmed against primary Saudi or Bahraini government sources), regulations effective since September 2026 reportedly limit this crossing to officially licensed taxis meeting approved technical and safety standards, no more than five years old, and we have not confirmed whether our own fleet or drivers meet these requirements.",
     'Vehicle documentation and insurance valid for use on the King Fahd Causeway and within Saudi Arabia, plus any causeway toll or permit charges that may apply.',
     'Realistic expectations around causeway queue times on the Bahrain side, which vary by day and are outside our control.',
   ],
-  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Saudi immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this crossing until our team confirms it with you directly. For current, authoritative Saudi entry requirements, check the official Saudi e-visa portal before you travel.",
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Saudi immigration authorities. We also don't guarantee that any specific vehicle or driver meets the licensed cross-border passenger transport requirements set by Saudi and Bahraini transport authorities until our team confirms it with you directly. For current, authoritative Saudi entry requirements, check the official Saudi e-visa portal before you travel.",
   officialLinkLabel: 'Saudi Arabia official e-visa portal (visitsaudi.com)',
   officialLinkUrl: 'https://visa.visitsaudi.com/',
 }
@@ -53,7 +80,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying from Bahrain to Riyadh',
   paragraphs: [
-    "Flying from Bahrain International Airport is the faster way to reach Riyadh for most travelers, and we'd rather say that directly than oversell a causeway crossing that isn't the right fit for everyone. A private car makes more sense if you're specifically arriving in Bahrain and continuing overland — for example, if you're already travelling by road through the region, bringing more luggage than a flight comfortably allows, or moving as a family who'd rather stay together in one vehicle for the whole trip.",
+    "A private car makes more sense if you're specifically arriving in Bahrain and continuing overland — for example, if you're already travelling by road through the region, bringing more luggage than a flight comfortably allows, or moving as a family who'd rather stay together in one vehicle for the whole trip.",
     "If a road trip from Bahrain does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: one vehicle reserved for your group only, a pickup time in Bahrain built around your own schedule, and no changing vehicles partway through — including at the causeway itself.",
   ],
 }
