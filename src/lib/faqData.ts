@@ -1171,8 +1171,8 @@ export const dammamToKuwaitFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Dammam to Kuwait City take?', ar: 'كم تستغرق الرحلة بالسيارة من الدمام إلى مدينة الكويت؟' },
     a: {
-      en: "The road distance is approximately 290 km, about half the distance of our Riyadh-to-Kuwait route. We don't quote a fixed total time because border-crossing duration varies — we'll discuss realistic timing based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ٢٩٠ كم، أي نصف مسافة خط الرياض إلى الكويت تقريباً. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 410-436 km, meaningfully shorter than our Riyadh-to-Kuwait route. Driving alone takes roughly 4-5 hours; border-crossing time at Nuwaiseeb/Al-Khafji adds more on top and varies by day, so we don't quote a fixed total — we'll discuss realistic timing based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٤١٠-٤٣٦ كم، أقصر بكثير من خط الرياض إلى الكويت. تستغرق القيادة وحدها نحو ٤-٥ ساعات؛ ويضيف عبور حدود النويصيب/الخفجي وقتاً إضافياً يختلف حسب اليوم، لذا لا نحدد وقتاً إجمالياً ثابتاً — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
     },
   },
   {

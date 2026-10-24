@@ -7,6 +7,26 @@ import type { FAQItem } from '@/components/FAQSection'
  * written around that real difference, not a reskin of the Riyadh page.
  * No pricing/duration data exists for this route, so no fare or guaranteed
  * time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~410-436 km) was verified 2026-10-24 against four
+ *   independent sources: Rome2Rio (Dhahran-Kuwait City: 424.8 km / ~4h8m),
+ *   Cleartrip (Dammam-Kuwait City: 409.35 km / ~4h53m), and two distance
+ *   calculators (himmera.com and distancebetween2.com: ~469-470 km). A fifth
+ *   source (Air Miles Calculator, airport-to-airport) gave a lower outlier
+ *   of ~395 km. The ~410-436 km range reflects the two most route-specific,
+ *   convergent sources (Rome2Rio and Cleartrip); the wider ~395-470 km full
+ *   spread reflects genuine differences in exact start/end points. The
+ *   previous ~290 km figure was a significant underestimate and has been
+ *   corrected. Driving time is stated as "roughly 4-5 hours," sourced from
+ *   the same two route-specific estimates, explicitly excluding border
+ *   processing.
+ * - The previous "about half the distance of our Riyadh-to-Kuwait route"
+ *   claim no longer holds against the corrected Riyadh-to-Kuwait figure
+ *   (~628-633 km, verified in that page's own audit) — 410-436 km is closer
+ *   to two-thirds of that distance, not half. This claim has been removed.
+ * - Crossing name: Nuwaiseeb (Kuwait side) / Al-Khafji (Saudi side), per the
+ *   same verification used on the Riyadh-to-Kuwait page.
  */
 
 export type BText = { en: string; ar: string }
@@ -20,7 +40,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~290 km' },
+  { label: 'Approx. road distance', value: '~410–436 km' },
   { label: 'Border', value: 'Saudi Arabia ↔ Kuwait land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -29,8 +49,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Dammam to Kuwait City is a road trip of roughly 290 km up the Gulf coastal highway to the Saudi–Kuwait border crossing near Al-Khafji, then on into Kuwait. Starting from the Eastern Province already puts you much closer to this border than starting from Riyadh — this route is about half the distance of our Riyadh-to-Kuwait transfer.",
-    "Even over a shorter distance, we don't quote a fixed journey time, since border-crossing duration varies by day and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
+    "Dammam to Kuwait City is a road trip of roughly 410-436 km up the Gulf coastal highway to the Saudi–Kuwait border, crossed at Nuwaiseeb (Kuwait side) / Al-Khafji (Saudi side), then on into Kuwait. Starting from the Eastern Province already puts you meaningfully closer to this border than starting from Riyadh, and the exact distance depends on your pickup point, your destination in Kuwait, and the route taken. Driving alone runs roughly 4-5 hours, before any stops.",
+    "Even over a shorter distance than our Riyadh routes, we don't quote a fixed total journey time, since border-crossing duration varies by day and is outside anyone's direct control. We'll talk through realistic timing with you on WhatsApp once we understand your travel dates and documentation.",
   ],
 }
 
@@ -52,7 +72,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Why Book a Private Car for This Route',
   paragraphs: [
-    "At this distance, a private car is a genuinely practical option — short enough that flying rarely makes sense once you factor in airport time on both ends, especially for travelers already based in the Eastern Province. It suits business travelers, families visiting relatives across the border, or anyone who prefers a direct door-to-door trip over coordinating a flight for a relatively short distance.",
+    "A private car offers genuine door-to-door convenience on this route, avoiding separate airport transfers and check-in time on both ends. That said, flying may still be preferable for some travelers depending on their schedule and total travel time — we'd rather say that plainly than oversell the drive. This option tends to suit business travelers, families visiting relatives across the border, or anyone who prefers a direct trip over coordinating a flight.",
     'As with our other routes, the core advantage of a private vehicle is the same: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way.',
   ],
 }
