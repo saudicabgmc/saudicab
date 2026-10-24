@@ -53,6 +53,8 @@ export interface InternationalTransferProps {
   waMessage?: string
   /** When true, hides the "Flying is typically faster" note — for routes short enough that flying isn't a realistic comparison. Defaults to showing it, unchanged for existing pages. */
   hideFlyingNote?: boolean
+  /** Optional override for the FAQ section's heading. Falls back to "Frequently Asked Questions — {destinationLabel}" when omitted — useful when that generic construction reads oddly for a page's specific route. */
+  faqHeading?: BText
 }
 
 const WA_NUMBER = '923097811785'
@@ -88,7 +90,7 @@ export default function InternationalTransferPage({
   heroImage,
   theme, heroContent, quickFacts, journeySection,
   requirementsSection, whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink, faqs,
-  faqSubheading, waMessage, hideFlyingNote,
+  faqSubheading, waMessage, hideFlyingNote, faqHeading,
 }: InternationalTransferProps) {
   const { isAr } = useLang()
   const reveal = useReveal()
@@ -279,7 +281,7 @@ export default function InternationalTransferPage({
       </section>
 
       {/* ── 8. FAQ ── */}
-      <FAQSection faqs={faqs} heading={{ en: `Frequently Asked Questions — ${destinationLabel}`, ar: `أسئلة شائعة — ${isAr ? destinationLabel : destinationLabel}` }} subheading={faqSubheading} />
+      <FAQSection faqs={faqs} heading={faqHeading ?? { en: `Frequently Asked Questions — ${destinationLabel}`, ar: `أسئلة شائعة — ${isAr ? destinationLabel : destinationLabel}` }} subheading={faqSubheading} />
 
       {/* ── 9. Closing CTA ── */}
       <section aria-labelledby="it-final-title" style={{ padding: '60px 0', background: `linear-gradient(135deg, ${dark2} 0%, ${dark} 100%)`, textAlign: 'center' }}>

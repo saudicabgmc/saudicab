@@ -8,6 +8,18 @@ import {
 
 const theme = { dark: '#071f17', dark2: '#0b3d2e', accent: '#D4AF37' }
 
+const faqHeading = {
+  en: 'Frequently Asked Questions — Muscat to Riyadh',
+  ar: 'أسئلة شائعة — مسقط إلى الرياض',
+}
+
+const waMessage = `Hello, I'd like to ask about a Muscat to Riyadh private transfer.
+Pickup location in Muscat:
+Travel date:
+Passenger count:
+Preferred vehicle (Sedan / Hyundai Staria / GMC Yukon):
+Please confirm the feasible route (direct via Oman-Saudi border, or via the UAE) for my dates: `
+
 export default function MuscatToRiyadhPage() {
   return (
     <InternationalTransferPage
@@ -25,6 +37,8 @@ export default function MuscatToRiyadhPage() {
       bookingSteps={bookingSteps}
       relatedLink={relatedLink}
       faqs={muscatToRiyadhFaqs}
+      faqHeading={faqHeading}
+      waMessage={waMessage}
     />
   )
 }
