@@ -5,9 +5,26 @@
  * in Doha, Qatari exit formalities before Saudi entry formalities (the
  * opposite order to the Riyadh-origin page), then the long drive west
  * across Saudi Arabia's Eastern Province into Riyadh. Distance mirrors
- * riyadhToDohaPageData.ts (~1,100 km) because it's the same road — not a
- * new or invented figure. No pricing/duration data exists for this route
- * in pricingData.ts, so no fare or guaranteed time is stated anywhere.
+ * riyadhToDohaPageData.ts because it's the same road — not a new or
+ * invented figure. No pricing/duration data exists for this route in
+ * pricingData.ts, so no fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~580 km) was re-verified 2026-10-24 specifically for
+ *   the Doha->Riyadh direction (not just assumed from the reverse page):
+ *   Rome2Rio Doha-Riyadh direct = 575.9 km / ~6h33m driving; Qatar Living =
+ *   590 km / ~7h; component check (Doha-Abu Samra ~80-90 km + Abu
+ *   Samra-Riyadh via Salwa, Rome2Rio = 481.3 km) sums to a consistent
+ *   ~560-575 km. This matches the figure already verified on riyadh-to-doha
+ *   (same physical road) and replaces the previous ~1,100 km figure, which
+ *   was a stale mirror of riyadh-to-doha's own earlier, already-corrected
+ *   error — never updated here when that page was fixed.
+ * - Border wait time: one source (a Qatar travel guide) cites 2-3 hours
+ *   during Eid/peak holiday periods at Abu Samra/Salwa — kept as a general,
+ *   non-guaranteed reference point, not a promised figure.
+ * - The Salwa/Abu Samra crossing was closed 2017-2021 (Gulf rift) and has
+ *   operated normally since the Al-Ula agreement — confirming the route is
+ *   currently viable, consistent with riyadh-to-doha's own verification.
  */
 
 export type BText = { en: string; ar: string }
@@ -21,7 +38,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,100 km' },
+  { label: 'Approx. road distance', value: '~580 km' },
   { label: 'Border', value: 'Qatar ↔ Saudi Arabia land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -31,7 +48,7 @@ export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
     "This trip starts with pickup in Doha — most commonly a West Bay or Corniche-area hotel, or wherever you're staying — and heads out toward the Qatar–Saudi Arabia land border, commonly known by the names of the posts on each side: Abu Samra on the Qatar side, Salwa on the Saudi side. It's the only road link between the two countries. You'll clear Qatari exit formalities first, then Saudi entry formalities on the other side — the reverse order of a trip that begins in Riyadh. From there, the route continues west through Saudi Arabia's Eastern Province and on to Riyadh.",
-    "We don't quote a fixed total time for this route. The driving alone is well over ten hours before any stops, and that's before accounting for the border itself — processing time at Abu Samra/Salwa depends on the day, the season and how straightforward everyone's documentation is, and it genuinely isn't something anyone can promise in advance. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
+    "We don't quote a fixed total time for this route. Driving alone runs roughly 6-7 hours before any stops, and that's before accounting for the border itself — processing time at Abu Samra/Salwa depends on the day, the season and how straightforward everyone's documentation is, and can extend to 2-3 hours during Eid and other peak holiday periods. None of this is something anyone can promise in advance. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
   ],
 }
 
@@ -53,7 +70,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying from Doha to Riyadh',
   paragraphs: [
-    "Flying from Hamad International Airport is the faster way to reach Riyadh for most travelers, and we'd rather say that directly than oversell a 1,100 km road trip that isn't the right fit for everyone. A private car makes more sense if the road itself serves a purpose for you — bringing more luggage than a flight comfortably allows, travelling as a family or group who'd rather stay together in one vehicle for the whole trip, or making stops along the way through the Eastern Province rather than going point to point.",
+    "A private car makes more sense if the road itself serves a purpose for you — bringing more luggage than a flight comfortably allows, travelling as a family or group who'd rather stay together in one vehicle for the whole trip, or making stops along the way through the Eastern Province rather than going point to point.",
     "If a road trip from Doha does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: one vehicle reserved for your group only, a pickup time in Doha built around your own schedule, and no changing vehicles partway through — including at the border itself.",
   ],
 }

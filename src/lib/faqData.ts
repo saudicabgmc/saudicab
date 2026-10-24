@@ -1261,8 +1261,8 @@ export const dohaToRiyadhFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Doha to Riyadh take?', ar: 'كم تستغرق الرحلة بالسيارة من الدوحة إلى الرياض؟' },
     a: {
-      en: "The road distance is approximately 1,100 km. We don't quote a fixed total time because border-crossing duration at Abu Samra/Salwa varies by day — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ١,١٠٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود عند أبو سمرة/سلوى تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 580 km. Driving alone takes roughly 6-7 hours; border-crossing time at Abu Samra/Salwa adds more on top, varies by day, and can extend to 2-3 hours during Eid and other peak periods — we don't guarantee it, and we'll discuss realistic total timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٥٨٠ كم. تستغرق القيادة وحدها نحو ٦-٧ ساعات؛ ويضيف عبور حدود أبو سمرة/سلوى وقتاً إضافياً يختلف حسب اليوم، وقد يمتد إلى ٢-٣ ساعات خلال العيد والفترات المزدحمة الأخرى — لا نضمن ذلك، وسنناقش معك التوقيت الإجمالي الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
