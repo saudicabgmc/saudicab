@@ -1403,8 +1403,8 @@ export const kuwaitToRiyadhFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Kuwait to Riyadh take?', ar: 'كم تستغرق الرحلة بالسيارة من الكويت إلى الرياض؟' },
     a: {
-      en: "The road distance is approximately 550 km. We don't quote a fixed total time because border-crossing duration at Al-Khafji varies by day — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ٥٥٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود عند الخفجي تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 628-633 km. Driving alone takes roughly 8 hours; border-crossing time at Nuwaiseeb/Al-Khafji adds more on top and varies by day — it's outside our control, so we don't guarantee it, and we'll discuss realistic total timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٦٢٨-٦٣٣ كم. تستغرق القيادة وحدها نحو ٨ ساعات؛ ويضيف عبور حدود النويصيب/الخفجي وقتاً إضافياً ويختلف حسب اليوم — وهو أمر خارج عن سيطرتنا، لذا لا نضمنه، وسنناقش معك التوقيت الإجمالي الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
