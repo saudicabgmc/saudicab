@@ -8,6 +8,14 @@ import {
 
 const theme = { dark: '#071f17', dark2: '#0b3d2e', accent: '#D4AF37' }
 
+const waMessage = `Hello, I'd like to ask about a private transfer from Abu Dhabi to Riyadh.
+Pickup location in Abu Dhabi:
+Destination in Riyadh:
+Travel date:
+Passenger count:
+Preferred vehicle (Sedan / Hyundai Staria / GMC Yukon):
+Questions about Saudi entry requirements / vehicle eligibility: `
+
 export default function AbuDhabiToRiyadhPage() {
   return (
     <InternationalTransferPage
@@ -25,6 +33,7 @@ export default function AbuDhabiToRiyadhPage() {
       bookingSteps={bookingSteps}
       relatedLink={relatedLink}
       faqs={abuDhabiToRiyadhFaqs}
+      waMessage={waMessage}
     />
   )
 }

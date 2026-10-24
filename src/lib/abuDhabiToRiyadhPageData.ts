@@ -4,11 +4,35 @@
  * border, but written from scratch around the outbound-from-Abu-Dhabi
  * experience: pickup in the UAE capital, UAE exit formalities before
  * Saudi entry formalities (the opposite order to the Riyadh-origin page),
- * then the drive across Saudi Arabia into Riyadh. Distance mirrors
- * riyadhToAbuDhabiPageData.ts (~1,050 km) because it's the same road —
- * not a new or invented figure. No pricing/duration data exists for this
- * route in pricingData.ts, so no fare or guaranteed time is stated
- * anywhere.
+ * then the drive across Saudi Arabia into Riyadh. No pricing/duration data
+ * exists for this route in pricingData.ts, so no fare or guaranteed time
+ * is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~880-965 km) was independently re-verified
+ *   2026-10-24 specifically for Abu Dhabi->Riyadh — NOT copied from
+ *   dubai-to-riyadh (a longer, different route) and not blindly assumed
+ *   from riyadh-to-abu-dhabi. Sources: Rome2Rio (884.6 km) and Travelmath
+ *   (879 km / ~8h8m driving) converge tightly; a dedicated Saudi-UAE
+ *   road-trip guide confirms the route via Al Ghuwaifat (UAE)/Al Batha
+ *   (Saudi), noting Abu Dhabi is naturally shorter than the ~1,000 km
+ *   Dubai figure since Abu Dhabi sits closer to the border. Transfer
+ *   providers citing ~950-955 km likely reflect specific pickup-address
+ *   routing rather than idealized city-centre-to-city-centre distance —
+ *   still within the verified range, not a contradiction. One bus-booking
+ *   site's 779 km figure looks like a straight-line/network measure, not
+ *   a real road distance, and was discarded. This matches the range
+ *   already independently verified on riyadh-to-abu-dhabi (same physical
+ *   road) and replaces the previous ~1,050 km figure, which was a stale
+ *   mirror of that page's own earlier, already-corrected error — never
+ *   updated here when that page was fixed.
+ * - Driving time: ~8-10 hours, consistent with Travelmath's 8h8m and the
+ *   wider range already used on riyadh-to-abu-dhabi. No specific
+ *   border-wait estimate is added — a targeted search for Al Ghuwaifat/Al
+ *   Batha delay data found nothing specific and verifiable enough to cite
+ *   (see the correction made on dubai-to-riyadh this session for why an
+ *   earlier attempt to use an unverified figure for this same crossing was
+ *   removed there).
  */
 
 export type BText = { en: string; ar: string }
@@ -22,7 +46,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,050 km' },
+  { label: 'Approx. road distance', value: '~880–965 km' },
   { label: 'Border', value: 'UAE ↔ Saudi Arabia land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -31,8 +55,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "This trip starts with pickup in Abu Dhabi — a hotel, residence or agreed location anywhere across the city — and heads out toward the Saudi–UAE land border. Because Abu Dhabi sits somewhat closer to the border than Dubai does, this route is a shorter capital-to-capital trip than our Dubai-to-Riyadh transfer, though it's still a genuine long-distance crossing rather than a short hop. You'll clear UAE exit formalities first, then Saudi entry formalities on the other side — the reverse order to a trip that begins in Riyadh.",
-    "We don't quote a fixed total time for this route. The driving alone runs well past ten hours before any stops, and that's before the border itself, where processing time depends on the day, the season and how straightforward everyone's documentation is — something that genuinely can't be promised in advance from either side. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
+    "This trip starts with pickup in Abu Dhabi — a hotel, residence or agreed location anywhere across the city — and heads out toward the Saudi–UAE land border, crossed at Al Batha (Saudi side) / Al Ghuwaifat (UAE side). Because Abu Dhabi sits somewhat closer to the border than Dubai does, this route is a shorter capital-to-capital trip than our Dubai-to-Riyadh transfer, though it's still a genuine long-distance crossing rather than a short hop. You'll clear UAE exit formalities first, then Saudi entry formalities on the other side — the reverse order to a trip that begins in Riyadh.",
+    "We don't quote a fixed total time for this route. Driving alone runs roughly 8 to 10 hours before any stops, and that's before the border itself, where processing time depends on the day, the season and how straightforward everyone's documentation is — something that genuinely can't be promised in advance from either side. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
   ],
 }
 
@@ -54,7 +78,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying from Abu Dhabi to Riyadh',
   paragraphs: [
-    "Abu Dhabi International Airport has direct flights to Riyadh, and for most travelers flying remains the faster option — we'd rather say so plainly than oversell a road trip that doesn't suit your plans. A private car earns its place when the road itself serves a purpose: bringing more luggage than a flight comfortably allows, a family or group who'd rather stay together in one vehicle for the whole trip, or anyone making stops along the way rather than travelling point to point.",
+    "A private car earns its place when the road itself serves a purpose: bringing more luggage than a flight comfortably allows, a family or group who'd rather stay together in one vehicle for the whole trip, or anyone making stops along the way rather than travelling point to point.",
     "If a road trip from Abu Dhabi does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: one vehicle reserved for your group only, a pickup time in Abu Dhabi built around your own schedule, and no changing vehicles partway through — including at the border itself.",
   ],
 }
