@@ -17,12 +17,15 @@ export interface GuidePageProps {
   relatedLinks: { href: string; label: string; tag: string }[]
   heroGradient?: string
   ctaSubtext?: string
+  /** Overrides the WhatsApp CTA's pre-filled message. Defaults to the original generic text, unchanged for existing pages that don't pass it. */
+  waMessage?: string
 }
 
 export default function GuidePageTemplate({
   url, dateModified, tag, title, subtitle, quickAnswer, keyFacts, children, faqs, relatedLinks,
   heroGradient = 'linear-gradient(135deg, #071f17, #0B3D2E)',
   ctaSubtext = 'Fixed price confirmed instantly. Professional driver. Door-to-door, 24/7.',
+  waMessage = "Hello, I'd like to book a taxi in Saudi Arabia",
 }: GuidePageProps) {
   const speakableSchema = {
     '@context': 'https://schema.org',
@@ -164,7 +167,7 @@ export default function GuidePageTemplate({
           <h2 style={{ fontSize: '1.8rem', fontWeight: '900', marginBottom: '12px' }}>Ready to Book?</h2>
           <p style={{ opacity: 0.85, marginBottom: '28px', lineHeight: 1.7 }}>{ctaSubtext}</p>
           <a
-            href="https://wa.me/923097811785?text=Hello%2C%20I'd%20like%20to%20book%20a%20taxi%20in%20Saudi%20Arabia"
+            href={`https://wa.me/923097811785?text=${encodeURIComponent(waMessage)}`}
             target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '10px',
