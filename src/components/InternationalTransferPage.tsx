@@ -51,6 +51,8 @@ export interface InternationalTransferProps {
   faqSubheading?: BText
   /** Optional override for the prefilled WhatsApp message (hero + closing CTA). Falls back to the generic per-destination message when omitted. */
   waMessage?: string
+  /** When true, hides the "Flying is typically faster" note — for routes short enough that flying isn't a realistic comparison. Defaults to showing it, unchanged for existing pages. */
+  hideFlyingNote?: boolean
 }
 
 const WA_NUMBER = '923097811785'
@@ -86,7 +88,7 @@ export default function InternationalTransferPage({
   heroImage,
   theme, heroContent, quickFacts, journeySection,
   requirementsSection, whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink, faqs,
-  faqSubheading, waMessage,
+  faqSubheading, waMessage, hideFlyingNote,
 }: InternationalTransferProps) {
   const { isAr } = useLang()
   const reveal = useReveal()
@@ -216,9 +218,11 @@ export default function InternationalTransferPage({
           {whyPrivateCarSection.paragraphs.map((p, i) => (
             <motion.p key={i} {...reveal(i)} style={{ fontSize: '0.95rem', color: 'var(--muted-foreground)', lineHeight: 1.9, marginBottom: '16px' }}>{p}</motion.p>
           ))}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center', marginTop: '20px', fontSize: '0.84rem', color: 'var(--muted-foreground)' }}>
-            <Plane size={15} strokeWidth={2} /> <span>Flying is typically faster for this distance — we'll tell you that directly.</span>
-          </div>
+          {!hideFlyingNote && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center', marginTop: '20px', fontSize: '0.84rem', color: 'var(--muted-foreground)' }}>
+              <Plane size={15} strokeWidth={2} /> <span>Flying is typically faster for this distance — we'll tell you that directly.</span>
+            </div>
+          )}
         </div>
       </section>
 

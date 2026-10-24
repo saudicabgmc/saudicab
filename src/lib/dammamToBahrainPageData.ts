@@ -8,6 +8,23 @@ import type { FAQItem } from '@/components/FAQSection'
  * written around that real difference, not copy-pasted from the Riyadh page.
  * No pricing/duration data exists for this route in pricingData.ts, so no
  * fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~50-75 km) was verified 2026-10-24 against Rome2Rio
+ *   (Khobar-Manama: 48.5 km; Dammam-Manama: 70.3 km) and a travel-guide
+ *   figure (Kupi: Dammam-Manama ~75 km). The range reflects a real
+ *   difference depending on exact pickup point — Khobar sits closer to the
+ *   causeway than Dammam proper — not measurement uncertainty on a single
+ *   trip. The previous "~50 km" figure fit Khobar reasonably well but
+ *   understated the distance for pickups starting in Dammam itself.
+ * - The King Fahd Causeway's own length (25 km) is a separate, well-
+ *   documented fact and is NOT the same as the total Dammam/Khobar-to-Manama
+ *   trip distance — the causeway is a significant part of the trip, not
+ *   "almost all" of it, since there's also an approach drive on each side.
+ * - The hardcoded "Flying is typically faster" note in the shared
+ *   InternationalTransferPage component is suppressed on this page only
+ *   (hideFlyingNote), since flying isn't a realistic comparison for a trip
+ *   this short — the other 15 GCC pages are unaffected.
  */
 
 export type BText = { en: string; ar: string }
@@ -21,7 +38,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~50 km' },
+  { label: 'Approx. road distance', value: '~50–75 km' },
   { label: 'Crossing', value: 'King Fahd Causeway (Saudi Arabia ↔ Bahrain)' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -30,7 +47,7 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "Dammam to Manama is a short trip of roughly 50 km, almost entirely made up of the King Fahd Causeway itself — the 25 km toll bridge connecting Khobar, in Saudi Arabia's Eastern Province, to Bahrain. This is by far the shortest of our GCC routes; where our Riyadh-based transfers involve many hours of highway driving before reaching a border, this one is close to a local trip with an international crossing in the middle.",
+    "Dammam to Manama is a short trip — roughly 50-75 km depending on your exact pickup point (Khobar sits closest to the causeway; Dammam itself is a little further) and destination in Manama. The King Fahd Causeway itself, the 25 km toll bridge connecting Saudi Arabia's Eastern Province to Bahrain, makes up a significant part of that distance. This is by far the shortest of our GCC routes; where our Riyadh-based transfers involve many hours of highway driving before reaching a border, this one is close to a local trip with an international crossing in the middle.",
     "Even on a short route like this, we don't quote a fixed total time, because the causeway's immigration and customs checkpoints can move quickly or slowly depending on the day — weekends and public holidays are known for longer queues. We'll give you a realistic sense of timing once we know your travel date.",
   ],
 }
@@ -53,7 +70,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Why Book a Private Car for This Route',
   paragraphs: [
-    "This is genuinely one of the more practical routes on our GCC list — short enough that a private car competes well with any other option for getting from the Eastern Province to Manama, especially if you'd rather not deal with public crossing queues on foot or coordinate a separate ride on each side of the causeway.",
+    "This is genuinely one of the more practical routes on our GCC list — short enough that a private car is a convenient way to make the crossing, especially if you'd rather not deal with public crossing queues on foot or coordinate a separate ride on each side of the causeway.",
     'The core advantage is the same as all our private trips: one vehicle for your group for the whole journey, no transfer between vehicles at the causeway, and a pickup time built around your plans rather than a fixed schedule.',
   ],
 }

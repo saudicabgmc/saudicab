@@ -1140,8 +1140,8 @@ export const dammamToBahrainFaqs: FAQItem[] = [
   {
     q: { en: 'How far is Khobar from the King Fahd Causeway?', ar: 'كم تبعد الخبر عن جسر الملك فهد؟' },
     a: {
-      en: "Khobar sits right at the start of the causeway, so a Dammam-to-Manama trip is mostly the 25 km causeway crossing itself — much shorter than our routes starting from Riyadh.",
-      ar: 'تقع الخبر عند بداية الجسر مباشرة، لذا فإن رحلة الدمام إلى المنامة تتكون في معظمها من عبور الجسر نفسه البالغ طوله ٢٥ كم — أقصر بكثير من رحلاتنا المنطلقة من الرياض.',
+      en: "Khobar sits right at the start of the causeway, so a Dammam-to-Manama trip is mostly made up of the causeway crossing plus a short approach drive — roughly 50-75 km in total depending on your exact pickup point, with the causeway itself a 25 km toll bridge. Much shorter than our routes starting from Riyadh.",
+      ar: 'تقع الخبر عند بداية الجسر مباشرة، لذا فإن رحلة الدمام إلى المنامة تتكون في معظمها من عبور الجسر وطريق قصير للوصول إليه — نحو ٥٠-٧٥ كم إجمالاً حسب نقطة الانطلاق بالتحديد، مع جسر بطول ٢٥ كم. أقصر بكثير من رحلاتنا المنطلقة من الرياض.',
     },
   },
   {
