@@ -1479,8 +1479,8 @@ export const bahrainToDammamFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the crossing from Bahrain to Dammam take?', ar: 'كم تستغرق الرحلة من البحرين إلى الدمام؟' },
     a: {
-      en: "The road distance is only about 50 km, almost all of it the causeway itself. We don't quote a fixed total time because causeway queue times vary by day — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ٥٠ كم فقط، معظمها عبور الجسر نفسه. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار على الجسر تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is roughly 50 km if you're headed to Khobar, which sits closest to the causeway, or around 70 km for Dammam itself — the King Fahd Causeway, a 25 km toll bridge, makes up a significant part of either trip, not nearly all of it. We don't quote a fixed total time because causeway queue times vary by day — we'll discuss realistic timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ٥٠ كم إذا كانت وجهتك الخبر القريبة من الجسر، أو نحو ٧٠ كم للدمام نفسها — ويمثل جسر الملك فهد، البالغ طوله ٢٥ كم، جزءاً كبيراً من أي من الرحلتين وليس كلها. لا نحدد وقتاً إجمالياً ثابتاً لأن أوقات الانتظار على الجسر تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
