@@ -4,10 +4,37 @@
  * scratch around the outbound-from-Dubai experience: pickup in Dubai, UAE
  * exit formalities before Saudi entry formalities (the opposite order to
  * the Riyadh-origin page), then the drive across Saudi Arabia into Riyadh.
- * Distance mirrors riyadhToDubaiPageData.ts (~1,230 km) because it's the
- * same road — not a new or invented figure. No pricing/duration data
- * exists for this route in pricingData.ts, so no fare or guaranteed time
- * is stated anywhere.
+ * No pricing/duration data exists for this route in pricingData.ts, so no
+ * fare or guaranteed time is stated anywhere.
+ *
+ * IMPORTANT — scope of facts used here:
+ * - The road distance (~1,000 km) was independently re-verified 2026-10-24
+ *   specifically for the Dubai->Riyadh direction — NOT copied from
+ *   riyadh-to-dubai without checking. Sources: a dedicated Saudi-UAE
+ *   road-trip guide (propertyfinder.ae, "nearly 1,000 km," via Al Ghuwaifat/
+ *   Al Batha); SAPTCO bus distance (996 km); a chauffeur-service estimate
+ *   (9-10h driving); a forum driver's first-hand report (~9h33m driving).
+ *   These independently converge on the same range already used on
+ *   riyadh-to-dubai (~980-1,030 km from that page's own separate
+ *   verification) — consistent because it is physically the same road, not
+ *   because one page's figure was assumed from the other. One Rome2Rio
+ *   result (1,332 km) was again a false match against "Duba," an unrelated
+ *   Saudi Red Sea city — same outlier identified and excluded on
+ *   riyadh-to-dubai, correctly excluded here too. This replaces the
+ *   previous ~1,230 km figure, which was a stale mirror of riyadh-to-
+ *   dubai's own earlier, already-corrected error — never updated here.
+ * - Border crossing named explicitly: Al Batha (Saudi side) / Al Ghuwaifat
+ *   (UAE side), operating 24 hours. A "2-3 hours during Eid/peak periods"
+ *   border-delay figure was initially added here but removed 2026-10-24
+ *   after targeted re-verification found no source actually supporting it
+ *   for THIS crossing — the only passenger-specific source found (Abu Dhabi
+ *   Police, 2021) claims a 5-minute processing time, and the multi-hour
+ *   delay reports found are about historical commercial truck/cargo queues,
+ *   not passenger traffic. (That 2-3 hour figure IS genuinely sourced for
+ *   the separate Qatar-Saudi crossing used on other pages this session —
+ *   it does not transfer to this UAE-Saudi crossing.) Border time here is
+ *   now described only as variable and outside our control, with no
+ *   specific numeric estimate.
  */
 
 export type BText = { en: string; ar: string }
@@ -21,7 +48,7 @@ export const heroContent = {
 }
 
 export const quickFacts: { label: string; value: string }[] = [
-  { label: 'Approx. road distance', value: '~1,230 km' },
+  { label: 'Approx. road distance', value: '~1,000 km' },
   { label: 'Border', value: 'UAE ↔ Saudi Arabia land crossing' },
   { label: 'Vehicle options', value: 'Sedan, Hyundai Staria, GMC Yukon' },
   { label: 'Booking', value: 'WhatsApp, in advance' },
@@ -30,8 +57,8 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "This trip starts with pickup in Dubai — a hotel, residence or agreed location anywhere across the city — and heads out toward the Saudi–UAE land border. You'll clear UAE exit formalities first, then Saudi entry formalities on the other side, the reverse order to a trip that begins in Riyadh. From the border, it's still a substantial drive across the Kingdom before reaching Riyadh.",
-    "At roughly 1,230 km total, this is one of the longer routes we arrange, and we treat it that way: driving time alone runs well past twelve hours, and that's before the border itself, where processing time depends on the day, the season and how straightforward everyone's documentation is. We don't predict that part from here — we'll talk through realistic timing with you on WhatsApp once we know your travel date.",
+    "This trip starts with pickup in Dubai — a hotel, residence or agreed location anywhere across the city — and heads out toward the Saudi–UAE land border, crossed at Al Batha (Saudi side) / Al Ghuwaifat (UAE side). You'll clear UAE exit formalities first, then Saudi entry formalities on the other side, the reverse order to a trip that begins in Riyadh. From the border, it's still a substantial drive across the Kingdom before reaching Riyadh.",
+    "At roughly 1,000 km total, this is one of the longer routes we arrange, and we treat it that way: driving time alone runs roughly 9 to 10 hours, and that's before the border itself, where processing time varies by day and traffic conditions and can add meaningfully to the journey — this is outside our control, and we don't predict it from here. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
   ],
 }
 
@@ -53,7 +80,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying from Dubai to Riyadh',
   paragraphs: [
-    "Dubai and Riyadh are both major air hubs, and for most travelers flying remains the faster way to cover this distance — we'd rather say so plainly than oversell a 1,230 km drive that isn't right for everyone. A private car earns its place when the road itself serves a purpose: bringing more luggage than a flight comfortably allows, a family or group who'd rather stay together in one vehicle for the whole trip, or anyone making stops along the way rather than travelling point to point.",
+    "A private car earns its place when the road itself serves a purpose: bringing more luggage than a flight comfortably allows, a family or group who'd rather stay together in one vehicle for the whole trip, or anyone making stops along the way rather than travelling point to point.",
     "If a road trip from Dubai does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: one vehicle reserved for your group only, a pickup time in Dubai built around your own schedule, and no changing vehicles partway through — including at the border itself.",
   ],
 }

@@ -1306,8 +1306,8 @@ export const dubaiToRiyadhFaqs: FAQItem[] = [
   {
     q: { en: 'How long does the drive from Dubai to Riyadh take?', ar: 'كم تستغرق الرحلة بالسيارة من دبي إلى الرياض؟' },
     a: {
-      en: "The road distance is approximately 1,230 km. We don't quote a fixed total time because border-crossing duration varies by day — we'll discuss realistic timing with you based on your travel date.",
-      ar: 'تبلغ مسافة الطريق نحو ١,٢٣٠ كم. لا نحدد وقتاً إجمالياً ثابتاً لأن مدة عبور الحدود تختلف حسب اليوم — سنناقش معك التوقيت الواقعي بحسب تاريخ سفرك.',
+      en: "The road distance is approximately 1,000 km. Driving alone takes roughly 9-10 hours; border-crossing time at Al Batha/Al Ghuwaifat adds more on top, and varies by day and traffic conditions — it's outside our control, so we don't guarantee it, and we'll discuss realistic total timing with you based on your travel date.",
+      ar: 'تبلغ مسافة الطريق نحو ١,٠٠٠ كم. تستغرق القيادة وحدها نحو ٩-١٠ ساعات؛ ويضيف عبور حدود الباطحة/الغويفات وقتاً إضافياً، ويختلف حسب اليوم وحالة حركة المرور — وهو أمر خارج عن سيطرتنا، لذا لا نضمنه، وسنناقش معك التوقيت الإجمالي الواقعي بحسب تاريخ سفرك.',
     },
   },
   {
