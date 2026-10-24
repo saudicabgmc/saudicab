@@ -201,12 +201,11 @@ export const destinations: Destination[] = [
       { name: { en: 'AlUla Old Town', ar: 'بلدة العلا القديمة' }, desc: { en: 'A historic mudbrick settlement inhabited for centuries, now open to visitors.', ar: 'مستوطنة طينية تاريخية كانت مأهولة لقرون، وهي اليوم مفتوحة للزوار.' } },
     ],
     goodToKnow: { en: "AlUla is well outside our regular service area. If you'd like to arrange a long-distance private transfer there, contact us on WhatsApp to check feasibility and routing before booking.", ar: 'تقع العلا خارج نطاق خدمتنا المعتاد. إذا كنت ترغب في ترتيب رحلة خاصة طويلة إليها، تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ ومسار الرحلة قبل الحجز.' },
-    status: 'serviced',
+    status: 'inquire',
     heroImage: '/location/alula.webp',
     gradient: ['#5c3a2e', '#a85c3f'],
     icon: 'Map',
     serviceLinks: [],
-    whatsappCta: true,
   },
   {
     id: 'abha',
@@ -223,12 +222,11 @@ export const destinations: Destination[] = [
       { name: { en: 'Abha Lake Park', ar: 'حديقة بحيرة أبها' }, desc: { en: 'A lakeside park in the city, popular in the cooler months.', ar: 'حديقة على بحيرة في المدينة، شائعة في الأشهر الأكثر برودة.' } },
     ],
     goodToKnow: { en: "Abha is well outside our regular service area. If you'd like to arrange a long-distance private transfer there, contact us on WhatsApp to check feasibility and routing before booking.", ar: 'تقع أبها خارج نطاق خدمتنا المعتاد. إذا كنت ترغب في ترتيب رحلة خاصة طويلة إليها، تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ ومسار الرحلة قبل الحجز.' },
-    status: 'serviced',
+    status: 'inquire',
     heroImage: '/location/abha.webp',
     gradient: ['#1c3d2a', '#2f6b45'],
     icon: 'Mountain',
     serviceLinks: [],
-    whatsappCta: true,
   },
   {
     id: 'doha',
@@ -376,13 +374,12 @@ export const destinations: Destination[] = [
       { name: { en: 'Wadi Rum', ar: 'وادي رم' }, desc: { en: "A vast desert valley of sandstone mountains, nicknamed the 'Valley of the Moon.'", ar: 'وادٍ صحراوي شاسع من الجبال الرملية، يُلقَّب بـ"وادي القمر".' } },
       { name: { en: 'Amman Citadel & Roman Theatre', ar: 'قلعة عمان والمدرج الروماني' }, desc: { en: "A hilltop citadel and a well-preserved Roman amphitheater in downtown Amman.", ar: 'قلعة فوق تلة ومدرج روماني محفوظ جيداً في وسط عمّان.' } },
     ],
-    goodToKnow: { en: "Direct cross-border transport to Jordan is available. Contact us on WhatsApp to confirm your itinerary, vehicle and fare before booking.", ar: 'يتوفر نقل مباشر عبر الحدود إلى الأردن. تواصل معنا عبر واتساب لتأكيد برنامج رحلتك والسيارة والسعر قبل الحجز.' },
-    status: 'serviced',
+    goodToKnow: { en: "Jordan is a long international cross-border trip and well outside our regular service area. We don't advertise a fixed route or price for it, but you're welcome to contact us on WhatsApp to check feasibility, documentation and routing before booking.", ar: 'الأردن رحلة دولية طويلة عبر الحدود وتقع خارج نطاق خدمتنا المعتاد. لا نعرض خطاً أو سعراً ثابتاً لها، لكن يمكنك التواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ والمستندات المطلوبة ومسار الرحلة قبل الحجز.' },
+    status: 'inquire',
     heroImage: '/location/jordan.webp',
     gradient: ['#5c2e1f', '#9c4a2e'],
     icon: 'Map',
     serviceLinks: [],
-    whatsappCta: true,
   },
 ]
 
@@ -391,7 +388,7 @@ export interface DestinationFaq { q: BText; a: BText }
 export const destinationFaqs: DestinationFaq[] = [
   {
     q: { en: 'Which destinations can I book a private transfer to right now?', ar: 'إلى أي الوجهات يمكنني حجز توصيل خاص الآن؟' },
-    a: { en: 'Makkah, Madinah, Jeddah, Taif, Riyadh (including day trips to nearby Diriyah) and Dammam all have active Saudi Cabs GMC service. AlUla and Abha are outside our regular coverage — contact us on WhatsApp to check feasibility before booking.', ar: 'تتوفر خدمة Saudi Cabs GMC النشطة في مكة والمدينة وجدة والطائف والرياض (بما يشمل رحلات نهارية إلى الدرعية القريبة) والدمام. أما العلا وأبها فهما خارج نطاق تغطيتنا المعتاد — تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ قبل الحجز.' },
+    a: { en: 'Makkah, Madinah, Jeddah, Taif, Riyadh (including day trips to nearby Diriyah) and Dammam all have active Saudi Cabs GMC service within Saudi Arabia, and we also run dedicated routes to Doha, Dubai, Abu Dhabi, Manama, Kuwait City and Muscat. AlUla, Abha and Jordan are outside our regular coverage — contact us on WhatsApp to check feasibility before booking.', ar: 'تتوفر خدمة Saudi Cabs GMC النشطة داخل المملكة في مكة والمدينة وجدة والطائف والرياض (بما يشمل رحلات نهارية إلى الدرعية القريبة) والدمام، كما نقدم خطوطاً مخصصة إلى الدوحة ودبي وأبوظبي والمنامة ومدينة الكويت ومسقط. أما العلا وأبها والأردن فهي خارج نطاق تغطيتنا المعتاد — تواصل معنا عبر واتساب للتحقق من إمكانية التنفيذ قبل الحجز.' },
   },
   {
     q: { en: 'Is Makkah open to non-Muslim visitors?', ar: 'هل مكة المكرمة مفتوحة للزوار غير المسلمين؟' },

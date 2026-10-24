@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { destinations } from '@/lib/touristDestinationsData'
 
 const PAGE_URL = 'https://saudicabsgmc.com/saudi-arabia-tourist-destinations'
 const OG_IMAGE = { url: 'https://saudicabsgmc.com/hero/hero-fallback-saudi-cabs-gmc.webp', width: 800, height: 533, alt: 'Saudi Cabs GMC — tourist destinations in Saudi Arabia', type: 'image/webp' }
@@ -32,25 +33,17 @@ export const metadata: Metadata = {
   },
 }
 
-const DESTINATIONS = [
-  { name: 'Makkah', description: 'Islam\'s holiest site, home to Al-Masjid al-Haram and the Kaaba.', url: 'https://saudicabsgmc.com/makkah-ziyarat-tour' },
-  { name: 'Madinah', description: "The Prophet's City, home to Masjid an-Nabawi.", url: 'https://saudicabsgmc.com/madinah-ziyarat-tour' },
-  { name: 'Jeddah', description: 'Red Sea coastal city with the UNESCO-listed Al-Balad old town and the Corniche.', url: 'https://saudicabsgmc.com/jeddah-taxi-service' },
-  { name: 'Taif', description: 'Hejaz mountain retreat known for rose farms and Shubra Palace.', url: 'https://saudicabsgmc.com/taif-taxi-service' },
-  { name: 'Riyadh', description: 'Modern Saudi capital, home to Masmak Fortress and the National Museum.', url: 'https://saudicabsgmc.com/riyadh-taxi-service' },
-  { name: 'Diriyah', description: 'UNESCO World Heritage At-Turaif District, birthplace of the first Saudi state.', url: 'https://saudicabsgmc.com/riyadh-taxi-service' },
-  { name: 'Dammam', description: 'Gulf coast hub with the Dammam Corniche and King Fahd Causeway.', url: 'https://saudicabsgmc.com/dammam-taxi-service' },
-  { name: 'AlUla', description: "Home to Hegra, Saudi Arabia's first UNESCO World Heritage Site.", url: PAGE_URL },
-  { name: 'Abha', description: 'Green highland city in the Asir Mountains.', url: PAGE_URL },
-  { name: 'Doha', description: "Qatar's modern capital, with Souq Waqif and the Museum of Islamic Art.", url: 'https://saudicabsgmc.com/riyadh-to-doha' },
-  { name: 'Dubai', description: 'A global UAE hub known for Burj Khalifa and Palm Jumeirah.', url: 'https://saudicabsgmc.com/riyadh-to-dubai' },
-  { name: 'Abu Dhabi', description: 'The UAE capital, home to Sheikh Zayed Grand Mosque and Louvre Abu Dhabi.', url: 'https://saudicabsgmc.com/riyadh-to-abu-dhabi' },
-  { name: 'Manama', description: "Bahrain's island capital, with the UNESCO-listed Bahrain Fort.", url: 'https://saudicabsgmc.com/riyadh-to-bahrain' },
-  { name: 'Kuwait City', description: "Kuwait's seafront capital, home to the iconic Kuwait Towers.", url: 'https://saudicabsgmc.com/riyadh-to-kuwait' },
-  { name: 'Muscat', description: "Oman's capital, with Sultan Qaboos Grand Mosque and the Mutrah Corniche.", url: 'https://saudicabsgmc.com/riyadh-to-muscat' },
-  { name: 'Jordan', description: 'Home to Petra and Wadi Rum, reached by a confirmed cross-border private transfer.', url: PAGE_URL },
-]
-
+/*
+ * The schema's destination list is derived directly from `destinations`
+ * (the same data the page's cards render) rather than a separately
+ * hand-maintained array, so the two can never drift apart. They
+ * previously did: this file's own list described AlUla/Abha/Jordan with
+ * placeholder self-links and, for Jordan, claimed "a confirmed
+ * cross-border private transfer" — an overclaim with no supporting
+ * evidence anywhere else in the codebase, now corrected at the source
+ * in touristDestinationsData.ts (status changed to 'inquire' for all
+ * three — fixed 2026-10-24).
+ */
 const collectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -60,14 +53,14 @@ const collectionSchema = {
   description: 'A traveler guide to Saudi Arabia\'s top destinations and nearby countries, with private transport links where Saudi Cabs GMC service genuinely reaches.',
   about: {
     '@type': 'ItemList',
-    itemListElement: DESTINATIONS.map((d, i) => ({
+    itemListElement: destinations.map((d, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
         '@type': 'TouristDestination',
-        name: d.name,
-        description: d.description,
-        url: d.url,
+        name: d.name.en,
+        description: d.tagline.en,
+        url: d.serviceLinks[0] ? `https://saudicabsgmc.com${d.serviceLinks[0].href}` : PAGE_URL,
       },
     })),
   },
