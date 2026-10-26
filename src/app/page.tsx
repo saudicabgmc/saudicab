@@ -29,12 +29,20 @@ export default function Home() {
     <main>
       <link rel="preload" as="image" href="/hero/makkah-hero-saudi-cabs-gmc.webp" fetchPriority="high" />
 
-      {/* ── Sticky mobile booking CTA ── */}
-      <div style={{
+      {/* ── Sticky mobile booking CTA ──
+          className="mobile-only" is load-bearing here, not decorative: it hides
+          this bar on desktop (globals.css: `.mobile-only { display: none }` by
+          default, `display: flex !important` only at <=768px). The inline
+          `display` property is deliberately omitted — an inline display value
+          would outrank the non-!important desktop rule in the CSS cascade and
+          make this bar show on desktop despite the class, which is exactly the
+          bug being fixed here. The mobile !important rule supplies `flex` the
+          only time this bar is actually visible, so layout is unchanged. */}
+      <div className="mobile-only" style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 900,
         background: 'linear-gradient(135deg, #0B3D2E, #0F5132)',
         padding: '10px 20px calc(10px + env(safe-area-inset-bottom))',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+        alignItems: 'center', justifyContent: 'space-between', gap: '12px',
         boxShadow: '0 -4px 24px rgba(0,0,0,0.22)',
       }}>
         <div style={{ color: 'white', flex: 1 }}>

@@ -589,6 +589,11 @@ select.form-input {
   .form-grid-2 { grid-template-columns: 1fr; }
   .desktop-only { display: none !important; }
   .mobile-only { display: flex !important; }
+  /* WhatsAppFloat: show its label on mobile without relying on :hover (which
+     never fires on touch). Desktop hover-expand behavior is untouched since
+     this rule only applies at this breakpoint. */
+  .wa-float { max-width: 210px !important; padding: 14px 20px 14px 16px !important; }
+  .wa-float-label { opacity: 1 !important; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }

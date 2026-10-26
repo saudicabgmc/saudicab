@@ -22,6 +22,7 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label={label}
+      className="wa-float"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -48,7 +49,7 @@ export default function WhatsAppFloat() {
       title={label}
     >
       <MessageCircle size={22} strokeWidth={2.2} style={{ flexShrink: 0 }} />
-      <span style={{ opacity: hovered ? 1 : 0, transition: 'opacity 0.2s' }}>
+      <span className="wa-float-label" style={{ opacity: hovered ? 1 : 0, transition: 'opacity 0.2s' }}>
         {label}
       </span>
     </a>
