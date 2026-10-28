@@ -203,18 +203,6 @@ export default function PricingSection({ routes, heading }: Props) {
                             {tx(rate.name)}
                           </div>
                           <div style={{
-                            fontSize: '1.4rem', fontWeight: '900',
-                            color: isGmc ? '#C9A227' : 'var(--brand-green)', lineHeight: 1,
-                          }}>
-                            {rate.price}
-                          </div>
-                          <div style={{
-                            fontSize: '0.72rem', color: isGmc ? '#9A7B1A' : 'var(--muted-foreground)',
-                            marginTop: '2px', fontWeight: '700',
-                          }}>
-                            SAR
-                          </div>
-                          <div style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             gap: '3px', fontSize: '0.7rem', color: isGmc ? '#9A7B1A' : 'var(--muted-foreground)',
                             marginTop: '4px',
@@ -243,8 +231,8 @@ export default function PricingSection({ routes, heading }: Props) {
           fontSize: '0.84rem', color: 'var(--muted-foreground)', lineHeight: 1.75,
         }}>
           {isAr
-            ? '✅ كل سعر معروض هو سعر ثابت لهذا المسار والسيارة المحددة. التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير الوجهة قد تؤثر على السعر النهائي — ويتم تأكيد أي تغيير قبل الرحلة.'
-            : '✅ Each listed fare is a fixed fare for the specified route and vehicle. Extra stops, waiting time, special requests, or route changes may affect the final fare — any changes are confirmed before the trip.'}
+            ? '✅ أسعارنا ثابتة لكل مسار وسيارة — لا عداد ولا رسوم مخفية. التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير الوجهة قد تؤثر على السعر النهائي، ويتم تأكيد أي تغيير قبل الرحلة. تواصل معنا عبر واتساب لمعرفة السعر الحالي لمسارك.'
+            : '✅ Our fares are fixed for each route and vehicle — no meter, no hidden fees. Extra stops, waiting time, special requests, or route changes may affect the final fare, and any changes are confirmed before the trip. Contact us on WhatsApp for your route\'s current rate.'}
         </div>
       </div>
     </section>

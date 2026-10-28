@@ -1,6 +1,5 @@
 ﻿import { Metadata } from 'next'
 import GuidePageTemplate from '@/components/GuidePageTemplate'
-import { getPricing } from '@/lib/pricingData'
 
 export const metadata: Metadata = {
   title: 'Jeddah Airport Transfer Guide 2026 | KAIA to Makkah & Madinah',
@@ -52,12 +51,10 @@ export const metadata: Metadata = {
  *   service feature. Added an explicit note that the exact terminal and
  *   meeting point must be confirmed with the passenger, since KAIA has
  *   multiple terminals.
- * - Pricing: Jeddah Airport -> Makkah/Madinah fares are read directly
- *   from pricingData.ts (ids 'jed-makkah', 'jed-madinah') via
- *   getPricing(), not hardcoded here, so this table can never drift from
- *   the project's single pricing source. Taif and Jeddah-city transfers
- *   are NOT priced here (no verified pricing entry exists for either) —
- *   visitors are linked to the existing dedicated pages instead.
+ * - Visible prices were removed sitewide (2026-10-28): this page previously
+ *   showed a "Fixed Fares" table for Jeddah Airport -> Makkah/Madinah,
+ *   sourced from pricingData.ts via getPricing(). That table has been
+ *   removed from the UI; pricingData.ts itself was not touched.
  */
 const faqs = [
   {
@@ -91,8 +88,6 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 }
-
-const airportPricing = getPricing('jed-makkah', 'jed-madinah')
 
 const waMessage = `Hello, I'd like to book an airport transfer from Jeddah Airport (KAIA).
 Flight number:
@@ -163,36 +158,6 @@ export default function JeddahAirportGuide() {
         </div>
         <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', marginTop: '-12px', marginBottom: '24px' }}>
           Travel times and distances are approximate and may vary depending on traffic, route and exact pickup/drop-off location.
-        </p>
-
-        <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '32px 0 16px' }}>Fixed Fares — Jeddah Airport Transfers</h2>
-        <div style={{ overflowX: 'auto', marginBottom: '12px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-            <thead>
-              <tr style={{ background: 'var(--primary)', color: 'var(--foreground)' }}>
-                <th style={{ padding: '10px 14px', textAlign: 'left', fontWeight: '800', borderRight: '1px solid rgba(0,0,0,0.12)' }}>Route</th>
-                {airportPricing[0]?.rates.map(r => (
-                  <th key={r.key} style={{ padding: '10px 10px', textAlign: 'center', fontWeight: '800', borderRight: '1px solid rgba(0,0,0,0.12)' }}>{r.name.en}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {airportPricing.map((route, i) => (
-                <tr key={route.id} style={{ background: i % 2 === 0 ? 'white' : 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
-                  <td style={{ padding: '10px 14px', fontWeight: '700', borderRight: '1px solid var(--border)' }}>{route.from.en} → {route.to.en}</td>
-                  {route.rates.map(r => (
-                    <td key={r.key} style={{ padding: '10px 10px', textAlign: 'center', color: 'var(--primary)', fontWeight: '700', borderRight: '1px solid var(--border)' }}>{r.price} SAR</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', marginBottom: '16px' }}>
-          Fares are per vehicle, not per passenger, and are confirmed before booking. Extra stops or special requirements are confirmed separately.
-        </p>
-        <p style={{ fontSize: '0.9rem', marginBottom: '24px' }}>
-          Need a transfer to Taif or Jeddah city instead? We don't list a fixed rate for those on this page — see <a href="/jeddah-to-taif" style={{ color: 'var(--primary)', fontWeight: '700' }}>Jeddah to Taif private transfer</a> or <a href="/jeddah-taxi-service" style={{ color: 'var(--primary)', fontWeight: '700' }}>Jeddah Taxi Service</a> for current rates.
         </p>
 
         <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: '32px 0 12px' }}>How Airport Pickup Works</h2>

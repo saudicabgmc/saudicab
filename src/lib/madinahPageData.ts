@@ -297,8 +297,8 @@ export const pickupAreas = {
 /* ── How much does a taxi cost in Madinah? (stated once) ──────── */
 
 export const priceAnswer: BText = {
-  en: 'Fares depend on the route and vehicle. Madinah Airport to a Madinah hotel is currently listed from 230 SAR by Sedan, 260 SAR by Hyundai Staria and 380 SAR by GMC Yukon. Prices are per vehicle, not per person.',
-  ar: 'تعتمد الأسعار على المسار والسيارة. تبدأ أسعار مطار المدينة المنورة إلى فندق في المدينة من ٢٣٠ ريال بالسيدان، و٢٦٠ ريال بهيونداي ستاريا، و٣٨٠ ريال بـGMC يوكون. الأسعار للسيارة الواحدة وليست للفرد.',
+  en: 'Fares depend on the route and vehicle. Madinah Airport to a Madinah hotel has a fixed fare for Sedan, Hyundai Staria or GMC Yukon. Prices are per vehicle, not per person. Confirm the current rate on WhatsApp before booking.',
+  ar: 'تعتمد الأسعار على المسار والسيارة. لرحلة مطار المدينة المنورة إلى فندق في المدينة سعر ثابت لسيدان أو هيونداي ستاريا أو GMC يوكون. الأسعار للسيارة الواحدة وليست للفرد. أكّد السعر الحالي عبر واتساب قبل الحجز.',
 }
 
 /* ── Why choose Saudi Cabs GMC ─────────────────────────────────── */
@@ -389,8 +389,8 @@ export const aeoQA: AeoQA[] = [
   {
     q: { en: 'How much does Madinah Airport to hotel cost?', ar: 'كم تكلفة الرحلة من مطار المدينة المنورة إلى الفندق؟' },
     a: {
-      en: 'From 230 SAR by Sedan, 260 SAR by Hyundai Staria or 380 SAR by GMC Yukon, per vehicle.',
-      ar: 'من ٢٣٠ ريال بالسيدان، و٢٦٠ ريال بهيونداي ستاريا، و٣٨٠ ريال بـGMC يوكون، للسيارة الواحدة.',
+      en: 'The fare is fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. Confirm the current rate on WhatsApp before booking.',
+      ar: 'السعر ثابت للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. أكّد السعر الحالي عبر واتساب قبل الحجز.',
     },
   },
   {

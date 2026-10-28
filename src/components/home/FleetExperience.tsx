@@ -104,13 +104,12 @@ export default function FleetExperience() {
               </p>
 
               <div style={{ marginBottom: '22px' }}>
-                {prices.map(({ route, price }) => (
+                {prices.map(({ route }) => (
                   <div key={route.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '9px 0', borderBottom: '1px solid var(--border)', fontSize: '0.86rem' }}>
                     <span style={{ color: 'var(--muted-foreground)' }}>
                       {(isAr ? route.from.ar : route.from.en) && `${isAr ? route.from.ar : route.from.en} → `}
                       {isAr ? route.to.ar : route.to.en}
                     </span>
-                    <span style={{ fontWeight: '800', color: 'var(--primary)' }}>{price} SAR</span>
                   </div>
                 ))}
               </div>

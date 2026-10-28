@@ -57,8 +57,8 @@ export const homeFaqs: FAQItem[] = [
       ar: 'كم يكلف التاكسي من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'The fixed fare from Jeddah Airport to a Makkah hotel is 330 SAR for a Sedan, 380 SAR for a Hyundai Staria, and 530 SAR for a GMC Yukon — per vehicle, not per person. The journey takes approximately 55–90 minutes depending on traffic. Confirm the current rate on WhatsApp before booking.',
-      ar: 'السعر الثابت من مطار جدة إلى فندق في مكة المكرمة هو 330 ريال للسيدان، و380 ريال لهيونداي ستاريا، و530 ريال لـ GMC يوكون — للسيارة الواحدة وليس للفرد. تستغرق الرحلة من 55 إلى 90 دقيقة حسب حركة المرور. أكّد السعر الحالي عبر واتساب قبل الحجز.',
+      en: 'Saudi Cabs GMC offers a fixed fare from Jeddah Airport to a Makkah hotel, per vehicle, not per person — Sedan, Hyundai Staria, or GMC Yukon. The journey takes approximately 55–90 minutes depending on traffic. Confirm the current rate on WhatsApp before booking.',
+      ar: 'تقدم Saudi Cabs GMC سعراً ثابتاً من مطار جدة إلى فندق في مكة المكرمة، للسيارة الواحدة وليس للفرد — سيدان أو هيونداي ستاريا أو GMC يوكون. تستغرق الرحلة من 55 إلى 90 دقيقة حسب حركة المرور. أكّد السعر الحالي عبر واتساب قبل الحجز.',
     },
   },
   {
@@ -200,8 +200,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كم تبلغ تكلفة التاكسي من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'Fares are per vehicle, not per person. From Jeddah Airport to a Makkah hotel: Sedan 330 SAR, Hyundai Staria 380 SAR and GMC Yukon 530 SAR. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it. The drive usually takes about 55–90 minutes.',
-      ar: 'الأسعار للسيارة الواحدة وليس للفرد. من مطار جدة إلى فندق في مكة: سيدان 330 ريالاً، هيونداي ستاريا 380 ريالاً، وGMC يوكون 530 ريالاً. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه. تستغرق الرحلة عادةً من 55 إلى 90 دقيقة تقريباً.',
+      en: 'Fares are per vehicle, not per person, for Sedan, Hyundai Staria or GMC Yukon. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it. The drive usually takes about 55–90 minutes.',
+      ar: 'الأسعار للسيارة الواحدة وليس للفرد، لسيدان أو هيونداي ستاريا أو GMC يوكون. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه. تستغرق الرحلة عادةً من 55 إلى 90 دقيقة تقريباً.',
     },
   },
   {
@@ -270,8 +270,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'هل تقدمون جولات زيارات في مكة المكرمة؟',
     },
     a: {
-      en: 'Yes. A Makkah Ziyarat trip gives you a private driver and vehicle to visit historical Islamic sites for the duration you choose. Listed fares per vehicle: Sedan 250 SAR, Hyundai Staria 320 SAR and GMC Yukon 500 SAR. Confirm the sites and duration on WhatsApp before the trip.',
-      ar: 'نعم. تمنحك رحلة الزيارات في مكة سائقاً خاصاً وسيارة لزيارة المواقع الإسلامية التاريخية للمدة التي تختارها. الأسعار المعروضة للسيارة الواحدة: سيدان 250 ريالاً، هيونداي ستاريا 320 ريالاً، وGMC يوكون 500 ريال. أكّد المواقع والمدة عبر واتساب قبل الرحلة.',
+      en: 'Yes. A Makkah Ziyarat trip gives you a private driver and vehicle to visit historical Islamic sites for the duration you choose. Fares are per vehicle. Confirm the sites, duration and current rate on WhatsApp before the trip.',
+      ar: 'نعم. تمنحك رحلة الزيارات في مكة سائقاً خاصاً وسيارة لزيارة المواقع الإسلامية التاريخية للمدة التي تختارها. الأسعار للسيارة الواحدة. أكّد المواقع والمدة والسعر الحالي عبر واتساب قبل الرحلة.',
     },
   },
   {
@@ -330,8 +330,8 @@ export const makkahFaqs: FAQItem[] = [
       ar: 'كم تبلغ تكلفة التاكسي الخاص من مكة المكرمة إلى المدينة المنورة؟',
     },
     a: {
-      en: 'Fares are per vehicle, not per person: Sedan 350 SAR, Hyundai Staria 400 SAR and GMC Yukon 680 SAR. The journey takes approximately 4.5 to 5 hours. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it.',
-      ar: 'الأسعار للسيارة الواحدة وليس للفرد: سيدان 350 ريالاً، هيونداي ستاريا 400 ريال، وGMC يوكون 680 ريالاً. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه.',
+      en: 'Fares are per vehicle, not per person, for Sedan, Hyundai Staria or GMC Yukon. The journey takes approximately 4.5 to 5 hours. The final fare is confirmed on WhatsApp before your trip, and extra stops or route changes may affect it.',
+      ar: 'الأسعار للسيارة الواحدة وليس للفرد، لسيدان أو هيونداي ستاريا أو GMC يوكون. تستغرق الرحلة من 4.5 إلى 5 ساعات تقريباً. يُؤكَّد السعر النهائي عبر واتساب قبل رحلتك، وقد تؤثر التوقفات الإضافية أو تغيير المسار عليه.',
     },
   },
   {
@@ -473,8 +473,8 @@ export const madinahFaqs: FAQItem[] = [
       ar: 'كم تكلفة الرحلة من مطار المدينة المنورة إلى الفندق؟',
     },
     a: {
-      en: 'Madinah Airport to a Madinah hotel is currently listed from 230 SAR by Sedan, 260 SAR by Hyundai Staria and 380 SAR by GMC Yukon, per vehicle. The exact fare is confirmed on WhatsApp before you travel.',
-      ar: 'تبدأ أسعار الرحلة من مطار المدينة المنورة إلى فندق في المدينة من ٢٣٠ ريال بالسيدان، و٢٦٠ ريال بهيونداي ستاريا، و٣٨٠ ريال بـGMC يوكون، للسيارة الواحدة. يتم تأكيد السعر النهائي عبر واتساب قبل رحلتك.',
+      en: 'Madinah Airport to a Madinah hotel has a fixed fare per vehicle — Sedan, Hyundai Staria or GMC Yukon. The exact fare is confirmed on WhatsApp before you travel.',
+      ar: 'رحلة من مطار المدينة المنورة إلى فندق في المدينة لها سعر ثابت للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. يتم تأكيد السعر النهائي عبر واتساب قبل رحلتك.',
     },
   },
 ]
@@ -496,8 +496,8 @@ export const jeddahFaqs: FAQItem[] = [
       ar: 'كم سعر تاكسي خاص من مطار جدة إلى مكة المكرمة؟',
     },
     a: {
-      en: 'A private taxi from Jeddah Airport to a Makkah hotel is 330 SAR by Sedan, 380 SAR by Hyundai Staria or 530 SAR by GMC Yukon, per vehicle. The fare is confirmed on WhatsApp before you travel.',
-      ar: 'سعر التاكسي الخاص من مطار جدة إلى فندق في مكة المكرمة هو ٣٣٠ ريال بالسيدان، و٣٨٠ ريال بهيونداي ستاريا، و٥٣٠ ريال بـGMC يوكون، للسيارة الواحدة. يتم تأكيد السعر عبر واتساب قبل رحلتك.',
+      en: 'A private taxi from Jeddah Airport to a Makkah hotel has a fixed fare per vehicle — Sedan, Hyundai Staria or GMC Yukon. The fare is confirmed on WhatsApp before you travel.',
+      ar: 'التاكسي الخاص من مطار جدة إلى فندق في مكة المكرمة له سعر ثابت للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. يتم تأكيد السعر عبر واتساب قبل رحلتك.',
     },
   },
   {

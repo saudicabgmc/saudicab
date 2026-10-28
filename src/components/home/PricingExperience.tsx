@@ -26,13 +26,20 @@ export default function PricingExperience() {
     : `Hello, I'd like to inquire about the price for ${routeLabel(selected, 'en')}`
   const waUrl = `https://wa.me/923097811785?text=${encodeURIComponent(waMsg)}`
 
+  const waUrlFor = (r: typeof selected) => {
+    const msg = isAr
+      ? `السلام عليكم، أريد الاستفسار عن سعر ${routeLabel(r, 'ar')}`
+      : `Hello, I'd like to inquire about the price for ${routeLabel(r, 'en')}`
+    return `https://wa.me/923097811785?text=${encodeURIComponent(msg)}`
+  }
+
   return (
     <section id="pricing" className="page-section" style={{ backgroundColor: 'var(--background)', scrollMarginTop: '80px' }}>
       <div className="container">
         <div className="section-header">
           <span className="section-tag">{isAr ? 'الأسعار' : 'Pricing'}</span>
           <h2 className="section-title">
-            {isAr ? <>اعرف <span style={{ color: 'var(--primary)' }}>السعر</span> قبل أن تسافر.</> : <>Know the <span style={{ color: 'var(--primary)' }}>price</span> before you travel.</>}
+            {isAr ? <>سعر <span style={{ color: 'var(--primary)' }}>ثابت</span> مؤكد قبل أن تسافر.</> : <>A fixed <span style={{ color: 'var(--primary)' }}>fare</span>, confirmed before you travel.</>}
           </h2>
           <div className="gold-divider" />
           <p className="section-subtitle">
@@ -49,9 +56,7 @@ export default function PricingExperience() {
               <thead>
                 <tr style={{ background: 'linear-gradient(135deg, #0B3D2E, #0F5132)', color: 'white' }}>
                   <th scope="col" style={{ padding: '14px 18px', textAlign: isAr ? 'right' : 'left', fontWeight: '800' }}>{isAr ? 'المسار' : 'Route'}</th>
-                  {[{ en: 'Sedan', ar: 'سيدان' }, { en: 'Staria', ar: 'ستاريا' }, { en: 'GMC Yukon', ar: 'GMC يوكون' }].map(veh => (
-                    <th scope="col" key={veh.en} style={{ padding: '14px 18px', textAlign: 'center', fontWeight: '800' }}>{isAr ? veh.ar : veh.en}</th>
-                  ))}
+                  <th scope="col" style={{ padding: '14px 18px', textAlign: 'center', fontWeight: '800' }}>{isAr ? 'السعر' : 'Rate'}</th>
                 </tr>
               </thead>
               <tbody>
@@ -60,12 +65,11 @@ export default function PricingExperience() {
                     <th scope="row" style={{ padding: '13px 18px', fontWeight: '700', color: 'var(--foreground)', textAlign: isAr ? 'right' : 'left' }}>
                       {routeLabel(r, isAr ? 'ar' : 'en')}
                     </th>
-                    {(['sedan', 'staria', 'gmc'] as const).map(key => (
-                      <td key={key} style={{ padding: '13px 18px', textAlign: 'center' }}>
-                        <span style={{ fontWeight: '900', fontSize: '1rem', color: 'var(--primary)' }}>{r.rates.find(x => x.key === key)!.price}</span>
-                        <span style={{ fontSize: '0.72rem', color: 'var(--muted-foreground)', marginInlineStart: '3px' }}>SAR</span>
-                      </td>
-                    ))}
+                    <td style={{ padding: '13px 18px', textAlign: 'center' }}>
+                      <a href={waUrlFor(r)} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.84rem', textDecoration: 'none' }}>
+                        {isAr ? 'اطلب السعر عبر واتساب' : 'Request rate on WhatsApp'}
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -105,7 +109,7 @@ export default function PricingExperience() {
               return (
                 <div key={key} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid var(--border)' }}>
                   <span style={{ fontWeight: '700', fontSize: '0.92rem' }}>{isAr ? rate.name.ar : rate.name.en}</span>
-                  <span style={{ fontWeight: '900', fontSize: '1.15rem', color: 'var(--primary)' }}>{rate.price} <span style={{ fontSize: '0.7rem', fontWeight: '700', color: 'var(--muted-foreground)' }}>SAR</span></span>
+                  <span style={{ fontWeight: '700', fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>{isAr ? 'سعر عند الطلب' : 'Rate on request'}</span>
                 </div>
               )
             })}
@@ -121,7 +125,7 @@ export default function PricingExperience() {
             {isAr ? 'الدفع نقداً أو تحويل بنكي بعد الرحلة. إلغاء مجاني حتى ٣ ساعات قبل الاستلام.' : 'Pay by cash or bank transfer after the trip. Free cancellation up to 3 hours before pickup.'}
           </p>
           <Link href="/taxi-prices-saudi-arabia" style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.88rem' }}>
-            {isAr ? 'عرض جميع المسارات والأسعار ←' : 'See all routes and prices →'}
+            {isAr ? 'عرض جميع المسارات ←' : 'See all routes →'}
           </Link>
         </div>
       </div>

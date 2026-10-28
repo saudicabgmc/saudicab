@@ -165,8 +165,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           '@type': 'Offer',
           name: 'Sedan Taxi – Toyota Camry',
           description: 'Comfortable sedan taxi for up to 4 passengers. Suitable for airport transfers, city rides, and intercity routes across Saudi Arabia.',
-          priceCurrency: 'SAR',
-          priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'SAR', minPrice: 230, maxPrice: 1030 },
           availability: 'https://schema.org/InStock',
           itemOffered: {
             '@type': 'Service',
@@ -178,8 +176,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           '@type': 'Offer',
           name: 'Hyundai Staria Van – 7 Seats',
           description: 'Spacious 7-seat Hyundai Staria van for families, groups, and pilgrims. Generous luggage space — ideal for Hajj and Umrah transport.',
-          priceCurrency: 'SAR',
-          priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'SAR', minPrice: 260, maxPrice: 1030 },
           availability: 'https://schema.org/InStock',
           itemOffered: {
             '@type': 'Service',
@@ -191,8 +187,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           '@type': 'Offer',
           name: 'GMC Yukon VIP – Luxury SUV',
           description: 'VIP GMC Yukon luxury SUV for up to 7 passengers. Features built-in cooler, giant touchscreen, and premium leather seats.',
-          priceCurrency: 'SAR',
-          priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'SAR', minPrice: 380, maxPrice: 1030 },
           availability: 'https://schema.org/InStock',
           itemOffered: {
             '@type': 'Service',

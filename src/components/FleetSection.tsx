@@ -8,7 +8,7 @@ type BText = { ar: string; en: string }
 interface FleetSectionProps {
   pricing: PricingRoute[]
   cityName?: BText
-  /** Show the "From X SAR*" badge. Turn off where fares are route-dependent and a single "from" price would mislead. */
+  /** No longer renders anything — visible prices were removed sitewide. Kept so existing callers don't need updating. */
   showFromPrice?: boolean
   /** Optional one-line "who is this vehicle for" text per vehicle. */
   bestFor?: Partial<Record<'sedan' | 'staria' | 'gmc', BText>>
@@ -79,7 +79,6 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
         <div className="fleet-3col">
           {CARS.map(car => {
             const routes = pricing.filter(r => r.rates.some(rt => rt.key === car.key))
-            const minPrice = Math.min(...routes.map(r => r.rates.find(rt => rt.key === car.key)!.price))
 
             const waMsg = isAr
               ? `السلام عليكم، أريد حجز ${car.nameAr}${cityName ? ` في ${cityName.ar}` : ''}`
@@ -125,17 +124,6 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
                   }}>
                     {isAr ? car.badge.ar : car.badge.en}
                   </div>
-                  {/* Starting from price */}
-                  {showFromPrice && routes.length > 0 && (
-                    <div style={{
-                      position: 'absolute', bottom: '12px', right: isAr ? 'auto' : '12px', left: isAr ? '12px' : 'auto',
-                      background: 'rgba(0,0,0,0.75)', color: 'white',
-                      padding: '4px 12px', borderRadius: '20px',
-                      fontSize: '0.78rem', fontWeight: '700',
-                    }}>
-                      {isAr ? `من ${minPrice} ريال*` : `From ${minPrice} SAR*`}
-                    </div>
-                  )}
                 </div>
 
                 {/* Card body */}
@@ -163,7 +151,6 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
                   {/* Price rows */}
                   <div style={{ flex: 1 }}>
                     {routes.map(route => {
-                      const rate = route.rates.find(r => r.key === car.key)!
                       return (
                         <div key={route.id} style={{
                           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -171,7 +158,7 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
                           borderBottom: '1px solid var(--border)',
                           fontSize: '0.82rem',
                         }}>
-                          <span style={{ color: 'var(--muted-foreground)', maxWidth: '68%', lineHeight: '1.3' }}>
+                          <span style={{ color: 'var(--muted-foreground)', lineHeight: '1.3' }}>
                             {(isAr ? route.from.ar : route.from.en) && (
                               <>
                                 {isAr ? route.from.ar : route.from.en}
@@ -179,9 +166,6 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
                               </>
                             )}
                             {isAr ? route.to.ar : route.to.en}
-                          </span>
-                          <span style={{ fontWeight: '800', fontSize: '0.95rem', color: 'var(--primary)', whiteSpace: 'nowrap' }}>
-                            {rate.price} <span style={{ fontSize: '0.7rem', fontWeight: '600', color: 'var(--muted-foreground)' }}>SAR</span>
                           </span>
                         </div>
                       )
@@ -217,13 +201,9 @@ export default function FleetSection({ pricing, cityName, showFromPrice = true, 
             : '✅ Route-based pricing · Instant WhatsApp reply · No advance payment · Available 24/7'}
         </p>
         <p style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>
-          {showFromPrice
-            ? (isAr
-              ? '* السعر الابتدائي المعروض للمسار الأقل تكلفة. الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
-              : '*Starting fare shown for the lowest-cost route. Prices are in SAR per vehicle, not per person. Final price depends on the selected route and trip details.')
-            : (isAr
-              ? 'الأسعار بالريال السعودي للسيارة الواحدة وليس للفرد. السعر النهائي يعتمد على المسار وتفاصيل الرحلة المختارة.'
-              : 'Prices are in SAR per vehicle, not per person. The final price depends on the selected route and trip details.')}
+          {isAr
+            ? 'الأجرة للسيارة الواحدة وليس للفرد، وتعتمد على المسار وتفاصيل الرحلة. تواصل معنا عبر واتساب للسعر الحالي.'
+            : 'Fares are per vehicle, not per person, and depend on the selected route and trip details. Contact us on WhatsApp for the current rate.'}
         </p>
 
       </div>

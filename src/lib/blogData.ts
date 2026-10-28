@@ -1,17 +1,8 @@
-﻿import { getPricing } from '@/lib/pricingData';
-
-// Makkah hotel -> Jeddah Airport fares, read from the single pricing source so the blog can't drift.
-const makkahJedFares = Object.fromEntries(
-  getPricing('makkah-jed')[0].rates.map(r => [r.key, r.price])
-) as Record<'sedan' | 'staria' | 'gmc', number>;
-
-// Madinah Airport <-> Madinah hotel fares, same reasoning.
-const madHotelFares = Object.fromEntries(
-  getPricing('mad-hotel')[0].rates.map(r => [r.key, r.price])
-) as Record<'sedan' | 'staria' | 'gmc', number>;
-const hotelMadFares = Object.fromEntries(
-  getPricing('hotel-mad')[0].rates.map(r => [r.key, r.price])
-) as Record<'sedan' | 'staria' | 'gmc', number>;
+﻿// Visible prices were removed sitewide (2026-10-28). This file previously
+// computed makkahJedFares/madHotelFares/hotelMadFares from pricingData.ts
+// via getPricing() and interpolated specific SAR amounts into several blog
+// posts below. Those numbers have been removed from the rendered text, so
+// the now-unused computed fares and this import were removed too.
 
 export type BlogCategory =
   | 'Hajj & Umrah'
@@ -64,8 +55,8 @@ export const blogPosts: BlogPost[] = [
 <p style="margin-bottom:1rem;">The Haramain Train runs between Jeddah and Makkah in around 55 minutes. It is modern, air-conditioned, and runs several times a day.</p>
 <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1rem;">
   <li style="margin-bottom:0.5rem;"><strong>Journey time:</strong> ~55 minutes Jeddah Station to Makkah Station</li>
-  <li style="margin-bottom:0.5rem;"><strong>Cost:</strong> SAR 45–100 depending on class</li>
-  <li style="margin-bottom:0.5rem;"><strong>Problem 1:</strong> The Jeddah train station is NOT at the airport — you need a separate taxi to reach it (~20 min, SAR 40–60)</li>
+  <li style="margin-bottom:0.5rem;"><strong>Cost:</strong> Varies by ticket class</li>
+  <li style="margin-bottom:0.5rem;"><strong>Problem 1:</strong> The Jeddah train station is NOT at the airport — you need a separate taxi to reach it (~20 min)</li>
   <li style="margin-bottom:0.5rem;"><strong>Problem 2:</strong> Makkah Train Station is in Al-Rusayfah area — still need another taxi to your hotel</li>
   <li style="margin-bottom:0.5rem;"><strong>Problem 3:</strong> Tickets sell out weeks in advance during Ramadan and Hajj season</li>
   <li style="margin-bottom:0.5rem;"><strong>Problem 4:</strong> Managing heavy luggage on platforms and in carriages is exhausting</li>
@@ -574,7 +565,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a> (7 seats):</strong> Mid-range pricing, more space for families and luggage</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon</a> (7 seats, VIP):</strong> The premium option — leather seats, extra comfort for long drives</li>
 </ul>
-<p style="margin-bottom:1rem;">For example, <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah</a> runs 330 SAR in the sedan, 380 SAR in the Staria, and 530 SAR in the GMC Yukon — the route is identical, only the vehicle changes the price.</p>
+<p style="margin-bottom:1rem;">For example, on <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">Jeddah Airport to Makkah</a>, the sedan, Staria and GMC Yukon each carry a different fare for the identical route — only the vehicle changes the price.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. Distance Matters More Than Traffic</h2>
 <p style="margin-bottom:1rem;">Because the price is fixed before departure, traffic, waiting time, and time of day don't change what you pay. What does change the price is the actual distance of the route:</p>
@@ -596,7 +587,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How to Get an Exact Price</h2>
-<p style="margin-bottom:1rem;">Prices are updated from time to time, so the most reliable way to get today's exact rate for your route is to message Saudi Cabs GMC on WhatsApp with your pickup, destination, and preferred vehicle. You'll get a confirmed price back in minutes — no obligation, no meter, no hidden fees. See our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices Guide</a> for a full route-by-route breakdown.</p>`,
+<p style="margin-bottom:1rem;">Prices are updated from time to time, so the most reliable way to get today's exact rate for your route is to message Saudi Cabs GMC on WhatsApp with your pickup, destination, and preferred vehicle. You'll get a confirmed price back in minutes — no obligation, no meter, no hidden fees. See our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices Guide</a> for a full list of our routes.</p>`,
       ar: `<p style="margin-bottom:1rem;">"كم ستكون التكلفة؟" هو أول سؤال يطرحه تقريباً كل مسافر قبل حجز تاكسي في السعودية. مع Saudi Cabs GMC لا يوجد عداد ولا مفاجآت — يتم الاتفاق على السعر قبل بدء الرحلة. إليك بالضبط ما يحدد ذلك السعر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">1. نوع السيارة هو العامل الأكبر</h2>
@@ -606,7 +597,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a> (٧ مقاعد):</strong> سعر متوسط، مساحة أكبر للعائلات والأمتعة</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكن</a> (٧ مقاعد، VIP):</strong> الخيار الفاخر — مقاعد جلدية وراحة إضافية للرحلات الطويلة</li>
 </ul>
-<p style="margin-bottom:1rem;">على سبيل المثال، <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">مطار جدة إلى مكة</a> يكلف 330 ريال بالسيدان، و380 ريال بالستاريا، و530 ريال بالـ GMC يوكن — نفس الطريق تماماً، السيارة فقط هي ما يغيّر السعر.</p>
+<p style="margin-bottom:1rem;">على سبيل المثال، في خط <a href="/jeddah-airport-to-makkah" style="color:#0B3D2E;font-weight:700;">مطار جدة إلى مكة</a>، يختلف السعر بين السيدان والستاريا والـ GMC يوكن لنفس الطريق تماماً — السيارة فقط هي ما يغيّر السعر.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">2. المسافة أهم من الزحام</h2>
 <p style="margin-bottom:1rem;">بما أن السعر ثابت ومتفق عليه قبل الانطلاق، فإن الزحام ووقت الانتظار ووقت اليوم لا تغيّر ما تدفعه. ما يغيّر السعر فعلياً هو المسافة الفعلية للطريق:</p>
@@ -628,7 +619,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">كيف تحصل على السعر الدقيق</h2>
-<p style="margin-bottom:1rem;">الأسعار تُحدَّث من وقت لآخر، لذا أفضل طريقة للحصول على السعر الدقيق الحالي لرحلتك هي مراسلة Saudi Cabs GMC عبر واتساب مع تحديد نقطة الانطلاق والوجهة والسيارة المفضلة. ستحصل على سعر مؤكد خلال دقائق — بدون التزام، بدون عداد، وبدون رسوم خفية. راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي</a> لتفاصيل الأسعار حسب كل خط.</p>`,
+<p style="margin-bottom:1rem;">الأسعار تُحدَّث من وقت لآخر، لذا أفضل طريقة للحصول على السعر الدقيق الحالي لرحلتك هي مراسلة Saudi Cabs GMC عبر واتساب مع تحديد نقطة الانطلاق والوجهة والسيارة المفضلة. ستحصل على سعر مؤكد خلال دقائق — بدون التزام، بدون عداد، وبدون رسوم خفية. راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي</a> لقائمة كاملة بخطوطنا.</p>`,
     },
     date: '2026-08-22',
     image: '/fleet/gmc-yukon-exterior-angle-saudi-cabs-gmc.webp',
@@ -1211,7 +1202,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>Hyundai Staria (7 seats):</strong> suits families and groups, with a large luggage space (5+ bags).</li>
   <li style="margin-bottom:0.5rem;"><strong>GMC Yukon (7 seats, VIP):</strong> our premium option for travelers who want extra comfort.</li>
 </ul>
-<p style="margin-bottom:1rem;">Listed fares from a Makkah hotel to Jeddah Airport, per vehicle, not per person: <strong>Sedan SAR ${makkahJedFares.sedan}</strong>, <strong>Hyundai Staria SAR ${makkahJedFares.staria}</strong>, <strong>GMC Yukon SAR ${makkahJedFares.gmc}</strong>. Please confirm the current fare with us on WhatsApp before you book. Extra stops, waiting time, special requests or route changes may affect the final fare, and any change is confirmed before the trip. For other fares, see our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices in Saudi Arabia</a> guide.</p>
+<p style="margin-bottom:1rem;">Fares from a Makkah hotel to Jeddah Airport are fixed per vehicle, not per person — Sedan, Hyundai Staria or GMC Yukon. Please confirm the current fare with us on WhatsApp before you book. Extra stops, waiting time, special requests or route changes may affect the final fare, and any change is confirmed before the trip. For other routes, see our <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">Taxi Prices in Saudi Arabia</a> guide.</p>
 <p style="margin-bottom:1rem;">Not sure which to pick for a family? Read <a href="/blog/gmc-yukon-vs-staria-family-umrah" style="color:#0B3D2E;font-weight:700;">GMC Yukon vs Hyundai Staria for Family Umrah</a>, or see the <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria taxi</a> and <a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon hire</a> pages.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">From Makkah Hotel to Jeddah Airport</h2>
@@ -1252,7 +1243,7 @@ export const blogPosts: BlogPost[] = [
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book at any time of day?</h3>
 <p style="margin-bottom:1rem;">Bookings are available 24/7. For early-morning or late-night flights, we recommend booking the night before.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does it cost?</h3>
-<p style="margin-bottom:1rem;">Listed fares from a Makkah hotel to Jeddah Airport are SAR ${makkahJedFares.sedan} (Sedan), SAR ${makkahJedFares.staria} (Hyundai Staria) and SAR ${makkahJedFares.gmc} (GMC Yukon), per vehicle. Confirm the current fare on WhatsApp before booking.</p>
+<p style="margin-bottom:1rem;">Fares from a Makkah hotel to Jeddah Airport are fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. Confirm the current fare on WhatsApp before booking.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I book a 7-seater?</h3>
 <p style="margin-bottom:1rem;">Yes. The Hyundai Staria and GMC Yukon (VIP) each seat 7.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can you pick me up from my hotel?</h3>
@@ -1286,7 +1277,7 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong>هيونداي ستاريا (7 مقاعد):</strong> مناسبة للعائلات والمجموعات، ولها مساحة أمتعة كبيرة (5 حقائب أو أكثر).</li>
   <li style="margin-bottom:0.5rem;"><strong>GMC يوكون (7 مقاعد، VIP):</strong> خيارنا الفاخر للمسافرين الذين يريدون راحة إضافية.</li>
 </ul>
-<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في مكة إلى مطار جدة، للسيارة الواحدة وليس للفرد: <strong>سيدان ${makkahJedFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${makkahJedFares.staria} ريال</strong>، <strong>GMC يوكون ${makkahJedFares.gmc} ريال</strong>. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز. قد تؤثر التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير المسار على السعر النهائي، ويتم تأكيد أي تغيير قبل الرحلة. ولمعرفة أسعار أخرى راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي في السعودية</a>.</p>
+<p style="margin-bottom:1rem;">الأسعار من فندق في مكة إلى مطار جدة ثابتة للسيارة الواحدة وليس للفرد — سيدان أو هيونداي ستاريا أو GMC يوكون. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز. قد تؤثر التوقفات الإضافية أو وقت الانتظار أو الطلبات الخاصة أو تغيير المسار على السعر النهائي، ويتم تأكيد أي تغيير قبل الرحلة. ولمعرفة أسعار الخطوط الأخرى راجع <a href="/taxi-prices-saudi-arabia" style="color:#0B3D2E;font-weight:700;">دليل أسعار التاكسي في السعودية</a>.</p>
 <p style="margin-bottom:1rem;">إن كنت محتاراً لعائلتك فاقرأ <a href="/blog/gmc-yukon-vs-staria-family-umrah" style="color:#0B3D2E;font-weight:700;">GMC يوكون مقابل هيونداي ستاريا لعمرة العائلة</a>، أو راجع صفحتي <a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">تاكسي هيونداي ستاريا</a> و<a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">استئجار GMC يوكون</a>.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">من فندق مكة إلى مطار جدة</h2>
@@ -1327,7 +1318,7 @@ export const blogPosts: BlogPost[] = [
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني الحجز في أي وقت؟</h3>
 <p style="margin-bottom:1rem;">الحجز متاح 24/7. وللرحلات الصباحية الباكرة أو المتأخرة ليلاً ننصح بالحجز في الليلة السابقة.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم التكلفة؟</h3>
-<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في مكة إلى مطار جدة هي ${makkahJedFares.sedan} ريال (سيدان) و${makkahJedFares.staria} ريال (هيونداي ستاريا) و${makkahJedFares.gmc} ريال (GMC يوكون) للسيارة الواحدة. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
+<p style="margin-bottom:1rem;">الأسعار من فندق في مكة إلى مطار جدة ثابتة للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني حجز سيارة بـ7 مقاعد؟</h3>
 <p style="margin-bottom:1rem;">نعم. تتسع هيونداي ستاريا وGMC يوكون (VIP) لـ7 ركاب لكل منهما.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل تستلمونني من فندقي؟</h3>
@@ -1370,13 +1361,13 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">Hyundai Staria</a>:</strong> suits families and groups, with a large luggage space.</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC Yukon (VIP)</a>:</strong> our premium option for extra comfort.</li>
 </ul>
-<p style="margin-bottom:1rem;">Listed fares from Madinah Airport to a Madinah hotel, per vehicle: <strong>Sedan SAR ${madHotelFares.sedan}</strong>, <strong>Hyundai Staria SAR ${madHotelFares.staria}</strong>, <strong>GMC Yukon SAR ${madHotelFares.gmc}</strong>. Please confirm the current fare with us on WhatsApp before you book.</p>
+<p style="margin-bottom:1rem;">Fares from Madinah Airport to a Madinah hotel are fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. Please confirm the current fare with us on WhatsApp before you book.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Heading Straight to the Prophet's Mosque?</h2>
 <p style="margin-bottom:1rem;">If your hotel is close to Al-Masjid An-Nabawi, tell us when you book and we can drop you there directly rather than at a hotel address first.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">Returning to the Airport</h2>
-<p style="margin-bottom:1rem;">Listed fares from a Madinah hotel back to the airport: <strong>Sedan SAR ${hotelMadFares.sedan}</strong>, <strong>Hyundai Staria SAR ${hotelMadFares.staria}</strong>, <strong>GMC Yukon SAR ${hotelMadFares.gmc}</strong>. Share your flight number and departure time so pickup is timed correctly.</p>
+<p style="margin-bottom:1rem;">Fares from a Madinah hotel back to the airport are fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. Share your flight number and departure time so pickup is timed correctly.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">How Early Should You Book?</h2>
 <p style="margin-bottom:1rem;">We recommend booking at least 6 hours before landing so your driver and vehicle are confirmed ahead of time. Same-day bookings are accepted when available.</p>
@@ -1397,7 +1388,7 @@ export const blogPosts: BlogPost[] = [
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How long does the ride take?</h3>
 <p style="margin-bottom:1rem;">Approximately 25–35 minutes, depending on traffic.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How much does it cost?</h3>
-<p style="margin-bottom:1rem;">Listed fares from the airport to a Madinah hotel are SAR ${madHotelFares.sedan} (Sedan), SAR ${madHotelFares.staria} (Hyundai Staria) and SAR ${madHotelFares.gmc} (GMC Yukon), per vehicle. The return trip is listed slightly lower. Confirm the current fare on WhatsApp before booking.</p>
+<p style="margin-bottom:1rem;">Fares from the airport to a Madinah hotel are fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. The return trip is listed slightly lower. Confirm the current fare on WhatsApp before booking.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">Can I go straight to the Prophet's Mosque?</h3>
 <p style="margin-bottom:1rem;">Yes. Tell us when you book and we can drop you at Al-Masjid An-Nabawi directly.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">How early should I book?</h3>
@@ -1422,13 +1413,13 @@ export const blogPosts: BlogPost[] = [
   <li style="margin-bottom:0.5rem;"><strong><a href="/hyundai-staria-taxi" style="color:#0B3D2E;font-weight:700;">هيونداي ستاريا</a>:</strong> مناسبة للعائلات والمجموعات، ولها مساحة أمتعة كبيرة.</li>
   <li style="margin-bottom:0.5rem;"><strong><a href="/gmc-yukon-hire" style="color:#0B3D2E;font-weight:700;">GMC يوكون (VIP)</a>:</strong> خيارنا الفاخر لراحة إضافية.</li>
 </ul>
-<p style="margin-bottom:1rem;">الأسعار المعروضة من مطار المدينة المنورة إلى فندق في المدينة، للسيارة الواحدة: <strong>سيدان ${madHotelFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${madHotelFares.staria} ريال</strong>، <strong>GMC يوكون ${madHotelFares.gmc} ريال</strong>. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز.</p>
+<p style="margin-bottom:1rem;">الأسعار من مطار المدينة المنورة إلى فندق في المدينة ثابتة للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. يرجى تأكيد السعر الحالي معنا عبر واتساب قبل الحجز.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">هل تتجه مباشرةً إلى المسجد النبوي؟</h2>
 <p style="margin-bottom:1rem;">إذا كان فندقك قريباً من المسجد النبوي الشريف، أخبرنا عند الحجز ويمكننا إيصالك إليه مباشرةً بدلاً من عنوان الفندق أولاً.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">العودة إلى المطار</h2>
-<p style="margin-bottom:1rem;">الأسعار المعروضة من فندق في المدينة المنورة إلى المطار: <strong>سيدان ${hotelMadFares.sedan} ريال</strong>، <strong>هيونداي ستاريا ${hotelMadFares.staria} ريال</strong>، <strong>GMC يوكون ${hotelMadFares.gmc} ريال</strong>. شاركنا رقم رحلتك وموعد المغادرة حتى يتم توقيت الاستلام بدقة.</p>
+<p style="margin-bottom:1rem;">الأسعار من فندق في المدينة المنورة إلى المطار ثابتة للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. شاركنا رقم رحلتك وموعد المغادرة حتى يتم توقيت الاستلام بدقة.</p>
 
 <h2 style="font-size:1.4rem;font-weight:800;margin:1.5rem 0 0.75rem;">متى يجب أن تحجز؟</h2>
 <p style="margin-bottom:1rem;">ننصح بالحجز قبل الهبوط بـ6 ساعات على الأقل حتى يتم تأكيد سائقك وسيارتك مسبقاً. يُقبل الحجز في اليوم نفسه عند التوفر.</p>
@@ -1449,7 +1440,7 @@ export const blogPosts: BlogPost[] = [
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم تستغرق الرحلة؟</h3>
 <p style="margin-bottom:1rem;">حوالي 25 إلى 35 دقيقة حسب حركة المرور.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">كم التكلفة؟</h3>
-<p style="margin-bottom:1rem;">الأسعار المعروضة من المطار إلى فندق في المدينة هي ${madHotelFares.sedan} ريال (سيدان) و${madHotelFares.staria} ريال (هيونداي ستاريا) و${madHotelFares.gmc} ريال (GMC يوكون) للسيارة الواحدة. رحلة العودة أقل قليلاً. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
+<p style="margin-bottom:1rem;">الأسعار من المطار إلى فندق في المدينة ثابتة للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. رحلة العودة أقل قليلاً. أكّد السعر الحالي عبر واتساب قبل الحجز.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">هل يمكنني التوجه مباشرة إلى المسجد النبوي؟</h3>
 <p style="margin-bottom:1rem;">نعم. أخبرنا عند الحجز ويمكننا إيصالك إلى المسجد النبوي مباشرةً.</p>
 <h3 style="font-size:1.1rem;font-weight:800;margin:1.25rem 0 0.5rem;">متى يجب أن أحجز؟</h3>

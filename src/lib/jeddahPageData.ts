@@ -314,7 +314,7 @@ export const aeoQA: AeoQA[] = [
   },
   {
     q: { en: 'How much is a private taxi from Jeddah Airport to Makkah?', ar: 'كم سعر تاكسي خاص من مطار جدة إلى مكة المكرمة؟' },
-    a: { en: '330 SAR by Sedan, 380 SAR by Hyundai Staria or 530 SAR by GMC Yukon, per vehicle.', ar: '٣٣٠ ريال بالسيدان، و٣٨٠ ريال بهيونداي ستاريا، و٥٣٠ ريال بـGMC يوكون، للسيارة الواحدة.' },
+    a: { en: 'The fare is fixed per vehicle — Sedan, Hyundai Staria or GMC Yukon. Confirm the current rate on WhatsApp before booking.', ar: 'السعر ثابت للسيارة الواحدة — سيدان أو هيونداي ستاريا أو GMC يوكون. أكّد السعر الحالي عبر واتساب قبل الحجز.' },
   },
   {
     q: { en: 'How long does Jeddah to Makkah take by private car?', ar: 'كم تستغرق الرحلة من جدة إلى مكة المكرمة بسيارة خاصة؟' },
