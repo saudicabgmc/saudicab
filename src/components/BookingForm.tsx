@@ -217,7 +217,6 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
 
   const validate = () => {
     const e: Record<string, string> = {}
-    if (!vehicle)   e.vehicle  = isAr ? 'اختر السيارة أولاً'    : 'Please select a vehicle'
     if (!form.from) e.from     = isAr ? 'اختر مدينة المغادرة'   : 'Please select departure city'
     if (!form.to)   e.to       = isAr ? 'اختر الوجهة'            : 'Please select destination'
     if (form.from && form.to && form.from === form.to) {
@@ -256,7 +255,7 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
   const handleBook = () => {
     if (!validate()) return
     const v = VEHICLES.find(v => v.key === vehicle)
-    const vLabel = v ? (isAr ? v.nameAr : v.nameEn) : (isAr ? 'غير محدد' : 'Not specified')
+    const vLabel = v ? (isAr ? v.nameAr : v.nameEn) : (isAr ? 'يرجى اقتراح سيارة مناسبة حسب عدد الركاب' : 'Please recommend based on passenger count')
 
     const fromLabel = isOtherLoc(form.from) ? `${form.from}: ${form.otherFrom.trim()}` : form.from
     const toLabel = isOtherLoc(form.to) ? `${form.to}: ${form.otherTo.trim()}` : form.to
@@ -346,7 +345,6 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
         <p className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '9px' }}>
           <Car size={13} color="var(--primary)" strokeWidth={2.5} />
           {isAr ? 'اختر السيارة' : 'Choose Vehicle'}
-          <span style={{ color: '#e53e3e', marginInlineStart: '2px' }}>*</span>
         </p>
         <div role="group" aria-label={isAr ? 'اختر السيارة' : 'Choose Vehicle'} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '7px' }}>
           {VEHICLES.map(v => (
@@ -386,6 +384,9 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
           ))}
         </div>
         {errors.vehicle && <p style={{ color: '#e53e3e', fontSize: '0.75rem', marginTop: '5px', fontWeight: '600' }}>{errors.vehicle}</p>}
+        <p style={{ color: 'var(--muted-foreground)', fontSize: '0.75rem', marginTop: '5px' }}>
+          {isAr ? 'غير متأكد؟ سنقترح عليك سيارة مناسبة حسب عدد ركابك.' : "Not sure? We'll recommend one based on your group size."}
+        </p>
       </div>
 
       {/* From */}
