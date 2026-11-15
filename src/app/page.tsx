@@ -1,22 +1,27 @@
 'use client'
+import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
-import TrustBadges from '@/components/TrustBadges'
-import ReviewsCarousel from '@/components/ReviewsCarousel'
-import FAQSection from '@/components/FAQSection'
 import HeroJourney from '@/components/home/HeroJourney'
-import TrustStrip from '@/components/home/TrustStrip'
-import JourneyTypes from '@/components/home/JourneyTypes'
-import CityExplorer from '@/components/home/CityExplorer'
-import FleetExperience from '@/components/home/FleetExperience'
-import PricingExperience from '@/components/home/PricingExperience'
-import JourneyTimeline from '@/components/home/JourneyTimeline'
-import AirportJourney from '@/components/home/AirportJourney'
-import PilgrimageSection from '@/components/home/PilgrimageSection'
-import DriverExperience from '@/components/home/DriverExperience'
-import FinalCta from '@/components/home/FinalCta'
-import { homeFaqs } from '@/lib/faqData'
+import { homeFaqs } from '@/lib/homeFaqData'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
+
+// Below-the-fold sections: split into separate chunks (still server-rendered,
+// so content/SEO/layout are unchanged) instead of shipping in the main bundle
+// every visitor downloads for the hero above the fold.
+const TrustBadges = dynamic(() => import('@/components/TrustBadges'))
+const ReviewsCarousel = dynamic(() => import('@/components/ReviewsCarousel'))
+const FAQSection = dynamic(() => import('@/components/FAQSection'))
+const TrustStrip = dynamic(() => import('@/components/home/TrustStrip'))
+const JourneyTypes = dynamic(() => import('@/components/home/JourneyTypes'))
+const CityExplorer = dynamic(() => import('@/components/home/CityExplorer'))
+const FleetExperience = dynamic(() => import('@/components/home/FleetExperience'))
+const PricingExperience = dynamic(() => import('@/components/home/PricingExperience'))
+const JourneyTimeline = dynamic(() => import('@/components/home/JourneyTimeline'))
+const AirportJourney = dynamic(() => import('@/components/home/AirportJourney'))
+const PilgrimageSection = dynamic(() => import('@/components/home/PilgrimageSection'))
+const DriverExperience = dynamic(() => import('@/components/home/DriverExperience'))
+const FinalCta = dynamic(() => import('@/components/home/FinalCta'))
 
 export default function Home() {
   const { lang, isAr } = useLang()
