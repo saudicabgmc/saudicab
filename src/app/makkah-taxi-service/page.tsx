@@ -1,6 +1,6 @@
 'use client'
 import MakkahLocationPage from '@/components/MakkahLocationPage'
-import { makkahFaqs } from '@/lib/faqData'
+import { makkahFaqs } from '@/lib/makkahFaqData'
 import { getPricing } from '@/lib/pricingData'
 
 export default function MakkahPage() {
