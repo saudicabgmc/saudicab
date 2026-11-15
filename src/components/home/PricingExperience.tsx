@@ -122,7 +122,13 @@ export default function PricingExperience() {
 
         <div style={{ textAlign: 'center', marginTop: '26px' }}>
           <p style={{ fontSize: '0.82rem', color: 'var(--muted-foreground)', marginBottom: '10px' }}>
-            {isAr ? 'الدفع نقداً أو تحويل بنكي بعد الرحلة. إلغاء مجاني حتى ٣ ساعات قبل الاستلام.' : 'Pay by cash or bank transfer after the trip. Free cancellation up to 3 hours before pickup.'}
+            {isAr
+              ? 'الدفع نقداً أو تحويل بنكي بعد الرحلة. إلغاء مجاني حتى ٣ ساعات قبل الاستلام. بعد ذلك، قد تُطبّق رسوم إلغاء بنسبة ٢٥٪. لاستقبال المطار سياسة إلغاء مختلفة. يرجى مراجعة '
+              : 'Pay by cash or bank transfer after the trip. Free cancellation up to 3 hours before pickup. After that, a 25% cancellation fee may apply. Airport pickups have a separate cancellation policy. Please see our '}
+            <Link href="/terms-and-conditions" style={{ color: 'var(--primary)', fontWeight: '700' }}>
+              {isAr ? 'الشروط والأحكام' : 'Terms & Conditions'}
+            </Link>
+            {'.'}
           </p>
           <Link href="/taxi-prices-saudi-arabia" style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.88rem' }}>
             {isAr ? 'عرض جميع المسارات ←' : 'See all routes →'}

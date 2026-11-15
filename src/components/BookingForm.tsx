@@ -649,11 +649,12 @@ export default function BookingForm({ defaultFrom }: BookingFormProps) {
       </div>
       <p style={{ textAlign: 'center', fontSize: '0.7rem', color: 'var(--muted-foreground)', margin: '8px 0 0', lineHeight: 1.5 }}>
         {isAr
-          ? 'الدفع نقداً (بالريال) أو تحويل بنكي بعد الرحلة • إلغاء مجاني حتى ٣ ساعات قبل الاستقبال — '
-          : 'Pay by cash (SAR) or bank transfer after the trip • Free cancellation up to 3 hours before pickup — '}
+          ? 'الدفع نقداً (بالريال) أو تحويل بنكي بعد الرحلة • إلغاء مجاني حتى ٣ ساعات قبل الاستقبال. بعد ذلك، قد تُطبّق رسوم إلغاء بنسبة ٢٥٪. لاستقبال المطار سياسة إلغاء مختلفة. يرجى مراجعة '
+          : 'Pay by cash (SAR) or bank transfer after the trip • Free cancellation up to 3 hours before pickup. After that, a 25% cancellation fee may apply. Airport pickups have a separate cancellation policy. Please see our '}
         <Link href="/terms-and-conditions" style={{ color: 'var(--primary)', fontWeight: '700' }}>
-          {isAr ? 'الشروط' : 'Terms'}
+          {isAr ? 'الشروط والأحكام' : 'Terms & Conditions'}
         </Link>
+        {'.'}
       </p>
 
     </div>

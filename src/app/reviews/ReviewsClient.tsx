@@ -23,8 +23,8 @@ export default function ReviewsClient() {
           <div className="gold-divider" style={{ margin: '0 auto 20px' }} />
           <p style={{ opacity: 0.85, lineHeight: 1.8, fontSize: '1.05rem' }}>
             {isAr
-              ? 'تجارب وآراء حقيقية من المسافرين الذين تشرفنا بخدمتهم في مكة المكرمة والمدينة المنورة وجدة والطائف.'
-              : "Real feedback from travelers we've driven across Makkah, Madinah, Jeddah, and Taif."
+              ? 'آراء وتجارب من المسافرين الذين تشرفنا بخدمتهم في مكة المكرمة والمدينة المنورة وجدة والطائف.'
+              : "Feedback from travelers we've driven across Makkah, Madinah, Jeddah, and Taif."
             }
           </p>
         </div>

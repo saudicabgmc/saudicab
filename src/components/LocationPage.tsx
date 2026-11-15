@@ -4,7 +4,7 @@ import FAQSection, { type FAQItem } from './FAQSection'
 import PricingSection from './PricingSection'
 import { type PricingRoute } from '@/lib/pricingData'
 import {
-  Phone, MessageCircle,
+  MessageCircle,
   Building2, Plane, Bus, Car, Briefcase, Building, Map, Users, Shield, Clock, Banknote, Star,
   Moon, Waves, ShoppingBag, UserRound, Anchor, MapPin, Gem, Mountain, Leaf, TreePine, ShoppingCart, Sun,
 } from 'lucide-react'
@@ -118,9 +118,13 @@ export default function LocationPage({
                   <MessageCircle size={16} strokeWidth={2.5} />
                   {t[lang].nav.bookWhatsapp}
                 </a>
-                <a href="tel:+923097811785" className="btn-outline">
-                  <Phone size={16} strokeWidth={2.5} />
-                  {tr.callNow}
+                <a
+                  href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="btn-outline"
+                >
+                  <MessageCircle size={16} strokeWidth={2.5} />
+                  {isAr ? 'راسلنا عبر واتساب' : 'Chat on WhatsApp'}
                 </a>
               </div>
 
@@ -295,15 +299,16 @@ export default function LocationPage({
                 {tr.whatsapp}
               </a>
               <a
-                href="tel:+923097811785"
+                href={`https://wa.me/923097811785?text=${encodeURIComponent(waText)}`}
+                target="_blank" rel="noopener noreferrer"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: 'rgba(255,255,255,0.12)', color: 'white', padding: '12px 28px',
                   borderRadius: '10px', fontWeight: '700', fontSize: '0.8rem', textDecoration: 'none',
                 }}
               >
-                <Phone size={17} strokeWidth={2.5} />
-                +92 309 7811785
+                <MessageCircle size={17} strokeWidth={2.5} />
+                {isAr ? 'راسلنا عبر واتساب' : 'Chat on WhatsApp'}
               </a>
             </div>
           </div>
