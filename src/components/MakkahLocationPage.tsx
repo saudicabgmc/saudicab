@@ -1,22 +1,30 @@
 'use client'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
-import FAQSection from './FAQSection'
-import PricingSection from './PricingSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Bus, Car, Briefcase, Map, Users, Shield, Clock, Banknote, Star,
   Moon, MapPin, Mountain, Tent, Route, Send, CheckCircle2,
 } from 'lucide-react'
 import BookingForm from './BookingForm'
-import FleetSection from './FleetSection'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 import {
   type BText, type MakkahPageProps,
-  heroContent, audiences, vehicleBestFor, vehicleComparison, whatToExpect, familyTravel,
+  heroContent, audiences, vehicleComparison, whatToExpect, familyTravel,
   guideTopics, relatedGuides, SERVICE_GROUP_LABELS,
 } from '@/lib/makkahPageData'
+
+// Below-the-fold sections: split into a separate chunk (still server-rendered,
+// so content/SEO/layout are unchanged) instead of shipping Fleet/Pricing/FAQ
+// JS in the same bundle as the hero and booking form above the fold.
+const MakkahFleetPricing = dynamic(() =>
+  import('./MakkahBelowFoldSections').then(mod => mod.MakkahFleetPricing)
+)
+const MakkahFaq = dynamic(() =>
+  import('./MakkahBelowFoldSections').then(mod => mod.MakkahFaq)
+)
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Bus, Car, Briefcase, Map, Users, Shield, Clock, Banknote, Star,
@@ -480,13 +488,8 @@ export default function MakkahLocationPage({
         </div>
       </section>
 
-      {/* ── 10. Fleet ── */}
-      {pricing.length > 0 && <FleetSection pricing={pricing} cityName={cityName} showFromPrice={false} bestFor={vehicleBestFor} />}
-
-      {/* ── 11. Pricing ── */}
-      {pricing.length > 0 && (
-        <PricingSection routes={pricing} heading={{ ar: 'أسعار التاكسي والتوصيل في مكة المكرمة', en: 'Makkah Taxi Prices & Transfer Rates' }} />
-      )}
+      {/* ── 10–11. Fleet + Pricing ── */}
+      <MakkahFleetPricing pricing={pricing} cityName={cityName} />
 
       {/* ── 12. Why choose us ── */}
       <section aria-labelledby="mk-why-title" style={{ padding: '84px 0', background: '#071f17' }}>
@@ -562,7 +565,7 @@ export default function MakkahLocationPage({
       </section>
 
       {/* ── 14. FAQ ── */}
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${city}`, en: `Frequently Asked Questions — ${city}` }} />
+      <MakkahFaq faqs={faqs} city={city} />
 
       {/* ── 15. Closing CTA ── */}
       <section aria-labelledby="mk-final-title" style={{ padding: '64px 0', background: 'linear-gradient(135deg, #0B3D2E 0%, #071f17 100%)', textAlign: 'center' }}>
