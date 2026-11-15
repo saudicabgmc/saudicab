@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
@@ -129,18 +130,27 @@ export default function MakkahLocationPage({
 
   return (
     <main>
-      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-
       {/* ── 1. Hero ── */}
       <section
         className="mk-hero"
         style={{
-          background: `linear-gradient(180deg, rgba(7,31,23,0.90) 0%, rgba(11,61,46,0.72) 55%, rgba(7,31,23,0.92) 100%), url("${heroImage}")`,
-          backgroundSize: 'cover', backgroundPosition: 'center',
           display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
           textAlign: 'center', position: 'relative',
         }}
       >
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          preload
+          fetchPriority="high"
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+        <div aria-hidden="true" style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: 'linear-gradient(180deg, rgba(7,31,23,0.90) 0%, rgba(11,61,46,0.72) 55%, rgba(7,31,23,0.92) 100%)',
+        }} />
         <div aria-hidden="true" style={{ position: 'absolute', inset: '16px', border: '1px solid rgba(212,175,55,0.22)', pointerEvents: 'none' }} />
         <div aria-hidden="true" style={{ position: 'absolute', inset: '24px', border: '1px solid rgba(212,175,55,0.10)', pointerEvents: 'none' }} />
 
