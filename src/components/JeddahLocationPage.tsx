@@ -1,21 +1,29 @@
 'use client'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
-import FAQSection from './FAQSection'
-import PricingSection from './PricingSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, Shield, Route, Mountain,
   UserRound, Waves, ShoppingBag, Building, Anchor, Send, CheckCircle2,
 } from 'lucide-react'
-import FleetSection from './FleetSection'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 import {
   type BText, type JeddahPageProps,
   heroContent, needCards, arrivalSteps, cityTransport, cornicheSection,
-  vehicleComparison, vehicleBestFor, businessSection, areas, aeoQA, bookingSteps,
+  vehicleComparison, businessSection, areas, aeoQA, bookingSteps,
 } from '@/lib/jeddahPageData'
+
+// Below-the-fold sections: split into a separate chunk (still server-rendered,
+// so content/SEO/layout are unchanged) instead of shipping Fleet/Pricing/FAQ
+// JS in the same bundle as the hero above the fold.
+const JeddahFleetPricing = dynamic(() =>
+  import('./JeddahBelowFoldSections').then(mod => mod.JeddahFleetPricing)
+)
+const JeddahFaq = dynamic(() =>
+  import('./JeddahBelowFoldSections').then(mod => mod.JeddahFaq)
+)
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, Shield, Route, Mountain,
@@ -374,13 +382,8 @@ export default function JeddahLocationPage({
         </div>
       </section>
 
-      {/* ── 9. Fleet ── */}
-      {pricing.length > 0 && <FleetSection pricing={pricing} cityName={cityName} showFromPrice={false} bestFor={vehicleBestFor} />}
-
-      {/* ── 10. Pricing ── */}
-      {pricing.length > 0 && (
-        <PricingSection routes={pricing} heading={{ ar: 'أسعار التاكسي والتوصيل في جدة', en: 'Jeddah Taxi Prices & Transfer Rates' }} />
-      )}
+      {/* ── 9–10. Fleet + Pricing ── */}
+      <JeddahFleetPricing pricing={pricing} cityName={cityName} />
 
       {/* ── 11. Family & group travel ── */}
       <section aria-labelledby="jed-family-title" style={{ padding: '84px 0', background: NAVY }}>
@@ -519,7 +522,7 @@ export default function JeddahLocationPage({
       </section>
 
       {/* ── 16. FAQ ── */}
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${city}`, en: `Frequently Asked Questions — ${city}` }} />
+      <JeddahFaq faqs={faqs} city={city} />
 
       {/* ── 17. Closing CTA ── */}
       <section aria-labelledby="jed-final-title" style={{ padding: '64px 0', background: `linear-gradient(135deg, #0c2d54 0%, ${NAVY} 100%)`, textAlign: 'center' }}>
