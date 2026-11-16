@@ -1,6 +1,6 @@
 'use client'
 import JeddahLocationPage from '@/components/JeddahLocationPage'
-import { jeddahFaqs } from '@/lib/faqData'
+import { jeddahFaqs } from '@/lib/jeddahFaqData'
 import { getPricing } from '@/lib/pricingData'
 import { highlights } from '@/lib/jeddahPageData'
 
