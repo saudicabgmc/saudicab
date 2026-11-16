@@ -1,6 +1,6 @@
 'use client'
 import MadinahLocationPage from '@/components/MadinahLocationPage'
-import { madinahFaqs } from '@/lib/faqData'
+import { madinahFaqs } from '@/lib/madinahFaqData'
 import { getPricing } from '@/lib/pricingData'
 import { services, highlights } from '@/lib/madinahPageData'
 
