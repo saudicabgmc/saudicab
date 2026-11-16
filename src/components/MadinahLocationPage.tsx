@@ -1,21 +1,29 @@
 'use client'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
-import FAQSection from './FAQSection'
-import PricingSection from './PricingSection'
 import {
   MessageCircle, Mail, ArrowRight, ChevronRight, Check,
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, MapPin, Route,
   Send, CheckCircle2,
 } from 'lucide-react'
-import FleetSection from './FleetSection'
 import { useLang } from '@/contexts/LanguageContext'
 import { t } from '@/lib/translations'
 import {
   type BText, type MadinahPageProps,
   heroContent, needCards, arrivalSteps, arrivalNote, mosqueSection, ziyaratSection,
-  vehicleComparison, pickupAreas, priceAnswer, bookingSteps, aeoQA,
+  vehicleComparison, pickupAreas, bookingSteps, aeoQA,
 } from '@/lib/madinahPageData'
+
+// Below-the-fold sections: split into a separate chunk (still server-rendered,
+// so content/SEO/layout are unchanged) instead of shipping Fleet/Pricing/FAQ
+// JS in the same bundle as the hero above the fold.
+const MadinahFleetPricing = dynamic(() =>
+  import('./MadinahBelowFoldSections').then(mod => mod.MadinahFleetPricing)
+)
+const MadinahFaq = dynamic(() =>
+  import('./MadinahBelowFoldSections').then(mod => mod.MadinahFaq)
+)
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2, Plane, Briefcase, Map, Users, Banknote, Car, MapPin, Route, MessageCircle,
@@ -405,21 +413,8 @@ export default function MadinahLocationPage({
         </div>
       </section>
 
-      {/* ── 11. Fleet ── */}
-      {pricing.length > 0 && <FleetSection pricing={pricing} cityName={cityName} showFromPrice={false} />}
-
-      {/* ── 12. Pricing ── */}
-      {pricing.length > 0 && (
-        <>
-          <PricingSection routes={pricing} heading={{ ar: 'أسعار التاكسي والنقل في المدينة المنورة', en: 'Madinah Taxi Prices & Transfer Rates' }} />
-          <div className="container" style={{ maxWidth: '700px', textAlign: 'center', padding: '0 24px 70px' }}>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '10px' }}>
-              {isAr ? 'كم تكلفة التاكسي في المدينة المنورة؟' : 'How much does a taxi cost in Madinah?'}
-            </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--muted-foreground)', lineHeight: 1.8, margin: 0 }}>{tx(priceAnswer)}</p>
-          </div>
-        </>
-      )}
+      {/* ── 11–12. Fleet + Pricing ── */}
+      <MadinahFleetPricing pricing={pricing} cityName={cityName} />
 
       {/* ── 13. How booking works ── */}
       <section aria-labelledby="md-booking-title" style={{ padding: '80px 0', background: DEEP2 }}>
@@ -500,7 +495,7 @@ export default function MadinahLocationPage({
       </section>
 
       {/* ── 16. FAQ ── */}
-      <FAQSection faqs={faqs} heading={{ ar: `أسئلة شائعة حول النقل في ${city}`, en: `Frequently Asked Questions — ${city}` }} />
+      <MadinahFaq faqs={faqs} city={city} />
 
       {/* ── 17. Closing CTA ── */}
       <section aria-labelledby="md-final-title" style={{ padding: '64px 0', background: `linear-gradient(135deg, ${DEEP2} 0%, ${DEEP} 100%)`, textAlign: 'center' }}>
