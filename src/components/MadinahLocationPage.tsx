@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
@@ -96,18 +97,27 @@ export default function MadinahLocationPage({
 
   return (
     <main>
-      <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-
       {/* ── 1. Hero ── */}
       <section
         className="mk-hero"
         style={{
-          background: `linear-gradient(135deg, rgba(13,51,40,0.90) 0%, rgba(26,74,58,0.70) 55%, rgba(13,51,40,0.92) 100%), url("${heroImage}")`,
-          backgroundSize: 'cover', backgroundPosition: 'center',
           display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
           textAlign: 'center', position: 'relative',
         }}
       >
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          preload
+          fetchPriority="high"
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+        <div aria-hidden="true" style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: 'linear-gradient(135deg, rgba(13,51,40,0.90) 0%, rgba(26,74,58,0.70) 55%, rgba(13,51,40,0.92) 100%)',
+        }} />
         <div className="animate-fadeInUp" style={{ color: 'white', maxWidth: '780px', position: 'relative' }}>
           <nav aria-label={isAr ? 'مسار التنقل' : 'Breadcrumb'} className="mk-crumbs" style={{ marginBottom: '18px' }}>
             <ol style={{ listStyle: 'none', display: 'flex', gap: '6px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)' }}>
