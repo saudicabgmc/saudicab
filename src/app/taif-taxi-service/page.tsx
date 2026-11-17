@@ -1,6 +1,6 @@
 'use client'
 import TaifLocationPage from '@/components/TaifLocationPage'
-import { taifFaqs } from '@/lib/faqData'
+import { taifFaqs } from '@/lib/taifFaqData'
 
 export default function TaifPage() {
   return (
