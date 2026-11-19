@@ -25,6 +25,14 @@
  * - The Salwa/Abu Samra crossing was closed 2017-2021 (Gulf rift) and has
  *   operated normally since the Al-Ula agreement — confirming the route is
  *   currently viable, consistent with riyadh-to-doha's own verification.
+ * - 2026-11-19: the business has confirmed that Qatar-side pickup and
+ *   cross-border transport are arranged through an authorized Qatar-based
+ *   operator/partner with the required licensing and documents, rather than
+ *   our own Saudi-registered fleet operating independently as a licensed
+ *   Qatar taxi. Page wording updated accordingly (journeySection,
+ *   requirements, whyPrivateCarSection) — per-booking availability is still
+ *   not guaranteed and must be confirmed directly. No partner name is used
+ *   on the page per instruction.
  */
 
 export type BText = { en: string; ar: string }
@@ -47,7 +55,7 @@ export const quickFacts: { label: string; value: string }[] = [
 export const journeySection = {
   heading: 'What the Journey Involves',
   paragraphs: [
-    "This trip starts with pickup in Doha — most commonly a West Bay or Corniche-area hotel, or wherever you're staying — and heads out toward the Qatar–Saudi Arabia land border, commonly known by the names of the posts on each side: Abu Samra on the Qatar side, Salwa on the Saudi side. It's the only road link between the two countries. You'll clear Qatari exit formalities first, then Saudi entry formalities on the other side — the reverse order of a trip that begins in Riyadh. From there, the route continues west through Saudi Arabia's Eastern Province and on to Riyadh.",
+    "This trip starts with pickup in Doha — most commonly a West Bay or Corniche-area hotel, or wherever you're staying. Pickup and cross-border transport on the Qatar side are arranged through an authorized Qatar-based operator/partner, rather than our Saudi-registered fleet operating independently as a licensed taxi within Qatar, before heading out toward the Qatar–Saudi Arabia land border, commonly known by the names of the posts on each side: Abu Samra on the Qatar side, Salwa on the Saudi side. It's the only road link between the two countries. You'll clear Qatari exit formalities first, then Saudi entry formalities on the other side — the reverse order of a trip that begins in Riyadh. From there, the route continues west through Saudi Arabia's Eastern Province and on to Riyadh with Saudi Cabs GMC.",
     "We don't quote a fixed total time for this route. Driving alone runs roughly 6-7 hours before any stops, and that's before accounting for the border itself — processing time at Abu Samra/Salwa depends on the day, the season and how straightforward everyone's documentation is, and can extend to 2-3 hours during Eid and other peak holiday periods. None of this is something anyone can promise in advance. We'll talk through realistic timing with you on WhatsApp once we know your travel date.",
   ],
 }
@@ -58,11 +66,11 @@ export const requirementsSection = {
   items: [
     'A valid passport for every passenger, meeting the validity period Saudi Arabia requires for entry.',
     "Confirmation of whether you need a Saudi visa or entry permit — this depends on your nationality and residency status, and should be checked against Saudi Arabia's current entry rules before travel, not assumed.",
-    'That a vehicle and driver authorized for cross-border travel into Saudi Arabia are actually available on your travel date — not every vehicle in our fleet is cleared for this crossing, and it must be confirmed with us in advance.',
+    'Whether a licensed vehicle and driver for your travel date can be confirmed — Doha pickup and the crossing itself are handled through an authorized Qatar-based operator/partner, and availability must still be confirmed with us directly for your specific dates, not assumed.',
     'Vehicle documentation and insurance valid for cross-border use between Qatar and Saudi Arabia.',
     'Realistic expectations around border wait times at Abu Samra/Salwa, which vary by day and are outside our control.',
   ],
-  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Saudi immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this crossing until our team confirms it with you directly. For current, authoritative Saudi entry requirements, check the official Saudi e-visa portal before you travel.",
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Saudi immigration authorities. Doha pickup and the crossing itself are arranged through an authorized Qatar-based operator/partner, not by our own Saudi-registered fleet operating independently as a licensed Qatar taxi; we still don't guarantee vehicle, driver or partner availability for any specific date until our team confirms it with you directly. For current, authoritative Saudi entry requirements, check the official Saudi e-visa portal before you travel.",
   officialLinkLabel: 'Saudi Arabia official e-visa portal (visitsaudi.com)',
   officialLinkUrl: 'https://visa.visitsaudi.com/',
 }
@@ -71,7 +79,7 @@ export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying from Doha to Riyadh',
   paragraphs: [
     "A private car makes more sense if the road itself serves a purpose for you — bringing more luggage than a flight comfortably allows, travelling as a family or group who'd rather stay together in one vehicle for the whole trip, or making stops along the way through the Eastern Province rather than going point to point.",
-    "If a road trip from Doha does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: one vehicle reserved for your group only, a pickup time in Doha built around your own schedule, and no changing vehicles partway through — including at the border itself.",
+    "If a road trip from Doha does suit your plans, the reasoning behind booking it privately is the same as on any of our long-distance routes: a vehicle reserved for your group only and a pickup time in Doha built around your own schedule, coordinated end-to-end between our authorized Qatar-side partner and Saudi Cabs GMC.",
   ],
 }
 
