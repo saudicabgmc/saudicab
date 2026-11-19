@@ -753,7 +753,7 @@ export default function RoutesMap() {
               { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait City', ar: 'الرياض ← مدينة الكويت', dist: { en: '~628–633 km', ar: 'نحو ٦٢٨–٦٣٣ كم' } },
               { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat, Oman (direct)', ar: 'الرياض ← مسقط، عمان (مباشر)', dist: { en: '~1,300 km (direct)', ar: 'نحو ١,٣٠٠ كم (مباشر)' } },
               { href: '/dammam-to-bahrain', en: 'Dammam → Manama, Bahrain', ar: 'الدمام ← المنامة، البحرين', dist: { en: '~50–75 km', ar: 'نحو ٥٠-٧٥ كم' } },
-              { href: '/dammam-to-kuwait', en: 'Dammam → Kuwait City', ar: 'الدمام ← مدينة الكويت', dist: { en: '~290 km', ar: 'نحو ٢٩٠ كم' } },
+              { href: '/dammam-to-kuwait', en: 'Dammam → Kuwait City', ar: 'الدمام ← مدينة الكويت', dist: { en: '~410–436 km', ar: 'نحو ٤١٠-٤٣٦ كم' } },
               { href: '/bahrain-to-riyadh', en: 'Bahrain → Riyadh', ar: 'البحرين ← الرياض', dist: { en: '~460–475 km', ar: 'نحو ٤٦٠–٤٧٥ كم' } },
               { href: '/doha-to-riyadh', en: 'Doha → Riyadh', ar: 'الدوحة ← الرياض', dist: { en: '~580 km', ar: 'نحو ٥٨٠ كم' } },
               { href: '/dubai-to-riyadh', en: 'Dubai → Riyadh', ar: 'دبي ← الرياض', dist: { en: '~1,000 km', ar: 'نحو ١,٠٠٠ كم' } },
@@ -761,7 +761,7 @@ export default function RoutesMap() {
               { href: '/kuwait-to-riyadh', en: 'Kuwait → Riyadh', ar: 'الكويت ← الرياض', dist: { en: '~628–633 km', ar: 'نحو ٦٢٨–٦٣٣ كم' } },
               { href: '/muscat-to-riyadh', en: 'Muscat → Riyadh (direct)', ar: 'مسقط ← الرياض (مباشر)', dist: { en: '~1,300 km (direct)', ar: 'نحو ١,٣٠٠ كم (مباشر)' } },
               { href: '/bahrain-to-dammam', en: 'Bahrain → Dammam', ar: 'البحرين ← الدمام', dist: { en: '~50–75 km', ar: 'نحو ٥٠-٧٥ كم' } },
-              { href: '/kuwait-to-dammam', en: 'Kuwait → Dammam', ar: 'الكويت ← الدمام', dist: { en: '~290 km', ar: 'نحو ٢٩٠ كم' } },
+              { href: '/kuwait-to-dammam', en: 'Kuwait → Dammam', ar: 'الكويت ← الدمام', dist: { en: '~410–436 km', ar: 'نحو ٤١٠-٤٣٦ كم' } },
             ]).map(d => (
               <Link key={d.href} href={d.href} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',

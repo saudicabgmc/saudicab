@@ -64,9 +64,9 @@ export const requirementsSection = {
     'Vehicle documentation and insurance valid for cross-border use between Saudi Arabia and Kuwait, plus any cross-border charges or documentation fees that may apply.',
     'Realistic expectations around border wait times, which can vary and are outside our control.',
   ],
-  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the official Kuwait government e-services portal before you travel.",
-  officialLinkLabel: 'Kuwait official government portal (e.gov.kw)',
-  officialLinkUrl: 'https://www.e.gov.kw/',
+  disclaimer: "Saudi Cabs GMC provides private transportation only — we are not a travel agency and are not responsible for visa approval or entry decisions, which rest with Kuwaiti immigration authorities. We also don't guarantee that any specific vehicle or driver is pre-authorized for this route until our team confirms it with you directly. For current, authoritative entry requirements, check the Kuwait Ministry of Interior's visa instructions portal before you travel.",
+  officialLinkLabel: 'Kuwait Ministry of Interior visa portal (kuwaitvisa.moi.gov.kw)',
+  officialLinkUrl: 'https://kuwaitvisa.moi.gov.kw/visa-instructions',
 }
 
 export const whyPrivateCarSection = {
