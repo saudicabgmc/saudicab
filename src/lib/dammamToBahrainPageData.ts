@@ -70,7 +70,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Why Book a Private Car for This Route',
   paragraphs: [
-    "This is genuinely one of the more practical routes on our GCC list — short enough that a private car is a convenient way to make the crossing, especially if you'd rather not deal with public crossing queues on foot or coordinate a separate ride on each side of the causeway.",
+    "This is genuinely one of the more practical routes on our GCC list — short enough that a private car is a convenient way to make the crossing, especially if you'd rather not coordinate shared transport or a separate ride on each side of the causeway.",
     'The core advantage is the same as all our private trips: one vehicle for your group for the whole journey, no transfer between vehicles at the causeway, and a pickup time built around your plans rather than a fixed schedule.',
   ],
 }
