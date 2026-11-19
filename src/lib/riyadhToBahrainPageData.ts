@@ -78,7 +78,7 @@ export const requirementsSection = {
 export const whyPrivateCarSection = {
   heading: 'Private Car vs Flying to Bahrain',
   paragraphs: [
-    "Of our GCC routes from Riyadh, this is the shortest drive, which makes the causeway crossing a realistic option rather than just a scenic alternative to a short flight. It suits travelers who want to bring more luggage than carry-on allows, families who'd rather not coordinate a connecting flight, or anyone who simply prefers a direct door-to-door trip without changing vehicles or terminals.",
+    "Of our GCC routes from Riyadh, this is the shortest drive — but flying is still generally the faster way to reach Bahrain. A private car makes sense here when the road trip itself is the point: travelers who want to bring more luggage than carry-on allows, families who'd rather not coordinate a connecting flight, or anyone who simply prefers a direct door-to-door trip without changing vehicles or terminals.",
     'As with our other routes, the core advantage of a private vehicle is the same: one vehicle for your group only, a pickup time built around your schedule, and no transfers between vehicles along the way — including at the causeway itself.',
   ],
 }
