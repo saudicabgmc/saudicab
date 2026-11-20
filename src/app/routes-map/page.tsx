@@ -748,7 +748,7 @@ export default function RoutesMap() {
             {([
               { href: '/riyadh-to-doha', en: 'Riyadh → Doha, Qatar', ar: 'الرياض ← الدوحة، قطر', dist: { en: '~580 km', ar: 'نحو ٥٨٠ كم' } },
               { href: '/riyadh-to-dubai', en: 'Riyadh → Dubai, UAE', ar: 'الرياض ← دبي، الإمارات', dist: { en: '~1,000 km', ar: 'نحو ١,٠٠٠ كم' } },
-              { href: '/riyadh-to-abu-dhabi', en: 'Riyadh → Abu Dhabi, UAE', ar: 'الرياض ← أبوظبي، الإمارات', dist: { en: '~1,050 km', ar: 'نحو ١,٠٥٠ كم' } },
+              { href: '/riyadh-to-abu-dhabi', en: 'Riyadh → Abu Dhabi, UAE', ar: 'الرياض ← أبوظبي، الإمارات', dist: { en: '~880–965 km', ar: 'نحو ٨٨٠-٩٦٥ كم' } },
               { href: '/riyadh-to-bahrain', en: 'Riyadh → Manama, Bahrain', ar: 'الرياض ← المنامة، البحرين', dist: { en: '~460–475 km', ar: 'نحو ٤٦٠–٤٧٥ كم' } },
               { href: '/riyadh-to-kuwait', en: 'Riyadh → Kuwait City', ar: 'الرياض ← مدينة الكويت', dist: { en: '~628–633 km', ar: 'نحو ٦٢٨–٦٣٣ كم' } },
               { href: '/riyadh-to-muscat', en: 'Riyadh → Muscat, Oman (direct)', ar: 'الرياض ← مسقط، عمان (مباشر)', dist: { en: '~1,300 km (direct)', ar: 'نحو ١,٣٠٠ كم (مباشر)' } },
@@ -757,7 +757,7 @@ export default function RoutesMap() {
               { href: '/bahrain-to-riyadh', en: 'Bahrain → Riyadh', ar: 'البحرين ← الرياض', dist: { en: '~460–475 km', ar: 'نحو ٤٦٠–٤٧٥ كم' } },
               { href: '/doha-to-riyadh', en: 'Doha → Riyadh', ar: 'الدوحة ← الرياض', dist: { en: '~580 km', ar: 'نحو ٥٨٠ كم' } },
               { href: '/dubai-to-riyadh', en: 'Dubai → Riyadh', ar: 'دبي ← الرياض', dist: { en: '~1,000 km', ar: 'نحو ١,٠٠٠ كم' } },
-              { href: '/abu-dhabi-to-riyadh', en: 'Abu Dhabi → Riyadh', ar: 'أبوظبي ← الرياض', dist: { en: '~1,050 km', ar: 'نحو ١,٠٥٠ كم' } },
+              { href: '/abu-dhabi-to-riyadh', en: 'Abu Dhabi → Riyadh', ar: 'أبوظبي ← الرياض', dist: { en: '~880–965 km', ar: 'نحو ٨٨٠-٩٦٥ كم' } },
               { href: '/kuwait-to-riyadh', en: 'Kuwait → Riyadh', ar: 'الكويت ← الرياض', dist: { en: '~628–633 km', ar: 'نحو ٦٢٨–٦٣٣ كم' } },
               { href: '/muscat-to-riyadh', en: 'Muscat → Riyadh (direct)', ar: 'مسقط ← الرياض (مباشر)', dist: { en: '~1,300 km (direct)', ar: 'نحو ١,٣٠٠ كم (مباشر)' } },
               { href: '/bahrain-to-dammam', en: 'Bahrain → Dammam', ar: 'البحرين ← الدمام', dist: { en: '~50–75 km', ar: 'نحو ٥٠-٧٥ كم' } },

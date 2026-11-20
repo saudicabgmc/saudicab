@@ -1,6 +1,6 @@
 'use client'
 import InternationalTransferPage from '@/components/InternationalTransferPage'
-import { abuDhabiToRiyadhFaqs } from '@/lib/faqData'
+import { abuDhabiToRiyadhFaqs } from '@/lib/abuDhabiToRiyadhFaqData'
 import {
   heroContent, quickFacts, journeySection, requirementsSection,
   whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink,
