@@ -1,6 +1,6 @@
 'use client'
 import InternationalTransferPage from '@/components/InternationalTransferPage'
-import { bahrainToDammamFaqs } from '@/lib/faqData'
+import { bahrainToDammamFaqs } from '@/lib/bahrainToDammamFaqData'
 import {
   heroContent, quickFacts, journeySection, requirementsSection,
   whyPrivateCarSection, vehicleOptions, bookingSteps, relatedLink,
