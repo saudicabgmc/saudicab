@@ -85,7 +85,7 @@ export const whyPrivateCarSection = {
 export const vehicleOptions: { name: BText; seats: string; note: string }[] = [
   { name: { en: 'Sedan', ar: 'سيدان' }, seats: '4 seats', note: 'Suits individuals or couples for a trip of this length.' },
   { name: { en: 'Hyundai Staria', ar: 'هيونداي ستاريا' }, seats: '7 seats', note: 'More practical for families or groups with multiple bags.' },
-  { name: { en: 'GMC Yukon', ar: 'GMC يوكون' }, seats: '7 seats, VIP', note: 'A more spacious, premium option for a long multi-border trip.' },
+  { name: { en: 'GMC Yukon', ar: 'GMC يوكون' }, seats: '7 seats, VIP', note: 'A more spacious, premium option for this long drive.' },
 ]
 
 export const bookingSteps: { n: string; title: string; desc: string }[] = [
