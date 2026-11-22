@@ -180,6 +180,11 @@ export default function DammamLocationPage({ cityName, citySlogan, citySlug, faq
               )
             })}
           </div>
+          <div style={{ textAlign: 'center', marginTop: '22px' }}>
+            <Link href="/dammam-airport-taxi" className="mk-focus" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.88rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              {isAr ? 'تفاصيل خط مطار الملك فهد الدولي' : 'King Fahd Airport Taxi details'} <Arrow size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -2,8 +2,9 @@ import type { FAQItem } from '@/components/FAQSection'
 
 /*
  * Content for the Dammam city page (/dammam-taxi-service).
- * Dammam has no confirmed per-route SAR pricing in pricingData.ts and no dedicated
- * airport route page — this page never states a fare or a specific airport route URL.
+ * Dammam has no confirmed per-route SAR pricing in pricingData.ts, so this page
+ * never states a fare. A dedicated airport route page does exist (/dammam-airport-taxi,
+ * linked from the services section below) — this note previously said otherwise.
  * Route times/distances mirror routePageData.ts (dammam-to-makkah, makkah-to-dammam,
  * dammam-to-madinah — the only three real Dammam route pages; there is no
  * dammam-to-jeddah or madinah-to-dammam page) and the existing FAQs; nothing here

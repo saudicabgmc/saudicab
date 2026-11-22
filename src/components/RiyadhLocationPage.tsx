@@ -213,6 +213,11 @@ export default function RiyadhLocationPage({ cityName, citySlogan, citySlug, faq
               )
             })}
           </div>
+          <div style={{ textAlign: 'center', marginTop: '22px' }}>
+            <Link href="/riyadh-airport-taxi" className="mk-focus" style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.88rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              {isAr ? 'تفاصيل خط مطار الملك خالد الدولي' : 'King Khalid Airport Taxi details'} <Arrow size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

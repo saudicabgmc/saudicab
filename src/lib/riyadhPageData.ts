@@ -2,8 +2,9 @@ import type { FAQItem } from '@/components/FAQSection'
 
 /*
  * Content for the Riyadh city page (/riyadh-taxi-service).
- * Riyadh has no confirmed per-route SAR pricing in pricingData.ts and no dedicated
- * airport route page — this page never states a fare or a specific airport route URL.
+ * Riyadh has no confirmed per-route SAR pricing in pricingData.ts, so this page
+ * never states a fare. A dedicated airport route page does exist (/riyadh-airport-taxi,
+ * linked from the services section below) — this note previously said otherwise.
  * Route times/distances mirror routePageData.ts (riyadh-to-makkah, riyadh-to-madinah,
  * riyadh-to-jeddah, makkah-to-riyadh) and the existing FAQs; nothing here introduces
  * new facts. Riyadh's content is framed around its real role in the site: the capital,
