@@ -29,17 +29,42 @@ const blogIndexSchema = {
   url: 'https://saudicabsgmc.com/blog',
   publisher: { '@id': 'https://saudicabsgmc.com/#organization' },
   inLanguage: ['en', 'ar'],
-  blogPost: blogPosts.map(p => ({
-    '@type': 'BlogPosting',
-    headline: p.title.en,
-    url: `https://saudicabsgmc.com/blog/${p.slug}`,
-    datePublished: p.date,
-    dateModified: p.dateModified ?? p.date,
-    image: `https://saudicabsgmc.com${p.image}`,
-    description: p.excerpt.en,
-    articleSection: p.category,
-  })),
+  blogPost: [
+    ...blogPosts.map(p => ({
+      '@type': 'BlogPosting',
+      headline: p.title.en,
+      url: `https://saudicabsgmc.com/blog/${p.slug}`,
+      datePublished: p.date,
+      dateModified: p.dateModified ?? p.date,
+      image: `https://saudicabsgmc.com${p.image}`,
+      description: p.excerpt.en,
+      articleSection: p.category,
+    })),
+    // Standalone premium guide — not part of blogPosts/blogData.ts (see
+    // RiyadhToMuscatGuide.tsx), listed here explicitly so the Blog schema's
+    // own post list stays complete.
+    {
+      '@type': 'BlogPosting',
+      headline: 'Riyadh to Muscat: Distance, Driving Route, Border Crossing & Travel Guide (2026)',
+      url: 'https://saudicabsgmc.com/blog/riyadh-to-muscat-travel-guide',
+      datePublished: '2026-11-24',
+      dateModified: '2026-11-24',
+      image: 'https://saudicabsgmc.com/location/muscat.webp',
+      description: 'A complete guide to the Riyadh-Muscat road trip: real distance, the direct Empty Quarter border crossing, visa rules, best time to travel, and taxi vs driving in 2026.',
+      articleSection: 'Intercity Travel',
+    },
+  ],
 }
+
+const extraGuides = [
+  {
+    slug: 'riyadh-to-muscat-travel-guide',
+    title: 'Riyadh to Muscat: Distance, Driving Route, Border Crossing & Travel Guide (2026)',
+    excerpt: 'Real distance, the direct Empty Quarter border crossing, visa rules, best time to travel, and taxi vs driving — everything to plan this trip.',
+    image: '/location/muscat.webp',
+    tag: 'Travel Guide',
+  },
+]
 
 const blogBreadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -82,7 +107,7 @@ export default function BlogIndex() {
       </section>
 
       <div className="container" style={{ maxWidth: '1100px', padding: '60px 24px 80px' }}>
-        <BlogIndexClient posts={blogPosts} />
+        <BlogIndexClient posts={blogPosts} extraGuides={extraGuides} />
       </div>
     </main>
     </>

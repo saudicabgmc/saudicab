@@ -10,7 +10,15 @@ const ALL_CATEGORIES: BlogCategory[] = [
   'Hajj & Umrah', 'Airport Transfers', 'Intercity Travel', 'Taxi Prices', 'Travel Tips', 'Vehicles & Fleet',
 ]
 
-export default function BlogIndexClient({ posts }: { posts: BlogPost[] }) {
+export interface ExtraGuideEntry {
+  slug: string
+  title: string
+  excerpt: string
+  image: string
+  tag: string
+}
+
+export default function BlogIndexClient({ posts, extraGuides = [] }: { posts: BlogPost[]; extraGuides?: ExtraGuideEntry[] }) {
   const { lang, isAr } = useLang()
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState<BlogCategory | 'all'>('all')
@@ -98,6 +106,47 @@ export default function BlogIndexClient({ posts }: { posts: BlogPost[] }) {
             </div>
           </div>
         </Link>
+      )}
+
+      {/* Pinned premium guides — always visible, independent of search/category filters
+          since these aren't part of the bilingual blogPosts/BlogPost data shape (they're
+          standalone English-only guide pages, e.g. /blog/riyadh-to-muscat-travel-guide). */}
+      {extraGuides.length > 0 && (
+        <div style={{ marginBottom: '40px' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <h2 style={{ fontSize: '1.2rem', fontWeight: '900' }}>
+              {isAr ? <>أدلة <span style={{ color: 'var(--primary)' }}>سفر مميزة</span></> : <>Featured Travel <span style={{ color: 'var(--primary)' }}>Guides</span></>}
+            </h2>
+            <div className="gold-divider" style={{ margin: '10px 0 0' }} />
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '22px' }}>
+            {extraGuides.map(g => (
+              <Link key={g.slug} href={`/blog/${g.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div style={{
+                  borderRadius: '16px', overflow: 'hidden', border: '1.5px solid rgba(212,175,55,0.4)',
+                  backgroundColor: 'var(--card)', transition: 'all 0.25s', boxShadow: 'var(--shadow-sm)',
+                  height: '100%', display: 'flex', flexDirection: 'column',
+                }}>
+                  <img src={g.image} alt={g.title} width={400} height={200} loading="lazy" decoding="async" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                  <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <span style={{
+                      fontSize: '0.68rem', color: 'var(--primary)', fontWeight: '800', textTransform: 'uppercase',
+                      letterSpacing: '0.02em', marginBottom: '10px', display: 'inline-block', width: 'fit-content',
+                      background: 'rgba(212,175,55,0.12)', border: '1px solid rgba(212,175,55,0.35)', padding: '3px 10px', borderRadius: '50px',
+                    }}>
+                      {g.tag}
+                    </span>
+                    <h3 style={{ fontSize: '1rem', fontWeight: '800', marginBottom: '10px', lineHeight: 1.4, flex: 1 }}>{g.title}</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--muted-foreground)', lineHeight: 1.6, marginBottom: '16px' }}>{g.excerpt}</p>
+                    <span style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '0.82rem' }}>
+                      {isAr ? 'اقرأ المقالة ←' : 'Read Article →'}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
 
       {/* Search */}
