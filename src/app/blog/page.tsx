@@ -53,6 +53,18 @@ const blogIndexSchema = {
       description: 'A complete guide to the Riyadh-Muscat road trip: real distance, the direct Empty Quarter border crossing, visa rules, best time to travel, and taxi vs driving in 2026.',
       articleSection: 'Intercity Travel',
     },
+    // Second standalone premium guide — not part of blogPosts/blogData.ts (see
+    // DammamToBahrainGuide.tsx), listed here explicitly for the same reason as above.
+    {
+      '@type': 'BlogPosting',
+      headline: 'Dammam to Bahrain: Complete Guide to Private Transfers & the King Fahd Causeway',
+      url: 'https://saudicabsgmc.com/blog/dammam-to-bahrain-travel-guide',
+      datePublished: '2026-11-27',
+      dateModified: '2026-11-27',
+      image: 'https://saudicabsgmc.com/location/manama.webp',
+      description: 'Planning a Dammam to Bahrain trip? Distance, the King Fahd Causeway, documents and visa rules, vehicle options, and how to request a private transfer quote.',
+      articleSection: 'Intercity Travel',
+    },
   ],
 }
 
@@ -62,6 +74,13 @@ const extraGuides = [
     title: 'Riyadh to Muscat: Distance, Driving Route, Border Crossing & Travel Guide (2026)',
     excerpt: 'Real distance, the direct Empty Quarter border crossing, visa rules, best time to travel, and taxi vs driving — everything to plan this trip.',
     image: '/location/muscat.webp',
+    tag: 'Travel Guide',
+  },
+  {
+    slug: 'dammam-to-bahrain-travel-guide',
+    title: 'Dammam to Bahrain: Complete Guide to Private Transfers & the King Fahd Causeway',
+    excerpt: 'Distance, the King Fahd Causeway, documents and visa rules, vehicle options, and how to request a private transfer quote for this short GCC crossing.',
+    image: '/location/manama.webp',
     tag: 'Travel Guide',
   },
 ]

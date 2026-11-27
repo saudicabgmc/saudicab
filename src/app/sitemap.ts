@@ -146,9 +146,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog
     { url: `${BASE}/blog`, lastModified: SITE_LAST_VERIFIED, changeFrequency: 'weekly', priority: 0.8 },
     ...blogEntries,
-    // Standalone premium guide post — not part of blogData.ts/blogEntries above, so listed
+    // Standalone premium guide posts — not part of blogData.ts/blogEntries above, so listed
     // explicitly, matching the Definitive Guides priority convention above.
     { url: `${BASE}/blog/riyadh-to-muscat-travel-guide`, lastModified: new Date('2026-11-24'), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/blog/dammam-to-bahrain-travel-guide`, lastModified: new Date('2026-11-27'), changeFrequency: 'weekly', priority: 0.85 },
 
     // Vehicle SEO programmatic pages (~190)
     ...vehicleSeoEntries,
